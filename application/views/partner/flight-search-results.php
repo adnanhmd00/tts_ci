@@ -3,6 +3,31 @@
     <!-- begin::Head -->
     <head>
         <?php include('head.php');?>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            input[type="radio"] {
+                -ms-transform: scale(1.5); /* IE 9 */
+                -webkit-transform: scale(2..0); /* Chrome, Safari, Opera */
+                transform: scale(2.0);
+            }
+            input[type="checkbox"] {
+                -ms-transform: scale(1.5); /* IE 9 */
+                -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+                transform: scale(1.5);
+            }
+        </style>
+        <style>     
+        .footer{
+            position: fixed;
+            left: 15%;
+            bottom: 0;
+            width: 85%;
+            background-color: #d5d5d5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        </style>
     </head>
     <!-- end::Head -->
     <!-- begin::Body -->
@@ -130,336 +155,514 @@
                         <!-- end:: Content Head -->					
                         <!-- begin:: Content -->
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-                            <!--Begin::Dashboard 1-->
-                            <!--Begin::Row-->
-                            <div class="row">
-                                <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
-                                    <!--begin:: Widgets/Activity-->
-                                    <div class="kt-portlet kt-portlet--fit kt-portlet--head-lg kt-portlet--head-overlay kt-portlet--skin-solid kt-portlet">
-                                        <div class="kt-portlet__body kt-portlet__body--fit">
-                                            <div class="kt-widget17">
-                                                <br><br><br><br><br><br><br><br>
-                                                <div class="kt-widget17__visual kt-widget17__visual--chart kt-portlet-fit--top kt-portlet-fit--sides" style="background-color: #fff">
-                                                    <div class="kt-widget17__stats">
-                                                        <div class="kt-widget17__items">
-                                                            <div class="kt-widget17__item">
-                                                                <span class="kt-widget17__icon">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--brand">
-                                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                            <rect x="0" y="0" width="24" height="24"></rect>
-                                                                            <path d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z" fill="#000000"></path>
-                                                                            <rect fill="#000000" opacity="0.3" transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519) " x="16.3255682" y="2.94551858" width="3" height="18" rx="1"></rect>
-                                                                        </g>
-                                                                    </svg>
-                                                                </span>
-                                                                <span class="kt-widget17__subtitle">
-                                                                Leads
-                                                                </span> 
-                                                                <span class="kt-widget17__desc">
-                                                                114
-                                                                </span>  
-                                                            </div>
-                                                            <div class="kt-widget17__item">
-                                                                <span class="kt-widget17__icon">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success">
-                                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                            <polygon points="0 0 24 0 24 24 0 24"></polygon>
-                                                                            <path d="M12.9336061,16.072447 L19.36,10.9564761 L19.5181585,10.8312381 C20.1676248,10.3169571 20.2772143,9.3735535 19.7629333,8.72408713 C19.6917232,8.63415859 19.6104327,8.55269514 19.5206557,8.48129411 L12.9336854,3.24257445 C12.3871201,2.80788259 11.6128799,2.80788259 11.0663146,3.24257445 L4.47482784,8.48488609 C3.82645598,9.00054628 3.71887192,9.94418071 4.23453211,10.5925526 C4.30500305,10.6811601 4.38527899,10.7615046 4.47382636,10.8320511 L4.63,10.9564761 L11.0659024,16.0730648 C11.6126744,16.5077525 12.3871218,16.5074963 12.9336061,16.072447 Z" fill="#000000" fill-rule="nonzero"></path>
-                                                                            <path d="M11.0563554,18.6706981 L5.33593024,14.122919 C4.94553994,13.8125559 4.37746707,13.8774308 4.06710397,14.2678211 C4.06471678,14.2708238 4.06234874,14.2738418 4.06,14.2768747 L4.06,14.2768747 C3.75257288,14.6738539 3.82516916,15.244888 4.22214834,15.5523151 C4.22358765,15.5534297 4.2250303,15.55454 4.22647627,15.555646 L11.0872776,20.8031356 C11.6250734,21.2144692 12.371757,21.2145375 12.909628,20.8033023 L19.7677785,15.559828 C20.1693192,15.2528257 20.2459576,14.6784381 19.9389553,14.2768974 C19.9376429,14.2751809 19.9363245,14.2734691 19.935,14.2717619 L19.935,14.2717619 C19.6266937,13.8743807 19.0546209,13.8021712 18.6572397,14.1104775 C18.654352,14.112718 18.6514778,14.1149757 18.6486172,14.1172508 L12.9235044,18.6705218 C12.377022,19.1051477 11.6029199,19.1052208 11.0563554,18.6706981 Z" fill="#000000" opacity="0.3"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </span>
-                                                                <span class="kt-widget17__subtitle">
-                                                                Bookings
-                                                                </span> 
-                                                                <span class="kt-widget17__desc">
-                                                                211
-                                                                </span>  
-                                                            </div>
-                                                        </div>
-                                                        <div class="kt-widget17__items">
-                                                            <div class="kt-widget17__item">
-                                                                <span class="kt-widget17__icon">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--warning">
-                                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                            <rect x="0" y="0" width="24" height="24"></rect>
-                                                                            <path d="M12.7037037,14 L15.6666667,10 L13.4444444,10 L13.4444444,6 L9,12 L11.2222222,12 L11.2222222,14 L6,14 C5.44771525,14 5,13.5522847 5,13 L5,3 C5,2.44771525 5.44771525,2 6,2 L18,2 C18.5522847,2 19,2.44771525 19,3 L19,13 C19,13.5522847 18.5522847,14 18,14 L12.7037037,14 Z" fill="#000000" opacity="0.3"></path>
-                                                                            <path d="M9.80428954,10.9142091 L9,12 L11.2222222,12 L11.2222222,16 L15.6666667,10 L15.4615385,10 L20.2072547,6.57253826 C20.4311176,6.4108595 20.7436609,6.46126971 20.9053396,6.68513259 C20.9668779,6.77033951 21,6.87277228 21,6.97787787 L21,17 C21,18.1045695 20.1045695,19 19,19 L5,19 C3.8954305,19 3,18.1045695 3,17 L3,6.97787787 C3,6.70173549 3.22385763,6.47787787 3.5,6.47787787 C3.60510559,6.47787787 3.70753836,6.51099993 3.79274528,6.57253826 L9.80428954,10.9142091 Z" fill="#000000"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </span>
-                                                                <span class="kt-widget17__subtitle">
-                                                                Upcomming Tours (Week)
-                                                                </span> 
-                                                                <span class="kt-widget17__desc">
-                                                                5
-                                                                </span>  
-                                                            </div>
-                                                            <div class="kt-widget17__item">
-                                                                <span class="kt-widget17__icon">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--danger">
-                                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                            <rect x="0" y="0" width="24" height="24"></rect>
-                                                                            <path d="M3,16 L5,16 C5.55228475,16 6,15.5522847 6,15 C6,14.4477153 5.55228475,14 5,14 L3,14 L3,12 L5,12 C5.55228475,12 6,11.5522847 6,11 C6,10.4477153 5.55228475,10 5,10 L3,10 L3,8 L5,8 C5.55228475,8 6,7.55228475 6,7 C6,6.44771525 5.55228475,6 5,6 L3,6 L3,4 C3,3.44771525 3.44771525,3 4,3 L10,3 C10.5522847,3 11,3.44771525 11,4 L11,19 C11,19.5522847 10.5522847,20 10,20 L4,20 C3.44771525,20 3,19.5522847 3,19 L3,16 Z" fill="#000000" opacity="0.3"></path>
-                                                                            <path d="M16,3 L19,3 C20.1045695,3 21,3.8954305 21,5 L21,15.2485298 C21,15.7329761 20.8241635,16.200956 20.5051534,16.565539 L17.8762883,19.5699562 C17.6944473,19.7777745 17.378566,19.7988332 17.1707477,19.6169922 C17.1540423,19.602375 17.1383289,19.5866616 17.1237117,19.5699562 L14.4948466,16.565539 C14.1758365,16.200956 14,15.7329761 14,15.2485298 L14,5 C14,3.8954305 14.8954305,3 16,3 Z" fill="#000000"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </span>
-                                                                <span class="kt-widget17__subtitle">
-                                                                Total Customers
-                                                                </span> 
-                                                                <span class="kt-widget17__desc">
-                                                                234
-                                                                </span>  
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                            <div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
+                                <div class="row bg-white p-3">
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="trip">Trip</label>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">One Way</option>
+                                                <option value="">Round Trip</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="trip">From</label>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">Flight Options</option>
+                                                <option value="">Flight Options</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="trip">To</label>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">Flight Options</option>
+                                                <option value="">Flight Options</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="trip">Depart</label>
+                                            <input type="text" placeholder="Select Date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="trip">Return</label>
+                                            <input type="text" placeholder="Select Date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="travellers">Travellers</label>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">1 Passenger(s)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group text-center">
+                                    <button class="btn btn-primary">Search Flights</button>
+                                </div>
+                            </div>   
+                            
+                            
+                            <div class="row mt-3 mb-4">
+                                <div class="col-md-8">
+                                    <h5>Showing Results for:</h5>
+                                    <div class="row mb-2">
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="card p-3">
+                                                <div class="ml-5">
+                                                    <input type="radio" class="form-check-input mt-2" name="optradio">
+                                                    <span class="h3">&nbsp;&nbsp;DEL > IXC (07 Mar)</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
-                                    </div>
-                                    <!--end:: Widgets/Activity-->	
-                                </div>
-                                <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
-                                    <!--begin:: Widgets/Inbound Bandwidth-->
-                                    <div class="kt-portlet kt-portlet--fit kt-portlet--head-noborder kt-portlet">
-                                        <div class="kt-portlet__head kt-portlet__space-x">
-                                            <div class="kt-portlet__head-label">
-                                                <h3 class="kt-portlet__head-title">
-                                                    Business Volume
-                                                </h3>
-                                            </div>
-                                            <div class="kt-portlet__head-toolbar">
-                                                <a href="" class="btn btn-label-warning btn-sm  btn-bold dropdown-toggle" data-toggle="dropdown">
-                                                VIEW
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="kt-widget20">
-                                            <div class="kt-widget20__content kt-portlet__space-x">
-                                                <span class="kt-widget20__number kt-font-brand">₹217,914.90</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end:: Widgets/Inbound Bandwidth-->		
-                                    <div class="kt-space-20"></div>
-                                    <!--begin:: Widgets/Outbound Bandwidth-->
-                                    <div class="kt-portlet kt-portlet--fit kt-portlet--head-noborder kt-portlet">
-                                        <div class="kt-portlet__head kt-portlet__space-x">
-                                            <div class="kt-portlet__head-label">
-                                                <h3 class="kt-portlet__head-title">
-                                                    Sale Volume
-                                                </h3>
-                                            </div>
-                                            <div class="kt-portlet__head-toolbar">
-                                                <a href="" class="btn btn-label-warning btn-sm  btn-bold dropdown-toggle" data-toggle="dropdown">
-                                                VIEW
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="kt-widget20">
-                                            <div class="kt-widget20__content kt-portlet__space-x">
-                                                <span class="kt-widget20__number kt-font-danger">₹40,129.78</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="kt-portlet kt-portlet--fit kt-portlet--head-noborder kt-portlet">
-                                        <div class="kt-portlet__head kt-portlet__space-x">
-                                            <div class="kt-portlet__head-label">
-                                                <h3 class="kt-portlet__head-title">
-                                                    TravPAY Wallet Balance
-                                                </h3>
-                                            </div>
-                                            <div class="kt-portlet__head-toolbar">
-                                                <a href="" class="btn btn-label-warning btn-sm  btn-bold dropdown-toggle" data-toggle="dropdown">
-                                                WALLET
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="kt-widget20">
-                                            <div class="kt-widget20__content kt-portlet__space-x">
-                                                <span class="kt-widget20__number kt-font-danger">₹1,154.71</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end:: Widgets/Outbound Bandwidth-->	
-                                </div>
-                                <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
-                                    <!--begin:: Widgets/Blog-->
-                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://business.thetravelsquare.in/partner-platform-live-demo">
-                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('resource/admin/img/travpay-travel-payment-wallet.jpg');?>)">
-                                                    <h3 class="kt-widget19__title kt-font-light">
-                                                        Introducing TravPAY
-                                                    </h3>
-                                                    <div class="kt-widget19__shadow"></div>
-                                                    <div class="kt-widget19__labels">
-                                        <a href="" class="btn btn-label-dark-o2 btn-bold ">LEARN MORE</a>
-                                        </div>
-                                        </div>
-                                        </div>
-                                        </a>
-                                        <div class="kt-portlet__body">
-                                            <div class="kt-widget19__wrapper">
-                                                <div class="kt-widget19__text">
-                                                    <b><big>Send Money Overseas at Just $5</big></b><br>TravPAY is Your Safe Travel Payments Wallets To , Receive & Send Customer Payments Safely 
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="card p-3">
+                                                <div class="ml-5">
+                                                    <input type="radio" class="form-check-input mt-2" name="optradio">
+                                                    <span class="h3">&nbsp;&nbsp;DEL > IXC (07 Mar)</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!--end:: Widgets/Blog-->	
+                                    <div class="d-none d-md-block">
+                                        <div class="row mt-4">
+                                            <div class="col-sm-1 col-md-2">
+                                                <p class="font-weight-bold lead text-center">Airline</p>
+                                            </div>
+                                            <div class="col-sm-1 col-md-2">
+                                                <p class="font-weight-bold lead text-center">Departure</p>
+                                            </div>
+                                            <div class="col-sm-1 col-md-2">
+                                                <p class="font-weight-bold lead text-center">Duration</p>
+                                            </div>
+                                            <div class="col-sm-1 col-md-2">
+                                                <p class="font-weight-bold lead text-center">Arrival</p>
+                                            </div>
+                                            <div class="col-sm-1 col-md-2">
+                                                <p class="font-weight-bold lead text-center">Price</p>
+                                            </div>
+                                            <div class="col-sm-1 col-md-2">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-2">
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                    <div class="lead">AI - 9831T</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <div style="font-size: 24px;">19:45</div>
+                                                    <div class="lead">DEL</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <div class="h5 mt-4">1h 0m</div>
+                                                    <strong style="font-size: 12px;">Non Stop</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <div style="font-size: 24px;">20:45</div>
+                                                    <div class="lead">IXC</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center mt-4">
+                                                    <div class="h3">₹ 2,895</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center mt-4">
+                                                    <input type="radio" class="form-check-input" name="optradio">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="card mb-2">
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                    <p class="lead">AI - 9831T</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p style="font-size: 24px;">19:45</p>
+                                                    <p class="lead">DEL</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p class="h3">1h 0m</p>
+                                                    <strong style="font-size: 12px;">Non Stop</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p style="font-size: 24px;">20:45</p>
+                                                    <p class="lead">IXC</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center mt-4">
+                                                    <p class="h3">₹ 2,895</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center mt-4">
+                                                    <input type="radio" class="form-check-input" name="optradio">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="card mb-2">
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                    <p class="lead">AI - 9831T</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p style="font-size: 24px;">19:45</p>
+                                                    <p class="lead">DEL</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p class="h3">1h 0m</p>
+                                                    <strong style="font-size: 12px;">Non Stop</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p style="font-size: 24px;">20:45</p>
+                                                    <p class="lead">IXC</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center mt-4">
+                                                    <p class="h3">₹ 2,895</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center mt-4">
+                                                    <input type="radio" class="form-check-input" name="optradio">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="card mb-2">
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                    <p class="lead">AI - 9831T</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p style="font-size: 24px;">19:45</p>
+                                                    <p class="lead">DEL</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p class="h3">1h 0m</p>
+                                                    <strong style="font-size: 12px;">Non Stop</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p style="font-size: 24px;">20:45</p>
+                                                    <p class="lead">IXC</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center mt-4">
+                                                    <p class="h3">₹ 2,895</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center mt-4">
+                                                    <input type="radio" class="form-check-input" name="optradio">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="card mb-2">
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                    <p class="lead">AI - 9831T</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p style="font-size: 24px;">19:45</p>
+                                                    <p class="lead">DEL</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p class="h3">1h 0m</p>
+                                                    <strong style="font-size: 12px;">Non Stop</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p style="font-size: 24px;">20:45</p>
+                                                    <p class="lead">IXC</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center mt-4">
+                                                    <p class="h3">₹ 2,895</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center mt-4">
+                                                    <input type="radio" class="form-check-input" name="optradio">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="card mb-2">
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                    <p class="lead">AI - 9831T</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p style="font-size: 24px;">19:45</p>
+                                                    <p class="lead">DEL</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p class="h3">1h 0m</p>
+                                                    <strong style="font-size: 12px;">Non Stop</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center">
+                                                    <p style="font-size: 24px;">20:45</p>
+                                                    <p class="lead">IXC</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center mt-4">
+                                                    <p class="h3">₹ 2,895</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                                <div class="text-center mt-4">
+                                                    <input type="radio" class="form-check-input" name="optradio">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row mt-4 ml-4">
+                                        <div class="h5">
+                                            Filters for Departure
+                                        </div>
+                                    </div>
+                                    <div class="bg-white mt-3">
+                                        <div class="text-right">
+                                            <p class="lead">Clear All</p>
+                                        </div>
+                                        <div class="ml-4">
+                                            <h4 class="mb-3">Stops</h4>
+                                            <div class="form-group">
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Non Stop</span></label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 1 Stop</span></label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck3">
+                                                    <label class="form-check-label h6" for="exampleCheck3"><span class="font-weight-normal lead">&nbsp; 2+ Stop</span></label>
+                                                </div>
+                                            </div>
+
+                                            <h4 class="mb-3">One Way Price</h4>
+                                            <div class="form-group">
+                                                <div class="lead">Up to INR 7,540</div>
+                                                <div class="slidecontainer">
+                                                    <input style="width: 100%;" type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                                </div>
+                                                <div class="text-right lead mr-2">INR 7,540</div>
+                                            </div>
+                                            
+                                            <h4 class="mb-3">Refundable</h4>
+                                            <div class="form-group">
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Refundable</span></label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; Non-Refundable</span></label>
+                                                </div>
+                                            </div>
+                                            
+                                            <h4 class="mb-3">Departure Time</h4>
+                                            <div class="form-group">
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12am to 8am</span></label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8am to 12pm</span></label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12pm to 4pm</span></label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 4pm to 8pm</span></label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8pm to 12pm</span></label>
+                                                </div>
+                                            </div>
+                                            
+                                            <h4 class="mb-3">Arrival Time</h4>
+                                            <div class="form-group">
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12am to 8am</span></label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8am to 12pm</span></label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12pm to 4pm</span></label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 4pm to 8pm</span></label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8pm to 12pm</span></label>
+                                                </div>
+                                            </div>
+                                            
+                                            <h4 class="mb-3">Airlines</h4>
+                                            <div class="form-group">
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Air India</span></label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; Vistara</span></label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Indigo</span></label>
+                                                </div>
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!--End::Row-->
-                            <!--Begin::Row-->
-                            <div class="row">
-                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
-                                    <!--begin:: Widgets/Blog-->
-                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://business.thetravelsquare.in/free-room-nights-for-agents-sale">
-                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('resource/admin/img/free-hotel-room-sales.jpg');?>)">
-                                                    <h3 class="kt-widget19__title kt-font-light">
-                                                        Get Free Room Nights to Sell
-                                                    </h3>
-                                                    <div class="kt-widget19__shadow"></div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="kt-portlet__body">
-                                            <div class="kt-widget19__wrapper">
-                                                <div class="kt-widget19__text">
-                                                    Generate a Business Volume of 2,500,000 , & Seller Square Offers You To Sell Free 5 Star Luxury Hotel Room Nights at Your Price
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end:: Widgets/Blog-->	
-                                </div>
-                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
-                                    <!--begin:: Widgets/Blog-->
-                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://business.thetravelsquare.in/FAM-business-trips">
-                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('resource/admin/img/FAM-Trip.jpg');?>)">
-                                                    <h3 class="kt-widget19__title kt-font-light">
-                                                        Join Us on Our FAM Trip
-                                                    </h3>
-                                                    <div class="kt-widget19__shadow"></div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="kt-portlet__body">
-                                            <div class="kt-widget19__wrapper">
-                                                <div class="kt-widget19__text">
-                                                    Generate a Business Volume of 10,00,000 and Get a Chance To Explore Phuket With Us on Our FAM Business Trip .  
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end:: Widgets/Blog-->	
-                                </div>
-                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
-                                    <!--begin:: Widgets/Blog-->
-                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://business.thetravelsquare.in/partner-platform-live-demo">
-                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('resource/admin/img/advertise-with-us.jpg');?>)">
-                                                    <h3 class="kt-widget19__title kt-font-light">
-                                                        Advertise For More Leads
-                                                    </h3>
-                                                    <div class="kt-widget19__shadow"></div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="kt-portlet__body">
-                                            <div class="kt-widget19__wrapper">
-                                                <div class="kt-widget19__text">
-                                                    Advertise Your Packages & Deals With Us To Generate More Leads , Select Your Advertisnment Package Today  
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end:: Widgets/Blog-->	
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
-                                    <!--begin:: Widgets/Blog-->
-                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://business.thetravelsquare.in/partner-platform-live-demo">
-                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('resource/admin/img/remitance-the-travel-square.png');?>)">
-                                                    <h3 class="kt-widget19__title kt-font-light">
-                                                        Remit Payments , Safe Bookings
-                                                    </h3>
-                                                    <div class="kt-widget19__shadow"></div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="kt-portlet__body">
-                                            <div class="kt-widget19__wrapper">
-                                                <div class="kt-widget19__text">
-                                                    Route Your Payments Throught Us & We'll Take Care of Your Booking For Free ,Payment Remains Safe Against Your Booking Terms With Third Party Agent 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end:: Widgets/Blog-->	
-                                </div>
-                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
-                                    <!--begin:: Widgets/Blog-->
-                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://business.thetravelsquare.in/partner-platform-live-demo">
-                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('resource/admin/img/learn-how-to-sell.jpg');?>)">
-                                                    <h3 class="kt-widget19__title kt-font-light">
-                                                        Learn How to Sell
-                                                    </h3>
-                                                    <div class="kt-widget19__shadow"></div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="kt-portlet__body">
-                                            <div class="kt-widget19__wrapper">
-                                                <div class="kt-widget19__text">
-                                                    Learn How To Sell Your Locations in India , Generate Traffic , Write Blogs Around Your Published Deals .  
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end:: Widgets/Blog-->	
-                                </div>
-                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
-                                    <!--begin:: Widgets/Blog-->
-                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://business.thetravelsquare.in/partner-platform-live-demo">
-                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('resource/admin/img/Live-demo-of-seller-square-platform.png');?>)">
-                                                    <h3 class="kt-widget19__title kt-font-light">
-                                                        Watch a Live Demo of Platform
-                                                    </h3>
-                                                    <div class="kt-widget19__shadow"></div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="kt-portlet__body">
-                                            <div class="kt-widget19__wrapper">
-                                                <div class="kt-widget19__text">
-                                                    Watch & Learn How to Your The Travel Square Business Partner Platform , Make the Most out of It .   
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end:: Widgets/Blog-->	
-                                </div>
-                            </div>
-                            <!--End::Row-->
-                            <!--End::Dashboard 1-->	
                         </div>
                         <!-- end:: Content -->				
+                    </div>
+                    <div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" id="footer ">
+                        <div class="kt-container  kt-container--fluid ">
+                            <div class="col-md-8">
+                            <p class="lead text-left">Selected Flight</p>
+                                <div class="card mb-2">
+                                    <div class="row">
+                                        <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                            <div class="text-center">
+                                                <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                <p class="lead">AI - 9831T</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                            <div class="text-center">
+                                                <p style="font-size: 24px;">19:45</p>
+                                                <p class="lead">DEL</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                            <div class="text-center">
+                                                <p class="h3">1h 0m</p>
+                                                <strong style="font-size: 12px;">Non Stop</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2 p-2">
+                                            <div class="text-center">
+                                                <p style="font-size: 24px;">20:45</p>
+                                                <p class="lead">IXC</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
+                                            <div class="text-center mt-4">
+                                                <p class="h3">₹ 2,895</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                            <div class="col-md-4">
+                                <div>
+                                    <div class="row">
+                                        <p class="h5 mr-3">Total Net Price</p>
+                                        <p class="h3">₹ 2,895</p>
+                                        <p></p>
+                                    </div>
+                                    <div class="row">
+                                        <button class="btn btn-primary btn-block">Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- begin:: Footer -->
                         <?php include('footer.php');?>

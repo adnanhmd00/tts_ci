@@ -27,8 +27,8 @@ class Partner extends CI_Controller
     {
         $userinfo = $this->userinfo;
         $this->load->view('partner/index', compact('userinfo'));
-
     }
+
     public function logout()
     {
         $this->session->unset_userdata('partner');
@@ -1557,4 +1557,18 @@ class Partner extends CI_Controller
         $userinfo=$this->userinfo;
         $this->load->view("partner/next_installment",compact('userinfo','id'));
     }
+
+    function searchFlight(){
+        $this->load->view("partner/search-flights");
+    } 
+    
+    function flightSearchResult(){
+        $this->load->view("partner/flight-search-results");
+    }
+
+    function flightTravellersDetails(){
+        $this->load->view("partner/flight-traveller-details");
+    }
+
+    
 }
