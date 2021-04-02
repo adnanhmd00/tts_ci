@@ -185,9 +185,17 @@ $route['seller-rzp-add-money']='SellerRazorPayPayment/createOrder';
 $route['seller-rzp-fetch-response/(:any)/(:any)/(:any)/(:any)']='SellerRazorPayPayment/fetchResponse/$1/$2/$3/$4';
 
 
+/*********************************FLIGHT START*******************/
+
+$route['search-flight'] = 'Partner/searchFlight';
+$route['search-result'] = 'Partner/flightSearchResult';
+$route['traveller-details'] = 'Partner/flightTravellersDetails';
+
+/*********************************FLIGHT ENDS*******************/
+
 // $route['seller'] = 'Seller/index';
 $route['seller/post-deal'] = 'Seller/postDeal';
-$route['seller/post-deal-from'] = 'Seller/postDealForm';
+$route['seller/post-deal-from'] = 'Flight/postDealForm';
 
 
 /*********************************TREK*******************/

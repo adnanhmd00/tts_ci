@@ -647,7 +647,7 @@
                 <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class=""><i class="flaticon2-drop"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Layout Builder">
-                <a href="https://keenthemes.com/metronic/preview/demo1/builder.html"><i class="flaticon2-gear"></i></a>
+                <a href="#
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
                 <a href="https://keenthemes.com/metronic/?page=docs" target="_blank"><i class="flaticon2-telegram-logo"></i></a>

@@ -1485,7 +1485,7 @@
                 <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class=""><i class="flaticon2-drop"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Layout Builder">
-                <a href="https://keenthemes.com/metronic/preview/demo1/builder.html"><i class="flaticon2-gear"></i></a>
+                <a href="#
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
                 <a href="https://keenthemes.com/metronic/?page=docs" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
@@ -1513,7 +1513,7 @@
                         <img src="./files/demo1.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
                             <a href="https://keenthemes.com/metronic/preview/demo1/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
+                            <a href="#" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
                         </div>
                     </div>
                 </div>
@@ -1524,7 +1524,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo2.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo2/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
+                            <a href="https://keenthemes.com#" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                             <a href="https://keenthemes.com/metronic/preview/demo2/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
                         </div>
                     </div>

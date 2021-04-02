@@ -411,7 +411,7 @@
 									</div>
 								</li>
 								<li class="kt-menu__item " aria-haspopup="true">
-									<a href="https://keenthemes.com/metronic/preview/demo1/builder.html" class="kt-menu__link ">
+									<a href="#
 										<span class="kt-menu__link-icon">
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
 												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -2903,7 +2903,7 @@
 				<a href="https://keenthemes.com/metronic/preview/demo1/custom/pages/wizard/wizard-4.html#" class=""><i class="flaticon2-drop"></i></a>
 			</li>
 			<li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Layout Builder">
-				<a href="https://keenthemes.com/metronic/preview/demo1/builder.html"><i class="flaticon2-gear"></i></a>
+				<a href="#
 			</li>
 			<li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
 				<a href="https://keenthemes.com/metronic/?page=docs" target="_blank"><i class="flaticon2-telegram-logo"></i></a>

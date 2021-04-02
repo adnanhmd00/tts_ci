@@ -13,7 +13,7 @@
         <!-- begin:: Header Mobile -->
         <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
             <div class="kt-header-mobile__logo">
-                <a href="https://keenthemes.com/metronic/preview/demo1/index.html">
+                <a href="">
                 <img alt="The Travel Square" src="./files/logo-light.png">
                 </a>
             </div>
@@ -114,13 +114,13 @@
                                             </h3>
                                             <ul class="nav nav-tabs nav-tabs-line nav-tabs-bold nav-tabs-line-3x nav-tabs-line-success kt-notification-item-padding-x" role="tablist">
                                                 <li class="nav-item">
-                                                    <a class="nav-link active show" data-toggle="tab" href="https://keenthemes.com/metronic/preview/demo1/index.html#topbar_notifications_notifications" role="tab" aria-selected="true">Alerts</a>
+                                                    <a class="nav-link active show" data-toggle="tab" href="#topbar_notifications_notifications" role="tab" aria-selected="true">Alerts</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="tab" href="https://keenthemes.com/metronic/preview/demo1/index.html#topbar_notifications_events" role="tab" aria-selected="false">Events</a>
+                                                    <a class="nav-link" data-toggle="tab" href="#topbar_notifications_events" role="tab" aria-selected="false">Events</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="tab" href="https://keenthemes.com/metronic/preview/demo1/index.html#topbar_notifications_logs" role="tab" aria-selected="false">Logs</a>
+                                                    <a class="nav-link" data-toggle="tab" href="#topbar_notifications_logs" role="tab" aria-selected="false">Logs</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -128,7 +128,7 @@
                                         <div class="tab-content">
                                             <div class="tab-pane active show" id="topbar_notifications_notifications" role="tabpanel">
                                                 <div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll ps" data-scroll="true" data-height="300" data-mobile-height="200" style="height: 300px; overflow: hidden;">
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-line-chart kt-font-success"></i>
                                                         </div>
@@ -141,7 +141,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-box-1 kt-font-brand"></i>
                                                         </div>
@@ -154,7 +154,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-chart2 kt-font-danger"></i>
                                                         </div>
@@ -167,7 +167,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-image-file kt-font-warning"></i>
                                                         </div>
@@ -180,7 +180,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-drop kt-font-info"></i>
                                                         </div>
@@ -193,7 +193,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-pie-chart-2 kt-font-success"></i>
                                                         </div>
@@ -206,7 +206,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-favourite kt-font-danger"></i>
                                                         </div>
@@ -219,7 +219,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item kt-notification__item--read">
+                                                    <a href="#" class="kt-notification__item kt-notification__item--read">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-safe kt-font-primary"></i>
                                                         </div>
@@ -232,7 +232,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-psd kt-font-success"></i>
                                                         </div>
@@ -245,7 +245,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon-download-1 kt-font-danger"></i>
                                                         </div>
@@ -258,7 +258,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon-security kt-font-warning"></i>
                                                         </div>
@@ -271,7 +271,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-pie-chart kt-font-success"></i>
                                                         </div>
@@ -294,7 +294,7 @@
                                             </div>
                                             <div class="tab-pane" id="topbar_notifications_events" role="tabpanel">
                                                 <div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll ps" data-scroll="true" data-height="300" data-mobile-height="200" style="height: 300px; overflow: hidden;">
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-psd kt-font-success"></i>
                                                         </div>
@@ -307,7 +307,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon-download-1 kt-font-danger"></i>
                                                         </div>
@@ -320,7 +320,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-line-chart kt-font-success"></i>
                                                         </div>
@@ -333,7 +333,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-box-1 kt-font-brand"></i>
                                                         </div>
@@ -346,7 +346,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-chart2 kt-font-danger"></i>
                                                         </div>
@@ -359,7 +359,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-image-file kt-font-warning"></i>
                                                         </div>
@@ -372,7 +372,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-drop kt-font-info"></i>
                                                         </div>
@@ -385,7 +385,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-pie-chart-2 kt-font-success"></i>
                                                         </div>
@@ -398,7 +398,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-favourite kt-font-brand"></i>
                                                         </div>
@@ -411,7 +411,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item kt-notification__item--read">
+                                                    <a href="#" class="kt-notification__item kt-notification__item--read">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-safe kt-font-primary"></i>
                                                         </div>
@@ -424,7 +424,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-psd kt-font-success"></i>
                                                         </div>
@@ -437,7 +437,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon-download-1 kt-font-danger"></i>
                                                         </div>
@@ -450,7 +450,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon-security kt-font-warning"></i>
                                                         </div>
@@ -463,7 +463,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                                                    <a href="#" class="kt-notification__item">
                                                         <div class="kt-notification__item-icon">
                                                             <i class="flaticon2-pie-chart kt-font-success"></i>
                                                         </div>
@@ -527,7 +527,7 @@
                                         <!--begin: Grid Nav -->
                                         <div class="kt-grid-nav kt-grid-nav--skin-light">
                                             <div class="kt-grid-nav__row">
-                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-grid-nav__item">
+                                                <a href="#" class="kt-grid-nav__item">
                                                     <span class="kt-grid-nav__icon">
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--lg">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -540,7 +540,7 @@
                                                     <span class="kt-grid-nav__title">Accounting</span>
                                                     <span class="kt-grid-nav__desc">eCommerce</span>
                                                 </a>
-                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-grid-nav__item">
+                                                <a href="#" class="kt-grid-nav__item">
                                                     <span class="kt-grid-nav__icon">
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--lg">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -555,7 +555,7 @@
                                                 </a>
                                             </div>
                                             <div class="kt-grid-nav__row">
-                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-grid-nav__item">
+                                                <a href="#" class="kt-grid-nav__item">
                                                     <span class="kt-grid-nav__icon">
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--lg">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -568,7 +568,7 @@
                                                     <span class="kt-grid-nav__title">Projects</span>
                                                     <span class="kt-grid-nav__desc">Pending Tasks</span>
                                                 </a>
-                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-grid-nav__item">
+                                                <a href="#" class="kt-grid-nav__item">
                                                     <span class="kt-grid-nav__icon">
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--lg">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -618,7 +618,7 @@
                                                 <div class="kt-mycart__item">
                                                     <div class="kt-mycart__container">
                                                         <div class="kt-mycart__info">
-                                                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-mycart__title">
+                                                            <a href="#" class="kt-mycart__title">
                                                             Samsung
                                                             </a>
                                                             <span class="kt-mycart__desc">
@@ -628,11 +628,11 @@
                                                                 <span class="kt-mycart__price">$ 450</span>
                                                                 <span class="kt-mycart__text">for</span>
                                                                 <span class="kt-mycart__quantity">7</span>
-                                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-label-success btn-icon">−</a>
-                                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-label-success btn-icon">+</a>
+                                                                <a href="#" class="btn btn-label-success btn-icon">−</a>
+                                                                <a href="#" class="btn btn-label-success btn-icon">+</a>
                                                             </div>
                                                         </div>
-                                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-mycart__pic">
+                                                        <a href="#" class="kt-mycart__pic">
                                                         <img src="./files/product9.jpg" title="">
                                                         </a>
                                                     </div>
@@ -640,7 +640,7 @@
                                                 <div class="kt-mycart__item">
                                                     <div class="kt-mycart__container">
                                                         <div class="kt-mycart__info">
-                                                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-mycart__title">
+                                                            <a href="#" class="kt-mycart__title">
                                                             Panasonic
                                                             </a>
                                                             <span class="kt-mycart__desc">
@@ -650,11 +650,11 @@
                                                                 <span class="kt-mycart__price">$ 329</span>
                                                                 <span class="kt-mycart__text">for</span>
                                                                 <span class="kt-mycart__quantity">1</span>
-                                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-label-success btn-icon">−</a>
-                                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-label-success btn-icon">+</a>
+                                                                <a href="#" class="btn btn-label-success btn-icon">−</a>
+                                                                <a href="#" class="btn btn-label-success btn-icon">+</a>
                                                             </div>
                                                         </div>
-                                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-mycart__pic">
+                                                        <a href="#" class="kt-mycart__pic">
                                                         <img src="./files/product13.jpg" title="">
                                                         </a>
                                                     </div>
@@ -662,7 +662,7 @@
                                                 <div class="kt-mycart__item">
                                                     <div class="kt-mycart__container">
                                                         <div class="kt-mycart__info">
-                                                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-mycart__title">
+                                                            <a href="#" class="kt-mycart__title">
                                                             Fujifilm
                                                             </a>
                                                             <span class="kt-mycart__desc">
@@ -672,11 +672,11 @@
                                                                 <span class="kt-mycart__price">$ 520</span>
                                                                 <span class="kt-mycart__text">for</span>
                                                                 <span class="kt-mycart__quantity">6</span>
-                                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-label-success btn-icon">−</a>
-                                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-label-success btn-icon">+</a>
+                                                                <a href="#" class="btn btn-label-success btn-icon">−</a>
+                                                                <a href="#" class="btn btn-label-success btn-icon">+</a>
                                                             </div>
                                                         </div>
-                                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-mycart__pic">
+                                                        <a href="#" class="kt-mycart__pic">
                                                         <img src="./files/product16.jpg" title="">
                                                         </a>
                                                     </div>
@@ -684,7 +684,7 @@
                                                 <div class="kt-mycart__item">
                                                     <div class="kt-mycart__container">
                                                         <div class="kt-mycart__info">
-                                                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-mycart__title">
+                                                            <a href="#" class="kt-mycart__title">
                                                             Candy Machine
                                                             </a>
                                                             <span class="kt-mycart__desc">
@@ -694,11 +694,11 @@
                                                                 <span class="kt-mycart__price">$ 784</span>
                                                                 <span class="kt-mycart__text">for</span>
                                                                 <span class="kt-mycart__quantity">4</span>
-                                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-label-success btn-icon">−</a>
-                                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-label-success btn-icon">+</a>
+                                                                <a href="#" class="btn btn-label-success btn-icon">−</a>
+                                                                <a href="#" class="btn btn-label-success btn-icon">+</a>
                                                             </div>
                                                         </div>
-                                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-mycart__pic">
+                                                        <a href="#" class="kt-mycart__pic">
                                                         <img src="./files/product15.jpg" title="" alt="">
                                                         </a>
                                                     </div>
@@ -754,19 +754,19 @@
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround">
                                     <ul class="kt-nav kt-margin-t-10 kt-margin-b-10">
                                         <li class="kt-nav__item kt-nav__item--active">
-                                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-nav__link">
+                                            <a href="#" class="kt-nav__link">
                                             <span class="kt-nav__link-icon"><img src="./files/226-united-states.svg" alt=""></span>
                                             <span class="kt-nav__link-text">English</span>
                                             </a>
                                         </li>
                                         <li class="kt-nav__item">
-                                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-nav__link">
+                                            <a href="#" class="kt-nav__link">
                                             <span class="kt-nav__link-icon"><img src="./files/128-spain.svg" alt=""></span>
                                             <span class="kt-nav__link-text">Spanish</span>
                                             </a>
                                         </li>
                                         <li class="kt-nav__item">
-                                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-nav__link">
+                                            <a href="#" class="kt-nav__link">
                                             <span class="kt-nav__link-icon"><img src="./files/162-germany.svg" alt=""></span>
                                             <span class="kt-nav__link-text">German</span>
                                             </a>
@@ -896,16 +896,16 @@
                                 </div>
                                 <!-- <div class="kt-subheader__toolbar">
                                     <div class="kt-subheader__wrapper">
-                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn kt-subheader__btn-secondary">Today</a>
-                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn kt-subheader__btn-secondary">Month</a>
-                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn kt-subheader__btn-secondary">Year</a>
-                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Select dashboard daterange">
+                                        <a href="#" class="btn kt-subheader__btn-secondary">Today</a>
+                                        <a href="#" class="btn kt-subheader__btn-secondary">Month</a>
+                                        <a href="#" class="btn kt-subheader__btn-secondary">Year</a>
+                                        <a href="#" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Select dashboard daterange">
                                         <span class="kt-subheader__btn-daterange-title" id="kt_dashboard_daterangepicker_title">Today:</span>&nbsp;
                                         <span class="kt-subheader__btn-daterange-date" id="kt_dashboard_daterangepicker_date">Mar 17</span>
                                         <i class="flaticon2-calendar-1"></i>
                                         </a>
                                         <div class="dropdown dropdown-inline" data-toggle-="kt-tooltip" title="Quick actions" data-placement="left">
-                                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <a href="#" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--md">
                                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                         <polygon points="0 0 24 0 24 24 0 24"></polygon>
@@ -922,25 +922,25 @@
                                                     </li>
                                                     <li class="kt-nav__separator"></li>
                                                     <li class="kt-nav__item">
-                                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-nav__link">
+                                                        <a href="#" class="kt-nav__link">
                                                         <i class="kt-nav__link-icon flaticon2-drop"></i>
                                                         <span class="kt-nav__link-text">Order</span>
                                                         </a>
                                                     </li>
                                                     <li class="kt-nav__item">
-                                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-nav__link">
+                                                        <a href="#" class="kt-nav__link">
                                                         <i class="kt-nav__link-icon flaticon2-calendar-8"></i>
                                                         <span class="kt-nav__link-text">Ticket</span>
                                                         </a>
                                                     </li>
                                                     <li class="kt-nav__item">
-                                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-nav__link">
+                                                        <a href="#" class="kt-nav__link">
                                                         <i class="kt-nav__link-icon flaticon2-telegram-logo"></i>
                                                         <span class="kt-nav__link-text">Goal</span>
                                                         </a>
                                                     </li>
                                                     <li class="kt-nav__item">
-                                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-nav__link">
+                                                        <a href="#" class="kt-nav__link">
                                                         <i class="kt-nav__link-icon flaticon2-new-email"></i>
                                                         <span class="kt-nav__link-text">Support Case</span>
                                                         <span class="kt-nav__link-badge">
@@ -950,8 +950,8 @@
                                                     </li>
                                                     <li class="kt-nav__separator"></li>
                                                     <li class="kt-nav__foot">
-                                                        <a class="btn btn-label-brand btn-bold btn-sm" href="https://keenthemes.com/metronic/preview/demo1/index.html#">Upgrade plan</a>
-                                                        <a class="btn btn-clean btn-bold btn-sm kt-hidden" href="https://keenthemes.com/metronic/preview/demo1/index.html#" data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more...">Learn more</a>
+                                                        <a class="btn btn-label-brand btn-bold btn-sm" href="#">Upgrade plan</a>
+                                                        <a class="btn btn-clean btn-bold btn-sm kt-hidden" href="#" data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more...">Learn more</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -1255,17 +1255,17 @@
         <!-- end:: Page -->
         <!-- begin::Quick Panel -->
         <div id="kt_quick_panel" class="kt-quick-panel">
-            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-quick-panel__close" id="kt_quick_panel_close_btn"><i class="flaticon2-delete"></i></a>
+            <a href="#" class="kt-quick-panel__close" id="kt_quick_panel_close_btn"><i class="flaticon2-delete"></i></a>
             <div class="kt-quick-panel__nav" kt-hidden-height="66" style="">
                 <ul class="nav nav-tabs nav-tabs-line nav-tabs-bold nav-tabs-line-3x nav-tabs-line-brand  kt-notification-item-padding-x" role="tablist">
                     <li class="nav-item active">
-                        <a class="nav-link active" data-toggle="tab" href="https://keenthemes.com/metronic/preview/demo1/index.html#kt_quick_panel_tab_notifications" role="tab">Notifications</a>
+                        <a class="nav-link active" data-toggle="tab" href="#kt_quick_panel_tab_notifications" role="tab">Notifications</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="https://keenthemes.com/metronic/preview/demo1/index.html#kt_quick_panel_tab_logs" role="tab">Audit Logs</a>
+                        <a class="nav-link" data-toggle="tab" href="#kt_quick_panel_tab_logs" role="tab">Audit Logs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="https://keenthemes.com/metronic/preview/demo1/index.html#kt_quick_panel_tab_settings" role="tab">Settings</a>
+                        <a class="nav-link" data-toggle="tab" href="#kt_quick_panel_tab_settings" role="tab">Settings</a>
                     </li>
                 </ul>
             </div>
@@ -1273,7 +1273,7 @@
                 <div class="tab-content">
                     <div class="tab-pane fade show kt-scroll active ps ps--active-y" id="kt_quick_panel_tab_notifications" role="tabpanel" style="height: 592px; overflow: hidden;">
                         <div class="kt-notification">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                            <a href="#" class="kt-notification__item">
                                 <div class="kt-notification__item-icon">
                                     <i class="flaticon2-line-chart kt-font-success"></i>
                                 </div>
@@ -1286,7 +1286,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                            <a href="#" class="kt-notification__item">
                                 <div class="kt-notification__item-icon">
                                     <i class="flaticon2-box-1 kt-font-brand"></i>
                                 </div>
@@ -1299,7 +1299,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                            <a href="#" class="kt-notification__item">
                                 <div class="kt-notification__item-icon">
                                     <i class="flaticon2-chart2 kt-font-danger"></i>
                                 </div>
@@ -1312,7 +1312,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                            <a href="#" class="kt-notification__item">
                                 <div class="kt-notification__item-icon">
                                     <i class="flaticon2-image-file kt-font-warning"></i>
                                 </div>
@@ -1325,7 +1325,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                            <a href="#" class="kt-notification__item">
                                 <div class="kt-notification__item-icon">
                                     <i class="flaticon2-drop kt-font-info"></i>
                                 </div>
@@ -1338,7 +1338,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                            <a href="#" class="kt-notification__item">
                                 <div class="kt-notification__item-icon">
                                     <i class="flaticon2-pie-chart-2 kt-font-success"></i>
                                 </div>
@@ -1351,7 +1351,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                            <a href="#" class="kt-notification__item">
                                 <div class="kt-notification__item-icon">
                                     <i class="flaticon2-favourite kt-font-danger"></i>
                                 </div>
@@ -1364,7 +1364,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item kt-notification__item--read">
+                            <a href="#" class="kt-notification__item kt-notification__item--read">
                                 <div class="kt-notification__item-icon">
                                     <i class="flaticon2-safe kt-font-primary"></i>
                                 </div>
@@ -1377,7 +1377,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                            <a href="#" class="kt-notification__item">
                                 <div class="kt-notification__item-icon">
                                     <i class="flaticon2-psd kt-font-success"></i>
                                 </div>
@@ -1390,7 +1390,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                            <a href="#" class="kt-notification__item">
                                 <div class="kt-notification__item-icon">
                                     <i class="flaticon-download-1 kt-font-danger"></i>
                                 </div>
@@ -1403,7 +1403,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                            <a href="#" class="kt-notification__item">
                                 <div class="kt-notification__item-icon">
                                     <i class="flaticon-security kt-font-warning"></i>
                                 </div>
@@ -1416,7 +1416,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification__item">
+                            <a href="#" class="kt-notification__item">
                                 <div class="kt-notification__item-icon">
                                     <i class="flaticon2-pie-chart kt-font-warning"></i>
                                 </div>
@@ -1439,7 +1439,7 @@
                     </div>
                     <div class="tab-pane fade kt-scroll ps" id="kt_quick_panel_tab_logs" role="tabpanel" style="height: 592px; overflow: hidden;">
                         <div class="kt-notification-v2">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification-v2__item">
+                            <a href="#" class="kt-notification-v2__item">
                                 <div class="kt-notification-v2__item-icon">
                                     <i class="flaticon-bell kt-font-brand"></i>
                                 </div>
@@ -1452,7 +1452,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification-v2__item">
+                            <a href="#" class="kt-notification-v2__item">
                                 <div class="kt-notification-v2__item-icon">
                                     <i class="flaticon2-box kt-font-danger"></i>
                                 </div>
@@ -1465,7 +1465,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification-v2__item">
+                            <a href="#" class="kt-notification-v2__item">
                                 <div class="kt-notification-v2__item-icon">
                                     <i class="flaticon-psd kt-font-brand"></i>
                                 </div>
@@ -1478,7 +1478,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification-v2__item">
+                            <a href="#" class="kt-notification-v2__item">
                                 <div class="kt-notification-v2__item-icon">
                                     <i class="flaticon2-supermarket kt-font-warning"></i>
                                 </div>
@@ -1491,7 +1491,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification-v2__item">
+                            <a href="#" class="kt-notification-v2__item">
                                 <div class="kt-notification-v2__item-icon">
                                     <i class="flaticon-paper-plane-1 kt-font-success"></i>
                                 </div>
@@ -1504,7 +1504,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification-v2__item">
+                            <a href="#" class="kt-notification-v2__item">
                                 <div class="kt-notification-v2__item-icon">
                                     <i class="flaticon2-information kt-font-danger"></i>
                                 </div>
@@ -1517,7 +1517,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification-v2__item">
+                            <a href="#" class="kt-notification-v2__item">
                                 <div class="kt-notification-v2__item-icon">
                                     <i class="flaticon2-mail-1 kt-font-brand"></i>
                                 </div>
@@ -1530,7 +1530,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-notification-v2__item">
+                            <a href="#" class="kt-notification-v2__item">
                                 <div class="kt-notification-v2__item-icon">
                                     <i class="flaticon2-hangouts-logo kt-font-warning"></i>
                                 </div>
@@ -1677,16 +1677,16 @@
         <!-- begin::Sticky Toolbar -->
         <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="Check out more demos">
-                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class=""><i class="flaticon2-drop"></i></a>
+                <a href="#" class=""><i class="flaticon2-drop"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Layout Builder">
-                <a href="https://keenthemes.com/metronic/preview/demo1/builder.html"><i class="flaticon2-gear"></i></a>
+                <a href="#"><i class="flaticon2-gear"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
                 <a href="https://keenthemes.com/metronic/?page=docs" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Example">
-                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
+                <a href="#" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
             </li>
         </ul>
         <!-- end::Sticky Toolbar -->
@@ -1697,7 +1697,7 @@
                     Select A Demo
                     <!--<small>5</small>-->
                 </h3>
-                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-demo-panel__close" id="kt_demo_panel_close"><i class="flaticon2-delete"></i></a>
+                <a href="#" class="kt-demo-panel__close" id="kt_demo_panel_close"><i class="flaticon2-delete"></i></a>
             </div>
             <div class="kt-demo-panel__body kt-scroll ps ps--active-y" style="height: 553px; overflow: hidden;">
                 <div class="kt-demo-panel__item kt-demo-panel__item--active">
@@ -1707,8 +1707,8 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo1.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
+                            <a href="" class="btn btn-brand btn-elevate " target="_blank">Default</a>
+                            <a href="" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
                         </div>
                     </div>
                 </div>
@@ -1719,7 +1719,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo2.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo2/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
+                            <a href="https://keenthemes.com#" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                             <a href="https://keenthemes.com/metronic/preview/demo2/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
                         </div>
                     </div>
@@ -1851,7 +1851,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo13.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -1862,7 +1862,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo14.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -1873,7 +1873,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo15.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -1884,7 +1884,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo16.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -1895,7 +1895,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo17.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -1906,7 +1906,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo18.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -1917,7 +1917,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo19.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -1928,7 +1928,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo20.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -1939,7 +1939,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo21.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -1950,7 +1950,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo22.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -1961,7 +1961,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo23.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -1972,7 +1972,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo24.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -1983,7 +1983,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo25.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -1994,7 +1994,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo26.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -2005,7 +2005,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo27.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -2016,7 +2016,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo28.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -2027,7 +2027,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo29.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -2038,7 +2038,7 @@
                     <div class="kt-demo-panel__item-preview">
                         <img src="./files/demo30.jpg" alt="">
                         <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -2064,7 +2064,7 @@
                                 <div class="kt-chat__head ">
                                     <div class="kt-chat__left">
                                         <div class="kt-chat__label">
-                                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-chat__title">Jason Muller</a>
+                                            <a href="#" class="kt-chat__title">Jason Muller</a>
                                             <span class="kt-chat__status">
                                             <span class="kt-badge kt-badge--dot kt-badge--success"></span> Active
                                             </span>
@@ -2084,13 +2084,13 @@
                                                     </li>
                                                     <li class="kt-nav__separator"></li>
                                                     <li class="kt-nav__item">
-                                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-nav__link">
+                                                        <a href="#" class="kt-nav__link">
                                                         <i class="kt-nav__link-icon flaticon2-group"></i>
                                                         <span class="kt-nav__link-text">New Group</span>
                                                         </a>
                                                     </li>
                                                     <li class="kt-nav__item">
-                                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-nav__link">
+                                                        <a href="#" class="kt-nav__link">
                                                         <i class="kt-nav__link-icon flaticon2-open-text-book"></i>
                                                         <span class="kt-nav__link-text">Contacts</span>
                                                         <span class="kt-nav__link-badge">
@@ -2099,27 +2099,27 @@
                                                         </a>
                                                     </li>
                                                     <li class="kt-nav__item">
-                                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-nav__link">
+                                                        <a href="#" class="kt-nav__link">
                                                         <i class="kt-nav__link-icon flaticon2-bell-2"></i>
                                                         <span class="kt-nav__link-text">Calls</span>
                                                         </a>
                                                     </li>
                                                     <li class="kt-nav__item">
-                                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-nav__link">
+                                                        <a href="#" class="kt-nav__link">
                                                         <i class="kt-nav__link-icon flaticon2-dashboard"></i>
                                                         <span class="kt-nav__link-text">Settings</span>
                                                         </a>
                                                     </li>
                                                     <li class="kt-nav__item">
-                                                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-nav__link">
+                                                        <a href="#" class="kt-nav__link">
                                                         <i class="kt-nav__link-icon flaticon2-protected"></i>
                                                         <span class="kt-nav__link-text">Help</span>
                                                         </a>
                                                     </li>
                                                     <li class="kt-nav__separator"></li>
                                                     <li class="kt-nav__foot">
-                                                        <a class="btn btn-label-brand btn-bold btn-sm" href="https://keenthemes.com/metronic/preview/demo1/index.html#">Upgrade plan</a>
-                                                        <a class="btn btn-clean btn-bold btn-sm" href="https://keenthemes.com/metronic/preview/demo1/index.html#" data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more...">Learn more</a>
+                                                        <a class="btn btn-label-brand btn-bold btn-sm" href="#">Upgrade plan</a>
+                                                        <a class="btn btn-clean btn-bold btn-sm" href="#" data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more...">Learn more</a>
                                                     </li>
                                                 </ul>
                                                 <!--end::Nav-->
@@ -2139,7 +2139,7 @@
                                                 <span class="kt-media kt-media--circle kt-media--sm">
                                                 <img src="./files/100_12(1).jpg" alt="image">
                                                 </span>
-                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-chat__username">Jason Muller</a>
+                                                <a href="#" class="kt-chat__username">Jason Muller</a>
                                                 <span class="kt-chat__datetime">2 Hours</span>
                                             </div>
                                             <div class="kt-chat__text">
@@ -2149,7 +2149,7 @@
                                         <div class="kt-chat__message kt-chat__message--right kt-chat__message--brand">
                                             <div class="kt-chat__user">
                                                 <span class="kt-chat__datetime">30 Seconds</span>
-                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-chat__username">You</a>
+                                                <a href="#" class="kt-chat__username">You</a>
                                                 <span class="kt-media kt-media--circle kt-media--sm">
                                                 <img src="./files/300_21.jpg" alt="image">
                                                 </span>
@@ -2163,7 +2163,7 @@
                                                 <span class="kt-media kt-media--circle kt-media--sm">
                                                 <img src="./files/100_12(1).jpg" alt="image">
                                                 </span>
-                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-chat__username">Jason Muller</a>
+                                                <a href="#" class="kt-chat__username">Jason Muller</a>
                                                 <span class="kt-chat__datetime">30 Seconds</span>
                                             </div>
                                             <div class="kt-chat__text">
@@ -2173,7 +2173,7 @@
                                         <div class="kt-chat__message kt-chat__message--right kt-chat__message--brand">
                                             <div class="kt-chat__user">
                                                 <span class="kt-chat__datetime">Just Now</span>
-                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-chat__username">You</a>
+                                                <a href="#" class="kt-chat__username">You</a>
                                                 <span class="kt-media kt-media--circle kt-media--sm">
                                                 <img src="./files/300_21.jpg" alt="image">
                                                 </span>
@@ -2187,7 +2187,7 @@
                                                 <span class="kt-media kt-media--circle kt-media--sm">
                                                 <img src="./files/100_12(1).jpg" alt="image">
                                                 </span>
-                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-chat__username">Jason Muller</a>
+                                                <a href="#" class="kt-chat__username">Jason Muller</a>
                                                 <span class="kt-chat__datetime">2 Hours</span>
                                             </div>
                                             <div class="kt-chat__text">
@@ -2197,13 +2197,13 @@
                                         <div class="kt-chat__message kt-chat__message--right kt-chat__message--brand">
                                             <div class="kt-chat__user">
                                                 <span class="kt-chat__datetime">30 Seconds</span>
-                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-chat__username">You</a>
+                                                <a href="#" class="kt-chat__username">You</a>
                                                 <span class="kt-media kt-media--circle kt-media--sm">
                                                 <img src="./files/300_21.jpg" alt="image">
                                                 </span>
                                             </div>
                                             <div class="kt-chat__text">
-                                                You can unwatch this repository immediately <br>by clicking here: <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-font-bold kt-link"></a>
+                                                You can unwatch this repository immediately <br>by clicking here: <a href="#" class="kt-font-bold kt-link"></a>
                                             </div>
                                         </div>
                                         <div class="kt-chat__message kt-chat__message--success">
@@ -2211,7 +2211,7 @@
                                                 <span class="kt-media kt-media--circle kt-media--sm">
                                                 <img src="./files/100_12(1).jpg" alt="image">
                                                 </span>
-                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-chat__username">Jason Muller</a>
+                                                <a href="#" class="kt-chat__username">Jason Muller</a>
                                                 <span class="kt-chat__datetime">30 Seconds</span>
                                             </div>
                                             <div class="kt-chat__text">
@@ -2221,7 +2221,7 @@
                                         <div class="kt-chat__message kt-chat__message--right kt-chat__message--brand">
                                             <div class="kt-chat__user">
                                                 <span class="kt-chat__datetime">Just Now</span>
-                                                <a href="https://keenthemes.com/metronic/preview/demo1/index.html#" class="kt-chat__username">You</a>
+                                                <a href="#" class="kt-chat__username">You</a>
                                                 <span class="kt-media kt-media--circle kt-media--sm">
                                                 <img src="./files/300_21.jpg" alt="image">
                                                 </span>
@@ -2246,9 +2246,9 @@
                                     </div>
                                     <div class="kt-chat__toolbar">
                                         <div class="kt_chat__tools">
-                                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#"><i class="flaticon2-link"></i></a>
-                                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#"><i class="flaticon2-photograph"></i></a>
-                                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html#"><i class="flaticon2-photo-camera"></i></a>
+                                            <a href="#"><i class="flaticon2-link"></i></a>
+                                            <a href="#"><i class="flaticon2-photograph"></i></a>
+                                            <a href="#"><i class="flaticon2-photo-camera"></i></a>
                                         </div>
                                         <div class="kt_chat__actions">
                                             <button type="button" class="btn btn-brand btn-md  btn-font-sm btn-upper btn-bold kt-chat__reply">reply</button>
