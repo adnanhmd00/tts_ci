@@ -15,19 +15,39 @@
                 -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
                 transform: scale(1.5);
             }
+
+            /* Datepicker */
+
+            .ui-datepicker .weekend .ui-state-default {
+            background: blue;
+            }
+            .ui-datepicker-calendar td a[data-custom] {
+            position: relative;
+            padding-bottom: 10px;
+            }
+            .ui-datepicker-calendar td a[data-custom]::after {
+            /*STYLE THE CUSTOME DATA HERE*/
+            content: '$' attr(data-custom);
+            display: block;
+            font-size: small;
+            }
+                    
+            .footer{
+                position: fixed;
+                left: 15%;
+                bottom: 0;
+                width: 85%;
+                background-color: #d5d5d5;
+                color: white;
+                text-align: center;
+                padding: 20px;
+            }
         </style>
-        <style>     
-        .footer{
-            position: fixed;
-            left: 15%;
-            bottom: 0;
-            width: 85%;
-            background-color: #d5d5d5;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        </style>
+
+        <!-- Date Picker -->
+        <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+        <link href="//code.jquery.com/ui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+        <script src="//code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
     </head>
     <!-- end::Head -->
     <!-- begin::Body -->
@@ -187,14 +207,12 @@
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             <label for="trip">Depart</label>
-                                            <input type="text" placeholder="Select Date" class="form-control">
-                                        </div>
+                                            <input id="datepicker-from" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             <label for="trip">Return</label>
-                                            <input type="text" placeholder="Select Date" class="form-control">
-                                        </div>
+                                            <input id="datepicker-to" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
@@ -232,265 +250,221 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-none d-md-block">
-                                        <div class="row mt-4">
-                                            <div class="col-sm-1 col-md-2">
-                                                <p class="font-weight-bold lead text-center">Airline</p>
-                                            </div>
-                                            <div class="col-sm-1 col-md-2">
-                                                <p class="font-weight-bold lead text-center">Departure</p>
-                                            </div>
-                                            <div class="col-sm-1 col-md-2">
-                                                <p class="font-weight-bold lead text-center">Duration</p>
-                                            </div>
-                                            <div class="col-sm-1 col-md-2">
-                                                <p class="font-weight-bold lead text-center">Arrival</p>
-                                            </div>
-                                            <div class="col-sm-1 col-md-2">
-                                                <p class="font-weight-bold lead text-center">Price</p>
-                                            </div>
-                                            <div class="col-sm-1 col-md-2">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card mb-2">
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
-                                                    <div class="lead">AI - 9831T</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <div style="font-size: 24px;">19:45</div>
-                                                    <div class="lead">DEL</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <div class="h5 mt-4">1h 0m</div>
-                                                    <strong style="font-size: 12px;">Non Stop</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <div style="font-size: 24px;">20:45</div>
-                                                    <div class="lead">IXC</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <div class="h3">₹ 2,895</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <input type="radio" class="form-check-input" name="optradio">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div class="card mb-2">
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
-                                                    <p class="lead">AI - 9831T</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">19:45</p>
-                                                    <p class="lead">DEL</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p class="h3">1h 0m</p>
-                                                    <strong style="font-size: 12px;">Non Stop</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">20:45</p>
-                                                    <p class="lead">IXC</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <p class="h3">₹ 2,895</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <input type="radio" class="form-check-input" name="optradio">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div class="card mb-2">
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
-                                                    <p class="lead">AI - 9831T</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">19:45</p>
-                                                    <p class="lead">DEL</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p class="h3">1h 0m</p>
-                                                    <strong style="font-size: 12px;">Non Stop</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">20:45</p>
-                                                    <p class="lead">IXC</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <p class="h3">₹ 2,895</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <input type="radio" class="form-check-input" name="optradio">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div class="card mb-2">
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
-                                                    <p class="lead">AI - 9831T</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">19:45</p>
-                                                    <p class="lead">DEL</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p class="h3">1h 0m</p>
-                                                    <strong style="font-size: 12px;">Non Stop</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">20:45</p>
-                                                    <p class="lead">IXC</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <p class="h3">₹ 2,895</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <input type="radio" class="form-check-input" name="optradio">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div class="card mb-2">
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
-                                                    <p class="lead">AI - 9831T</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">19:45</p>
-                                                    <p class="lead">DEL</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p class="h3">1h 0m</p>
-                                                    <strong style="font-size: 12px;">Non Stop</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">20:45</p>
-                                                    <p class="lead">IXC</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <p class="h3">₹ 2,895</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <input type="radio" class="form-check-input" name="optradio">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div class="card mb-2">
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
-                                                    <p class="lead">AI - 9831T</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">19:45</p>
-                                                    <p class="lead">DEL</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p class="h3">1h 0m</p>
-                                                    <strong style="font-size: 12px;">Non Stop</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">20:45</p>
-                                                    <p class="lead">IXC</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <p class="h3">₹ 2,895</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <input type="radio" class="form-check-input" name="optradio">
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="card" id="demo">
+                                        <table class="table">
+                                            <thead class="text-center">
+                                                <tr>
+                                                    <th>Airline</th>
+                                                    <th>Departure</th>
+                                                    <th>Duration</th>
+                                                    <th>Arrival</th>
+                                                    <th>Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="get-info">
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                            <div id="flight-name" class="lead">AI - 9831T</div> 
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="board-time" style="font-size: 24px;">19:45</div>
+                                                            <div id="board-city" class="lead">DEL</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div class="h5 mt-4">1h 0m</div>
+                                                            <strong id="flight-type" style="font-size: 12px;">Non Stop</strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="depart-time" style="font-size: 24px;">20:45</div>
+                                                            <div id="depart-city" class="lead">IXC</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center mt-4">
+                                                            <div id="flight-price" class="h3">₹ 2,895</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+
+                                        <tbody id="demo">
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                            <div id="flight-name" class="lead">AI - 9831T</div> 
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="board-time" style="font-size: 24px;">19:45</div>
+                                                            <div id="board-city" class="lead">DEL</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div class="h5 mt-4">1h 0m</div>
+                                                            <strong id="flight-type" style="font-size: 12px;">Non Stop</strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="depart-time" style="font-size: 24px;">20:45</div>
+                                                            <div id="depart-city" class="lead">IXC</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center mt-4">
+                                                            <div id="flight-price" class="h3">₹ 2,895</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+
+                                        <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                            <div id="flight-name" class="lead">AI - 9831T</div> 
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="board-time" style="font-size: 24px;">19:45</div>
+                                                            <div id="board-city" class="lead">DEL</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div class="h5 mt-4">1h 0m</div>
+                                                            <strong id="flight-type" style="font-size: 12px;">Non Stop</strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="depart-time" style="font-size: 24px;">20:45</div>
+                                                            <div id="depart-city" class="lead">IXC</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center mt-4">
+                                                            <div id="flight-price" class="h3">₹ 2,895</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+
+                                        <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                            <div id="flight-name" class="lead">AI - 9831T</div> 
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="board-time" style="font-size: 24px;">19:45</div>
+                                                            <div id="board-city" class="lead">DEL</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div class="h5 mt-4">1h 0m</div>
+                                                            <strong id="flight-type" style="font-size: 12px;">Non Stop</strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="depart-time" style="font-size: 24px;">20:45</div>
+                                                            <div id="depart-city" class="lead">IXC</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center mt-4">
+                                                            <div id="flight-price" class="h3">₹ 2,895</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+
+                                        <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                            <div id="flight-name" class="lead">AI - 9831T</div> 
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="board-time" style="font-size: 24px;">19:45</div>
+                                                            <div id="board-city" class="lead">DEL</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div class="h5 mt-4">1h 0m</div>
+                                                            <strong id="flight-type" style="font-size: 12px;">Non Stop</strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="depart-time" style="font-size: 24px;">20:45</div>
+                                                            <div id="depart-city" class="lead">IXC</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center mt-4">
+                                                            <div id="flight-price" class="h3">₹ 2,895</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+
+                                        <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                            <div id="flight-name" class="lead">AI - 9831T</div> 
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="board-time" style="font-size: 24px;">19:45</div>
+                                                            <div id="board-city" class="lead">DEL</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div class="h5 mt-4">1h 0m</div>
+                                                            <strong id="flight-type" style="font-size: 12px;">Non Stop</strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="depart-time" style="font-size: 24px;">20:45</div>
+                                                            <div id="depart-city" class="lead">IXC</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center mt-4">
+                                                            <div id="flight-price" class="h3">₹ 2,895</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -614,9 +588,9 @@
                     </div>
                     <div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" id="footer ">
                         <div class="kt-container  kt-container--fluid ">
-                            <div class="col-md-8">
+                            <div class="col-md-8 ml-4">
                             <p class="lead text-left">Selected Flight</p>
-                                <div class="card mb-2">
+                                <!-- <div class="card mb-2">
                                     <div class="row">
                                         <div class="col-xs-2 col-sm-2 col-md-2 p-2">
                                             <div class="text-center">
@@ -648,7 +622,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>                                
+                                </div>                                 -->
+                                <div class="card">
+                                    <div id="append-info"></div>
+                                </div>
                             </div>
                             <div class="col-md-4">
                                 <div>
@@ -1012,368 +989,7 @@
         </ul>
         <!-- end::Sticky Toolbar -->
         <!-- begin::Demo Panel -->
-        <div id="kt_demo_panel" class="kt-demo-panel">
-            <div class="kt-demo-panel__head" kt-hidden-height="50" style="">
-                <h3 class="kt-demo-panel__title">
-                    Select A Demo
-                    <!--<small>5</small>-->
-                </h3>
-                <a href="http://supplier.thetravelsquare.in/" class="kt-demo-panel__close" id="kt_demo_panel_close"><i class="flaticon2-delete"></i></a>
-            </div>
-            <div class="kt-demo-panel__body kt-scroll ps ps--active-y" style="height: 553px; overflow: hidden;">
-                <div class="kt-demo-panel__item kt-demo-panel__item--active">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 1
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo1.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="#" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 2
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo2.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com#" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo2/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 3
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo3.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo3/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo3/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 4
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo4.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo4/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo4/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 5
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo5.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo5/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo5/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 6
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo6.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo6/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo6/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 7
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo7.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo7/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo7/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 8
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo8.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo8/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo8/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 9
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo9.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo9/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo9/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 10
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo10.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo10/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo10/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 11
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo11.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo11/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo11/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 12
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo12.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo12/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo12/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 13
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo13.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 14
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo14.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 15
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo15.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 16
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo16.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 17
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo17.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 18
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo18.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 19
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo19.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 20
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo20.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 21
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo21.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 22
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo22.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 23
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo23.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 24
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo24.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 25
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo25.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 26
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo26.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 27
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo27.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 28
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo28.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 29
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo29.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 30
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo30.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="https://1.envato.market/EA4JP" target="_blank" class="kt-demo-panel__purchase btn btn-brand btn-elevate btn-bold btn-upper">
-                Buy Metronic Now!
-                </a>
-                <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-                    <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-                </div>
-                <div class="ps__rail-y" style="top: 0px; height: 553px; right: 0px;">
-                    <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 40px;"></div>
-                </div>
-            </div>
-        </div>
+        
         <!-- end::Demo Panel -->
         <!--Begin:: Chat-->
         <div class="modal fade- modal-sticky-bottom-right" id="kt_chat_modal" role="dialog" data-backdrop="false">
@@ -1607,5 +1223,53 @@
             <div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div>
         </div>
         <iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./files/box-469cf41adb11dc78be68c1ae7f9457a4.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
+
+
+        <script>
+        $(function() {
+        $("#datepicker-from").datepicker({
+            beforeShow: addCustomInformation,
+            //---^----------- if closed by default (when you're using <input>)
+            beforeShowDay: function(date) {
+            return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
+            },
+            onChangeMonthYear: addCustomInformation,
+            onSelect: addCustomInformation
+        });
+        addCustomInformation(); // if open by default (when you're using <div>)
+        });
+
+        $(function() {
+        $("#datepicker-to").datepicker({
+            beforeShow: addCustomInformation,
+            //---^----------- if closed by default (when you're using <input>)
+            beforeShowDay: function(date) {
+            return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
+            },
+            onChangeMonthYear: addCustomInformation,
+            onSelect: addCustomInformation
+        });
+        addCustomInformation(); // if open by default (when you're using <div>)
+        });
+
+        function addCustomInformation() {
+        setTimeout(function() {
+            $(".ui-datepicker-calendar td").filter(function() {
+            var date = $(this).text();
+            return /\d/.test(date);
+            }).find("a").attr('data-custom', 110); // Add custom data here
+        }, 0)
+        }
+        </script>
+        <script>
+        $(document).ready(function() {
+            $("#get-info").click(function() {
+                var res = $('#demo').val();
+                alert(res);
+                // $("#append-info").append(res);
+            });
+        });
+        </script>
+
     </body>
 </html>
