@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
     <!-- begin::Head -->
     <head>
@@ -10,6 +10,26 @@
                 -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
                 transform: scale(1.5);
             }
+
+
+            /* Datepicker */
+
+            .ui-datepicker .weekend .ui-state-default {
+            background: blue;
+            }
+            .ui-datepicker-calendar td a[data-custom] {
+            position: relative;
+            padding-bottom: 10px;
+            }
+            .ui-datepicker-calendar td a[data-custom]::after {
+            /*STYLE THE CUSTOME DATA HERE*/
+            content: '$' attr(data-custom);
+            display: block;
+            font-size: small;
+            }
+            .datepicker {
+                z-index:1001 !important;
+            }   
         </style>
     </head>
     <!-- end::Head -->
@@ -160,10 +180,10 @@
                                                 <div class="form-group">
                                                 <label for="From">From</label>
                                                     <select name="" id="" class="form-control">
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
+                                                        <option value="">Goa</option>
+                                                        <option value="">Bangalore</option>
+                                                        <option value="">Kolkata</option>
+                                                        <option value="">Mumbai</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -179,10 +199,10 @@
                                                 <div class="form-group">
                                                 <label for="to">To</label>
                                                     <select name="" id="" class="form-control">
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
+                                                        <option value="">Mumbai</option>
+                                                        <option value="">Bangalore</option>
+                                                        <option value="">Goa</option>
+                                                        <option value="">Kolkata</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -191,23 +211,23 @@
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="inputDate">Depart</label>
-                                                    <input type="input" class="form-control" placeholder="Select date" id="inputDate">
+                                                    <input id="datepicker-from" class="form-control" placeholder="Select date" id="inputDate"> 
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="inputDate">Return</label>
-                                                    <input type="input" class="form-control" placeholder="Select date" id="inputDate">
+                                                    <input id="datepicker-to" class="form-control" placeholder="Select date" id="inputDate">  
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                 <label for="From">Travellers</label>
                                                     <select name="" id="" class="form-control">
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
+                                                        <option value="">1 Passenger</option>
+                                                        <option value="">2 Passenger</option>
+                                                        <option value="">3 Passenger</option>
+                                                        <option value="">More than 3 Passenger</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -215,10 +235,11 @@
                                                 <div class="form-group">
                                                 <label for="From">Class</label>
                                                     <select name="" id="" class="form-control">
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
+                                                        <option value="">All</option>
+                                                        <option value="">Economy</option>
+                                                        <option value="">Premium Economy</option>
+                                                        <option value="">Business</option>
+                                                        <option value="">First Class</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -658,7 +679,7 @@
                 <a href="#"><i class="flaticon2-gear"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
-                <a href="https://keenthemes.com/metronic/?page=docs" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+                <a href="" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Example">
                 <a href="http://supplier.thetravelsquare.in/" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
@@ -666,368 +687,6 @@
         </ul>
         <!-- end::Sticky Toolbar -->
         <!-- begin::Demo Panel -->
-        <div id="kt_demo_panel" class="kt-demo-panel">
-            <div class="kt-demo-panel__head" kt-hidden-height="50" style="">
-                <h3 class="kt-demo-panel__title">
-                    Select A Demo
-                    <!--<small>5</small>-->
-                </h3>
-                <a href="http://supplier.thetravelsquare.in/" class="kt-demo-panel__close" id="kt_demo_panel_close"><i class="flaticon2-delete"></i></a>
-            </div>
-            <div class="kt-demo-panel__body kt-scroll ps ps--active-y" style="height: 553px; overflow: hidden;">
-                <div class="kt-demo-panel__item kt-demo-panel__item--active">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 1
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo1.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="#" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 2
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo2.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com#" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo2/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 3
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo3.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo3/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo3/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 4
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo4.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo4/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo4/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 5
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo5.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo5/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo5/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 6
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo6.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo6/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo6/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 7
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo7.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo7/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo7/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 8
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo8.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo8/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo8/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 9
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo9.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo9/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo9/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 10
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo10.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo10/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo10/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 11
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo11.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo11/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo11/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 12
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo12.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo12/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo12/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 13
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo13.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 14
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo14.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 15
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo15.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 16
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo16.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 17
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo17.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 18
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo18.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 19
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo19.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 20
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo20.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 21
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo21.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 22
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo22.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 23
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo23.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 24
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo24.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 25
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo25.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 26
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo26.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 27
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo27.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 28
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo28.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 29
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo29.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 30
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo30.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="https://1.envato.market/EA4JP" target="_blank" class="kt-demo-panel__purchase btn btn-brand btn-elevate btn-bold btn-upper">
-                Buy Metronic Now!
-                </a>
-                <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-                    <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-                </div>
-                <div class="ps__rail-y" style="top: 0px; height: 553px; right: 0px;">
-                    <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 40px;"></div>
-                </div>
-            </div>
-        </div>
         <!-- end::Demo Panel -->
         <!--Begin:: Chat-->
         <div class="modal fade- modal-sticky-bottom-right" id="kt_chat_modal" role="dialog" data-backdrop="false">
@@ -1261,5 +920,42 @@
             <div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div>
         </div>
         <iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./files/box-469cf41adb11dc78be68c1ae7f9457a4.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
+
+        <script>
+        $(function() {
+        $("#datepicker-from").datepicker({
+            beforeShow: addCustomInformation,
+            //---^----------- if closed by default (when you're using <input>)
+            beforeShowDay: function(date) {
+            return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
+            },
+            onChangeMonthYear: addCustomInformation,
+            onSelect: addCustomInformation
+        });
+        addCustomInformation(); // if open by default (when you're using <div>)
+        });
+
+        $(function() {
+        $("#datepicker-to").datepicker({
+            beforeShow: addCustomInformation,
+            //---^----------- if closed by default (when you're using <input>)
+            beforeShowDay: function(date) {
+            return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
+            },
+            onChangeMonthYear: addCustomInformation,
+            onSelect: addCustomInformation
+        });
+        addCustomInformation(); // if open by default (when you're using <div>)
+        });
+
+        function addCustomInformation() {
+        setTimeout(function() {
+            $(".ui-datepicker-calendar td").filter(function() {
+            var date = $(this).text();
+            return /\d/.test(date);
+            }).find("a").attr('data-custom', 110); // Add custom data here
+        }, 0)
+        }
+        </script>
     </body>
 </html>

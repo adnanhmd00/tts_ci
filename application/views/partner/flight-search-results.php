@@ -7,13 +7,13 @@
         <style>
             input[type="radio"] {
                 -ms-transform: scale(1.5); /* IE 9 */
-                -webkit-transform: scale(2..0); /* Chrome, Safari, Opera */
-                transform: scale(2.0);
-            }
-            input[type="checkbox"] {
-                -ms-transform: scale(1.5); /* IE 9 */
                 -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
                 transform: scale(1.5);
+            }
+            input[type="checkbox"] {
+                -ms-transform: scale(1.3); /* IE 9 */
+                -webkit-transform: scale(1.3); /* Chrome, Safari, Opera */
+                transform: scale(1.3);
             }
 
             /* Datepicker */
@@ -176,7 +176,7 @@
                         <!-- begin:: Content -->
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
                             <div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
-                                <div class="row bg-white p-3">
+                                <!-- <div class="row bg-white p-3">
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             <label for="trip">Trip</label>
@@ -208,12 +208,12 @@
                                         <div class="form-group">
                                             <label for="trip">Depart</label>
                                             <input id="datepicker-from" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
-                                    </div>
+                                        </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             <label for="trip">Return</label>
                                             <input id="datepicker-to" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
-                                    </div>
+                                        </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             <label for="travellers">Travellers</label>
@@ -222,10 +222,69 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-group text-center">
+                                </div> -->
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="trip">Trip</label>
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">One Way</option>
+                                                        <option value="">Round Trip</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="trip">From</label>
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">Flight Options</option>
+                                                        <option value="">Flight Options</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="trip">To</label>
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">Flight Options</option>
+                                                        <option value="">Flight Options</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="trip">Depart</label>
+                                                    <input id="datepicker-from" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="trip">Return</label>
+                                                    <input id="datepicker-to" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="travellers">Travellers</label>
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">1 Passenger(s)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group text-center mt-1">
+                                                    <label for=""></label>
+                                                    <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- <div class="form-group text-center">
                                     <button class="btn btn-primary">Search Flights</button>
-                                </div>
+                                </div> -->
                             </div>   
                             
                             
@@ -236,16 +295,16 @@
                                         <div class="col-xs-6 col-sm-6 col-md-6">
                                             <div class="card p-3">
                                                 <div class="ml-5">
-                                                    <input type="radio" class="form-check-input mt-2" name="optradio">
-                                                    <span class="h3">&nbsp;&nbsp;DEL > IXC (07 Mar)</span>
+                                                    <input type="radio" class="mt-2" name="optradio">
+                                                    <span style="font-size: 20px;">&nbsp;&nbsp;DEL > IXC (07 Mar)</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xs-6 col-sm-6 col-md-6">
                                             <div class="card p-3">
                                                 <div class="ml-5">
-                                                    <input type="radio" class="form-check-input mt-2" name="optradio">
-                                                    <span class="h3">&nbsp;&nbsp;DEL > IXC (07 Mar)</span>
+                                                    <input type="radio" class="mt-2" name="optradio">
+                                                    <span style="font-size: 20px;">&nbsp;&nbsp;DEL > IXC (07 Mar)</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -482,15 +541,15 @@
                                             <div class="form-group">
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Non Stop</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Non Stop</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 1 Stop</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 1 Stop</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck3">
-                                                    <label class="form-check-label h6" for="exampleCheck3"><span class="font-weight-normal lead">&nbsp; 2+ Stop</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck3"><span class="font-weight-normal lead">&nbsp; 2+ Stop</span></label>
                                                 </div>
                                             </div>
 
@@ -507,11 +566,11 @@
                                             <div class="form-group">
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Refundable</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Refundable</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; Non-Refundable</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; Non-Refundable</span></label>
                                                 </div>
                                             </div>
                                             
@@ -519,23 +578,23 @@
                                             <div class="form-group">
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12am to 8am</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12am to 8am</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8am to 12pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8am to 12pm</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12pm to 4pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12pm to 4pm</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 4pm to 8pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 4pm to 8pm</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8pm to 12pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8pm to 12pm</span></label>
                                                 </div>
                                             </div>
                                             
@@ -543,23 +602,23 @@
                                             <div class="form-group">
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12am to 8am</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12am to 8am</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8am to 12pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8am to 12pm</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12pm to 4pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12pm to 4pm</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 4pm to 8pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 4pm to 8pm</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8pm to 12pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8pm to 12pm</span></label>
                                                 </div>
                                             </div>
                                             
@@ -567,15 +626,15 @@
                                             <div class="form-group">
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Air India</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Air India</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; Vistara</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; Vistara</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Indigo</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Indigo</span></label>
                                                 </div>
                                             </div>
                                             <br>
