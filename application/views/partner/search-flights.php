@@ -179,12 +179,15 @@
                                             <div class="col-md-5">
                                                 <div class="form-group">
                                                 <label for="From">From</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="">Goa</option>
-                                                        <option value="">Bangalore</option>
-                                                        <option value="">Kolkata</option>
-                                                        <option value="">Mumbai</option>
-                                                    </select>
+                                                    <div class="row-fluid">
+                                                        <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
+                                                            <option data-subtext="Rep California">Tom Foolery</option>
+                                                            <option data-subtext="Sen California">Bill Gordon</option>
+                                                            <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                                                            <option data-subtext="Rep Alabama">Mario Flores</option>
+                                                            <option data-subtext="Rep Alaska">Don Young</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="d-none d-lg-block col-md-1 mt-3 p-4">
@@ -198,12 +201,15 @@
                                             <div class="col-md-5">
                                                 <div class="form-group">
                                                 <label for="to">To</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="">Mumbai</option>
-                                                        <option value="">Bangalore</option>
-                                                        <option value="">Goa</option>
-                                                        <option value="">Kolkata</option>
-                                                    </select>
+                                                    <div class="row-fluid">
+                                                        <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
+                                                            <option data-subtext="Rep California">Tom Foolery</option>
+                                                            <option data-subtext="Sen California">Bill Gordon</option>
+                                                            <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                                                            <option data-subtext="Rep Alabama">Mario Flores</option>
+                                                            <option data-subtext="Rep Alaska">Don Young</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

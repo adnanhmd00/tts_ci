@@ -42,6 +42,55 @@
                 text-align: center;
                 padding: 20px;
             }
+
+            /* Progress Bar Flight Details */
+
+            /* .progressbar {
+                counter-reset: step;
+            } */
+            .progressbar li {
+                list-style: none;
+                display: inline-block;
+                width: 30.33%;
+                position: relative;
+                text-align: center;
+                cursor: pointer;
+            }
+            .progressbar li:before {
+                /* content: counter(step);
+                counter-increment: step; */
+                width: 30px;
+                height: 30px;
+                line-height : 30px;
+                border: 1px solid #ddd;
+                border-radius: 100%;
+                display: block;
+                text-align: center;
+                margin: 0 auto 10px auto;
+                background-color: #fff;
+            }
+            .progressbar li:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: #ddd;
+                top: 15px;
+                left: -50%;
+                z-index : -1;
+            }
+            .progressbar li:first-child:after {
+                content: none;
+            }
+            .progressbar li.active {
+                color: green;
+            }
+            .progressbar li.active:before {
+                border-color: green;
+            } 
+            .progressbar li.active + li:after {
+                background-color: green;
+            }
         </style>
 
         <!-- Date Picker -->
@@ -176,7 +225,7 @@
                         <!-- begin:: Content -->
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
                             <div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
-                                <!-- <div class="row bg-white p-3">
+                                <div class="d-lg-none row bg-white p-3">
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             <label for="trip">Trip</label>
@@ -188,20 +237,30 @@
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
-                                            <label for="trip">From</label>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Flight Options</option>
-                                                <option value="">Flight Options</option>
-                                            </select>
+                                            <label for="from">From</label>
+                                            <div class="row-fluid">
+                                                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
+                                                    <option data-subtext="Rep California">Tom Foolery</option>
+                                                    <option data-subtext="Sen California">Bill Gordon</option>
+                                                    <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                                                    <option data-subtext="Rep Alabama">Mario Flores</option>
+                                                    <option data-subtext="Rep Alaska">Don Young</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
-                                            <label for="trip">To</label>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Flight Options</option>
-                                                <option value="">Flight Options</option>
-                                            </select>
+                                            <label for="to">To</label>
+                                            <div class="row-fluid">
+                                                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
+                                                    <option data-subtext="Rep California">Tom Foolery</option>
+                                                    <option data-subtext="Sen California">Bill Gordon</option>
+                                                    <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                                                    <option data-subtext="Rep Alabama">Mario Flores</option>
+                                                    <option data-subtext="Rep Alaska">Don Young</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-2">
@@ -222,8 +281,8 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div> -->
-                                <table class="table">
+                                </div>
+                                <table class="table d-none d-lg-block">
                                     <tbody>
                                         <tr>
                                             <td>
@@ -238,31 +297,41 @@
                                             <td>
                                                 <div class="form-group">
                                                     <label for="trip">From</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
-                                                    </select>
+                                                    <div class="row-fluid">
+                                                        <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
+                                                            <option data-subtext="Rep California">Tom Foolery</option>
+                                                            <option data-subtext="Sen California">Bill Gordon</option>
+                                                            <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                                                            <option data-subtext="Rep Alabama">Mario Flores</option>
+                                                            <option data-subtext="Rep Alaska">Don Young</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="form-group">
                                                     <label for="trip">To</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="">Flight Options</option>
-                                                        <option value="">Flight Options</option>
-                                                    </select>
+                                                    <div class="row-fluid">
+                                                        <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
+                                                            <option data-subtext="Rep California">Tom Foolery</option>
+                                                            <option data-subtext="Sen California">Bill Gordon</option>
+                                                            <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                                                            <option data-subtext="Rep Alabama">Mario Flores</option>
+                                                            <option data-subtext="Rep Alaska">Don Young</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="form-group">
                                                     <label for="trip">Depart</label>
-                                                    <input id="datepicker-from" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
+                                                    <input style="width: 150px;" id="datepicker-from-lg" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="form-group">
                                                     <label for="trip">Return</label>
-                                                    <input id="datepicker-to" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
+                                                    <input style="width: 150px;" id="datepicker-to-lg" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
                                                 </div>
                                             </td>
                                             <td>
@@ -354,7 +423,7 @@
                                                 </tr>
                                             </tbody>
 
-                                        <tbody id="demo">
+                                        <tbody id="demo-1">
                                                 <tr>
                                                     <td>
                                                         <div class="text-center">
@@ -646,9 +715,12 @@
                         <!-- end:: Content -->				
                     </div>
                     <div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" id="footer ">
-                        <div class="kt-container  kt-container--fluid ">
+                        <button onclick="hideShowDetails()" style="display:none;" id="btn-up" class="btn btn-secondary float-right"><i class="fa fa-angle-double-up"></i></button>
+                        <button onclick="hideShowDetails()" id="btn-down" class="btn btn-secondary float-right"><i class="fa fa-angle-double-down"></i></button>
+                        <p class="lead text-left" style="margin-left: 60px;">Selected Flight &nbsp;<span style="font-size: 12px; text-decoration: underline;"><a href="" data-toggle="modal" data-target="#flightDetail">Flight Details</a></span></p>
+                        <div id="details" class="kt-container  kt-container--fluid ">
                             <div class="col-md-8 ml-4">
-                            <p class="lead text-left">Selected Flight</p>
+                            <!-- <p class="lead text-left">Selected Flight</p> -->
                                 <!-- <div class="card mb-2">
                                     <div class="row">
                                         <div class="col-xs-2 col-sm-2 col-md-2 p-2">
@@ -681,14 +753,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>                                 -->
+                                </div> -->
                                 <div class="card">
-                                    <div id="append-info"></div>
+                                <table class="table">
+                                    <tbody id="append-info"></tbody>
+                                </table>
+                                 
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div>
-                                    <div class="row">
+                            <div class="col-md-4">                                <div>
+                                    <div class="row mt-5">
                                         <p class="h5 mr-3">Total Net Price</p>
                                         <p class="h3">₹ 2,895</p>
                                         <p></p>
@@ -1040,7 +1114,7 @@
                 <a href="#"><i class="flaticon2-gear"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
-                <a href="https://keenthemes.com/metronic/?page=docs" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+                <a href="" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Example">
                 <a href="http://supplier.thetravelsquare.in/" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
@@ -1283,6 +1357,40 @@
         </div>
         <iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./files/box-469cf41adb11dc78be68c1ae7f9457a4.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
 
+        <!-- Flight Detail Modal Start -->
+        <div class="offset-md-2 col-md-9 modal fade" id="flightDetail">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <!-- <h4 class="modal-title">Modal Heading</h4> -->
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" style="width: 50%;">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                        </li>
+                        <li class="nav-item" style="width: 50%;">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <ul class="progressbar">
+                                <li class="active">Step 1</li>
+                                <li>Step 2</li>
+                                <li>Step 3</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            def
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Flight Detail Modal End -->
 
         <script>
         $(function() {
@@ -1311,6 +1419,32 @@
         addCustomInformation(); // if open by default (when you're using <div>)
         });
 
+        $(function() {
+        $("#datepicker-from-lg").datepicker({
+            beforeShow: addCustomInformation,
+            //---^----------- if closed by default (when you're using <input>)
+            beforeShowDay: function(date) {
+            return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
+            },
+            onChangeMonthYear: addCustomInformation,
+            onSelect: addCustomInformation
+        });
+        addCustomInformation(); // if open by default (when you're using <div>)
+        });
+
+        $(function() {
+        $("#datepicker-to-lg").datepicker({
+            beforeShow: addCustomInformation,
+            //---^----------- if closed by default (when you're using <input>)
+            beforeShowDay: function(date) {
+            return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
+            },
+            onChangeMonthYear: addCustomInformation,
+            onSelect: addCustomInformation
+        });
+        addCustomInformation(); // if open by default (when you're using <div>)
+        });
+
         function addCustomInformation() {
         setTimeout(function() {
             $(".ui-datepicker-calendar td").filter(function() {
@@ -1320,15 +1454,32 @@
         }, 0)
         }
         </script>
+        <!-- Selected Item In Footer -->
         <script>
         $(document).ready(function() {
             $("#get-info").click(function() {
-                var res = $('#demo').val();
-                alert(res);
+                var res = $('#demo-1').html();
+                // alert(res);
                 // $("#append-info").append(res);
+                console.log(res);
+                document.getElementById("append-info").innerHTML = res;
             });
         });
         </script>
-
+        
+        <script>
+        function hideShowDetails() {
+        var x = document.getElementById("details");
+        if (x.style.display === "none") {
+            $('#btn-up').hide();
+            $('#btn-down').show();
+            x.style.display = "";
+        } else {
+            $('#btn-down').hide();
+            $('#btn-up').show();
+            x.style.display = "none";
+        }
+        }
+        </script>
     </body>
 </html>
