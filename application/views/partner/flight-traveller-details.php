@@ -1359,7 +1359,6 @@
         </div>
         <iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./files/box-469cf41adb11dc78be68c1ae7f9457a4.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
 
-        
         <script>
             $(function() {
                 $('.dropdown > .caption').on('click', function() {
