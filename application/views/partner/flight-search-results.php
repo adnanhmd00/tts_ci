@@ -7,27 +7,96 @@
         <style>
             input[type="radio"] {
                 -ms-transform: scale(1.5); /* IE 9 */
-                -webkit-transform: scale(2..0); /* Chrome, Safari, Opera */
-                transform: scale(2.0);
-            }
-            input[type="checkbox"] {
-                -ms-transform: scale(1.5); /* IE 9 */
                 -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
                 transform: scale(1.5);
             }
+            input[type="checkbox"] {
+                -ms-transform: scale(1.3); /* IE 9 */
+                -webkit-transform: scale(1.3); /* Chrome, Safari, Opera */
+                transform: scale(1.3);
+            }
+
+            /* Datepicker */
+
+            .ui-datepicker .weekend .ui-state-default {
+            background: blue;
+            }
+            .ui-datepicker-calendar td a[data-custom] {
+            position: relative;
+            padding-bottom: 10px;
+            }
+            .ui-datepicker-calendar td a[data-custom]::after {
+            /*STYLE THE CUSTOME DATA HERE*/
+            content: '$' attr(data-custom);
+            display: block;
+            font-size: small;
+            }
+                    
+            .footer{
+                position: fixed;
+                left: 15%;
+                bottom: 0;
+                width: 85%;
+                background-color: #d5d5d5;
+                color: white;
+                text-align: center;
+                padding: 20px;
+            }
+
+            /* Progress Bar Flight Details */
+
+            /* .progressbar {
+                counter-reset: step;
+            } */
+            .progressbar li {
+                list-style: none;
+                display: inline-block;
+                width: 30.33%;
+                position: relative;
+                text-align: center;
+                cursor: pointer;
+            }
+            .progressbar li:before {
+                /* content: counter(step);
+                counter-increment: step; */
+                width: 30px;
+                height: 30px;
+                line-height : 30px;
+                border: 1px solid #ddd;
+                border-radius: 100%;
+                display: block;
+                text-align: center;
+                margin: 0 auto 10px auto;
+                background-color: #fff;
+            }
+            .progressbar li:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: #ddd;
+                top: 15px;
+                left: -50%;
+                z-index : -1;
+            }
+            .progressbar li:first-child:after {
+                content: none;
+            }
+            .progressbar li.active {
+                color: green;
+            }
+            .progressbar li.active:before {
+                border-color: green;
+            } 
+            .progressbar li.active + li:after {
+                background-color: green;
+            }
         </style>
-        <style>     
-        .footer{
-            position: fixed;
-            left: 15%;
-            bottom: 0;
-            width: 85%;
-            background-color: #d5d5d5;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        </style>
+
+        <!-- Date Picker -->
+        <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+        <link href="//code.jquery.com/ui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+        <script src="//code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
     </head>
     <!-- end::Head -->
     <!-- begin::Body -->
@@ -156,7 +225,7 @@
                         <!-- begin:: Content -->
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
                             <div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
-                                <div class="row bg-white p-3">
+                                <div class="d-lg-none row bg-white p-3">
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             <label for="trip">Trip</label>
@@ -168,34 +237,42 @@
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
-                                            <label for="trip">From</label>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Flight Options</option>
-                                                <option value="">Flight Options</option>
-                                            </select>
+                                            <label for="from">From</label>
+                                            <div class="row-fluid">
+                                                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
+                                                    <option data-subtext="Rep California">Tom Foolery</option>
+                                                    <option data-subtext="Sen California">Bill Gordon</option>
+                                                    <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                                                    <option data-subtext="Rep Alabama">Mario Flores</option>
+                                                    <option data-subtext="Rep Alaska">Don Young</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
-                                            <label for="trip">To</label>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Flight Options</option>
-                                                <option value="">Flight Options</option>
-                                            </select>
+                                            <label for="to">To</label>
+                                            <div class="row-fluid">
+                                                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
+                                                    <option data-subtext="Rep California">Tom Foolery</option>
+                                                    <option data-subtext="Sen California">Bill Gordon</option>
+                                                    <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                                                    <option data-subtext="Rep Alabama">Mario Flores</option>
+                                                    <option data-subtext="Rep Alaska">Don Young</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             <label for="trip">Depart</label>
-                                            <input type="text" placeholder="Select Date" class="form-control">
+                                            <input id="datepicker-from" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
                                         </div>
-                                    </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             <label for="trip">Return</label>
-                                            <input type="text" placeholder="Select Date" class="form-control">
+                                            <input id="datepicker-to" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
                                         </div>
-                                    </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             <label for="travellers">Travellers</label>
@@ -205,9 +282,78 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group text-center">
+                                <table class="table d-none d-lg-block">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="trip">Trip</label>
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">One Way</option>
+                                                        <option value="">Round Trip</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="trip">From</label>
+                                                    <div class="row-fluid">
+                                                        <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
+                                                            <option data-subtext="Rep California">Tom Foolery</option>
+                                                            <option data-subtext="Sen California">Bill Gordon</option>
+                                                            <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                                                            <option data-subtext="Rep Alabama">Mario Flores</option>
+                                                            <option data-subtext="Rep Alaska">Don Young</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="trip">To</label>
+                                                    <div class="row-fluid">
+                                                        <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
+                                                            <option data-subtext="Rep California">Tom Foolery</option>
+                                                            <option data-subtext="Sen California">Bill Gordon</option>
+                                                            <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                                                            <option data-subtext="Rep Alabama">Mario Flores</option>
+                                                            <option data-subtext="Rep Alaska">Don Young</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="trip">Depart</label>
+                                                    <input style="width: 150px;" id="datepicker-from-lg" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="trip">Return</label>
+                                                    <input style="width: 150px;" id="datepicker-to-lg" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="travellers">Travellers</label>
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">1 Passenger(s)</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group text-center mt-1">
+                                                    <label for=""></label>
+                                                    <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- <div class="form-group text-center">
                                     <button class="btn btn-primary">Search Flights</button>
-                                </div>
+                                </div> -->
                             </div>   
                             
                             
@@ -218,279 +364,235 @@
                                         <div class="col-xs-6 col-sm-6 col-md-6">
                                             <div class="card p-3">
                                                 <div class="ml-5">
-                                                    <input type="radio" class="form-check-input mt-2" name="optradio">
-                                                    <span class="h3">&nbsp;&nbsp;DEL > IXC (07 Mar)</span>
+                                                    <input type="radio" class="mt-2" name="optradio">
+                                                    <span style="font-size: 20px;">&nbsp;&nbsp;DEL > IXC (07 Mar)</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xs-6 col-sm-6 col-md-6">
                                             <div class="card p-3">
                                                 <div class="ml-5">
-                                                    <input type="radio" class="form-check-input mt-2" name="optradio">
-                                                    <span class="h3">&nbsp;&nbsp;DEL > IXC (07 Mar)</span>
+                                                    <input type="radio" class="mt-2" name="optradio">
+                                                    <span style="font-size: 20px;">&nbsp;&nbsp;DEL > IXC (07 Mar)</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-none d-md-block">
-                                        <div class="row mt-4">
-                                            <div class="col-sm-1 col-md-2">
-                                                <p class="font-weight-bold lead text-center">Airline</p>
-                                            </div>
-                                            <div class="col-sm-1 col-md-2">
-                                                <p class="font-weight-bold lead text-center">Departure</p>
-                                            </div>
-                                            <div class="col-sm-1 col-md-2">
-                                                <p class="font-weight-bold lead text-center">Duration</p>
-                                            </div>
-                                            <div class="col-sm-1 col-md-2">
-                                                <p class="font-weight-bold lead text-center">Arrival</p>
-                                            </div>
-                                            <div class="col-sm-1 col-md-2">
-                                                <p class="font-weight-bold lead text-center">Price</p>
-                                            </div>
-                                            <div class="col-sm-1 col-md-2">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card mb-2">
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
-                                                    <div class="lead">AI - 9831T</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <div style="font-size: 24px;">19:45</div>
-                                                    <div class="lead">DEL</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <div class="h5 mt-4">1h 0m</div>
-                                                    <strong style="font-size: 12px;">Non Stop</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <div style="font-size: 24px;">20:45</div>
-                                                    <div class="lead">IXC</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <div class="h3">₹ 2,895</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <input type="radio" class="form-check-input" name="optradio">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div class="card mb-2">
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
-                                                    <p class="lead">AI - 9831T</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">19:45</p>
-                                                    <p class="lead">DEL</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p class="h3">1h 0m</p>
-                                                    <strong style="font-size: 12px;">Non Stop</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">20:45</p>
-                                                    <p class="lead">IXC</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <p class="h3">₹ 2,895</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <input type="radio" class="form-check-input" name="optradio">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div class="card mb-2">
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
-                                                    <p class="lead">AI - 9831T</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">19:45</p>
-                                                    <p class="lead">DEL</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p class="h3">1h 0m</p>
-                                                    <strong style="font-size: 12px;">Non Stop</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">20:45</p>
-                                                    <p class="lead">IXC</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <p class="h3">₹ 2,895</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <input type="radio" class="form-check-input" name="optradio">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div class="card mb-2">
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
-                                                    <p class="lead">AI - 9831T</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">19:45</p>
-                                                    <p class="lead">DEL</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p class="h3">1h 0m</p>
-                                                    <strong style="font-size: 12px;">Non Stop</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">20:45</p>
-                                                    <p class="lead">IXC</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <p class="h3">₹ 2,895</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <input type="radio" class="form-check-input" name="optradio">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div class="card mb-2">
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
-                                                    <p class="lead">AI - 9831T</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">19:45</p>
-                                                    <p class="lead">DEL</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p class="h3">1h 0m</p>
-                                                    <strong style="font-size: 12px;">Non Stop</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">20:45</p>
-                                                    <p class="lead">IXC</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <p class="h3">₹ 2,895</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <input type="radio" class="form-check-input" name="optradio">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div class="card mb-2">
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
-                                                    <p class="lead">AI - 9831T</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">19:45</p>
-                                                    <p class="lead">DEL</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p class="h3">1h 0m</p>
-                                                    <strong style="font-size: 12px;">Non Stop</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center">
-                                                    <p style="font-size: 24px;">20:45</p>
-                                                    <p class="lead">IXC</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <p class="h3">₹ 2,895</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2 col-md-2 p-2">
-                                                <div class="text-center mt-4">
-                                                    <input type="radio" class="form-check-input" name="optradio">
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="card" id="demo">
+                                        <table class="table">
+                                            <thead class="text-center">
+                                                <tr>
+                                                    <th>Airline</th>
+                                                    <th>Departure</th>
+                                                    <th>Duration</th>
+                                                    <th>Arrival</th>
+                                                    <th>Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="get-info">
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                            <div id="flight-name" class="lead">AI - 9831T</div> 
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="board-time" style="font-size: 24px;">19:45</div>
+                                                            <div id="board-city" class="lead">DEL</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div class="h5 mt-4">1h 0m</div>
+                                                            <strong id="flight-type" style="font-size: 12px;">Non Stop</strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="depart-time" style="font-size: 24px;">20:45</div>
+                                                            <div id="depart-city" class="lead">IXC</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center mt-4">
+                                                            <div id="flight-price" class="h3">₹ 2,895</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+
+                                        <tbody id="demo-1">
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                            <div id="flight-name" class="lead">AI - 9831T</div> 
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="board-time" style="font-size: 24px;">19:45</div>
+                                                            <div id="board-city" class="lead">DEL</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div class="h5 mt-4">1h 0m</div>
+                                                            <strong id="flight-type" style="font-size: 12px;">Non Stop</strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="depart-time" style="font-size: 24px;">20:45</div>
+                                                            <div id="depart-city" class="lead">IXC</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center mt-4">
+                                                            <div id="flight-price" class="h3">₹ 2,895</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+
+                                        <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                            <div id="flight-name" class="lead">AI - 9831T</div> 
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="board-time" style="font-size: 24px;">19:45</div>
+                                                            <div id="board-city" class="lead">DEL</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div class="h5 mt-4">1h 0m</div>
+                                                            <strong id="flight-type" style="font-size: 12px;">Non Stop</strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="depart-time" style="font-size: 24px;">20:45</div>
+                                                            <div id="depart-city" class="lead">IXC</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center mt-4">
+                                                            <div id="flight-price" class="h3">₹ 2,895</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+
+                                        <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                            <div id="flight-name" class="lead">AI - 9831T</div> 
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="board-time" style="font-size: 24px;">19:45</div>
+                                                            <div id="board-city" class="lead">DEL</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div class="h5 mt-4">1h 0m</div>
+                                                            <strong id="flight-type" style="font-size: 12px;">Non Stop</strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="depart-time" style="font-size: 24px;">20:45</div>
+                                                            <div id="depart-city" class="lead">IXC</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center mt-4">
+                                                            <div id="flight-price" class="h3">₹ 2,895</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+
+                                        <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                            <div id="flight-name" class="lead">AI - 9831T</div> 
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="board-time" style="font-size: 24px;">19:45</div>
+                                                            <div id="board-city" class="lead">DEL</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div class="h5 mt-4">1h 0m</div>
+                                                            <strong id="flight-type" style="font-size: 12px;">Non Stop</strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="depart-time" style="font-size: 24px;">20:45</div>
+                                                            <div id="depart-city" class="lead">IXC</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center mt-4">
+                                                            <div id="flight-price" class="h3">₹ 2,895</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+
+                                        <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <img style="width:50px; height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded">
+                                                            <div id="flight-name" class="lead">AI - 9831T</div> 
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="board-time" style="font-size: 24px;">19:45</div>
+                                                            <div id="board-city" class="lead">DEL</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div class="h5 mt-4">1h 0m</div>
+                                                            <strong id="flight-type" style="font-size: 12px;">Non Stop</strong>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <div id="depart-time" style="font-size: 24px;">20:45</div>
+                                                            <div id="depart-city" class="lead">IXC</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="text-center mt-4">
+                                                            <div id="flight-price" class="h3">₹ 2,895</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -508,15 +610,15 @@
                                             <div class="form-group">
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Non Stop</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Non Stop</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 1 Stop</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 1 Stop</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck3">
-                                                    <label class="form-check-label h6" for="exampleCheck3"><span class="font-weight-normal lead">&nbsp; 2+ Stop</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck3"><span class="font-weight-normal lead">&nbsp; 2+ Stop</span></label>
                                                 </div>
                                             </div>
 
@@ -533,11 +635,11 @@
                                             <div class="form-group">
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Refundable</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Refundable</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; Non-Refundable</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; Non-Refundable</span></label>
                                                 </div>
                                             </div>
                                             
@@ -545,23 +647,23 @@
                                             <div class="form-group">
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12am to 8am</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12am to 8am</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8am to 12pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8am to 12pm</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12pm to 4pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12pm to 4pm</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 4pm to 8pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 4pm to 8pm</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8pm to 12pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8pm to 12pm</span></label>
                                                 </div>
                                             </div>
                                             
@@ -569,23 +671,23 @@
                                             <div class="form-group">
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12am to 8am</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12am to 8am</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8am to 12pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8am to 12pm</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12pm to 4pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; 12pm to 4pm</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 4pm to 8pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 4pm to 8pm</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8pm to 12pm</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; 8pm to 12pm</span></label>
                                                 </div>
                                             </div>
                                             
@@ -593,15 +695,15 @@
                                             <div class="form-group">
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Air India</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Air India</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                                    <label class="form-check-label h6" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; Vistara</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck2"><span class="font-weight-normal lead">&nbsp; Vistara</span></label>
                                                 </div>
                                                 <div class="form-check mb-3">
                                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label h6" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Indigo</span></label>
+                                                    <label style="font-size: 14px;" class="form-check-label" for="exampleCheck1"><span class="font-weight-normal lead">&nbsp; Indigo</span></label>
                                                 </div>
                                             </div>
                                             <br>
@@ -613,10 +715,13 @@
                         <!-- end:: Content -->				
                     </div>
                     <div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" id="footer ">
-                        <div class="kt-container  kt-container--fluid ">
-                            <div class="col-md-8">
-                            <p class="lead text-left">Selected Flight</p>
-                                <div class="card mb-2">
+                        <button onclick="hideShowDetails()" style="display:none;" id="btn-up" class="btn btn-secondary float-right"><i class="fa fa-angle-double-up"></i></button>
+                        <button onclick="hideShowDetails()" id="btn-down" class="btn btn-secondary float-right"><i class="fa fa-angle-double-down"></i></button>
+                        <p class="lead text-left" style="margin-left: 60px;">Selected Flight &nbsp;<span style="font-size: 12px; text-decoration: underline;"><a href="" data-toggle="modal" data-target="#flightDetail">Flight Details</a></span></p>
+                        <div id="details" class="kt-container  kt-container--fluid ">
+                            <div class="col-md-8 ml-4">
+                            <!-- <p class="lead text-left">Selected Flight</p> -->
+                                <!-- <div class="card mb-2">
                                     <div class="row">
                                         <div class="col-xs-2 col-sm-2 col-md-2 p-2">
                                             <div class="text-center">
@@ -648,11 +753,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>                                
+                                </div> -->
+                                <div class="card">
+                                <table class="table">
+                                    <tbody id="append-info"></tbody>
+                                </table>
+                                 
+                                </div>
                             </div>
-                            <div class="col-md-4">
-                                <div>
-                                    <div class="row">
+                            <div class="col-md-4">                                <div>
+                                    <div class="row mt-5">
                                         <p class="h5 mr-3">Total Net Price</p>
                                         <p class="h3">₹ 2,895</p>
                                         <p></p>
@@ -1004,7 +1114,7 @@
                 <a href="#"><i class="flaticon2-gear"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
-                <a href="https://keenthemes.com/metronic/?page=docs" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+                <a href="" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Example">
                 <a href="http://supplier.thetravelsquare.in/" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
@@ -1012,368 +1122,7 @@
         </ul>
         <!-- end::Sticky Toolbar -->
         <!-- begin::Demo Panel -->
-        <div id="kt_demo_panel" class="kt-demo-panel">
-            <div class="kt-demo-panel__head" kt-hidden-height="50" style="">
-                <h3 class="kt-demo-panel__title">
-                    Select A Demo
-                    <!--<small>5</small>-->
-                </h3>
-                <a href="http://supplier.thetravelsquare.in/" class="kt-demo-panel__close" id="kt_demo_panel_close"><i class="flaticon2-delete"></i></a>
-            </div>
-            <div class="kt-demo-panel__body kt-scroll ps ps--active-y" style="height: 553px; overflow: hidden;">
-                <div class="kt-demo-panel__item kt-demo-panel__item--active">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 1
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo1.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="#" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 2
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo2.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com#" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo2/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 3
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo3.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo3/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo3/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 4
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo4.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo4/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo4/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 5
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo5.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo5/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo5/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 6
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo6.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo6/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo6/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 7
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo7.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo7/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo7/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 8
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo8.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo8/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo8/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 9
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo9.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo9/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo9/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 10
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo10.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo10/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo10/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 11
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo11.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo11/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo11/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 12
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo12.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo12/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo12/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 13
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo13.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 14
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo14.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 15
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo15.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 16
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo16.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 17
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo17.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 18
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo18.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 19
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo19.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 20
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo20.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 21
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo21.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 22
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo22.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 23
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo23.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 24
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo24.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 25
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo25.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 26
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo26.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 27
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo27.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 28
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo28.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 29
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo29.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 30
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo30.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="https://1.envato.market/EA4JP" target="_blank" class="kt-demo-panel__purchase btn btn-brand btn-elevate btn-bold btn-upper">
-                Buy Metronic Now!
-                </a>
-                <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-                    <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-                </div>
-                <div class="ps__rail-y" style="top: 0px; height: 553px; right: 0px;">
-                    <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 40px;"></div>
-                </div>
-            </div>
-        </div>
+        
         <!-- end::Demo Panel -->
         <!--Begin:: Chat-->
         <div class="modal fade- modal-sticky-bottom-right" id="kt_chat_modal" role="dialog" data-backdrop="false">
@@ -1607,5 +1356,130 @@
             <div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div>
         </div>
         <iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./files/box-469cf41adb11dc78be68c1ae7f9457a4.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
+
+        <!-- Flight Detail Modal Start -->
+        <div class="offset-md-2 col-md-9 modal fade" id="flightDetail">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <!-- <h4 class="modal-title">Modal Heading</h4> -->
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" style="width: 50%;">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                        </li>
+                        <li class="nav-item" style="width: 50%;">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <ul class="progressbar">
+                                <li class="active">Step 1</li>
+                                <li>Step 2</li>
+                                <li>Step 3</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            def
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Flight Detail Modal End -->
+
+        <script>
+        $(function() {
+        $("#datepicker-from").datepicker({
+            beforeShow: addCustomInformation,
+            //---^----------- if closed by default (when you're using <input>)
+            beforeShowDay: function(date) {
+            return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
+            },
+            onChangeMonthYear: addCustomInformation,
+            onSelect: addCustomInformation
+        });
+        addCustomInformation(); // if open by default (when you're using <div>)
+        });
+
+        $(function() {
+        $("#datepicker-to").datepicker({
+            beforeShow: addCustomInformation,
+            //---^----------- if closed by default (when you're using <input>)
+            beforeShowDay: function(date) {
+            return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
+            },
+            onChangeMonthYear: addCustomInformation,
+            onSelect: addCustomInformation
+        });
+        addCustomInformation(); // if open by default (when you're using <div>)
+        });
+
+        $(function() {
+        $("#datepicker-from-lg").datepicker({
+            beforeShow: addCustomInformation,
+            //---^----------- if closed by default (when you're using <input>)
+            beforeShowDay: function(date) {
+            return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
+            },
+            onChangeMonthYear: addCustomInformation,
+            onSelect: addCustomInformation
+        });
+        addCustomInformation(); // if open by default (when you're using <div>)
+        });
+
+        $(function() {
+        $("#datepicker-to-lg").datepicker({
+            beforeShow: addCustomInformation,
+            //---^----------- if closed by default (when you're using <input>)
+            beforeShowDay: function(date) {
+            return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
+            },
+            onChangeMonthYear: addCustomInformation,
+            onSelect: addCustomInformation
+        });
+        addCustomInformation(); // if open by default (when you're using <div>)
+        });
+
+        function addCustomInformation() {
+        setTimeout(function() {
+            $(".ui-datepicker-calendar td").filter(function() {
+            var date = $(this).text();
+            return /\d/.test(date);
+            }).find("a").attr('data-custom', 110); // Add custom data here
+        }, 0)
+        }
+        </script>
+        <!-- Selected Item In Footer -->
+        <script>
+        $(document).ready(function() {
+            $("#get-info").click(function() {
+                var res = $('#demo-1').html();
+                // alert(res);
+                // $("#append-info").append(res);
+                console.log(res);
+                document.getElementById("append-info").innerHTML = res;
+            });
+        });
+        </script>
+        
+        <script>
+        function hideShowDetails() {
+        var x = document.getElementById("details");
+        if (x.style.display === "none") {
+            $('#btn-up').hide();
+            $('#btn-down').show();
+            x.style.display = "";
+        } else {
+            $('#btn-down').hide();
+            $('#btn-up').show();
+            x.style.display = "none";
+        }
+        }
+        </script>
     </body>
 </html>
