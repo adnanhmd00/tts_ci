@@ -190,6 +190,10 @@ $route['seller-rzp-fetch-response/(:any)/(:any)/(:any)/(:any)']='SellerRazorPayP
 $route['search-flight'] = 'Partner/searchFlight';
 $route['search-result'] = 'Partner/flightSearchResult';
 $route['traveller-details'] = 'Partner/flightTravellersDetails';
+$route['app-image-options'] = 'Partner/appImageOptions';
+$route['flight-app-image']['POST'] = 'Partner/flightAppImage';
+$route['post-app-image']['POST'] = 'Partner/postAppImage';
+$route['app-image-table'] = 'Partner/appImageTable';
 
 /*********************************FLIGHT ENDS*******************/
 
