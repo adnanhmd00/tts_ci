@@ -3,7 +3,7 @@
    require APPPATH . '/libraries/REST_Controller.php';
    use Restserver\Libraries\REST_Controller;
 
-class AppImageApi extends REST_Controller {
+class Airport extends REST_Controller {
 
 	  /**
      * Get All Data from this method.
@@ -20,12 +20,12 @@ class AppImageApi extends REST_Controller {
      *
      * @return Response
     */
-	public function index_get($type_name = 0)
+	public function index_get($country = 0)
 	{
-        if(!empty($type_name)){
-            $data = $this->db->get_where("app_images", ['type_name' => $type_name])->result();
+        if(!empty($country)){
+            $data = $this->db->get_where("airports", ['countryName' => ucfirst($country)])->result();
         }else{
-            $data = $this->db->get("app_images")->result();
+            $data = $this->db->get("airports")->result();
         }
 
         $this->response($data, REST_Controller::HTTP_OK);
