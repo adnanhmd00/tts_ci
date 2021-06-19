@@ -1022,7 +1022,8 @@
 								<div class="kt-portlet__body kt-portlet__body">
 									<!--begin: Datatable -->
 									<div id="sub_datatable_ajax_source" class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" style="">
-                      <table class="table">
+										<button class='btn btn-primary' onclick="location.href='<?php echo base_url();?>/app-image-options'">App Image options</button>	
+											<table class="table">
                         <thead>
                           <tr>
                             <th>S.No.</th>
