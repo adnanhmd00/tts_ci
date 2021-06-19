@@ -866,7 +866,7 @@
 										</span>
 										<h3 class="kt-portlet__head-title">
                       <?php
-                       echo ucfirst(str_replace("_"," ","$button_clicked")); ?>
+                       echo 'Edit App Image'; ?>
 										</h3>
 									</div>
 									<!--<div class="kt-portlet__head-toolbar">
@@ -1024,34 +1024,34 @@
 									<!--begin: Datatable -->
 									<div id="sub_datatable_ajax_source" class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" style="">
 
-                      <form action="post-app-image" method="POST">
-                        <input type="hidden" name="type" value="<?php echo $button_clicked; ?>">
+                      <form action="app-image-update" method="POST">
+                        <input type="hidden" name="act_id" value="<?php echo $query->id; ?>">
                         <div class="form-group">
                           <label for="Image/Url">Image/URL</label>
-                          <input type="text" class="form-control" name="image_url" id="image_url" placeholder="Image/URL">
+                          <input type="text" class="form-control" name="image_url" id="image_url" value="<?php echo $query->image_url; ?>">
                         </div>
                         <div class="form-group">
                           <label for="title">Title</label>
-                          <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+                          <input type="text" class="form-control" name="title" id="title" value="<?php echo $query->title; ?>">
                         </div>
                         <div class="form-group">
                           <label for="subtitle">Subtitle</label>
-                          <input type="text" class="form-control" name="subtitle" id="subtitle" placeholder="Subtitle">
+                          <input type="text" class="form-control" name="subtitle" id="subtitle" value="<?php echo $query->sub_title; ?>">
                         </div>
                         <div class="form-group">
                           <label for="destination_link">Destination Link</label>
-                          <input type="text" class="form-control" name="destination_link" id="destination_link" placeholder="Destination Link">
+                          <input type="text" class="form-control" name="destination_link" id="destination_link" value="<?php echo $query->destination_link; ?>">
                         </div>
                         <?php
                           if($button_clicked == 'message_box_upper_inspiration' || $button_clicked == 'message_box_lower_inspiration'){
                         ?>
                           <div class="form-group">
                             <label for="button_name">Button Name</label>
-                            <input type="text" class="form-control" name="button_name" id="button_name" placeholder="Button Name">
+                            <input type="text" class="form-control" name="button_name" id="button_name" value="<?php echo $query->button_name; ?>">
                           </div>
                           <div class="form-group">
                             <label for="button_link">Button Link</label>
-                            <input type="text" class="form-control" name="button_link" id="button_link" placeholder="Button Link">
+                            <input type="text" class="form-control" name="button_link" id="button_link" value="<?php echo $query->button_link; ?>">
                           </div>
                         <?php } ?>
                         <button type="submit" class="btn btn-primary">Submit</button>

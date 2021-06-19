@@ -1613,6 +1613,29 @@ class Partner extends CI_Controller
       $query = $query->result();
       $this->load->view("partner/app_image_table", compact('query'));
     }
+    function editAppImageTable(){
+      $inputs = $this->input->get();
+      $id = $inputs['act_id'];
+      $query = $this->db->where('id', $id);
+      $query = $this->db->get('app_images')->row();
+      $button_clicked = $query->type_name;
+      $this->load->view("partner/app_image_edit", compact('query', 'button_clicked'));
+    }
+    function updateAppImageTable(){
+      $inputs = $this->input->post();
+      $this->db->where('id',$inputs['act_id'])
+               ->update('app_images',
+                  array(
+                        "image_url" => $inputs['image_url'],
+                        "title" => $inputs['title'],
+                        "sub_title" => $inputs['subtitle'],
+                        "destination_link" => $inputs['destination_link'],
+                        "button_name" => $inputs['button_name'],
+                        "button_link" => $inputs['button_link'],
+                        )
+                );
+      redirect('app-image-table');
+    }
 
 
 }

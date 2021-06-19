@@ -1022,42 +1022,47 @@
 								<div class="kt-portlet__body kt-portlet__body">
 									<!--begin: Datatable -->
 									<div id="sub_datatable_ajax_source" class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" style="">
-                    <form action="post-app-image" method="POST">
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th>S.No.</th>
-                              <th>Type</th>
-                              <th>Image/URL</th>
-                              <th>Title</th>
-                              <th>SubTitle</th>
-                              <th>Destination Link</th>
-                              <th>Button Name</th>
-                              <th>Button Link</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                           <?php
-                              $i = 1;
-                               foreach($query as $data)
-                               {
-                                 echo
-                                 "<tr>
-                                   <td>$i</td>
-                                   <td>$data->type_name</td>
-                                   <td>$data->image_url</td>
-                                   <td>$data->title</td>
-                                   <td>$data->sub_title</td>
-                                   <td>$data->destination_link</td>
-                                   <td>$data->button_name</td>
-                                   <td>$data->button_link</td>
-                                  </tr>";
-                                  $i = $i + 1;
-                               }
-                           ?>
-                          </tbody>
-                        </table>
-                      </form>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>S.No.</th>
+                            <th>Type</th>
+                            <th>Image/URL</th>
+                            <th>Title</th>
+                            <th>SubTitle</th>
+                            <th>Destination Link</th>
+                            <th>Button Name</th>
+														<th>Button Link</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                         <?php
+                            $i = 1;
+                             foreach($query as $data)
+                             {
+                               echo
+                               "<tr>
+                                 <td>$i</td>
+                                 <td>$data->type_name</td>
+                                 <td>$data->image_url</td>
+                                 <td>$data->title</td>
+                                 <td>$data->sub_title</td>
+                                 <td>$data->destination_link</td>
+                                 <td>$data->button_name</td>
+																 <td>$data->button_link</td>
+                                 <td>
+						                       <form class='form-group' action='app-image-edit' method='get'>
+						                         <input type='hidden' name='act_id'  value=$data->id>
+						                         <button type='submit' class='btn btn-primary'>Edit</button>
+						                       </form>
+																 </td>
+                                </tr>";
+                                $i = $i + 1;
+                             }
+                         ?>
+                        </tbody>
+                      </table>
 
 										<!-- <table class="kt-datatable__table" style="display: block;">
 											<thead class="kt-datatable__head">
