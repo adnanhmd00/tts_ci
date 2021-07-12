@@ -38,28 +38,22 @@ class UserProfile extends REST_Controller {
     public function index_post()
     {
         $inputs = $this->input->post();
-        if(isset($inputs['name']) && isset($inputs['email']) && isset($inputs['contact'])){
-          // check if e-mail address is well-formed
-          if (!filter_var($inputs['email'], FILTER_VALIDATE_EMAIL)) {
-            $this->response(['Wrong Email !!'], REST_Controller::HTTP_OK);
-          }
-          $data = [
-            'name'            => !empty($inputs['name'])  ? $inputs['name'] : '',
-            'email'           => !empty($inputs['email']) ? $inputs['email'] : '',
-            'contact'         => !empty($inputs['contact']) ? $inputs['contact'] : '',
-            'dob'             => !empty($inputs['dob']) ? $inputs['dob'] : '',
-            'gender'          => !empty($inputs['gender']) ? $inputs['gender'] : '',
-            'marital_status'  => !empty($inputs['marital_status']) ? $inputs['marital_status'] : '',
-            'aniversary_date' => !empty($inputs['aniversary_date']) ? $inputs['aniversary_date'] : '',
-            'passport_number' => !empty($inputs['passport_number']) ? $inputs['passport_number'] : '',
-            'nationality'     => !empty($inputs['nationality']) ? $inputs['nationality'] : '',
-            'issuing_country' => !empty($inputs['issuing_country']) ? $inputs['issuing_country'] : '',
-            'expiry'          => !empty($inputs['expiry']) ? $inputs['expiry'] : '',
-          ];
+        $data = [
+          'name'            => $this->input->post('name'),
+          'email'           => $this->input->post('email'),
+          'contact'         => $this->input->post('contact'),
+          'dob'             => $this->input->post('dob'),
+          'gender'          => $this->input->post('gender'),
+          'marital_status'  => $this->input->post('marital_status'),
+          'aniversary_date' => $this->input->post('aniversary_date'),
+          'passport_number' => $this->input->post('passport_number'),
+          'nationality'     => $this->input->post('nationality'),
+          'issuing_country' => $this->input->post('issuing_country'),
+          'expiry'          => $this->input->post('expiry')
+        ];
         $this->db->insert('users_profile',$data);
-
         $this->response(['Profile Created Successfully.'], REST_Controller::HTTP_OK);
-    }
+      }
 
     /**
      * Get All Data from this method.
@@ -69,28 +63,23 @@ class UserProfile extends REST_Controller {
     public function index_put($id)
     {
         $inputs = $this->put();
-        if(isset($inputs['name']) && isset($inputs['email']) && isset($inputs['contact'])){
-          // check if e-mail address is well-formed
-          if (!filter_var($inputs['email'], FILTER_VALIDATE_EMAIL)) {
-            $this->response(['Wrong Email !!'], REST_Controller::HTTP_OK);
-          }
-          $data = [
-            'name'            => !empty($inputs['name'])  ? $inputs['name'] : '',
-            'email'           => !empty($inputs['email']) ? $inputs['email'] : '',
-            'contact'         => !empty($inputs['contact']) ? $inputs['contact'] : '',
-            'dob'             => !empty($inputs['dob']) ? $inputs['dob'] : '',
-            'gender'          => !empty($inputs['gender']) ? $inputs['gender'] : '',
-            'marital_status'  => !empty($inputs['marital_status']) ? $inputs['marital_status'] : '',
-            'aniversary_date' => !empty($inputs['aniversary_date']) ? $inputs['aniversary_date'] : '',
-            'passport_number' => !empty($inputs['passport_number']) ? $inputs['passport_number'] : '',
-            'nationality'     => !empty($inputs['nationality']) ? $inputs['nationality'] : '',
-            'issuing_country' => !empty($inputs['issuing_country']) ? $inputs['issuing_country'] : '',
-            'expiry'          => !empty($inputs['expiry']) ? $inputs['expiry'] : '',
-          ];
+        $data = [
+          'name'            => $this->input->post('name'),
+          'email'           => $this->input->post('email'),
+          'contact'         => $this->input->post('contact'),
+          'dob'             => $this->input->post('dob'),
+          'gender'          => $this->input->post('gender'),
+          'marital_status'  => $this->input->post('marital_status'),
+          'aniversary_date' => $this->input->post('aniversary_date'),
+          'passport_number' => $this->input->post('passport_number'),
+          'nationality'     => $this->input->post('nationality'),
+          'issuing_country' => $this->input->post('issuing_country'),
+          'expiry'          => $this->input->post('expiry')
+        ];
         $this->db->update('users_profile', $data, array('id'=>$id));
 
         $this->response(['Profile updated successfully.'], REST_Controller::HTTP_OK);
-    }
+      }
 
     /**
      * Get All Data from this method.
