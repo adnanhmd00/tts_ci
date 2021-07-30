@@ -48,7 +48,8 @@ class Booking extends REST_Controller {
           'payment_details'           => $this->input->post('payment_details'),
         ];
         $this->db->insert('bookings',$data);
-        $this->response(['status' => 'success', 'message' => 'A new Booking Created Successfully.'], REST_Controller::HTTP_OK);
+        $id = $this->db->insert_id();
+        $this->response(['status' => 'success','boooking_id' => $id, 'message' => 'A new Booking Created Successfully.'], REST_Controller::HTTP_OK);
       }
 
     /**
