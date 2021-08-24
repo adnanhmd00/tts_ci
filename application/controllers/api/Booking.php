@@ -40,6 +40,7 @@ class Booking extends REST_Controller {
         $inputs = $this->input->post();
         $data = [
           'user_id'            => $this->input->post('user_id'),
+          'amount'            => $this->input->post('amount'),
           'flight_pnr'           => $this->input->post('flight_pnr'),
           'flight_booking_id'           => $this->input->post('flight_booking_id'),
           'flight_name'           => $this->input->post('flight_name'),
@@ -49,7 +50,37 @@ class Booking extends REST_Controller {
         ];
         $this->db->insert('bookings',$data);
         $id = $this->db->insert_id();
-        $this->response(['status' => 'success','boooking_id' => $id, 'message' => 'A new Booking Created Successfully.'], REST_Controller::HTTP_OK);
+        $amount = $this->input->post('amount');
+          /* API URL */
+         $url = 'https://api.razorpay.com/v1/orders';
+         /* Init cURL resource */
+         $ch = curl_init($url);
+         /* Array Parameter Data */
+         $data = ['amount'=> $amount, 'currency'=>'INR'];
+         /* pass encoded JSON string to the POST fields */
+         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+         curl_setopt($ch, CURLOPT_POST, 1);
+         // curl_setopt($ch, CURLOPT_USERPWD, "api-key: rzp_test_1U3fdUZx6lMZ13-iCS5tAavgvQ7B9mlv5EZFPio");
+         curl_setopt($ch, CURLOPT_USERPWD, 'rzp_test_1U3fdUZx6lMZ13' . ':' . 'iCS5tAavgvQ7B9mlv5EZFPio');
+        $headers = array();
+        $headers[] = 'Accept: application/json';
+        $headers[] = 'Content-Type: application/json';
+         /* set the content type json */
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+         /* set return type json */
+         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+         /* execute request */
+         $result = curl_exec($ch);
+          if (curl_errno($ch)) {
+              echo 'Error:' . curl_error($ch);
+          }
+
+         /* close cURL resource */
+         curl_close($ch);
+
+          $this->response(['status' => 'success','boooking_id' => $id, 'order_id' => $result, 'message' => 'A new Booking Created Successfully.'], REST_Controller::HTTP_OK);
       }
 
     /**
