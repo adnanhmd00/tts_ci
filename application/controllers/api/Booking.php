@@ -37,6 +37,7 @@ class Booking extends REST_Controller {
     */
     public function index_post()
     {
+        $this->load->helper('string');
         $inputs = $this->input->post();
         $data = [
           'user_id'            => $this->input->post('user_id'),
@@ -73,6 +74,12 @@ class Booking extends REST_Controller {
 
          /* execute request */
          $result = curl_exec($ch);
+         // $result = explode(',', $result);
+         // $result = strip_slashes($result);
+         $result = strip_quotes($result);
+         $result = str_replace(array('{','}'), '', $result);
+         $result = explode(',', $result);
+         $result = str_replace('id:', '', $result);
           if (curl_errno($ch)) {
               echo 'Error:' . curl_error($ch);
           }
@@ -80,7 +87,7 @@ class Booking extends REST_Controller {
          /* close cURL resource */
          curl_close($ch);
 
-          $this->response(['status' => 'success','boooking_id' => $id, 'order_id' => $result, 'message' => 'A new Booking Created Successfully.'], REST_Controller::HTTP_OK);
+          $this->response(['status' => 'success','boooking_id' => $id, 'order_id' => $result[0], 'message' => 'A new Booking Created Successfully.'], REST_Controller::HTTP_OK);
       }
 
     /**
