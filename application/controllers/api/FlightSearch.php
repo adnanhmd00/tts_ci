@@ -32,6 +32,7 @@ class FlightSearch extends REST_Controller {
     public function index_post()
     {
       $inputs = $this->input->post();
+      $apiKey = $this->input->post('API-Token');
       $data = [
         'AdultCount'            => $this->input->post('AdultCount'),
         'ChildCount'            => $this->input->post('ChildCount'),
@@ -68,7 +69,7 @@ class FlightSearch extends REST_Controller {
        curl_setopt($ch, CURLOPT_POST, 1);
        // curl_setopt($ch, CURLOPT_USERPWD, "api-key: rzp_test_1U3fdUZx6lMZ13-iCS5tAavgvQ7B9mlv5EZFPio");
        // curl_setopt($ch, CURLOPT_USERPWD, 'rzp_test_1U3fdUZx6lMZ13' . ':' . 'iCS5tAavgvQ7B9mlv5EZFPio');
-      $headers = array();
+      $headers = array('Authorization: ' . $apiKey);
       $headers[] = 'Accept: application/json';
       $headers[] = 'Content-Type: application/json';
        /* set the content type json */

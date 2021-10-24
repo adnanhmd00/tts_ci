@@ -32,6 +32,17 @@ class FlightFareQuotes extends REST_Controller {
     public function index_post()
     {
       $inputs = $this->input->post();
+      $apiKey = $this->input->post('API-Token');
+      $data = [
+        'ClientId'           => $this->input->post('ClientId'),
+        'EndUserIp'           => $this->input->post('EndUserIp'),
+        'Password'           => $this->input->post('Password'),
+        'UserName' => $this->input->post('UserName'),
+        'SrdvType' => $this->input->post('SrdvType'),
+        'SrdvIndex' => $this->input->post('SrdvIndex'),
+        'TraceId' => $this->input->post('TraceId'),
+        'ResultIndex' => $this->input->post('ResultIndex')
+      ];
       /* API URL */
        $url = 'https://flight.srdvtest.com/v5/rest/FareQuote';
        /* Init cURL resource */
@@ -41,7 +52,7 @@ class FlightFareQuotes extends REST_Controller {
        curl_setopt($ch, CURLOPT_POST, 1);
        // curl_setopt($ch, CURLOPT_USERPWD, "api-key: rzp_test_1U3fdUZx6lMZ13-iCS5tAavgvQ7B9mlv5EZFPio");
        // curl_setopt($ch, CURLOPT_USERPWD, 'rzp_test_1U3fdUZx6lMZ13' . ':' . 'iCS5tAavgvQ7B9mlv5EZFPio');
-      $headers = array();
+      $headers = array('Authorization: ' . $apiKey);
       $headers[] = 'Accept: application/json';
       $headers[] = 'Content-Type: application/json';
        /* set the content type json */
