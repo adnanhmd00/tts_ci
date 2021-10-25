@@ -69,9 +69,13 @@ class FlightSearch extends REST_Controller {
        curl_setopt($ch, CURLOPT_POST, 1);
        // curl_setopt($ch, CURLOPT_USERPWD, "api-key: rzp_test_1U3fdUZx6lMZ13-iCS5tAavgvQ7B9mlv5EZFPio");
        // curl_setopt($ch, CURLOPT_USERPWD, 'rzp_test_1U3fdUZx6lMZ13' . ':' . 'iCS5tAavgvQ7B9mlv5EZFPio');
-      $headers = array('Authorization: ' . $apiKey);
-      $headers[] = 'Accept: application/json';
-      $headers[] = 'Content-Type: application/json';
+      $headers = array(
+        'Content-Type: application/json',
+        'Accept: application/json',
+        'API-Token:' .$apiKey
+      );
+      // $headers[] = 'Accept: application/json';
+      // $headers[] = 'Content-Type: application/json';
        /* set the content type json */
       curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
