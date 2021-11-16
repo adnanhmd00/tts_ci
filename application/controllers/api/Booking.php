@@ -109,9 +109,7 @@ class Booking extends REST_Controller {
          /* close cURL resource */
           curl_close($ch);
           $response = json_decode($result, true);
-          print_r($response);
           $res = $response['Response'];
-          print_r($res);
           $flights = $res['FlightItinerary'];
           $segment = $flights['Segments']['0'];
           $airline = $segment['Airline'];
