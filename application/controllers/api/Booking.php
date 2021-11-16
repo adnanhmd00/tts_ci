@@ -108,14 +108,20 @@ class Booking extends REST_Controller {
           }
          /* close cURL resource */
           curl_close($ch);
-          $result = json_decode($result, true);
-          print_r($result);
+          $response = json_decode($result, true);
+          $res = $response['Response'];
+          $flights = $res['FlightItinerary'];
+          $segment = $flights['Segments']['0'];
+          $airline = $segment['Airline'];
+          print_r($res['PNR']);
+          print_r($res['BookingId']);
+          print_r($airline['AirlineName']);
           $data = [
             'user_id'            => $this->input->post('user_id'),
             'amount'            => $this->input->post('amount'),
-            'flight_pnr'           => $result['PNR'],
-            'flight_booking_id'           => $result['BookingId'],
-            'flight_name'           => $result['AirlineName'],
+            'flight_pnr'           => $res['PNR'],
+            'flight_booking_id'           => $res['BookingId'],
+            'flight_name'           => $airline['AirlineName'],
             'payment_type'           => $this->input->post('payment_type'),
             'payment_status'           => $this->input->post('payment_status'),
             'payment_details'           => $this->input->post('payment_details'),
@@ -123,7 +129,7 @@ class Booking extends REST_Controller {
           $this->db->insert('bookings',$data);
           $id = $this->db->insert_id();
 
-        $this->response(['status' => 'success','booking_id' => $id, 'booking_status' => $result['Status'], 'data' =>$result , 'message' => 'A new Booking Created Successfully.'], REST_Controller::HTTP_OK);
+        $this->response(['status' => 'success','booking_id' => $id, 'data' =>$result , 'message' => 'A new Booking Created Successfully.'], REST_Controller::HTTP_OK);
       }
 
     /**
