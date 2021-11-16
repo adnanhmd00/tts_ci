@@ -23,7 +23,7 @@ class Booking extends REST_Controller {
 	public function index_get($id = 0)
 	{
         if(!empty($id)){
-            $data = $this->db->get_where("bookings", ['user_id' => $id])->row_array();
+            $data = $this->db->get_where("bookings", ['user_id' => $id])->result();
         }else{
             $data = $this->db->get("bookings")->result();
         }
@@ -110,12 +110,10 @@ class Booking extends REST_Controller {
           curl_close($ch);
           $response = json_decode($result, true);
           $res = $response['Response'];
+          print_r($res);
           $flights = $res['FlightItinerary'];
           $segment = $flights['Segments']['0'];
           $airline = $segment['Airline'];
-          print_r($res['PNR']);
-          print_r($res['BookingId']);
-          print_r($airline['AirlineName']);
           $data = [
             'user_id'            => $this->input->post('user_id'),
             'amount'            => $this->input->post('amount'),
