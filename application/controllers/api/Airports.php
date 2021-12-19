@@ -34,14 +34,14 @@ class Airports extends REST_Controller {
                             $data = $this->db->get_where("airports", ['countryName' => $name])->row_array();
                             if($data == ''){
                                 $data = $this->db->get_where("airports", ['countryCode' => $name])->row_array();
+                            }if($data == ''){
+                                $data = "Not Found";
                             }
                         }
                     }
                 }
                 
             }
-        }else{
-            $data = "Data Not Available";
         }
      
         $this->response($data, REST_Controller::HTTP_OK);
