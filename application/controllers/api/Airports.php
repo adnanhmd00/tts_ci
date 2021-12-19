@@ -34,16 +34,27 @@ class Airports extends REST_Controller {
                             $data = $this->db->get_where("airport_codes", ['countryName' => $name])->row_array();
                             if($data == ''){
                                 $data = $this->db->get_where("airport_codes", ['countryCode' => $name])->row_array();
-                            }if($data == ''){
-                                $data = "Not Found";
+                                if($data == ''){
+                                    $data = $this->db->get_where("airport_codes", ['name' => $name])->row_array();
+                                    if($data == ''){
+                                        $data = "Not Found";
+                                    }
+                                }
                             }
                         }
                     }
                 }
                 
             }
+        }else{
+            $data = $this->db->get("airport_codes")->result();
         }
      
         $this->response($data, REST_Controller::HTTP_OK);
 	}
+
+    public function all_airports_get(){
+        $data = $this->db->get("airport_codes")->result();
+        $this->response($data, REST_Controller::HTTP_OK);
+    }
 }
