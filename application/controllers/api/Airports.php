@@ -40,6 +40,8 @@ class Airports extends REST_Controller {
                 }
                 
             }
+        }else{
+            $data = "Data Not Available";
         }
      
         $this->response($data, REST_Controller::HTTP_OK);
