@@ -23,17 +23,17 @@ class Airports extends REST_Controller {
 	public function airport_name_get($name)
 	{
         if(!empty($name)){
-            $data = $this->db->get_where("airports", ['cityName' => $name])->row_array();
+            $data = $this->db->get_where("airport_codes", ['cityName' => $name])->row_array();
             if($data == ''){
-                $data = $this->db->get_where("airports", ['code' => $name])->row_array();
+                $data = $this->db->get_where("airport_codes", ['airport_code' => $name])->row_array();
                 if($data == ''){
-                    $data = $this->db->get_where("airports", ['cityCode' => $name])->row_array();
+                    $data = $this->db->get_where("airport_codes", ['cityCode' => $name])->row_array();
                     if($data == ''){
-                        $data = $this->db->get_where("airports", ['cityName' => $name])->row_array();
+                        $data = $this->db->get_where("airport_codes", ['cityName' => $name])->row_array();
                         if($data == ''){
-                            $data = $this->db->get_where("airports", ['countryName' => $name])->row_array();
+                            $data = $this->db->get_where("airport_codes", ['countryName' => $name])->row_array();
                             if($data == ''){
-                                $data = $this->db->get_where("airports", ['countryCode' => $name])->row_array();
+                                $data = $this->db->get_where("airport_codes", ['countryCode' => $name])->row_array();
                             }if($data == ''){
                                 $data = "Not Found";
                             }
