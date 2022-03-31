@@ -15,7 +15,11 @@ class PartnerLogin extends CI_Controller
         $this->created_at = Date('Y-m-d H:i:s', time());
         
     }
-
+    public function allBookings($id){
+        $this->db->where("user_id", $id);
+        $data = $this->db->get("bookings");
+        echo json_encode($data->result());
+    }
     public function login()
     {
         if (!$this->session->userdata('partner')) {

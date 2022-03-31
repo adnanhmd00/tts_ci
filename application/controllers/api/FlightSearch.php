@@ -2,6 +2,9 @@
 
    require APPPATH . '/libraries/REST_Controller.php';
    use Restserver\Libraries\REST_Controller;
+   header("Access-Control-Allow-Origin: *");
+   header("Access-Control-Allow-Methods: GET, OPTIONS, POST, GET, PUT");
+   header("Access-Control-Allow-Headers: Content-Type, Content-Length, Accept-Encoding");
 
 class FlightSearch extends REST_Controller {
 
@@ -31,39 +34,41 @@ class FlightSearch extends REST_Controller {
     */
     public function index_post()
     {
-      $inputs = $this->input->post();
-      $apiKey = $this->input->post('API-Token');
-      $data = [
-        'AdultCount'            => $this->input->post('AdultCount'),
-        'ChildCount'            => $this->input->post('ChildCount'),
-        'ClientId'           => $this->input->post('ClientId'),
-        'EndUserIp'           => $this->input->post('EndUserIp'),
-        'InfantCount'           => $this->input->post('InfantCount'),
-        'JourneyType'           => $this->input->post('JourneyType'),
-        'Password'           => $this->input->post('Password'),
+      // $inputs = $this->input->post();
+      $data = json_decode(file_get_contents('php://input'), true);
+      $apiKey = $data['API-Token'];
+      /*$data_curl = [
+        'AdultCount'            => $data['AdultCount'],
+        'ChildCount'            => $data['ChildCount'],
+        'ClientId'           => $data['ClientId'],
+        'EndUserIp'           => $data['EndUserIp'],
+        'InfantCount'           => $data['InfantCount'],
+        'JourneyType'           => $data['JourneyType'],
+        'Password'           => $data['Password'],
         'Segments'           => [
           [
-            'Destination' => $this->input->post('Destination_1'),
-            'FlightCabinClass' => $this->input->post('FlightCabinClass_1'),
-            'Origin' => $this->input->post('Origin_1'),
-            'PreferredArrivalTime' => $this->input->post('PreferredArrivalTime_1'),
-            'PreferredDepartureTime' => $this->input->post('PreferredDepartureTime_1'),
+            'Destination' => $data['Destination_1'],
+            'FlightCabinClass' => $data['FlightCabinClass_1'],
+            'Origin' => $data['Origin_1'],
+            'PreferredArrivalTime' => $data['PreferredArrivalTime_1'],
+            'PreferredDepartureTime' => $data['PreferredDepartureTime_1'],
           ],
           [
-            'Destination' => $this->input->post('Destination_2'),
-            'FlightCabinClass' => $this->input->post('FlightCabinClass_2'),
-            'Origin' => $this->input->post('Origin_2'),
-            'PreferredArrivalTime' => $this->input->post('PreferredArrivalTime_2'),
-            'PreferredDepartureTime' => $this->input->post('PreferredDepartureTime_2'),
+            'Destination' => $data['Destination_2'],
+            'FlightCabinClass' => $data['FlightCabinClass_2'],
+            'Origin' => $data['Origin_2'],
+            'PreferredArrivalTime' => $data['PreferredArrivalTime_2'],
+            'PreferredDepartureTime' => $data['PreferredDepartureTime_2'],
           ]
         ],
-        'UserName' => $this->input->post('UserName')
-      ];
+        'UserName' => $data['UserName']
+      ];*/
 
       /* API URL */
-       $url = 'https://flight.srdvtest.com/v5/rest/Search';
+      //  $url = 'https://flight.srdvtest.com/v5/rest/Search';
+       $url = 'https://flight.srdvapi.com/v5/rest/Search';
        /* Init cURL resource */
-       $ch = curl_init($url);;
+       $ch = curl_init($url);
        /* pass encoded JSON string to the POST fields */
        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
        curl_setopt($ch, CURLOPT_POST, 1);
@@ -89,11 +94,11 @@ class FlightSearch extends REST_Controller {
         if (curl_errno($ch)) {
             echo 'Error:' . curl_error($ch);
         }
-
+        $response = json_decode($result, true);
        /* close cURL resource */
        curl_close($ch);
 
-       $this->response(['status' => 'success','data' => $result], REST_Controller::HTTP_OK);
+       $this->response($response, REST_Controller::HTTP_OK);
       }
 
     /**

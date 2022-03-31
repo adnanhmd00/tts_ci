@@ -31,24 +31,30 @@ class FlightFareQuotes extends REST_Controller {
     */
     public function index_post()
     {
-      $inputs = $this->input->post();
-      $apiKey = $this->input->post('API-Token');
-      $data = [
-        'ClientId'           => $this->input->post('ClientId'),
-        'EndUserIp'           => $this->input->post('EndUserIp'),
-        'Password'           => $this->input->post('Password'),
-        'UserName' => $this->input->post('UserName'),
-        'SrdvType' => $this->input->post('SrdvType'),
-        'SrdvIndex' => $this->input->post('SrdvIndex'),
-        'TraceId' => $this->input->post('TraceId'),
-        'ResultIndex' => $this->input->post('ResultIndex')
-      ];
+      //$inputs = $this->input->post();
+      $this->load->helper('string');
+      $data = json_decode(file_get_contents('php://input'), true);
+
+      $apiKey = $data['API-Token'];
+
+    
+      /*$data_curl = [
+        'ClientId'           => $data['ClientId'],
+        'EndUserIp'           => $data['EndUserIp'],
+        'Password'           => $data['Password'],
+        'UserName' => $data['UserName'],
+        'SrdvType' => $data['SrdvType'],
+        'SrdvIndex' => $data['SrdvIndex'],
+        'TraceId' => $data['TraceId'],
+        'ResultIndex' => $data['ResultIndex']
+      ];*/
       /* API URL */
-       $url = 'https://flight.srdvtest.com/v5/rest/FareQuote';
+       //$url = 'https://flight.srdvtest.com/v5/rest/FareQuote';
+       $url = 'https://flight.srdvapi.com/v5/rest/FareQuote';
        /* Init cURL resource */
        $ch = curl_init($url);;
        /* pass encoded JSON string to the POST fields */
-       curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($inputs));
+       curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
        curl_setopt($ch, CURLOPT_POST, 1);
        // curl_setopt($ch, CURLOPT_USERPWD, "api-key: rzp_test_1U3fdUZx6lMZ13-iCS5tAavgvQ7B9mlv5EZFPio");
        // curl_setopt($ch, CURLOPT_USERPWD, 'rzp_test_1U3fdUZx6lMZ13' . ':' . 'iCS5tAavgvQ7B9mlv5EZFPio');
@@ -70,11 +76,11 @@ class FlightFareQuotes extends REST_Controller {
         if (curl_errno($ch)) {
             echo 'Error:' . curl_error($ch);
         }
-
+        $response = json_decode($result, true);
        /* close cURL resource */
        curl_close($ch);
 
-       $this->response(['status' => 'success','data' => $result], REST_Controller::HTTP_OK);
+       $this->response($response, REST_Controller::HTTP_OK);
       }
 
     /**

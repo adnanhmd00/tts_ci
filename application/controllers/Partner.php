@@ -1558,8 +1558,116 @@ class Partner extends CI_Controller
     }
 
     function searchFlight(){
-        $this->load->view("partner/search-flights");
+        $datas = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
+        $this->load->view("partner/search-flights", compact('datas'));
     }
+
+    public function searchFlightResults()
+    {
+    	
+    	$data = json_decode(file_get_contents('php://input'), true);
+	    $apiKey = $data['API-Token'];
+	    $url = 'http://partner.thetravelsquare.in/api/FlightSearch';
+	    $ch = curl_init($url);
+	    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+	    curl_setopt($ch, CURLOPT_POST, 1);
+	    $headers = array(
+	        'Content-Type: application/json',
+	        'Accept: application/json',
+	        'API-Token:' .$apiKey
+	    );
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	    $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+        	$response = array();
+        	$response['error'] = curl_error($ch);
+       		$this->response($response, 400);
+        } else {
+            http_response_code(200);
+        }
+	    curl_close($ch);
+	    $response = json_decode($result, true);
+	    // echo "<pre>";
+	    // print_r($response);
+	    // exit;
+        $JourneyType = $data['JourneyType'];
+        $Origin = $data['Origin'];
+        $Destination = $data['Destination'];
+	    $cities = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
+        $this->load->view("partner/search-flight-results", compact('response', 'data', 'cities', 'JourneyType', 'Origin', 'Destination'));
+    }
+    public function flightSearchPost()
+    {
+        echo 'hi';die;
+      $inputs = $this->input->post();
+      print_r($inputs);die;
+      $data = json_decode(file_get_contents('php://input'), true);
+      $apiKey = $data['API-Token'];
+      /*$data_curl = [
+        'AdultCount'            => $data['AdultCount'],
+        'ChildCount'            => $data['ChildCount'],
+        'ClientId'           => $data['ClientId'],
+        'EndUserIp'           => $data['EndUserIp'],
+        'InfantCount'           => $data['InfantCount'],
+        'JourneyType'           => $data['JourneyType'],
+        'Password'           => $data['Password'],
+        'Segments'           => [
+          [
+            'Destination' => $data['Destination_1'],
+            'FlightCabinClass' => $data['FlightCabinClass_1'],
+            'Origin' => $data['Origin_1'],
+            'PreferredArrivalTime' => $data['PreferredArrivalTime_1'],
+            'PreferredDepartureTime' => $data['PreferredDepartureTime_1'],
+          ],
+          [
+            'Destination' => $data['Destination_2'],
+            'FlightCabinClass' => $data['FlightCabinClass_2'],
+            'Origin' => $data['Origin_2'],
+            'PreferredArrivalTime' => $data['PreferredArrivalTime_2'],
+            'PreferredDepartureTime' => $data['PreferredDepartureTime_2'],
+          ]
+        ],
+        'UserName' => $data['UserName']
+      ];*/
+
+      /* API URL */
+       $url = 'https://flight.srdvtest.com/v5/rest/Search';
+      //  $url = 'https://flight.srdvapi.com/v5/rest/Search';
+       /* Init cURL resource */
+       $ch = curl_init($url);
+       /* pass encoded JSON string to the POST fields */
+       curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+       curl_setopt($ch, CURLOPT_POST, 1);
+       // curl_setopt($ch, CURLOPT_USERPWD, "api-key: rzp_test_1U3fdUZx6lMZ13-iCS5tAavgvQ7B9mlv5EZFPio");
+       // curl_setopt($ch, CURLOPT_USERPWD, 'rzp_test_1U3fdUZx6lMZ13' . ':' . 'iCS5tAavgvQ7B9mlv5EZFPio');
+      $headers = array(
+        'Content-Type: application/json',
+        'Accept: application/json',
+        'API-Token:' .$apiKey
+      );
+      // $headers[] = 'Accept: application/json';
+      // $headers[] = 'Content-Type: application/json';
+       /* set the content type json */
+      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+       /* set return type json */
+       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+       /* execute request */
+       $result = curl_exec($ch);
+       // $result = explode(',', $result);
+       // $result = strip_slashes($result);
+        if (curl_errno($ch)) {
+            echo 'Error:' . curl_error($ch);
+        }
+        $response = json_decode($result, true);
+       /* close cURL resource */
+       curl_close($ch);
+
+       $this->response($response, REST_Controller::HTTP_OK);
+      }
+
 
     function flightSearchResult(){
         $this->load->view("partner/flight-search-results");

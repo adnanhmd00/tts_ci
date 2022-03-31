@@ -91,6 +91,35 @@
             .progressbar li.active + li:after {
                 background-color: green;
             }
+
+
+            /* Dropdown coutner start */
+            span {cursor:pointer; }
+            .number{
+                /* margin:100px; */
+            }
+		.minus, .plus{
+			width:20px;
+			height:20px;
+			/* background:#f2f2f2; */
+			border-radius:4px;
+			/* padding:8px 5px 8px 5px; */
+			border:1px solid #ddd;
+            display: inline-block;
+            /* vertical-align: middle; */
+            text-align: center;
+		}
+		.number input{
+			/* height:34px; */
+            width: 80%;
+            text-align: center;
+            /* font-size: 26px; */
+            border:1px solid #ddd;
+            border-radius:4px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+            /* Dropdown coutner end */
         </style>
 
         <!-- Date Picker -->
@@ -274,12 +303,39 @@
                                             <input id="datepicker-to" class="form-control" placeholder="Select date" id="inputDate">                                        </div>
                                         </div>
                                     <div class="col-md-2">
-                                        <div class="form-group">
-                                            <label for="travellers">Travellers</label>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">1 Passenger(s)</option>
-                                            </select>
-                                        </div>
+                                        
+                                    
+                                    <div class="form-group">
+                                                <label for="travellers">Travellers</label>
+                                                    <div class="dropdown">
+                                                    <button class="btn btn-secondary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Select
+                                                    </button>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <div class="ml-4">Adults</div>
+                                                            <div class="dropdown-item" href="#"><div class="number">
+                                                                <span class="minus">-</span>
+                                                                <input type="text" value="1"/>
+                                                                <span class="plus">+</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ml-4">Child</div>
+                                                            <div class="dropdown-item" href="#"><div class="number">
+                                                                <span class="minus">-</span>
+                                                                <input type="text" value="0"/>
+                                                                <span class="plus">+</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ml-4">Infants</div>
+                                                            <div class="dropdown-item" href="#"><div class="number">
+                                                                <span class="minus">-</span>
+                                                                <input type="text" value="0"/>
+                                                                <span class="plus">+</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
                                     </div>
                                 </div>
                                 <table class="table d-none d-lg-block">
@@ -336,10 +392,35 @@
                                             </td>
                                             <td>
                                                 <div class="form-group">
-                                                    <label for="travellers">Travellers</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="">1 Passenger(s)</option>
-                                                    </select>
+                                                <label for="travellers">Travellers</label>
+                                                    <div class="dropdown">
+                                                    <button class="btn btn-secondary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Select
+                                                    </button>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <div class="ml-4">Adults</div>
+                                                            <div class="dropdown-item" href="#"><div class="number">
+                                                                <span class="minus">-</span>
+                                                                <input type="text" value="1"/>
+                                                                <span class="plus">+</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ml-4">Child</div>
+                                                            <div class="dropdown-item" href="#"><div class="number">
+                                                                <span class="minus">-</span>
+                                                                <input type="text" value="1"/>
+                                                                <span class="plus">+</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ml-4">Infants</div>
+                                                            <div class="dropdown-item" href="#"><div class="number">
+                                                                <span class="minus">-</span>
+                                                                <input type="text" value="1"/>
+                                                                <span class="plus">+</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
                                                 </div>
                                             </td>
                                             <td>
@@ -1480,6 +1561,26 @@
             x.style.display = "none";
         }
         }
+        </script>
+
+
+        <script>
+            $(document).ready(function() {
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('input');
+				$input.val(parseInt($input.val()) + 1);
+				$input.change();
+				return false;
+			});
+		});
         </script>
     </body>
 </html>

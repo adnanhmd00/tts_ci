@@ -57,6 +57,7 @@ $route['partner/deals'] = 'Partner/allDeals';
 $route['partner/mydeals'] = 'Partner/myDeals';
 $route['partner/login'] = 'PartnerLogin/login';
 $route['partnerlogin'] = 'PartnerLogin/loginForm';
+$route['all-bookings/(:num)'] = 'PartnerLogin/allBookings/$1'; //Adnan (For all bookings of a user by id)
 $route['partner/deal/(:num)'] = 'Partner/dealDetail/$1';
 $route['partner/edit/(:num)'] = 'Partner/editDeal/$1';
 $route['partner/edit/deal/image/(:num)'] = 'Partner/editDealImage/$1';
@@ -89,6 +90,7 @@ $route['partner-manage-leads'] = 'Partner/manageLeads';
 $route['partner-purchase-leads'] = 'Partner/prchasedLeads';
 $route['purchase-lead'] = 'Partner/purchaseleads';
 
+$route['search-flight-results']['POST'] = 'Partner/searchFlightResults';
 
 $route['partner-contact/(:any)'] = 'Partner/contact/$1';
 $route['partner-contact-form'] = 'Partner/contactForm/';
