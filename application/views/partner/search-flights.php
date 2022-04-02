@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
     <!-- begin::Head -->
     <head>
@@ -259,11 +259,11 @@
                                         			</div>
                                         		</div>
                                         	</div>
-                                        	<div class="d-none d-lg-block col-md-1 mt-3 p-4">
+                                        	<div class="d-none d-lg-block mt-3 p-4">
                                         		<i class="fa fa-exchange fa-2x"></i>
                                         	</div>
 
-                                        	<div class="d-md-none d-sm-block col-md-1">
+                                        	<div class="d-md-none d-sm-block">
                                         		<div class="text-center"><i class="fa fa-exchange fa-rotate-90 fa-2x"></i></div>
                                         	</div>
 
@@ -285,13 +285,13 @@
                                         		</div>
                                         	</div>
 
-											<div class="col-md-2">
+											<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="inputDate">Depart</label>
                                         			<input id="datepicker-from" name="PreferredDepartureTime" class="form-control" placeholder="Select date" > 
                                         		</div>
                                         	</div>
-                                        	<div class="col-md-2">
+                                        	<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="inputDate">Return</label>
                                         			<input id="datepicker-to" class="form-control" placeholder="Select date" >  
@@ -319,12 +319,8 @@
                                         				<option value="4">More than 3 Child</option>
                                         			</select>
                                         		</div>
-                                        	</div>				
-                                        </div>
-                                        <div class="row">
-                                        	
-                                        	
-                                        	<div class="col-md-2">
+                                        	</div>	
+											<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="From">Class</label>
                                         			<select name="FlightCabinClass" id="" class="form-control">
@@ -340,12 +336,12 @@
 											<div class="form-group text-center">
 												<button id="submit-button" class="btn btn-primary">Search Flights</button>
 											</div>
-											</div>
+											</div>			
                                         </div>
                                         
                                     </div>
                                 </div>
-                                <div id="search_results"></div>
+                                <div id="search_results" ></div>
 
                             </div>
                             <!-- end:: Content -->				

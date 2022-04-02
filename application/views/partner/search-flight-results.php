@@ -12,7 +12,10 @@
 
 
 <div class="row mt-3 mb-4">
-	<div class="col-md-12">
+<div class="col-md-3">
+	
+</div>
+	<div class="col-md-9">
 		<h5>Showing Results for:</h5>
 		<div class="row mb-2">
 			<div class="<?php if($JourneyType == '2'){ ?>col-xs-6 col-sm-6 col-md-6<?php }else{?>col-xs-12 col-sm-12 col-md-12<?php }?>">
@@ -21,7 +24,7 @@
 					<?php if($JourneyType == '2'){ ?>
 						<input type="radio" class="mt-2" name="optradio" onclick="showHideDiv('first_div','second_div')" checked>
 						<?php } ?>
-						<span style="font-size: 20px;">&nbsp;&nbsp;<?php echo $Origin; ?> > <?php echo $Destination; ?></span>
+						<span style="font-size: 14px;">&nbsp;&nbsp;<?php echo $Origin; ?> > <?php echo $Destination; ?></span>
 					</div>
 				</div>
 			</div>
@@ -30,13 +33,13 @@
 				<div class="card p-3">
 					<div class="ml-5">
 						<input type="radio" class="mt-2" name="optradio" onclick="showHideDiv('second_div','first_div')">
-						<span style="font-size: 20px;">&nbsp;&nbsp;<?php echo $Destination; ?> > <?php echo $Origin; ?></span>
+						<span style="font-size: 14px;">&nbsp;&nbsp;<?php echo $Destination; ?> > <?php echo $Origin; ?></span>
 					</div>
 				</div>
 			</div>
 			<?php } ?>
 		</div>
-		<div class="card first_div" id="demo">
+		<div class="card first_div" id="demo" style="height:500px; overflow:auto;">
 			<table class="table flight-table" id="flight-table">
 				<thead class="text-center">
 					<tr>
@@ -98,7 +101,7 @@
 								</td>
 								<td>
 									<div class="text-center">
-										<div id="one_way_<?php echo $i; ?>_board_time" style="font-size: 24px;"><?php echo date('H:i', strtotime($Result['Segments'][0][0]['DepTime'])); ?></div>
+										<div id="one_way_<?php echo $i; ?>_board_time" style="font-size: 14px;"><?php echo date('H:i', strtotime($Result['Segments'][0][0]['DepTime'])); ?></div>
 										<div id="one_way_<?php echo $i; ?>_board_city" class="lead"><?php echo $Result['Segments'][0][0]['Origin']['AirportCode']; ?></div>
 										<input type="hidden" id="one_way_<?php echo $i; ?>_board_datetime" value="<?php echo date('D M d Y', strtotime($Result['Segments'][0][0]['DepTime'])); ?>">
 										<input type="hidden" id="one_way_<?php echo $i; ?>_board_airport" value="<?php echo $Result['Segments'][0][0]['Origin']['AirportName']; ?>">
@@ -107,7 +110,7 @@
 								</td>
 								<td>
 									<div class="text-center">
-										<div class="h5 mt-4" id="one_way_<?php echo $i; ?>_duration">
+										<div class="h6 mt-2" id="one_way_<?php echo $i; ?>_duration">
 											<?php
 												$datetime1 = new DateTime($Result['Segments'][0][0]['DepTime']);
 												$datetime2 = new DateTime($Result['Segments'][0][$stopages]['ArrTime']);
@@ -117,12 +120,12 @@
 											 ?>
 												
 											</div>
-										<strong id="flight-type" style="font-size: 12px;"><?php echo $stopage; ?></strong>
+										<strong id="flight-type" style="font-size: 11px;"><?php echo $stopage; ?></strong>
 									</div>
 								</td>
 								<td>
 									<div class="text-center">
-										<div id="one_way_<?php echo $i; ?>_depart_time" style="font-size: 24px;"><?php echo date('H:i', strtotime($Result['Segments'][0][$stopages]['ArrTime'])); ?></div>
+										<div id="one_way_<?php echo $i; ?>_depart_time" style="font-size: 14px;"><?php echo date('H:i', strtotime($Result['Segments'][0][$stopages]['ArrTime'])); ?></div>
 										<div id="one_way_<?php echo $i; ?>_depart_city" class="lead"><?php echo $Result['Segments'][0][$stopages]['Destination']['AirportCode']; ?></div>
 										<input type="hidden" id="one_way_<?php echo $i; ?>_depart_datetime" value="<?php echo date('D M d Y', strtotime($Result['Segments'][0][$stopages]['ArrTime'])); ?>">
 										<input type="hidden" id="one_way_<?php echo $i; ?>_depart_airport" value="<?php echo $Result['Segments'][0][0]['Destination']['AirportName']; ?>">
@@ -131,7 +134,7 @@
 								</td>
 								<td>
 									<div class="text-center mt-4">
-										<div id="flight-price" class="h3"><?php echo $Result['Fare']['Currency']; ?> <?php echo $Result['Fare']['PublishedFare']; ?>
+										<div id="flight-price" class="h5"><?php echo $Result['Fare']['Currency']; ?> <?php echo $Result['Fare']['PublishedFare']; ?>
 										<input type="hidden" id="one_way_<?php echo $i; ?>_basefare" value="<?php echo $Result['Fare']['BaseFare']; ?>">
 										<input type="hidden" id="one_way_<?php echo $i; ?>_tax" value="<?php echo $Result['Fare']['Tax']; ?>">
 									</div>
@@ -144,7 +147,7 @@
 				</table>
 			</div>
 			<?php if($JourneyType == '2'){ ?>									
-			<div class="card second_div" id="demo" style="display:none">
+			<div class="card second_div" id="demo" style="display:none;height:500px; overflow:auto;">
 			<table class="table">
 				<thead class="text-center">
 					<tr>
@@ -207,7 +210,7 @@
 								</td>
 								<td>
 									<div class="text-center">
-										<div id="two_way_<?php echo $i; ?>_board_time" style="font-size: 24px;"><?php echo date('H:i', strtotime($Result['Segments'][0][0]['DepTime'])); ?></div>
+										<div id="two_way_<?php echo $i; ?>_board_time" style="font-size: 14px;"><?php echo date('H:i', strtotime($Result['Segments'][0][0]['DepTime'])); ?></div>
 										<div id="two_way_<?php echo $i; ?>_board_city" class="lead"><?php echo $Result['Segments'][0][0]['Origin']['AirportCode']; ?></div>
 										<input type="hidden" id="two_way_<?php echo $i; ?>_board_datetime" value="<?php echo date('D M d Y', strtotime($Result['Segments'][0][0]['DepTime'])); ?>">
 										<input type="hidden" id="two_way_<?php echo $i; ?>_board_airport" value="<?php echo $Result['Segments'][0][0]['Origin']['AirportName']; ?>">
@@ -216,8 +219,8 @@
 								</td>
 								<td>
 									<div class="text-center">
-										<div class="h5 mt-4">
-											<div class="h5 mt-4" id="two_way_<?php echo $i; ?>_duration">
+										<div class="h6 mt-2">
+											<div class="h6 mt-2" id="two_way_<?php echo $i; ?>_duration">
 											<?php
 												$datetime1 = new DateTime($Result['Segments'][0][0]['DepTime']);
 												$datetime2 = new DateTime($Result['Segments'][0][$stopages]['ArrTime']);
@@ -226,12 +229,12 @@
 												echo $elapsed; 
 											 ?>
 											</div>
-										<strong id="flight-type" style="font-size: 12px;"><?php echo $stopage; ?></strong>
+										<strong id="flight-type" style="font-size: 11px;"><?php echo $stopage; ?></strong>
 									</div>
 								</td>
 								<td>
 									<div class="text-center">
-										<div id="two_way_<?php echo $i; ?>_depart_time" style="font-size: 24px;"><?php echo date('H:i', strtotime($Result['Segments'][0][$stopages]['ArrTime'])); ?></div>
+										<div id="two_way_<?php echo $i; ?>_depart_time" style="font-size: 14px;"><?php echo date('H:i', strtotime($Result['Segments'][0][$stopages]['ArrTime'])); ?></div>
 										<div id="two_way_<?php echo $i; ?>_depart_city" class="lead"><?php echo $Result['Segments'][0][$stopages]['Destination']['AirportCode']; ?></div>
 										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_datetime" value="<?php echo date('D M d Y', strtotime($Result['Segments'][0][$stopages]['ArrTime'])); ?>">
 										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_airport" value="<?php echo $Result['Segments'][0][0]['Destination']['AirportName']; ?>">
@@ -240,7 +243,7 @@
 								</td>
 								<td>
 									<div class="text-center mt-4">
-										<div id="flight-price" class="h3"><?php echo $Result['Fare']['Currency']; ?> <?php echo $Result['Fare']['PublishedFare']; ?></div>
+										<div id="flight-price" class="h5"><?php echo $Result['Fare']['Currency']; ?> <?php echo $Result['Fare']['PublishedFare']; ?></div>
 										<input type="hidden" id="two_way_<?php echo $i; ?>_basefare" value="<?php echo $Result['Fare']['BaseFare']; ?>">
 										<input type="hidden" id="two_way_<?php echo $i; ?>_tax" value="<?php echo $Result['Fare']['Tax']; ?>">
 									</div>
