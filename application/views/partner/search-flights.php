@@ -30,6 +30,34 @@
     		.datepicker {
     			z-index:1001 !important;
     		}   
+
+			            /* Dropdown coutner start */
+						span {cursor:pointer; }
+            .number{
+                /* margin:100px; */
+            }
+		.minus, .plus{
+			width:20px;
+			height:20px;
+			/* background:#f2f2f2; */
+			border-radius:4px;
+			/* padding:8px 5px 8px 5px; */
+			border:1px solid #ddd;
+            display: inline-block;
+            /* vertical-align: middle; */
+            text-align: center;
+		}
+		.number input{
+			/* height:34px; */
+            width: 80%;
+            text-align: center;
+            /* font-size: 26px; */
+            border:1px solid #ddd;
+            border-radius:4px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+            /* Dropdown coutner end */
     	</style>
 		<style>
 			/* Center the loader */	
@@ -288,27 +316,49 @@
 											<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="inputDate">Depart</label>
-                                        			<input id="datepicker-from" name="PreferredDepartureTime" class="form-control" placeholder="Select date" > 
+                                        			<input id="datepicker-from" name="PreferredDepartureTime" class="form-control" placeholder="Select date" autocomplete="off" > 
                                         		</div>
                                         	</div>
                                         	<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="inputDate">Return</label>
-                                        			<input id="datepicker-to" class="form-control" placeholder="Select date" >  
+                                        			<input id="datepicker-to" class="form-control" placeholder="Select date" autocomplete="off">  
                                         		</div>
                                         	</div>
 											<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="From">Travellers</label>
-                                        			<select name="AdultCount" id="" class="form-control">
-                                        				<option value="1">1 Passenger</option>
-                                        				<option value="2">2 Passenger</option>
-                                        				<option value="3">3 Passenger</option>
-                                        				<option value="4">More than 3 Passenger</option>
-                                        			</select>
+                                        			<div class="dropdown">
+                                                    <button class="btn btn-secondary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Select
+                                                    </button>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <div class="ml-4">Adults</div>
+                                                            <div class="dropdown-item" href="#"><div class="number">
+                                                                <span class="minus">-</span>
+                                                                <input name="AdultCount" type="text" value="1"/>
+                                                                <span class="plus">+</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ml-4">Child</div>
+                                                            <div class="dropdown-item" href="#"><div class="number">
+                                                                <span class="minus">-</span>
+                                                                <input name="ChildCount" type="text" value="0"/>
+                                                                <span class="plus">+</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ml-4">Infants</div>
+                                                            <div class="dropdown-item" href="#"><div class="number">
+                                                                <span class="minus">-</span>
+                                                                <input name="InfantCount" type="text" value="0"/>
+                                                                <span class="plus">+</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
                                         		</div>
                                         	</div>	
-											<div class="col-md-1" style="margin-top:6px;">
+											<!-- <div class="col-md-1" style="margin-top:6px;">
                                         		<div class="form-group">
                                         			<label for="From"></label>
                                         			<select name="ChildCount" id="" class="form-control">
@@ -319,7 +369,7 @@
                                         				<option value="4">More than 3 Child</option>
                                         			</select>
                                         		</div>
-                                        	</div>	
+                                        	</div>	 -->
 											<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="From">Class</label>
@@ -346,8 +396,8 @@
                             </div>
                             <!-- end:: Content -->				
                         </div>
-						<div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop footer_div_class" id="footer " style="background-color: #e8e3e3; padding: 5px; margin: 0px;
-; display:none!important; position:fixed;width:100%; top:685px;">
+						<div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop footer_div_class" id="footer " style="background-color: #e8e3e3; padding: 25px;/ bottom: 0px !important;x;
+; display:none!important; position:fixed;width:100%; bottom: 0px !important;">
                         <div id="details" class="kt-container  kt-container--fluid ">
 						<div class="col-md-7"></div>
                             <div class="col-md-3">                                
@@ -1363,5 +1413,24 @@
 				});
 
     </script>
+
+<script>
+            	$(document).ready(function() {
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('input');
+				$input.val(parseInt($input.val()) + 1);
+				$input.change();
+				return false;
+			});
+		});
+        </script>
 </body>
 </html>
