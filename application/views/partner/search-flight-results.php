@@ -65,6 +65,9 @@
 							<tr class="<?php if($i == 1){?>highlight <?php } ?> one_way" id="one_way_<?php echo $i; ?>" onclick="getSelectedDiv('one_way', '<?php echo $i?>')">
 								<td>
 									<div class="text-center">
+									<input type="hidden" id="one_way_<?php echo $i; ?>_adult_count" value="<?php echo $AdultCount; ?>" >
+									<input type="hidden" id="one_way_<?php echo $i; ?>_child_count" value="<?php echo $ChildCount; ?>" >
+
 										<input type="hidden" id="one_way_<?php echo $i; ?>_origin" value="<?php echo $Origin; ?>">
 										<input type="hidden" id="one_way_<?php echo $i; ?>_destination" value="<?php echo $Destination; ?>">
 										<input type="hidden" id="one_way_<?php echo $i; ?>_baggage" value="<?php echo $Result['Segments'][0][0]['Baggage']; ?>">
@@ -120,11 +123,14 @@
 											 ?>
 												
 											</div>
+												
 										<strong id="flight-type" style="font-size: 11px;"><?php echo $stopage; ?></strong>
 									</div>
 								</td>
 								<td>
 									<div class="text-center">
+										<input type="hidden" id="one_way_<?php echo $i; ?>_durations" value="<?php echo $elapsed; ?>">
+										<input type="hidden" id="one_way_<?php echo $i; ?>_flight_type" value="<?php echo $stopage; ?>">
 										<div id="one_way_<?php echo $i; ?>_depart_time" style="font-size: 14px;"><?php echo date('H:i', strtotime($Result['Segments'][0][$stopages]['ArrTime'])); ?></div>
 										<div id="one_way_<?php echo $i; ?>_depart_city" class="lead"><?php echo $Result['Segments'][0][$stopages]['Destination']['AirportCode']; ?></div>
 										<input type="hidden" id="one_way_<?php echo $i; ?>_depart_datetime" value="<?php echo date('D M d Y', strtotime($Result['Segments'][0][$stopages]['ArrTime'])); ?>">
@@ -229,11 +235,14 @@
 												echo $elapsed; 
 											 ?>
 											</div>
+											
 										<strong id="flight-type" style="font-size: 11px;"><?php echo $stopage; ?></strong>
 									</div>
 								</td>
 								<td>
 									<div class="text-center">
+									<input type="hidden" id="two_way_<?php echo $i; ?>_durations" value="<?php echo $elapsed; ?>">
+											<input type="hidden" id="two_way_<?php echo $i; ?>_flight_type" value="<?php echo $stopage; ?>">
 										<div id="two_way_<?php echo $i; ?>_depart_time" style="font-size: 14px;"><?php echo date('H:i', strtotime($Result['Segments'][0][$stopages]['ArrTime'])); ?></div>
 										<div id="two_way_<?php echo $i; ?>_depart_city" class="lead"><?php echo $Result['Segments'][0][$stopages]['Destination']['AirportCode']; ?></div>
 										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_datetime" value="<?php echo date('D M d Y', strtotime($Result['Segments'][0][$stopages]['ArrTime'])); ?>">

@@ -30,34 +30,6 @@
     		.datepicker {
     			z-index:1001 !important;
     		}   
-
-			            /* Dropdown coutner start */
-						span {cursor:pointer; }
-            .number{
-                /* margin:100px; */
-            }
-		.minus, .plus{
-			width:20px;
-			height:20px;
-			/* background:#f2f2f2; */
-			border-radius:4px;
-			/* padding:8px 5px 8px 5px; */
-			border:1px solid #ddd;
-            display: inline-block;
-            /* vertical-align: middle; */
-            text-align: center;
-		}
-		.number input{
-			/* height:34px; */
-            width: 80%;
-            text-align: center;
-            /* font-size: 26px; */
-            border:1px solid #ddd;
-            border-radius:4px;
-            display: inline-block;
-            vertical-align: middle;
-        }
-            /* Dropdown coutner end */
     	</style>
 		<style>
 			/* Center the loader */	
@@ -316,49 +288,27 @@
 											<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="inputDate">Depart</label>
-                                        			<input id="datepicker-from" name="PreferredDepartureTime" class="form-control" placeholder="Select date" autocomplete="off" > 
+                                        			<input id="datepicker-from" name="PreferredDepartureTime" class="form-control" placeholder="Select date" > 
                                         		</div>
                                         	</div>
                                         	<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="inputDate">Return</label>
-                                        			<input id="datepicker-to" class="form-control" placeholder="Select date" autocomplete="off">  
+                                        			<input id="datepicker-to" class="form-control" placeholder="Select date" >  
                                         		</div>
                                         	</div>
 											<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="From">Travellers</label>
-                                        			<div class="dropdown">
-                                                    <button class="btn btn-secondary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Select
-                                                    </button>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <div class="ml-4">Adults</div>
-                                                            <div class="dropdown-item" href="#"><div class="number">
-                                                                <span class="minus">-</span>
-                                                                <input name="AdultCount" type="text" value="1"/>
-                                                                <span class="plus">+</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="ml-4">Child</div>
-                                                            <div class="dropdown-item" href="#"><div class="number">
-                                                                <span class="minus">-</span>
-                                                                <input name="ChildCount" type="text" value="0"/>
-                                                                <span class="plus">+</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="ml-4">Infants</div>
-                                                            <div class="dropdown-item" href="#"><div class="number">
-                                                                <span class="minus">-</span>
-                                                                <input name="InfantCount" type="text" value="0"/>
-                                                                <span class="plus">+</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    </div>
+                                        			<select name="AdultCount" id="" class="form-control">
+                                        				<option value="1">1 Passenger</option>
+                                        				<option value="2">2 Passenger</option>
+                                        				<option value="3">3 Passenger</option>
+                                        				<option value="4">More than 3 Passenger</option>
+                                        			</select>
                                         		</div>
                                         	</div>	
-											<!-- <div class="col-md-1" style="margin-top:6px;">
+											<div class="col-md-1" style="margin-top:6px;">
                                         		<div class="form-group">
                                         			<label for="From"></label>
                                         			<select name="ChildCount" id="" class="form-control">
@@ -369,7 +319,7 @@
                                         				<option value="4">More than 3 Child</option>
                                         			</select>
                                         		</div>
-                                        	</div>	 -->
+                                        	</div>	
 											<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="From">Class</label>
@@ -396,8 +346,8 @@
                             </div>
                             <!-- end:: Content -->				
                         </div>
-						<div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop footer_div_class" id="footer " style="background-color: #e8e3e3; padding: 25px;/ bottom: 0px !important;x;
-; display:none!important; position:fixed;width:100%; bottom: 0px !important;">
+						<div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop footer_div_class" id="footer" style="background-color: #e8e3e3; padding: 5px; margin: 0px;
+; display:none!important; position:fixed;width:100%; top:685px;">
                         <div id="details" class="kt-container  kt-container--fluid ">
 						<div class="col-md-7"></div>
                             <div class="col-md-3">                                
@@ -407,7 +357,7 @@
                                         <p class="h3">₹ 2,895</p>
                                         <p></p>
                                     </div> -->
-                                    <div class="row">
+                                    <div class="row" id="footer_div_id">
                                         <button class="btn btn-primary btn-block" id="button_div" >Continue Booking -> </button>
                                     </div>
                                 </div>
@@ -982,8 +932,8 @@
 					<div class="modal-body" id="modal-html">
 					
 					</div>
-					<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal" id="continue_button_id">Continue Booking</button>
+					<div class="modal-footer" id="continue_button_id">
+					<button type="button" class="btn btn-primary" data-dismiss="modal" >Continue Booking</button>
 					</div>
 				</div>
 				</div>
@@ -1189,7 +1139,8 @@
 				var getHighlightRow2 = function() {
 					return $('table > tbody > tr.selected');
 				}
-				
+				adult_count = 0;
+				child_count = 0;
 				$('#button_div').click(function(e) {
 					var template = '';
 					var BaseFare = 0;	
@@ -1197,28 +1148,30 @@
 					var rows = getHighlightRow();
 					if (rows != undefined) {
 					rowid = rows.attr('id')	
-
-					flight_1 = $('#'+rowid+'_origin').val();
+					adult_count = $('#'+rowid+'_adult_count').val();
+					child_count = $('#'+rowid+'_child_count').val();		
+					flight_1 = origin_1 = $('#'+rowid+'_origin').val();
 					flight_1 += ' > ';
-					flight_1 += $('#'+rowid+'_destination').val();
-					flight_name = $('#'+rowid+'_flight_name').text();
-					board_time = $('#'+rowid+'_board_time').text();
-					board_city = $('#'+rowid+'_board_city').text();
-					board_city_name = $('#'+rowid+'_board_city_name').val();
-					board_airport = $('#'+rowid+'_board_airport').val();
-					board_datetime = $('#'+rowid+'_board_datetime').val();
-					duration = $('#'+rowid+'_duration').text();
-					depart_time = $('#'+rowid+'_depart_time').text();
-					depart_city = $('#'+rowid+'_depart_city').text();
-					depart_airport = $('#'+rowid+'_depart_airport').val();
-					depart_datetime = $('#'+rowid+'_depart_datetime').val();
-					depart_city_name = $('#'+rowid+'_depart_city_name').val();
-					baggage = $('#'+rowid+'_baggage').val();
-					cabin_baggage = $('#'+rowid+'_cabin_baggage').val();
+					flight_1 += destination_1 = $('#'+rowid+'_destination').val();
+					flight_type_1 = $('#'+rowid+'_flight_type').val();	
+					flight_name_1 = $('#'+rowid+'_flight_name').text();
+					board_time_1 = $('#'+rowid+'_board_time').text();
+					board_city_1 = $('#'+rowid+'_board_city').text();
+					board_city_name_1 = $('#'+rowid+'_board_city_name').val();
+					board_airport_1 = $('#'+rowid+'_board_airport').val();
+					board_datetime_1 = $('#'+rowid+'_board_datetime').val();
+					duration_1 = $('#'+rowid+'_durations').val();
+					depart_time_1 = $('#'+rowid+'_depart_time').text();
+					depart_city_1 = $('#'+rowid+'_depart_city').text();
+					depart_airport_1 = $('#'+rowid+'_depart_airport').val();
+					depart_datetime_1 = $('#'+rowid+'_depart_datetime').val();
+					depart_city_name_1 = $('#'+rowid+'_depart_city_name').val();
+					baggage_1 = $('#'+rowid+'_baggage').val();
+					cabin_baggage_1 = $('#'+rowid+'_cabin_baggage').val();
 					BaseFare += parseFloat($('#'+rowid+'_basefare').val());
 					tax += parseFloat($('#'+rowid+'_tax').val());
-					flight_img = $('#'+rowid+'_flight').val();	
-					is_refundable = $('#'+rowid+'_is_refundable').val();
+					flight_img_1 = $('#'+rowid+'_flight').val();	
+					is_refundable_1 = $('#'+rowid+'_is_refundable').val();
 
 					card_one = `<div class="card">
 								<div class="card-header">
@@ -1226,25 +1179,25 @@
 								</div>
 								<div class="card-body">
 									<div class="row">
-									    <div class="col-md-12"><img style="height: 50px;" src="`+flight_img+`" /> | `+flight_name+`</div>
-										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+board_time+`</div>
-										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+duration+`</div>
-										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+depart_time+`</div>
+									    <div class="col-md-12"><img style="height: 50px;" src="`+flight_img_1+`" /> | `+flight_name_1+`</div>
+										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+board_time_1+`</div>
+										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+duration_1+`</div>
+										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+depart_time_1+`</div>
 									</div>
 									<div class="row">
 										<div class="col-md-6">
-											`+board_datetime+`
+											`+board_datetime_1+`
 											<br>
-											`+board_city_name+`
+											`+board_city_name_1+`
 											<br>
-											`+board_airport+`
+											`+board_airport_1+`
 										</div>
 										<div class="col-md-6">
-											`+depart_datetime+`
+											`+depart_datetime_1+`
 											<br>
-											`+depart_city_name+`
+											`+depart_city_name_1+`
 											<br>
-											`+depart_airport+`
+											`+depart_airport_1+`
 										</div>
 									</div>
 
@@ -1253,57 +1206,59 @@
 								</div>`;
 					template += card_one	
 					}
+					is_round = 0;
 					var rows2 = getHighlightRow2();
 					if (rows2 != undefined) {
 						rowid2 = rows2.attr('id')	
 						
 						if(rowid2){
-							flight_2 = $('#'+rowid2+'_origin').val();
+							is_round = 1;
+							flight_2 = origin_2 = $('#'+rowid2+'_origin').val();
 							flight_2 += ' > ';
-							flight_2 += $('#'+rowid2+'_destination').val();
-
-							flight_name = $('#'+rowid2+'_flight_name').text();
-							board_time = $('#'+rowid2+'_board_time').text();
-							board_city = $('#'+rowid2+'_board_city').text();
-							board_city_name = $('#'+rowid2+'_board_city_name').val();
-							board_airport = $('#'+rowid2+'_board_airport').val();
-							board_datetime = $('#'+rowid2+'_board_datetime').val();
-							duration = $('#'+rowid2+'_duration').text();
-							depart_time = $('#'+rowid2+'_depart_time').text();
-							depart_city = $('#'+rowid2+'_depart_city').text();
-							depart_airport = $('#'+rowid2+'_depart_airport').val();
-							depart_datetime = $('#'+rowid2+'_depart_datetime').val();
-							depart_city_name = $('#'+rowid2+'_depart_city_name').val();
+							flight_2 += destination_2 = $('#'+rowid2+'_destination').val();
+							flight_type_2 = $('#'+rowid2+'_flight_type').val();	
+							flight_name_2 = $('#'+rowid2+'_flight_name').text();
+							board_time_2 = $('#'+rowid2+'_board_time').text();
+							board_city_2 = $('#'+rowid2+'_board_city').text();
+							board_city_name_2 = $('#'+rowid2+'_board_city_name').val();
+							board_airport_2 = $('#'+rowid2+'_board_airport').val();
+							board_datetime_2 = $('#'+rowid2+'_board_datetime').val();
+							duration_2 = $('#'+rowid2+'_durations').val();
+							depart_time_2 = $('#'+rowid2+'_depart_time').text();
+							depart_city_2 = $('#'+rowid2+'_depart_city').text();
+							depart_airport_2 = $('#'+rowid2+'_depart_airport').val();
+							depart_datetime_2 = $('#'+rowid2+'_depart_datetime').val();
+							depart_city_name_2 = $('#'+rowid2+'_depart_city_name').val();
 							
 							BaseFare += parseFloat($('#'+rowid2+'_basefare').val());
 							tax += parseFloat($('#'+rowid2+'_tax').val());
-							is_refundable = $('#'+rowid2+'_is_refundable').val();
-							flight_img = $('#'+rowid2+'_flight').val();
+							is_refundable_2 = $('#'+rowid2+'_is_refundable').val();
+							flight_img_2 = $('#'+rowid2+'_flight').val();
 							card_two = `<div class="card">
 										<div class="card-header">
 									<h5 class="card-title">`+flight_2+`</h5>
 								</div>
 								<div class="card-body">
 									<div class="row">
-										<div class="col-md-12"><img style="height: 50px;" src="`+flight_img+`" /> | `+flight_name+`</div><br/>
-										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+board_time+`</div>
-										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+duration+`</div>
-										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+depart_time+`</div>
+										<div class="col-md-12"><img style="height: 50px;" src="`+flight_img_2+`" /> | `+flight_name_2+`</div><br/>
+										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+board_time_2+`</div>
+										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+duration_2+`</div>
+										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+depart_time_2+`</div>
 									</div>
 									<div class="row">
 										<div class="col-md-6">
-											`+board_datetime+`
+											`+board_datetime_2+`
 											<br>
-											`+board_city_name+`
+											`+board_city_name_2+`
 											<br>
-											`+board_airport+`
+											`+board_airport_2+`
 										</div>
 										<div class="col-md-6">
-											`+depart_datetime+`
+											`+depart_datetime_2+`
 											<br>
-											`+depart_city_name+`
+											`+depart_city_name_2+`
 											<br>
-											`+depart_airport+`
+											`+depart_airport_2+`
 										</div>
 									</div>
 
@@ -1338,11 +1293,11 @@
 									<div class="row">
 										<div class="col-md-6">
 											Cabin Bag <br>
-											<b>`+cabin_baggage+`</b>
+											<b>`+cabin_baggage_1+`</b>
 										</div>
 										<div class="col-md-6">
 											Check In <br>
-											<b>`+baggage+`</b>
+											<b>`+baggage_1+`</b>
 										</div>
 									</div>
 
@@ -1366,7 +1321,7 @@
 								<div id="collapseTwo" class="panel-collapse collapse">
 									<div class="card-body">
 									Is refundable?
-									<b>`+is_refundable+`</b>
+									<b>`+is_refundable_1+`</b>
 									</div>
 								</div>
 								</div>
@@ -1408,29 +1363,39 @@
 					$('#myModal').modal('show');
 					$('#modal-html').html(template);
 					html = `Continue Booking of Rs. <b>`+sum_of_fare+`/-</b>`;
-					$('#continue_button_id').html(html);
+					if(is_round == 1){
+						button_html = `<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
+'`+is_refundable_1+`','`+is_round+`','`+origin_2+`','`+destination_2+`','`+flight_name_2+`','`+flight_type_2+`','`+board_time_2+`','`+board_city_2+`','`+board_city_name_2+`','`+board_airport_2+`','`+board_datetime_2+`','`+duration_2+`','`+depart_time_2+`','`+depart_city_2+`','`+depart_airport_2+`','`+depart_datetime_2+`','`+depart_city_name_2+`','`+flight_img_2+`','`+BaseFare+`','`+tax+`','`+sum_of_fare+`')" >`+html+`</button>`;
+					$('#continue_button_id').html(button_html);
+					}else{
+						button_html = `<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
+'`+is_refundable_1+`','`+is_round+`','','','','','','','','','','','','','','','','','`+BaseFare+`','`+tax+`','`+sum_of_fare+`')" >`+html+`</button>`;
+					$('#continue_button_id').html(button_html);
+					}
+					
 					
 				});
 
+				function viewFlightDetailsPage(adult_count,child_count,origin_1,destination_1,flight_name_1, flight_type_1,board_time_1,board_city_1,board_city_name_1,board_airport_1,board_datetime_1,duration_1,depart_time_1,depart_city_1,depart_airport_1,depart_datetime_1,depart_city_name_1,baggage_1,cabin_baggage_1,flight_img_1,
+is_refundable_1,is_round,origin_2,destination_2,flight_name_2, flight_type_2,board_time_2,board_city_2,board_city_name_2,board_airport_2,board_datetime_2,duration_2,depart_time_2,depart_city_2,depart_airport_2,depart_datetime_2,depart_city_name_2,flight_img_2,BaseFare,tax,sum_of_fare)
+				{
+					alert(origin_1);
+					var params = { 
+						adult_count : adult_count,child_count : child_count,origin_1 : origin_1 ,destination_1 : destination_1 ,flight_name_1 : flight_name_1,flight_type_1 : flight_type_1 ,board_time_1 : board_time_1 ,board_city_1 : board_city_1 ,board_city_name_1 : board_city_name_1 ,board_airport_1 : board_airport_1 ,board_datetime_1 : board_datetime_1 ,duration_1 : duration_1 ,depart_time_1 : depart_time_1 ,depart_city_1 : depart_city_1 ,depart_airport_1 : depart_airport_1 ,depart_datetime_1 : depart_datetime_1 ,depart_city_name_1 : depart_city_name_1 ,baggage_1 : baggage_1 ,cabin_baggage_1 : cabin_baggage_1 ,flight_img_1 : flight_img_1 ,is_refundable_1 : is_refundable_1 ,is_round : is_round ,origin_2 : origin_2 ,destination_2 : destination_2 ,flight_name_2 : flight_name_2,flight_type_2 : flight_type_2 ,board_time_2 : board_time_2 ,board_city_2 : board_city_2 ,board_city_name_2 : board_city_name_2 ,board_airport_2 : board_airport_2 ,board_datetime_2 : board_datetime_2 ,duration_2 : duration_2 ,depart_time_2 : depart_time_2 ,depart_city_2 : depart_city_2 ,depart_airport_2 : depart_airport_2 ,depart_datetime_2 : depart_datetime_2 ,depart_city_name_2 : depart_city_name_2 ,flight_img_2 : flight_img_2 ,BaseFare : BaseFare ,tax : tax ,sum_of_fare : sum_of_fare 
+					}
+					$('#button_div').hide();
+					$.ajax({
+						url: "<?php echo base_url('flight-travellers-details');?>",
+						type: 'POST',
+						contentType: "application/json",
+						data: JSON.stringify(params),
+						success: function(res) {
+							$('#kt-search-section').html(res); 
+							
+						}
+					});
+				}
+					
     </script>
-
-<script>
-            	$(document).ready(function() {
-			$('.minus').click(function () {
-				var $input = $(this).parent().find('input');
-				var count = parseInt($input.val()) - 1;
-				count = count < 1 ? 1 : count;
-				$input.val(count);
-				$input.change();
-				return false;
-			});
-			$('.plus').click(function () {
-				var $input = $(this).parent().find('input');
-				$input.val(parseInt($input.val()) + 1);
-				$input.change();
-				return false;
-			});
-		});
-        </script>
 </body>
 </html>
