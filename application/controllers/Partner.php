@@ -1594,9 +1594,54 @@ class Partner extends CI_Controller
         $JourneyType = $data['JourneyType'];
         $Origin = $data['Origin'];
         $Destination = $data['Destination'];
+
+        $AdultCount  = $data['AdultCount'];
+        $ChildCount  = $data['ChildCount'];
+
 	    $cities = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
-        $this->load->view("partner/search-flight-results", compact('response', 'data', 'cities', 'JourneyType', 'Origin', 'Destination'));
+        $this->load->view("partner/search-flight-results", compact('response', 'data', 'cities', 'JourneyType', 'Origin', 'Destination', 'AdultCount',  'ChildCount'));
     }
+
+    public function flightFareResults()
+    {
+    	
+    	$data = json_decode(file_get_contents('php://input'), true);
+	    $apiKey = $data['API-Token'];
+	    $url = 'http://partner.thetravelsquare.in/api/FlightFareQuotes';
+	    $ch = curl_init($url);
+	    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+	    curl_setopt($ch, CURLOPT_POST, 1);
+	    $headers = array(
+	        'Content-Type: application/json',
+	        'Accept: application/json',
+	        'API-Token:' .$apiKey
+	    );
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	    $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+        	$response = array();
+        	$response['error'] = curl_error($ch);
+       		$this->response($response, 400);
+        } else {
+            http_response_code(200);
+        }
+	    curl_close($ch);
+	    $response = json_decode($result, true);
+	    echo "<pre>";
+	    print_r($response);
+	    exit;
+        $JourneyType = $data['JourneyType'];
+        $Origin = $data['Origin'];
+        $Destination = $data['Destination'];
+
+        $AdultCount  = $data['AdultCount'];
+        $ChildCount  = $data['ChildCount'];
+
+	    $cities = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
+        $this->load->view("partner/search-flight-results", compact('response', 'data', 'cities', 'JourneyType', 'Origin', 'Destination', 'AdultCount',  'ChildCount'));
+    }
+
     public function flightSearchPost()
     {
         echo 'hi';die;
@@ -1675,6 +1720,11 @@ class Partner extends CI_Controller
 
     function flightTravellersDetails(){
         $this->load->view("partner/flight-traveller-details");
+    }
+
+    function travellersDetails(){
+        $data = json_decode(file_get_contents('php://input'), true);
+        $this->load->view("partner/traveller-details", compact('data'));
     }
 
     function appImageOptions(){
