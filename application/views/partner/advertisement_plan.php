@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0081)https://keenthemes.com/metronic/preview/demo1/custom/pages/pricing/pricing-2.html -->
 <html lang="en">
 	<!-- begin::Head -->
 	<head>

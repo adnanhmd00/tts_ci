@@ -78,7 +78,7 @@ $route['partner-help'] = 'Partner/partnerHelp';
 /*******************BOOKING*******************/
 $route['partner-booking/(:any)'] = 'Partner/booking/$1';
 $route['partner-booking-form'] = 'PartnerBooking/booking_form/';
-
+$route['flight-travellers-details']['POST'] = 'Partner/travellersDetails';
 /*******************BOOKING*******************/
 
 $route['partner-travpay'] = 'Partner/travPay';

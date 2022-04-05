@@ -342,7 +342,23 @@
                                     </div>
                                 </div>
                                 <div id="search_results" ></div>
-
+								<div id="banner" class="row mt-3">
+                                <div class="col-md-4 mb-1">
+                                    <div class="card rounded">
+                                        <img src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive ">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-1">
+                                    <div class="card rounded">
+                                        <img src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/4.png" alt="" class="img-responsive ">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-1">
+                                    <div class="card rounded">
+                                        <img src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/5_Share.png" alt="" class="img-responsive ">
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                             <!-- end:: Content -->				
                         </div>
@@ -937,8 +953,8 @@
 					</div>
 				</div>
 				</div>
-		</div>
-			</div>z
+			</div>
+			</div>
             <!--ENd:: Chat-->
             <?php include('jquery.php');?>
             <div class="daterangepicker ltr show-ranges opensleft">
@@ -1106,7 +1122,7 @@
 		            	data: JSON.stringify(params),
 		            	success: function(res) {
 		            		$('#search_results').html(res); 
-							
+							$('#banner').hide();
 		            		$('.selectpicker').selectpicker('refresh');
 		            		$("#datepicker-from").datepicker({
 					            beforeShow: addCustomInformation,

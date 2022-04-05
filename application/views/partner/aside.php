@@ -1,8 +1,7 @@
-<div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" style="background-color:black;" id="kt_aside">
-                    <!-- begin:: Aside -->
+                <div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" style="background-color:black;" id="kt_aside">
                     <div class="kt-aside__brand kt-grid__item "  style="background-color:black;" id="kt_aside_brand" kt-hidden-height="65" style="">
                         <div class="kt-aside__brand-logo" style="background-color:black;">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/index.html">
+                            <a href="">
                             <img alt="The Travel Square" src="<?= base_url('resource/admin/img/logo.png');?>" width="140" height="55">
                             </a>
                         </div>
@@ -27,17 +26,13 @@
                                     </svg>
                                 </span>
                             </button>
-                            <!--
-                                <button class="kt-aside__brand-aside-toggler kt-aside__brand-aside-toggler--left" id="kt_aside_toggler"><span></span></button>
-                                -->
                         </div>
                     </div>
-                    <!-- end:: Aside -->	<!-- begin:: Aside Menu -->
                     <div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" style="background-color:black;" id="kt_aside_menu_wrapper">
                         <div id="kt_aside_menu" class="kt-aside-menu kt-scroll ps ps--active-y" style="background-color:black;" data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500" style="height: 611px; overflow: hidden;">
                             <ul class="kt-menu__nav " style="background-color:black;">
                                 <li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true">
-                                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html" class="kt-menu__link ">
+                                    <a href="" class="kt-menu__link ">
                                         <span class="kt-menu__link-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
                                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -74,11 +69,11 @@
                                                 <a href="<?= base_url('currency-tracker');?>" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i>
                                                 <span class="kt-menu__link-text">Currency Tracker</span></a>
                                             </li>
-                                            <li class="kt-menu__item " aria-haspopup="true">
+                                            <!-- <li class="kt-menu__item " aria-haspopup="true">
                                                 <a href="seller-bookings-calender.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span>
                                                 </i>
                                                 <span class="kt-menu__link-text">Bookings Calender</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a>
-                                            </li>
+                                            </li> -->
                                         </ul>
                                     </div>
                                 </li>
@@ -131,56 +126,19 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                <li class="kt-menu__item " aria-haspopup="true">
+                                    <a href="<?= base_url('Partner/view_bookings');?>" class="kt-menu__link ">
                                         <span class="kt-menu__link-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
                                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                     <rect x="0" y="0" width="24" height="24"></rect>
-                                                    <path d="M2.56066017,10.6819805 L4.68198052,8.56066017 C5.26776695,7.97487373 6.21751442,7.97487373 6.80330086,8.56066017 L8.9246212,10.6819805 C9.51040764,11.267767 9.51040764,12.2175144 8.9246212,12.8033009 L6.80330086,14.9246212 C6.21751442,15.5104076 5.26776695,15.5104076 4.68198052,14.9246212 L2.56066017,12.8033009 C1.97487373,12.2175144 1.97487373,11.267767 2.56066017,10.6819805 Z M14.5606602,10.6819805 L16.6819805,8.56066017 C17.267767,7.97487373 18.2175144,7.97487373 18.8033009,8.56066017 L20.9246212,10.6819805 C21.5104076,11.267767 21.5104076,12.2175144 20.9246212,12.8033009 L18.8033009,14.9246212 C18.2175144,15.5104076 17.267767,15.5104076 16.6819805,14.9246212 L14.5606602,12.8033009 C13.9748737,12.2175144 13.9748737,11.267767 14.5606602,10.6819805 Z" fill="#000000" opacity="0.3"></path>
-                                                    <path d="M8.56066017,16.6819805 L10.6819805,14.5606602 C11.267767,13.9748737 12.2175144,13.9748737 12.8033009,14.5606602 L14.9246212,16.6819805 C15.5104076,17.267767 15.5104076,18.2175144 14.9246212,18.8033009 L12.8033009,20.9246212 C12.2175144,21.5104076 11.267767,21.5104076 10.6819805,20.9246212 L8.56066017,18.8033009 C7.97487373,18.2175144 7.97487373,17.267767 8.56066017,16.6819805 Z M8.56066017,4.68198052 L10.6819805,2.56066017 C11.267767,1.97487373 12.2175144,1.97487373 12.8033009,2.56066017 L14.9246212,4.68198052 C15.5104076,5.26776695 15.5104076,6.21751442 14.9246212,6.80330086 L12.8033009,8.9246212 C12.2175144,9.51040764 11.267767,9.51040764 10.6819805,8.9246212 L8.56066017,6.80330086 C7.97487373,6.21751442 7.97487373,5.26776695 8.56066017,4.68198052 Z" fill="#000000"></path>
+                                                    <path d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z" fill="#000000"></path>
+                                                    <rect fill="#000000" opacity="0.3" transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519) " x="16.3255682" y="2.94551858" width="3" height="18" rx="1"></rect>
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">Sales & Analytics</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
+                                        <span class="kt-menu__link-text">Bookings</span>
                                     </a>
-                                    <div class="kt-menu__submenu ">
-                                        <span class="kt-menu__arrow"></span>
-                                        <ul class="kt-menu__subnav">
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/layout/subheader/toolbar.html" class="kt-menu__link ">
-                                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Sales Figures</span></a>
-                                            </li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/layout/subheader/actions.html" class="kt-menu__link ">
-                                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Sales Analytics</span></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-                                        <span class="kt-menu__link-icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                    <path d="M7,3 L17,3 C19.209139,3 21,4.790861 21,7 C21,9.209139 19.209139,11 17,11 L7,11 C4.790861,11 3,9.209139 3,7 C3,4.790861 4.790861,3 7,3 Z M7,9 C8.1045695,9 9,8.1045695 9,7 C9,5.8954305 8.1045695,5 7,5 C5.8954305,5 5,5.8954305 5,7 C5,8.1045695 5.8954305,9 7,9 Z" fill="#000000"></path>
-                                                    <path d="M7,13 L17,13 C19.209139,13 21,14.790861 21,17 C21,19.209139 19.209139,21 17,21 L7,21 C4.790861,21 3,19.209139 3,17 C3,14.790861 4.790861,13 7,13 Z M17,19 C18.1045695,19 19,18.1045695 19,17 C19,15.8954305 18.1045695,15 17,15 C15.8954305,15 15,15.8954305 15,17 C15,18.1045695 15.8954305,19 17,19 Z" fill="#000000" opacity="0.3"></path>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span class="kt-menu__link-text">Bookings</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
-                                    </a>
-                                    <div class="kt-menu__submenu ">
-                                        <span class="kt-menu__arrow"></span>
-                                        <ul class="kt-menu__subnav">
-                                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">General</span></span></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('Partner/view_bookings');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">All Bookings</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/layout/general/minimized-aside.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">B2B Enquiry</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/layout/general/no-aside.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">My Requirements</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/layout/general/empty-page.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Empty Page</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/layout/general/fixed-footer.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Fixed Footer</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/layout/general/no-header-menu.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">No Header Menu</span></a></li>
-                                        </ul>
-                                    </div>
                                 </li>
                                 <li class="kt-menu__item " aria-haspopup="true">
                                     <a href="<?= base_url('partner-terminal');?>" class="kt-menu__link ">
@@ -234,17 +192,10 @@
                                                 <a href="<?= base_url('wallet-transactions/accounts');?>" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                 <span class="kt-menu__link-text">All Accounts</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                             </li>
-                                            <!-- <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="SEND PAYMENT" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
-                                                <span class="kt-menu__link-text">Send Payment Reciept</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                                            </li> -->
                                             <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="<?= base_url('client-settlement');?>" class="kt-menu__link kt-menu__toggle">
                                                 <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Claim Settlement</span>
                                                 <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                             </li>
-                                            <!-- <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-                                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Generate Invoice</span>
-                                                <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                                            </li> -->
                                             <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                                 <a href="<?= base_url('all-payment-requests');?>" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
                                                 <span class="kt-menu__link-text">Payment Requests</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
@@ -312,62 +263,6 @@
                                         </span>
                                         <span class="kt-menu__link-text">Purchase Leads</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
-                                    <!-- <div class="kt-menu__submenu ">
-                                        <span class="kt-menu__arrow"></span>
-                                        <ul class="kt-menu__subnav">
-                                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text"></span></span></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/colors.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">State Colors</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/typography.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Typography</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/buttons.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Buttons</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/button-group.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Button Group</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/dropdown.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Dropdown</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/tabs/bootstrap.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Bootstrap Tabs</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/tabs/line.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Line Tabs</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/accordions.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Accordions</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/tables.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Tables</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/progress.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Progress</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/modal.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Modal</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/alerts.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Alerts</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/popover.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Popover</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/base/tooltip.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Tooltip</span></a></li>
-                                        </ul>
-                                    </div> -->
-                                </li>
-                                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                    <a href="<?= base_url('partner/advertisement-plan');?>" class="kt-menu__link kt-menu__toggle">
-                                        <span class="kt-menu__link-icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                    <path d="M3.5,21 L20.5,21 C21.3284271,21 22,20.3284271 22,19.5 L22,8.5 C22,7.67157288 21.3284271,7 20.5,7 L10,7 L7.43933983,4.43933983 C7.15803526,4.15803526 6.77650439,4 6.37867966,4 L3.5,4 C2.67157288,4 2,4.67157288 2,5.5 L2,19.5 C2,20.3284271 2.67157288,21 3.5,21 Z" fill="#000000" opacity="0.3"></path>
-                                                    <polygon fill="#000000" opacity="0.3" points="4 19 10 11 16 19"></polygon>
-                                                    <polygon fill="#000000" points="11 19 15 14 19 19"></polygon>
-                                                    <path d="M18,12 C18.8284271,12 19.5,11.3284271 19.5,10.5 C19.5,9.67157288 18.8284271,9 18,9 C17.1715729,9 16.5,9.67157288 16.5,10.5 C16.5,11.3284271 17.1715729,12 18,12 Z" fill="#000000" opacity="0.3"></path>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span class="kt-menu__link-text">Advertise With Us</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
-                                    </a>
-                                    <!-- <div class="kt-menu__submenu ">
-                                        <span class="kt-menu__arrow"></span>
-                                        <ul class="kt-menu__subnav">
-                                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Custom</span></span></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/custom/badge.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Badge</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/custom/navs.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Navigations</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/custom/lists.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Lists</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/custom/notes.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Notes</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/custom/timeline.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Timeline</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/custom/pagination.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Pagination</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/custom/media.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Media</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/custom/spinners.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Spinners</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/custom/iconbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Iconbox</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/custom/infobox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Infobox</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/custom/callout.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Callout</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/custom/ribbon.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Ribbons</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/custom/miscellaneous.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Miscellaneous</span></a></li>
-                                        </ul>
-                                    </div> -->
-                                </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                     <a href="<?= base_url('partner-ppc');?>" class="kt-menu__link kt-menu__toggle">
                                         <span class="kt-menu__link-icon">
@@ -381,22 +276,6 @@
                                         </span>
                                         <span class="kt-menu__link-text">PPC Campaign</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
-                                    <!-- <div class="kt-menu__submenu ">
-                                        <span class="kt-menu__arrow"></span>
-                                        <ul class="kt-menu__subnav">
-                                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Extended</span></span></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/extended/kanban-board.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Kanban Board</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/extended/sticky-panels.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Sticky Panels</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/extended/blockui.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Block UI</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/extended/perfect-scrollbar.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Perfect Scrollbar</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/extended/treeview.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Tree View</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/extended/bootstrap-notify.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Bootstrap Notify</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/extended/toastr.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Toastr</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/extended/sweetalert2.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">SweetAlert2</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/extended/dual-listbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Dual Listbox</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/extended/cropper.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Image Cropper</span></a></li>
-                                        </ul>
-                                    </div> -->
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                     <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
@@ -418,9 +297,6 @@
                                         <ul class="kt-menu__subnav">
                                             <li class="kt-menu__item " target="_blank" aria-haspopup="true"><a href="<?= base_url('partner/add-blogs');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Write Blogs </span></a></li>
                                             <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('show-blogs');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">View All Blogs</span></a></li>
-                                            <!-- <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/icons/lineawesome.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Write a New Blog</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/icons/socicons.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Socicons</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/icons/svg.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">SVG Icons</span></a></li> -->
                                         </ul>
                                     </div>
                                 </li>
@@ -437,18 +313,6 @@
                                         </span>
                                         <span class="kt-menu__link-text">Learn How to Sell</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
-                                    <!-- <div class="kt-menu__submenu ">
-                                        <span class="kt-menu__arrow"></span>
-                                        <ul class="kt-menu__subnav">
-                                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Portlets</span></span></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/portlets/base.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Base Portlets</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/portlets/advanced.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Advanced Portlets</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/portlets/tabbed.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Tabbed Portlets</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/portlets/draggable.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Draggable Portlets</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/portlets/tools.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Portlet Tools</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/portlets/sticky-head.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Sticky Head</span></a></li>
-                                        </ul>
-                                    </div> -->
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                     <a href="<?= base_url('partner-help');?>" class="kt-menu__link kt-menu__toggle">
@@ -464,14 +328,6 @@
                                         </span>
                                         <span class="kt-menu__link-text">Seller Help</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
-                                    <!-- <div class="kt-menu__submenu ">
-                                        <span class="kt-menu__arrow"></span>
-                                        <ul class="kt-menu__subnav">
-                                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Utils</span></span></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/utils/session-timeout.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Session Timeout</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/components/utils/idle-timer.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Idle Timer</span></a></li>
-                                        </ul>
-                                    </div> -->
                                 </li>
                             </ul>
                             <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
