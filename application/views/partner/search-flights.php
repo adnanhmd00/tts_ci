@@ -362,8 +362,8 @@
                             </div>
                             <!-- end:: Content -->				
                         </div>
-						<div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop footer_div_class" id="footer" style="background-color: #e8e3e3; padding: 5px; margin: 0px;
-; display:none!important; position:fixed;width:100%; top:685px;">
+						<div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop footer_div_class" id="footer" style="background-color: #e8e3e3; padding: 15px; margin: 0px;
+; display:none!important; position:fixed;width:100%; bottom: 0px;">
                         <div id="details" class="kt-container  kt-container--fluid ">
 						<div class="col-md-7"></div>
                             <div class="col-md-3">                                
