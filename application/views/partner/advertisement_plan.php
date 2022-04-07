@@ -51,8 +51,8 @@
 		<!-- begin:: Header Mobile -->
 		<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
 			<div class="kt-header-mobile__logo">
-				<a href="https://keenthemes.com/metronic/preview/demo1/index.html">
-				<img alt="Logo" src="./file/logo-light.png">
+				<a href="http://partner.thetravelsquare.in/">
+				<img alt="Logo" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
 				</a>
 			</div>
 			<div class="kt-header-mobile__toolbar">
@@ -76,7 +76,7 @@
 						<div id="kt_aside_menu" class="kt-aside-menu kt-scroll ps ps--active-y" data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500" style="height: 611px; overflow: hidden;">
 							<ul class="kt-menu__nav ">
 								<li class="kt-menu__item " aria-haspopup="true">
-									<a href="https://keenthemes.com/metronic/preview/demo1/index.html" class="kt-menu__link ">
+									<a href="http://partner.thetravelsquare.in/" class="kt-menu__link ">
 										<span class="kt-menu__link-icon">
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
 												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -126,7 +126,7 @@
 															<div class="kt-menu__submenu ">
 																<span class="kt-menu__arrow"></span>
 																<ul class="kt-menu__subnav">
-																	<li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/user/profile-1/overview.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Overview</span></a></li>
+																	<li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Overview</span></a></li>
 																	<li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/user/profile-1/personal-information.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Personal Information</span></a></li>
 																	<li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/user/profile-1/account-information.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Account Information</span></a></li>
 																	<li class="kt-menu__item " aria-haspopup="true"><a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/user/profile-1/change-password.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Change Password</span></a></li>
@@ -1594,7 +1594,7 @@
 				<a href="#
 			</li>
 			<li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
-				<a href="https://keenthemes.com/metronic/?page=docs" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+				<a href="#" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
 			</li>
 			<li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Example">
 				<a href="https://keenthemes.com/metronic/preview/demo1/custom/pages/pricing/pricing-2.html#" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>

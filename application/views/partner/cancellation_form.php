@@ -12,7 +12,7 @@
         <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
             <div class="kt-header-mobile__logo">
                 <a href="">
-                <img alt="The Travel Square" src="./files/logo-light.png">
+                <img alt="The Travel Square" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
                 </a>
             </div>
             <div class="kt-header-mobile__toolbar">
@@ -104,7 +104,7 @@
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
                                     <form>
                                         <!--begin: Head -->
-                                        <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(/metronic/themes/metronic/theme/default/demo1/dist/assets/media/misc/bg-1.jpg)">
+                                        <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png)">
                                             <h3 class="kt-head__title">
                                                 User Notifications
                                                 &nbsp;
@@ -514,7 +514,7 @@
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
                                     <form>
                                         <!--begin: Head -->
-                                        <div class="kt-head kt-head--skin-dark" style="background-image: url(/metronic/themes/metronic/theme/default/demo1/dist/assets/media/misc/bg-1.jpg)">
+                                        <div class="kt-head kt-head--skin-dark" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png)">
                                             <h3 class="kt-head__title">
                                                 User Quick Actions
                                                 <span class="kt-space-15"></span>
@@ -603,7 +603,7 @@
                                     <form>
                                         <!-- begin:: Mycart -->
                                         <div class="kt-mycart">
-                                            <div class="kt-mycart__head kt-head" style="background-image: url(/metronic/themes/metronic/theme/default/demo1/dist/assets/media/misc/bg-1.jpg);">
+                                            <div class="kt-mycart__head kt-head" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png);">
                                                 <div class="kt-mycart__info">
                                                     <span class="kt-mycart__icon"><i class="flaticon2-shopping-cart-1 kt-font-success"></i></span>
                                                     <h3 class="kt-mycart__title">My Cart</h3>
@@ -757,18 +757,8 @@
                                             <span class="kt-nav__link-text">English</span>
                                             </a>
                                         </li>
-                                        <li class="kt-nav__item">
-                                            <a href="#" class="kt-nav__link">
-                                            <span class="kt-nav__link-icon"><img src="./files/128-spain.svg" alt=""></span>
-                                            <span class="kt-nav__link-text">Spanish</span>
-                                            </a>
-                                        </li>
-                                        <li class="kt-nav__item">
-                                            <a href="#" class="kt-nav__link">
-                                            <span class="kt-nav__link-icon"><img src="./files/162-germany.svg" alt=""></span>
-                                            <span class="kt-nav__link-text">German</span>
-                                            </a>
-                                        </li>
+                                        
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -785,7 +775,7 @@
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
                                     <!--begin: Head -->
-                                    <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(/metronic/themes/metronic/theme/default/demo1/dist/assets/media/misc/bg-1.jpg)">
+                                    <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png)">
                                         <div class="kt-user-card__avatar">
                                             <img class="kt-hidden" alt="Pic" src="./files/300_25.jpg">
                                             <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
@@ -853,7 +843,7 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/user/profile-1/overview.html" class="kt-notification__item">
+                                        <a href="#" class="kt-notification__item">
                                             <div class="kt-notification__item-icon">
                                                 <i class="flaticon2-cardiogram kt-font-warning"></i>
                                             </div>
@@ -868,7 +858,7 @@
                                         </a>
                                         <div class="kt-notification__custom kt-space-between">
                                             <a href="<?= base_url('Partner/logout');?>" target="_blank" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</a>
-                                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/user/login-v2.html" target="_blank" class="btn btn-clean btn-sm btn-bold">Upgrade Plan</a>
+                                            <a href="" target="_blank" class="btn btn-clean btn-sm btn-bold">Upgrade Plan</a>
                                         </div>
                                     </div>
                                     <!--end: Navigation -->
@@ -1490,7 +1480,7 @@
                 <a href="#
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
-                <a href="https://keenthemes.com/metronic/?page=docs" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+                <a href="#" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Example">
                 <a href="#" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>

@@ -38,7 +38,7 @@
 					<div class="kt-grid__item">
 						<div class="kt-login__info">
 							<div class="kt-login__copyright">
-								© 2020 The Travel Square
+								© 2022 The Travel Square
 							</div>
 							<div class="kt-login__menu">
 								<a href="http://business.thetravelsquare.in/contact" class="kt-link">Partner Help</a>
@@ -105,16 +105,16 @@
 
 							<!--begin::Options-->
 							<div class="kt-login__options">
-								<a href="https://keenthemes.com/metronic/preview/demo8/custom/pages/user/login-1.html#"
+								<a href="https://sellerconsle.thetravelsquare.in"
 									class="btn btn-primary kt-btn">
 									<i class="fab fa-facebook-f"></i>
-									Facebook
+									Seller Login
 								</a>
 
-								<a href="https://keenthemes.com/metronic/preview/demo8/custom/pages/user/login-1.html#"
+								<a href="https://propertymanager.thetravelsquare.in/"
 									class="btn btn-danger kt-btn">
 									<i class="fab fa-google"></i>
-									Google
+									Hotellier Login
 								</a>
 							</div>
 							<!--end::Options-->

@@ -28,6 +28,10 @@ class Partner extends CI_Controller
         $this->load->view('partner/index', compact('userinfo'));
     }
 
+    public function comingSoon(){
+        $this->load->view('coming-soon');
+    }
+    
     public function logout()
     {
         $this->session->unset_userdata('partner');

@@ -169,7 +169,7 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">TravPAY </span><i class="kt-menu__ver-arrow la la-angle-right"></i>
+                                        <span class="kt-menu__link-text">TravPAY Wallet</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">

@@ -134,7 +134,7 @@
         <!-- begin:: Header Mobile -->
         <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
             <div class="kt-header-mobile__logo">
-                <a href="https://keenthemes.com/metronic/preview/demo1/index.html">
+                <a href="http://partner.thetravelsquare.in/">
                 <img alt="The Travel Square" src="./img/the-travel-square-logo-small.png">
                 </a>
             </div>

@@ -12,7 +12,7 @@
         <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
             <div class="kt-header-mobile__logo">
                 <a href="">
-                <img alt="The Travel Square" src="./files/logo-light.png">
+                <img alt="The Travel Square" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
                 </a>
             </div>
             <div class="kt-header-mobile__toolbar">
@@ -104,7 +104,7 @@
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
                                     <form>
                                         <!--begin: Head -->
-                                        <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(/metronic/themes/metronic/theme/default/demo1/dist/assets/media/misc/bg-1.jpg)">
+                                        <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png)">
                                             <h3 class="kt-head__title">
                                                 User Notifications
                                                 &nbsp;
@@ -514,7 +514,7 @@
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
                                     <form>
                                         <!--begin: Head -->
-                                        <div class="kt-head kt-head--skin-dark" style="background-image: url(/metronic/themes/metronic/theme/default/demo1/dist/assets/media/misc/bg-1.jpg)">
+                                        <div class="kt-head kt-head--skin-dark" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png)">
                                             <h3 class="kt-head__title">
                                                 User Quick Actions
                                                 <span class="kt-space-15"></span>
@@ -603,7 +603,7 @@
                                     <form>
                                         <!-- begin:: Mycart -->
                                         <div class="kt-mycart">
-                                            <div class="kt-mycart__head kt-head" style="background-image: url(/metronic/themes/metronic/theme/default/demo1/dist/assets/media/misc/bg-1.jpg);">
+                                            <div class="kt-mycart__head kt-head" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png);">
                                                 <div class="kt-mycart__info">
                                                     <span class="kt-mycart__icon"><i class="flaticon2-shopping-cart-1 kt-font-success"></i></span>
                                                     <h3 class="kt-mycart__title">My Cart</h3>
@@ -757,18 +757,8 @@
                                             <span class="kt-nav__link-text">English</span>
                                             </a>
                                         </li>
-                                        <li class="kt-nav__item">
-                                            <a href="#" class="kt-nav__link">
-                                            <span class="kt-nav__link-icon"><img src="./files/128-spain.svg" alt=""></span>
-                                            <span class="kt-nav__link-text">Spanish</span>
-                                            </a>
-                                        </li>
-                                        <li class="kt-nav__item">
-                                            <a href="#" class="kt-nav__link">
-                                            <span class="kt-nav__link-icon"><img src="./files/162-germany.svg" alt=""></span>
-                                            <span class="kt-nav__link-text">German</span>
-                                            </a>
-                                        </li>
+                                        
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -785,7 +775,7 @@
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
                                     <!--begin: Head -->
-                                    <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(/metronic/themes/metronic/theme/default/demo1/dist/assets/media/misc/bg-1.jpg)">
+                                    <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png)">
                                         <div class="kt-user-card__avatar">
                                             <img class="kt-hidden" alt="Pic" src="./files/300_25.jpg">
                                             <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
@@ -853,7 +843,7 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/user/profile-1/overview.html" class="kt-notification__item">
+                                        <a href="#" class="kt-notification__item">
                                             <div class="kt-notification__item-icon">
                                                 <i class="flaticon2-cardiogram kt-font-warning"></i>
                                             </div>
@@ -868,7 +858,7 @@
                                         </a>
                                         <div class="kt-notification__custom kt-space-between">
                                             <a href="<?= base_url('Partner/logout');?>" target="_blank" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</a>
-                                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/user/login-v2.html" target="_blank" class="btn btn-clean btn-sm btn-bold">Upgrade Plan</a>
+                                            <a href="" target="_blank" class="btn btn-clean btn-sm btn-bold">Upgrade Plan</a>
                                         </div>
                                     </div>
                                     <!--end: Navigation -->
@@ -1472,7 +1462,7 @@
                 <a href="#
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
-                <a href="https://keenthemes.com/metronic/?page=docs" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+                <a href="#" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Example">
                 <a href="#" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
@@ -1480,368 +1470,7 @@
         </ul>
         <!-- end::Sticky Toolbar -->
         <!-- begin::Demo Panel -->
-        <div id="kt_demo_panel" class="kt-demo-panel">
-            <div class="kt-demo-panel__head" kt-hidden-height="50" style="">
-                <h3 class="kt-demo-panel__title">
-                    Select A Demo
-                    <!--<small>5</small>-->
-                </h3>
-                <a href="#" class="kt-demo-panel__close" id="kt_demo_panel_close"><i class="flaticon2-delete"></i></a>
-            </div>
-            <div class="kt-demo-panel__body kt-scroll ps ps--active-y" style="height: 553px; overflow: hidden;">
-                <div class="kt-demo-panel__item kt-demo-panel__item--active">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 1
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo1.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 2
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo2.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com#" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo2/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 3
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo3.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo3/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo3/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 4
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo4.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo4/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo4/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 5
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo5.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo5/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo5/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 6
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo6.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo6/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo6/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 7
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo7.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo7/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo7/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 8
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo8.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo8/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo8/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 9
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo9.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo9/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo9/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 10
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo10.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo10/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo10/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 11
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo11.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo11/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo11/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 12
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo12.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="https://keenthemes.com/metronic/preview/demo12/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                            <a href="https://keenthemes.com/metronic/preview/demo12/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 13
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo13.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 14
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo14.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 15
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo15.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 16
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo16.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 17
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo17.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 18
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo18.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 19
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo19.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 20
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo20.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 21
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo21.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 22
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo22.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 23
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo23.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 24
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo24.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 25
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo25.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 26
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo26.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 27
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo27.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 28
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo28.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 29
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo29.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-demo-panel__item ">
-                    <div class="kt-demo-panel__item-title">
-                        Demo 30
-                    </div>
-                    <div class="kt-demo-panel__item-preview">
-                        <img src="./files/demo30.jpg" alt="">
-                        <div class="kt-demo-panel__item-preview-overlay">
-                            <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="https://1.envato.market/EA4JP" target="_blank" class="kt-demo-panel__purchase btn btn-brand btn-elevate btn-bold btn-upper">
-                Buy Metronic Now!
-                </a>
-                <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-                    <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-                </div>
-                <div class="ps__rail-y" style="top: 0px; height: 553px; right: 0px;">
-                    <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 40px;"></div>
-                </div>
-            </div>
-        </div>
+        
         <!-- end::Demo Panel -->
         <!--Begin:: Chat-->
         

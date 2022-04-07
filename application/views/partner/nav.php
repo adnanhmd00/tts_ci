@@ -19,7 +19,7 @@
                     </a>
                 </li>
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                    <a href="#" class="kt-menu__link kt-menu__toggle">
                         <span class="kt-menu__link-icon">
                             
                         </span>
@@ -27,7 +27,7 @@
                     </a>
                 </li>
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                    <a href="#" class="kt-menu__link kt-menu__toggle">
                         <span class="kt-menu__link-icon">
                             
                         </span>

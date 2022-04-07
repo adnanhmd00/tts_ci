@@ -3,11 +3,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Free minimal portfolio web site template,minmal portfolio,porfolio,bootstrap template,html template,photography " />
-    <title>Travel Square</title>
+    
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,400,600,700,800,900&display=swap" rel="stylesheet">
     <!-- build:css -->
     <link rel="stylesheet" href="<?= base_url('resource/extrapage/vendor/css/line-awesome.css');?>">
@@ -30,33 +26,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul class="navbar-nav">
-                        <!-- <li class="nav-item swap-link"> <a href="<?= base_url('partner');?>" class="nav-link">Go To Dashboard</a> </li> -->
-                        <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Pages</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="search-page.html">Result grid</a>
-                                <a class="dropdown-item" href="search-page-list.html">Resulst list</a>
-                                <a class="dropdown-item" href="single-product.html">Single item</a>
-                                <a class="dropdown-item" href="dashboard.html">Dashboard</a>
-                                <a class="dropdown-item" href="cart.html">Cart</a>
-                                <a class="dropdown-item" href="pricing.html">Pricing</a>
-                                <a class="dropdown-item" href="faq.html">Faq</a>
-                                <a class="dropdown-item" href="contact.html">Contact</a>
-                                <a class="dropdown-item" href="signup.html">Sign up</a>
-                                <a class="dropdown-item" href="author-signup.html">Author Sign-Up</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="documentation.html"><i class="las la-file-code bg-danger-alt text-danger p-1 rounded"></i> Documentation</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Blog</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item swap-link" href="blog-2.html">Blog V.1</a>
-                                <a class="dropdown-item swap-link" href="blog.html">Blog V.2</a>
-                                <a class="dropdown-item swap-link" href="blog-post.html">Blog post</a>
-                            </div>
-                        </li>
-                        <li class="nav-item swap-link"> <a href="pricing.html" class="nav-link">Unlimited Access</a> </li> -->
+                       
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown megamenu">
@@ -67,22 +37,13 @@
                                 <!-- <a class="dropdown-item swap-link" href="dash-downloads.html"><i class="las la-cloud-download-alt bg-success-alt text-success p-1 rounded"></i> Downloads</a> -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item swap-link" href="<?= base_url('partner');?>"><i class="dropdown-icon"></i> Dashboard</a>
-                                <!-- <a class="dropdown-item swap-link" href="dash-my-items.html"><i class="dropdown-icon"></i> My Items</a>
-                                <a class="dropdown-item swap-link" href="dash-settings.html"><i class="dropdown-icon"></i> Settings
-                                    <span class="badge badge-soft-success ml-2">25 New</span></a>
-                                <a class="dropdown-item swap-link" href="dash-invoice.html"><i class="dropdown-icon"></i> Invoice</a> -->
+                               
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item swap-link" href="<?= base_url('Partner/logout');?>"><i class="las la-sign-out-alt bg-danger-alt text-danger p-1 rounded"></i> Logout</a>
                             </div>
                         </li>
                         <li class="nav-item d-flex align-items-center">
-                        <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle no-arrow btn btn-primary swap-link text-white" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Sign up</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item swap-link" href="signup.html">Signup</a>
-                                <a class="dropdown-item swap-link" href="author-signup.html">Author signup</a>
-                            </div>
-                        </li> -->
+                        
                         </li>
                     </ul>
                 </div>
@@ -105,21 +66,7 @@
                                 </ol>
                             </nav>
                         </div>
-                        <!-- <div class="header-actions">
-                            <button class="btn btn-ghost grey-dark font-weight-bold">
-                                <i class="las la-share-alt"></i>
-                                <span>Share</span>
-                            </button>
-                            <button class="btn btn-ghost grey-dark like-button font-weight-bold">
-                                <i class="las la-hand-holding-heart"></i>
-                                <span>150 Likes</span>
-                            </button>
-                            <button class="btn btn-ghost grey-dark font-weight-bold">
-                                <i class="las la-bookmark"></i>
-                                <span><span>Save for Later</span></span>
-                            </button>
-
-                        </div> -->
+                        
                     </div>
                 </div>
             </div>
@@ -145,25 +92,7 @@
                                 </div>
                                 <?php }?>
                             </div>
-                            <!-- <div class="demo-bar card rounded mt-3 card px-3 text-sm-center">
-                                <div class="row d-flex justify-content-between justify-content-md-center align-items-center my-3">
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                                        <a href="#" class="btn btn-success-alt btn-block">Live Preview<i class="las la-desktop ml-2"></i></a>
-                                    </div>
-
-                                    <div class="col-sm-12 col-md-12 col-lg-4">
-                                        <p class="m-0 text-lg-right text-md-right text-md-center">Spread the word and earn !</p>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-4">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Send link to somene" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                                            <div class="input-group-append">
-                                                <button class="btn btn-success-alt text-success" type="button">Send <i class="las la-envelope"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
+                            
                             <div class="demo-bar card rounded mt-3 card px-3">
                                 <h2>Destination : <?= $data['deal_data']->destination;?></h2>
                                 <h2>Details</h2>
@@ -180,35 +109,12 @@
                                 <div class="sidebar-widget">
                                     <h3 class="mb-4"><?= $data['deal_data']->title;?></h3>
                                     <div class="row d-flex justify-content-between align-items-center">
-                                        <!-- <div class="col-md-8">
-                                            <div class="form-group">
-                                                <select id="inputState" class="form-control">
-                                                    <option selected="">Regular licence</option>
-                                                    <option>Extended licence</option>
-                                                </select>
-                                            </div>
-                                        </div> -->
-
-                                        <!-- <div class="col-md-4">
-                                            <div class="form-group text-md-right text-sm-center">
-                                                <h2 class="item-widget-price">$28</h2>
-                                            </div>
-                                        </div> -->
+                                       
                                     </div>
                                     <div class="row d-flex justify-content-between align-items-center">
                                         <div class="col-12">
                                             <h6>Valid Until : <?= $data['deal_data']->valid_untill;?></h6>
-                                            <!-- <div class="custom-control custom-radio mt-3 mb-2 d-flex justify-content-between align-items-center">
-                                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" />
-                                                <label class="custom-control-label" for="customRadio1">Install Theme</label>
-                                                <div class="label-price">$15</div>
-
-                                            </div>
-                                            <div class="custom-control custom-radio mb-4 d-flex justify-content-between align-items-center">
-                                                <input type="radio" checked="" id="customRadio2" name="customRadio" class="custom-control-input" />
-                                                <label class="custom-control-label" for="customRadio2">+1 year Support</label>
-                                                <div class="label-price">$49</div>
-                                            </div> -->
+                                           
                                         </div>
                                     </div>
                                     <?php if(empty($data['quote_if_exist'])){?>
@@ -233,28 +139,7 @@
                                 <div class="sidebar-widget">
                                     <div class="row">
                                         <div class="col-12">
-                                            <!-- <span class="sidebar-widget-title--sm">Compatible with</span> -->
-                                            <!-- FULL COMPATIBILITY -->
-                                            <!-- <div class="compatibility d-flex">
-                                                <div class="col-2 p-0 text-center">
-                                                    <img src="assets/img/icons/photoshop.svg" alt="PS" width="#" title="Adobe After Effects" height="22px" />
-                                                </div>
-                                                <div class="col-2 p-0 text-center">
-                                                    <img src="assets/img/icons/ae-icon.svg" alt="Ae" width="#" title="Adobe After Effects" height="25px" />
-                                                </div>
-                                                <div class="col-2 p-0 text-center">
-                                                    <img src="assets/img/icons/xd-icon.svg" alt="Xd" title="#" width="25px" height="25px" />
-                                                </div>
-                                                <div class="col-2 p-0 text-center">
-                                                    <img src="assets/img/icons/sketch-icon.svg" alt="Sketch" title="#" width="25px" height="25px" />
-                                                </div>
-                                                <div class="col-2 p-0 text-center">
-                                                    <img src="assets/img/icons/figma-icon.svg" alt="#" title="Figma" width="25px" height="25px" />
-                                                </div>
-                                                <div class="col-2 p-0 text-center">
-                                                    <img src="assets/img/icons/ai-icon.svg" alt="Ai" title="#" width="25px" height="25px" />
-                                                </div>
-                                            </div> -->
+                                            
                                             <?php if(!empty($data['deal_inclusion'])) {?>
 
                                             <span class="sidebar-widget-title--sm">Inclusion</span>
@@ -263,9 +148,7 @@
                                                 <?php foreach($data['deal_inclusion'] as $row){ ?>
 
                                                     <a href="#" class="badge badge-soft-success text-success mb-1"><?= $row->inclusion;?></a>
-                                                    <!-- <a href="#" class="badge badge-soft-success text-success mb-1">Bootstrap</a>
-                                                    <a href="#" class="badge badge-soft-success text-success mb-1">WordPress</a>
-                                                    <a href="#" class="badge badge-soft-success text-success mb-1">Digital</a> -->
+                                                    
                                                 <?php }?>
                                             </div>
                                             <hr />

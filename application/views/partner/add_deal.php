@@ -7,8 +7,8 @@
     <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed" style="">
         <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
             <div class="kt-header-mobile__logo">
-                <a href="">
-                <img alt="The Travel Square" src="./files/logo-light.png">
+                <a href="http://partner.thetravelsquare.in/">
+                <img alt="The Travel Square Logo" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
                 </a>
             </div>
             <div class="kt-header-mobile__toolbar">

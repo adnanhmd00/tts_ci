@@ -7,7 +7,7 @@
 		<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
 			<div class="kt-header-mobile__logo">
 				<a href="">
-				<img alt="Logo" src="./file/logo-light.png">
+				<img alt="Logo" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
 				</a>
 			</div>
 			<div class="kt-header-mobile__toolbar">

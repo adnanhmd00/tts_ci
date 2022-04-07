@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0076)https://keenthemes.com/metronic/preview/demo1/components/custom/callout.html -->
+
 <html lang="en">
     <!-- begin::Head -->
     <head>
@@ -12,8 +12,8 @@
         <!-- begin:: Header Mobile -->
         <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
             <div class="kt-header-mobile__logo">
-                <a href="https://keenthemes.com/metronic/preview/demo1/index.html">
-                <img alt="Logo" src="./file/logo-light.png">
+                <a href="http://partner.thetravelsquare.in/">
+                <img alt="Logo" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
                 </a>
             </div>
             <div class="kt-header-mobile__toolbar">
@@ -250,12 +250,14 @@
                     <div class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" id="kt_footer">
                         <div class="kt-container  kt-container--fluid ">
                             <div class="kt-footer__copyright">
-                                2020&nbsp;©&nbsp;<a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Keenthemes</a>
+                                2021&nbsp;©&nbsp;<a href="http://partner.thetravelsquare.in/" target="_blank" class="kt-link">The Travel Square</a>
+                                
                             </div>
                             <div class="kt-footer__menu">
-                                <a href="http://keenthemes.com/metronic" target="_blank" class="kt-footer__menu-link kt-link">About</a>
-                                <a href="http://keenthemes.com/metronic" target="_blank" class="kt-footer__menu-link kt-link">Team</a>
-                                <a href="http://keenthemes.com/metronic" target="_blank" class="kt-footer__menu-link kt-link">Contact</a>
+                                
+                                <a href="http://about.thetravelsquare.in/" target="_blank" class="kt-footer__menu-link kt-link">About</a>
+                                <a href="http://team.thetravelsquare.in/" target="_blank" class="kt-footer__menu-link kt-link">Team</a>
+                                <a href="https://support.thetravelsquare.in/contactus" target="_blank" class="kt-footer__menu-link kt-link">Contact</a>
                             </div>
                         </div>
                     </div>
@@ -694,7 +696,7 @@
                 <a href="#
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
-                <a href="https://keenthemes.com/metronic/?page=docs" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+                <a href="#" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Example">
                 <a href="#" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>

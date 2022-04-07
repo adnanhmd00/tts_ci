@@ -342,28 +342,12 @@
                                     </div>
                                 </div>
                                 <div id="search_results" ></div>
-								<div id="banner" class="row mt-3">
-                                <div class="col-md-4 mb-1">
-                                    <div class="card rounded">
-                                        <img src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive ">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-1">
-                                    <div class="card rounded">
-                                        <img src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/4.png" alt="" class="img-responsive ">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-1">
-                                    <div class="card rounded">
-                                        <img src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/5_Share.png" alt="" class="img-responsive ">
-                                    </div>
-                                </div>
-                            </div>
+
                             </div>
                             <!-- end:: Content -->				
                         </div>
-						<div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop footer_div_class" id="footer" style="background-color: #e8e3e3; padding: 15px; margin: 0px;
-; display:none!important; position:fixed;width:100%; bottom: 0px;">
+						<div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop footer_div_class" id="footer" style="background-color: #e8e3e3; padding: 5px; margin: 0px;
+; display:none!important; position:fixed;width:100%; top:685px;">
                         <div id="details" class="kt-container  kt-container--fluid ">
 						<div class="col-md-7"></div>
                             <div class="col-md-3">                                
@@ -953,8 +937,8 @@
 					</div>
 				</div>
 				</div>
-			</div>
-			</div>
+		</div>
+			</div>z
             <!--ENd:: Chat-->
             <?php include('jquery.php');?>
             <div class="daterangepicker ltr show-ranges opensleft">
@@ -1122,7 +1106,7 @@
 		            	data: JSON.stringify(params),
 		            	success: function(res) {
 		            		$('#search_results').html(res); 
-							$('#banner').hide();
+							
 		            		$('.selectpicker').selectpicker('refresh');
 		            		$("#datepicker-from").datepicker({
 					            beforeShow: addCustomInformation,

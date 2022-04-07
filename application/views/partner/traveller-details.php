@@ -91,15 +91,7 @@
                         </div>
                     </div>
 
-                    <!-- <div class="form-group text-left">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Frequent Flyer</label>
-                        </div>
-                    </div> -->
-                    <!-- <div class="form-group text-center">
-                        <button class="btn btn-primary">Search Flights</button>
-                    </div> -->
+                   
                 </div>
             <?php }?>
 
@@ -143,15 +135,7 @@
                         </div>
                     </div>
 
-                    <!-- <div class="form-group text-left">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Frequent Flyer</label>
-                        </div>
-                    </div> -->
-                    <!-- <div class="form-group text-center">
-                        <button class="btn btn-primary">Search Flights</button>
-                    </div> -->
+                    
                 </div>
             <?php }?>
         </div>
