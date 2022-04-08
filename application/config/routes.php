@@ -74,7 +74,8 @@ $route['show-blogs'] = 'Blogs/blogs';
 $route['show-blog/(:num)'] = 'Blogs/blog/$1';
 $route['partner/advertisement-plan'] = 'Partner/advertisementPlan';
 $route['partner-help'] = 'Partner/partnerHelp';
-
+/*******************EXPERIENCE*******************/
+$route['experience'] = 'Experience/index';
 /*******************BOOKING*******************/
 $route['partner-booking/(:any)'] = 'Partner/booking/$1';
 $route['partner-booking-form'] = 'PartnerBooking/booking_form/';
