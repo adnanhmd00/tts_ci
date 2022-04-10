@@ -19,7 +19,7 @@
                     </a>
                 </li>
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                    <a href="#" class="kt-menu__link kt-menu__toggle">
+                   <a href="<?= base_url('coming-soon');?>" class="kt-menu__link">
                         <span class="kt-menu__link-icon">
                             
                         </span>
@@ -27,7 +27,7 @@
                     </a>
                 </li>
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                    <a href="#" class="kt-menu__link kt-menu__toggle">
+                   <a href="<?= base_url('coming-soon');?>" class="kt-menu__link">
                         <span class="kt-menu__link-icon">
                             
                         </span>
@@ -35,7 +35,7 @@
                     </a>
                 </li>
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                   <a href="<?= base_url('coming-soon');?>" class="kt-menu__link">
                         <span class="kt-menu__link-icon">
                             
                         </span>
@@ -43,15 +43,15 @@
                     </a>
                 </li>
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                    <a href="<?= base_url('experience');?>" class="kt-menu__link">
                         <span class="kt-menu__link-icon">
-                            
+
                         </span>
                         <span class="kt-menu__link-text">EXPERIENCES</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                     </a>
                 </li>
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                   <a href="<?= base_url('coming-soon');?>" class="kt-menu__link">
                         <span class="kt-menu__link-icon">
                             
                         </span>
@@ -59,7 +59,7 @@
                     </a>
                 </li>
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                   <a href="<?= base_url('coming-soon');?>" class="kt-menu__link">
                         <span class="kt-menu__link-icon">
                             
                         </span>

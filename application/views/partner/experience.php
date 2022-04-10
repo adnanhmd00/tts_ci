@@ -64,6 +64,7 @@
                 	
                     <section id="hero1" class="hero d-flex justify-content-center">
                         <div class="inner">
+                            <a href="<?= base_url('experience-list');?>">
                             <div class="copy">
                                 <h1 class="text-light text-left display-1">Your world of joy</h1>
                                 <p class="text-left text-light h3">From local escapes to far-flung adventures, find what makes you happy anytime, anywhere</p>
@@ -72,6 +73,7 @@
                                     <button class="btn btn-dark" style="width:30%;">Search</button>
                                 </div>
                             </div>
+                            </a>
                         </div>
                     </section>
                     

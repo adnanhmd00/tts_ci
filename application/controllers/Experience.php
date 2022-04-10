@@ -31,4 +31,12 @@ class Experience extends CI_Controller
     public function comingSoon(){
         $this->load->view('coming-soon');
     }
+
+    public function experienceGallery(){
+        $this->load->view('partner/experience-gallery');
+    }
+
+    public function experienceList(){
+        $this->load->view('partner/experience-list');
+    }
 }

@@ -29,7 +29,7 @@ class Partner extends CI_Controller
     }
 
     public function comingSoon(){
-        $this->load->view('coming-soon');
+        $this->load->view('partner/coming-soon');
     }
     
     public function logout()
