@@ -65,11 +65,22 @@
                     <section id="hero1" class="hero d-flex justify-content-center">
                         <div class="inner">
                             <a href="<?= base_url('experience-list');?>">
-                            <div class="copy">
+                            <div class="copy d-none d-lg-block">
                                 <h1 class="text-light text-left display-1">Your world of joy</h1>
                                 <p class="text-left text-light h3">From local escapes to far-flung adventures, find what makes you happy anytime, anywhere</p>
                                 <div class="row">
                                     <input type="text" style="min-width: 70%;padding: 30px;">
+                                    <button class="btn btn-dark" style="width:30%;">Search</button>
+                                </div>
+                            </div>
+                            </a>
+
+                            <a href="<?= base_url('experience-list');?>">
+                            <div class="copy d-sm-block d-lg-none container">
+                                <h2 class="text-light text-left">Your world of joy</h2>
+                                <h6 class="text-left text-light">From local escapes to far-flung adventures, find what makes you happy anytime, anywhere</h6>
+                                <div class="row container p-1 ml-1">
+                                    <input type="text" style="min-width: 70%;">
                                     <button class="btn btn-dark" style="width:30%;">Search</button>
                                 </div>
                             </div>

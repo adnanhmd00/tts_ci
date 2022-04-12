@@ -63,25 +63,58 @@
                 	<?php include('nav.php');?>
                     <div class="container">
                         <h2>Explore all things to do in Dubai 2022</h2>
+                        <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#filterModal">
+                            Filter
+                        </button>
+                        </div>
+                        <!-- The Modal -->
+                        <div class="fade modal" id="filterModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Filter</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value="">Option 1
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value="">Option 2
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value="" disabled>Option 3
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3 d-none">
                                 <div class="card p-2">
                                     <h3>Filters</h3>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">Option 1
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">Option 2
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="" disabled>Option 3
-                                    </label>
-                                </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value="">Option 1
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value="">Option 2
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value="" disabled>Option 3
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-9">
