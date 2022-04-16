@@ -40,6 +40,26 @@
                 width: 700px;
             }
 
+            #search-list{
+                background: #fff;
+                color: #000;
+                width: 70%;
+                font-size: 24px;
+            }
+
+            #search-list a{
+                font-size: 24px;
+                background: #fff;
+                color: #000;
+            }
+
+            #search-list li{
+                font-size: 24px;
+                background: #fff;
+                color: #000;
+                list-style-type: none;
+                padding: 5px;
+            }
 
         </style>
 	</head>
@@ -63,29 +83,65 @@
                 	<?php include('nav.php');?>
                 	
                     <section id="hero1" class="hero d-flex justify-content-center">
-                        <div class="inner">
-                            <a href="<?= base_url('experience-list');?>">
-                            <div class="copy d-none d-lg-block">
-                                <h1 class="text-light text-left display-1">Your world of joy</h1>
-                                <p class="text-left text-light h3">From local escapes to far-flung adventures, find what makes you happy anytime, anywhere</p>
-                                <div class="row">
-                                    <input type="text" style="min-width: 70%;padding: 30px;">
-                                    <button class="btn btn-dark" style="width:30%;">Search</button>
+                        <form id="live-search" action="" class="styled" method="post">
+                            <div class="inner">
+                                <!-- <a href="<?= base_url('experience-list');?>"> -->
+                                <div class="copy d-none d-lg-block">
+                                    <h1 class="text-light text-left display-1">Your world of joy</h1>
+                                    <p class="text-left text-light h3">From local escapes to far-flung adventures, find what makes you happy anytime, anywhere</p>
+                                    <div class="row">
+                                        <input type="text" id="filter" style="min-width: 70%;padding: 30px;">
+                                        <button class="btn btn-dark" style="width:30%;">Search</button>
+                                        <nav id="search-list">
+                                        <ul>
+                                            <li><a href="#">Jim James</a></li>
+                                                <li><a href="#">Hello Bye</a></li>
+                                                <li><a href="#">Wassup Food</a></li>
+                                                <li><a href="#">Contact Us</a></li>
+                                                <li><a href="#">Bleep bloop</a></li>
+                                                <li><a href="#">jQuery HTML</a></li>
+                                                <li><a href="#">CSS HTML AJAX</a></li>
+                                                <li><a href="#">HTML5 Net Set</a></li>
+                                                <li><a href="#">Node Easy</a></li>
+                                                <li><a href="#">Listing Bloop</a></li>
+                                                <li><a href="#">Contact HTML5</a></li>
+                                                <li><a href="#">CSS3 Ajax</a></li>
+                                                <li><a href="#">ET</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
                                 </div>
-                            </div>
-                            </a>
+                                <!-- </a> -->
 
-                            <a href="<?= base_url('experience-list');?>">
-                            <div class="copy d-sm-block d-lg-none container">
-                                <h2 class="text-light text-left">Your world of joy</h2>
-                                <h6 class="text-left text-light">From local escapes to far-flung adventures, find what makes you happy anytime, anywhere</h6>
-                                <div class="row container p-1 ml-1">
-                                    <input type="text" style="min-width: 70%;">
-                                    <button class="btn btn-dark" style="width:30%;">Search</button>
+                                <!-- <a href="<?= base_url('experience-list');?>"> -->
+                                <div class="copy d-sm-block d-lg-none container">
+                                    <h2 class="text-light text-left">Your world of joy</h2>
+                                    <h6 class="text-left text-light">From local escapes to far-flung adventures, find what makes you happy anytime, anywhere</h6>
+                                    <div class="row container p-1 ml-1">
+                                        <input type="text" id="filter" style="min-width: 70%;">
+                                        <button class="btn btn-dark" style="width:30%;">Search</button>
+                                        <nav id="search-list">
+                                        <ul>
+                                            <li><a href="#">Jim James</a></li>
+                                                <li><a href="#">Hello Bye</a></li>
+                                                <li><a href="#">Wassup Food</a></li>
+                                                <li><a href="#">Contact Us</a></li>
+                                                <li><a href="#">Bleep bloop</a></li>
+                                                <li><a href="#">jQuery HTML</a></li>
+                                                <li><a href="#">CSS HTML AJAX</a></li>
+                                                <li><a href="#">HTML5 Net Set</a></li>
+                                                <li><a href="#">Node Easy</a></li>
+                                                <li><a href="#">Listing Bloop</a></li>
+                                                <li><a href="#">Contact HTML5</a></li>
+                                                <li><a href="#">CSS3 Ajax</a></li>
+                                                <li><a href="#">ET</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
                                 </div>
+                                <!-- </a> -->
                             </div>
-                            </a>
-                        </div>
+                        </form>
                     </section>
                     
                     <!-- <section class="content">
@@ -105,5 +161,29 @@
             <i class="fa fa-arrow-up"></i>
         </div>
         <?php include('jquery.php');?>
+
+        <script>
+            $(document).ready(function(){
+                $('#search-list').hide();
+                    $("#filter").keyup(function(){
+                    $('#search-list').show();
+                    var filter = $(this).val(), count = 0;
+                    // Loop through the comment list
+                    $("nav ul li").each(function(){
+                        // If the list item does not contain the text phrase fade it out
+                        if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                            $(this).fadeOut();
+                        // Show the list item if the phrase matches and increase the count by 1
+                        } else {
+                            $(this).show();
+                            count++;
+                        }
+                    });
+                    // Update the count
+                    var numberItems = count;
+                    $("#filter-count").text("Number of Comments = "+count);
+                });
+            });
+        </script>
     </body>
 </html>
