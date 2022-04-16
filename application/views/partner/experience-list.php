@@ -63,41 +63,41 @@
                 	<?php include('nav.php');?>
                     <div class="container">
                         <h2>Explore all things to do in Dubai 2022</h2>
-                        <div class="d-flex justify-content-end">
+                        <div class="d-flex justify-content-end d-sm-block d-lg-none">
                         <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#filterModal">
                             Filter
                         </button>
                         </div>
                         <!-- The Modal -->
                         <div class="fade modal" id="filterModal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Filter</h4>
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="">Option 1
-                                        </label>
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Filter</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     </div>
+                                    <div class="modal-body">
                                     <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="">Option 2
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="" disabled>Option 3
-                                        </label>
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" value="">Option 1
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" value="">Option 2
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" value="" disabled>Option 3
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        </div>
                         <div class="row">
-                            <div class="col-md-3 d-none">
+                            <div class="col-md-3 d-none d-lg-block">
                                 <div class="card p-2">
                                     <h3>Filters</h3>
                                     <div class="form-check">
@@ -118,164 +118,23 @@
                                 </div>
                             </div>
                             <div class="col-md-9">
-                            108 activities found
+                            <?php echo $count; ?> activities found
                             <div class="row">
+                                <?php foreach($data as $experience){ ?>
                                 <div class="col-md-4  mt-3 rounded">
                                     <a href="/experience-detail">
                                         <div class="card">
                                             <img src="https://res.klook.com/image/upload/c_fill,w_420,h_260/activities/wnkhtwo4n0dhe6zmrbcs.webp" alt="" class="img-fluid">
                                             <div class="mx-2">
-                                                <h6 class="p-2">Burj Khalifa Observation Deck</h6>
+                                                <h6 class="p-2"><?php echo $experience['experience_name']; ?></h6>
                                                 <span><i class="fa fa-star"></i>4.5</span>
-                                                <del>₹3100</del>
-                                                <div>From <strong>₹2800</strong></div>
+                                                <del>₹<?php echo $experience['price_1']; ?></del>
+                                                <div>From <strong>₹<?php echo $experience['price_2']; ?></strong></div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-md-4  mt-3 rounded">
-                                    <a href="/experience-detail">
-                                        <div class="card">
-                                            <img src="https://res.klook.com/image/upload/c_fill,w_420,h_260/activities/wnkhtwo4n0dhe6zmrbcs.webp" alt="" class="img-fluid">
-                                            <div class="mx-2">
-                                                <h6 class="p-2">Burj Khalifa Observation Deck</h6>
-                                                <span><i class="fa fa-star"></i>4.5</span>
-                                                <del>₹3100</del>
-                                                <div>From <strong>₹2800</strong></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-4  mt-3 rounded">
-                                    <a href="/experience-detail">
-                                        <div class="card">
-                                            <img src="https://res.klook.com/image/upload/c_fill,w_420,h_260/activities/wnkhtwo4n0dhe6zmrbcs.webp" alt="" class="img-fluid">
-                                            <div class="mx-2">
-                                                <h6 class="p-2">Burj Khalifa Observation Deck</h6>
-                                                <span><i class="fa fa-star"></i>4.5</span>
-                                                <del>₹3100</del>
-                                                <div>From <strong>₹2800</strong></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-4  mt-3 rounded">
-                                    <a href="/experience-detail">
-                                        <div class="card">
-                                            <img src="https://res.klook.com/image/upload/c_fill,w_420,h_260/activities/wnkhtwo4n0dhe6zmrbcs.webp" alt="" class="img-fluid">
-                                            <div class="mx-2">
-                                                <h6 class="p-2">Burj Khalifa Observation Deck</h6>
-                                                <span><i class="fa fa-star"></i>4.5</span>
-                                                <del>₹3100</del>
-                                                <div>From <strong>₹2800</strong></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-4  mt-3 rounded">
-                                    <a href="/experience-detail">
-                                        <div class="card">
-                                            <img src="https://res.klook.com/image/upload/c_fill,w_420,h_260/activities/wnkhtwo4n0dhe6zmrbcs.webp" alt="" class="img-fluid">
-                                            <div class="mx-2">
-                                                <h6 class="p-2">Burj Khalifa Observation Deck</h6>
-                                                <span><i class="fa fa-star"></i>4.5</span>
-                                                <del>₹3100</del>
-                                                <div>From <strong>₹2800</strong></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-4  mt-3 rounded">
-                                    <a href="/experience-detail">
-                                        <div class="card">
-                                            <img src="https://res.klook.com/image/upload/c_fill,w_420,h_260/activities/wnkhtwo4n0dhe6zmrbcs.webp" alt="" class="img-fluid">
-                                            <div class="mx-2">
-                                                <h6 class="p-2">Burj Khalifa Observation Deck</h6>
-                                                <span><i class="fa fa-star"></i>4.5</span>
-                                                <del>₹3100</del>
-                                                <div>From <strong>₹2800</strong></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-4  mt-3 rounded">
-                                    <a href="/experience-detail">
-                                        <div class="card">
-                                            <img src="https://res.klook.com/image/upload/c_fill,w_420,h_260/activities/wnkhtwo4n0dhe6zmrbcs.webp" alt="" class="img-fluid">
-                                            <div class="mx-2">
-                                                <h6 class="p-2">Burj Khalifa Observation Deck</h6>
-                                                <span><i class="fa fa-star"></i>4.5</span>
-                                                <del>₹3100</del>
-                                                <div>From <strong>₹2800</strong></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-4  mt-3 rounded">
-                                    <a href="/experience-detail">
-                                        <div class="card">
-                                            <img src="https://res.klook.com/image/upload/c_fill,w_420,h_260/activities/wnkhtwo4n0dhe6zmrbcs.webp" alt="" class="img-fluid">
-                                            <div class="mx-2">
-                                                <h6 class="p-2">Burj Khalifa Observation Deck</h6>
-                                                <span><i class="fa fa-star"></i>4.5</span>
-                                                <del>₹3100</del>
-                                                <div>From <strong>₹2800</strong></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-4  mt-3 rounded">
-                                    <a href="/experience-detail">
-                                        <div class="card">
-                                            <img src="https://res.klook.com/image/upload/c_fill,w_420,h_260/activities/wnkhtwo4n0dhe6zmrbcs.webp" alt="" class="img-fluid">
-                                            <div class="mx-2">
-                                                <h6 class="p-2">Burj Khalifa Observation Deck</h6>
-                                                <span><i class="fa fa-star"></i>4.5</span>
-                                                <del>₹3100</del>
-                                                <div>From <strong>₹2800</strong></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-4  mt-3 rounded">
-                                    <a href="/experience-detail">
-                                        <div class="card">
-                                            <img src="https://res.klook.com/image/upload/c_fill,w_420,h_260/activities/wnkhtwo4n0dhe6zmrbcs.webp" alt="" class="img-fluid">
-                                            <div class="mx-2">
-                                                <h6 class="p-2">Burj Khalifa Observation Deck</h6>
-                                                <span><i class="fa fa-star"></i>4.5</span>
-                                                <del>₹3100</del>
-                                                <div>From <strong>₹2800</strong></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-4  mt-3 rounded">
-                                    <a href="/experience-detail">
-                                        <div class="card">
-                                            <img src="https://res.klook.com/image/upload/c_fill,w_420,h_260/activities/wnkhtwo4n0dhe6zmrbcs.webp" alt="" class="img-fluid">
-                                            <div class="mx-2">
-                                                <h6 class="p-2">Burj Khalifa Observation Deck</h6>
-                                                <span><i class="fa fa-star"></i>4.5</span>
-                                                <del>₹3100</del>
-                                                <div>From <strong>₹2800</strong></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-4  mt-3 rounded">
-                                    <a href="/experience-detail">
-                                        <div class="card">
-                                            <img src="https://res.klook.com/image/upload/c_fill,w_420,h_260/activities/wnkhtwo4n0dhe6zmrbcs.webp" alt="" class="img-fluid">
-                                            <div class="mx-2">
-                                                <h6 class="p-2">Burj Khalifa Observation Deck</h6>
-                                                <span><i class="fa fa-star"></i>4.5</span>
-                                                <del>₹3100</del>
-                                                <div>From <strong>₹2800</strong></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                <?php } ?>
                             </div>
                             </div>
                         </div>

@@ -25,18 +25,27 @@ class Experience extends CI_Controller
     public function index()
     {
         $userinfo = $this->userinfo;
-        $this->load->view('partner/experience', compact('userinfo'));
+        $sql="Select distinct city from iteneraries";    
+        $query = $this->db->query($sql);
+        $data = $query->result_array();
+        $this->load->view('partner/experience', compact('userinfo', 'data'));
     }
 
     public function comingSoon(){
         $this->load->view('coming-soon');
     }
 
-    public function experienceGallery(){
-        $this->load->view('partner/experience-gallery');
+
+    public function experienceList($city){
+        $city = str_replace('%20', ' ', $city);
+        $sql="Select * from iteneraries where city LIKE '%$city%'";
+        $query = $this->db->query($sql);
+        $data = $query->result_array();
+        $count = $query->num_rows();
+        $this->load->view('partner/experience-list', compact('data', 'count'));
     }
 
-    public function experienceList(){
-        $this->load->view('partner/experience-list');
+    public function experienceGallery(){
+        $this->load->view('partner/experience-gallery');
     }
 }

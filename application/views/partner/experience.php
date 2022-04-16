@@ -61,6 +61,27 @@
                 padding: 5px;
             }
 
+            #search-list-sm{
+                background: #fff;
+                color: #000;
+                width: 70%;
+                font-size: 18px;
+            }
+
+            #search-list-sm a{
+                font-size: 18px;
+                background: #fff;
+                color: #000;
+            }
+
+            #search-list-sm li{
+                font-size: 18px;
+                background: #fff;
+                color: #000;
+                list-style-type: none;
+                padding: 5px;
+            }
+
         </style>
 	</head>
     <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed" style="">
@@ -91,21 +112,11 @@
                                 <div class="row">
                                     <input type="text" id="filter" style="min-width: 70%;padding: 30px;">
                                     <button class="btn btn-dark" style="width:30%;">Search</button>
-                                    <nav id="search-list">
+                                    <nav id="search-list" class="text-left">
                                         <ul>
-                                            <li><a href="#">Jim James</a></li>
-                                            <li><a href="#">Hello Bye</a></li>
-                                            <li><a href="#">Wassup Food</a></li>
-                                            <li><a href="#">Contact Us</a></li>
-                                            <li><a href="#">Bleep bloop</a></li>
-                                            <li><a href="#">jQuery HTML</a></li>
-                                            <li><a href="#">CSS HTML AJAX</a></li>
-                                            <li><a href="#">HTML5 Net Set</a></li>
-                                            <li><a href="#">Node Easy</a></li>
-                                            <li><a href="#">Listing Bloop</a></li>
-                                            <li><a href="#">Contact HTML5</a></li>
-                                            <li><a href="#">CSS3 Ajax</a></li>
-                                            <li><a href="#">ET</a></li>
+                                        <?php foreach($data as $city){ ?>
+                                            <li><a href="<?= base_url('experience-list/'.$city['city']);?>"><?php print_r($city['city']); ?></a></li>
+                                            <?php } ?>
                                         </ul>
                                     </nav>
                                 </div>
@@ -117,23 +128,13 @@
                                 <h2 class="text-light text-left">Your world of joy</h2>
                                 <h6 class="text-left text-light">From local escapes to far-flung adventures, find what makes you happy anytime, anywhere</h6>
                                 <div class="row container p-1 ml-1">
-                                    <input type="text" id="filter" style="min-width: 70%;">
+                                    <input type="text" id="filter-sm" style="min-width: 70%;">
                                     <button class="btn btn-dark" style="width:30%;">Search</button>
-                                    <nav id="search-list">
+                                    <nav id="search-list-sm" class="text-left ml-0 pl-0">
                                         <ul>
-                                            <li><a href="#">Jim James</a></li>
-                                            <li><a href="#">Hello Bye</a></li>
-                                            <li><a href="#">Wassup Food</a></li>
-                                            <li><a href="#">Contact Us</a></li>
-                                            <li><a href="#">Bleep bloop</a></li>
-                                            <li><a href="#">jQuery HTML</a></li>
-                                            <li><a href="#">CSS HTML AJAX</a></li>
-                                            <li><a href="#">HTML5 Net Set</a></li>
-                                            <li><a href="#">Node Easy</a></li>
-                                            <li><a href="#">Listing Bloop</a></li>
-                                            <li><a href="#">Contact HTML5</a></li>
-                                            <li><a href="#">CSS3 Ajax</a></li>
-                                            <li><a href="#">ET</a></li>
+                                        <?php foreach($data as $city){ ?>
+                                            <li><a href="<?= base_url('experience-list/'.$city['city']);?>"><?php print_r($city['city']); ?></a></li>
+                                            <?php } ?>
                                         </ul>
                                     </nav>
                                 </div>
@@ -164,7 +165,10 @@
                 $('#search-list').hide();
                     $("#filter").keyup(function(){
                     $('#search-list').show();
-                    var filter = $(this).val(), count = 0;
+                    var filter = $(this).val();
+                    if(filter == ''){
+                        $('#search-list').hide();
+                    }
                     // Loop through the comment list
                     $("nav ul li").each(function(){
                         // If the list item does not contain the text phrase fade it out
@@ -173,12 +177,29 @@
                         // Show the list item if the phrase matches and increase the count by 1
                         } else {
                             $(this).show();
-                            count++;
                         }
                     });
-                    // Update the count
-                    var numberItems = count;
-                    $("#filter-count").text("Number of Comments = "+count);
+                });
+            });
+
+            $(document).ready(function(){
+                $('#search-list-sm').hide();
+                    $("#filter-sm").keyup(function(){
+                    $('#search-list-sm').show();
+                    var filter = $(this).val();
+                    if(filter == ''){
+                        $('#search-list-sm').hide();
+                    }
+                    // Loop through the comment list
+                    $("nav ul li").each(function(){
+                        // If the list item does not contain the text phrase fade it out
+                        if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                            $(this).fadeOut();
+                        // Show the list item if the phrase matches and increase the count by 1
+                        } else {
+                            $(this).show();
+                        }
+                    });
                 });
             });
         </script>
