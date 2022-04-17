@@ -76,7 +76,7 @@ $route['partner/advertisement-plan'] = 'Partner/advertisementPlan';
 $route['partner-help'] = 'Partner/partnerHelp';
 /*******************EXPERIENCE*******************/
 $route['experience'] = 'Experience/index';
-$route['experience-detail'] = 'Experience/experienceGallery';
+$route['experience-detail/(:any)'] = 'Experience/experienceGallery/$1';
 $route['experience-list/(:any)'] = 'Experience/experienceList/$1';
 /*******************BOOKING*******************/
 $route['partner-booking/(:any)'] = 'Partner/booking/$1';

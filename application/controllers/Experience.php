@@ -45,7 +45,10 @@ class Experience extends CI_Controller
         $this->load->view('partner/experience-list', compact('data', 'count'));
     }
 
-    public function experienceGallery(){
-        $this->load->view('partner/experience-gallery');
+    public function experienceGallery($id){
+        $sql = "Select * from iteneraries where id = '$id'";
+        $query = $this->db->query($sql);
+        $data = $query->result_array();
+        $this->load->view('partner/experience-gallery', compact('data'));
     }
 }

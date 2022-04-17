@@ -64,7 +64,8 @@
                     <div class="container">
                         <h2>Explore all things to do in Dubai 2022</h2>
                         <div class="d-flex justify-content-end d-sm-block d-lg-none">
-                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#filterModal">
+                        <button type="button" class="btn b
+                        tn-outline-primary" data-toggle="modal" data-target="#filterModal">
                             Filter
                         </button>
                         </div>
@@ -122,14 +123,14 @@
                             <div class="row">
                                 <?php foreach($data as $experience){ ?>
                                 <div class="col-md-4  mt-3 rounded">
-                                    <a href="/experience-detail">
+                                    <a href="/experience-detail/<?php echo $experience['id'] ?>">
                                         <div class="card">
-                                            <img src="https://res.klook.com/image/upload/c_fill,w_420,h_260/activities/wnkhtwo4n0dhe6zmrbcs.webp" alt="" class="img-fluid">
+                                            <img src="<?php echo json_decode($experience['photos_of_experience'])[0] ?>" alt="" class="img-fluid">
                                             <div class="mx-2">
                                                 <h6 class="p-2"><?php echo $experience['experience_name']; ?></h6>
-                                                <span><i class="fa fa-star"></i>4.5</span>
-                                                <del>₹<?php echo $experience['price_1']; ?></del>
-                                                <div>From <strong>₹<?php echo $experience['price_2']; ?></strong></div>
+                                                <!-- <span><i class="fa fa-star"></i>4.5</span> -->
+                                                <!-- <del>₹<?php // echo $experience['price_1']; ?></del> -->
+                                                <div>From <strong>₹<?php echo $experience['price_1']; ?></strong></div>
                                             </div>
                                         </div>
                                     </a>

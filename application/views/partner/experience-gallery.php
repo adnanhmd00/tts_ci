@@ -164,6 +164,10 @@
             grid-row-start: 3;
             grid-row-end: 5;
             }
+            
+
+            .container{
+                width: 90% !important;
             }
         </style>
 	</head>
@@ -185,31 +189,20 @@
                 <?php include('aside.php');?>
                 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
                 	<?php include('nav.php');?>
-                    <div class="container-fluid">
-                        <h2>NEW BRAND Bungalow in Ubud Bali with Breakfast</h2>
+                    <div class="container">
+                        <h2><?php echo $data[0]['experience_name']; ?></h2>
 
                         <div class="d-sm-block d-lg-none">
                             <!-- Slideshow container -->
                             <div class="slideshow-container">
 
                             <!-- Full-width images with number and caption text -->
+                            <?php foreach(json_decode($data[0]['photos_of_experience']) as $photos){ ?>
                             <div class="mySlides fade">
-                            <div class="numbertext">1 / 3</div>
-                            <img src="https://unsplash.com/photos/yWwob8kwOCk/download?force=true" style="width:100%">
-                            <div class="text">Caption Text</div>
+                                <img src="<?php echo $photos; ?>" style="width:100%">
                             </div>
+                            <?php } ?>
 
-                            <div class="mySlides fade">
-                            <div class="numbertext">2 / 3</div>
-                            <img src="https://unsplash.com/photos/Wv65tpVIdDg/download?force=true" style="width:100%">
-                            <div class="text">Caption Two</div>
-                            </div>
-
-                            <div class="mySlides fade">
-                            <div class="numbertext">3 / 3</div>
-                            <img src="https://unsplash.com/photos/uY2kic9wlmc/download?force=true" style="width:100%">
-                            <div class="text">Caption Three</div>
-                            </div>
 
                             <!-- Next and previous buttons -->
                             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -227,20 +220,20 @@
                         <div class="container d-none d-lg-block">
                             <div class="gallery">
                                 <figure class="gallery__item gallery__item--1">
-                                    <img src="https://unsplash.com/photos/uY2kic9wlmc/download?force=true" alt="Gallery image 1" class="gallery__img">
+                                    <img src="<?php echo json_decode($data[0]['photos_of_experience'])[0] ?>" alt="Gallery image 1" class="gallery__img">
                                 </figure>
                                 <figure class="gallery__item gallery__item--2">
-                                    <img src="https://unsplash.com/photos/yWwob8kwOCk/download?force=true" alt="Gallery image 2" class="gallery__img">
+                                    <img src="<?php echo json_decode($data[0]['photos_of_experience'])[1] ?>" alt="Gallery image 2" class="gallery__img">
                                 </figure>
                                 <figure class="gallery__item gallery__item--3">
-                                    <img src="https://unsplash.com/photos/uY2kic9wlmc/download?force=true" alt="Gallery image 3" class="gallery__img">
+                                    <img src="<?php echo json_decode($data[0]['photos_of_experience'])[2] ?>" alt="Gallery image 3" class="gallery__img">
                                     <div class="text-right" style="margin-top: -45px;"><a href="" class="btn btn-light btn-sm mr-3">Show All Photos +</a></div>
                                 </figure>
                                 <figure class="gallery__item gallery__item--4">
-                                    <img src="https://unsplash.com/photos/yWwob8kwOCk/download?force=true" alt="Gallery image 4" class="gallery__img">
+                                    <img src="<?php echo json_decode($data[0]['photos_of_experience'])[3] ?>" alt="Gallery image 4" class="gallery__img">
                                 </figure>
                                 <figure class="gallery__item gallery__item--5">
-                                    <img src="https://unsplash.com/photos/Wv65tpVIdDg/download?force=true" alt="Gallery image 5" class="gallery__img">
+                                    <img src="<?php echo json_decode($data[0]['photos_of_experience'])[4] ?>" alt="Gallery image 5" class="gallery__img">
                                 </figure>
                             </div>
                         </div>
