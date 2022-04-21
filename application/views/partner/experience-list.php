@@ -124,8 +124,8 @@
                                 <?php foreach($data as $experience){ ?>
                                 <div class="col-md-4  mt-3 rounded">
                                     <a href="/experience-detail/<?php echo $experience['id'] ?>">
-                                        <div class="card">
-                                            <img src="<?php echo json_decode($experience['photos_of_experience'])[0] ?>" alt="" class="img-fluid">
+                                        <div style="border-radius: 12px !important;" class="card">
+                                            <img style="border-radius: 12px !important;" src="<?php echo json_decode($experience['photos_of_experience'])[0] ?>" alt="" class="img-fluid">
                                             <div class="mx-2">
                                                 <h6 class="p-2"><?php echo $experience['experience_name']; ?></h6>
                                                 <!-- <span><i class="fa fa-star"></i>4.5</span> -->

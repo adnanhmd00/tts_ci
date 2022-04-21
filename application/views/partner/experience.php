@@ -44,17 +44,17 @@
                 background: #fff;
                 color: #000;
                 width: 70%;
-                font-size: 24px;
+                font-size: 20px;
             }
 
             #search-list a{
-                font-size: 24px;
+                font-size: 20px;
                 background: #fff;
                 color: #000;
             }
 
             #search-list li{
-                font-size: 24px;
+                font-size: 20px;
                 background: #fff;
                 color: #000;
                 list-style-type: none;
@@ -110,7 +110,7 @@
                                 <h1 class="text-light text-left display-1">Your world of joy</h1>
                                 <p class="text-left text-light h3">From local escapes to far-flung adventures, find what makes you happy anytime, anywhere</p>
                                 <div class="row">
-                                    <input type="text" id="filter" style="min-width: 70%;padding: 30px;">
+                                    <input type="text" id="filter" style="min-width: 70%;padding: 15px;">
                                     <button class="btn btn-dark" style="width:30%;">Search</button>
                                     <nav id="search-list" class="text-left">
                                         <ul>
