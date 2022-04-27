@@ -4,7 +4,14 @@
     	<?php include('head.php');?>
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-
+            body{
+                background: #fff;
+            }
+            .border-heading{
+                border-left: 5px solid black;
+                padding: 3px;
+                margin-bottom: 5px;
+            }
             /* Mobile slideshow start */
             /* Slideshow container */
             .slideshow-container {
@@ -190,7 +197,7 @@
                 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
                 	<?php include('nav.php');?>
                     <div class="container">
-                        <h2><?php echo $data[0]['experience_name']; ?></h2>
+                        <!-- <h2><?php // echo $data[0]['experience_name']; ?></h2> -->
 
                         <div class="d-sm-block d-lg-none">
                             <!-- Slideshow container -->
@@ -238,20 +245,52 @@
                             </div>
                         </div>
                         <div class="container d-none d-lg-block">
-                            <h2>Burj Khalifa Observation Deck</h2>
-                            <p>Whizz up to the world's tallest tower</p>
-                            <span><i class="fa fa-star"></i> 4.5 (3,821 reviews)</span>
+                        <h2><?php echo $data[0]['experience_name']; ?></h2>
+                            <p><?php echo $data[0]['city']; ?>, <span><?php echo $data[0]['sub_city']; ?></span>, <span><?php echo $data[0]['experience_address']; ?></span> </p> 
 
                             <div class="row">
                                 <div class="col-md-9">
-                                    <ul style="font-size: 14px;">
-                                        <li>Limited Offer: Book this activity and receive a complimentary SIM card! Offer valid until 31 Oct 2019 only. See the Terms & Conditions section below</li>
-                                        <li>Limited Offer: Book this activity and receive a complimentary SIM card! Offer valid until 31 Oct 2019 only. See the Terms & Conditions section below</li>
-                                        <li>Limited Offer: Book this activity and receive a complimentary SIM card! Offer valid until 31 Oct 2019 only. See the Terms & Conditions section below</li>
-                                        <li>Limited Offer: Book this activity and receive a complimentary SIM card! Offer valid until 31 Oct 2019 only. See the Terms & Conditions section below</li>
-                                        <li>Limited Offer: Book this activity and receive a complimentary SIM card! Offer valid until 31 Oct 2019 only. See the Terms & Conditions section below</li>
+                                    <h2 class="border-heading">Itenerary</h2>
+                                    <ul style="font-size: 16px; list-style-type: none;">
+                                        <?php 
+                                            foreach(json_decode($data[0]['tour_itenarary']) as $tour_itenarary){
+                                                ?>
+                                                <li style="margin-left: 15px; "><?php echo $tour_itenarary; ?>  </li>
+                                                <?php
+                                            }
+                                        ?>
                                     </ul>
+
+                                    <h2 class="border-heading">Amenities</h2>
+                                    <ul style="font-size: 16px; list-style-type: none;">
+                                        <?php 
+                                            foreach(json_decode($data[0]['ammenities']) as $ammenities){
+                                                ?>
+                                                <li style="margin-left: 15px; "><?php echo $ammenities; ?>  </li>
+                                                <?php
+                                            }
+                                        ?>
+                                    </ul>
+
+                                    <h2 class="border-heading">About This Experience</h2>
+                                    <p class="lead"><?php echo $data[0]['about_experience']; ?></p>
+
+                                    <h2 class="border-heading">What To Expect</h2>
+                                    <p class="lead"><?php echo $data[0]['what_to_expect']; ?></p>
+
+                                    <h2 class="border-heading">Experience Video</h2>
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+                                    </iframe>
+
+                                    <h4 class="border-heading">Terms & Conditions</h4>
+                                    <p class="lead"><?php echo $data[0]['terms_and_condition']; ?></p>
+
+                                    <h4 class="border-heading">Cancellation Policy</h4>
+                                    <p class="lead"><?php echo $data[0]['cancellation_policy']; ?></p>
                                 </div>
+
+
+
                                 <div class="col-md-3">
                                     <div class="card p-3 rounded" style="font-size: 14px">
                                     <div>From <span style="font-size: 30px;">₹2,790</span><del>₹3100</del></div>
@@ -264,19 +303,49 @@
                         </div>
 
                         <div class="container-fluid d-sm-block d-lg-none">
-                            <h2>Burj Khalifa Observation Deck</h2>
-                            <p>Whizz up to the world's tallest tower</p>
-                            <span><i class="fa fa-star"></i> 4.5 (3,821 reviews)</span>
+                        <h2><?php echo $data[0]['experience_name']; ?></h2>
+                            <!-- <p>Whizz up to the world's tallest tower</p> -->
+                            <p><?php echo $data[0]['city']; ?>, <span><?php echo $data[0]['sub_city']; ?></span>, <span><?php echo $data[0]['experience_address']; ?></span> </p> 
 
                             <div class="row">
                                 <div class="col-md-9">
-                                    <ul style="font-size: 14px;">
-                                        <li>Limited Offer: Book this activity and receive a complimentary SIM card! Offer valid until 31 Oct 2019 only. See the Terms & Conditions section below</li>
-                                        <li>Limited Offer: Book this activity and receive a complimentary SIM card! Offer valid until 31 Oct 2019 only. See the Terms & Conditions section below</li>
-                                        <li>Limited Offer: Book this activity and receive a complimentary SIM card! Offer valid until 31 Oct 2019 only. See the Terms & Conditions section below</li>
-                                        <li>Limited Offer: Book this activity and receive a complimentary SIM card! Offer valid until 31 Oct 2019 only. See the Terms & Conditions section below</li>
-                                        <li>Limited Offer: Book this activity and receive a complimentary SIM card! Offer valid until 31 Oct 2019 only. See the Terms & Conditions section below</li>
+                                    <h2>Itenerary</h2>
+                                    <ul style="font-size: 16px; list-style-type: none;">
+                                        <?php 
+                                            foreach(json_decode($data[0]['tour_itenarary']) as $tour_itenarary){
+                                                ?>
+                                                <li style="margin-left: 15px; "><?php echo $tour_itenarary; ?>  </li>
+                                                <?php
+                                            }
+                                        ?>
                                     </ul>
+
+                                    <h2>Amenities</h2>
+                                    <ul style="font-size: 16px; list-style-type: none;">
+                                        <?php 
+                                            foreach(json_decode($data[0]['ammenities']) as $ammenities){
+                                                ?>
+                                                <li style="margin-left: 15px; "><?php echo $ammenities; ?>  </li>
+                                                <?php
+                                            }
+                                        ?>
+                                    </ul>
+
+                                    <h2>About This Experience</h2>
+                                    <p class="lead"><?php echo $data[0]['about_experience']; ?></p>
+
+                                    <h2>What To Expect</h2>
+                                    <p class="lead"><?php echo $data[0]['what_to_expect']; ?></p>
+
+                                    <h2>Experience Video</h2>
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+                                    </iframe>
+
+                                    <h4>Terms & Conditions</h4>
+                                    <p class="lead"><?php echo $data[0]['terms_and_condition']; ?></p>
+
+                                    <h4>Cancellation Policy</h4>
+                                    <p class="lead"><?php echo $data[0]['cancellation_policy']; ?></p>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="card p-3 rounded" style="font-size: 14px">

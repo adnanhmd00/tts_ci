@@ -125,12 +125,12 @@
                                 <div class="col-md-4  mt-3 rounded">
                                     <a href="/experience-detail/<?php echo $experience['id'] ?>">
                                         <div style="border-radius: 12px !important;" class="card">
-                                            <img style="border-radius: 12px !important;" src="<?php echo json_decode($experience['photos_of_experience'])[0] ?>" alt="" class="img-fluid">
-                                            <div class="mx-2">
-                                                <h6 class="p-2"><?php echo $experience['experience_name']; ?></h6>
+                                            <img style="border-radius: 12px 12px 0px 0px !important;" src="<?php echo json_decode($experience['photos_of_experience'])[0] ?>" alt="" class="img-fluid">
+                                            <div class="mx-2 my-2">
+                                                <h6 class="p-1"><?php echo $experience['experience_name']; ?></h6>
                                                 <!-- <span><i class="fa fa-star"></i>4.5</span> -->
                                                 <!-- <del>₹<?php // echo $experience['price_1']; ?></del> -->
-                                                <div>From <strong>₹<?php echo $experience['price_1']; ?></strong></div>
+                                                <div class="mx-2">From <strong>₹<?php echo $experience['price_1']; ?></strong></div>
                                             </div>
                                         </div>
                                     </a>
