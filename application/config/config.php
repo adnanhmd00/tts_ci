@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'http://ts.frantic.in/';
-$config['base_url'] = "http://partner.thetravelsquare.in/";
-// $config['base_url'] = 'http://localhost:5000/';
+// $config['base_url'] = "http://partner.thetravelsquare.in/";
+$config['base_url'] = 'http://localtts.in';
 /*
 |--------------------------------------------------------------------------
 | Index File
