@@ -247,6 +247,7 @@
                                         			<label for="From">From</label>
                                         			<div class="row-fluid">
                                         				<select class="selectpicker form-control" name="Origin" style="height: 100px !important;" data-show-subtext="true" data-live-search="true">
+														<option value="">Select</option>
                                         					<?php
                                         					foreach($datas as $data){
                                         						?>
@@ -272,11 +273,11 @@
                                         			<label for="to">To</label>
                                         			<div class="row-fluid">
                                         				<select class="selectpicker form-control" name="Destination" data-show-subtext="true" data-live-search="true">
+															<option value="">Select</option>
                                         					<?php
                                         					foreach($datas as $data){
                                         						?>
-
-                                        						<option value="<?php echo $data->cityCode ?>" data-subtext="<?php echo $data->cityName ?>"><?php echo $data->cityCode ?></option>
+                                        						<option value="<?php echo $data->cityCode ?>"  data-subtext="<?php echo $data->cityName ?>"><?php echo $data->cityCode ?></option>
                                         						<?php
                                         					}
                                         					?>
@@ -288,13 +289,13 @@
 											<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="inputDate">Depart</label>
-                                        			<input id="datepicker-from" name="PreferredDepartureTime" class="form-control" placeholder="Select date" > 
+                                        			<input id="datepicker-from" name="PreferredDepartureTime" class="form-control" placeholder="Select date" autocomplete="off"> 
                                         		</div>
                                         	</div>
                                         	<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="inputDate">Return</label>
-                                        			<input id="datepicker-to" class="form-control" placeholder="Select date" >  
+                                        			<input id="datepicker-to" class="form-control" placeholder="Select date"  autocomplete="off">  
                                         		</div>
                                         	</div>
 											<div class="col-md-1">
@@ -342,12 +343,28 @@
                                     </div>
                                 </div>
                                 <div id="search_results" ></div>
-
+								<div id="banner" class="row mt-3">
+                                <div class="col-md-4 mb-1">
+                                    <div class="card rounded">
+                                        <img src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive ">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-1">
+                                    <div class="card rounded">
+                                        <img src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/4.png" alt="" class="img-responsive ">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-1">
+                                    <div class="card rounded">
+                                        <img src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/5_Share.png" alt="" class="img-responsive ">
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                             <!-- end:: Content -->				
                         </div>
 						<div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop footer_div_class" id="footer" style="background-color: #e8e3e3; padding: 5px; margin: 0px;
-; display:none!important; position:fixed;width:100%; top:685px;">
+; display:none!important; position:fixed;width:100%; bottom:0px;">
                         <div id="details" class="kt-container  kt-container--fluid ">
 						<div class="col-md-7"></div>
                             <div class="col-md-3">                                
@@ -366,7 +383,7 @@
                         </div>
                     </div>
                         <!-- begin:: Footer -->
-                        <?php //include('footer.php');?>
+                        <?php include('footer.php');?>
                         <!-- end:: Footer -->			
                     </div>
                 </div>
@@ -937,8 +954,8 @@
 					</div>
 				</div>
 				</div>
-		</div>
-			</div>z
+			</div>
+			</div>
             <!--ENd:: Chat-->
             <?php include('jquery.php');?>
             <div class="daterangepicker ltr show-ranges opensleft">
@@ -1106,7 +1123,7 @@
 		            	data: JSON.stringify(params),
 		            	success: function(res) {
 		            		$('#search_results').html(res); 
-							
+							$('#banner').hide();
 		            		$('.selectpicker').selectpicker('refresh');
 		            		$("#datepicker-from").datepicker({
 					            beforeShow: addCustomInformation,

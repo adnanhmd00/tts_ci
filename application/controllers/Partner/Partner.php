@@ -567,6 +567,12 @@ class Partner extends CI_Controller
         $userinfo = $this->userinfo;
         $this->load->view('partner/learn_how_to_sell', compact('userinfo'));
     }
+
+    function privacyPolicy(){
+        $userinfo = $this->userinfo;
+        $this->load->view('partner/m-privacy-and-cookie-policy', compact('userinfo'));
+    }
+    
     function addBlogs(){
         $userinfo = $this->userinfo;
         $this->load->view('partner/add_blogs', compact('userinfo'));
