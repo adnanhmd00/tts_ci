@@ -36,7 +36,7 @@
             .inner{
                 min-height: 910px;
                 position: relative;
-                top: 30%;
+                top: 25%;
                 width: 700px;
             }
 

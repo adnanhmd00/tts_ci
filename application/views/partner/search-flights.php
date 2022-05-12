@@ -246,7 +246,7 @@
                                         		<div class="form-group">
                                         			<label for="From">From</label>
                                         			<div class="row-fluid">
-                                        				<select class="selectpicker form-control" name="Origin" style="height: 100px !important;" data-show-subtext="true" data-live-search="true">
+                                        				<select class="selectpicker  form-control" name="Origin" style="height: 100px !important;" data-show-subtext="true" data-live-search="true">
 														<option value="">Select</option>
                                         					<?php
                                         					foreach($datas as $data){
@@ -289,7 +289,7 @@
 											<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="inputDate">Depart</label>
-                                        			<input id="datepicker-from" name="PreferredDepartureTime" class="form-control" placeholder="Select date" autocomplete="off"> 
+                                        			<input id="datepicker-from" name="PreferredDepartureTime"  value="<?php echo date("m/d/Y", strtotime('tomorrow'));?>" class="form-control" placeholder="Select date" autocomplete="off"> 
                                         		</div>
                                         	</div>
                                         	<div class="col-md-1">
@@ -335,7 +335,7 @@
                                         	</div>
 											<div class="col-md-2" style="margin-top:26px;">
 											<div class="form-group text-center">
-												<button id="submit-button" class="btn btn-primary">Search Flights</button>
+												<button id="submit-button" class="btn btn-dark">Search Flights</button>
 											</div>
 											</div>			
                                         </div>
@@ -375,7 +375,7 @@
                                         <p></p>
                                     </div> -->
                                     <div class="row" id="footer_div_id">
-                                        <button class="btn btn-primary btn-block" id="button_div" >Continue Booking -> </button>
+                                        <button class="btn btn-dark btn-block" id="button_div" >Continue Booking -> </button>
                                     </div>
                                 </div>
                             </div>
@@ -1287,13 +1287,13 @@
 												
 					}
 					var sum_of_fare = parseFloat(BaseFare)+parseFloat(tax);
-					template += `<div class="row">
+					template += `<div class="row text-dark">
 							<div class="col-md-12">
 							<div class="panel-group" id="accordion">
 								<div class="card">
 								<div class="card-header accord-panel-heading">
 									<h4 class="card-title">
-									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+									<a class="accordion-toggle text-dark" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
 										Baggage Policy
 									</a>
 									</h4>
@@ -1330,7 +1330,7 @@
 								<div class="card">
 								<div class="card-header accord-panel-heading">
 									<h4 class="card-title">
-									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+									<a class="accordion-toggle text-dark" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
 										Cancellation & Refund
 									</a>
 									</h4>
@@ -1345,7 +1345,7 @@
 								<div class="card">
 								<div class="card-header accord-panel-heading">
 									<h4 class="card-title">
-									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+									<a class="accordion-toggle text-dark" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
 										Fare Details
 									</a>
 									</h4>
@@ -1356,8 +1356,8 @@
 									<div class="row">
 										
 										<div class="col-md-6">
-											Offered Fare <hr>
-											Convenience Fees / Tax <hr>
+											Base Fare <hr>
+											Taxes & Surcharges<hr>
 										</div>
 										<div class="col-md-6">
 											`+BaseFare+`<hr>
@@ -1381,11 +1381,11 @@
 					$('#modal-html').html(template);
 					html = `Continue Booking of Rs. <b>`+sum_of_fare+`/-</b>`;
 					if(is_round == 1){
-						button_html = `<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
+						button_html = `<button type="button" class="btn btn-dark" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
 '`+is_refundable_1+`','`+is_round+`','`+origin_2+`','`+destination_2+`','`+flight_name_2+`','`+flight_type_2+`','`+board_time_2+`','`+board_city_2+`','`+board_city_name_2+`','`+board_airport_2+`','`+board_datetime_2+`','`+duration_2+`','`+depart_time_2+`','`+depart_city_2+`','`+depart_airport_2+`','`+depart_datetime_2+`','`+depart_city_name_2+`','`+flight_img_2+`','`+BaseFare+`','`+tax+`','`+sum_of_fare+`')" >`+html+`</button>`;
 					$('#continue_button_id').html(button_html);
 					}else{
-						button_html = `<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
+						button_html = `<button type="button" class="btn btn-dark" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
 '`+is_refundable_1+`','`+is_round+`','','','','','','','','','','','','','','','','','`+BaseFare+`','`+tax+`','`+sum_of_fare+`')" >`+html+`</button>`;
 					$('#continue_button_id').html(button_html);
 					}
@@ -1396,7 +1396,7 @@
 				function viewFlightDetailsPage(adult_count,child_count,origin_1,destination_1,flight_name_1, flight_type_1,board_time_1,board_city_1,board_city_name_1,board_airport_1,board_datetime_1,duration_1,depart_time_1,depart_city_1,depart_airport_1,depart_datetime_1,depart_city_name_1,baggage_1,cabin_baggage_1,flight_img_1,
 is_refundable_1,is_round,origin_2,destination_2,flight_name_2, flight_type_2,board_time_2,board_city_2,board_city_name_2,board_airport_2,board_datetime_2,duration_2,depart_time_2,depart_city_2,depart_airport_2,depart_datetime_2,depart_city_name_2,flight_img_2,BaseFare,tax,sum_of_fare)
 				{
-					alert(origin_1);
+					// alert(origin_1);
 					var params = { 
 						adult_count : adult_count,child_count : child_count,origin_1 : origin_1 ,destination_1 : destination_1 ,flight_name_1 : flight_name_1,flight_type_1 : flight_type_1 ,board_time_1 : board_time_1 ,board_city_1 : board_city_1 ,board_city_name_1 : board_city_name_1 ,board_airport_1 : board_airport_1 ,board_datetime_1 : board_datetime_1 ,duration_1 : duration_1 ,depart_time_1 : depart_time_1 ,depart_city_1 : depart_city_1 ,depart_airport_1 : depart_airport_1 ,depart_datetime_1 : depart_datetime_1 ,depart_city_name_1 : depart_city_name_1 ,baggage_1 : baggage_1 ,cabin_baggage_1 : cabin_baggage_1 ,flight_img_1 : flight_img_1 ,is_refundable_1 : is_refundable_1 ,is_round : is_round ,origin_2 : origin_2 ,destination_2 : destination_2 ,flight_name_2 : flight_name_2,flight_type_2 : flight_type_2 ,board_time_2 : board_time_2 ,board_city_2 : board_city_2 ,board_city_name_2 : board_city_name_2 ,board_airport_2 : board_airport_2 ,board_datetime_2 : board_datetime_2 ,duration_2 : duration_2 ,depart_time_2 : depart_time_2 ,depart_city_2 : depart_city_2 ,depart_airport_2 : depart_airport_2 ,depart_datetime_2 : depart_datetime_2 ,depart_city_name_2 : depart_city_name_2 ,flight_img_2 : flight_img_2 ,BaseFare : BaseFare ,tax : tax ,sum_of_fare : sum_of_fare 
 					}

@@ -42,7 +42,7 @@ class Experience extends CI_Controller
         $query = $this->db->query($sql);
         $data = $query->result_array();
         $count = $query->num_rows();
-        $this->load->view('partner/experience-list', compact('data', 'count'));
+        $this->load->view('partner/experience-list', compact('data', 'city', 'count'));
     }
 
     public function experienceGallery($id){

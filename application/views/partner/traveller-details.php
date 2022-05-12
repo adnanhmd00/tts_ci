@@ -178,13 +178,25 @@
             </div>
         </div>
         
-        <div class="row mt-3">
+        <!-- <div class="row mt-3">
             <div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
                 <div class="form-group text-left">
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck2" name="is_checked" onclick="getGst()">
                         <label class="form-check-label" for="exampleCheck2">GST number for business travel (optional)</label>
                         <input type="text" class="form-control" id="gst-id placeholder="Enter GST" style="display:none" required>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="row mt-3">
+            <div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
+                <div class="form-group text-left">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck2" name="is_checked" onclick="getGst()">
+                        <label class="form-check-label" for="exampleCheck2">Donate 10 for COVID19 relief and for Utkarsh an organization contributing towards nature by planting  trees, sporting old age homes and child education</label>
+                        <!-- <input type="text" class="form-control" id="gst-id placeholder="Enter GST" style="display:none" required> -->
                     </div>
                 </div>
             </div>
@@ -203,15 +215,15 @@
             <div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
                 <div class="form-group text-left">
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck3">
-                        <label class="form-check-label" for="exampleCheck3">I understand and agree with the Fare Rules, the Privacy Policy of TravClan.</label>
+                        <!-- <input type="checkbox" class="form-check-input" id="exampleCheck3"> -->
+                        <label class="form-check-label" for="exampleCheck3">By clicking on continue to pay you are agreeing with the Fare Rules, the Privacy Policy and terms and conditions of The Travel Square.</label>
                     </div>
                 </div>
             </div>
         </div>
         
         <div class="form-group text-center mt-3">
-            <button class="btn btn-primary" >Continue To Pay</button>
+            <button class="btn btn-dark" >Continue To Pay</button>
         </div>
     </div>
 

@@ -61,8 +61,14 @@
                 <?php include('aside.php');?>
                 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
                 	<?php include('nav.php');?>
-                    <div class="container">
-                        <h2>Explore all things to do in Dubai 2022</h2>
+                    <div class="kt-subheader  kt-grid__item" id="kt_subheader">
+                            <div class="kt-container  kt-container--fluid ">
+                                <div class="kt-subheader__main">
+                                    <h2>Explore all things to do in <?php echo $city; ?></h2>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="container mt-4">
                         <div class="d-flex justify-content-end d-sm-block d-lg-none">
                         <button type="button" class="btn b
                         tn-outline-primary" data-toggle="modal" data-target="#filterModal">
@@ -98,7 +104,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3 d-none d-lg-block">
+                            <div class="col-md-3 mt-5 d-none d-lg-block">
                                 <div class="card p-2">
                                     <h3>Filters</h3>
                                     <div class="form-check">
@@ -119,13 +125,13 @@
                                 </div>
                             </div>
                             <div class="col-md-9">
-                            <?php echo $count; ?> activities found
+                            <?php echo $count; ?> <?php if($count == 1){ echo 'activity';}else{ echo 'activities'; }  ?> found in <?php echo $city; ?>
                             <div class="row">
                                 <?php foreach($data as $experience){ ?>
                                 <div class="col-md-4  mt-3 rounded">
                                     <a href="/experience-detail/<?php echo $experience['id'] ?>">
-                                        <div style="border-radius: 12px !important;" class="card">
-                                            <img style="border-radius: 12px 12px 0px 0px !important;width: 270px; height: 180px;" src="<?php echo json_decode($experience['photos_of_experience'])[0] ?>" alt="" class="img-fluid">
+                                        <div style="border-radius: 12px !important;" class="card text-dark">
+                                            <img style="border-radius: 7px 7px 0px 0px !important;width: 270px; height: 180px;" src="<?php echo json_decode($experience['photos_of_experience'])[0] ?>" alt="" class="img-fluid">
                                             <div class="mx-2 my-2">
                                                 <h6 class="p-1"><?php echo $experience['experience_name']; ?></h6>
                                                 <!-- <span><i class="fa fa-star"></i>4.5</span> -->
