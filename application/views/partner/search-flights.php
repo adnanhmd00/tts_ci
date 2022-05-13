@@ -5,6 +5,9 @@
     	<?php include('head.php');?>
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     	<style>
+			.modal{
+				overflow-y: hidden !important;
+			}
     		input[type="radio"] {
     			-ms-transform: scale(1.5); /* IE 9 */
     			-webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
@@ -944,9 +947,9 @@
 				<div class="modal-content">
 					<div class="modal-header">
 					<h4 class="modal-title">Review Itenary</h4>
-					<button type="button" class="close" data-dismiss="modal">X</button>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					</div>
-					<div class="modal-body" id="modal-html">
+					<div class="modal-body text-dark" id="modal-html">
 					
 					</div>
 					<div class="modal-footer" id="continue_button_id">
@@ -1194,7 +1197,7 @@
 								<div class="card-header">
 									<h5 class="card-title">`+flight_1+`</h5>
 								</div>
-								<div class="card-body">
+								<div class="card-body text-dark">
 									<div class="row">
 									    <div class="col-md-12"><img style="height: 50px;" src="`+flight_img_1+`" /> | `+flight_name_1+`</div>
 										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+board_time_1+`</div>
@@ -1255,7 +1258,7 @@
 										<div class="card-header">
 									<h5 class="card-title">`+flight_2+`</h5>
 								</div>
-								<div class="card-body">
+								<div class="card-body text-dark">
 									<div class="row">
 										<div class="col-md-12"><img style="height: 50px;" src="`+flight_img_2+`" /> | `+flight_name_2+`</div><br/>
 										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+board_time_2+`</div>
