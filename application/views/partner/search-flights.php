@@ -37,21 +37,23 @@
 		<style>
 			/* Center the loader */	
 			#loader {
-			position: absolute;
+			background-image: url("<?php echo base_url(); ?>uploads/banners/plane_800x600.gif");
+			/* position: absolute; */
 			left: 60%;
-			top: 60%;
+			/* top: 60%; */
 			z-index: 1;
-			width: 120px;
-			height: 120px;
-			margin: -76px 0 0 -76px;
+			width: 100%;
+			/* height: 120px; */
+			/* margin: -76px 0 0 -76px; */
 			border: 16px solid #f3f3f3;
-			border-radius: 50%;
+			/* border-radius: 50%; */
 			border-top: 16px solid #3498db;
+			background-repeat: no-repeat;
 			-webkit-animation: spin 2s linear infinite;
-			animation: spin 2s linear infinite;
+			/* animation: spin 2s linear infinite; */
 			}
 
-			@-webkit-keyframes spin {
+			/* @-webkit-keyframes spin {
 			0% { -webkit-transform: rotate(0deg); }
 			100% { -webkit-transform: rotate(360deg); }
 			}
@@ -59,7 +61,7 @@
 			@keyframes spin {
 			0% { transform: rotate(0deg); }
 			100% { transform: rotate(360deg); }
-			}
+			} */
 
 			/* Add animation to "page content" */
 			.animate-bottom {
@@ -349,17 +351,17 @@
 								<div id="banner" class="row mt-3">
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-at-best-discounted-fare.jpg" alt="" class="img-responsive ">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/4.png" alt="" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-from-anywhere-anytime.jpg" alt="" class="img-responsive ">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/5_Share.png" alt="" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-and-add-on-ancillary-services-at-best-b2b-rates.jpg" alt="" class="img-responsive ">
                                     </div>
                                 </div>
                             </div>
@@ -1034,7 +1036,7 @@
 		        // });
 
             	function getFlights() {
-					$('#search_results').html('<div id="loader"></div>');
+					$('#search_results').html('<div id="loader"><img src="<?php echo base_url(); ?>uploads/banners/plane_800x600.gif" alt="" class="img-responsive "> </div>');
 					$('#button_div').hide();
             		error = 0;
 					error1 = 0;
