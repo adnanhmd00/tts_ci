@@ -42,14 +42,15 @@
 			left: 60%;
 			/* top: 60%; */
 			z-index: 1;
-			width: 100%;
+			width: 50%;
+			margin: 0 auto !important;
 			/* height: 120px; */
 			/* margin: -76px 0 0 -76px; */
-			border: 16px solid #f3f3f3;
+			/* border: 16px solid #f3f3f3; */
 			/* border-radius: 50%; */
-			border-top: 16px solid #3498db;
-			background-repeat: no-repeat;
-			-webkit-animation: spin 2s linear infinite;
+			/* border-top: 16px solid #3498db; */
+			background-repeat: no-repeat !important;
+			/* -webkit-animation: spin 2s linear infinite; */
 			/* animation: spin 2s linear infinite; */
 			}
 
@@ -380,7 +381,7 @@
                                         <p></p>
                                     </div> -->
                                     <div class="row" id="footer_div_id">
-                                        <button class="btn btn-dark btn-block" id="button_div" >Continue Booking -> </button>
+                                        <button class="btn btn-dark btn-block" id="button_div" >Continue </button>
                                     </div>
                                 </div>
                             </div>
@@ -1036,7 +1037,7 @@
 		        // });
 
             	function getFlights() {
-					$('#search_results').html('<div id="loader"><img src="<?php echo base_url(); ?>uploads/banners/plane_800x600.gif" alt="" class="img-responsive "> </div>');
+					$('#search_results').html('<div id="loader" class="text-center"><img style="background-repeat: no-repeat !important;" src="<?php echo base_url(); ?>uploads/banners/plane_800x600.gif" alt="" class="img-responsive "> </div>');
 					$('#button_div').hide();
             		error = 0;
 					error1 = 0;
@@ -1384,7 +1385,7 @@
 						</div>`;
 					$('#myModal').modal('show');
 					$('#modal-html').html(template);
-					html = `Continue Booking of Rs. <b>`+sum_of_fare+`/-</b>`;
+					html = `Continue Booking of Rs. <b>`+parseInt(sum_of_fare)+`/-</b>`;
 					if(is_round == 1){
 						button_html = `<button type="button" class="btn btn-dark" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
 '`+is_refundable_1+`','`+is_round+`','`+origin_2+`','`+destination_2+`','`+flight_name_2+`','`+flight_type_2+`','`+board_time_2+`','`+board_city_2+`','`+board_city_name_2+`','`+board_airport_2+`','`+board_datetime_2+`','`+duration_2+`','`+depart_time_2+`','`+depart_city_2+`','`+depart_airport_2+`','`+depart_datetime_2+`','`+depart_city_name_2+`','`+flight_img_2+`','`+BaseFare+`','`+tax+`','`+sum_of_fare+`')" >`+html+`</button>`;
