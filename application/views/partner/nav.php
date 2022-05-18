@@ -2,14 +2,14 @@
     <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper" style="background-color:black;">
         <div id="kt_header_menu" style="background-color:black;" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-default ">
             <ul class="kt-menu__nav " style="background-color:black;">
-                <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+                <!-- <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
                     <a href="<?= base_url('Partner/view_hastrek');?>" class="kt-menu__link">
                         <span class="kt-menu__link-icon">
 
                         </span>
                         <span class="kt-menu__link-text">HASTREK</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                     </a>
-                </li>
+                </li> -->
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
                     <a href="<?= base_url('search-flight');?>" class="kt-menu__link">
                         <span class="kt-menu__link-icon">
@@ -26,6 +26,22 @@
                         <span class="kt-menu__link-text">HOTELS</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                     </a>
                 </li>
+                <!-- <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                        <span class="kt-menu__link-icon">
+                            
+                        </span>
+                        <span class="kt-menu__link-text">CABS</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
+                    </a>
+                </li> -->
+                <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                        <span class="kt-menu__link-icon">
+                            
+                        </span>
+                        <span class="kt-menu__link-text">EXPERIENCES</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
+                    </a>
+                </li>
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
                     <a href="#" class="kt-menu__link kt-menu__toggle">
                         <span class="kt-menu__link-icon">
@@ -39,33 +55,17 @@
                         <span class="kt-menu__link-icon">
                             
                         </span>
-                        <span class="kt-menu__link-text">CABS</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
-                    </a>
-                </li>
-                <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-                        <span class="kt-menu__link-icon">
-                            
-                        </span>
-                        <span class="kt-menu__link-text">EXPERIENCES</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
-                    </a>
-                </li>
-                <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-                        <span class="kt-menu__link-icon">
-                            
-                        </span>
                         <span class="kt-menu__link-text">VISA</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                     </a>
                 </li>
-                <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+                <!-- <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
                     <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
                         <span class="kt-menu__link-icon">
                             
                         </span>
                         <span class="kt-menu__link-text">CRUISES</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
