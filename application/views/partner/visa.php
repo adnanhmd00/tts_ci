@@ -200,20 +200,13 @@
                 				<div class="row">
                 					<div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
                 						<div class="container h5 text-center">
-                                            From Local Escapes to Far-Flung Adventures, Explore What Makes You Happy Anytime Anywhere !
+                                            Need a Visa? We are Here to Help From Documentation to Approval !
                                             <div class="row mt-3">
                                                 <div class="col-md-8">
                                                     <input type="text" id="filter" placeholder="Search with Destination City Name..." class="form-control" style="width">
-                                                    <nav id="search-list" class="text-left">
-                                                        <ul>
-                                                        <?php foreach($data as $city){ ?>
-                                                            <li><a href="<?= base_url('experience-list/'.$city['city']);?>"><?php print_r($city['city']); ?></a></li>
-                                                            <?php } ?>
-                                                        </ul>
-                                                    </nav>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <button class="btn btn-dark btn-block">Search</button>
+                                                    <button class="btn btn-dark btn-block">Apply Now</button>
                                                 </div>
                                             </div>
                                         </div>

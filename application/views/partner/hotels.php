@@ -200,20 +200,26 @@
                 				<div class="row">
                 					<div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
                 						<div class="container h5 text-center">
-                                            From Local Escapes to Far-Flung Adventures, Explore What Makes You Happy Anytime Anywhere !
+                                        Book More than 5000+ Hotels, Resorts, BNB's & More at the Best B2B Direct Consolidated Tariffs
                                             <div class="row mt-3">
-                                                <div class="col-md-8">
-                                                    <input type="text" id="filter" placeholder="Search with Destination City Name..." class="form-control" style="width">
-                                                    <nav id="search-list" class="text-left">
-                                                        <ul>
-                                                        <?php foreach($data as $city){ ?>
-                                                            <li><a href="<?= base_url('experience-list/'.$city['city']);?>"><?php print_r($city['city']); ?></a></li>
-                                                            <?php } ?>
-                                                        </ul>
-                                                    </nav>
-                                                </div>
                                                 <div class="col-md-4">
-                                                    <button class="btn btn-dark btn-block">Search</button>
+                                                    <label for="" class="text-left mt-1"></label>
+                                                    <input type="text" id="filter" placeholder="Search with Destination City Name..." class="form-control">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label for="from" class="d-flex justify-content-start text-dark small mb-0">From</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label for="to" class="d-flex justify-content-start text-dark small mb-0">To</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label for="to" class="d-flex justify-content-start text-dark small mb-0">Rooms & Pax</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <button class="btn mt-3 btn-dark btn-block">Search</button>
                                                 </div>
                                             </div>
                                         </div>

@@ -200,10 +200,10 @@
                 				<div class="row">
                 					<div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
                 						<div class="container h5 text-center">
-                                            From Local Escapes to Far-Flung Adventures, Explore What Makes You Happy Anytime Anywhere !
+                                        We Offer Packages & Land Services for More Than 583+ Cities. Partnered with 32+ Established DMC Accross the Globe
                                             <div class="row mt-3">
-                                                <div class="col-md-8">
-                                                    <input type="text" id="filter" placeholder="Search with Destination City Name..." class="form-control" style="width">
+                                                <div class="col-md-5">
+                                                    <input type="text" id="filter" placeholder="Where Travel To...?" class="form-control">
                                                     <nav id="search-list" class="text-left">
                                                         <ul>
                                                         <?php foreach($data as $city){ ?>
@@ -212,7 +212,10 @@
                                                         </ul>
                                                     </nav>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-md-5">
+                                                    <input type="text" placeholder="From?" class="form-control">
+                                                </div>
+                                                <div class="col-md-2">
                                                     <button class="btn btn-dark btn-block">Search</button>
                                                 </div>
                                             </div>
