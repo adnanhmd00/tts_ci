@@ -2,18 +2,46 @@
 
 <html lang="en">
     <!-- begin::Head -->
-    <head>
-        <?php include('head.php');?>
-    </head>
-    <!-- end::Head -->
+		<head>
+			<?php include('head.php');?>
+		</head>
+		<!-- end::Head -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Partner Help | Partner Login | The Travel Square | India's Largest B2B Travel Network Company</title>
+		
+		<!-- Meta Tags -->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="The Travel Square">
+		<meta name="description" content="We are Happy to Help You . For General Queries & Issues Please Contact Us Using the Request Form , Below . Our Team Will Assist You As Soon as The Issue is Raised . We are Fast at Resolving Issues . If Not Happy With The Resolution Contact Us at For Feedback & More Senior Assistance . Mail at contact@thetravelsquare.in.">
+		<meta name="distribution" content="global">
+		<meta name="country" content="india">
+		<meta name="copyright" content="The Travel Square | India's Largest B2B Travel Network Company">
+		<meta name="revisit-after" content="1 hour">
+		<meta name="designer" content="The Travel Square | India's Largest B2B Travel Network Company">
+		<meta name="language" content="english">
+		<meta name="robots" content="index, follow">
+		<meta name="rating" content="general">
+		<meta name="publisher" content="The Travel Square | India's Largest B2B Travel Network Company">
+		
+		<meta property="og:title" content="Partner Help | Partner Login | The Travel Square | India's Largest B2B Travel Network Company">
+		<meta property="og:description" content="We are Happy to Help You . For General Queries & Issues Please Contact Us Using the Request Form , Below . Our Team Will Assist You As Soon as The Issue is Raised . We are Fast at Resolving Issues . If Not Happy With The Resolution Contact Us at For Feedback & More Senior Assistance . Mail at contact@thetravelsquare.in.">
+		<meta property="og:image" content="https://www.thetravelsquare/the-travel-square-logo-thumbnail.png">
+		<meta property="og:url" content="http://partner.thetravelsquare.in/">
+	  
+		<meta name="twitter:card" content="We are Happy to Help You . For General Queries & Issues Please Contact Us Using the Request Form , Below . Our Team Will Assist You As Soon as The Issue is Raised . We are Fast at Resolving Issues . If Not Happy With The Resolution Contact Us at For Feedback & More Senior Assistance . Mail at contact@thetravelsquare.in.">
+		
+		<meta name="keywords" content="Customised Travel,Best Travel In India ,travel packages , dubai packages , holiday packages , travel, the travel square, hotels, flights, India's Largest B2B Travel Network Community">
+		<meta name="format-detection" content="9999007037">
     <!-- begin::Body -->
     <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-aside--enabled kt-aside--fixed">
-        <!-- begin:: Page -->
+        <!-- begin:: Page -->	
         <!-- begin:: Header Mobile -->
         <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
             <div class="kt-header-mobile__logo">
                 <a href="http://partner.thetravelsquare.in/">
-                <img alt="Logo" src="./help_files/logo-light.png">
+                <img alt="Logo" src="http://partner.thetravelsquare.in/resource/admin/img/logo.png">
                 </a>
             </div>
             <div class="kt-header-mobile__toolbar">
@@ -39,10 +67,11 @@
                     <div class="kt-content  kt-content--fit-top  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
                         <!-- begin:: Content -->
                         <!-- begin:: Hero -->
+						<br>
                         <div class="kt-sc" >
-                            <div class="kt-container " style="height:400px;background-image: url(<?= base_url('resource/admin/img/partner-help-the-travel-square-business-platform.jpg');?>)">
+                            <div class="kt-container " style="height:400px;background-image: url(<?= base_url('resource/admin/img/black-banner.png');?>)">
                                 <div class="kt-sc__top">
-                                    <h3 class="kt-sc__title">
+                                    <h3 class="kt-sc__title"><br>
                                         <font color="white">Partner Help Center
                                     </h3>
                                 </div>
@@ -59,7 +88,7 @@
                         <div class="kt-container " style="margin-top:50px;">
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-portlet kt-iconbox kt-iconbox--animate-slow">
+                                    <a href="tel:9999007037" class="kt-portlet kt-iconbox kt-iconbox--animate-slow">
                                         <div class="kt-portlet__body">
                                             <div class="kt-iconbox__body">
                                                 <div class="kt-iconbox__icon">
@@ -76,7 +105,7 @@
                                                         24/7 Support
                                                     </h3>
                                                     <div class="kt-iconbox__content">
-                                                        +91 - 7428080404 / 409 / 408
+                                                        +91 - 859590245 / 46 / 47
                                                     </div>
                                                 </div>
                                             </div>
@@ -84,7 +113,7 @@
                                     </a>
                                 </div>
                                 <div class="col-lg-4">
-                                    <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-portlet kt-iconbox kt-iconbox--animate">
+                                    <a href="mailto:partnercare@thetravelsquare.in" class="kt-portlet kt-iconbox kt-iconbox--animate">
                                         <div class="kt-portlet__body">
                                             <div class="kt-iconbox__body">
                                                 <div class="kt-iconbox__icon">
@@ -102,7 +131,7 @@
                                                         Mail Us 
                                                     </h3>
                                                     <div class="kt-iconbox__content">
-                                                        b2b@thetravelsquare.in
+                                                        partnercare@thetravelsquare.in
                                                     </div>
                                                 </div>
                                             </div>
@@ -110,7 +139,7 @@
                                     </a>
                                 </div>
                                 <div class="col-lg-4">
-                                    <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-portlet kt-iconbox kt-iconbox--animate-fast">
+                                    <a href="#" class="kt-portlet kt-iconbox kt-iconbox--animate-fast">
                                         <div class="kt-portlet__body">
                                             <div class="kt-iconbox__body">
                                                 <div class="kt-iconbox__icon">
@@ -221,420 +250,7 @@
         </div>
         <!-- end:: Page -->
         <!-- begin::Quick Panel -->
-        <div id="kt_quick_panel" class="kt-quick-panel">
-            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-quick-panel__close" id="kt_quick_panel_close_btn"><i class="flaticon2-delete"></i></a>
-            <div class="kt-quick-panel__nav" kt-hidden-height="66" style="">
-                <ul class="nav nav-tabs nav-tabs-line nav-tabs-bold nav-tabs-line-3x nav-tabs-line-brand  kt-notification-item-padding-x" role="tablist">
-                    <li class="nav-item active">
-                        <a class="nav-link active" data-toggle="tab" href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#kt_quick_panel_tab_notifications" role="tab">Notifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#kt_quick_panel_tab_logs" role="tab">Audit Logs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#kt_quick_panel_tab_settings" role="tab">Settings</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="kt-quick-panel__content">
-                <div class="tab-content">
-                    <div class="tab-pane fade show kt-scroll active ps ps--active-y" id="kt_quick_panel_tab_notifications" role="tabpanel" style="height: 592px; overflow: hidden;">
-                        <div class="kt-notification">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification__item">
-                                <div class="kt-notification__item-icon">
-                                    <i class="flaticon2-line-chart kt-font-success"></i>
-                                </div>
-                                <div class="kt-notification__item-details">
-                                    <div class="kt-notification__item-title">
-                                        New order has been received
-                                    </div>
-                                    <div class="kt-notification__item-time">
-                                        2 hrs ago
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification__item">
-                                <div class="kt-notification__item-icon">
-                                    <i class="flaticon2-box-1 kt-font-brand"></i>
-                                </div>
-                                <div class="kt-notification__item-details">
-                                    <div class="kt-notification__item-title">
-                                        New customer is registered
-                                    </div>
-                                    <div class="kt-notification__item-time">
-                                        3 hrs ago
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification__item">
-                                <div class="kt-notification__item-icon">
-                                    <i class="flaticon2-chart2 kt-font-danger"></i>
-                                </div>
-                                <div class="kt-notification__item-details">
-                                    <div class="kt-notification__item-title">
-                                        Application has been approved
-                                    </div>
-                                    <div class="kt-notification__item-time">
-                                        3 hrs ago
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification__item">
-                                <div class="kt-notification__item-icon">
-                                    <i class="flaticon2-image-file kt-font-warning"></i>
-                                </div>
-                                <div class="kt-notification__item-details">
-                                    <div class="kt-notification__item-title">
-                                        New file has been uploaded
-                                    </div>
-                                    <div class="kt-notification__item-time">
-                                        5 hrs ago
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification__item">
-                                <div class="kt-notification__item-icon">
-                                    <i class="flaticon2-drop kt-font-info"></i>
-                                </div>
-                                <div class="kt-notification__item-details">
-                                    <div class="kt-notification__item-title">
-                                        New user feedback received
-                                    </div>
-                                    <div class="kt-notification__item-time">
-                                        8 hrs ago
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification__item">
-                                <div class="kt-notification__item-icon">
-                                    <i class="flaticon2-pie-chart-2 kt-font-success"></i>
-                                </div>
-                                <div class="kt-notification__item-details">
-                                    <div class="kt-notification__item-title">
-                                        System reboot has been successfully completed
-                                    </div>
-                                    <div class="kt-notification__item-time">
-                                        12 hrs ago
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification__item">
-                                <div class="kt-notification__item-icon">
-                                    <i class="flaticon2-favourite kt-font-danger"></i>
-                                </div>
-                                <div class="kt-notification__item-details">
-                                    <div class="kt-notification__item-title">
-                                        New order has been placed
-                                    </div>
-                                    <div class="kt-notification__item-time">
-                                        15 hrs ago
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification__item kt-notification__item--read">
-                                <div class="kt-notification__item-icon">
-                                    <i class="flaticon2-safe kt-font-primary"></i>
-                                </div>
-                                <div class="kt-notification__item-details">
-                                    <div class="kt-notification__item-title">
-                                        Company meeting canceled
-                                    </div>
-                                    <div class="kt-notification__item-time">
-                                        19 hrs ago
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification__item">
-                                <div class="kt-notification__item-icon">
-                                    <i class="flaticon2-psd kt-font-success"></i>
-                                </div>
-                                <div class="kt-notification__item-details">
-                                    <div class="kt-notification__item-title">
-                                        New report has been received
-                                    </div>
-                                    <div class="kt-notification__item-time">
-                                        23 hrs ago
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification__item">
-                                <div class="kt-notification__item-icon">
-                                    <i class="flaticon-download-1 kt-font-danger"></i>
-                                </div>
-                                <div class="kt-notification__item-details">
-                                    <div class="kt-notification__item-title">
-                                        Finance report has been generated
-                                    </div>
-                                    <div class="kt-notification__item-time">
-                                        25 hrs ago
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification__item">
-                                <div class="kt-notification__item-icon">
-                                    <i class="flaticon-security kt-font-warning"></i>
-                                </div>
-                                <div class="kt-notification__item-details">
-                                    <div class="kt-notification__item-title">
-                                        New customer comment recieved
-                                    </div>
-                                    <div class="kt-notification__item-time">
-                                        2 days ago
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification__item">
-                                <div class="kt-notification__item-icon">
-                                    <i class="flaticon2-pie-chart kt-font-warning"></i>
-                                </div>
-                                <div class="kt-notification__item-details">
-                                    <div class="kt-notification__item-title">
-                                        New customer is registered
-                                    </div>
-                                    <div class="kt-notification__item-time">
-                                        3 days ago
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-                            <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-                        </div>
-                        <div class="ps__rail-y" style="top: 0px; height: 592px; right: 5px;">
-                            <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 300px;"></div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade kt-scroll ps" id="kt_quick_panel_tab_logs" role="tabpanel" style="height: 592px; overflow: hidden;">
-                        <div class="kt-notification-v2">
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification-v2__item">
-                                <div class="kt-notification-v2__item-icon">
-                                    <i class="flaticon-bell kt-font-brand"></i>
-                                </div>
-                                <div class="kt-notification-v2__itek-wrapper">
-                                    <div class="kt-notification-v2__item-title">
-                                        5 new user generated report
-                                    </div>
-                                    <div class="kt-notification-v2__item-desc">
-                                        Reports based on sales
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification-v2__item">
-                                <div class="kt-notification-v2__item-icon">
-                                    <i class="flaticon2-box kt-font-danger"></i>
-                                </div>
-                                <div class="kt-notification-v2__itek-wrapper">
-                                    <div class="kt-notification-v2__item-title">
-                                        2 new items submited
-                                    </div>
-                                    <div class="kt-notification-v2__item-desc">
-                                        by Grog John
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification-v2__item">
-                                <div class="kt-notification-v2__item-icon">
-                                    <i class="flaticon-psd kt-font-brand"></i>
-                                </div>
-                                <div class="kt-notification-v2__itek-wrapper">
-                                    <div class="kt-notification-v2__item-title">
-                                        79 PSD files generated
-                                    </div>
-                                    <div class="kt-notification-v2__item-desc">
-                                        Reports based on sales
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification-v2__item">
-                                <div class="kt-notification-v2__item-icon">
-                                    <i class="flaticon2-supermarket kt-font-warning"></i>
-                                </div>
-                                <div class="kt-notification-v2__itek-wrapper">
-                                    <div class="kt-notification-v2__item-title">
-                                        $2900 worth producucts sold
-                                    </div>
-                                    <div class="kt-notification-v2__item-desc">
-                                        Total 234 items
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification-v2__item">
-                                <div class="kt-notification-v2__item-icon">
-                                    <i class="flaticon-paper-plane-1 kt-font-success"></i>
-                                </div>
-                                <div class="kt-notification-v2__itek-wrapper">
-                                    <div class="kt-notification-v2__item-title">
-                                        4.5h-avarage response time
-                                    </div>
-                                    <div class="kt-notification-v2__item-desc">
-                                        Fostest is Barry
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification-v2__item">
-                                <div class="kt-notification-v2__item-icon">
-                                    <i class="flaticon2-information kt-font-danger"></i>
-                                </div>
-                                <div class="kt-notification-v2__itek-wrapper">
-                                    <div class="kt-notification-v2__item-title">
-                                        Database server is down
-                                    </div>
-                                    <div class="kt-notification-v2__item-desc">
-                                        10 mins ago
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification-v2__item">
-                                <div class="kt-notification-v2__item-icon">
-                                    <i class="flaticon2-mail-1 kt-font-brand"></i>
-                                </div>
-                                <div class="kt-notification-v2__itek-wrapper">
-                                    <div class="kt-notification-v2__item-title">
-                                        System report has been generated
-                                    </div>
-                                    <div class="kt-notification-v2__item-desc">
-                                        Fostest is Barry
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class="kt-notification-v2__item">
-                                <div class="kt-notification-v2__item-icon">
-                                    <i class="flaticon2-hangouts-logo kt-font-warning"></i>
-                                </div>
-                                <div class="kt-notification-v2__itek-wrapper">
-                                    <div class="kt-notification-v2__item-title">
-                                        4.5h-avarage response time
-                                    </div>
-                                    <div class="kt-notification-v2__item-desc">
-                                        Fostest is Barry
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-                            <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-                        </div>
-                        <div class="ps__rail-y" style="top: 0px; right: 5px;">
-                            <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
-                        </div>
-                    </div>
-                    <div class="tab-pane kt-quick-panel__content-padding-x fade kt-scroll ps" id="kt_quick_panel_tab_settings" role="tabpanel" style="height: 592px; overflow: hidden;">
-                        <form class="kt-form">
-                            <div class="kt-heading kt-heading--sm kt-heading--space-sm">Customer Care</div>
-                            <div class="form-group form-group-xs row">
-                                <label class="col-8 col-form-label">Enable Notifications:</label>
-                                <div class="col-4 kt-align-right">
-                                    <span class="kt-switch kt-switch--success kt-switch--sm">
-                                    <label>
-                                    <input type="checkbox" checked="checked" name="quick_panel_notifications_1">
-                                    <span></span>
-                                    </label>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="form-group form-group-xs row">
-                                <label class="col-8 col-form-label">Enable Case Tracking:</label>
-                                <div class="col-4 kt-align-right">
-                                    <span class="kt-switch kt-switch--success kt-switch--sm">
-                                    <label>
-                                    <input type="checkbox" name="quick_panel_notifications_2">
-                                    <span></span>
-                                    </label>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="form-group form-group-last form-group-xs row">
-                                <label class="col-8 col-form-label">Support Portal:</label>
-                                <div class="col-4 kt-align-right">
-                                    <span class="kt-switch kt-switch--success kt-switch--sm">
-                                    <label>
-                                    <input type="checkbox" checked="checked" name="quick_panel_notifications_2">
-                                    <span></span>
-                                    </label>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="kt-separator kt-separator--space-md kt-separator--border-dashed"></div>
-                            <div class="kt-heading kt-heading--sm kt-heading--space-sm">Reports</div>
-                            <div class="form-group form-group-xs row">
-                                <label class="col-8 col-form-label">Generate Reports:</label>
-                                <div class="col-4 kt-align-right">
-                                    <span class="kt-switch kt-switch--sm kt-switch--danger">
-                                    <label>
-                                    <input type="checkbox" checked="checked" name="quick_panel_notifications_3">
-                                    <span></span>
-                                    </label>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="form-group form-group-xs row">
-                                <label class="col-8 col-form-label">Enable Report Export:</label>
-                                <div class="col-4 kt-align-right">
-                                    <span class="kt-switch kt-switch--sm kt-switch--danger">
-                                    <label>
-                                    <input type="checkbox" name="quick_panel_notifications_3">
-                                    <span></span>
-                                    </label>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="form-group form-group-last form-group-xs row">
-                                <label class="col-8 col-form-label">Allow Data Collection:</label>
-                                <div class="col-4 kt-align-right">
-                                    <span class="kt-switch kt-switch--sm kt-switch--danger">
-                                    <label>
-                                    <input type="checkbox" checked="checked" name="quick_panel_notifications_4">
-                                    <span></span>
-                                    </label>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="kt-separator kt-separator--space-md kt-separator--border-dashed"></div>
-                            <div class="kt-heading kt-heading--sm kt-heading--space-sm">Memebers</div>
-                            <div class="form-group form-group-xs row">
-                                <label class="col-8 col-form-label">Enable Member singup:</label>
-                                <div class="col-4 kt-align-right">
-                                    <span class="kt-switch kt-switch--sm kt-switch--brand">
-                                    <label>
-                                    <input type="checkbox" checked="checked" name="quick_panel_notifications_5">
-                                    <span></span>
-                                    </label>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="form-group form-group-xs row">
-                                <label class="col-8 col-form-label">Allow User Feedbacks:</label>
-                                <div class="col-4 kt-align-right">
-                                    <span class="kt-switch kt-switch--sm kt-switch--brand">
-                                    <label>
-                                    <input type="checkbox" name="quick_panel_notifications_5">
-                                    <span></span>
-                                    </label>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="form-group form-group-last form-group-xs row">
-                                <label class="col-8 col-form-label">Enable Customer Portal:</label>
-                                <div class="col-4 kt-align-right">
-                                    <span class="kt-switch kt-switch--sm kt-switch--brand">
-                                    <label>
-                                    <input type="checkbox" checked="checked" name="quick_panel_notifications_6">
-                                    <span></span>
-                                    </label>
-                                    </span>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-                            <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-                        </div>
-                        <div class="ps__rail-y" style="top: 0px; right: 5px;">
-                            <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
         <!-- end::Quick Panel -->
         <!-- begin::Scrolltop -->
         <div id="kt_scrolltop" class="kt-scrolltop">
@@ -642,20 +258,7 @@
         </div>
         <!-- end::Scrolltop -->
         <!-- begin::Sticky Toolbar -->
-        <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="Check out more demos">
-                <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" class=""><i class="flaticon2-drop"></i></a>
-            </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Layout Builder">
-                <a href="#
-            </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
-                <a href="#" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
-            </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Example">
-                <a href="https://keenthemes.com/metronic/preview/demo1/custom/apps/support-center/home-1.html#" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
-            </li>
-        </ul>
+        
         <!-- end::Sticky Toolbar -->
         <!-- begin::Demo Panel -->
         

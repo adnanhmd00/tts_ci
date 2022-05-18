@@ -1,7 +1,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-<title><?php if(!empty($userinfo)){ echo ucwords($userinfo->type);} ?> Login | The Travel Square | India's Largest B2B Travel Network</title>
+<title><?php if(!empty($userinfo)){ echo ucwords($userinfo->type);} ?> Partner Login | The Travel Square | India's Largest B2B Travel Network</title>
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

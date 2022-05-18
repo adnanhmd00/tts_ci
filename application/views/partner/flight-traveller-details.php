@@ -307,7 +307,7 @@
                                     </div>
                                     
                                     <div class="form-group text-center mt-3">
-                                        <button class="btn btn-dark">Continue To Pay</button>
+                                        <button class="btn btn-primary">Continue To Pay</button>
                                     </div>
                                 </div>
 

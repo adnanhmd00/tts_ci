@@ -182,41 +182,9 @@
             <div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
                 <div class="form-group text-left">
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="chkGST" name="is_checked" onclick="getGst()">
-                        <label class="form-check-label" for="chkGST">GST number for business travel (optional)</label>
-                        <input type="text" class="form-control" id="gst-id placeholder="Enter GST" style="display:none" required>
-                        <!-- <label for="chkPassport">
-                            <input type="checkbox" id="chkPassport" />
-                            Do you have Passport?
-                        </label> -->
-                        <div id="addGST"></div>
-                        <div id="dvGST" class="mt-2" style="display: none">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="Company Name" name="company_name"/>
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="GST Number" name="gst_no"/>
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="Address" name="address"/>
-                                </div>
-                            </div>
-                            <!-- Passport Number:
-                            <input type="text" id="txtPassportNumber" /> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-3">
-            <div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
-                <div class="form-group text-left">
-                    <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck2" name="is_checked" onclick="getGst()">
-                        <label class="form-check-label" for="exampleCheck2">Donate 10 for COVID19 relief and for Utkarsh an organization contributing towards nature by planting  trees, sporting old age homes and child education</label>
-                        <!-- <input type="text" class="form-control" id="gst-id placeholder="Enter GST" style="display:none" required> -->
+                        <label class="form-check-label" for="exampleCheck2">GST number for business travel (optional)</label>
+                        <input type="text" class="form-control" id="gst-id placeholder="Enter GST" style="display:none" required>
                     </div>
                 </div>
             </div>
@@ -235,15 +203,15 @@
             <div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
                 <div class="form-group text-left">
                     <div class="form-check">
-                        <!-- <input type="checkbox" class="form-check-input" id="exampleCheck3"> -->
-                        <label class="form-check-label" for="exampleCheck3">By clicking on continue to pay you are agreeing with the Fare Rules, the Privacy Policy and terms and conditions of The Travel Square.</label>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck3">
+                        <label class="form-check-label" for="exampleCheck3">I understand and agree with the Fare Rules, the Privacy Policy of TravClan.</label>
                     </div>
                 </div>
             </div>
         </div>
         
         <div class="form-group text-center mt-3">
-            <button class="btn btn-dark" >Continue To Pay</button>
+            <button class="btn btn-primary" >Continue To Pay</button>
         </div>
     </div>
 
@@ -379,18 +347,4 @@
             }
         });
     });
-
-    // Checkbox GST value start
-    $(function () {
-        $("#chkGST").click(function () {
-            if ($(this).is(":checked")) {
-                $("#dvGST").show();
-                $("#AddPassport").hide();
-            } else {
-                $("#dvGST").hide();
-                $("#AddPassport").show();
-            }
-        });
-    });
-    // Checkbox GST value start
 </script>

@@ -5,9 +5,6 @@
     	<?php include('head.php');?>
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     	<style>
-			.modal{
-				overflow-y: hidden !important;
-			}
     		input[type="radio"] {
     			-ms-transform: scale(1.5); /* IE 9 */
     			-webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
@@ -37,24 +34,21 @@
 		<style>
 			/* Center the loader */	
 			#loader {
-			background-image: url("<?php echo base_url(); ?>uploads/banners/plane_800x600.gif");
-			/* position: absolute; */
+			position: absolute;
 			left: 60%;
-			/* top: 60%; */
+			top: 60%;
 			z-index: 1;
-			width: 50%;
-			margin: 0 auto !important;
-			/* height: 120px; */
-			/* margin: -76px 0 0 -76px; */
-			/* border: 16px solid #f3f3f3; */
-			/* border-radius: 50%; */
-			/* border-top: 16px solid #3498db; */
-			background-repeat: no-repeat !important;
-			/* -webkit-animation: spin 2s linear infinite; */
-			/* animation: spin 2s linear infinite; */
+			width: 120px;
+			height: 120px;
+			margin: -76px 0 0 -76px;
+			border: 16px solid #f3f3f3;
+			border-radius: 50%;
+			border-top: 16px solid #3498db;
+			-webkit-animation: spin 2s linear infinite;
+			animation: spin 2s linear infinite;
 			}
 
-			/* @-webkit-keyframes spin {
+			@-webkit-keyframes spin {
 			0% { -webkit-transform: rotate(0deg); }
 			100% { -webkit-transform: rotate(360deg); }
 			}
@@ -62,7 +56,7 @@
 			@keyframes spin {
 			0% { transform: rotate(0deg); }
 			100% { transform: rotate(360deg); }
-			} */
+			}
 
 			/* Add animation to "page content" */
 			.animate-bottom {
@@ -252,8 +246,7 @@
                                         		<div class="form-group">
                                         			<label for="From">From</label>
                                         			<div class="row-fluid">
-                                        				<select class="selectpicker  form-control" name="Origin" style="height: 100px !important;" data-show-subtext="true" data-live-search="true">
-														<option value="">Select</option>
+                                        				<select class="selectpicker form-control" name="Origin" style="height: 100px !important;" data-show-subtext="true" data-live-search="true">
                                         					<?php
                                         					foreach($datas as $data){
                                         						?>
@@ -279,11 +272,11 @@
                                         			<label for="to">To</label>
                                         			<div class="row-fluid">
                                         				<select class="selectpicker form-control" name="Destination" data-show-subtext="true" data-live-search="true">
-															<option value="">Select</option>
                                         					<?php
                                         					foreach($datas as $data){
                                         						?>
-                                        						<option value="<?php echo $data->cityCode ?>"  data-subtext="<?php echo $data->cityName ?>"><?php echo $data->cityCode ?></option>
+
+                                        						<option value="<?php echo $data->cityCode ?>" data-subtext="<?php echo $data->cityName ?>"><?php echo $data->cityCode ?></option>
                                         						<?php
                                         					}
                                         					?>
@@ -295,13 +288,13 @@
 											<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="inputDate">Depart</label>
-                                        			<input id="datepicker-from" name="PreferredDepartureTime"  value="<?php echo date("m/d/Y", strtotime('tomorrow'));?>" class="form-control" placeholder="Select date" autocomplete="off"> 
+                                        			<input id="datepicker-from" name="PreferredDepartureTime" class="form-control" placeholder="Select date" > 
                                         		</div>
                                         	</div>
                                         	<div class="col-md-1">
                                         		<div class="form-group">
                                         			<label for="inputDate">Return</label>
-                                        			<input id="datepicker-to" class="form-control" placeholder="Select date"  autocomplete="off">  
+                                        			<input id="datepicker-to" class="form-control" placeholder="Select date" >  
                                         		</div>
                                         	</div>
 											<div class="col-md-1">
@@ -341,7 +334,7 @@
                                         	</div>
 											<div class="col-md-2" style="margin-top:26px;">
 											<div class="form-group text-center">
-												<button id="submit-button" class="btn btn-dark">Search Flights</button>
+												<button id="submit-button" class="btn btn-primary">Search Flights</button>
 											</div>
 											</div>			
                                         </div>
@@ -349,28 +342,12 @@
                                     </div>
                                 </div>
                                 <div id="search_results" ></div>
-								<div id="banner" class="row mt-3">
-                                <div class="col-md-4 mb-1">
-                                    <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-at-best-discounted-fare.jpg" alt="" class="img-responsive ">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-1">
-                                    <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-from-anywhere-anytime.jpg" alt="" class="img-responsive ">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-1">
-                                    <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-and-add-on-ancillary-services-at-best-b2b-rates.jpg" alt="" class="img-responsive ">
-                                    </div>
-                                </div>
-                            </div>
+
                             </div>
                             <!-- end:: Content -->				
                         </div>
 						<div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop footer_div_class" id="footer" style="background-color: #e8e3e3; padding: 5px; margin: 0px;
-; display:none!important; position:fixed;width:100%; bottom:0px;">
+; display:none!important; position:fixed;width:100%; top:685px;">
                         <div id="details" class="kt-container  kt-container--fluid ">
 						<div class="col-md-7"></div>
                             <div class="col-md-3">                                
@@ -381,7 +358,7 @@
                                         <p></p>
                                     </div> -->
                                     <div class="row" id="footer_div_id">
-                                        <button class="btn btn-dark btn-block" id="button_div" >Continue </button>
+                                        <button class="btn btn-primary btn-block" id="button_div" >Continue Booking -> </button>
                                     </div>
                                 </div>
                             </div>
@@ -389,7 +366,7 @@
                         </div>
                     </div>
                         <!-- begin:: Footer -->
-                        <?php include('footer.php');?>
+                        <?php //include('footer.php');?>
                         <!-- end:: Footer -->			
                     </div>
                 </div>
@@ -950,9 +927,9 @@
 				<div class="modal-content">
 					<div class="modal-header">
 					<h4 class="modal-title">Review Itenary</h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<button type="button" class="close" data-dismiss="modal">X</button>
 					</div>
-					<div class="modal-body text-dark" id="modal-html">
+					<div class="modal-body" id="modal-html">
 					
 					</div>
 					<div class="modal-footer" id="continue_button_id">
@@ -960,8 +937,8 @@
 					</div>
 				</div>
 				</div>
-			</div>
-			</div>
+		</div>
+			</div>z
             <!--ENd:: Chat-->
             <?php include('jquery.php');?>
             <div class="daterangepicker ltr show-ranges opensleft">
@@ -1037,7 +1014,7 @@
 		        // });
 
             	function getFlights() {
-					$('#search_results').html('<div id="loader" class="text-center"><img style="background-repeat: no-repeat !important;" src="<?php echo base_url(); ?>uploads/banners/plane_800x600.gif" alt="" class="img-responsive "> </div>');
+					$('#search_results').html('<div id="loader"></div>');
 					$('#button_div').hide();
             		error = 0;
 					error1 = 0;
@@ -1129,7 +1106,7 @@
 		            	data: JSON.stringify(params),
 		            	success: function(res) {
 		            		$('#search_results').html(res); 
-							$('#banner').hide();
+							
 		            		$('.selectpicker').selectpicker('refresh');
 		            		$("#datepicker-from").datepicker({
 					            beforeShow: addCustomInformation,
@@ -1200,7 +1177,7 @@
 								<div class="card-header">
 									<h5 class="card-title">`+flight_1+`</h5>
 								</div>
-								<div class="card-body text-dark">
+								<div class="card-body">
 									<div class="row">
 									    <div class="col-md-12"><img style="height: 50px;" src="`+flight_img_1+`" /> | `+flight_name_1+`</div>
 										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+board_time_1+`</div>
@@ -1261,7 +1238,7 @@
 										<div class="card-header">
 									<h5 class="card-title">`+flight_2+`</h5>
 								</div>
-								<div class="card-body text-dark">
+								<div class="card-body">
 									<div class="row">
 										<div class="col-md-12"><img style="height: 50px;" src="`+flight_img_2+`" /> | `+flight_name_2+`</div><br/>
 										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+board_time_2+`</div>
@@ -1293,13 +1270,13 @@
 												
 					}
 					var sum_of_fare = parseFloat(BaseFare)+parseFloat(tax);
-					template += `<div class="row text-dark">
+					template += `<div class="row">
 							<div class="col-md-12">
 							<div class="panel-group" id="accordion">
 								<div class="card">
 								<div class="card-header accord-panel-heading">
 									<h4 class="card-title">
-									<a class="accordion-toggle text-dark" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
 										Baggage Policy
 									</a>
 									</h4>
@@ -1336,7 +1313,7 @@
 								<div class="card">
 								<div class="card-header accord-panel-heading">
 									<h4 class="card-title">
-									<a class="accordion-toggle text-dark" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
 										Cancellation & Refund
 									</a>
 									</h4>
@@ -1351,7 +1328,7 @@
 								<div class="card">
 								<div class="card-header accord-panel-heading">
 									<h4 class="card-title">
-									<a class="accordion-toggle text-dark" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
 										Fare Details
 									</a>
 									</h4>
@@ -1362,8 +1339,8 @@
 									<div class="row">
 										
 										<div class="col-md-6">
-											Base Fare <hr>
-											Taxes & Surcharges<hr>
+											Offered Fare <hr>
+											Convenience Fees / Tax <hr>
 										</div>
 										<div class="col-md-6">
 											`+BaseFare+`<hr>
@@ -1385,13 +1362,13 @@
 						</div>`;
 					$('#myModal').modal('show');
 					$('#modal-html').html(template);
-					html = `Continue Booking of Rs. <b>`+parseInt(sum_of_fare)+`/-</b>`;
+					html = `Continue Booking of Rs. <b>`+sum_of_fare+`/-</b>`;
 					if(is_round == 1){
-						button_html = `<button type="button" class="btn btn-dark" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
+						button_html = `<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
 '`+is_refundable_1+`','`+is_round+`','`+origin_2+`','`+destination_2+`','`+flight_name_2+`','`+flight_type_2+`','`+board_time_2+`','`+board_city_2+`','`+board_city_name_2+`','`+board_airport_2+`','`+board_datetime_2+`','`+duration_2+`','`+depart_time_2+`','`+depart_city_2+`','`+depart_airport_2+`','`+depart_datetime_2+`','`+depart_city_name_2+`','`+flight_img_2+`','`+BaseFare+`','`+tax+`','`+sum_of_fare+`')" >`+html+`</button>`;
 					$('#continue_button_id').html(button_html);
 					}else{
-						button_html = `<button type="button" class="btn btn-dark" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
+						button_html = `<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
 '`+is_refundable_1+`','`+is_round+`','','','','','','','','','','','','','','','','','`+BaseFare+`','`+tax+`','`+sum_of_fare+`')" >`+html+`</button>`;
 					$('#continue_button_id').html(button_html);
 					}
@@ -1402,7 +1379,7 @@
 				function viewFlightDetailsPage(adult_count,child_count,origin_1,destination_1,flight_name_1, flight_type_1,board_time_1,board_city_1,board_city_name_1,board_airport_1,board_datetime_1,duration_1,depart_time_1,depart_city_1,depart_airport_1,depart_datetime_1,depart_city_name_1,baggage_1,cabin_baggage_1,flight_img_1,
 is_refundable_1,is_round,origin_2,destination_2,flight_name_2, flight_type_2,board_time_2,board_city_2,board_city_name_2,board_airport_2,board_datetime_2,duration_2,depart_time_2,depart_city_2,depart_airport_2,depart_datetime_2,depart_city_name_2,flight_img_2,BaseFare,tax,sum_of_fare)
 				{
-					// alert(origin_1);
+					alert(origin_1);
 					var params = { 
 						adult_count : adult_count,child_count : child_count,origin_1 : origin_1 ,destination_1 : destination_1 ,flight_name_1 : flight_name_1,flight_type_1 : flight_type_1 ,board_time_1 : board_time_1 ,board_city_1 : board_city_1 ,board_city_name_1 : board_city_name_1 ,board_airport_1 : board_airport_1 ,board_datetime_1 : board_datetime_1 ,duration_1 : duration_1 ,depart_time_1 : depart_time_1 ,depart_city_1 : depart_city_1 ,depart_airport_1 : depart_airport_1 ,depart_datetime_1 : depart_datetime_1 ,depart_city_name_1 : depart_city_name_1 ,baggage_1 : baggage_1 ,cabin_baggage_1 : cabin_baggage_1 ,flight_img_1 : flight_img_1 ,is_refundable_1 : is_refundable_1 ,is_round : is_round ,origin_2 : origin_2 ,destination_2 : destination_2 ,flight_name_2 : flight_name_2,flight_type_2 : flight_type_2 ,board_time_2 : board_time_2 ,board_city_2 : board_city_2 ,board_city_name_2 : board_city_name_2 ,board_airport_2 : board_airport_2 ,board_datetime_2 : board_datetime_2 ,duration_2 : duration_2 ,depart_time_2 : depart_time_2 ,depart_city_2 : depart_city_2 ,depart_airport_2 : depart_airport_2 ,depart_datetime_2 : depart_datetime_2 ,depart_city_name_2 : depart_city_name_2 ,flight_img_2 : flight_img_2 ,BaseFare : BaseFare ,tax : tax ,sum_of_fare : sum_of_fare 
 					}

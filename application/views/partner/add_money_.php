@@ -2,10 +2,7 @@
 <html lang="en">
 	<!-- begin::Head -->
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Metronic | Wizard 4</title>
-		<meta name="description" content="Wizard examples">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
 		<!--begin::Fonts -->
 		<link rel="stylesheet" href="<?= base_url('resource/money_to_wallet_files/css');?>">
 		<!--end::Fonts -->
@@ -1285,7 +1282,7 @@
 											<h3 class="kt-head__title">
 												User Notifications
 												&nbsp;
-												<span class="btn btn-success btn-sm btn-bold btn-font-md">23 new</span>
+												<span class="btn btn-success btn-sm btn-bold btn-font-md">0 New</span>
 											</h3>
 											<ul class="nav nav-tabs nav-tabs-line nav-tabs-bold nav-tabs-line-3x nav-tabs-line-success kt-notification-item-padding-x" role="tablist">
 												<li class="nav-item">

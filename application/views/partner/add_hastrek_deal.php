@@ -110,7 +110,7 @@
                                             <h3 class="kt-head__title">
                                                 User Notifications
                                                 &nbsp;
-                                                <span class="btn btn-success btn-sm btn-bold btn-font-md">23 new</span>
+                                                <span class="btn btn-success btn-sm btn-bold btn-font-md">0 New</span>
                                             </h3>
                                             <ul class="nav nav-tabs nav-tabs-line nav-tabs-bold nav-tabs-line-3x nav-tabs-line-success kt-notification-item-padding-x" role="tablist">
                                                 <li class="nav-item">
@@ -759,12 +759,7 @@
                                             <span class="kt-nav__link-text">English</span>
                                             </a>
                                         </li>
-										<li class="kt-nav__item">
-                                            <a href="#" class="kt-nav__link">
-                                            <span class="kt-nav__link-icon"><img src="./files/128-spain.svg" alt=""></span>
-                                            <span class="kt-nav__link-text">Hindi</span>
-                                            </a>
-                                        </li>
+										
                                         
                                     </ul>
                                 </div>
@@ -774,7 +769,7 @@
                                 <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
                                     <div class="kt-header__topbar-user">
                                         <span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
-                                        <span class="kt-header__topbar-username kt-hidden-mobile">Mr. Aman</span>
+                                        <span class="kt-header__topbar-username kt-hidden-mobile">Partner</span>
                                         <img class="kt-hidden" alt="Pic" src="./files/300_25.jpg">
                                         <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
                                         <span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold">S</span>
