@@ -201,6 +201,64 @@
         </div>
         <div class="row mt-3">
             <div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
+            <strong class="text-dark">Secure your Trip! Get Travel Insured</strong>
+            <div class="small">Insure your travel against expected inturruptions events while travelling. GMT Insurance covers Everything for you.</div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group text-left card p-2">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input mt-3 mr-4" name="insurance" id="insurance1">
+                                <label class="form-check-label ml-2" for="insurance1">Silver Plan @ ₹300 for cover upto ₹5000 <br><a href="">VIEW PLAN BENEFITS</a></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group text-left card p-2">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input mt-3 mr-4" name="insurance" id="insurance2">
+                                <label class="form-check-label ml-2" for="insurance2">Silver Plan @ ₹00 for cover upto ₹100000 <br><a href="">VIEW PLAN BENEFITS</a></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="small">By adding the selected insurance you confirm all passengers are between 2 to 70 years of age, and agree to Terms & Conditions of GMT insurance.</div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
+            <strong class="text-dark">Lost Baggage Protection</strong>
+            <div class="small">Get you lost or delayed bags withing time, else get compensated</div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group text-left card p-2">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input mr-4" name="baggage" id="baggage1">
+                                <label class="form-check-label ml-2" for="baggage1">₹20000 cover @ ₹200 (168 hrs)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group text-left card p-2">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input mr-4" name="baggage" id="baggage2">
+                                <label class="form-check-label ml-2" for="baggage2">₹30000 cover @ ₹350 (120 hrs)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group text-left card p-2">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input mr-4" name="baggage" id="baggage3">
+                                <label class="form-check-label ml-2" for="baggage3">₹50000 cover @ ₹500 (98 hrs)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="small">By adding baggage protection you agree to Track My Bag Private Limited's Terms & Luggage Privacy Policyd</div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
                 <div class="form-group text-left">
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck3">
@@ -211,7 +269,7 @@
         </div>
         
         <div class="form-group text-center mt-3">
-            <button class="btn btn-primary" >Continue To Pay</button>
+            <button class="btn btn-dark" >Continue To Pay</button>
         </div>
     </div>
 

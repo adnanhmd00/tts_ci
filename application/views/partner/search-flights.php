@@ -225,30 +225,23 @@
                 				</div>
                 			</div>
                 		</div>
-                		<!-- end:: Content Head -->					
-                		<!-- begin:: Content -->
                 		<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid" id="kt-search-section">
-                			<!--Begin::Dashboard 1-->
-                			<!--Begin::Row-->
-                			<!-- <form action="/api/FlightSearch" method="post"> -->
                 				<div class="row">
                 					<div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
-                						<!--begin:: Widgets/Activity-->
-                						<div class="row">
-                                           
-                                            <div class="form-check mr-2 mb-2">
-                                            	<label class="form-check-label">
-                                            		<input type="radio" class="form-check-input" value="1" name="JourneyType" checked="checked"><span class="h5">&nbsp;One Way</span>
-                                            	</label>
-                                            </div>
-                                            <div class="form-check ml-2">
-                                            	<label class="form-check-label">
-                                            		<input type="radio" class="form-check-input" value="2" name="JourneyType"><span class="h5">&nbsp;Round Way</span>
-                                            	</label>
-                                            </div>
-                                        </div>
                                         <div class="row mt-0">
-                                        	<div class="col-md-2">
+											<div class="col	mt-3">
+												<div class="form-check mb-2">
+													<label class="form-check-label">
+														<input type="radio" class="form-check-input" value="1" name="JourneyType" checked="checked"><span class="h5">&nbsp;One Way</span>
+													</label>
+												</div>
+												<div class="form-check">
+													<label class="form-check-label">
+														<input type="radio" class="form-check-input" value="2" name="JourneyType"><span class="h5">&nbsp;Round Trip</span>
+													</label>
+												</div>
+											</div>
+                                        	<div class="col">
                                         		<div class="form-group">
                                         			<label for="From">From</label>
                                         			<div class="row-fluid">
@@ -266,15 +259,15 @@
                                         			</div>
                                         		</div>
                                         	</div>
-                                        	<div class="d-none d-lg-block mt-3 p-4">
+                                        	<!-- <div class="d-none d-lg-block mt-3 p-4">
                                         		<i class="fa fa-exchange fa-2x"></i>
-                                        	</div>
+                                        	</div> -->
 
                                         	<div class="d-md-none d-sm-block">
                                         		<div class="text-center"><i class="fa fa-exchange fa-rotate-90 fa-2x"></i></div>
                                         	</div>
 
-                                        	<div class="col-md-2">
+                                        	<div class="col">
                                         		<div class="form-group">
                                         			<label for="to">To</label>
                                         			<div class="row-fluid">
@@ -349,7 +342,6 @@
                                     </div>
                                 </div>
                                 <div id="search_results" ></div>
-								html_entity_decode
 								<div id="banner" class="row mt-3">
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
