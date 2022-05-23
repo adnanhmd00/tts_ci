@@ -96,25 +96,11 @@
                                         </svg>
                                         <span class="kt-pulse__ring"></span>
                                     </span>
-                                    <!--
-                                        Use dot badge instead of animated pulse effect:
-                                        <span class="kt-badge kt-badge--dot kt-badge--notify kt-badge--sm kt-badge--brand"></span>
-                                        -->
+                               
                                 </div>
                                 
                             </div>
-                            <!--end: Notifications --><!--begin: Quick Actions -->
-                            
-                            <!--end: Quick Actions -->
-                            <!--begin: My Cart -->
-                            
-                            <!--end: My Cart --><!--begin: Quick panel toggler -->
-                            
-                            <!--end: Quick panel toggler --><!--begin: Language bar -->
-                            
-                            <!--end: Language bar --><!--begin: User Bar -->
-                            
-                            <!--end: User Bar -->
+                           
                         </div>
                         <!-- end:: Header Topbar -->
                     </div>
@@ -156,13 +142,13 @@
                                             <div class="kt-portlet__head-label">
                                                 <h3 class="kt-portlet__head-title">
                                                 <?php if($for=='general-request'){?>    
-                                                    General Queries
+                                                    Write us all your Queries Regarding Issues and Infomation Required
                                                 <?php }?>
                                                 <?php if($for=='business-request'){?>    
-                                                    Get In Touch For Business
+                                                    Get In Touch For Business Related Queries, Infomation, Deals and Investments
                                                 <?php }?>
                                                 <?php if($for=='ppc-request'){?>    
-                                                    PPC Request
+                                                    Raise a Request for PPC Ads Service of The Travel Square, and Our Team Will connect Shortly
                                                 <?php }?>
                                                 </h3>
                                             </div>
@@ -229,7 +215,7 @@
         <!-- begin::Sticky Toolbar -->
         <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
-                <a href="http://travpayments.com/" class=""><i class="flaticon2-drop"></i></a>
+                <a href="http://partner.thetravelsquare.in/travpay" class=""><i class="flaticon2-drop"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
                 <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>

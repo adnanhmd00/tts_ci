@@ -21,7 +21,7 @@
         <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed " >
             <div class="kt-header-mobile__logo">
                 <a href="http://partner.thetravelsquare.in/">
-				<img alt="Logo" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
+				<img alt="the-travel-square-logo-main" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
 				</a>
             </div>
             <div class="kt-header-mobile__toolbar">
@@ -34,9 +34,7 @@
         <div class="kt-grid kt-grid--hor kt-grid--root">
             <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
                 <!-- begin:: Aside -->
-                <!-- Uncomment this to display the close button of the panel
-                    <button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
-                    -->
+               
                 <div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
                     <!-- begin:: Aside -->
                     <?php include('aside.php');?>
@@ -53,7 +51,7 @@
                             <div class="kt-container  kt-container--fluid ">
                                 <div class="kt-subheader__main">
                                     <h3 class="kt-subheader__title">
-                                        Terminal | TTS
+                                        Terminal by TTS
                                     </h3>
                                     <span class="kt-subheader__separator kt-hidden"></span>
                                     
@@ -66,7 +64,6 @@
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
 						
 						<div class="alert alert-light alert-elevate" role="alert">
-								
 								<div class="alert-text">
                                     Terminal by TTS is the Most Powerfull Tool Developed by The Travel Square. It Helps Travel Agents Updating Rate Tariffs,for Both 
 									B2B & B2C Instantly on All Published Platforms, Channel Managers and other B2C Platforms. You Can Watch Live Inventory of Flights,
@@ -104,8 +101,8 @@
 
 
                                                     <div class="kt-demo-icon__overlay">
-                                                        <button type="submit" class="btn btn-sm btn-brand">
-                                                            Edit Price
+                                                        <button type="submit" class="btn btn-sm btn-dark">
+                                                            Edit Deal
                                                         </button>
                                                     </div>
 
@@ -139,7 +136,7 @@
         <!-- begin::Sticky Toolbar -->
         <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
-                <a href="http://travpayments.com/" class=""><i class="flaticon2-drop"></i></a>
+                <a href="http://partner.thetravelsquare.in/travpay" class=""><i class="flaticon2-drop"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
                 <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>

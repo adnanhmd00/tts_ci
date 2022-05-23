@@ -3,13 +3,13 @@
   <head>
    
 	
-	 <title>The Travel Square | 100% Customized Travel Packages</title>
+	 <title>TTS Blogs | Travel Blogs | The Travel Square | 100% Customized Travel Packages | India's First Personalised Holiday Travel Planner | Travel Square</title>
 		
 		
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Business The Travel Square">
-    <meta name="description" content="India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    <meta name="description" content="TTS Blogs | Travel Blogs | The Travel Square | 100% Customized Travel Packages | India's First Personalised Holiday Travel Planner | Travel SquareIndia's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
     <meta name="distribution" content="global">
     <meta name="country" content="india">
     <meta name="copyright" content="The Travel Square">
@@ -23,12 +23,12 @@
     <meta property="og:title" content="The Travel Square">
 	<meta property="og:image" content="http://www.thetravelsquare.in/the-travel-square-logo-thumbnail.png">
 	<meta property="og:url" content="http://business.thetravelsquare.in/">
-    <meta property="og:description" content="India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    <meta property="og:description" content="TTS Blogs | Travel Blogs | The Travel Square | 100% Customized Travel Packages | India's First Personalised Holiday Travel Planner | Travel Square India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
 	
 	<meta name="twitter:title" content="Business | The Travel Square B2B ">
 	<meta name="twitter:image" content="http://www.thetravelsquare.in/the-travel-square-logo-thumbnail.png">
-	<meta name="twitter:description" content="India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
-	<meta name="twitter:card" content="India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+	<meta name="twitter:description" content="TTS Blogs | Travel Blogs | The Travel Square | 100% Customized Travel Packages | India's First Personalised Holiday Travel Planner | Travel Square India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+	<meta name="twitter:card" content="TTS Blogs | Travel Blogs | The Travel Square | 100% Customized Travel Packages | India's First Personalised Holiday Travel Planner | Travel Square India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
   
     <meta name="keywords" content="b2b travel, the travel square, b2b hotels, b2b flights, partner login b2b, b2b travel portal, b2b travel agencies, b2b dmc, hotel dmc's, b2b travel agency, b2b travel group, best b2b travel agency, India's Largest B2B Travel Network">
     <meta name="format-detection" content="7428558566">
@@ -104,16 +104,23 @@
   <body>
   
   
-       <nav class="navbar navbar-expand-sm navbar-dark fixed-top" id="navScrollspy">
-               <a href="index.html" class="navbar-brand">THE TRAVEL SQUARE</a>
-           <button class="navbar-toggler" data-target="#navCollapse" data-toggle="collapse">
+       <nav class="navbar navbar-expand-sm navbar-dark nav-white fixed-top" id="navScrollspy">
+               <a href="index.html" class="navbar-brand"><img src="./img/the-travel-square-logo.png" height="40" width="40"></a>
+           <button class="custom-toggler navbar-toggler" data-target="#navCollapse" data-toggle="collapse">
                <span class="navbar-toggler-icon"></span>
            </button>
            <div class="collapse navbar-collapse" id="navCollapse">
                <ul class="navbar-nav ml-auto">
-                   <li class="nav-item"><a href="#home-section" class="nav-link">Download App</a></li>
-                   <li class="nav-item"><a href="#explore-section" class="nav-link">Help</a></li>
-                   <li class="nav-item"><a href="#share-section" class="nav-link">Log In</a></li>
+                   
+                   <li class="nav-item"><a href="https://play.google.com/store/apps/details?id=com.application.tts" target="_blank" class="nav-link"><font color="white"><i class="fa fa-mobile-phone"></i>&nbsp;&nbsp;	Download App</font></a></li>&nbsp;
+                   <li class="nav-item"><a href="https://www.youtube.com/embed/3QeVjMsyqpo" target="_blank" class="nav-link"><font color="white"><i class="fa fa-play-circle"></i>&nbsp;&nbsp;How Does it Work</font></a></li>&nbsp;
+                   <li class="nav-item"><a href="http://blogs.thetravelsquare.in/" target="_blank" class="nav-link"><font color="white"><i class="fa fa-check-square"></i>&nbsp;&nbsp; Travel Blogs</font></a></li>
+                   <li class="nav-item"><a href="http://reservations.thetravelsquare.in/manage-bookings" target="_blank" class="nav-link"><font color="white"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;	Manage Bookings</font></a></li>&nbsp;
+                   <li class="nav-item"><a href="http://support.thetravelsquare.in/flight-customer-care" target="_blank" class="nav-link"><font color="white"><i class="fa fa-plane"></i>&nbsp;&nbsp;	Airline Support</font></a></li>&nbsp;
+				   <li class="nav-item"><a href="http://support.thetravelsquare.in/customercare" target="_blank" class="nav-link"><font color="white"><i class="fa fa-headphones"></i>&nbsp;&nbsp; Customer Care</font></a></li>&nbsp;
+                   <li class="nav-item"><a a href="" data-toggle="modal" data-target="#customerlogin" class="nav-link"><button class="white btn btn-sm btn-block">
+				   <font color="black">&nbsp; <b>LOGIN </b> &nbsp;</font></button></a></li>&nbsp;&nbsp;
+				   <li class="nav-item"><a a href="" data-toggle="modal" data-target="#customersignup" class="nav-link"><font color="white"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;Sign Up</font></a></li>&nbsp;
                </ul>
            </div>
        </nav>
@@ -124,8 +131,8 @@
                    <div class="row">
                        <div class="col-md-12">
                             <div class="text-center">
-                                <h1 class="text-size">TRAVEL BLOGS</h1>
-                                <p class="lead">Creative Travel Related Posts and Rich Content</p>
+                                <h1 class="text-size">TTS BLOGS</h1>
+                                <p class="lead">Curating Travel News, Posts and Rich Content</p>
                             </div>
                             
                        </div>
@@ -138,8 +145,7 @@
       
    <div class="py-5">
        <div class="container">
-           <h1 class="text-dark text-center">THE TRAVEL SQUARE</h1>
-           <p class="text-muted text-center"><strong>Curated suggestions based on seasons, festivals and interests</strong></p>
+           
            <div class="row">
                <div class="col-md-8 mb-2">
                    <img height="200px;" src="<?= $data[0]->image;?>" alt="" class="img-fluid hght">
@@ -166,10 +172,9 @@
                                     </div>
                                 </div>
                                 <div class="float-left text-dark">
-                                    <!-- Rs. 2700 -->
                                 </div>
                                 <div class="float-right text-dark">
-                                    <!-- <span class="small">Available From 7 May 2020</span> -->
+                                 
                                 </div>
                             </div>
                         </a>
@@ -196,10 +201,8 @@
                                 </div>
                             </div>
                             <div class="float-left text-dark">
-                                <!-- Rs. 2700 -->
                             </div>
                             <div class="float-right text-dark">
-                            <!-- <span class="small">Available From 7 May 2020</span> -->
                         </div>
                         </div>
                     </a>
@@ -218,112 +221,132 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                   <font size="2"><p>The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains Inspiring the World to Travel In Style With Luxury at Affordabe Pricing  </p>
-					</font>
+                   <font size="2">
+				    <p>
+					<h6>The All New Travel Experience</h6>
+					The Travel Square's Smart Technology Driven AI Platform Enables The Customers to Explore Places, Select Their Priorities While Travelling, Building Creative Itineraries Following their Tastes & Likkings at Best Possible Tariffs. Enabling them to Compare Prices Intelligently Saving Time, Effort & Ensuring Satisfaction & Service for their Vacations and Business Trips .
+
+					</p>
+				   </font>
 				</div>
-                <div class="offset-md-2 col-md-4">
-                    <img style="width: 55%; height: 75px;" src="img/the-trave-square-logo.png" alt="" class="img-fluid mx-auto d-block">
+                <div class="offset-md-2 col-md-4"><br>
+                    <img style="width: 65%; height: 85px;" src="img/the-travel-square-logo-main.png" alt="the-travel-square-logo" class="img-fluid mx-auto d-block">
                 </div>
             </div><br>
-            <hr color="white">
+			
+			<hr color="white">
 			<font size="2">
-            <div class="row">
+			
+			<div class="row">
                 <div class="col">
-                   <h6 class="text-muted">Themed Customized Packages</h6>
+                   <h6 class="text-muted">Seasonal Experiences</h6>
                    <ul class="nav">
-                       <li class="nav-item"><a href="" class="nav-link">Honeymoon Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Family Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Solo Packages</a></li> 
-                       <li class="nav-item"><a href="" class="nav-link">Hashtrek Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Cruise Packages</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/experiences?city=phuket-krabi" class="nav-link">Phuket & Krabi</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/experiences?city=singapore-malaysia" class="nav-link">Singapore & Malaysia</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/experiences?city=bangkok-pattaya" class="nav-link">Bangkok & Pattaya</a></li> 
+                       <li class="nav-item"><a href="http://thetravelsquare.in/experiences?city=santorini" class="nav-link">Greece Tour</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/experiences?city=bali" class="nav-link">Exotic Bali</a></li>
                    </ul>
                 </div>
             </div>
 			
-
             <div class="row py-2">
                 <div class="col">
-                   <h6 class="text-muted">Popular Holiday Destinations</h6>
+                   <h6 class="text-muted">Popular International Vacations</h6>
                    <ul class="nav">
-                       <li class="nav-item"><a href="" class="nav-link">Bali Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Europe Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Dubai Packages</a></li> 
-                       <li class="nav-item"><a href="" class="nav-link">Thailand Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Singapore Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Nepal Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Australia Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Maldives Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Malaysia Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Sri Lanka Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Mauritius Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Russia Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Vietnam Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Hong Kong Packages</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Greece Packages</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/packages?city=bali" target="_blank" class="nav-link">Bali</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/packages?city=europe" target="_blank" class="nav-link">Europe</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/packages?city=dubai" target="_blank" class="nav-link">Dubai</a></li> 
+                       <li class="nav-item"><a href="http://thetravelsquare.in/packages?city=thailand" target="_blank" class="nav-link">Thailand</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/packages?city=singapore" target="_blank" class="nav-link">Singapore</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/packages?city=nepal" target="_blank" class="nav-link">Nepal</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/packages?city=australia" target="_blank" class="nav-link">Australia</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/packages?city=maldives" target="_blank" class="nav-link">Maldives</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/packages?city=mauritius" target="_blank" class="nav-link">Mauritius</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/packages?city=vietnam" target="_blank" class="nav-link">Vietnam</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/packages?city=srilanka" target="_blank" class="nav-link">Srilanka</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/packages?city=bhutan" target="_blank" class="nav-link">Bhutan</a></li>
+                       
                    </ul>
                 </div>
             </div>
-
 		
-            <div class="row py-2">
+			<div class="row py-2">
                 <div class="col">
-                   <h6 class="text-muted">Seasonal Specials</h6>
+                   <h6 class="text-muted">Trending Staycations in India</h6>
                    <ul class="nav">
-                       <li class="nav-item"><a href="" class="nav-link">Phuket & Krabi</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Singapore & Malaysia</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Bangkok & Pattaya</a></li> 
-                       <li class="nav-item"><a href="" class="nav-link">Europe Tour</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Greece Tour</a></li>
-                       <li class="nav-item"><a href="" class="nav-link">Exotic Bali</a></li>
+                       <li class="nav-item"><a href="https://business.thetravelsquare.in/hotels?city=delhi" target="_blank" class="nav-link">Auli</a></li>
+                       <li class="nav-item"><a href="https://business.thetravelsquare.in/hotels?city=mumbai" target="_blank" class="nav-link">Almorah</a></li>
+                       <li class="nav-item"><a href="https://business.thetravelsquare.in/hotels?city=jaipur" target="_blank" class="nav-link">Gulmarg</a></li>
+                       <li class="nav-item"><a href="https://business.thetravelsquare.in/hotels?city=shimla" target="_blank" class="nav-link">Haldwani</a></li>
+                       <li class="nav-item"><a href="https://business.thetravelsquare.in/hotels?city=kerala" target="_blank" class="nav-link">Goa</a></li>
+                       <li class="nav-item"><a href="https://business.thetravelsquare.in/hotels?city=ooty" target="_blank" class="nav-link">Kutch</a></li>
+                       <li class="nav-item"><a href="https://business.thetravelsquare.in/hotels?city=gantok" target="_blank" class="nav-link">Meghalaya</a></li>
+                       <li class="nav-item"><a href="https://business.thetravelsquare.in/hotels?city=gantok" target="_blank" class="nav-link">Leh Ladakh</a></li>
                    </ul>
                 </div>
             </div>
+            
+			
 			
 			
 			<hr color="white">
-
+			
+			<div class="row py-2">
+                <div class="col">
+                   <h6 class="text-muted">Support Center</h6>
+                   <ul class="nav">
+                       <li class="nav-item"><a href="https://support.thetravelsquare.in/contactus" class="nav-link" target="_blank">Contact Us</a></li>
+                       <li class="nav-item"><a href="http://support.thetravelsquare.in/customercare" class="nav-link" target="_blank">Customer Care</a></li>
+                       <li class="nav-item"><a href="http://support.thetravelsquare.in/partnercare" class="nav-link" target="_blank">Partner Help</a></li>
+                       <li class="nav-item"><a href="http://support.thetravelsquare.in/sellercare" class="nav-link" target="_blank">Seller Help</a></li>
+                       <li class="nav-item"><a href="http://www.thetravelsquare.in/press-release" class="nav-link" target="_blank">Press Release</a></li>
+                       <li class="nav-item"><a href="http://www.thetravelsquare.in/investor-relations" class="nav-link" target="_blank">Investor Relations</a></li>
+                       <li class="nav-item"><a href="http://www.thetravelsquare.in/privacy-policy" class="nav-link" target="_blank">Privacy & Cookie Policy</a></li>
+                       <li class="nav-item"><a href="http://www.thetravelsquare.in/terms-and-conditions" class="nav-link" target="_blank">Terms & Conditions</a></li>
+                       
+                   </ul>
+                </div>
+            </div>
+			
+            <hr color="white">
+			
+			
             <div class="container py-4">
                 <div class="row">
-                    <div class="col-md-3">
-                        <h6 class="text-muted">Help</h6>
-                        <ul>
-                            <li class="nav-item"><a href="" class="nav-link">About Us</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Jobs & Career</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Press Release</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Customer Care</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Partner Help</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h6 class="text-muted">Legal</h6>
-                        <ul>
-                            <li class="nav-item"><a href="" class="nav-link">Coporate Offices</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Terms & Conditions</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Privacy Policy</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">FAQ</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h6 class="text-muted mb-3">Contact Us</h6>
-                        <i class="fa fa-envelope fa-2x text-muted mb-2"></i> &nbsp;contact@thetravelsquare.in <br>
-                        <i class="fa fa-phone fa-2x text-muted mt-2"></i> &nbsp; +91-7428558566
-                       
-                    </div>
-                    <div class="col-md-3">
-                        <h6 class="text-muted mb-3">Connect With Us</h6>
-                        <div class="row">
-                           <a class="text-light" href=""><i class="fa fa-facebook fa-2x ml-3"></i></a>
-                           <a class="text-light" href=""><i class="fa fa-twitter fa-2x ml-3"></i></a>
-                           <a class="text-light" href=""><i class="fa fa-instagram fa-2x ml-3"></i></a>
-                           <a class="text-light" href=""><i class="fa fa-linkedin fa-2x ml-3"></i></a>
-                           <br>
-                           <h6 class="text-muted ml-3 mt-5">
-							<p>&copy; <span id="year"></span> All Right Reserved</p>
-                               The Travel Square
-                               
-                           </h6>
+					<div class="col-md-3">
+                        
+                        <div class=""><small><center>
+                           <a class="text-light" href="https://www.facebook.com/thetravelsquareb2b" target="_blank" rel=”nofollow”><i class="fa fa-facebook fa-2x ml-3"></i></a>
+                           <a class="text-light" href="https://twitter.com/travelsquareb2b" target="_blank" rel=”nofollow”><i class="fa fa-twitter fa-2x ml-3"></i></a>
+                           <a class="text-light" href="https://www.instagram.com/thetravelsquareofficial/" target="_blank" rel=”nofollow”><i class="fa fa-instagram fa-2x ml-3"></i></a>
+                           <a class="text-light" href="https://www.linkedin.com/company/thetravelsquareb2b" target="_blank" rel=”nofollow”><i class="fa fa-linkedin fa-2x ml-3"></i></a>
+                           <a class="text-light" href="https://www.linkedin.com/company/thetravelsquareb2b" target="_blank" rel=”nofollow”><i class="fa fa-youtube fa-2x ml-3"></i></a>
+                           </small></center>
+						  <br>
                         </div>
+                    </div>
+                    <div class="col-md-3">
+                        <center>
+						
+                        <i class="fa fa-phone text-muted mb-2"></i> &nbsp; +91-9999-00-7037 / 7212
+						</center>
+					</div>
+                    <div class="col-md-3">
+						<center>
+                        
+                        <i class="fa fa-envelope text-muted mb-2"></i> &nbsp;contact@thetravelsquare.in
+						</center>
+                    </div>
+                    
+					<div class="col-md-3">
+						<center>
+                        <p class="text-muted mt-2">
+							
+                               <a href="http://thetravelsquare.in/"><font color="white" ><big>The Travel Square</big></a> <br><small>&copy; 2022 All Rights Reserved <br></small>
+                               </font>
+						</center>
+                        </p>
                     </div>
                 </div>
             </div>

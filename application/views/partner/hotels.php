@@ -226,17 +226,17 @@
 								<div id="banner" class="row mt-3">
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-hotel-booking-live-inventory-of-5000-properties.jpg" alt="the-travel-square-b2b-hotel-booking-live-inventory-of-5000-properties" class="text-center">
+                                        <img src="<?php echo base_url(); ?>uploads/b2b/the-travel-square-b2b-hotel-booking-live-inventory-of-5000-properties.jpg" alt="the-travel-square-b2b-hotel-booking-live-inventory-of-5000-properties" class="text-center">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-hotel-booking-best-b2b-deals-and-tariffs-contracted-pre-purchased-rates.jpg" alt="the-travel-square-b2b-hotel-booking-best-b2b-deals-and-tariffs-contracted-pre-purchased-rates" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/b2b/the-travel-square-b2b-hotel-booking-best-b2b-deals-and-tariffs-contracted-pre-purchased-rates.jpg" alt="the-travel-square-b2b-hotel-booking-best-b2b-deals-and-tariffs-contracted-pre-purchased-rates" class="img-responsive ">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-hotel-booking-avail-discounts-on-add-on-services-at-property.jpg" alt="the-travel-square-b2b-hotel-booking-avail-discounts-on-add-on-services-at-property" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/b2b/the-travel-square-b2b-hotel-booking-avail-discounts-on-add-on-services-at-property.jpg" alt="the-travel-square-b2b-hotel-booking-avail-discounts-on-add-on-services-at-property" class="img-responsive ">
                                     </div>
                                 </div>
                             </div>

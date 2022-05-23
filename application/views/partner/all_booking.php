@@ -60,10 +60,11 @@
 							</div>
 
 							<div class="kt-portlet kt-portlet--mobile">
-								<div class="kt-portlet__head kt-portlet__head--lg">
-									
-									
-								</div> 
+								<div class="kt-portlet__head">
+                                            <div class="kt-portlet__head-label">
+												All Bookings
+                                            </div>
+                                </div>
 								
 								<div class="kt-portlet__body kt-portlet__body">
 									<!--begin: Datatable -->
@@ -111,7 +112,7 @@
                                                         <td><?= $symbol.' '.$price;?></td>
                                                         <td>
                                                             <!-- <a href=""  class="btn btn-primary">View Deal Details</a> -->
-                                                            <a href="<?= base_url('Partner/view_booking_transactions/BK-'.$row->id.'-'.$row->deal_combined_id);?>" class="btn btn-dark">VIEW DETAILS</a>
+                                                            <a href="<?= base_url('Partner/view_booking_transactions/BK-'.$row->id.'-'.$row->deal_combined_id);?>" class="btn-sm btn-dark">View Details</a>
                                                         </td>
                                                         
 
@@ -145,7 +146,7 @@
 		<!-- begin::Sticky Toolbar -->
 		<ul class="kt-sticky-toolbar" style="margin-top: 30px;">
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
-                <a href="http://travpayments.com/" class=""><i class="flaticon2-drop"></i></a>
+                <a href="http://partner.thetravelsquare.in/travpay" class=""><i class="flaticon2-drop"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
                 <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>

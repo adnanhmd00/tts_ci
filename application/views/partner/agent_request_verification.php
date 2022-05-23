@@ -154,6 +154,16 @@
                         <!-- end:: Content Head -->
                         <!-- begin:: Content -->
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+						
+							<div class="alert alert-light alert-elevate" role="alert">
+								<div class="alert-text">
+                                    The Travel Square Helps in Agent Verification in case New Business is Done by Our Partner with an Unknown Travel Company.
+									In Case the Third Party Unknown Travel Agent is Also Registered with us, the Transaction can be Processed Via us to Safegaurd
+									and Gaurantee the Terms & Conditions of the Booking and Payment is Safe for the Duration of Booking.
+                                </div>
+							</div>
+
+						
                             <!--Begin::Dashboard 1-->
                             <!--Begin::Row-->
                             <div class="row">
@@ -161,11 +171,7 @@
                                     <div class="kt-portlet">
                                         <div class="kt-portlet__head">
                                             <div class="kt-portlet__head-label">
-                                               <br>
-												<p>The Travel Square Helps in Agent Verification in case New Business is Done by Our Partner with an Unknown Travel Company.
-												In Case the Third Party Unknown Travel Agent is Also Registered with us, the Transaction can be Processed Via us to Safegaurd and 
-												Gaurantee the Terms & Conditions of the Booking and Payment is Safe for the Duration of Booking.</p>
-											   <br>
+												Verify Travel Agent / Supplier
                                             </div>
                                         </div>
                                         <!--begin::Form-->
@@ -196,7 +202,7 @@
 												</div>
 												<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg kt-separator--portlet-fit"></div>
 												<div class="form-group row">
-													<label class="col-lg-2 col-form-label">Purpose </label>
+													<label class="col-lg-2 col-form-label">Verification Purpose</label>
 													<div class="col-lg-4">
 														<div class="kt-input-icon">
 															<input type="text" class="form-control" placeholder="Enter Reason For Verification" required name="reason">
@@ -209,8 +215,8 @@
 													<div class="row">
 														<div class="col-lg-5"></div>
 														<div class="col-lg-7">
-															<button type="submit" class="btn btn-brand">Verify Agency</button>
-															<button type="reset" class="btn btn-secondary">Cancel</button>
+															<button type="submit" class="btn btn-dark">Verify Agency</button>
+															<button type="reset" class="btn btn-light-dark">Cancel</button>
 														</div>
 													</div>
 												</div>
@@ -247,17 +253,17 @@
         <!-- end::Scrolltop -->
         <!-- begin::Sticky Toolbar -->
         <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="Check out more demos">
-                <a href="#" class=""><i class="flaticon2-drop"></i></a>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
+                <a href="http://partner.thetravelsquare.in/travpay" class=""><i class="flaticon2-drop"></i></a>
             </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Layout Builder">
-                <a href="#
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
+                <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>
             </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
-                <a href="#" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Help">
+                <a href="mailto:partnercare@thetravelsquare.in" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
             </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Example">
-                <a href="#" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Us">
+                <a href="https://wa.me/919999007037" target="_blank" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
             </li>
         </ul>
         <!-- end::Sticky Toolbar -->

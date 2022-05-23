@@ -222,17 +222,17 @@
 								<div id="banner" class="row mt-3">
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-book-experiences-more-than-12000-experiences-at-583-cities-globally.jpg" alt="the-travel-square-b2b-book-experiences-more-than-12000-experiences-at-583-cities-globally" class="text-center">
+                                        <img src="<?php echo base_url(); ?>uploads/b2b/the-travel-square-b2b-book-experiences-more-than-12000-experiences-at-583-cities-globally.jpg" alt="the-travel-square-b2b-book-experiences-more-than-12000-experiences-at-583-cities-globally" class="text-center">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-book-experiences-instant-and-live-booking-on-the-go.jpg" alt="the-travel-square-b2b-book-experiences-instant-and-live-booking-on-the-go" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/b2b/the-travel-square-b2b-book-experiences-instant-and-live-booking-on-the-go.jpg" alt="the-travel-square-b2b-book-experiences-instant-and-live-booking-on-the-go" class="img-responsive ">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-book-experiences-generate-more-profits-with-high-discounts-and-margins.jpg" alt="the-travel-square-b2b-book-experiences-generate-more-profits-with-high-discounts-and-margins" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/b2b/the-travel-square-b2b-book-experiences-generate-more-profits-with-high-discounts-and-margins.jpg" alt="the-travel-square-b2b-book-experiences-generate-more-profits-with-high-discounts-and-margins" class="img-responsive ">
                                     </div>
                                 </div>
                             </div>

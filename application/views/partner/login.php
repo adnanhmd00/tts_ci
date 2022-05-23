@@ -40,7 +40,7 @@
 								© 2022 The Travel Square
 							</div>
 							<div class="kt-login__menu">
-								<a href="http://business.thetravelsquare.in/contact" class="kt-link">Partner Help</a>
+								<a href="http://support.thetravelsquare.in/partnercare" class="kt-link">Partner Help</a>
 							</div>
 						</div>
 					</div>
@@ -104,15 +104,15 @@
 
 							<!--begin::Options-->
 							<div class="kt-login__options">
-								<a href="https://sellerconsle.thetravelsquare.in"
-									class="btn btn-outline-dark kt-btn">
-									<i class="fa-solid fa-right-to-bracket"></i>
+								<a href="http://sellerconsle.thetravelsquare.in"
+									class="btn btn-dark kt-btn">
+									
 									Seller Login
 								</a>
 
-								<a href="https://propertymanager.thetravelsquare.in/"
-									class="btn btn-outline-dark kt-btn">
-									<i class="fa-solid fa-bed"></i>
+								<a href="http://propertymanager.thetravelsquare.in/"
+									class="btn btn-dark kt-btn">
+									
 									Hotellier Login
 								</a>
 							</div>

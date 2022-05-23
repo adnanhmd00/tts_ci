@@ -227,8 +227,8 @@
                                             </div>
                                             <div class="kt-portlet__foot">
                                                 <div class="kt-form__actions">
-                                                    <button type="submit" class="btn btn-primary">Publish</button>
-                                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                                                    <button type="submit" class="btn btn-dark">Publish</button>
+                                                    <button type="reset" class="btn btn-light-dark">Cancel</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -264,7 +264,7 @@
         <!-- begin::Sticky Toolbar -->
         <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
-                <a href="http://travpayments.com/" class=""><i class="flaticon2-drop"></i></a>
+                <a href="http://partner.thetravelsquare.in/travpay" class=""><i class="flaticon2-drop"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
                 <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>

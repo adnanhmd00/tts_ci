@@ -204,13 +204,6 @@
                                             <div class="row mt-3">
                                                 <div class="col-md-5">
                                                     <input type="text" id="filter" placeholder="Where Travel To...?" class="form-control">
-                                                    <nav id="search-list" class="text-left">
-                                                        <ul>
-                                                        <?php foreach($data as $city){ ?>
-                                                            <li><a href="<?= base_url('experience-list/'.$city['city']);?>"><?php print_r($city['city']); ?></a></li>
-                                                            <?php } ?>
-                                                        </ul>
-                                                    </nav>
                                                 </div>
                                                 <div class="col-md-5">
                                                     <input type="text" placeholder="From?" class="form-control">
@@ -225,17 +218,17 @@
 								<div id="banner" class="row mt-3">
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-packages-booking-curated-customized-and-personalised-travel-itineraries.jpg" alt="the-travel-square-b2b-packages-booking-curated-customized-and-personalised-travel-itineraries" class="text-center">
+                                        <img src="<?php echo base_url(); ?>uploads/b2b/the-travel-square-b2b-packages-booking-curated-customized-and-personalised-travel-itineraries.jpg" alt="the-travel-square-b2b-packages-booking-curated-customized-and-personalised-travel-itineraries" class="text-center">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-packages-booking-twenty-four-seven-support-service-on-tour.jpg" alt="the-travel-square-b2b-packages-booking-twenty-four-seven-support-service-on-tour" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/b2b/the-travel-square-b2b-packages-booking-twenty-four-seven-support-service-on-tour.jpg" alt="the-travel-square-b2b-packages-booking-twenty-four-seven-support-service-on-tour" class="img-responsive ">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-packages-booking-best-b2b-rates-for-experiences-in-the-packages.jpg" alt="the-travel-square-b2b-packages-booking-best-b2b-rates-for-experiences-in-the-packages" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/b2b/the-travel-square-b2b-packages-booking-best-b2b-rates-for-experiences-in-the-packages.jpg" alt="the-travel-square-b2b-packages-booking-best-b2b-rates-for-experiences-in-the-packages" class="img-responsive ">
                                     </div>
                                 </div>
                             </div>

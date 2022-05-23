@@ -149,7 +149,7 @@
                                                     </p>
                                                 </div>
                                                 <div class="kt-callout__action">
-                                                    <a href="<?= base_url('partner-contact/ppc-request');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm btn-primary">Submit Request</a>
+                                                    <a href="<?= base_url('partner-contact/ppc-request');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm btn-dark">Submit Request</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -167,7 +167,7 @@
                                                 </div>
                                                 <div class="kt-callout__action">
                                                     <!-- <a href="<?= base_url('partner-contact/business-request');?>" data-toggle="modal" data-target="#kt_chat_modal" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-success">Submit Request</a> -->
-                                                    <a href="<?= base_url('partner-contact/business-request');?>"  class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-success">Submit Request</a>
+                                                    <a href="<?= base_url('partner-contact/business-request');?>"  class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-primary">Submit Request</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -196,7 +196,7 @@
         <!-- begin::Sticky Toolbar -->
         <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
-                <a href="http://travpayments.com/" class=""><i class="flaticon2-drop"></i></a>
+                <a href="http://partner.thetravelsquare.in/travpay" class=""><i class="flaticon2-drop"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
                 <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>

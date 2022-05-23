@@ -54,9 +54,7 @@
         <div class="kt-grid kt-grid--hor kt-grid--root">
             <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
                 <!-- begin:: Aside -->
-                <!-- Uncomment this to display the close button of the panel
-                    <button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
-                    -->
+              
                 <?php include('aside.php');?>
                 <!-- end:: Aside -->
                 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
@@ -214,7 +212,7 @@
                                                     </p>
                                                 </div>
                                                 <div class="kt-callout__action">
-                                                    <a href="<?= base_url('partner-contact/general-request');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm btn-primary">Submit Request</a>
+                                                    <a href="<?= base_url('partner-contact/general-request');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm btn-dark">Submit Request</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -231,7 +229,7 @@
                                                     </p>
                                                 </div>
                                                 <div class="kt-callout__action">
-                                                    <a href="<?= base_url('partner-contact/business-request');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-success">Submit Request</a>
+                                                    <a href="<?= base_url('partner-contact/business-request');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-primary">Submit Request</a>
                                                 </div>
                                             </div>
                                         </div>

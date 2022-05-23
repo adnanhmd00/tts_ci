@@ -215,17 +215,17 @@
 								<div id="banner" class="row mt-3">
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-visa-booking-service-for-229-countries.jpg" alt="the-travel-square-b2b-visa-booking-service-for-229-countries" class="text-center">
+                                        <img src="<?php echo base_url(); ?>uploads/b2b/the-travel-square-b2b-visa-booking-service-for-229-countries.jpg" alt="the-travel-square-b2b-visa-booking-service-for-229-countries" class="text-center">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-visa-booking-fastest-online-application-services.jpg" alt="the-travel-square-b2b-visa-booking-fastest-online-application-services" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/b2b/the-travel-square-b2b-visa-booking-fastest-online-application-services.jpg" alt="the-travel-square-b2b-visa-booking-fastest-online-application-services" class="img-responsive ">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-visa-booking-visa-on-time-guaranteed.jpg" alt="the-travel-square-b2b-visa-booking-visa-on-time-guaranteed" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/b2b/the-travel-square-b2b-visa-booking-visa-on-time-guaranteed.jpg" alt="the-travel-square-b2b-visa-booking-visa-on-time-guaranteed" class="img-responsive ">
                                     </div>
                                 </div>
                             </div>
