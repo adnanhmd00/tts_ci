@@ -53,17 +53,19 @@
 						<!-- begin:: Content -->
 						<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
 							<div class="alert alert-light alert-elevate" role="alert">
-								<div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+								
 								<div class="alert-text">
 									<?php if($type=='transactions' || $type=='accounts'){?>	
 										Here are All Your Transactions, Payments Send to or from Your Account By The Travel Square, You or Any Agent / Travel Company
-										Via TravPAY / Bank Modes or Using Payment Gateway	.
+										Via TravPAY / Bank Modes or Using Payment Gateway.
 									<?php }?>
 									<?php if($type=='travpay'){?>	
-										Here are All Your Travpay Transactions Associated With Us.
+										Here are All Your Travpay Transactions Made By You or Any Agent / Travel Company
+										Via TravPAY / Bank Modes or Using Payment Gateway Towards or By You.
 									<?php }?>
 									<?php if($type=='invoice'){?>	
-										Auto Generated Invoice of successfull transactions.
+										Here are All Auto Generated Invoice of Successfull Transactions Made By You or Any Agent / Travel Company
+										Via TravPAY / Bank Modes or Using Payment Gateway Towards You.
 									<?php }?>
 								</div>
 							</div>
@@ -857,9 +859,7 @@
 							<div class="kt-portlet kt-portlet--mobile">
 								<div class="kt-portlet__head kt-portlet__head--lg">
 									<div class="kt-portlet__head-label">
-										<span class="kt-portlet__head-icon">
-										<i class="kt-font-brand flaticon2-line-chart"></i>
-										</span>
+											
 										<h3 class="kt-portlet__head-title">
 										<?php 
 											$CI =& get_instance(); $CI->load->model('MainModel','admin'); 

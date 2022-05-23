@@ -1,14 +1,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-<title><?php if(!empty($userinfo)){ echo ucwords($userinfo->type);} ?> Partner Login | The Travel Square | India's Largest B2B Travel Network</title>
+<title><?php if(!empty($userinfo)){ echo ucwords($userinfo->type);} ?> Partner Login | The Travel Square | India's Largest B2B Travel Network Company | Best Travel Portal in India</title>
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Business The Travel Square">
 <meta name="description"
-    content="India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    content="India's Largest B2B Travel Network Company. The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . 
+	Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is 
+	Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits. Best Travel Portal in India.">
 <meta name="distribution" content="global">
 <meta name="country" content="india">
 <meta name="copyright" content="The Travel Square">
@@ -19,18 +21,24 @@
 <meta name="rating" content="general">
 <meta name="publisher" content="Business The Travel Square">
 
-<meta property="og:title" content="The Travel Square">
+<meta property="og:title" content="Partner Login | The Travel Square B2B | India's Largest B2B Travel Network Company">
 <meta property="og:image" content="http://www.thetravelsquare.in/the-travel-square-logo-thumbnail.png">
-<meta property="og:url" content="http://business.thetravelsquare.in/">
+<meta property="og:url" content="http://partner.thetravelsquare.in/">
 <meta property="og:description"
-    content="India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    content="India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . 
+	Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is
+	Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits. Best Travel Portal in India">
 
-<meta name="twitter:title" content="Business | The Travel Square B2B ">
+<meta name="twitter:title" content="Partner Login | The Travel Square B2B | India's Largest B2B Travel Network Company">
 <meta name="twitter:image" content="http://www.thetravelsquare.in/the-travel-square-logo-thumbnail.png">
 <meta name="twitter:description"
-    content="India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    content="India's Largest B2B Travel Network Company. The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . 
+	Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is 
+	Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits. Best Travel Portal in India">
 <meta name="twitter:card"
-    content="India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    content="India's Largest B2B Travel Network Company. The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads .
+	Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is 
+	Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits. Best Travel Portal in India">
 
 <meta name="keywords"
     content="b2b travel, the travel square, b2b hotels, b2b flights, partner login b2b, b2b travel portal, b2b travel agencies, b2b dmc, hotel dmc's, b2b travel agency, b2b travel group, best b2b travel agency, India's Largest B2B Travel Network">
@@ -41,8 +49,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EE16CRYW41"></script>
 <script>
@@ -82,7 +88,7 @@
 <link href="<?= base_url('resource/admin/files/dark(2).css');?>" rel="stylesheet" type="text/css">
 <link href="<?= base_url('resource/admin/files/dark(3).css');?>" rel="stylesheet" type="text/css">        <!--end::Layout Skins -->
 
-<link rel="shortcut icon" href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/media/logos/favicon.ico">
+<link rel="shortcut icon" href="#">
 
 
 <link rel="shortcut icon" href="">

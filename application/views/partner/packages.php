@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
     <html lang="en">
     <!-- begin::Head -->
     <head>
@@ -225,17 +225,17 @@
 								<div id="banner" class="row mt-3">
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-and-add-on-ancillary-services-at-best-b2b-rates.jpg" alt="" class="text-center">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-packages-booking-curated-customized-and-personalised-travel-itineraries.jpg" alt="the-travel-square-b2b-packages-booking-curated-customized-and-personalised-travel-itineraries" class="text-center">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-at-best-discounted-fare.jpg" alt="" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-packages-booking-twenty-four-seven-support-service-on-tour.jpg" alt="the-travel-square-b2b-packages-booking-twenty-four-seven-support-service-on-tour" class="img-responsive ">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-from-anywhere-anytime.jpg" alt="" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-packages-booking-best-b2b-rates-for-experiences-in-the-packages.jpg" alt="the-travel-square-b2b-packages-booking-best-b2b-rates-for-experiences-in-the-packages" class="img-responsive ">
                                     </div>
                                 </div>
                             </div>
@@ -254,7 +254,7 @@
                                         <p></p>
                                     </div> -->
                                     <div class="row" id="footer_div_id">
-                                        <button class="btn btn-primary btn-block" id="button_div" >Continue Booking -> </button>
+                                        <button class="btn btn-primary btn-block" id="button_div" >CONTINUE > </button>
                                     </div>
                                 </div>
                             </div>

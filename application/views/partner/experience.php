@@ -158,7 +158,7 @@
                 					<h3 class="kt-subheader__title">Partner ID</h3>
                 					<span class="kt-subheader__separator kt-subheader__separator--v"></span>
                 					<span class="kt-subheader__desc">TSA167D</span>
-                					<a href="http://supplier.thetravelsquare.in/" class="btn btn-label-warning btn-bold btn-sm btn-icon-h kt-margin-l-10">
+                					<a href="http://partner.thetravelsquare.in/partner-profile" class="btn btn-label-warning btn-bold btn-sm btn-icon-h kt-margin-l-10">
                 						View Profile
                 					</a>
                 					<div class="kt-input-icon kt-input-icon--right kt-subheader__search kt-hidden">
@@ -170,13 +170,13 @@
                 				</div>
                 				<div class="kt-subheader__toolbar">
                 					<div class="kt-subheader__wrapper">
-                						<a href="http://supplier.thetravelsquare.in/" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Bookings Calender">
+                						<a href="http://partner.thetravelsquare.in/" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Bookings Calender">
                 							<span class="kt-subheader__btn-daterange-title" id="kt_dashboard_daterangepicker_title">Date : </span>&nbsp;
                 							<span class="kt-subheader__btn-daterange-date" id="kt_dashboard_daterangepicker_date">Mar 17</span>
                 							<i class="flaticon2-calendar-1"></i>
                 						</a>
                 						<div class="dropdown dropdown-inline" data-toggle-="kt-tooltip" title="Publish Deal" data-placement="left">
-                							<a href="http://supplier.thetravelsquare.in/" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                							<a href="http://partner.thetravelsquare.in/" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--md">
                 									<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 										<polygon points="0 0 24 0 24 24 0 24"></polygon>
@@ -200,7 +200,7 @@
                 				<div class="row">
                 					<div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
                 						<div class="container h5 text-center">
-                                            From Local Escapes to Far-Flung Adventures, Explore What Makes You Happy Anytime Anywhere !
+                                            Explore More than 12000+ Experiences, From 583+ cities to Book at the Best Available B2B Rates !
                                             <div class="row mt-3">
                                                 <div class="col-md-8">
                                                     <input type="text" id="filter" placeholder="Search with Destination City Name..." class="form-control" style="width">
@@ -222,17 +222,17 @@
 								<div id="banner" class="row mt-3">
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-and-add-on-ancillary-services-at-best-b2b-rates.jpg" alt="" class="text-center">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-book-experiences-more-than-12000-experiences-at-583-cities-globally.jpg" alt="the-travel-square-b2b-book-experiences-more-than-12000-experiences-at-583-cities-globally" class="text-center">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-at-best-discounted-fare.jpg" alt="" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-book-experiences-instant-and-live-booking-on-the-go.jpg" alt="the-travel-square-b2b-book-experiences-instant-and-live-booking-on-the-go" class="img-responsive ">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-from-anywhere-anytime.jpg" alt="" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-book-experiences-generate-more-profits-with-high-discounts-and-margins.jpg" alt="the-travel-square-b2b-book-experiences-generate-more-profits-with-high-discounts-and-margins" class="img-responsive ">
                                     </div>
                                 </div>
                             </div>
@@ -251,7 +251,7 @@
                                         <p></p>
                                     </div> -->
                                     <div class="row" id="footer_div_id">
-                                        <button class="btn btn-primary btn-block" id="button_div" >Continue Booking -> </button>
+                                        <button class="btn btn-primary btn-block" id="button_div" >CONTINUE > </button>
                                     </div>
                                 </div>
                             </div>

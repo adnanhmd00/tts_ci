@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html lang="en">
 <!-- begin::Head -->
 
@@ -87,7 +86,7 @@
 										Forgot Password ?
 									</a>
 									<button id="kt_login_signin_submit"
-										class="btn btn-primary btn-elevate kt-login__btn-primary">GET ONBOARD</button>
+										class="btn btn-dark btn-elevate kt-login__btn-primary">Get Onboard</button>
 								</div>
 								<!--end::Action-->
 							</form>
@@ -106,14 +105,14 @@
 							<!--begin::Options-->
 							<div class="kt-login__options">
 								<a href="https://sellerconsle.thetravelsquare.in"
-									class="btn btn-primary kt-btn">
-									<i class="fab fa-facebook-f"></i>
+									class="btn btn-outline-dark kt-btn">
+									<i class="fa-solid fa-right-to-bracket"></i>
 									Seller Login
 								</a>
 
 								<a href="https://propertymanager.thetravelsquare.in/"
-									class="btn btn-danger kt-btn">
-									<i class="fab fa-google"></i>
+									class="btn btn-outline-dark kt-btn">
+									<i class="fa-solid fa-bed"></i>
 									Hotellier Login
 								</a>
 							</div>

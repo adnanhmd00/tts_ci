@@ -53,77 +53,38 @@
                             <div class="kt-container  kt-container--fluid ">
                                 <div class="kt-subheader__main">
                                     <h3 class="kt-subheader__title">
-                                        Deal Terminal
+                                        Terminal | TTS
                                     </h3>
                                     <span class="kt-subheader__separator kt-hidden"></span>
                                     
                                 </div>
-                                <div class="kt-subheader__toolbar">
-                                    <div class="kt-subheader__wrapper">
-                                        
-                                        <div class="dropdown dropdown-inline" data-toggle="kt-tooltip" title="Quick actions" data-placement="left">
-                                            
-                                            <div class="dropdown-menu dropdown-menu-fit dropdown-menu-md dropdown-menu-right">
-                                                <!--begin::Nav-->
-                                                <ul class="kt-nav">
-                                                    <li class="kt-nav__head">
-                                                        Add anything or jump to:
-                                                        <i class="flaticon2-information" data-toggle="kt-tooltip" data-placement="right" title="Click to learn more..."></i>
-                                                    </li>
-                                                    <li class="kt-nav__separator"></li>
-                                                    <li class="kt-nav__item">
-                                                        <a href="#" class="kt-nav__link">
-                                                        <i class="kt-nav__link-icon flaticon2-drop"></i>
-                                                        <span class="kt-nav__link-text">Order</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="kt-nav__item">
-                                                        <a href="#" class="kt-nav__link">
-                                                        <i class="kt-nav__link-icon flaticon2-calendar-8"></i>
-                                                        <span class="kt-nav__link-text">Ticket</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="kt-nav__item">
-                                                        <a href="#" class="kt-nav__link">
-                                                        <i class="kt-nav__link-icon flaticon2-telegram-logo"></i>
-                                                        <span class="kt-nav__link-text">Goal</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="kt-nav__item">
-                                                        <a href="#" class="kt-nav__link">
-                                                        <i class="kt-nav__link-icon flaticon2-new-email"></i>
-                                                        <span class="kt-nav__link-text">Support Case</span>
-                                                        <span class="kt-nav__link-badge">
-                                                        <span class="kt-badge kt-badge--success">5</span>
-                                                        </span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="kt-nav__separator"></li>
-                                                    <li class="kt-nav__foot">
-                                                        <a class="btn btn-label-brand btn-bold btn-sm" href="#">Upgrade plan</a>
-                                                        <a class="btn btn-clean btn-bold btn-sm" href="#" data-toggle="kt-tooltip" data-placement="right" title="Click to learn more...">Learn more</a>
-                                                    </li>
-                                                </ul>
-                                                <!--end::Nav-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                               
                             </div>
                         </div>
                         <!-- end:: Subheader -->
                         <!-- begin:: Content -->
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+						
+						<div class="alert alert-light alert-elevate" role="alert">
+								
+								<div class="alert-text">
+                                    Terminal by TTS is the Most Powerfull Tool Developed by The Travel Square. It Helps Travel Agents Updating Rate Tariffs,for Both 
+									B2B & B2C Instantly on All Published Platforms, Channel Managers and other B2C Platforms. You Can Watch Live Inventory of Flights,
+									Hotels & Resorts Via This Tool, Watch Competitors Pricing and Organise Yours Accordingly.
+                                </div>
+							</div>
+						
+					
                             <div class="card-body">
                                 <h4 class="mt-0 header-title"></h4>
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 10; width: 100%; background-color:white;">
                                         <thead>
                                             <tr>
-												<th>Image</th>
-                                                <th>Deal Details</th>
-                                                <th>Status</th>
-                                                <th>Type</th>
-                                                <th>Edit</th>
+												<th>BANNER</th>
+                                                <th>DEAL TARIFFS</th>
+                                                <th>STATUS</th>
+                                                <th>TYPE</th>
+                                                <th>EDIT DEAL</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -177,17 +138,17 @@
         <!-- end::Scrolltop -->
         <!-- begin::Sticky Toolbar -->
         <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip"  title="Check out more demos" data-placement="right">
-                <a href="#" class=""><i class="flaticon2-drop"></i></a>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
+                <a href="http://travpayments.com/" class=""><i class="flaticon2-drop"></i></a>
             </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="Layout Builder" data-placement="left">
-                <a href="../../../builder.html" ><i class="flaticon2-gear"></i></a>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
+                <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>
             </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="Documentation" data-placement="left">
-                <a href="#" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Help">
+                <a href="mailto:partnercare@thetravelsquare.in" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
             </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="Chat Example" data-placement="left">
-                <a href="#" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Us">
+                <a href="https://wa.me/919999007037" target="_blank" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
             </li>
         </ul>
         <!-- end::Sticky Toolbar -->

@@ -215,17 +215,17 @@
 								<div id="banner" class="row mt-3">
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-and-add-on-ancillary-services-at-best-b2b-rates.jpg" alt="" class="text-center">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-visa-booking-service-for-229-countries.jpg" alt="the-travel-square-b2b-visa-booking-service-for-229-countries" class="text-center">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-at-best-discounted-fare.jpg" alt="" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-visa-booking-fastest-online-application-services.jpg" alt="the-travel-square-b2b-visa-booking-fastest-online-application-services" class="img-responsive ">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-from-anywhere-anytime.jpg" alt="" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-visa-booking-visa-on-time-guaranteed.jpg" alt="the-travel-square-b2b-visa-booking-visa-on-time-guaranteed" class="img-responsive ">
                                     </div>
                                 </div>
                             </div>
@@ -244,7 +244,7 @@
                                         <p></p>
                                     </div> -->
                                     <div class="row" id="footer_div_id">
-                                        <button class="btn btn-primary btn-block" id="button_div" >Continue Booking -> </button>
+                                        <button class="btn btn-primary btn-block" id="button_div" >CONTINUE > </button>
                                     </div>
                                 </div>
                             </div>

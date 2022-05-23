@@ -161,12 +161,11 @@
                                     <div class="kt-portlet">
                                         <div class="kt-portlet__head">
                                             <div class="kt-portlet__head-label">
-                                                <h3 class="kt-portlet__head-title">
-                                                    Submit Verification Details
-                                                </h3><br>
+                                               <br>
 												<p>The Travel Square Helps in Agent Verification in case New Business is Done by Our Partner with an Unknown Travel Company.
 												In Case the Third Party Unknown Travel Agent is Also Registered with us, the Transaction can be Processed Via us to Safegaurd and 
 												Gaurantee the Terms & Conditions of the Booking and Payment is Safe for the Duration of Booking.</p>
+											   <br>
                                             </div>
                                         </div>
                                         <!--begin::Form-->

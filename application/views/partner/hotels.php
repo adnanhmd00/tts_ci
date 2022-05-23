@@ -158,9 +158,7 @@
                 					<h3 class="kt-subheader__title">Partner ID</h3>
                 					<span class="kt-subheader__separator kt-subheader__separator--v"></span>
                 					<span class="kt-subheader__desc">TSA167D</span>
-                					<a href="http://supplier.thetravelsquare.in/" class="btn btn-label-warning btn-bold btn-sm btn-icon-h kt-margin-l-10">
-                						View Profile
-                					</a>
+                					
                 					<div class="kt-input-icon kt-input-icon--right kt-subheader__search kt-hidden">
                 						<input type="text" class="form-control" placeholder="Search order..." id="generalSearch">
                 						<span class="kt-input-icon__icon kt-input-icon__icon--right">
@@ -170,13 +168,13 @@
                 				</div>
                 				<div class="kt-subheader__toolbar">
                 					<div class="kt-subheader__wrapper">
-                						<a href="http://supplier.thetravelsquare.in/" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Bookings Calender">
+                						<a href="http://partner.thetravelsquare.in/" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Bookings Calender">
                 							<span class="kt-subheader__btn-daterange-title" id="kt_dashboard_daterangepicker_title">Date : </span>&nbsp;
                 							<span class="kt-subheader__btn-daterange-date" id="kt_dashboard_daterangepicker_date">Mar 17</span>
                 							<i class="flaticon2-calendar-1"></i>
                 						</a>
                 						<div class="dropdown dropdown-inline" data-toggle-="kt-tooltip" title="Publish Deal" data-placement="left">
-                							<a href="http://supplier.thetravelsquare.in/" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                							<a href="http://partner.thetravelsquare.in/" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--md">
                 									<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 										<polygon points="0 0 24 0 24 24 0 24"></polygon>
@@ -200,26 +198,26 @@
                 				<div class="row">
                 					<div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
                 						<div class="container h5 text-center">
-                                        Book More than 5000+ Hotels, Resorts, BNB's & More at the Best B2B Direct Consolidated Tariffs
+                                        Book More than 5000+ Hotels, Resorts, BNB's & More at the Best B2B Consolidated Tariffs
                                             <div class="row mt-3">
                                                 <div class="col-md-4">
-                                                    <label for="" class="text-left mt-1"></label>
-                                                    <input type="text" id="filter" placeholder="Search with Destination City Name..." class="form-control">
+                                                    <label for="city" class="text-left mt-0"></label>
+                                                    <input type="text" class="form-control" id="filter" placeholder="Search with Destination City or Property Name..." >
                                                 </div>
                                                 <div class="col-md-2">
-                                                    <label for="from" class="d-flex justify-content-start text-dark small mb-0">From</label>
-                                                    <input type="text" class="form-control">
+                                                    <label for="from" class="d-flex justify-content-start text-dark small mb-1">&nbsp;</label>
+                                                    <input type="text" class="form-control" id="filter" placeholder="Check-In Date">
                                                 </div>
                                                 <div class="col-md-2">
-                                                    <label for="to" class="d-flex justify-content-start text-dark small mb-0">To</label>
-                                                    <input type="text" class="form-control">
+                                                    <label for="to" class="d-flex justify-content-start text-dark small mb-1">&nbsp;</label>
+                                                    <input type="text" class="form-control" id="filter" placeholder="Check-Out Date">
                                                 </div>
                                                 <div class="col-md-2">
-                                                    <label for="to" class="d-flex justify-content-start text-dark small mb-0">Rooms & Pax</label>
-                                                    <input type="text" class="form-control">
+                                                    <label for="to" class="d-flex justify-content-start text-dark small mb-1">&nbsp;</label>
+                                                    <input type="text" class="form-control" id="filter" placeholder="Rooms & Pax">
                                                 </div>
                                                 <div class="col-md-2">
-                                                    <button class="btn mt-3 btn-dark btn-block">Search</button>
+                                                    <button class="btn mt-4 btn-dark btn-block">Search</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -228,23 +226,33 @@
 								<div id="banner" class="row mt-3">
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-and-add-on-ancillary-services-at-best-b2b-rates.jpg" alt="" class="text-center">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-hotel-booking-live-inventory-of-5000-properties.jpg" alt="the-travel-square-b2b-hotel-booking-live-inventory-of-5000-properties" class="text-center">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-at-best-discounted-fare.jpg" alt="" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-hotel-booking-best-b2b-deals-and-tariffs-contracted-pre-purchased-rates.jpg" alt="the-travel-square-b2b-hotel-booking-best-b2b-deals-and-tariffs-contracted-pre-purchased-rates" class="img-responsive ">
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-1">
                                     <div class="card rounded">
-                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-partner-platform-book-flights-from-anywhere-anytime.jpg" alt="" class="img-responsive ">
+                                        <img src="<?php echo base_url(); ?>uploads/banners/the-travel-square-b2b-hotel-booking-avail-discounts-on-add-on-services-at-property.jpg" alt="the-travel-square-b2b-hotel-booking-avail-discounts-on-add-on-services-at-property" class="img-responsive ">
                                     </div>
                                 </div>
                             </div>
+							
+							
+							
+							
+							
                             </div>
-                            <!-- end:: Content -->				
+                            <!-- end:: Content -->
+							
+							
                         </div>
+						
+						
+						
 						<div class="d-none d-lg-block footer kt-footer text-dark kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop footer_div_class" id="footer" style="background-color: #e8e3e3; padding: 15px; margin: 0px;
 ; display:none!important; position:fixed;width:100%; bottom: 0px;">
                         <div id="details" class="kt-container  kt-container--fluid ">
@@ -257,7 +265,7 @@
                                         <p></p>
                                     </div> -->
                                     <div class="row" id="footer_div_id">
-                                        <button class="btn btn-primary btn-block" id="button_div" >Continue Booking -> </button>
+                                        <button class="btn btn-primary btn-block" id="button_div" >CONTINUE ></button>
                                     </div>
                                 </div>
                             </div>
