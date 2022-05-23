@@ -62,9 +62,12 @@
 							<div class="kt-portlet kt-portlet--mobile">
 								<div class="kt-portlet__head">
                                             <div class="kt-portlet__head-label">
-												All Bookings
+                                                <h3 class="kt-portlet__head-title">
+                                                    All Bookings
+                                                </h3>
                                             </div>
-                                </div>
+                                        </div>
+								
 								
 								<div class="kt-portlet__body kt-portlet__body">
 									<!--begin: Datatable -->

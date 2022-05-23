@@ -228,7 +228,7 @@
                                             <div class="kt-portlet__foot">
                                                 <div class="kt-form__actions">
                                                     <button type="submit" class="btn btn-dark">Publish</button>
-                                                    <button type="reset" class="btn btn-light-dark">Cancel</button>
+                                                    <button type="reset" class="btn btn-secondary">Cancel</button>
                                                 </div>
                                             </div>
                                         </form>

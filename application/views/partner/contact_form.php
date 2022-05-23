@@ -145,7 +145,7 @@
                                                     Write us all your Queries Regarding Issues and Infomation Required
                                                 <?php }?>
                                                 <?php if($for=='business-request'){?>    
-                                                    Get In Touch For Business Related Queries, Infomation, Deals and Investments
+                                                    Get In Touch For Business Related Queries, Information, Deals and Investments
                                                 <?php }?>
                                                 <?php if($for=='ppc-request'){?>    
                                                     Raise a Request for PPC Ads Service of The Travel Square, and Our Team Will connect Shortly
@@ -178,7 +178,7 @@
                                             </div>
                                             <div class="kt-portlet__foot">
                                                 <div class="kt-form__actions">
-                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                    <button type="submit" class="btn btn-dark">Submit</button>
                                                     <button type="reset" class="btn btn-secondary">Cancel</button>
                                                 </div>
                                             </div>

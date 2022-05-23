@@ -121,95 +121,31 @@
             </div>
             <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
                 <form>
-                    <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(./img/black-wallpaper.png)">
+                    <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-wallpaper.png)">
                         <h3 class="kt-head__title">
-                            User Notifications
+                            Notifications
                             &nbsp;
-                            <span class="btn btn-success btn-sm btn-bold btn-font-md">23 new</span>
+                            <span class="btn btn-success btn-sm btn-bold btn-font-md">0 New</span>
                         </h3>
                         <br>
                     </div>
                     <div class="tab-content">
                         <div class="tab-pane active show" id="topbar_notifications_notifications" role="tabpanel">
                             <div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll ps" data-scroll="true" data-height="300" data-mobile-height="200" style="height: 300px; overflow: hidden;">
-                                <a href="http://supplier.thetravelsquare.in/" class="kt-notification__item">
+                                <a href="http://partner.thetravelsquare.in/" class="kt-notification__item">
                                     <div class="kt-notification__item-icon">
                                         <i class="flaticon2-line-chart kt-font-success"></i>
                                     </div>
                                     <div class="kt-notification__item-details">
                                         <div class="kt-notification__item-title">
-                                            New Booking Has Been Received
+                                            Now Booking Experiences are Live
                                         </div>
                                         <div class="kt-notification__item-time">
-                                            2 hrs ago
+                                            18 Hr ago
                                         </div>
                                     </div>
                                 </a>
-                                <a href="http://supplier.thetravelsquare.in/" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon">
-                                        <i class="flaticon2-box-1 kt-font-brand"></i>
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title">
-                                            New Booking Has Been Received
-                                        </div>
-                                        <div class="kt-notification__item-time">
-                                            3 hrs ago
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="http://supplier.thetravelsquare.in/" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon">
-                                        <i class="flaticon2-chart2 kt-font-danger"></i>
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title">
-                                            New Booking Has Been Received
-                                        </div>
-                                        <div class="kt-notification__item-time">
-                                            3 hrs ago
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="http://supplier.thetravelsquare.in/" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon">
-                                        <i class="flaticon2-image-file kt-font-warning"></i>
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title">
-                                            USD 412 Credited to your Bank
-                                        </div>
-                                        <div class="kt-notification__item-time">
-                                            5 hrs ago
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="http://supplier.thetravelsquare.in/" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon">
-                                        <i class="flaticon2-drop kt-font-info"></i>
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title">
-                                            New Booking Has Been Received
-                                        </div>
-                                        <div class="kt-notification__item-time">
-                                            8 hrs ago
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="http://supplier.thetravelsquare.in/" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon">
-                                        <i class="flaticon2-pie-chart-2 kt-font-success"></i>
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title">
-                                            New Booking Has Been Received
-                                        </div>
-                                        <div class="kt-notification__item-time">
-                                            12 hrs ago
-                                        </div>
-                                    </div>
-                                </a>
+                                
                                 <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
                                     <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
                                 </div>
@@ -238,16 +174,16 @@
             </div>
             <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
                 <form>
-                    <div class="kt-head kt-head--skin-dark" style="background-image: url(./img/black-wallpaper.png)">
+                    <div class="kt-head kt-head--skin-dark" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-wallpaper.png)">
                         <h3 class="kt-head__title">
                             Quick Menu 
                         </h3>
                     </div>
                     <div class="kt-grid-nav kt-grid-nav--skin-light">
                         <div class="kt-grid-nav__row">
-                            <a href="http://supplier.thetravelsquare.in/" class="kt-grid-nav__item">
+                            <a href="http://partner.thetravelsquare.in/wallet-transactions/invoice" class="kt-grid-nav__item">
                                 <span class="kt-grid-nav__icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--dark kt-svg-icon--lg">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <rect x="0" y="0" width="24" height="24"></rect>
                                             <path d="M4.3618034,10.2763932 L4.8618034,9.2763932 C4.94649941,9.10700119 5.11963097,9 5.30901699,9 L15.190983,9 C15.4671254,9 15.690983,9.22385763 15.690983,9.5 C15.690983,9.57762255 15.6729105,9.65417908 15.6381966,9.7236068 L15.1381966,10.7236068 C15.0535006,10.8929988 14.880369,11 14.690983,11 L4.80901699,11 C4.53287462,11 4.30901699,10.7761424 4.30901699,10.5 C4.30901699,10.4223775 4.32708954,10.3458209 4.3618034,10.2763932 Z M14.6381966,13.7236068 L14.1381966,14.7236068 C14.0535006,14.8929988 13.880369,15 13.690983,15 L4.80901699,15 C4.53287462,15 4.30901699,14.7761424 4.30901699,14.5 C4.30901699,14.4223775 4.32708954,14.3458209 4.3618034,14.2763932 L4.8618034,13.2763932 C4.94649941,13.1070012 5.11963097,13 5.30901699,13 L14.190983,13 C14.4671254,13 14.690983,13.2238576 14.690983,13.5 C14.690983,13.5776225 14.6729105,13.6541791 14.6381966,13.7236068 Z" fill="#000000" opacity="0.3"></path>
@@ -258,9 +194,9 @@
                                 <span class="kt-grid-nav__title">Generate Invoice</span>
                                 <span class="kt-grid-nav__desc">Accounts</span>
                             </a>
-                            <a href="http://supplier.thetravelsquare.in/" class="kt-grid-nav__item">
+                            <a href="http://partner.thetravelsquare.in/generate-payment-link" class="kt-grid-nav__item">
                                 <span class="kt-grid-nav__icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--dark kt-svg-icon--lg">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <rect x="0" y="0" width="24" height="24"></rect>
                                             <path d="M14.8571499,13 C14.9499122,12.7223297 15,12.4263059 15,12.1190476 L15,6.88095238 C15,5.28984632 13.6568542,4 12,4 L11.7272727,4 C10.2210416,4 9,5.17258756 9,6.61904762 L10.0909091,6.61904762 C10.0909091,5.75117158 10.823534,5.04761905 11.7272727,5.04761905 L12,5.04761905 C13.0543618,5.04761905 13.9090909,5.86843034 13.9090909,6.88095238 L13.9090909,12.1190476 C13.9090909,12.4383379 13.8240964,12.7385644 13.6746497,13 L10.3253503,13 C10.1759036,12.7385644 10.0909091,12.4383379 10.0909091,12.1190476 L10.0909091,9.5 C10.0909091,9.06606198 10.4572216,8.71428571 10.9090909,8.71428571 C11.3609602,8.71428571 11.7272727,9.06606198 11.7272727,9.5 L11.7272727,11.3333333 L12.8181818,11.3333333 L12.8181818,9.5 C12.8181818,8.48747796 11.9634527,7.66666667 10.9090909,7.66666667 C9.85472911,7.66666667 9,8.48747796 9,9.5 L9,12.1190476 C9,12.4263059 9.0500878,12.7223297 9.14285008,13 L6,13 C5.44771525,13 5,12.5522847 5,12 L5,3 C5,2.44771525 5.44771525,2 6,2 L18,2 C18.5522847,2 19,2.44771525 19,3 L19,12 C19,12.5522847 18.5522847,13 18,13 L14.8571499,13 Z" fill="#000000" opacity="0.3"></path>
@@ -273,9 +209,9 @@
                             </a>
                         </div>
                         <div class="kt-grid-nav__row">
-                            <a href="http://supplier.thetravelsquare.in/" class="kt-grid-nav__item">
+                            <a href="http://partner.thetravelsquare.in/partner/adddeal" class="kt-grid-nav__item">
                                 <span class="kt-grid-nav__icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--dark kt-svg-icon--lg">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <rect x="0" y="0" width="24" height="24"></rect>
                                             <path d="M4,9.67471899 L10.880262,13.6470401 C10.9543486,13.689814 11.0320333,13.7207107 11.1111111,13.740321 L11.1111111,21.4444444 L4.49070127,17.526473 C4.18655139,17.3464765 4,17.0193034 4,16.6658832 L4,9.67471899 Z M20,9.56911707 L20,16.6658832 C20,17.0193034 19.8134486,17.3464765 19.5092987,17.526473 L12.8888889,21.4444444 L12.8888889,13.6728275 C12.9050191,13.6647696 12.9210067,13.6561758 12.9368301,13.6470401 L20,9.56911707 Z" fill="#000000"></path>
@@ -286,9 +222,9 @@
                                 <span class="kt-grid-nav__title">Publish a Deal</span>
                                 <span class="kt-grid-nav__desc">Terminal</span>
                             </a>
-                            <a href="http://supplier.thetravelsquare.in/" class="kt-grid-nav__item">
+                            <a href="http://partner.thetravelsquare.in/partner-manage-leads" class="kt-grid-nav__item">
                                 <span class="kt-grid-nav__icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--dark kt-svg-icon--lg">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <polygon points="0 0 24 0 24 24 0 24"></polygon>
                                             <path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
@@ -308,25 +244,25 @@
             <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
                 <div class="kt-header__topbar-user">
                     <span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
-                    <span class="kt-header__topbar-username kt-hidden-mobile">Mr. Aman</span>
-                    <img class="kt-hidden" alt="Pic" src="./files/300_25.jpg">
-                    <span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold">S</span>
+                    <span class="kt-header__topbar-username kt-hidden-mobile">Mr. Partner</span>
+                    <img class="kt-hidden" alt="Pic" src="http://partner.thetravelsquare.in/uploads/b2b/black-wallpaper.png">
+                    <span class="kt-badge kt-badge--username kt-badge--unified-dark kt-badge--lg kt-badge--rounded kt-badge--bold">P</span>
                 </div>
             </div>
             <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
-                <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(./img/black-wallpaper.png)">
+                <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-wallpaper.png)">
                     <div class="kt-user-card__avatar">
-                        <img class="kt-hidden" alt="Pic" src="./files/300_25.jpg">
-                        <span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">S</span>
+                        <img class="kt-hidden" alt="Pic" src="http://partner.thetravelsquare.in/uploads/b2b/black-wallpaper.png">
+                        <span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-dark">P</span>
                     </div>
                     <div class="kt-user-card__name">
-                        Mr. Aman Roy
+                        GOODVIBES TRAVEL VENTURE PVT LTD.
                     </div>
                 </div>
                 <div class="kt-notification">
-                    <a href="" class="kt-notification__item">
+                    <a href="http://partner.thetravelsquare.in/profile" class="kt-notification__item">
                         <div class="kt-notification__item-icon">
-                            <i class="flaticon2-calendar-3 kt-font-success"></i>
+                            <i class="flaticon2-calendar-3 kt-font-dark"></i>
                         </div>
                         <div class="kt-notification__item-details">
                             <div class="kt-notification__item-title kt-font-bold">
@@ -337,9 +273,9 @@
                             </div>
                         </div>
                     </a>
-                    <a href="" class="kt-notification__item">
+                    <a href="#" class="kt-notification__item">
                         <div class="kt-notification__item-icon">
-                            <i class="flaticon2-mail kt-font-warning"></i>
+                            <i class="flaticon2-mail kt-font-dark"></i>
                         </div>
                         <div class="kt-notification__item-details">
                             <div class="kt-notification__item-title kt-font-bold">
@@ -350,9 +286,9 @@
                             </div>
                         </div>
                     </a>
-                    <a href="" class="kt-notification__item">
+                    <a href="http://partner.thetravelsquare.in/Partner/view_bookings" class="kt-notification__item">
                         <div class="kt-notification__item-icon">
-                            <i class="flaticon2-rocket-1 kt-font-danger"></i>
+                            <i class="flaticon2-rocket-1 kt-font-dark"></i>
                         </div>
                         <div class="kt-notification__item-details">
                             <div class="kt-notification__item-title kt-font-bold">
@@ -363,9 +299,9 @@
                             </div>
                         </div>
                     </a>
-                    <a href="" class="kt-notification__item">
+                    <a href="http://partner.thetravelsquare.in/Partner/view_bookings" class="kt-notification__item">
                         <div class="kt-notification__item-icon">
-                            <i class="flaticon2-hourglass kt-font-brand"></i>
+                            <i class="flaticon2-hourglass kt-font-dark"></i>
                         </div>
                         <div class="kt-notification__item-details">
                             <div class="kt-notification__item-title kt-font-bold">
@@ -377,8 +313,8 @@
                         </div>
                     </a>
                     <div class="kt-notification__custom kt-space-between">
-                        <a href="#" target="_blank" class="btn btn-label btn-label-brand btn-sm btn-bold">LOG OUT</a>
-                        <a href="#" target="_blank" class="btn btn-clean btn-sm btn-bold">Premium Seller</a>
+                        <a href="#" target="_blank" class="btn btn-label btn-label-dark btn-sm btn-bold">LOG OUT</a>
+                        <a href="#" target="_blank" class="btn btn-light-dark btn-sm btn-bold">Premium Seller</a>
                     </div>
                 </div>
             </div>

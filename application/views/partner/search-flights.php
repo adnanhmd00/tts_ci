@@ -140,9 +140,7 @@
                 					<h3 class="kt-subheader__title">Partner ID</h3>
                 					<span class="kt-subheader__separator kt-subheader__separator--v"></span>
                 					<span class="kt-subheader__desc">TSA167D</span>
-                					<a href="http://supplier.thetravelsquare.in/" class="btn btn-label-warning btn-bold btn-sm btn-icon-h kt-margin-l-10">
-                						View Profile
-                					</a>
+                					
                 					<div class="kt-input-icon kt-input-icon--right kt-subheader__search kt-hidden">
                 						<input type="text" class="form-control" placeholder="Search order..." id="generalSearch">
                 						<span class="kt-input-icon__icon kt-input-icon__icon--right">
@@ -374,7 +372,7 @@
                                         <p></p>
                                     </div> -->
                                     <div class="row" id="footer_div_id">
-                                        <button class="btn btn-dark btn-block" id="button_div" >Continue </button>
+                                        <button class="btn btn-dark btn-block" id="button_div" >Continue</button>
                                     </div>
                                 </div>
                             </div>
@@ -389,323 +387,7 @@
             </div>
             <!-- end:: Page -->
             <!-- begin::Quick Panel -->
-            <div id="kt_quick_panel" class="kt-quick-panel">
-            	<a href="http://supplier.thetravelsquare.in/" class="kt-quick-panel__close" id="kt_quick_panel_close_btn"><i class="flaticon2-delete"></i></a>
-            	<div class="kt-quick-panel__nav" kt-hidden-height="66" style="">
-            		<ul class="nav nav-tabs nav-tabs-line nav-tabs-bold nav-tabs-line-3x nav-tabs-line-brand  kt-notification-item-padding-x" role="tablist">
-            			<li class="nav-item active">
-            				<a class="nav-link active" data-toggle="tab" href="http://supplier.thetravelsquare.in/kt_quick_panel_tab_notifications" role="tab">Recent Bookings</a>
-            			</li>
-            		</ul>
-            	</div>
-            	<div class="kt-quick-panel__content">
-            		<div class="tab-content">
-            			<div class="tab-pane fade show kt-scroll active ps ps--active-y" id="kt_quick_panel_tab_notifications" role="tabpanel" style="height: 592px; overflow: hidden;">
-            				<div class="kt-notification">
-            					<a href="http://supplier.thetravelsquare.in/" class="kt-notification__item">
-            						<div class="kt-notification__item-icon">
-            							<i class="flaticon2-line-chart kt-font-success"></i>
-            						</div>
-            						<div class="kt-notification__item-details">
-            							<div class="kt-notification__item-title">
-            								Chermantra Aonang Cliff Resort Booked
-            							</div>
-            							<div class="kt-notification__item-time">
-            								+ USD 320
-            							</div>
-            						</div>
-            					</a>
-            					<a href="http://supplier.thetravelsquare.in/" class="kt-notification__item">
-            						<div class="kt-notification__item-icon">
-            							<i class="flaticon2-favourite kt-font-danger"></i>
-            						</div>
-            						<div class="kt-notification__item-details">
-            							<div class="kt-notification__item-title">
-            								Phuket & Krabi Package
-            							</div>
-            							<div class="kt-notification__item-time">
-            								+ USD 672
-            							</div>
-            						</div>
-            					</a>
-            					<a href="http://supplier.thetravelsquare.in/" class="kt-notification__item">
-            						<div class="kt-notification__item-icon">
-            							<i class="flaticon2-safe kt-font-primary"></i>
-            						</div>
-            						<div class="kt-notification__item-details">
-            							<div class="kt-notification__item-title">
-            								Bangkok & Pattaya Package
-            							</div>
-            							<div class="kt-notification__item-time">
-            								+ USD 412
-            							</div>
-            						</div>
-            					</a>
-            					<a href="http://supplier.thetravelsquare.in/" class="kt-notification__item">
-            						<div class="kt-notification__item-icon">
-            							<i class="flaticon2-psd kt-font-success"></i>
-            						</div>
-            						<div class="kt-notification__item-details">
-            							<div class="kt-notification__item-title">
-            								New Customer Booking Transfers - Rohit Sharma + 3
-            							</div>
-            							<div class="kt-notification__item-time">
-            								+ USD 112
-            							</div>
-            						</div>
-            					</a>
-            					<a href="http://supplier.thetravelsquare.in/" class="kt-notification__item">
-            						<div class="kt-notification__item-icon">
-            							<i class="flaticon-download-1 kt-font-danger"></i>
-            						</div>
-            						<div class="kt-notification__item-details">
-            							<div class="kt-notification__item-title">
-            								Refund Processed to Aditya Joshi
-            							</div>
-            							<div class="kt-notification__item-time">
-            								+ USD 57
-            							</div>
-            						</div>
-            					</a>
-            				</div>
-            				<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-            					<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-            				</div>
-            				<div class="ps__rail-y" style="top: 0px; height: 592px; right: 5px;">
-            					<div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 300px;"></div>
-            				</div>
-            			</div>
-            			<div class="tab-pane fade kt-scroll ps" id="kt_quick_panel_tab_logs" role="tabpanel" style="height: 592px; overflow: hidden;">
-            				<div class="kt-notification-v2">
-            					<a href="http://supplier.thetravelsquare.in/" class="kt-notification-v2__item">
-            						<div class="kt-notification-v2__item-icon">
-            							<i class="flaticon-bell kt-font-brand"></i>
-            						</div>
-            						<div class="kt-notification-v2__itek-wrapper">
-            							<div class="kt-notification-v2__item-title">
-            								5 new user generated report
-            							</div>
-            							<div class="kt-notification-v2__item-desc">
-            								Reports based on sales
-            							</div>
-            						</div>
-            					</a>
-            					<a href="http://supplier.thetravelsquare.in/" class="kt-notification-v2__item">
-            						<div class="kt-notification-v2__item-icon">
-            							<i class="flaticon2-box kt-font-danger"></i>
-            						</div>
-            						<div class="kt-notification-v2__itek-wrapper">
-            							<div class="kt-notification-v2__item-title">
-            								2 new items submited
-            							</div>
-            							<div class="kt-notification-v2__item-desc">
-            								by Grog John
-            							</div>
-            						</div>
-            					</a>
-            					<a href="http://supplier.thetravelsquare.in/" class="kt-notification-v2__item">
-            						<div class="kt-notification-v2__item-icon">
-            							<i class="flaticon-psd kt-font-brand"></i>
-            						</div>
-            						<div class="kt-notification-v2__itek-wrapper">
-            							<div class="kt-notification-v2__item-title">
-            								79 PSD files generated
-            							</div>
-            							<div class="kt-notification-v2__item-desc">
-            								Reports based on sales
-            							</div>
-            						</div>
-            					</a>
-            					<a href="http://supplier.thetravelsquare.in/" class="kt-notification-v2__item">
-            						<div class="kt-notification-v2__item-icon">
-            							<i class="flaticon2-supermarket kt-font-warning"></i>
-            						</div>
-            						<div class="kt-notification-v2__itek-wrapper">
-            							<div class="kt-notification-v2__item-title">
-            								$2900 worth producucts sold
-            							</div>
-            							<div class="kt-notification-v2__item-desc">
-            								Total 234 items
-            							</div>
-            						</div>
-            					</a>
-            					<a href="http://supplier.thetravelsquare.in/" class="kt-notification-v2__item">
-            						<div class="kt-notification-v2__item-icon">
-            							<i class="flaticon-paper-plane-1 kt-font-success"></i>
-            						</div>
-            						<div class="kt-notification-v2__itek-wrapper">
-            							<div class="kt-notification-v2__item-title">
-            								4.5h-avarage response time
-            							</div>
-            							<div class="kt-notification-v2__item-desc">
-            								Fostest is Barry
-            							</div>
-            						</div>
-            					</a>
-            					<a href="http://supplier.thetravelsquare.in/" class="kt-notification-v2__item">
-            						<div class="kt-notification-v2__item-icon">
-            							<i class="flaticon2-information kt-font-danger"></i>
-            						</div>
-            						<div class="kt-notification-v2__itek-wrapper">
-            							<div class="kt-notification-v2__item-title">
-            								Database server is down
-            							</div>
-            							<div class="kt-notification-v2__item-desc">
-            								10 mins ago
-            							</div>
-            						</div>
-            					</a>
-            					<a href="http://supplier.thetravelsquare.in/" class="kt-notification-v2__item">
-            						<div class="kt-notification-v2__item-icon">
-            							<i class="flaticon2-mail-1 kt-font-brand"></i>
-            						</div>
-            						<div class="kt-notification-v2__itek-wrapper">
-            							<div class="kt-notification-v2__item-title">
-            								System report has been generated
-            							</div>
-            							<div class="kt-notification-v2__item-desc">
-            								Fostest is Barry
-            							</div>
-            						</div>
-            					</a>
-            					<a href="http://supplier.thetravelsquare.in/" class="kt-notification-v2__item">
-            						<div class="kt-notification-v2__item-icon">
-            							<i class="flaticon2-hangouts-logo kt-font-warning"></i>
-            						</div>
-            						<div class="kt-notification-v2__itek-wrapper">
-            							<div class="kt-notification-v2__item-title">
-            								4.5h-avarage response time
-            							</div>
-            							<div class="kt-notification-v2__item-desc">
-            								Fostest is Barry
-            							</div>
-            						</div>
-            					</a>
-            				</div>
-            				<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-            					<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-            				</div>
-            				<div class="ps__rail-y" style="top: 0px; right: 5px;">
-            					<div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
-            				</div>
-            			</div>
-            			<div class="tab-pane kt-quick-panel__content-padding-x fade kt-scroll ps" id="kt_quick_panel_tab_settings" role="tabpanel" style="height: 592px; overflow: hidden;">
-            				<form class="kt-form">
-            					<div class="kt-heading kt-heading--sm kt-heading--space-sm">Customer Care</div>
-            					<div class="form-group form-group-xs row">
-            						<label class="col-8 col-form-label">Enable Notifications:</label>
-            						<div class="col-4 kt-align-right">
-            							<span class="kt-switch kt-switch--success kt-switch--sm">
-            								<label>
-            									<input type="checkbox" checked="checked" name="quick_panel_notifications_1">
-            									<span></span>
-            								</label>
-            							</span>
-            						</div>
-            					</div>
-            					<div class="form-group form-group-xs row">
-            						<label class="col-8 col-form-label">Enable Case Tracking:</label>
-            						<div class="col-4 kt-align-right">
-            							<span class="kt-switch kt-switch--success kt-switch--sm">
-            								<label>
-            									<input type="checkbox" name="quick_panel_notifications_2">
-            									<span></span>
-            								</label>
-            							</span>
-            						</div>
-            					</div>
-            					<div class="form-group form-group-last form-group-xs row">
-            						<label class="col-8 col-form-label">Support Portal:</label>
-            						<div class="col-4 kt-align-right">
-            							<span class="kt-switch kt-switch--success kt-switch--sm">
-            								<label>
-            									<input type="checkbox" checked="checked" name="quick_panel_notifications_2">
-            									<span></span>
-            								</label>
-            							</span>
-            						</div>
-            					</div>
-            					<div class="kt-separator kt-separator--space-md kt-separator--border-dashed"></div>
-            					<div class="kt-heading kt-heading--sm kt-heading--space-sm">Reports</div>
-            					<div class="form-group form-group-xs row">
-            						<label class="col-8 col-form-label">Generate Reports:</label>
-            						<div class="col-4 kt-align-right">
-            							<span class="kt-switch kt-switch--sm kt-switch--danger">
-            								<label>
-            									<input type="checkbox" checked="checked" name="quick_panel_notifications_3">
-            									<span></span>
-            								</label>
-            							</span>
-            						</div>
-            					</div>
-            					<div class="form-group form-group-xs row">
-            						<label class="col-8 col-form-label">Enable Report Export:</label>
-            						<div class="col-4 kt-align-right">
-            							<span class="kt-switch kt-switch--sm kt-switch--danger">
-            								<label>
-            									<input type="checkbox" name="quick_panel_notifications_3">
-            									<span></span>
-            								</label>
-            							</span>
-            						</div>
-            					</div>
-            					<div class="form-group form-group-last form-group-xs row">
-            						<label class="col-8 col-form-label">Allow Data Collection:</label>
-            						<div class="col-4 kt-align-right">
-            							<span class="kt-switch kt-switch--sm kt-switch--danger">
-            								<label>
-            									<input type="checkbox" checked="checked" name="quick_panel_notifications_4">
-            									<span></span>
-            								</label>
-            							</span>
-            						</div>
-            					</div>
-            					<div class="kt-separator kt-separator--space-md kt-separator--border-dashed"></div>
-            					<div class="kt-heading kt-heading--sm kt-heading--space-sm">Memebers</div>
-            					<div class="form-group form-group-xs row">
-            						<label class="col-8 col-form-label">Enable Member singup:</label>
-            						<div class="col-4 kt-align-right">
-            							<span class="kt-switch kt-switch--sm kt-switch--brand">
-            								<label>
-            									<input type="checkbox" checked="checked" name="quick_panel_notifications_5">
-            									<span></span>
-            								</label>
-            							</span>
-            						</div>
-            					</div>
-            					<div class="form-group form-group-xs row">
-            						<label class="col-8 col-form-label">Allow User Feedbacks:</label>
-            						<div class="col-4 kt-align-right">
-            							<span class="kt-switch kt-switch--sm kt-switch--brand">
-            								<label>
-            									<input type="checkbox" name="quick_panel_notifications_5">
-            									<span></span>
-            								</label>
-            							</span>
-            						</div>
-            					</div>
-            					<div class="form-group form-group-last form-group-xs row">
-            						<label class="col-8 col-form-label">Enable Customer Portal:</label>
-            						<div class="col-4 kt-align-right">
-            							<span class="kt-switch kt-switch--sm kt-switch--brand">
-            								<label>
-            									<input type="checkbox" checked="checked" name="quick_panel_notifications_6">
-            									<span></span>
-            								</label>
-            							</span>
-            						</div>
-            					</div>
-            				</form>
-            				<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-            					<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-            				</div>
-            				<div class="ps__rail-y" style="top: 0px; right: 5px;">
-            					<div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
-            				</div>
-            			</div>
-            		</div>
-            	</div>
-            </div>
+            
             <!-- end::Quick Panel -->
             <!-- begin::Scrolltop -->
             <div id="kt_scrolltop" class="kt-scrolltop">
@@ -713,20 +395,7 @@
             </div>
             <!-- end::Scrolltop -->
             <!-- begin::Sticky Toolbar -->
-            <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
-            	<li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="Check out more demos">
-            		<a href="http://supplier.thetravelsquare.in/" class=""><i class="flaticon2-drop"></i></a>
-            	</li>
-            	<li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Layout Builder">
-            		<a href="#"><i class="flaticon2-gear"></i></a>
-            	</li>
-            	<li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
-            		<a href="" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
-            	</li>
-            	<li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Example">
-            		<a href="http://supplier.thetravelsquare.in/" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
-            	</li>
-            </ul>
+           
             <!-- end::Sticky Toolbar -->
             <!-- begin::Demo Panel -->
             <!-- end::Demo Panel -->
@@ -949,7 +618,7 @@
 					
 					</div>
 					<div class="modal-footer" id="continue_button_id">
-					<button type="button" class="btn btn-primary" data-dismiss="modal" >Continue Booking</button>
+					<button type="button" class="btn btn-dark" data-dismiss="modal" >Continue Booking</button>
 					</div>
 				</div>
 				</div>

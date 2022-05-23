@@ -169,11 +169,14 @@
                             <div class="row">
                                 <div class="col-lg-12 col-xl-12">
                                     <div class="kt-portlet">
-                                        <div class="kt-portlet__head">
+										<div class="kt-portlet__head">
                                             <div class="kt-portlet__head-label">
-												Verify Travel Agent / Supplier
+                                                <h3 class="kt-portlet__head-title">
+                                                    Verify Travel Agent / Supplier
+                                                </h3>
                                             </div>
                                         </div>
+                                       
                                         <!--begin::Form-->
                                         
                                         <form class="kt-form kt-form--label-right" method="post" action="<?= base_url('partner-agent-request-verification-form');?>">
@@ -216,7 +219,7 @@
 														<div class="col-lg-5"></div>
 														<div class="col-lg-7">
 															<button type="submit" class="btn btn-dark">Verify Agency</button>
-															<button type="reset" class="btn btn-light-dark">Cancel</button>
+															<button type="reset" class="btn btn-secondary">Cancel</button>
 														</div>
 													</div>
 												</div>

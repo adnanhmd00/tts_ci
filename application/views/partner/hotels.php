@@ -198,7 +198,7 @@
                 				<div class="row">
                 					<div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
                 						<div class="container h5 text-center">
-                                        Book More than 5000+ Hotels, Resorts, BNB's & More at the Best B2B Consolidated Tariffs
+                                        Book More than 5000+ Hotels, Resorts, BNB's & More at the Best B2B Tariffs
                                             <div class="row mt-3">
                                                 <div class="col-md-4">
                                                     <label for="city" class="text-left mt-0"></label>
