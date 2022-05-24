@@ -14,7 +14,7 @@
         <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
             <div class="kt-header-mobile__logo">
                 <a href="">
-                <img alt="The Travel Square" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
+                <img alt="The Travel Square" src="http://partner.thetravelsquare.in/uploads/b2b/the-travel-square-logo.png" width="30" height="30">
                 </a>
             </div>
             <div class="kt-header-mobile__toolbar">
@@ -106,7 +106,7 @@
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
                                     <form>
                                         <!--begin: Head -->
-                                        <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png)">
+                                        <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-banner.png)">
                                             <h3 class="kt-head__title">
                                                 User Notifications
                                                 &nbsp;
@@ -516,7 +516,7 @@
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
                                     <form>
                                         <!--begin: Head -->
-                                        <div class="kt-head kt-head--skin-dark" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png)">
+                                        <div class="kt-head kt-head--skin-dark" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-banner.png)">
                                             <h3 class="kt-head__title">
                                                 User Quick Actions
                                                 <span class="kt-space-15"></span>
@@ -605,7 +605,7 @@
                                     <form>
                                         <!-- begin:: Mycart -->
                                         <div class="kt-mycart">
-                                            <div class="kt-mycart__head kt-head" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png);">
+                                            <div class="kt-mycart__head kt-head" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-banner.png);">
                                                 <div class="kt-mycart__info">
                                                     <span class="kt-mycart__icon"><i class="flaticon2-shopping-cart-1 kt-font-success"></i></span>
                                                     <h3 class="kt-mycart__title">My Cart</h3>

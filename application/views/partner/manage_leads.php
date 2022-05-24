@@ -18,7 +18,7 @@
 		<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
 			<div class="kt-header-mobile__logo">
 				<a href="http://partner.thetravelsquare.in/">
-				<img alt="Logo" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
+				<img alt="Logo" src="http://partner.thetravelsquare.in/uploads/b2b/the-travel-square-logo.png" width="30" height="30">
 				</a>
 			</div>
 			<div class="kt-header-mobile__toolbar">

@@ -128,7 +128,7 @@
     	<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
     		<div class="kt-header-mobile__logo">
     			<a href="">
-    				<img alt="The Travel Square" src="./img/the-travel-square-logo-small.png">
+    				<img alt="The Travel Square" src="http://partner.thetravelsquare.in/uploads/b2b/the-travel-square-logo.png" width="30" height="30">
     			</a>
     		</div>
     		<div class="kt-header-mobile__toolbar">
@@ -250,7 +250,7 @@
                         </div>
                     </div>
                         <!-- begin:: Footer -->
-                        <?php //include('footer.php');?>
+                        <?php include('footer.php');?>
                         <!-- end:: Footer -->			
                     </div>
                 </div>

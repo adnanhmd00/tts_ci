@@ -91,7 +91,7 @@
                     <form method="get" class="kt-quick-search__form">
                         <div class="input-group">
                             <div class="input-group-prepend"><span class="input-group-text"><i class="flaticon2-search-1"></i></span></div>
-                            <input type="text" class="form-control kt-quick-search__input" placeholder="Search...">
+                            <input type="text" class="form-control kt-quick-search__input" placeholder="Search the Platform">
                             <div class="input-group-append"><span class="input-group-text"><i class="la la-close kt-quick-search__close"></i></span></div>
                         </div>
                     </form>
@@ -121,11 +121,11 @@
             </div>
             <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
                 <form>
-                    <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-wallpaper.png)">
+                    <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-banner.png)">
                         <h3 class="kt-head__title">
                             Notifications
                             &nbsp;
-                            <span class="btn btn-success btn-sm btn-bold btn-font-md">0 New</span>
+                            <span class="btn btn-dark btn-sm btn-bold btn-font-md">0 New</span>
                         </h3>
                         <br>
                     </div>
@@ -134,7 +134,7 @@
                             <div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll ps" data-scroll="true" data-height="300" data-mobile-height="200" style="height: 300px; overflow: hidden;">
                                 <a href="http://partner.thetravelsquare.in/" class="kt-notification__item">
                                     <div class="kt-notification__item-icon">
-                                        <i class="flaticon2-line-chart kt-font-success"></i>
+                                        <i class="flaticon2-line-chart kt-font-dark"></i>
                                     </div>
                                     <div class="kt-notification__item-details">
                                         <div class="kt-notification__item-title">
@@ -174,7 +174,7 @@
             </div>
             <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
                 <form>
-                    <div class="kt-head kt-head--skin-dark" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-wallpaper.png)">
+                    <div class="kt-head kt-head--skin-dark" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-banner.png)">
                         <h3 class="kt-head__title">
                             Quick Menu 
                         </h3>
@@ -245,14 +245,14 @@
                 <div class="kt-header__topbar-user">
                     <span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
                     <span class="kt-header__topbar-username kt-hidden-mobile">Mr. Partner</span>
-                    <img class="kt-hidden" alt="Pic" src="http://partner.thetravelsquare.in/uploads/b2b/black-wallpaper.png">
-                    <span class="kt-badge kt-badge--username kt-badge--unified-dark kt-badge--lg kt-badge--rounded kt-badge--bold">P</span>
+                    <img class="kt-hidden" alt="Pic" src="http://partner.thetravelsquare.in/uploads/b2b/black-banner.png">
+                    <span class="kt-badge kt-badge--username kt-badge--unified-primary kt-badge--lg kt-badge--rounded kt-badge--bold">P</span>
                 </div>
             </div>
             <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
-                <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-wallpaper.png)">
+                <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-banner.png)">
                     <div class="kt-user-card__avatar">
-                        <img class="kt-hidden" alt="Pic" src="http://partner.thetravelsquare.in/uploads/b2b/black-wallpaper.png">
+                        <img class="kt-hidden" alt="Pic" src="http://partner.thetravelsquare.in/uploads/b2b/black-banner.png">
                         <span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-dark">P</span>
                     </div>
                     <div class="kt-user-card__name">

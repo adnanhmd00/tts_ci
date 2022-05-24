@@ -12,7 +12,7 @@
         <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
             <div class="kt-header-mobile__logo">
                 <a href="">
-                <img alt="The Travel Square" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
+                <img alt="The Travel Square" src="http://partner.thetravelsquare.in/uploads/b2b/the-travel-square-logo.png" width="30" height="30">
                 </a>
             </div>
             <div class="kt-header-mobile__toolbar">
@@ -104,7 +104,7 @@
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
                                     <form>
                                         <!--begin: Head -->
-                                        <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png)">
+                                        <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-banner.png)">
                                             <h3 class="kt-head__title">
                                                 User Notifications
                                                 &nbsp;
@@ -514,7 +514,7 @@
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
                                     <form>
                                         <!--begin: Head -->
-                                        <div class="kt-head kt-head--skin-dark" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png)">
+                                        <div class="kt-head kt-head--skin-dark" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-banner.png)">
                                             <h3 class="kt-head__title">
                                                 User Quick Actions
                                                 <span class="kt-space-15"></span>
@@ -603,7 +603,7 @@
                                     <form>
                                         <!-- begin:: Mycart -->
                                         <div class="kt-mycart">
-                                            <div class="kt-mycart__head kt-head" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png);">
+                                            <div class="kt-mycart__head kt-head" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-banner.png);">
                                                 <div class="kt-mycart__info">
                                                     <span class="kt-mycart__icon"><i class="flaticon2-shopping-cart-1 kt-font-success"></i></span>
                                                     <h3 class="kt-mycart__title">My Cart</h3>
@@ -775,7 +775,7 @@
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
                                     <!--begin: Head -->
-                                    <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(http://partner.thetravelsquare.in/resource/admin/img/black-wallpaper.png)">
+                                    <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(http://partner.thetravelsquare.in/uploads/b2b/black-banner.png)">
                                         <div class="kt-user-card__avatar">
                                             <img class="kt-hidden" alt="Pic" src="./files/300_25.jpg">
                                             <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
@@ -970,17 +970,17 @@
         <!-- end::Scrolltop -->
         <!-- begin::Sticky Toolbar -->
         <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="Check out more demos">
-                <a href="#" class=""><i class="flaticon2-drop"></i></a>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
+                <a href="http://partner.thetravelsquare.in/travpay" class=""><i class="flaticon2-drop"></i></a>
             </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Layout Builder">
-                <a href="#
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
+                <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>
             </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Documentation">
-                <a href="" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Help">
+                <a href="mailto:partnercare@thetravelsquare.in" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
             </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Example">
-                <a href="#" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Us">
+                <a href="https://wa.me/919999007037" target="_blank" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
             </li>
         </ul>
         <!-- end::Sticky Toolbar -->

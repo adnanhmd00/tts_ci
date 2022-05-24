@@ -16,7 +16,7 @@
 	
 </div>
 	<div class="col-md-9">
-		<h5>Showing Results for:</h5>
+		<h5>Showing Flights for:</h5>
 		<div class="row mb-2">
 			<div class="<?php if($JourneyType == '2'){ ?>col-xs-6 col-sm-6 col-md-6<?php }else{?>col-xs-12 col-sm-12 col-md-12<?php }?>">
 				<div class="card p-3">

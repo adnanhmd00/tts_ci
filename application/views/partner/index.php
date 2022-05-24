@@ -12,7 +12,7 @@
         <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
             <div class="kt-header-mobile__logo">
                 <a href="http://partner.thetravelsquare.in/">
-                <img alt="The Travel Square" src="./img/the-travel-square-logo-small.png">
+                <img alt="The Travel Square Logo" src="http://partner.thetravelsquare.in/uploads/b2b/the-travel-square-logo.png" width="30" height="30">
                 </a>
             </div>
             <div class="kt-header-mobile__toolbar">
@@ -40,9 +40,7 @@
                                     <h3 class="kt-subheader__title">Partner ID</h3>
                                     <span class="kt-subheader__separator kt-subheader__separator--v"></span>
                                     <span class="kt-subheader__desc">TSA167D</span>
-                                    <a href="http://partner.thetravelsquare.in/partner-profile/" class="btn btn-label-warning btn-bold btn-sm btn-icon-h kt-margin-l-10">
-                                    View Profile
-                                    </a>
+                                    
                                     <div class="kt-input-icon kt-input-icon--right kt-subheader__search kt-hidden">
                                         <input type="text" class="form-control" placeholder="Search order..." id="generalSearch">
                                         <span class="kt-input-icon__icon kt-input-icon__icon--right">
@@ -52,13 +50,13 @@
                                 </div>
                                 <div class="kt-subheader__toolbar">
                                     <div class="kt-subheader__wrapper">
-                                        <a href="http://supplier.thetravelsquare.in/" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Bookings Calender">
+                                        <a href="http://partner.thetravelsquare.in/" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Bookings Calender">
                                         <span class="kt-subheader__btn-daterange-title" id="kt_dashboard_daterangepicker_title">Date : </span>&nbsp;
                                         <span class="kt-subheader__btn-daterange-date" id="kt_dashboard_daterangepicker_date">Mar 17</span>
-                                        <i class="flaticon2-calendar-1"></i>
+                                        
                                         </a>
                                         <div class="dropdown dropdown-inline" data-toggle-="kt-tooltip" title="Publish Deal" data-placement="left">
-                                            <a href="http://supplier.thetravelsquare.in/" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <a href="http://partner.thetravelsquare.in/" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--md">
                                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                         <polygon points="0 0 24 0 24 24 0 24"></polygon>
@@ -114,8 +112,8 @@
                                                     </li>
                                                     <li class="kt-nav__separator"></li>
                                                     <li class="kt-nav__foot">
-                                                        <a class="btn btn-label-brand btn-bold btn-sm" href="http://supplier.thetravelsquare.in/">VERIFY AS SELLER</a>                                    
-                                                        <a class="btn btn-clean btn-bold btn-sm kt-hidden" href="http://supplier.thetravelsquare.in/" data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more...">Learn more</a>
+                                                        <a class="btn btn-label-dark btn-bold btn-sm" href="http://partner.thetravelsquare.in/">VERIFY AS SELLER</a>                                    
+                                                        <a class="btn btn-dark btn-bold btn-sm kt-hidden" href="http://partner.thetravelsquare.in/" data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more...">Learn more</a>
                                                     </li>
                                                 </ul>
                                                 <!--end::Nav-->
@@ -308,7 +306,7 @@
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
                                                 <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('http://instawiremoney.com/img/instawire-logo-black-big.png');?>)">
                                                     <h3 class="kt-widget19__title kt-font-light">
-                                                        Introducing Instawire TravPay
+                                                        Send & Receive Money Overseas
                                                     </h3>
                                                     <div class="kt-widget19__shadow"></div>
                                                     <div class="kt-widget19__labels">
@@ -320,7 +318,7 @@
                                         <div class="kt-portlet__body">
                                             <div class="kt-widget19__wrapper">
                                                 <div class="kt-widget19__text">
-                                                    <b><big>Send & Receive Money Overseas </big></b><br>Instawire TravPAY is Your Safe Travel Payments Wallets To , Receive & Send Customer Payments Safely 
+													TravPAY is Your Safe Travel Payments Wallet To, Receive & Send Customer Payments Securely
                                                 </div>
                                             </div>
                                         </div>

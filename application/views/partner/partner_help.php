@@ -41,7 +41,7 @@
         <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
             <div class="kt-header-mobile__logo">
                 <a href="http://partner.thetravelsquare.in/">
-                <img alt="Logo" src="http://partner.thetravelsquare.in/resource/admin/img/logo.png">
+                <img alt="Logo" src="http://partner.thetravelsquare.in/uploads/b2b/the-travel-square-logo.png" width="30" height="30">
                 </a>
             </div>
             <div class="kt-header-mobile__toolbar">
@@ -67,7 +67,7 @@
                         <!-- begin:: Hero -->
 						<br>
                         <div class="kt-sc" >
-                            <div class="kt-container " style="height:400px;background-image: url(<?= base_url('resource/admin/img/black-banner.png');?>)">
+                            <div class="kt-container " style="height:400px;background-image: url(<?= base_url('uploads/b2b/black-banner.png');?>)">
                                 <div class="kt-sc__top">
                                     <h3 class="kt-sc__title"><br>
                                         <font color="white">Partner Help Center
@@ -189,7 +189,7 @@
                                                     We are Happy to Help You . 
                                                     For General Queries & Issues Please Contact Us Using the Request Form , Below . Our Team Will Assist You As Soon as The Issue is Raised .
                                                     We are Fast at Resolving Issues . If Not Happy With The Resolution Contact Us at For Feedback & More Senior Assistance . Mail at
-                                                    <a href="" class="kt-link">contact@thetravelsquare.in</a>.
+                                                    <a href="mailto:contact@thetravelsquare.in" class="kt-link">contact@thetravelsquare.in</a>.
                                                 </div>
                                             </div>
                                         </div>
@@ -229,7 +229,7 @@
                                                     </p>
                                                 </div>
                                                 <div class="kt-callout__action">
-                                                    <a href="<?= base_url('partner-contact/business-request');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-primary">Submit Request</a>
+                                                    <a href="<?= base_url('partner-contact/business-request');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-dark">Submit Request</a>
                                                 </div>
                                             </div>
                                         </div>
