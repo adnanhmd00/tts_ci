@@ -846,7 +846,7 @@ class Partner extends CI_Controller
                 }else if($for=='ppc-request'){
                     $this->sendEmail('ppc.thetravelsquare@gmail.com',$message,$for,$name,$phone,$email);
                 }
-                $this->success("Success");
+                $this->success("Your Request Has Been Submited ! Our Team will Connect with You Soon");
             }else{
                 $this->failed("Failure");
             }
@@ -1307,7 +1307,7 @@ class Partner extends CI_Controller
                 $data['claim_by_id'] = $userinfo->id;
                 $data['claim_by_type'] = $userinfo->type;
                 if($this->admin->insert_data('client_settlement',$data)){
-                    $this->success("OK");
+                    $this->success("Your Settlement Claim Request Has Been Raise ! We Reach You Out Soon");
                 }else{
                     $this->failed("Error While Uploading Image");
                 }
@@ -1332,9 +1332,9 @@ class Partner extends CI_Controller
 
             $config['upload_path'] = './uploads/';
             $config['allowed_types'] = 'jpg|png|pdf';
-            $config['max_size'] = 0;
-            $config['max_width'] = 0;
-            $config['max_height'] = 0;
+            // $config['max_size'] = 0;
+            // $config['max_width'] = 0;
+            // $config['max_height'] = 0;
             $config['file_name'] = md5($_FILES['image']['name']);
 
             $this->upload->initialize($config);
@@ -1362,7 +1362,7 @@ class Partner extends CI_Controller
 
 
                 if($this->admin->insert_data('cancellation_refund',$data)){
-                    $this->success("OK");
+                    $this->success("Your Refund / Cancellation Request has Been Submitted . TTS Team Will Connect for the Same Soon .");
                 }else{
                     $this->failed("Error While Uploading Image");
                 }

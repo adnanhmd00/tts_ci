@@ -325,7 +325,7 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">Seller Help</span>
+                                        <span class="kt-menu__link-text">Partner Help</span>
                                     </a>
                                 </li>
                             </ul>
