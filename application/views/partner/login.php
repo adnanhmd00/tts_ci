@@ -24,7 +24,7 @@
 					style="background-image: url(<?= base_url('resource/admin/metronic/themes/metronic/theme/default/demo8/dist/assets/media/bg/bg-4.jpg');?>);">
 					<div class="kt-grid__item">
 						<a href="" class="kt-login__logo">
-							<img src="<?= base_url('resource/admin/img/the-travel-square-icon.png');?>" width="75" height="75">
+							<img src="<?= base_url('uploads/b2b/the-travel-square-logo.png');?>" width="75" height="75">
 						</a>
 					</div>
 					<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver">

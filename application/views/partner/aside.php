@@ -2,7 +2,7 @@
                     <div class="kt-aside__brand kt-grid__item "  style="background-color:black;" id="kt_aside_brand" kt-hidden-height="65" style="">
                         <div class="kt-aside__brand-logo" style="background-color:black;">
                             <a href="">
-                            <img alt="The Travel Square Logo" src="<?= base_url('uploads/b2b/the-travel-square-logo.png');?>" height="55">
+                            <img alt="The Travel Square Logo" src="<?= base_url('uploads/b2b/the-travel-square-logo.png');?>" width="140" height="55">
                             </a>
                         </div>
                         <div class="kt-aside__brand-tools" style="background-color:black;">
@@ -46,7 +46,7 @@
                                     </a>
                                 </li>
                                 <li class="kt-menu__section ">
-                                    <h4 class="kt-menu__section-text">Partner Deals</h4>
+                                    <h4 class="kt-menu__section-text">Partner Tools</h4>
                                     <i class="kt-menu__section-icon flaticon-more-v2"></i>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
@@ -101,7 +101,7 @@
                                     </div>
                                 </li>
                                 <li class="kt-menu__section ">
-                                    <h4 class="kt-menu__section-text">BOOKINGS & CRM</h4>
+                                    <h4 class="kt-menu__section-text">Seller Manager</h4>
                                     <i class="kt-menu__section-icon flaticon-more-v2"></i>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
@@ -151,11 +151,11 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">Terminal</span>
+                                        <span class="kt-menu__link-text">Terminal - Inventory & Pricing</span>
                                     </a>
                                 </li>
                                 <li class="kt-menu__section ">
-                                    <h4 class="kt-menu__section-text">ACCOUNTS & WALLETS</h4>
+                                    <h4 class="kt-menu__section-text">SELLER PAYMENTS</h4>
                                     <i class="kt-menu__section-icon flaticon-more-v2"></i>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
@@ -169,7 +169,7 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">TravPAY Wallet</span>
+                                        <span class="kt-menu__link-text">TravPAY Wallet</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
@@ -190,14 +190,15 @@
                                         <ul class="kt-menu__subnav">
                                             <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                                 <a href="<?= base_url('wallet-transactions/accounts');?>" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
-                                                <span class="kt-menu__link-text">All Accounts</span></a>
+                                                <span class="kt-menu__link-text">All Accounts</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                             </li>
                                             <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="<?= base_url('client-settlement');?>" class="kt-menu__link kt-menu__toggle">
-                                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Claim Settlement</span></a>
+                                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Claim Settlement</span>
+                                                <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                             </li>
                                             <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                                 <a href="<?= base_url('all-payment-requests');?>" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
-                                                <span class="kt-menu__link-text">Payment Requests</span></a>
+                                                <span class="kt-menu__link-text">Payment Requests</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -213,7 +214,7 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">Generate Invoice</span>
+                                        <span class="kt-menu__link-text">Generate Invoice</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
@@ -227,7 +228,7 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">Transactions</span>
+                                        <span class="kt-menu__link-text">Transactions</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
@@ -242,11 +243,11 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">Refund & Cancellation</span>
+                                        <span class="kt-menu__link-text">Refund & Cancellation</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
                                 </li>
                                 <li class="kt-menu__section ">
-                                    <h4 class="kt-menu__section-text"> BLOGS & LEADS</h4>
+                                    <h4 class="kt-menu__section-text">More of Us</h4>
                                     <i class="kt-menu__section-icon flaticon-more-v2"></i>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
@@ -260,7 +261,7 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">Purchase Leads</span>
+                                        <span class="kt-menu__link-text">Purchase Leads</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                     <a href="<?= base_url('partner-ppc');?>" class="kt-menu__link kt-menu__toggle">
@@ -273,7 +274,7 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">PPC Campaign</span>
+                                        <span class="kt-menu__link-text">PPC Campaign</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
@@ -310,7 +311,7 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">Learn How to Sell</span>
+                                        <span class="kt-menu__link-text">Learn How to Sell</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
@@ -325,7 +326,7 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">Partner Help</span>
+                                        <span class="kt-menu__link-text">Seller Help</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
                                 </li>
                             </ul>
