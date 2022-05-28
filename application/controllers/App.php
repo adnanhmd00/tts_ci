@@ -25,7 +25,7 @@ class App extends CI_Controller
     public function index()
     {
         $userinfo = $this->userinfo;
-        $this->load->view('partner/app/app/index', compact('userinfo'));
+        $this->load->view('partner/app/index', compact('userinfo'));
     }
 
     public function comingSoon(){
@@ -51,7 +51,7 @@ class App extends CI_Controller
 
 
         if($userinfo->type=='partner'){
-            $this->load->view('partner/app/app/add_deal', compact('userinfo', 'category_data', 'currency_data', 'date'));
+            $this->load->view('partner/app/add_deal', compact('userinfo', 'category_data', 'currency_data', 'date'));
         }
         else if($userinfo->type=='seller'){
             if($userinfo->seller_type=='HT'){
@@ -129,7 +129,7 @@ class App extends CI_Controller
         } else {
             $mdata = array();
         }
-        $this->load->view('partner/app/app/alldeals', compact('userinfo', 'mdata'));
+        $this->load->view('partner/app/alldeals', compact('userinfo', 'mdata'));
     }
 
     public function myDeals()
@@ -183,7 +183,7 @@ class App extends CI_Controller
             $mdata = array();
         }
         // print_r($mdata);
-        $this->load->view('partner/app/app/mydeals', compact('userinfo', 'mdata'));
+        $this->load->view('partner/app/mydeals', compact('userinfo', 'mdata'));
     }
 
     public function dealDetail($id)
@@ -1411,7 +1411,7 @@ class App extends CI_Controller
     function currency_tracker(){
         $userinfo = $this->userinfo;
         $currency=$this->admin->getRawResult("Select * from tbl_currency");
-        $this->load->view('partner/app/app/currency_tracker',compact('userinfo','currency'));
+        $this->load->view('partner/app/currency_tracker',compact('userinfo','currency'));
     }
     function get_currency_tracking($gid,$amount){
 
