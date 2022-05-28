@@ -1,139 +1,137 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <!-- begin::Head -->
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EE16CRYW41"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-EE16CRYW41');
-</script>
-
-
-<!--begin::Fonts -->
-<link rel="stylesheet" href="http://partner.thetravelsquare.in/resource/admin/files/css">
-<!--end::Fonts -->
-
-<!--begin::Page Custom Styles(used by this page) -->
-<link href="http://partner.thetravelsquare.in/resource/admin/files/login-1.css" rel="stylesheet" type="text/css">
-<!--end::Page Custom Styles -->
-<link href="" rel="stylesheet" type="text/css">
-
-<!--begin::Global Theme Styles(used by all pages) -->
-<link href="http://partner.thetravelsquare.in/resource/admin/files/plugins.bundle.css" rel="stylesheet" type="text/css">
-<link href="http://partner.thetravelsquare.in/resource/admin/files/style.bundle.css" rel="stylesheet" type="text/css">
-<!--end::Global Theme Styles -->
-
-            <!--begin::Page Vendors Styles(used by this page) -->
-<link href="http://partner.thetravelsquare.in/resource/admin/files/fullcalendar.bundle.css" rel="stylesheet" type="text/css">
-                <!--end::Page Vendors Styles -->
-
-<!--begin::Layout Skins(used by all pages) -->
-<!--end::Layout Skins -->
-
-<!--begin::Layout Skins(used by all pages) -->
-
-<link href="http://partner.thetravelsquare.in/resource/admin/files/dark.css" rel="stylesheet" type="text/css">
-<link href="http://partner.thetravelsquare.in/resource/admin/files/dark(1).css" rel="stylesheet" type="text/css">
-<link href="http://partner.thetravelsquare.in/resource/admin/files/dark(2).css" rel="stylesheet" type="text/css">
-<link href="http://partner.thetravelsquare.in/resource/admin/files/dark(3).css" rel="stylesheet" type="text/css">        <!--end::Layout Skins -->
-
-<link rel="shortcut icon" href="#">
-
-
-<link rel="shortcut icon" href="">
-
-<!-- Hotjar Tracking Code for keenthemes.com -->
-<script async="" src="http://partner.thetravelsquare.in/resource/admin/files/modules.3a2c212c6000288ee2ae.js.download" charset="utf-8"></script>
-<style type="text/css">
-    iframe#_hjRemoteVarsFrame {
-        display: none !important;
-        width: 1px !important;
-        height: 1px !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-    }
-</style>
-<style type="text/css">/* Chart.js */
-/*
-* DOM element rendering detection
-* https://davidwalsh.name/detect-node-insertion
-*/
-@keyframes chartjs-render-animation {
-from { opacity: 0.99; }
-to { opacity: 1; }
-}
-
-.chartjs-render-monitor {
-animation: chartjs-render-animation 0.001s;
-}
-
-/*
-* DOM element resizing detection
-* https://github.com/marcj/css-element-queries
-*/
-.chartjs-size-monitor,
-.chartjs-size-monitor-expand,
-.chartjs-size-monitor-shrink {
-position: absolute;
-direction: ltr;
-left: 0;
-top: 0;
-right: 0;
-bottom: 0;
-overflow: hidden;
-pointer-events: none;
-visibility: hidden;
-z-index: -1;
-}
-
-.chartjs-size-monitor-expand > div {
-position: absolute;
-width: 1000000px;
-height: 1000000px;
-left: 0;
-top: 0;
-}
-
-.chartjs-size-monitor-shrink > div {
-position: absolute;
-width: 200%;
-height: 200%;
-left: 0;
-top: 0;
-}
-</style><script type="text/javascript" charset="UTF-8" src="./files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="http://partner.thetravelsquare.in/resource/admin/files/util.js.download"></script>    </head>
+        <?php include('head.php');?>
+    </head>
     <!-- end::Head -->
     <!-- begin::Body -->
     <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed" style="">
         <!-- begin:: Page -->
         <!-- begin:: Header Mobile -->
-        
+        <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+            <div class="kt-header-mobile__logo">
+                <a href="http://partner.thetravelsquare.in/">
+                <img alt="The Travel Square" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
+                </a>
+            </div>
+            <div class="kt-header-mobile__toolbar">
+                <button class="kt-header-mobile__toggler kt-header-mobile__toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
+                <button class="kt-header-mobile__toggler" id="kt_header_mobile_toggler"><span></span></button>
+                <button class="kt-header-mobile__topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
+            </div>
+        </div>
         <!-- end:: Header Mobile -->
         <div class="kt-grid kt-grid--hor kt-grid--root">
             <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
                 <!-- begin:: Aside -->
-               
+                <!-- Uncomment this to display the close button of the panel
+                    <button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
+                    -->
+                <div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
+                    <!-- begin:: Aside -->
+                    <?php include('aside.php');?>
+                    <!-- end:: Aside -->	<!-- begin:: Aside Menu -->
+                    
+                    <!-- end:: Aside Menu -->				
+                </div>
                 <!-- end:: Aside -->
                 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
                     <!-- begin:: Header -->
-                   
+                    <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
+                        <!-- begin:: Header Menu -->
+                        <!-- Uncomment this to display the close button of the panel
+                            <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
+                            -->
+                        <?php include('nav.php');?>
+                        <!-- end:: Header Menu -->
+                        <!-- begin:: Header Topbar -->
+                        <div class="kt-header__topbar">
+                            <!--begin: Search -->
+                            <!--begin: Search -->
+                            <div class="kt-header__topbar-item kt-header__topbar-item--search dropdown" id="kt_quick_search_toggle">
+                                <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+                                    <span class="kt-header__topbar-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <rect x="0" y="0" width="24" height="24"></rect>
+                                                <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                                                <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-lg">
+                                    <div class="kt-quick-search kt-quick-search--dropdown kt-quick-search--result-compact" id="kt_quick_search_dropdown">
+                                        <form method="get" class="kt-quick-search__form">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text"><i class="flaticon2-search-1"></i></span></div>
+                                                <input type="text" class="form-control kt-quick-search__input" placeholder="Search...">
+                                                <div class="input-group-append"><span class="input-group-text"><i class="la la-close kt-quick-search__close"></i></span></div>
+                                            </div>
+                                        </form>
+                                        <div class="kt-quick-search__wrapper kt-scroll ps" data-scroll="true" data-height="325" data-mobile-height="200" style="height: 325px; overflow: hidden;">
+                                            <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                                <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                                            </div>
+                                            <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                                                <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end: Search -->
+                            <!--end: Search -->
+                            <!--begin: Notifications -->
+                            <div class="kt-header__topbar-item dropdown">
+                                <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="30px,0px" aria-expanded="true">
+                                    <span class="kt-header__topbar-icon kt-pulse kt-pulse--brand">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <rect x="0" y="0" width="24" height="24"></rect>
+                                                <path d="M2.56066017,10.6819805 L4.68198052,8.56066017 C5.26776695,7.97487373 6.21751442,7.97487373 6.80330086,8.56066017 L8.9246212,10.6819805 C9.51040764,11.267767 9.51040764,12.2175144 8.9246212,12.8033009 L6.80330086,14.9246212 C6.21751442,15.5104076 5.26776695,15.5104076 4.68198052,14.9246212 L2.56066017,12.8033009 C1.97487373,12.2175144 1.97487373,11.267767 2.56066017,10.6819805 Z M14.5606602,10.6819805 L16.6819805,8.56066017 C17.267767,7.97487373 18.2175144,7.97487373 18.8033009,8.56066017 L20.9246212,10.6819805 C21.5104076,11.267767 21.5104076,12.2175144 20.9246212,12.8033009 L18.8033009,14.9246212 C18.2175144,15.5104076 17.267767,15.5104076 16.6819805,14.9246212 L14.5606602,12.8033009 C13.9748737,12.2175144 13.9748737,11.267767 14.5606602,10.6819805 Z" fill="#000000" opacity="0.3"></path>
+                                                <path d="M8.56066017,16.6819805 L10.6819805,14.5606602 C11.267767,13.9748737 12.2175144,13.9748737 12.8033009,14.5606602 L14.9246212,16.6819805 C15.5104076,17.267767 15.5104076,18.2175144 14.9246212,18.8033009 L12.8033009,20.9246212 C12.2175144,21.5104076 11.267767,21.5104076 10.6819805,20.9246212 L8.56066017,18.8033009 C7.97487373,18.2175144 7.97487373,17.267767 8.56066017,16.6819805 Z M8.56066017,4.68198052 L10.6819805,2.56066017 C11.267767,1.97487373 12.2175144,1.97487373 12.8033009,2.56066017 L14.9246212,4.68198052 C15.5104076,5.26776695 15.5104076,6.21751442 14.9246212,6.80330086 L12.8033009,8.9246212 C12.2175144,9.51040764 11.267767,9.51040764 10.6819805,8.9246212 L8.56066017,6.80330086 C7.97487373,6.21751442 7.97487373,5.26776695 8.56066017,4.68198052 Z" fill="#000000"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="kt-pulse__ring"></span>
+                                    </span>
+                                    <!--
+                                        Use dot badge instead of animated pulse effect:
+                                        <span class="kt-badge kt-badge--dot kt-badge--notify kt-badge--sm kt-badge--brand"></span>
+                                        -->
+                                </div>
+                                
+                            </div>
+                            <!--end: Notifications --><!--begin: Quick Actions -->
+                            
+                            <!--end: My Cart --><!--begin: Quick panel toggler -->
+                           
+                            <!--end: Quick panel toggler --><!--begin: Language bar -->
+                            
+                            <!--end: Language bar --><!--begin: User Bar -->
+                            
+                            <!--end: User Bar -->
+                        </div>
+                        <!-- end:: Header Topbar -->
+                    </div>
                     <!-- end:: Header -->
                     <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
                         <!-- begin:: Content Head -->
-                        <br><br>
+                        <div class="kt-subheader  kt-grid__item" id="kt_subheader">
+                            <div class="kt-container  kt-container--fluid ">
+                                <div class="kt-subheader__main">
+                                    <h3 class="kt-subheader__title">Claim Settlement</h3>
+                                    <div class="kt-input-icon kt-input-icon--right kt-subheader__search kt-hidden">
+                                        <input type="text" class="form-control" placeholder="Search order..." id="generalSearch">
+                                        <span class="kt-input-icon__icon kt-input-icon__icon--right">
+                                        <span><i class="flaticon2-search-1"></i></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
                         <!-- end:: Content Head -->
                         <!-- begin:: Content -->
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
@@ -141,7 +139,7 @@ top: 0;
 						<div class="alert alert-light alert-elevate" role="alert">
 								
 								<div class="alert-text">
-                                   <b>Claim and Raise Request</b> for All Your Unsettled Amount Here .
+                                   Claim and Raise Request for All Your Unsettled Amount Here .
                                 </div>
 							</div>
 						
@@ -158,10 +156,10 @@ top: 0;
                                             </div>
                                         </div>
                                         <!--begin::Form-->
-                                        <form action="http://partner.thetravelsquare.in/client-settlement-form" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                                        <?php echo form_open_multipart('client-settlement-form', 'class="kt-form"');?>
                                         
                                             <div class="kt-portlet__body">
-                                            <p></p>
+                                            <p><?php echo $this->session->flashdata('item'); ?></p>
                                                 
 
                                                 <div class="kt-section kt-section--first">
@@ -170,9 +168,10 @@ top: 0;
 
                                                     <div class="form-group">
                                                         <select class="form-control" name="currency">
-                                                                                                                            <option value="1">INR</option>
-                                                                                                                            <option value="2">USD</option>
-                                                                                                                    </select>
+                                                            <?php foreach($currency as $row){?>
+                                                                <option value="<?= $row->id;?>"><?= $row->name;?></option>
+                                                            <?php }?>
+                                                        </select>
                                                     </div>
 
                                                     <div class="form-group">
@@ -218,34 +217,24 @@ top: 0;
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                                                                                                                    <tr>
-                                                        	
-														<td>₹ 500</td>
-                                                        <td><a href="http://partner.thetravelsquare.in/Partner/downloadClaimImage/2">Download</a></td>
-														<td>PENDING</td>
+                                                <?php if($data!=false){ ?>
+                                                <?php foreach($data as $row){ ?>
+                                                    <tr>
+                                                        <?php 
+														    $CI =& get_instance(); $CI->load->model('MainModel','admin'); 
+																		
+															$symbol=$CI->admin->getRawRow("Select * from tbl_currency where id='$row->currency'")->symbol;
+                                                            
+														?>	
+														<td><?= $symbol.' '.$row->amount;?></td>
+                                                        <td><a href="<?= base_url('Partner/downloadClaimImage/'.$row->id);?>">Download</a></td>
+														<td><?= $row->status;?></td>
 
-                                                        <td>2020-06-04 00:52:21</td>
-
-                                                    </tr>
-													                                                    <tr>
-                                                        	
-														<td>₹ 400</td>
-                                                        <td><a href="http://partner.thetravelsquare.in/Partner/downloadClaimImage/4">Download</a></td>
-														<td>PROCESSING</td>
-
-                                                        <td>2022-05-25 09:00:53</td>
+                                                        <td><?= $row->created_at;?></td>
 
                                                     </tr>
-													                                                    <tr>
-                                                        	
-														<td>₹ 94</td>
-                                                        <td><a href="http://partner.thetravelsquare.in/Partner/downloadClaimImage/5">Download</a></td>
-														<td>PENDING</td>
-
-                                                        <td>2022-05-25 22:03:56</td>
-
-                                                    </tr>
-													                                                </tbody>
+													<?php }}?>
+                                                </tbody>
                                             </table>
 
 									</div>
@@ -254,7 +243,8 @@ top: 0;
                         <!-- end:: Content -->				
                     </div>
                     <!-- begin:: Footer -->
-                                            <br><br>          <!-- end:: Footer -->			
+                        <?php include('footer.php');?>
+                    <!-- end:: Footer -->			
                 </div>
             </div>
         </div>
@@ -263,122 +253,36 @@ top: 0;
         
         <!-- end::Quick Panel -->
         <!-- begin::Scrolltop -->
-        
+        <div id="kt_scrolltop" class="kt-scrolltop">
+            <i class="fa fa-arrow-up"></i>
+        </div>
+        <!-- end::Scrolltop -->
+        <!-- begin::Sticky Toolbar -->
+        <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
+                <a href="http://partner.thetravelsquare.in/travpay" class=""><i class="flaticon2-drop"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
+                <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Help">
+                <a href="mailto:partnercare@thetravelsquare.in" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Us">
+                <a href="https://wa.me/919999007037" target="_blank" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
+            </li>
+        </ul>
         <!-- end::Sticky Toolbar -->
         <!-- begin::Demo Panel -->
         
         <!--ENd:: Chat-->
-        <script>
-		var KTAppOptions = { "colors": { "state": { "brand": "#716aca", "light": "#ffffff", "dark": "#282a3c", "primary": "#5867dd", "success": "#34bfa3", "info": "#36a3f7", "warning": "#ffb822", "danger": "#fd3995" }, "base": { "label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"], "shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"] } } };
-	</script>
-	<!-- end::Global Config -->
-
-	<!--begin::Global Theme Bundle(used by all pages) -->
-	<script src="http://partner.thetravelsquare.in/resource/admin/files/plugins.bundle.js.download" type="text/javascript"></script>
-	<script src="http://partner.thetravelsquare.in/resource/admin/files/scripts.bundle.js.download" type="text/javascript"></script>
-	<!--end::Global Theme Bundle -->
-
-
-	<!--begin::Page Scripts(used by this page) -->
-	<script src="http://partner.thetravelsquare.in/resource/admin/files/login-1.js.download" type="text/javascript"></script>
-	<!--end::Page Scripts -->
-
-                        <!--begin::Page Vendors(used by this page) -->
-                        <script src="http://partner.thetravelsquare.in/resource/admin/files/fullcalendar.bundle.js.download" type="text/javascript"></script>
-                            <script src="http://partner.thetravelsquare.in/resource/admin/files/js(1)" type="text/javascript"></script>
-                            <script src="http://partner.thetravelsquare.in/resource/admin/files/gmaps.js.download" type="text/javascript"></script>
-                        <!--end::Page Vendors -->
-
-                    <!--begin::Page Scripts(used by this page) -->
-                            <script src="http://partner.thetravelsquare.in/resource/admin/files/dashboard.js.download" type="text/javascript"></script>
-                        <!--end::Page Scripts -->
-
-	<!-- end::Body -->
-    <script src="http://partner.thetravelsquare.in/resource/admin/js/pages/crud/forms/widgets/bootstrap-datepicker.js" type="text/javascript"></script>
-    
-    <script src="http://partner.thetravelsquare.in/resource/admin//plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-        <!--end::Page Vendors -->
-        <!--begin::Page Scripts(used by this page) -->
-        <script src="http://partner.thetravelsquare.in/resource/admin/js/pages/crud/datatables/advanced/multiple-controls.js" type="text/javascript"></script>
-    <iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame"
-		src="http://partner.thetravelsquare.in/resource/admin/files/box-469cf41adb11dc78be68c1ae7f9457a4.html"
-        style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
-
-
-
-         <!-- begin::Global Config(global config for global JS sciprts) -->
-         <script>
-            var KTAppOptions = {
-    "colors": {
-        "state": {
-            "brand": "#5d78ff",
-            "dark": "#282a3c",
-            "light": "#ffffff",
-            "primary": "#5867dd",
-            "success": "#34bfa3",
-            "info": "#36a3f7",
-            "warning": "#ffb822",
-            "danger": "#fd3995"
-        },
-        "base": {
-            "label": [
-                "#c5cbe3",
-                "#a1a8c3",
-                "#3d4465",
-                "#3e4466"
-            ],
-            "shape": [
-                "#f0f3ff",
-                "#d9dffa",
-                "#afb4d4",
-                "#646c9a"
-            ]
-        }
-    }
-};
-        </script>
-
-        <script>
-                    $( document ).ready(function() {
-                        $("#flight_type").hide();
-                        $("#package_type").hide();
-                        $("#inclusions").hide();
-                        $("#hotel_detail").hide();
-                    });
-                    $('#deal_type_id').change(function() {
-                        var gid = $(this).val(); 
-                            if (gid == '1') { 
-                                $("#flight_type").hide();
-                                $("#package_type").show();
-                                $("#inclusions").show();
-                                $("#hotel_detail").hide();
-                            }else if(gid == '2'){
-                                $("#flight_type").show();
-                                $("#package_type").hide();
-                                $("#inclusions").hide();
-                                $("#hotel_detail").hide();
-                            }else if(gid == '3'){
-                                $("#flight_type").hide();
-                                $("#package_type").hide();
-                                $("#inclusions").hide();
-                                $("#hotel_detail").show();
-                            }else{
-                                $("#flight_type").hide();
-                                $("#package_type").hide();
-                                $("#inclusions").hide();
-                                $("#hotel_detail").hide();
-                            }
-                            return false;
-                    });
-        </script>
-    <!-- end::Body -->
-
-<div class="daterangepicker ltr show-ranges opensleft"><div class="ranges"><ul><li data-range-key="Today">Today</li><li data-range-key="Yesterday">Yesterday</li><li data-range-key="Last 7 Days">Last 7 Days</li><li data-range-key="Last 30 Days">Last 30 Days</li><li data-range-key="This Month">This Month</li><li data-range-key="Last Month">Last Month</li><li data-range-key="Custom Range">Custom Range</li></ul></div><div class="drp-calendar left"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-calendar right"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./files/box-469cf41adb11dc78be68c1ae7f9457a4.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>        
+        <?php include('jquery.php');?>
+        
         <!-- Tinymce JavaScript -->
-        <script src="http://partner.thetravelsquare.in/resource/auth/vendors/tinymce/tinymce.min.js"></script>
+        <script src="<?= base_url('resource/auth/vendors/tinymce/tinymce.min.js');?>"></script>
 
         <!-- Tinymce Wysuhtml5 Init JavaScript -->
-        <script src="http://partner.thetravelsquare.in/resource/auth/dist/js/tinymce-data.js"></script>
+        <script src="<?= base_url('resource/auth/dist/js/tinymce-data.js');?>"></script>
 
     </body>
 </html>

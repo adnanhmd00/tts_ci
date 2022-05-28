@@ -1,124 +1,13 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
 	<!-- begin::Head -->
 	<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EE16CRYW41"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-EE16CRYW41');
-</script>
-
-
-<!--begin::Fonts -->
-<link rel="stylesheet" href="http://partner.thetravelsquare.in/resource/admin/files/css">
-<!--end::Fonts -->
-
-<!--begin::Page Custom Styles(used by this page) -->
-<link href="http://partner.thetravelsquare.in/resource/admin/files/login-1.css" rel="stylesheet" type="text/css">
-<!--end::Page Custom Styles -->
-<link href="" rel="stylesheet" type="text/css">
-
-<!--begin::Global Theme Styles(used by all pages) -->
-<link href="http://partner.thetravelsquare.in/resource/admin/files/plugins.bundle.css" rel="stylesheet" type="text/css">
-<link href="http://partner.thetravelsquare.in/resource/admin/files/style.bundle.css" rel="stylesheet" type="text/css">
-<!--end::Global Theme Styles -->
-
-            <!--begin::Page Vendors Styles(used by this page) -->
-<link href="http://partner.thetravelsquare.in/resource/admin/files/fullcalendar.bundle.css" rel="stylesheet" type="text/css">
-                <!--end::Page Vendors Styles -->
-
-<!--begin::Layout Skins(used by all pages) -->
-<!--end::Layout Skins -->
-
-<!--begin::Layout Skins(used by all pages) -->
-
-<link href="http://partner.thetravelsquare.in/resource/admin/files/dark.css" rel="stylesheet" type="text/css">
-<link href="http://partner.thetravelsquare.in/resource/admin/files/dark(1).css" rel="stylesheet" type="text/css">
-<link href="http://partner.thetravelsquare.in/resource/admin/files/dark(2).css" rel="stylesheet" type="text/css">
-<link href="http://partner.thetravelsquare.in/resource/admin/files/dark(3).css" rel="stylesheet" type="text/css">        <!--end::Layout Skins -->
-
-<link rel="shortcut icon" href="#">
-
-
-<link rel="shortcut icon" href="">
-
-<!-- Hotjar Tracking Code for keenthemes.com -->
-<script async="" src="http://partner.thetravelsquare.in/resource/admin/files/modules.3a2c212c6000288ee2ae.js.download" charset="utf-8"></script>
-<style type="text/css">
-    iframe#_hjRemoteVarsFrame {
-        display: none !important;
-        width: 1px !important;
-        height: 1px !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-    }
-</style>
-<style type="text/css">/* Chart.js */
-/*
-* DOM element rendering detection
-* https://davidwalsh.name/detect-node-insertion
-*/
-@keyframes chartjs-render-animation {
-from { opacity: 0.99; }
-to { opacity: 1; }
-}
-
-.chartjs-render-monitor {
-animation: chartjs-render-animation 0.001s;
-}
-
-/*
-* DOM element resizing detection
-* https://github.com/marcj/css-element-queries
-*/
-.chartjs-size-monitor,
-.chartjs-size-monitor-expand,
-.chartjs-size-monitor-shrink {
-position: absolute;
-direction: ltr;
-left: 0;
-top: 0;
-right: 0;
-bottom: 0;
-overflow: hidden;
-pointer-events: none;
-visibility: hidden;
-z-index: -1;
-}
-
-.chartjs-size-monitor-expand > div {
-position: absolute;
-width: 1000000px;
-height: 1000000px;
-left: 0;
-top: 0;
-}
-
-.chartjs-size-monitor-shrink > div {
-position: absolute;
-width: 200%;
-height: 200%;
-left: 0;
-top: 0;
-}
-</style><script type="text/javascript" charset="UTF-8" src="./files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="http://partner.thetravelsquare.in/resource/admin/files/util.js.download"></script>        <link href="http://partner.thetravelsquare.in/resource/agroxa/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-        <link href="http://partner.thetravelsquare.in/resource/agroxa/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <?php include('head.php');?>
+        <link href="<?= base_url('resource/agroxa/plugins/datatables/dataTables.bootstrap4.min.css');?>" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url('resource/agroxa/plugins/datatables/buttons.bootstrap4.min.css');?>" rel="stylesheet" type="text/css" />
         <!-- Responsive datatable examples -->
-        <link href="http://partner.thetravelsquare.in/resource/agroxa/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url('resource/agroxa/plugins/datatables/responsive.bootstrap4.min.css');?>" rel="stylesheet" type="text/css" />
 
 	</head>
 	<!-- end::Head -->
@@ -126,28 +15,59 @@ top: 0;
 	<body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-scrolltop--on" style="">
 		<!-- begin:: Page -->
 		<!-- begin:: Header Mobile -->
-		
+		<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+			<div class="kt-header-mobile__logo">
+				<a href="http://partner.thetravelsquare.in/">
+				<img alt="Logo" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
+				</a>
+			</div>
+			<div class="kt-header-mobile__toolbar">
+				<button class="kt-header-mobile__toggler kt-header-mobile__toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
+				<button class="kt-header-mobile__toggler" id="kt_header_mobile_toggler"><span></span></button>
+				<button class="kt-header-mobile__topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
+			</div>
+		</div>
 		<!-- end:: Header Mobile -->	
 		<div class="kt-grid kt-grid--hor kt-grid--root">
 			<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 				<!-- begin:: Aside -->
-                                         <!-- end:: Aside -->
+                <?php include('aside.php');?>
+                <!-- end:: Aside -->
                 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
                     <!-- begin:: Header -->
-                     <!-- end:: Header -->
+                    <?php include('nav.php');?>
+                    <!-- end:: Header -->
 					<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 						<!-- begin:: Subheader -->
-						<br><br>
+						<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+							<div class="kt-container  kt-container--fluid ">
+								<div class="kt-subheader__main">
+									<h3 class="kt-subheader__title">
+										Transactions Summary                            
+									</h3>
+									
+								</div>
+							</div>
+						</div>
 						<!-- end:: Subheader -->
 						<!-- begin:: Content -->
 						<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
 							<div class="alert alert-light alert-elevate" role="alert">
 								
 								<div class="alert-text">
-										
-										Here are <b>All Your Transactions</b>, Payments Send to or from Your Account By The Travel Square, You or Any Agent / Travel Company
+									<?php if($type=='transactions' || $type=='accounts'){?>	
+										Here are All Your Transactions, Payments Send to or from Your Account By The Travel Square, You or Any Agent / Travel Company
 										Via TravPAY / Bank Modes or Using Payment Gateway.
-																																			</div>
+									<?php }?>
+									<?php if($type=='travpay'){?>	
+										Here are All Your Travpay Transactions Made By You or Any Agent / Travel Company
+										Via TravPAY / Bank Modes or Using Payment Gateway Towards or By You.
+									<?php }?>
+									<?php if($type=='invoice'){?>	
+										Here are All Auto Generated Invoice of Successfull Transactions Made By You or Any Agent / Travel Company
+										Via TravPAY / Bank Modes or Using Payment Gateway Towards You.
+									<?php }?>
+								</div>
 							</div>
 							<!-- remote datatable modal -->
 							<div id="kt_modal_KTDatatable_remote" class="modal fade" role="dialog" aria-hidden="true">
@@ -941,7 +861,36 @@ top: 0;
 									<div class="kt-portlet__head-label">
 											
 										<h3 class="kt-portlet__head-title">
-																					TravPAY Wallet Balance: ₹ -10066										</h3>
+										<?php 
+											$CI =& get_instance(); $CI->load->model('MainModel','admin'); 
+																		
+											$symbols=$CI->admin->getRawRow("Select * from tbl_currency where id='$userinfo->currency'")->symbol;
+											// $credit_=0;
+											// $debit_=0;										
+											// foreach($data as $row){
+											// 	if($row->currency_id!=$userinfo->currency){
+											// 		$point=$CI->admin->getRawRow("Select * from currency_tracker where currency_to='$row->currency_id' and currency_from= '$userinfo->currency'")->points;
+													
+											// 		if($row->type=='CREDIT' && $row->status=='SUCCESS'){
+											// 			$credit_=$credit_+($row->amount*$point);
+											// 		}else if($row->type=='DEBIT' && $row->status=='SUCCESS'){
+											// 			$debit_=$debit_+($row->amount*$point);
+											// 		}
+												
+											// 	}else{
+											// 		if($row->type=='CREDIT' && $row->status=='SUCCESS'){
+											// 			$credit_=$credit_+($row->amount);
+											// 		}else if($row->type=='DEBIT' && $row->status=='SUCCESS'){
+											// 			$debit_=$debit_+($row->amount);
+											// 		}
+
+											// 	}
+											// }
+											// $wallet_balance_=$credit_-$debit_;
+
+										?>
+											Instawire TravPAY Wallet Balance: <?= $symbols.' '.$wallet_balance_;?>
+										</h3>
 									</div>
 									
 								</div> 
@@ -950,7 +899,114 @@ top: 0;
 									<!--begin: Datatable -->
 									<div id="sub_datatable_ajax_source" class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" style="">
 										
-																														                                            <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 10; width: 90%; background-color:white;">
+										<?php if($type=="travpay"){?>
+                                            <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 10; width: 90%; background-color:white;">
+                                                <thead>
+                                                    <tr>
+														<th>T ID</th>
+														<th>BENIFICIARY NAME</th>
+														<th>TYPE</th>
+                                                        <th>MODE</th>
+                                                        <th>STATUS</th>
+                                                        <th>AMOUNT</th>
+                                                        <th>DATE</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                <?php if(!empty($data)){ foreach($data as $row){ 
+													if($row->mode=="TRAVPAY"){?>
+                                                    <tr>
+                                                        <?php 
+														    $CI =& get_instance(); $CI->load->model('MainModel','admin'); 
+																		
+															 if($row->currency_id!=$userinfo->currency){
+																$point=$CI->admin->getRawRow("Select * from currency_tracker where currency_to='$row->currency_id' and currency_from= '$userinfo->currency'")->points;
+																$price=$row->amount*$point;
+																$symbol=$CI->admin->getRawRow("Select * from tbl_currency where id='$userinfo->currency'")->symbol;
+															}else{
+																$price=$row->amount;
+                                                                $symbol=$CI->admin->getRawRow("Select * from tbl_currency where id='$userinfo->currency'")->symbol;
+                                                            }
+														?>	
+														<td><?= $row->id;?></td>
+														<td><?= $row->benificiary_name;?><br><?= $row->benificiary_holder_name;?></td>
+														<td><?= $row->type;?></td>
+                                                        <td><?= $row->mode;?></td>
+                                                        
+                                                        <?php if($row->status=="PENDING"){?>
+                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--info kt-badge--inline kt-badge--pill " style="background-color:black"><?= $row->status;?></span></span></td>
+                                                        <?php }?>
+                                                        <?php if($row->status=="SUCCESS"){?>
+                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill"><?= $row->status;?></span></span></td>
+                                                        <?php }?>
+                                                        <?php if($row->status=="FAILURE"){?>
+                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--danger kt-badge--inline kt-badge--pill"><?= $row->status;?></span></span></td>
+                                                        <?php }?>
+                                                        
+                                                        <td><?= $symbol.' '.$price;?></td>
+                                                        <td><?= $row->created_at;?></td>
+                                                        
+
+                                                    </tr>
+													<?php } } }?>
+                                                </tbody>
+                                            </table>
+                                        <?php }?>
+										<?php if($type=="transactions"){?>
+                                            <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 10; width: 90%; background-color:white;">
+                                                <thead>
+                                                    <tr>
+														<th>ID</th>
+														<th>BENIFICIARY</th>
+														<th>TYPE</th>
+                                                        <th>MODE</th>
+                                                        <th>STATUS</th>
+                                                        <th>AMOUNT</th>
+                                                        <th>DATE</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                <?php if(!empty($data)){ foreach($data as $row){ ?>
+													<tr>
+                                                        <?php 
+														    $CI =& get_instance(); $CI->load->model('MainModel','admin'); 
+																		
+															 if($row->currency_id!=$userinfo->currency){
+																$point=$CI->admin->getRawRow("Select * from currency_tracker where currency_to='$row->currency_id' and currency_from= '$userinfo->currency'")->points;
+																$price=$row->amount*$point;
+																$symbol=$CI->admin->getRawRow("Select * from tbl_currency where id='$userinfo->currency'")->symbol;
+															}else{
+																$price=$row->amount;
+                                                                $symbol=$CI->admin->getRawRow("Select * from tbl_currency where id='$userinfo->currency'")->symbol;
+                                                            }
+														?>	
+														<td><?= $row->id;?></td>
+														<td><?= $row->benificiary_name;?><br><?= $row->benificiary_holder_name;?></td>
+														<td><?= $row->type;?></td>
+                                                        <td><?= $row->mode;?></td>
+                                                        
+                                                        <?php if($row->status=="PENDING"){?>
+                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--info kt-badge--inline kt-badge--pill " style="background-color:black"><?= $row->status;?></span></span></td>
+                                                        <?php }?>
+                                                        <?php if($row->status=="SUCCESS"){?>
+                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill"><?= $row->status;?></span></span></td>
+                                                        <?php }?>
+                                                        <?php if($row->status=="FAILURE"){?>
+                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--danger kt-badge--inline kt-badge--pill"><?= $row->status;?></span></span></td>
+                                                        <?php }?>
+                                                        
+                                                        <td><?= $symbol.' '.$price;?></td>
+                                                        <td><?= $row->created_at;?></td>
+                                                        
+
+                                                    </tr>
+													<?php }}
+												?>
+                                                </tbody>
+                                            </table>
+                                        <?php }?>
+										<?php if($type=="accounts"){?>
+                                            <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 10; width: 90%; background-color:white;">
                                                 <thead>
                                                     <tr>
 														<th>ID</th>
@@ -964,339 +1020,132 @@ top: 0;
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                													<tr>
-                                                        	
-														<td>68</td>
-														<td><br></td>
+                                                <?php if(!empty($data)){ foreach($data as $row){ ?>
+													<tr>
+                                                        <?php 
+														    $CI =& get_instance(); $CI->load->model('MainModel','admin'); 
+																		
+															 if($row->currency_id!=$userinfo->currency){
+																$point=$CI->admin->getRawRow("Select * from currency_tracker where currency_to='$row->currency_id' and currency_from= '$userinfo->currency'")->points;
+																$price=$row->amount*$point;
+																$symbol=$CI->admin->getRawRow("Select * from tbl_currency where id='$userinfo->currency'")->symbol;
+															}else{
+																$price=$row->amount;
+                                                                $symbol=$CI->admin->getRawRow("Select * from tbl_currency where id='$userinfo->currency'")->symbol;
+                                                            }
+														?>	
+														<td><?= $row->id;?></td>
+														<td><?= $row->benificiary_name;?><br><?= $row->benificiary_holder_name;?></td>
 
-														<td>CREDIT</td>
-                                                        <td>CASH</td>
+														<td><?= $row->type;?></td>
+                                                        <td><?= $row->mode;?></td>
                                                         
-                                                                                                                                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill">SUCCESS</span></span></td>
-                                                                                                                                                                        
-                                                        <td>₹ 5000</td>
-                                                        <td>2020-06-03 14:22:31</td>
+                                                        <?php if($row->status=="PENDING"){?>
+                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--info kt-badge--inline kt-badge--pill " style="background-color:black"><?= $row->status;?></span></span></td>
+                                                        <?php }?>
+                                                        <?php if($row->status=="SUCCESS"){?>
+                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill"><?= $row->status;?></span></span></td>
+                                                        <?php }?>
+                                                        <?php if($row->status=="FAILURE"){?>
+                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--danger kt-badge--inline kt-badge--pill"><?= $row->status;?></span></span></td>
+                                                        <?php }?>
+                                                        
+                                                        <td><?= $symbol.' '.$price;?></td>
+                                                        <td><?= $row->created_at;?></td>
 														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/ZjY=">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="68" />
+															<?php
+																$ciphering = "AES-128-CTR"; 
+																$iv_length = openssl_cipher_iv_length($ciphering); 
+																$options = 0; 
+																$encryption_iv = '1234567891011121'; 
+																$encryption_key = "thetravel@square@123"; 
+																$encryption = openssl_encrypt($row->id, $ciphering,$encryption_key, $options, $encryption_iv); 
+															?>
+															<a href="<?= base_url('transaction-details/'.$encryption);?>">Details</a>
+															<!-- <?php $hidden=['id'=>$row->id];?>
+															<?php echo form_open_multipart('transaction-details', 'class="kt-form"',$hidden);?>
 																<button type="submit" class="btn btn-primary btn-xs">Details</button>
 															</form> -->
 														</td>
                                                         
 
                                                     </tr>
-																										<tr>
-                                                        	
-														<td>69</td>
-														<td>Shaun Frost<br></td>
-
-														<td>CREDIT</td>
-                                                        <td>CASH</td>
-                                                        
-                                                                                                                                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill">SUCCESS</span></span></td>
-                                                                                                                                                                        
-                                                        <td>₹ 6000</td>
-                                                        <td>2020-06-03 14:24:24</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/Zjc=">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="69" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-																										<tr>
-                                                        	
-														<td>70</td>
-														<td>Shaun Frost<br></td>
-
-														<td>DEBIT</td>
-                                                        <td>TRAVPAY</td>
-                                                        
-                                                                                                                                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill">SUCCESS</span></span></td>
-                                                                                                                                                                        
-                                                        <td>₹ 3776</td>
-                                                        <td>2020-06-03 14:33:46</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/Zz4=">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="70" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-																										<tr>
-                                                        	
-														<td>71</td>
-														<td>ADMIN<br></td>
-
-														<td>DEBIT</td>
-                                                        <td>TRAVPAY</td>
-                                                        
-                                                                                                                                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill">SUCCESS</span></span></td>
-                                                                                                                                                                        
-                                                        <td>₹ 50</td>
-                                                        <td>2020-06-03 14:34:01</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/Zz8=">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="71" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-																										<tr>
-                                                        	
-														<td>73</td>
-														<td><br>SHAUN</td>
-
-														<td>DEBIT</td>
-                                                        <td>TRAVPAY</td>
-                                                        
-                                                                                                                    <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--info kt-badge--inline kt-badge--pill " style="background-color:black">PENDING</span></span></td>
-                                                                                                                                                                                                                                
-                                                        <td>₹ 174</td>
-                                                        <td>2020-06-03 15:34:10</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/Zz0=">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="73" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-																										<tr>
-                                                        	
-														<td>75</td>
-														<td>Shaun Frost<br>Partner1</td>
-
-														<td>DEBIT</td>
-                                                        <td>TRAVPAY</td>
-                                                        
-                                                                                                                    <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--info kt-badge--inline kt-badge--pill " style="background-color:black">PENDING</span></span></td>
-                                                                                                                                                                                                                                
-                                                        <td>₹ 174</td>
-                                                        <td>2020-06-03 15:42:47</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/Zzs=">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="75" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-																										<tr>
-                                                        	
-														<td>78</td>
-														<td>Shaun Frost<br></td>
-
-														<td>CREDIT</td>
-                                                        <td>CASH</td>
-                                                        
-                                                                                                                                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill">SUCCESS</span></span></td>
-                                                                                                                                                                        
-                                                        <td>₹ 5000</td>
-                                                        <td>2020-06-03 23:34:03</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/ZzY=">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="78" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-																										<tr>
-                                                        	
-														<td>95</td>
-														<td>Shaun Frost<br></td>
-
-														<td>CREDIT</td>
-                                                        <td>CASH</td>
-                                                        
-                                                                                                                                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill">SUCCESS</span></span></td>
-                                                                                                                                                                        
-                                                        <td>₹ 5000</td>
-                                                        <td>2020-06-15 13:21:23</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/aTs=">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="95" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-																										<tr>
-                                                        	
-														<td>96</td>
-														<td>Shaun Frost<br></td>
-
-														<td>CREDIT</td>
-                                                        <td>CASH</td>
-                                                        
-                                                                                                                                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill">SUCCESS</span></span></td>
-                                                                                                                                                                        
-                                                        <td>₹ 5000</td>
-                                                        <td>2020-06-15 13:23:55</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/aTg=">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="96" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-																										<tr>
-                                                        	
-														<td>97</td>
-														<td><br></td>
-
-														<td>DEBIT</td>
-                                                        <td>TRAVPAY</td>
-                                                        
-                                                                                                                    <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--info kt-badge--inline kt-badge--pill " style="background-color:black">PENDING</span></span></td>
-                                                                                                                                                                                                                                
-                                                        <td>₹ 5000</td>
-                                                        <td>2020-06-15 13:24:09</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/aTk=">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="97" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-																										<tr>
-                                                        	
-														<td>99</td>
-														<td>Shaun Frost<br></td>
-
-														<td>DEBIT</td>
-                                                        <td>CASH</td>
-                                                        
-                                                                                                                                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill">SUCCESS</span></span></td>
-                                                                                                                                                                        
-                                                        <td>₹ 10240</td>
-                                                        <td>2020-06-21 17:53:15</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/aTc=">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="99" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-																										<tr>
-                                                        	
-														<td>100</td>
-														<td>Shaun Frost<br></td>
-
-														<td>DEBIT</td>
-                                                        <td>CASH</td>
-                                                        
-                                                                                                                                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill">SUCCESS</span></span></td>
-                                                                                                                                                                        
-                                                        <td>₹ 4500</td>
-                                                        <td>2020-06-21 20:53:49</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/YT6I">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="100" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-																										<tr>
-                                                        	
-														<td>103</td>
-														<td>Shaun Frost<br></td>
-
-														<td>DEBIT</td>
-                                                        <td>CASH</td>
-                                                        
-                                                                                                                                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill">SUCCESS</span></span></td>
-                                                                                                                                                                        
-                                                        <td>₹ 14000</td>
-                                                        <td>2020-06-21 20:59:43</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/YT6L">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="103" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-																										<tr>
-                                                        	
-														<td>104</td>
-														<td>Shaun Frost<br></td>
-
-														<td>DEBIT</td>
-                                                        <td>CASH</td>
-                                                        
-                                                                                                                                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill">SUCCESS</span></span></td>
-                                                                                                                                                                        
-                                                        <td>₹ 4500</td>
-                                                        <td>2020-06-22 19:57:13</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/YT6M">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="104" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-																										<tr>
-                                                        	
-														<td>105</td>
-														<td>Shaun Frost<br></td>
-
-														<td>CREDIT</td>
-                                                        <td>CASH</td>
-                                                        
-                                                                                                                                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill">SUCCESS</span></span></td>
-                                                                                                                                                                        
-                                                        <td>₹ 1000</td>
-                                                        <td>2020-06-28 15:03:27</td>
-														<td>
-																														<a href="http://partner.thetravelsquare.in/transaction-details/YT6N">Details</a>
-															<!-- 															<form action="http://partner.thetravelsquare.in/transaction-details" class="kt-form" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-<input type="hidden" name="id" value="105" />
-																<button type="submit" class="btn btn-primary btn-xs">Details</button>
-															</form> -->
-														</td>
-                                                        
-
-                                                    </tr>
-													                                                </tbody>
+													<?php }}
+												?>
+                                                </tbody>
                                             </table>
-                                        																				
+                                        <?php }?>
+										<?php if($type=="invoice"){?>
+                                            <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 10; width: 90%; background-color:white;">
+                                                <thead>
+                                                    <tr>
+														<th>ID</th>
+														<th>BENIFICIARY</th>
+														<th>TYPE</th>
+                                                        <th>MODE</th>
+                                                        <th>STATUS</th>
+                                                        <th>AMOUNT</th>
+														<th>DATE</th>
+                                                        <th>DETAILS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                <?php if(!empty($data)){ foreach($data as $row){ if($row->status=="SUCCESS"){ ?>
+													<tr>
+                                                        <?php 
+														    $CI =& get_instance(); $CI->load->model('MainModel','admin'); 
+																		
+															 if($row->currency_id!=$userinfo->currency){
+																$point=$CI->admin->getRawRow("Select * from currency_tracker where currency_to='$row->currency_id' and currency_from= '$userinfo->currency'")->points;
+																$price=$row->amount*$point;
+																$symbol=$CI->admin->getRawRow("Select * from tbl_currency where id='$userinfo->currency'")->symbol;
+															}else{
+																$price=$row->amount;
+                                                                $symbol=$CI->admin->getRawRow("Select * from tbl_currency where id='$userinfo->currency'")->symbol;
+                                                            }
+														?>	
+														<td><?= $row->id;?></td>
+														<td><?= $row->benificiary_name;?><br><?= $row->benificiary_holder_name;?></td>
+
+														<td><?= $row->type;?></td>
+                                                        <td><?= $row->mode;?></td>
+                                                        
+                                                        <?php if($row->status=="PENDING"){?>
+                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--info kt-badge--inline kt-badge--pill " style="background-color:black"><?= $row->status;?></span></span></td>
+                                                        <?php }?>
+                                                        <?php if($row->status=="SUCCESS"){?>
+                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill"><?= $row->status;?></span></span></td>
+                                                        <?php }?>
+                                                        <?php if($row->status=="FAILURE"){?>
+                                                            <td data-field="Status" class="kt-datatable__cell"><span style="width: 146px;"><span class="kt-badge kt-badge--danger kt-badge--inline kt-badge--pill"><?= $row->status;?></span></span></td>
+                                                        <?php }?>
+                                                        
+                                                        <td><?= $symbol.' '.$price;?></td>
+                                                        <td><?= $row->created_at;?></td>
+														<td>
+															<?php
+																$ciphering = "AES-128-CTR"; 
+																$iv_length = openssl_cipher_iv_length($ciphering); 
+																$options = 0; 
+																$encryption_iv = '1234567891011121'; 
+																$encryption_key = "thetravel@square@123"; 
+																$encryption = openssl_encrypt($row->id, $ciphering,$encryption_key, $options, $encryption_iv); 
+															?>
+															<a href="<?= base_url('transaction-details/'.$encryption);?>">Details</a>
+															<!-- <?php $hidden=['id'=>$row->id];?>
+															<?php echo form_open_multipart('transaction-details', 'class="kt-form"',$hidden);?>
+																<button type="submit" class="btn btn-primary btn-xs">Details</button>
+															</form> -->
+														</td>
+                                                        
+
+                                                    </tr>
+													<?php }}}
+												?>
+                                                </tbody>
+                                            </table>
+                                        <?php }?>
+										
 									</div>
 									<!--end: Datatable -->
 								</div>
@@ -1306,7 +1155,8 @@ top: 0;
 						<!-- end:: Content -->				
 					</div>
 					<!-- begin:: Footer -->
-						                    <br><br>			<!-- end:: Footer -->			
+						<?php include('footer.php');?>
+					<!-- end:: Footer -->			
 				</div>
 			</div>
 		</div>
@@ -1315,120 +1165,34 @@ top: 0;
 		
 		<!-- end::Quick Panel -->
 		<!-- begin::Scrolltop -->
-		
+		<div id="kt_scrolltop" class="kt-scrolltop">
+			<i class="fa fa-arrow-up"></i>
+		</div>
+		<!-- end::Scrolltop -->
+		<!-- begin::Sticky Toolbar -->
+		<ul class="kt-sticky-toolbar" style="margin-top: 30px;">
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
+                <a href="http://partner.thetravelsquare.in/travpay" class=""><i class="flaticon2-drop"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
+                <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Help">
+                <a href="mailto:partnercare@thetravelsquare.in" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Us">
+                <a href="https://wa.me/919999007037" target="_blank" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
+            </li>
+		</ul>
 		<!-- end::Sticky Toolbar -->
 		<!-- begin::Demo Panel -->
 		
 		<!-- begin::Global Config(global config for global JS sciprts) -->
-        <script>
-		var KTAppOptions = { "colors": { "state": { "brand": "#716aca", "light": "#ffffff", "dark": "#282a3c", "primary": "#5867dd", "success": "#34bfa3", "info": "#36a3f7", "warning": "#ffb822", "danger": "#fd3995" }, "base": { "label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"], "shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"] } } };
-	</script>
-	<!-- end::Global Config -->
-
-	<!--begin::Global Theme Bundle(used by all pages) -->
-	<script src="http://partner.thetravelsquare.in/resource/admin/files/plugins.bundle.js.download" type="text/javascript"></script>
-	<script src="http://partner.thetravelsquare.in/resource/admin/files/scripts.bundle.js.download" type="text/javascript"></script>
-	<!--end::Global Theme Bundle -->
-
-
-	<!--begin::Page Scripts(used by this page) -->
-	<script src="http://partner.thetravelsquare.in/resource/admin/files/login-1.js.download" type="text/javascript"></script>
-	<!--end::Page Scripts -->
-
-                        <!--begin::Page Vendors(used by this page) -->
-                        <script src="http://partner.thetravelsquare.in/resource/admin/files/fullcalendar.bundle.js.download" type="text/javascript"></script>
-                            <script src="http://partner.thetravelsquare.in/resource/admin/files/js(1)" type="text/javascript"></script>
-                            <script src="http://partner.thetravelsquare.in/resource/admin/files/gmaps.js.download" type="text/javascript"></script>
-                        <!--end::Page Vendors -->
-
-                    <!--begin::Page Scripts(used by this page) -->
-                            <script src="http://partner.thetravelsquare.in/resource/admin/files/dashboard.js.download" type="text/javascript"></script>
-                        <!--end::Page Scripts -->
-
-	<!-- end::Body -->
-    <script src="http://partner.thetravelsquare.in/resource/admin/js/pages/crud/forms/widgets/bootstrap-datepicker.js" type="text/javascript"></script>
-    
-    <script src="http://partner.thetravelsquare.in/resource/admin//plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-        <!--end::Page Vendors -->
-        <!--begin::Page Scripts(used by this page) -->
-        <script src="http://partner.thetravelsquare.in/resource/admin/js/pages/crud/datatables/advanced/multiple-controls.js" type="text/javascript"></script>
-    <iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame"
-		src="http://partner.thetravelsquare.in/resource/admin/files/box-469cf41adb11dc78be68c1ae7f9457a4.html"
-        style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
-
-
-
-         <!-- begin::Global Config(global config for global JS sciprts) -->
-         <script>
-            var KTAppOptions = {
-    "colors": {
-        "state": {
-            "brand": "#5d78ff",
-            "dark": "#282a3c",
-            "light": "#ffffff",
-            "primary": "#5867dd",
-            "success": "#34bfa3",
-            "info": "#36a3f7",
-            "warning": "#ffb822",
-            "danger": "#fd3995"
-        },
-        "base": {
-            "label": [
-                "#c5cbe3",
-                "#a1a8c3",
-                "#3d4465",
-                "#3e4466"
-            ],
-            "shape": [
-                "#f0f3ff",
-                "#d9dffa",
-                "#afb4d4",
-                "#646c9a"
-            ]
-        }
-    }
-};
-        </script>
-
-        <script>
-                    $( document ).ready(function() {
-                        $("#flight_type").hide();
-                        $("#package_type").hide();
-                        $("#inclusions").hide();
-                        $("#hotel_detail").hide();
-                    });
-                    $('#deal_type_id').change(function() {
-                        var gid = $(this).val(); 
-                            if (gid == '1') { 
-                                $("#flight_type").hide();
-                                $("#package_type").show();
-                                $("#inclusions").show();
-                                $("#hotel_detail").hide();
-                            }else if(gid == '2'){
-                                $("#flight_type").show();
-                                $("#package_type").hide();
-                                $("#inclusions").hide();
-                                $("#hotel_detail").hide();
-                            }else if(gid == '3'){
-                                $("#flight_type").hide();
-                                $("#package_type").hide();
-                                $("#inclusions").hide();
-                                $("#hotel_detail").show();
-                            }else{
-                                $("#flight_type").hide();
-                                $("#package_type").hide();
-                                $("#inclusions").hide();
-                                $("#hotel_detail").hide();
-                            }
-                            return false;
-                    });
-        </script>
-    <!-- end::Body -->
-
-<div class="daterangepicker ltr show-ranges opensleft"><div class="ranges"><ul><li data-range-key="Today">Today</li><li data-range-key="Yesterday">Yesterday</li><li data-range-key="Last 7 Days">Last 7 Days</li><li data-range-key="Last 30 Days">Last 30 Days</li><li data-range-key="This Month">This Month</li><li data-range-key="Last Month">Last Month</li><li data-range-key="Custom Range">Custom Range</li></ul></div><div class="drp-calendar left"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-calendar right"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./files/box-469cf41adb11dc78be68c1ae7f9457a4.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>        <script src="http://partner.thetravelsquare.in/resource/agroxa/plugins/datatables/dataTables.responsive.min.js"></script>
-        <script src="http://partner.thetravelsquare.in/resource/agroxa/plugins/datatables/responsive.bootstrap4.min.js"></script>
+        <?php include('jquery.php');?>
+        <script src="<?= base_url('resource/agroxa/plugins/datatables/dataTables.responsive.min.js');?>"></script>
+        <script src="<?= base_url('resource/agroxa/plugins/datatables/responsive.bootstrap4.min.js');?>"></script>
 
         <!-- Datatable init js -->
-        <script src="http://partner.thetravelsquare.in/resource/agroxa/assets/pages/datatables.init.js"></script>
+        <script src="<?= base_url('resource/agroxa/assets/pages/datatables.init.js');?>"></script>
 	</body>
 </html>

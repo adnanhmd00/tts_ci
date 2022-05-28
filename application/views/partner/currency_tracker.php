@@ -2,147 +2,77 @@
 <html lang="en">
     <!-- begin::Head -->
     <head>
-	
-	
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EE16CRYW41"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-EE16CRYW41');
-</script>
-
-
-<!--begin::Fonts -->
-<link rel="stylesheet" href="http://partner.thetravelsquare.in/resource/admin/files/css">
-<!--end::Fonts -->
-
-<!--begin::Page Custom Styles(used by this page) -->
-<link href="http://partner.thetravelsquare.in/resource/admin/files/login-1.css" rel="stylesheet" type="text/css">
-<!--end::Page Custom Styles -->
-<link href="" rel="stylesheet" type="text/css">
-
-<!--begin::Global Theme Styles(used by all pages) -->
-<link href="http://partner.thetravelsquare.in/resource/admin/files/plugins.bundle.css" rel="stylesheet" type="text/css">
-<link href="http://partner.thetravelsquare.in/resource/admin/files/style.bundle.css" rel="stylesheet" type="text/css">
-<!--end::Global Theme Styles -->
-
-            <!--begin::Page Vendors Styles(used by this page) -->
-<link href="http://partner.thetravelsquare.in/resource/admin/files/fullcalendar.bundle.css" rel="stylesheet" type="text/css">
-                <!--end::Page Vendors Styles -->
-
-<!--begin::Layout Skins(used by all pages) -->
-<!--end::Layout Skins -->
-
-<!--begin::Layout Skins(used by all pages) -->
-
-<link href="http://partner.thetravelsquare.in/resource/admin/files/dark.css" rel="stylesheet" type="text/css">
-<link href="http://partner.thetravelsquare.in/resource/admin/files/dark(1).css" rel="stylesheet" type="text/css">
-<link href="http://partner.thetravelsquare.in/resource/admin/files/dark(2).css" rel="stylesheet" type="text/css">
-<link href="http://partner.thetravelsquare.in/resource/admin/files/dark(3).css" rel="stylesheet" type="text/css">        <!--end::Layout Skins -->
-
-<link rel="shortcut icon" href="#">
-
-
-<link rel="shortcut icon" href="">
-
-<!-- Hotjar Tracking Code for keenthemes.com -->
-<script async="" src="http://partner.thetravelsquare.in/resource/admin/files/modules.3a2c212c6000288ee2ae.js.download" charset="utf-8"></script>
-<style type="text/css">
-    iframe#_hjRemoteVarsFrame {
-        display: none !important;
-        width: 1px !important;
-        height: 1px !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-    }
-</style>
-<style type="text/css">/* Chart.js */
-/*
-* DOM element rendering detection
-* https://davidwalsh.name/detect-node-insertion
-*/
-@keyframes chartjs-render-animation {
-from { opacity: 0.99; }
-to { opacity: 1; }
-}
-
-.chartjs-render-monitor {
-animation: chartjs-render-animation 0.001s;
-}
-
-/*
-* DOM element resizing detection
-* https://github.com/marcj/css-element-queries
-*/
-.chartjs-size-monitor,
-.chartjs-size-monitor-expand,
-.chartjs-size-monitor-shrink {
-position: absolute;
-direction: ltr;
-left: 0;
-top: 0;
-right: 0;
-bottom: 0;
-overflow: hidden;
-pointer-events: none;
-visibility: hidden;
-z-index: -1;
-}
-
-.chartjs-size-monitor-expand > div {
-position: absolute;
-width: 1000000px;
-height: 1000000px;
-left: 0;
-top: 0;
-}
-
-.chartjs-size-monitor-shrink > div {
-position: absolute;
-width: 200%;
-height: 200%;
-left: 0;
-top: 0;
-}
-</style><script type="text/javascript" charset="UTF-8" src="./files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="http://partner.thetravelsquare.in/resource/admin/files/util.js.download"></script>    </head>
+        <?php include('head.php');?>
+    </head>
     <!-- end::Head -->
     <!-- begin::Body -->
     <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed" style="">
         <!-- begin:: Page -->
         <!-- begin:: Header Mobile -->
-       
+        <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+            <div class="kt-header-mobile__logo">
+                <a href="http://partner.thetravelsquare.in/">
+                <img alt="The Travel Square" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png">
+                </a>
+            </div>
+            <div class="kt-header-mobile__toolbar">
+                <button class="kt-header-mobile__toggler kt-header-mobile__toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
+                <button class="kt-header-mobile__toggler" id="kt_header_mobile_toggler"><span></span></button>
+                <button class="kt-header-mobile__topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
+            </div>
+        </div>
         <!-- end:: Header Mobile -->
         <div class="kt-grid kt-grid--hor kt-grid--root">
             <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
                 <!-- begin:: Aside -->
-                
+                <!-- Uncomment this to display the close button of the panel
+                    <button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
+                    -->
+                <div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
+                    <!-- begin:: Aside -->
+                    <?php include('aside.php');?>
+                    <!-- end:: Aside -->	<!-- begin:: Aside Menu -->
+                    
+                    <!-- end:: Aside Menu -->				
+                </div>
                 <!-- end:: Aside -->
                 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
                     <!-- begin:: Header -->
-                    
+                    <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
+                        <!-- begin:: Header Menu -->
+                        <!-- Uncomment this to display the close button of the panel
+                            <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
+                            -->
+                        <?php include('nav.php');?>
+                        <!-- end:: Header Menu -->
+                        <!-- begin:: Header Topbar -->
+                        
+                        <!-- end:: Header Topbar -->
+                    </div>
                     <!-- end:: Header -->
                     <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
                         <!-- begin:: Content Head -->
-                        <br><br>
+                        <div class="kt-subheader  kt-grid__item" id="kt_subheader">
+                            <div class="kt-container  kt-container--fluid ">
+                                <div class="kt-subheader__main">
+                                    <h3 class="kt-subheader__title">Currency Tracker</h3>
+                                    <div class="kt-input-icon kt-input-icon--right kt-subheader__search kt-hidden">
+                                        <input type="text" class="form-control" placeholder="Search order..." id="generalSearch">
+                                        <span class="kt-input-icon__icon kt-input-icon__icon--right">
+                                        <span><i class="flaticon2-search-1"></i></span>
+                                        </span>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                        </div>
                         <!-- end:: Content Head -->
                         <!-- begin:: Content -->
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
 						
 						<div class="alert alert-light alert-elevate" role="alert">
 								<div class="alert-text">
-                                    The <b>Currency Tracker Tool</b> is Developed By The Travel Square Powered by <a href="https://www.xe.com/">xe.com</a>
+                                    The Currency Tracker Tool is Developed By The Travel Square Powered by <a href="https://www.xe.com/">xe.com</a>
 														API's, Such That The Agents / Suppliers are Able to Manage & See Forex Exchnage Rate in
                                                         Real Time While Doing Business , For Accurate Record Of Transactions .
                                 </div>
@@ -205,7 +135,7 @@ top: 0;
                         <!-- end:: Content -->				
                     </div>
                     <!-- begin:: Footer -->
-                       <br><br>
+                        <?php include('footer.php');?>
                     <!-- end:: Footer -->			
                 </div>
             </div>
@@ -215,7 +145,25 @@ top: 0;
         
         <!-- end::Quick Panel -->
         <!-- begin::Scrolltop -->
-       
+        <div id="kt_scrolltop" class="kt-scrolltop">
+            <i class="fa fa-arrow-up"></i>
+        </div>
+        <!-- end::Scrolltop -->
+        <!-- begin::Sticky Toolbar -->
+        <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
+                <a href="http://partner.thetravelsquare.in/partner-travpay" class=""><i class="flaticon2-drop"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
+                <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Help">
+                <a href="mailto:partnercare@thetravelsquare.in" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Us">
+                <a href="https://wa.me/919999007037" target="_blank" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
+            </li>
+		</ul>
         <!-- end::Sticky Toolbar -->
         <!-- begin::Demo Panel -->
         
