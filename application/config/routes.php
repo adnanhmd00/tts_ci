@@ -226,3 +226,42 @@ $route['404_override'] = 'partner/login';
 // $route['404_override'] = "errors/page_missing";
 
 $route['translate_uri_dashes'] = FALSE;
+
+
+
+// ---------------------------------APP-----------------------------------------
+
+$route['app'] = 'App/index';
+$route['app/adddeal'] = 'App/postDeal';
+$route['app/deals'] = 'App/allDeals';
+$route['app/mydeals'] = 'App/myDeals';
+$route['app/login'] = 'AppLogin/login';
+$route['applogin'] = 'AppLogin/loginForm';
+$route['app/all-bookings/(:num)'] = 'AppLogin/allBookings/$1'; //Adnan (For all bookings of a user by id)
+$route['app/deal/(:num)'] = 'App/dealDetail/$1';
+$route['app/edit/(:num)'] = 'App/editDeal/$1';
+$route['app/edit/deal/image/(:num)'] = 'App/editDealImage/$1';
+$route['app/edit/deal/date/(:num)'] = 'App/editDealDate/$1';
+$route['app/edit/deal/inclusion/(:num)'] = 'App/editDealInclusion/$1';
+$route['app/edit/deal/delete/image/(:num)/(:num)'] = 'App/deleteDealImage/$1/$2';
+$route['app/edit/deal/delete/date/(:num)/(:num)'] = 'App/deleteDealDate/$1/$2';
+$route['app/postdeal'] = 'App/postDealForm';
+$route['app/editdealform/(:num)'] = 'App/editDealForm/$1';
+$route['app/learn-how-to-sell'] = 'App/learnHowToSell';
+$route['app/privacy-policy'] = 'App/privacyPolicy';
+$route['app/terms-and-conditions'] = 'App/termsAndConditions';
+$route['app/add-blogs'] = 'App/addBlogs';
+$route['app/add/blog'] = 'App/submitBlog';
+// $route['app/show-blogs'] = 'Blogs/blogs';
+// $route['app/show-blog/(:num)'] = 'Blogs/blog/$1';
+$route['app/advertisement-plan'] = 'App/advertisementPlan';
+$route['app/partner-help'] = 'App/partnerHelp';
+/*******************EXPERIENCE*******************/
+// $route['experience'] = 'Experience/index';
+// $route['experience-detail/(:any)'] = 'Experience/experienceGallery/$1';
+// $route['experience-list/(:any)'] = 'Experience/experienceList/$1';
+/*******************BOOKING*******************/
+$route['app/partner-booking/(:any)'] = 'App/booking/$1';
+// $route['app/partner-booking-form'] = 'PartnerBooking/booking_form/';
+$route['app/flight-travellers-details']['POST'] = 'App/travellersDetails';
+/*******************BOOKING*******************/
