@@ -2,7 +2,7 @@
                     <div class="kt-aside__brand kt-grid__item "  style="background-color:black;" id="kt_aside_brand" kt-hidden-height="65" style="">
                         <div class="kt-aside__brand-logo" style="background-color:black;">
                             <a href="">
-                            <img alt="The Travel Square Logo" src="<?= base_url('uploads/b2b/the-travel-square-logo.png');?>" width="140" height="55">
+                            <img alt="The Travel Square Logo" src="<?= base_url('uploads/b2b/the-travel-square-logo.png');?>" height="55">
                             </a>
                         </div>
                         <div class="kt-aside__brand-tools" style="background-color:black;">
