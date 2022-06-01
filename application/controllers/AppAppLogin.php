@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class PartnerLogin extends CI_Controller
+class AppAppLogin extends CI_Controller
 {
     public $created_at;
     public $apikey;
@@ -23,7 +23,7 @@ class PartnerLogin extends CI_Controller
     public function login()
     {
         if (!$this->session->userdata('partner')) {
-            $this->load->view('partner/login');
+            $this->load->view('partner/app/login');
         } else {
             redirect('app');
         }

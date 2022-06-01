@@ -231,37 +231,172 @@ $route['translate_uri_dashes'] = FALSE;
 
 // ---------------------------------APP-----------------------------------------
 
-$route['app'] = 'App/index';
-$route['app/adddeal'] = 'App/postDeal';
-$route['app/deals'] = 'App/allDeals';
-$route['app/mydeals'] = 'App/myDeals';
-$route['app/login'] = 'AppLogin/login';
-$route['applogin'] = 'AppLogin/loginForm';
-$route['app/all-bookings/(:num)'] = 'AppLogin/allBookings/$1'; //Adnan (For all bookings of a user by id)
-$route['app/deal/(:num)'] = 'App/dealDetail/$1';
-$route['app/edit/(:num)'] = 'App/editDeal/$1';
-$route['app/edit/deal/image/(:num)'] = 'App/editDealImage/$1';
-$route['app/edit/deal/date/(:num)'] = 'App/editDealDate/$1';
-$route['app/edit/deal/inclusion/(:num)'] = 'App/editDealInclusion/$1';
-$route['app/edit/deal/delete/image/(:num)/(:num)'] = 'App/deleteDealImage/$1/$2';
-$route['app/edit/deal/delete/date/(:num)/(:num)'] = 'App/deleteDealDate/$1/$2';
-$route['app/postdeal'] = 'App/postDealForm';
-$route['app/editdealform/(:num)'] = 'App/editDealForm/$1';
-$route['app/learn-how-to-sell'] = 'App/learnHowToSell';
-$route['app/privacy-policy'] = 'App/privacyPolicy';
-$route['app/terms-and-conditions'] = 'App/termsAndConditions';
-$route['app/add-blogs'] = 'App/addBlogs';
-$route['app/add/blog'] = 'App/submitBlog';
-// $route['app/show-blogs'] = 'Blogs/blogs';
-// $route['app/show-blog/(:num)'] = 'Blogs/blog/$1';
-$route['app/advertisement-plan'] = 'App/advertisementPlan';
-$route['app/partner-help'] = 'App/partnerHelp';
+$route['app'] = 'AppPartner/index';
+$route['app/adddeal'] = 'AppPartner/postDeal';
+$route['app/deals'] = 'AppPartner/allDeals';
+$route['app/mydeals'] = 'AppPartner/myDeals';
+$route['app/login'] = 'AppAppLogin/login';
+$route['applogin'] = 'AppAppLogin/loginForm';
+$route['app/all-bookings/(:num)'] = 'AppAppLogin/allBookings/$1'; //Adnan (For all bookings of a user by id)
+$route['app/deal/(:num)'] = 'AppPartner/dealDetail/$1';
+$route['app/edit/(:num)'] = 'AppPartner/editDeal/$1';
+$route['app/edit/deal/image/(:num)'] = 'AppPartner/editDealImage/$1';
+$route['app/edit/deal/date/(:num)'] = 'AppPartner/editDealDate/$1';
+$route['app/edit/deal/inclusion/(:num)'] = 'AppPartner/editDealInclusion/$1';
+$route['app/edit/deal/delete/image/(:num)/(:num)'] = 'AppPartner/deleteDealImage/$1/$2';
+$route['app/edit/deal/delete/date/(:num)/(:num)'] = 'AppPartner/deleteDealDate/$1/$2';
+$route['app/postdeal'] = 'AppPartner/postDealForm';
+$route['app/editdealform/(:num)'] = 'AppPartner/editDealForm/$1';
+$route['app/learn-how-to-sell'] = 'AppPartner/learnHowToSell';
+$route['app/privacy-policy'] = 'AppPartner/privacyPolicy';
+$route['app/terms-and-conditions'] = 'AppPartner/termsAndConditions';
+$route['app/add-blogs'] = 'AppPartner/addBlogs';
+$route['app/add/blog'] = 'AppPartner/submitBlog';
+
+
+$route['app/show-blogs'] = 'AppBlogs/blogs';
+$route['app/show-blog/(:num)'] = 'AppBlogs/blog/$1';
+$route['app/advertisement-plan'] = 'AppPartner/advertisementPlan';
+$route['app/partner-help'] = 'AppPartner/partnerHelp';
 /*******************EXPERIENCE*******************/
-// $route['experience'] = 'Experience/index';
-// $route['experience-detail/(:any)'] = 'Experience/experienceGallery/$1';
-// $route['experience-list/(:any)'] = 'Experience/experienceList/$1';
+$route['app/experience'] = 'AppExperience/index';
+$route['app/experience-detail/(:any)'] = 'AppExperience/experienceGallery/$1';
+$route['app/experience-list/(:any)'] = 'AppExperience/experienceList/$1';
 /*******************BOOKING*******************/
-$route['app/partner-booking/(:any)'] = 'App/booking/$1';
-// $route['app/partner-booking-form'] = 'PartnerBooking/booking_form/';
-$route['app/flight-travellers-details']['POST'] = 'App/travellersDetails';
+$route['app/partner-booking/(:any)'] = 'AppPartner/booking/$1';
+$route['app/partner-booking-form'] = 'AppPartnerBooking/booking_form/';
+$route['app/flight-travellers-details']['POST'] = 'AppPartner/travellersDetails';
 /*******************BOOKING*******************/
+
+$route['app/partner-travpay'] = 'AppPartner/travPay';
+$route['app/partner-travpay-add-money'] = 'AppPartner/addMoneyToWallet';
+
+$route['app/partner-ppc'] = 'AppPartner/ppc';
+$route['app/partner-buy'] = 'AppPartner/buyPage';
+$route['app/partner-manage-leads'] = 'AppPartner/manageLeads';
+$route['app/partner-purchase-leads'] = 'AppPartner/prchasedLeads';
+$route['app/purchase-lead'] = 'AppPartner/purchaseleads';
+
+$route['app/search-flight-results']['POST'] = 'AppPartner/searchFlightResults';
+
+$route['app/partner-contact/(:any)'] = 'AppPartner/contact/$1';
+$route['app/partner-contact-form'] = 'AppPartner/contactForm/';
+$route['app/wallet-transactions/(:any)'] = 'AppPartner/walletTransactions/$1';
+// $route['app/transaction-details'] = 'Partner/transactionDetails/';
+$route['app/transaction-details/(:any)'] = 'AppPartner/transactionDetails/$1';
+$route['app/send-money-to-bank/(:any)'] = 'AppPartner/sendMoneyToBank/$1';
+$route['app/send-money-to-bank-form-remit'] = 'AppPartner/sendMoneyToBankFormRemit/';
+$route['app/send-money-to-bank-form-own'] = 'AppPartner/sendMoneyToBankFormOwn/';
+$route['app/send-money-to-bank-form-request'] = 'AppPartner/sendMoneyToBankFormRequest/';
+$route['app/all-payment-requests'] = 'AppPartner/paymentRequests/';
+$route['app/client-settlement'] = 'AppPartner/client_settlement/';
+$route['app/partner-booking-cancellation'] = 'AppPartner/cancellation_form/';
+$route['app/client-settlement-form'] = 'AppPartner/client_settlement_form/';
+$route['app/partner-booking-cancellation-form'] = 'AppPartner/cancellation_form_submit/';
+$route['app/currency-tracker'] = 'AppPartner/currency_tracker/';
+$route['app/partner-terminal'] = 'AppPartner/terminal_agent/';
+$route['app/edit-partner-deal-price'] = 'AppPartner/edit_partner_deal_price/';
+$route['app/PR/create-order/(:any)'] = 'AppPaymentRequest/createOrder/$1';
+$route['app/PR/rzp-fetch-response/(:any)/(:any)/(:any)/(:any)/(:any)'] = 'AppPaymentRequest/fetchResponse/$1/$2/$3/$4/$5';
+$route['app/rzp-add-money']='AppRazorPayPayment/createOrder';
+$route['app/rzp-fetch-response/(:any)/(:any)/(:any)/(:any)']='AppRazorPayPayment/fetchResponse/$1/$2/$3/$4';
+
+
+// $route['app/seller'] = 'Seller/index';
+$route['app/seller/post-deal'] = 'AppSeller/postDeal';
+$route['app/seller/post-deal-from'] = 'AppSeller/postDealForm';
+
+
+/*********************************TREK*******************/
+
+$route['app/seller-hastrek/post'] = 'AppHasTrek/post';
+$route['app/generate-invoice/(:any)'] = 'AppPartner/generatePdf/$1';
+$route['app/partner-agent-request-verification']='AppPartner/requestAgentVerification';
+$route['app/partner-agent-request-verification-form']='AppPartner/requestAgentVerificationForm';
+
+/*********************************TREK*******************/
+
+
+$route['app/seller'] = 'AppSeller/index';
+$route['app/seller/adddeal'] = 'AppSeller/postDeal';
+$route['app/seller/deals'] = 'AppSeller/allDeals';
+$route['app/seller/mydeals'] = 'AppSeller/myDeals';
+$route['app/seller/login'] = 'AppSellerLogin/login';
+$route['app/sellerlogin'] = 'AppSellerLogin/loginForm';
+
+$route['app/seller/deal/(:num)'] = 'AppSeller/dealDetail/$1';
+$route['app/seller/edit/(:num)'] = 'AppSeller/editDeal/$1';
+$route['app/seller/edit/deal/image/(:num)'] = 'AppSeller/editDealImage/$1';
+$route['app/seller/edit/deal/date/(:num)'] = 'AppSeller/editDealDate/$1';
+$route['app/seller/edit/deal/inclusion/(:num)'] = 'AppSeller/editDealInclusion/$1';
+$route['app/seller/edit/deal/delete/image/(:num)/(:num)'] = 'AppSeller/deleteDealImage/$1/$2';
+$route['app/seller/edit/deal/delete/date/(:num)/(:num)'] = 'AppSeller/deleteDealDate/$1/$2';
+
+
+$route['app/seller/learn-how-to-sell'] = 'AppSeller/learnHowToSell';
+$route['app/seller/add-blogs'] = 'AppSeller/addBlogs';
+$route['app/add/blog'] = 'AppSeller/submitBlog';
+$route['app/show-blogs'] = 'AppBlogs/blogs';
+$route['app/show-blog/(:num)'] = 'AppBlogs/blog/$1';
+$route['app/seller/advertisement-plan'] = 'AppSeller/advertisementPlan';
+$route['app/seller-help'] = 'AppSeller/partnerHelp';
+
+$route['app/seller-travpay'] = 'AppSeller/travPay';
+$route['app/seller-travpay-add-money'] = 'AppSeller/addMoneyToWallet';
+
+$route['app/seller-ppc'] = 'AppSeller/ppc';
+$route['app/seller-buy'] = 'AppSeller/buyPage';
+$route['app/seller-manage-leads'] = 'AppSeller/manageLeads';
+$route['app/seller-purchase-leads'] = 'AppSeller/prchasedLeads';
+$route['app/purchase-lead'] = 'AppSeller/purchaseleads';
+
+
+$route['app/seller-contact/(:any)'] = 'AppSeller/contact/$1';
+$route['app/seller-contact-form'] = 'AppSeller/contactForm/';
+$route['app/seller-wallet-transactions/(:any)'] = 'AppSeller/walletTransactions/$1';
+// $route['app/transaction-details'] = 'Partner/transactionDetails/';
+$route['app/seller-transaction-details/(:any)'] = 'AppSeller/transactionDetails/$1';
+$route['app/seller-send-money-to-bank/(:any)'] = 'AppSeller/sendMoneyToBank/$1';
+$route['app/seller-send-money-to-bank-form-remit'] = 'AppSeller/sendMoneyToBankFormRemit/';
+$route['app/seller-send-money-to-bank-form-own'] = 'AppSeller/sendMoneyToBankFormOwn/';
+$route['app/seller-send-money-to-bank-form-request'] = 'AppSeller/sendMoneyToBankFormRequest/';
+$route['app/seller-all-payment-requests'] = 'AppSeller/paymentRequests/';
+$route['app/seller-client-settlement'] = 'AppSeller/client_settlement/';
+$route['app/seller-seller-booking-cancellation'] = 'AppSeller/cancellation_form/';
+$route['app/seller-client-settlement-form'] = 'AppSeller/client_settlement_form/';
+$route['app/seller-booking-cancellation-form'] = 'AppSeller/cancellation_form_submit/';
+$route['app/seller-currency-tracker'] = 'AppSeller/currency_tracker/';
+$route['app/seller-terminal'] = 'AppSeller/terminal_agent/';
+$route['app/seller-edit-seller-deal-price'] = 'AppSeller/edit_partner_deal_price/';
+$route['app/seller-PR/create-order/(:any)'] = 'AppPaymentRequest/createOrder/$1';
+$route['app/seller-PR/rzp-fetch-response/(:any)/(:any)/(:any)/(:any)/(:any)']='AppPaymentRequest/fetchResponse/$1/$2/$3/$4/$5';
+$route['app/seller-rzp-add-money']='App/SellerRazorPayPayment/createOrder';
+$route['app/seller-rzp-fetch-response/(:any)/(:any)/(:any)/(:any)']='App/SellerRazorPayPayment/fetchResponse/$1/$2/$3/$4';
+
+
+/*********************************FLIGHT START*******************/
+
+$route['app/search-flight'] = 'AppPartner/searchFlight';
+$route['app/coming-soon'] = 'AppPartner/comingSoon';
+$route['app/search-result'] = 'AppPartner/flightSearchResult';
+$route['app/traveller-details'] = 'AppPartner/flightTravellersDetails';
+$route['app/app-image-options'] = 'AppPartner/appImageOptions';
+$route['app/flight-app-image']['POST'] = 'AppPartner/flightAppImage';
+$route['app/post-app-image']['POST'] = 'AppPartner/postAppImage';
+$route['app/app-image-edit'] = 'AppPartner/editAppImageTable';
+$route['app/app-image-update']['POST'] = 'AppPartner/updateAppImageTable';
+$route['app/app-image-table'] = 'AppPartner/appImageTable';
+
+/*********************************FLIGHT ENDS*******************/
+
+// $route['app/seller'] = 'Seller/index';
+$route['app/seller/post-deal'] = 'AppSeller/postDeal';
+$route['app/seller/post-deal-from'] = 'App/Flight/postDealForm';
+
+
+/*********************************TREK*******************/
+
+$route['app/seller-hastrek/post'] = 'AppHasTrek/post';
+$route['app/seller-generate-invoice/(:any)'] = 'AppSeller/generatePdf/$1';
+$route['app/seller-agent-request-verification']='App/Seller/requestAgentVerification';
+$route['app/seller-agent-request-verification-form']='App/Seller/requestAgentVerificationForm';

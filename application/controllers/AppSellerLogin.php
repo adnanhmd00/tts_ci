@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class PartnerLogin extends CI_Controller
+class AppSellerLogin extends CI_Controller
 {
     public $created_at;
     public $apikey;
@@ -13,19 +13,14 @@ class PartnerLogin extends CI_Controller
         $this->load->model('MainModel', 'admin');
         date_default_timezone_set("Asia/Kolkata");
         $this->created_at = Date('Y-m-d H:i:s', time());
-        
     }
-    public function allBookings($id){
-        $this->db->where("user_id", $id);
-        $data = $this->db->get("bookings");
-        echo json_encode($data->result());
-    }
+
     public function login()
     {
-        if (!$this->session->userdata('partner')) {
-            $this->load->view('partner/login');
+        if (!$this->session->userdata('seller')) {
+            $this->load->view('seller/login');
         } else {
-            redirect('app');
+            redirect('seller');
         }
     }
 
@@ -40,7 +35,7 @@ class PartnerLogin extends CI_Controller
                 'requestType' => '1',
                 'phone' => $this->input->post('phone'),
                 'password' => $this->input->post('password'),
-                'type'=>'partner'
+                'type'=>'seller'
             )
         );
         $ch = curl_init();
@@ -52,14 +47,14 @@ class PartnerLogin extends CI_Controller
         $data = json_decode($result);
         curl_close($ch);
         if ($data->error_code == 0) {
-            $manager = $this->admin->getRawRow("Select * from partner where mobile='$phone' and type='partner'");
-            $this->session->set_userdata('partner', $manager);
-            redirect('app');
+            $manager = $this->admin->getRawRow("Select * from partner where mobile='$phone' and type='seller'");
+            $this->session->set_userdata('seller', $manager);
+            redirect('seller');
             // if($manager->type=='partner'){redirect('partner');}
             // else if($manager->type=='seller'){redirect('seller');}
         } else {
             $this->failed($data->response_string);
-            redirect('app/login');
+            redirect('seller/login');
         }
 
     }

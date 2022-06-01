@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-class Partner extends CI_Controller
+
+class AppSeller extends CI_Controller
 {
     public $created_at;
     public $apikey;
@@ -15,28 +16,23 @@ class Partner extends CI_Controller
         $this->load->model('MainModel', 'admin');
         date_default_timezone_set("Asia/Kolkata");
         $this->created_at = Date('Y-m-d H:i:s', time());
-        if (!$this->session->userdata('partner')) {
-            redirect('partner/login');
+        if (!$this->session->userdata('seller')) {
+            redirect('seller/login');
         }else{
-            $this->userinfo=$this->session->userdata('partner');
+            $this->userinfo=$this->session->userdata('seller');
         }
     }
-
 
     public function index()
     {
         $userinfo = $this->userinfo;
-        $this->load->view('partner/app/index', compact('userinfo'));
-    }
+        $this->load->view('seller/index', compact('userinfo'));
 
-    public function comingSoon(){
-        $this->load->view('partner/app/coming-soon');
     }
-    
     public function logout()
     {
-        $this->session->unset_userdata('partner');
-        redirect('partner/login');
+        $this->session->unset_userdata('seller');
+        redirect('seller/login');
     }
 
     public function postDeal()
@@ -51,19 +47,20 @@ class Partner extends CI_Controller
         }
 
 
-        if($userinfo->type=='partner'){
-            $this->load->view('partner/app/add_deal', compact('userinfo', 'category_data', 'currency_data', 'date'));
-        }
-        else if($userinfo->type=='seller'){
+        // if($userinfo->type=='partner'){
+        //     $this->load->view('partner/add_deal', compact('userinfo', 'category_data', 'currency_data', 'date'));
+        // }
+        // else 
+        if($userinfo->type=='seller'){
             if($userinfo->seller_type=='HT'){
-
+                
                 $package_type=$this->admin->getRawResult("Select * from tbl_ht_package_type where deleted_at IS NULL");
                 $trek_type=$this->admin->getRawResult("Select * from tbl_ht_trek_type where deleted_at IS NULL");
 
-                $this->load->view('partner/app/add_hastrek_deal', compact('userinfo', 'package_type','trek_type', 'currency_data', 'date'));
+                $this->load->view('seller/add_hastrek_deal', compact('userinfo', 'package_type','trek_type', 'currency_data', 'date'));
             }
         }
-
+    
     }
 
     public function editDeal($id)
@@ -80,7 +77,7 @@ class Partner extends CI_Controller
         $data['deal_dates'] = $this->admin->getRawResult("Select * from tbl_deal_dates where deal_id='$id'");
         $data['deal_inclusion'] = $this->admin->getRawResult("Select * from tbl_deal_inclusion where deal_id='$id'");
         $data['quote_if_exist'] = $this->admin->getRawRow("Select * from tbl_quote_request where deal_id='$id' and request_from='$userinfo->id'");
-        $this->load->view('partner/app/editdeal', compact('userinfo', 'category_data', 'currency_data', 'date', 'data'));
+        $this->load->view('seller/editdeal', compact('userinfo', 'category_data', 'currency_data', 'date', 'data'));
     }
 
     public function allDeals()
@@ -130,61 +127,17 @@ class Partner extends CI_Controller
         } else {
             $mdata = array();
         }
-        $this->load->view('partner/app/alldeals', compact('userinfo', 'mdata'));
+        $this->load->view('seller/alldeals', compact('userinfo', 'mdata'));
     }
 
     public function myDeals()
     {
         $userinfo = $this->userinfo;
-        $data = $this->admin->getAllDealsByPartner($userinfo->id);
-        $i = 0;
-        if (!empty($data)) {
-            foreach ($data as $row) {
-                // if ($this->admin->getRawResult("Select * from tbl_deal_dates where deal_id='$row->id' AND deleted_at IS NULL") == false) {
-                //     $dot = array();
-                // } else {
-                //     $dot = $this->admin->getRawResult("Select * from tbl_deal_dates where deal_id='$row->id' AND deleted_at IS NULL");
-                // }
-                // if ($this->admin->getRawResult("Select * from tbl_deal_inclusion where deal_id='$row->id' AND deleted_at IS NULL") == false) {
-                //     $inclusion = array();
-                // } else {
-                //     $inclusion = $this->admin->getRawResult("Select * from tbl_deal_inclusion where deal_id='$row->id' AND deleted_at IS NULL");
-                // }
-                if ($this->admin->getRawRow("Select image from tbl_deal_image where position='0' and deal_id='$row->id' AND deleted_at IS NULL") == false) {
-                    $image = base_url() . 'resource/admin/img/dummy.jpg';
-                } else {
-                    $image = $this->admin->getRawRow("Select image from tbl_deal_image where position='0' and deal_id='$row->id' AND deleted_at IS NULL")->image;
-                }
-                $mdata[$i]['id'] = $row->id;
-                $mdata[$i]['partner_name'] = $row->partner_name;
-                $mdata[$i]['deal_type'] = $row->deal_type;
-                $mdata[$i]['deal_type_id'] = $row->deal_type_id;
-                $mdata[$i]['title'] = $row->title;
-                $mdata[$i]['currency'] = $row->currency;
-                $mdata[$i]['currency_id'] = $row->currency_id;
-                $mdata[$i]['b2bprice'] = $row->new_price;
-                $mdata[$i]['b2cprice'] = $row->old_price;
-                $mdata[$i]['tac'] = $row->tac;
-                $mdata[$i]['unit_type'] = $row->unit_type;
-                $mdata[$i]['details'] = $row->details;
-                $mdata[$i]['cancelation_policy'] = $row->cancelation_policy;
-                $mdata[$i]['destination'] = $row->destination;
-                $mdata[$i]['valid_untill'] = $row->valid_untill;
-                $mdata[$i]['hotel_name_room_meal'] = $row->hotel_name_room_meal;
-                $mdata[$i]['flight_trip_type'] = $row->flight_trip_type;
-                $mdata[$i]['package_type'] = $row->package_type;
-                $mdata[$i]['created_at'] = $row->created_at;
-                $mdata[$i]['status'] = $row->status;
-                // $mdata[$i]['dates_of_travel'] = $dot;
-                // $mdata[$i]['inclusion'] = $inclusion;
-                $mdata[$i]['image'] = $image;
-                $i++;
-            }
-        } else {
-            $mdata = array();
+        
+        if($userinfo->seller_type=='HT'){
+            $data = $this->admin->getRawResult("SELECT * FROM `tbl_hastrek_deal` where dealer_id='$userinfo->id' and dealer_type='$userinfo->type'");
+            $this->load->view('seller/mydeals', compact('userinfo', 'data'));
         }
-        // print_r($mdata);
-        $this->load->view('partner/app/mydeals', compact('userinfo', 'mdata'));
     }
 
     public function dealDetail($id)
@@ -198,8 +151,8 @@ class Partner extends CI_Controller
 
         // if(!empty($deal)){
         // }
-        $this->load->view('partner/app/details', compact('userinfo', 'data'));
-
+        $this->load->view('seller/details', compact('userinfo', 'data'));
+            
     }
 
 
@@ -248,13 +201,13 @@ class Partner extends CI_Controller
             $this->success("Updated");
 
         }
-        redirect('partner/edit/'.$id);
+        redirect('seller/edit/'.$id);
     }
 
     function deletedeal($id){
         $data['deleted_at']=$this->created_at;
         $this->admin->edit_data('id',$id,$data,'tbl_deal_partner');
-        redirect('partner/mydeals');
+        redirect('seller/mydeals');
     }
     public function postDealForm()
     {
@@ -282,7 +235,7 @@ class Partner extends CI_Controller
         } else {
             $deal_type_id = $this->input->post('deal_type_id');
             $data['deal_type_id'] = $this->input->post('deal_type_id');
-
+            
             if($deal_type_id=='1'){
                 $data['id_tag']='TSP';
             }else if($deal_type_id=='2'){
@@ -298,7 +251,7 @@ class Partner extends CI_Controller
             }else if($deal_type_id=='7'){
                 $data['id_tag']='THT';
             }
-
+            
             $data['partner_id'] = $userinfo->id;
             $data['title'] = $this->input->post('title');
             $data['currency_id'] = $this->input->post('currency_id');
@@ -407,7 +360,7 @@ class Partner extends CI_Controller
             }
 
         }
-        redirect('partner/adddeal');
+        redirect('seller/adddeal');
     }
 
     public function success($message)
@@ -443,19 +396,19 @@ class Partner extends CI_Controller
             $this->session->set_flashdata('item', 'Error');
 
         }
-        redirect('partner/deal/' . $id);
+        redirect('seller/deal/' . $id);
     }
     public function editDealImage($id)
     {
         $userinfo = $this->userinfo;
         $data = $this->admin->getRawResult("Select * from tbl_deal_image where deal_id='$id' and deleted_at IS NULL");
-        $this->load->view('partner/app/edit_images', compact('userinfo', 'id', 'data'));
+        $this->load->view('seller/edit_images', compact('userinfo', 'id', 'data'));
     }
     public function editDealInclusion($id)
     {
         $userinfo = $this->userinfo;
         $data = $this->admin->getRawResult("Select * from tbl_deal_inclusion where deal_id='$id' and deleted_at IS NULL");
-        $this->load->view('partner/app/edit_inclusion', compact('userinfo', 'id', 'data'));
+        $this->load->view('seller/edit_inclusion', compact('userinfo', 'id', 'data'));
     }
     function editDealDate($id){
         $userinfo = $this->userinfo;
@@ -464,19 +417,19 @@ class Partner extends CI_Controller
         for ($i = 0; $i < 12; ++$i) {
             $date[$i]['date'] = date('M Y', strtotime($i . ' month', $this_month));
         }
-        $this->load->view('partner/app/edit_dates', compact('userinfo', 'id', 'data','date'));
+        $this->load->view('seller/edit_dates', compact('userinfo', 'id', 'data','date'));
     }
 
     public function deleteDealImage($rowid, $id)
     {
         $data['deleted_at'] = $this->created_at;
         $this->admin->edit_data('id', $rowid, $data,'tbl_deal_image');
-        redirect('partner/edit/deal/image/' . $id);
+        redirect('seller/edit/deal/image/' . $id);
     }
     function deleteDealDate($rowid, $id){
         $data['deleted_at'] = $this->created_at;
         $this->admin->edit_data('id', $rowid, $data,'tbl_deal_dates');
-        redirect('partner/edit/deal/date/' . $id);
+        redirect('seller/edit/deal/date/' . $id);
     }
     function addDateToInclusion($id){
         $this->admin->delete_data('deal_id',$id,'tbl_deal_inclusion');
@@ -490,7 +443,7 @@ class Partner extends CI_Controller
             }
             $this->admin->insert_batch('tbl_deal_inclusion', $idata);
         }
-        redirect('partner/edit/deal/inclusion/' . $id);
+        redirect('seller/edit/deal/inclusion/' . $id);
 
     }
     function addDateToDeals($id){
@@ -506,7 +459,7 @@ class Partner extends CI_Controller
             }
             $this->admin->insert_batch('tbl_deal_dates', $dotdata);
         }
-        redirect('partner/edit/deal/date/' . $id);
+        redirect('seller/edit/deal/date/' . $id);
 
     }
     public function addImagesToDeal($id)
@@ -546,60 +499,47 @@ class Partner extends CI_Controller
         } else {
             $this->failed("Error While Uploading Image");
         }
-        redirect('partner/edit/deal/image/' . $id);
+        redirect('seller/edit/deal/image/' . $id);
     }
 
     public function failed($message)
     {
-
-
         $data='
-                        <div class="alert alert-danger fade show" role="alert">
-                            <div class="alert-text">'.$message.'</div>
-                            <div class="alert-close">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true"><i class="la la-close"></i></span>
-                                </button>
-                            </div>
-                        </div>
+            <div class="alert alert-danger fade show" role="alert">
+                <div class="alert-text">'.$message.'</div>
+                <div class="alert-close">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true"><i class="la la-close"></i></span>
+                    </button>
+                </div>
+            </div>
         ';
-
         $this->session->set_flashdata('item', $data);
-
     }
 
     function learnHowToSell(){
         $userinfo = $this->userinfo;
-        $this->load->view('partner/app/learn_how_to_sell', compact('userinfo'));
+        $this->load->view('seller/learn_how_to_sell', compact('userinfo'));
     }
-
-    function privacyPolicy(){
-        $this->load->view('partner/app/m-privacy-and-cookie-policy');
-    }
-
-    function termsAndConditions(){
-        $this->load->view('partner/app/m-terms-and-conditions');
-    }
-    
     function addBlogs(){
         $userinfo = $this->userinfo;
-        $this->load->view('partner/app/add_blogs', compact('userinfo'));
+        $this->load->view('seller/add_blogs', compact('userinfo'));
     }
     function advertisementPlan(){
         $userinfo = $this->userinfo;
         $check=$this->admin->getRawRow("Select * from tbl_adv_with_us where user_id='$userinfo->id' and user_type='$userinfo->type' and deleted_at IS NULL");
         if($check==false){
-            $this->load->view('partner/app/advertisement_plan', compact('userinfo'));
+            $this->load->view('seller/advertisement_plan', compact('userinfo'));
         }else{
             if($check->adv_pack_id=='1'){
                 $type=1;
-                $this->load->view('partner/app/active_add_plan',compact('userinfo','type'));
+                $this->load->view('seller/active_add_plan',compact('userinfo','type'));
             }else if($check->adv_pack_id=='2'){
                 $type=1;
-                $this->load->view('partner/app/active_add_plan',compact('userinfo','type'));
+                $this->load->view('seller/active_add_plan',compact('userinfo','type'));
             }else if($check->adv_pack_id=='3'){
                 $type=1;
-                $this->load->view('partner/app/active_add_plan',compact('userinfo','type'));
+                $this->load->view('seller/active_add_plan',compact('userinfo','type'));
             }
         }
     }
@@ -615,14 +555,14 @@ class Partner extends CI_Controller
         }else if($type=='wizard'){
             $data['adv_pack_id']=3;
         }
-
+        
         if($this->admin->insert_data('tbl_adv_with_us',$data)){
             $this->success('Added');
         }else{
             $this->success('Failed');
         }
-
-        redirect('partner/advertisement-plan');
+        
+        redirect('seller/advertisement-plan');
     }
     function submitBlog(){
         $userinfo = $this->userinfo;
@@ -631,9 +571,9 @@ class Partner extends CI_Controller
         $data['headline']=$this->input->post('headline');
         $data['user_id']=$userinfo->id;
         $data['user_type']=$userinfo->type;
-
+        
         $latestID=$this->admin->insert_data_get_latest_id('tbl_blog',$data);
-
+       
 
         if($latestID){
             $image_count = count($_FILES['image']['name']);
@@ -672,13 +612,13 @@ class Partner extends CI_Controller
                 $this->failed("Error While Uploading Image");
             }
         }
-        redirect('partner/addBlogs');
+        redirect('seller/addBlogs');
     }
 
     function blogs(){
         $userinfo = $this->userinfo;
         $data=$this->admin->getRawResult("Select tbl_blog.*,tbl_blog_image.image from tbl_blog,tbl_blog_image where tbl_blog.id=tbl_blog_image.blog_id and tbl_blog.deleted_at IS NULL and tbl_blog_image.position=0");
-        $this->load->view('partner/app/blogs',compact('userinfo','data'));
+        $this->load->view('seller/blogs',compact('userinfo','data'));
     }
     function blog($id){
         $userinfo = $this->userinfo;
@@ -692,17 +632,17 @@ class Partner extends CI_Controller
                 'image'=>$this->admin->getRawResult("Select * from tbl_blog_image where blog_id='$row->id'")
             );
         }
-        $this->load->view('partner/app/single_blog_detail',compact('userinfo','data'));
+        $this->load->view('seller/single_blog_detail',compact('userinfo','data'));
     }
     function partnerHelp(){
         $userinfo = $this->userinfo;
-        $this->load->view('partner/app/partner_help',compact('userinfo'));
+        $this->load->view('seller/partner_help',compact('userinfo'));
     }
     function travPay(){
         $userinfo = $this->userinfo;
         $walletBalance=$this->walletBalance();
         $symbol=$this->currencySymbol();
-        $this->load->view('partner/app/travpay',compact('userinfo','walletBalance','symbol'));
+        $this->load->view('seller/travpay',compact('userinfo','walletBalance','symbol'));
     }
     function addMoneyToWallet(){
         $userinfo = $this->userinfo;
@@ -711,29 +651,29 @@ class Partner extends CI_Controller
         $allCurrency=$this->admin->getRawResult("Select * from tbl_currency");
 
         $wallet_balance=$this->walletBalance();
-        $this->load->view('partner/app/add_money',compact('userinfo','wallet_balance','currency','allCurrency'));
+        $this->load->view('seller/add_money',compact('userinfo','wallet_balance','currency','allCurrency'));
     }
     function ppc(){
         $userinfo = $this->userinfo;
-        $this->load->view('partner/app/ppc_campaign',compact('userinfo'));
+        $this->load->view('seller/ppc_campaign',compact('userinfo'));
     }
     function prchasedLeads(){
         $userinfo = $this->userinfo;
-        $mdata=$this->admin->getRawResult("Select leads.*,tbl_currency.symbol from leads,tbl_currency
+        $mdata=$this->admin->getRawResult("Select leads.*,tbl_currency.symbol from leads,tbl_currency 
         where leads.currency=tbl_currency.id and  leads.id NOT IN (SELECT lead FROM `leads_given` where partner_id='$userinfo->id')");
         $id="0";
-        $this->load->view('partner/app/manage_leads',compact('userinfo','mdata','id'));
+        $this->load->view('seller/manage_leads',compact('userinfo','mdata','id'));
     }
     function manageLeads(){
         $userinfo = $this->userinfo;
-        $mdata=$this->admin->getRawResult("Select leads.*,tbl_currency.symbol from leads,tbl_currency
+        $mdata=$this->admin->getRawResult("Select leads.*,tbl_currency.symbol from leads,tbl_currency 
         where leads.currency=tbl_currency.id and  leads.id IN (SELECT lead FROM `leads_given` where partner_id='$userinfo->id')");
         $id="1";
-        $this->load->view('partner/app/manage_leads',compact('userinfo','mdata','id'));
+        $this->load->view('seller/manage_leads',compact('userinfo','mdata','id'));
     }
     function purchaseleads(){
         $userinfo = $this->userinfo;
-
+        
         $wdata['user_id']=$userinfo->id;
         $wdata['user_type']=$userinfo->type;
         $wdata['type']='DEBIT';
@@ -742,7 +682,7 @@ class Partner extends CI_Controller
         $wdata['amount']=$this->input->post('price');
         $wdata['currency_id']=$userinfo->currency;
         $lead_id=$this->input->post('id');
-
+        
         $wallet_id=$this->admin->insert_data_get_latest_id('tbl_wallet',$wdata);
 
         if($wallet_id){
@@ -754,7 +694,7 @@ class Partner extends CI_Controller
             $ndata['payee_name']=$userinfo->name;
             $ndata['payee_email']=$userinfo->email;
             $ndata['payee_phone']=$userinfo->mobile;
-
+            
             $lead_partner_data=$this->admin->getRawRow("Select * from partner where id IN(Select partner_id from leads where id='$lead_id')");
             if($lead_partner_data==false){
                 $ndata['benificiary_id']=$userinfo->id;
@@ -767,11 +707,11 @@ class Partner extends CI_Controller
                 $ndata['benificiary_type']="ADMIN";
                 $ndata['benificiary_name']="ADMIN";
                 $ndata['benificiary_email']="ADMIN";
-                $ndata['benificiary_phone']="ADMIN";
+                $ndata['benificiary_phone']="ADMIN";                
             }
 
 
-
+            
             $this->admin->insert_data('tbl_wallet_transaction_details',$ndata);
 
             $data['partner_id']=$userinfo->id;
@@ -785,12 +725,12 @@ class Partner extends CI_Controller
                 $this->failure("Fail");
         }
 
-
-        redirect('partner-manage-leads');
+        
+        redirect('seller-manage-leads');
     }
     function contact($for){
         $userinfo = $this->userinfo;
-        $this->load->view('partner/app/contact_form',compact('userinfo','for'));
+        $this->load->view('seller/contact_form',compact('userinfo','for'));
     }
 
     function buyPage(){
@@ -803,23 +743,23 @@ class Partner extends CI_Controller
         if ($this->form_validation->run() == false) {
             $this->failed(validation_errors());
             if($type=="LEAD"){
-                redirect('partner-manage-leads');
+                redirect('seller-manage-leads');
             }
         } else {
             if($type=="LEAD"){
                 $id=$this->input->post('id');
-
+                
                 $price=$this->input->post('price');
-
+                
                 $userinfo = $this->userinfo;
-
+                
 
                 $currency=$this->admin->getRawRow("Select * from tbl_currency where id=(Select currency_id from tbl_wallet where user_id='$userinfo->id' and user_type='$userinfo->type' LIMIT 1)")->symbol;
                 $allCurrency=$this->admin->getRawResult("Select * from tbl_currency");
-
+                
                 $wallet_balance=$this->walletBalance();
 
-                $this->load->view('partner/app/buy_page',compact('userinfo','wallet_balance','currency','allCurrency','id','price','type'));
+                $this->load->view('seller/buy_page',compact('userinfo','wallet_balance','currency','allCurrency','id','price','type'));
             }
         }
     }
@@ -847,18 +787,18 @@ class Partner extends CI_Controller
                 }else if($for=='ppc-request'){
                     $this->sendEmail('ppc.thetravelsquare@gmail.com',$message,$for,$name,$phone,$email);
                 }
-                $this->success("Your Request Has Been Submited ! Our Team will Connect with You Soon");
+                $this->success("Success");
             }else{
                 $this->failed("Failure");
             }
         }
-        redirect('partner-contact/'.$for);
+        redirect('seller-contact/'.$for);
     }
 
     function sendEmail($to,$emessage,$for,$name,$phone,$email){
-
+        
         $subject = "TRAVEL SQUARE";
-
+        
         $message = "
         <html>
         <head>
@@ -887,21 +827,21 @@ class Partner extends CI_Controller
         </body>
         </html>
         ";
-
+        
         // Always set content-type when sending HTML email
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
+        
         // More headers
         $headers .= 'From: <ts@frantic.in>' . "\r\n";
         $headers .= 'Cc: ts@frantic.in' . "\r\n";
-
+        
         mail($to,$subject,$message,$headers);
     }
     function creatingOrderId(){
         $url = "https://api.razorpay.com/v1/orders";
         $ch = curl_init($url);
-
+            
         $data = array(
             "amount"=> 50000,
             "currency"=> "INR",
@@ -909,7 +849,7 @@ class Partner extends CI_Controller
             "payment_capture"=> 1,
         );
         $payload = json_encode($data);
-
+        
         curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -929,7 +869,7 @@ class Partner extends CI_Controller
             "name": "Acme Corp",
             "description": "Test Transaction",
             "image": "https://example.com/your_logo",
-            "order_id": "50",
+            "order_id": "50", 
             "handler": function (response){
                 alert(response.razorpay_payment_id);
                 alert(response.razorpay_order_id);
@@ -950,26 +890,26 @@ class Partner extends CI_Controller
         var rzp1 = new Razorpay(options);
         rzp1.open();
         e.preventDefault();
-
+        
         </script>
         ';
     }
     function downloadLeadSample(){
         $pth    =   file_get_contents(base_url().'uploads/leads.xlsx');
         $nme    =   "sample.xlsx";
-        force_download($nme, $pth);
+        force_download($nme, $pth); 
     }
     function downloadClaimImage($id){
         $name=$this->admin->getRawRow("Select * from client_settlement where id='$id'")->image;
-
+        
         $path=base_url().'uploads/'.$name;
-        force_download($name, $path);
+        force_download($name, $path); 
     }
     function downloadCancelImage($id){
         $name=$this->admin->getRawRow("Select * from cancellation_refund where id='$id'")->doc;
-
+        
         $path=base_url().'uploads/'.$name;
-        force_download($name, $path);
+        force_download($name, $path); 
     }
     function walletTransactions($type){
         $userinfo = $this->userinfo;
@@ -977,23 +917,23 @@ class Partner extends CI_Controller
         // $debit=$this->admin->getRawRow("Select sum(amount) as amount from tbl_wallet where user_id='$userinfo->id' and user_type='$userinfo->type' and type='DEBIT' and status='SUCCESS'");
         // $wallet_balance=$credit->amount-$debit->amount;
 
-        $data=$this->admin->getRawResult("Select tbl_wallet.* , tbl_wallet_transaction_details.benificiary_name,
-        tbl_wallet_transaction_details.benificiary_holder_name from tbl_wallet,tbl_wallet_transaction_details
-        where tbl_wallet.user_id='$userinfo->id' and tbl_wallet.user_type='$userinfo->type' and
+        $data=$this->admin->getRawResult("Select tbl_wallet.* , tbl_wallet_transaction_details.benificiary_name, 
+        tbl_wallet_transaction_details.benificiary_holder_name from tbl_wallet,tbl_wallet_transaction_details 
+        where tbl_wallet.user_id='$userinfo->id' and tbl_wallet.user_type='$userinfo->type' and 
         tbl_wallet.id=tbl_wallet_transaction_details.wallet_id");
 
         // $credit_=0;
-        // $debit_=0;
+        // $debit_=0;										
         // foreach($data as $row){
         //     if($row->currency_id!=$userinfo->currency){
         //         $point=$this->admin->getRawRow("Select * from currency_tracker where currency_to='$row->currency_id' and currency_from= '$userinfo->currency'")->points;
-
+                
         //         if($row->type=='CREDIT' && $row->status=='SUCCESS'){
         //             $credit_=$credit_+($row->amount*$point);
         //         }else if($row->type=='DEBIT' && $row->status=='SUCCESS'){
         //             $debit_=$debit_+($row->amount*$point);
         //         }
-
+            
         //     }else{
         //         if($row->type=='CREDIT' && $row->status=='SUCCESS'){
         //             $credit_=$credit_+($row->amount);
@@ -1006,7 +946,7 @@ class Partner extends CI_Controller
         $wallet_balance_= $wallet_balance=$this->walletBalance();
 
 
-        $this->load->view('partner/app/transaction',compact('userinfo','data','wallet_balance_','type'));
+        $this->load->view('seller/transaction',compact('userinfo','data','wallet_balance_','type'));
     }
     function sendMoneyToBank($type){
         $userinfo = $this->userinfo;
@@ -1017,13 +957,11 @@ class Partner extends CI_Controller
         $allCurrency=$this->admin->getRawResult("Select * from tbl_currency");
 
         $wallet_balance=$this->walletBalance();
-
         if($type=="remit"){
-            $this->load->view('partner/app/send_money_to_other_remit',compact('userinfo','wallet_balance','currency','allCurrency','type'));
+            $this->load->view('seller/send_money_to_other_remit',compact('userinfo','wallet_balance','currency','allCurrency','type'));
         }else{
-            $this->load->view('partner/app/send_money_to_bank_remit',compact('userinfo','wallet_balance','currency','allCurrency','type'));
+            $this->load->view('seller/send_money_to_bank_remit',compact('userinfo','wallet_balance','currency','allCurrency','type'));
         }
-
     }
     function remit_type($type){
         $userinfo = $this->userinfo;
@@ -1031,51 +969,105 @@ class Partner extends CI_Controller
         $allCurrency=$this->admin->getRawResult("Select * from tbl_currency");
 
         $wallet_balance=$this->walletBalance();
-        $this->load->view('partner/app/send_money_to_other_remit',compact('userinfo','wallet_balance','currency','allCurrency','type'));
-
+        $this->load->view('seller/send_money_to_other_remit',compact('userinfo','wallet_balance','currency','allCurrency','type'));
+        
     }
     function sendMoneyToBankFormRemit(){
-        $this->form_validation->set_rules('amount', 'Amount', 'required');
-        $this->form_validation->set_rules('achn', 'Holder Name', 'required');
-        $this->form_validation->set_rules('acno', 'Account Number', 'required');
-        $this->form_validation->set_rules('ifsc', 'IFSC Code', 'required');
-        $this->form_validation->set_rules('bankname', 'Bank Name', 'required');
+        $this->form_validation->set_rules('type', 'Type', 'required');
+
         if ($this->form_validation->run() == false) {
             $this->failed(validation_errors());
         } else {
-            $userinfo = $this->userinfo;
+            $type=$this->input->post('type');
+            if($type=="tou"){
+                $userinfo = $this->userinfo;
 
-            $data['user_id']=$userinfo->id;
-            $data['user_type']=$userinfo->type;
-            $data['type']='DEBIT';
-            $data['mode']='TRAVPAY';
-            $data['status']='PENDING';
-            $data['amount']=$this->input->post('amount');
-            $data['currency_id']=$userinfo->currency;
-            $walletID=$this->admin->insert_data_get_latest_id('tbl_wallet',$data);
+                $data['user_id']=$userinfo->id;
+                $data['user_type']=$userinfo->type;
+                $data['type']='DEBIT';
+                $data['mode']='TRAVPAY';
+                $data['status']='PENDING';
+                $data['amount']=$this->input->post('amount');
+                $data['currency_id']=$userinfo->currency;
+                $walletID=$this->admin->insert_data_get_latest_id('tbl_wallet',$data);
 
-            if($walletID){
+                if($walletID){
 
-                $wdata['wallet_id']=$walletID;
-                $wdata['transaction_for']="REMIT";
-                $wdata['payee_id']=$userinfo->id;
-                $wdata['payee_type']=$userinfo->type;
-                $wdata['payee_name']=$userinfo->name;
-                $wdata['payee_email']=$userinfo->email;
-                $wdata['payee_phone']=$userinfo->mobile;
-                $wdata['benificiary_holder_name']=$this->input->post('achn');
-                $wdata['benificiary_account_number']=$this->input->post('acno');
-                $wdata['benificiary_ifsc']=$this->input->post('ifsc');
-                $wdata['benificiary_bank_name']=$this->input->post('bankname');
+                    $wdata['wallet_id']=$walletID;
+                    $wdata['transaction_for']="REMIT-TOU";                
+                    $wdata['payee_id']=$userinfo->id;
+                    $wdata['payee_type']=$userinfo->type;                
+                    $wdata['payee_name']=$userinfo->name;
+                    $wdata['payee_email']=$userinfo->email;                
+                    $wdata['payee_phone']=$userinfo->mobile;                
+                    $wdata['benificiary_holder_name']=$this->input->post('achn');
+                    $wdata['benificiary_account_number']=$this->input->post('acno');
+                    $wdata['benificiary_ifsc']=$this->input->post('ifsc');
+                    $wdata['benificiary_bank_name']=$this->input->post('bankname');
+                    
+                    if($this->admin->insert_data('tbl_wallet_transaction_details',$wdata)){
+                        redirect('seller-wallet-transactions/accounts');
+                    }else{
+                        $this->failed("Error");
+                        redirect('Seller/remit_type/tou');
+                    }
 
-                if($this->admin->insert_data('tbl_wallet_transaction_details',$wdata)){
-                    redirect('wallet-transactions/accounts');
                 }else{
-                    redirect('send-money-to-bank/remit');
+                    $this->failed("Error");
+                    redirect('Seller/remit_type/tou');
                 }
+            }
+            if($type=="tot"){
+                $userinfo = $this->userinfo;
 
-            }else{
-                redirect('send-money-to-bank/remit');
+                $data['user_id']=$userinfo->id;
+                $data['user_type']=$userinfo->type;
+                $data['type']='DEBIT';
+                $data['mode']='TRAVPAY';
+                $data['status']='PENDING';
+                $data['amount']=$this->input->post('amount');
+                $data['currency_id']=$userinfo->currency;
+                $walletID=$this->admin->insert_data_get_latest_id('tbl_wallet',$data);
+
+                if($walletID){
+
+                    $wdata['wallet_id']=$walletID;
+                    $wdata['transaction_for']="REMIT-TOT";                
+                    $wdata['payee_id']=$userinfo->id;
+                    $wdata['payee_type']=$userinfo->type;                
+                    $wdata['payee_name']=$userinfo->name;
+                    $wdata['payee_email']=$userinfo->email;                
+                    $wdata['payee_phone']=$userinfo->mobile;    
+                    
+                    $travpayid=$this->input->post("trav_pay_id");  
+                    
+                    $trax=explode("-",$travpayid);
+                    
+                    if($trax[0]=="TSA"){
+                        $b_data=$this->admin->getRawRow("Select * from partner where mobile='$trax[1]' and type='partner'");
+                    }else if($trax[0]=="TSS"){
+                        $b_data=$this->admin->getRawRow("Select * from partner where mobile='$trax[1]' and type='seller'");
+                    }
+
+
+                    
+                    if($b_data==false){
+                        $this->failed("Error");
+                        redirect('Seller/remit_type/tot');
+                    }else{
+                        $wdata['benificiary_id']=$b_data->id;
+                        $wdata['benificiary_type']=$b_data->type;
+                        if($this->admin->insert_data('tbl_wallet_transaction_details',$wdata)){
+                            redirect('seller-wallet-transactions/accounts');
+                        }else{
+                            $this->failed("Error");
+                            redirect('Seller/remit_type/tot');
+                        }
+                    }
+                }else{
+                    $this->failed("Error");
+                    redirect('Seller/remit_type/tot');
+                }
             }
         }
 
@@ -1106,7 +1098,7 @@ class Partner extends CI_Controller
                 $wdata['transaction_for']="OWN";
                 $wdata['payee_id']=$wdata['benificiary_id']=$userinfo->id;
                 $wdata['payee_type']=$wdata['benificiary_type']=$userinfo->type;
-
+                
                 $wdata['payee_name']=$wdata['benificiary_name']=$userinfo->name;
                 $wdata['payee_phone']=$wdata['benificiary_phone']=$userinfo->mobile;
                 $wdata['payee_email']=$wdata['benificiary_email']=$userinfo->email;
@@ -1115,16 +1107,16 @@ class Partner extends CI_Controller
                 $wdata['benificiary_account_number']=$this->input->post('acno');
                 $wdata['benificiary_ifsc']=$this->input->post('ifsc');
                 $wdata['benificiary_bank_name']=$this->input->post('bankname');
-
+                
                 if($this->admin->insert_data('tbl_wallet_transaction_details',$wdata)){
-                    redirect('wallet-transactions/accounts');
+                    redirect('seller-wallet-transactions/accounts');
                 }else{
-                    redirect('send-money-to-bank/own');
+                    redirect('seller-send-money-to-bank/own');
 
                 }
 
             }else{
-                redirect('send-money-to-bank/own');
+                redirect('seller-send-money-to-bank/own');
             }
         }
 
@@ -1141,7 +1133,7 @@ class Partner extends CI_Controller
 
             $data['request_from_id']=$userinfo->id;
             $data['request_from_type']=$userinfo->type;
-
+            
             $data['amount']=$this->input->post('amount');
             $data['currency']=$userinfo->currency;
             $data['name']=$this->input->post('name');
@@ -1149,15 +1141,17 @@ class Partner extends CI_Controller
             $data['phone']=$this->input->post('phone');
             $latestID=$this->admin->insert_data_get_latest_id('tbl_payment_request',$data);
 
-
+                
             if($latestID){
-
+                
                 $ndata['payment_link']=$this->encrypt($latestID);
                 $this->admin->edit_data('id',$latestID,$ndata,'tbl_payment_request');
 
-                redirect('send-money-to-bank/request');
+                $this->success("Request Generated");
+                redirect('seller-send-money-to-bank/request');
             }else{
-                redirect('send-money-to-bank/request');
+                $this->failed("Failed");
+                redirect('seller-send-money-to-bank/request');
             }
 
 
@@ -1174,21 +1168,21 @@ class Partner extends CI_Controller
         $data=$this->admin->getRawResult("Select * from tbl_wallet where user_id='$userinfo->id' and user_type='$userinfo->type' ");
 
         $credit_=0;
-        $debit_=0;
-
+        $debit_=0;										
+        
         if($data==false){
             return 0;
         }else{
             foreach($data as $row){
                 if($row->currency_id!=$userinfo->currency){
                     $point=$this->admin->getRawRow("Select * from currency_tracker where currency_to='$row->currency_id' and currency_from= '$userinfo->currency'")->points;
-
+                    
                     if($row->type=='CREDIT' && $row->status=='SUCCESS'){
                         $credit_=$credit_+($row->amount*$point);
                     }else if($row->type=='DEBIT' && $row->status=='SUCCESS'){
                         $debit_=$debit_+($row->amount*$point);
                     }
-
+                
                 }else{
                     if($row->type=='CREDIT' && $row->status=='SUCCESS'){
                         $credit_=$credit_+($row->amount);
@@ -1198,7 +1192,7 @@ class Partner extends CI_Controller
 
                 }
             }
-
+            
             return ($wallet_balance_=$credit_-$debit_);
         }
     }
@@ -1222,7 +1216,7 @@ class Partner extends CI_Controller
     //         $data['transaction']=$this->admin->getRawRow("Select * from tbl_wallet where id='$id'");
     //         $data['transaction_detail']=$this->admin->getRawRow("Select * from tbl_wallet_transaction_details where wallet_id='$id'");
 
-    //         $this->load->view('partner/app/transaction_details',compact('userinfo','data'));
+    //         $this->load->view('partner/transaction_details',compact('userinfo','data'));
 
     //     }
 
@@ -1236,7 +1230,7 @@ class Partner extends CI_Controller
             $data['transaction']=$this->admin->getRawRow("Select * from tbl_wallet where id='$id'");
             $data['transaction_detail']=$this->admin->getRawRow("Select * from tbl_wallet_transaction_details where wallet_id='$id'");
             // print_r($data);
-            $this->load->view('partner/app/transaction_details',compact('userinfo','data'));
+            $this->load->view('seller/transaction_details',compact('userinfo','data'));
 
 
     }
@@ -1245,24 +1239,24 @@ class Partner extends CI_Controller
         $userinfo = $this->userinfo;
 
         $data=$this->admin->getRawResult("Select * from tbl_payment_request where request_from_id='$userinfo->id' and request_from_type='$userinfo->type'");
-        $this->load->view('partner/app/payment_request',compact('userinfo','data'));
+        $this->load->view('seller/payment_request',compact('userinfo','data'));
 
     }
     function encrypt($simple_string){
-        $ciphering = "AES-128-CTR";
-        $iv_length = openssl_cipher_iv_length($ciphering);
-        $options = 0;
-        $encryption_iv = '1234567891011121';
-        $encryption_key = "thetravel@square@123";
-        $encryption = openssl_encrypt($simple_string, $ciphering,$encryption_key, $options, $encryption_iv);
+        $ciphering = "AES-128-CTR"; 
+        $iv_length = openssl_cipher_iv_length($ciphering); 
+        $options = 0; 
+        $encryption_iv = '1234567891011121'; 
+        $encryption_key = "thetravel@square@123"; 
+        $encryption = openssl_encrypt($simple_string, $ciphering,$encryption_key, $options, $encryption_iv); 
         return $encryption;
     }
     function decrypt($encryption){
-        $ciphering = "AES-128-CTR";
-        $iv_length = openssl_cipher_iv_length($ciphering);
-        $options = 0;
-        $decryption_iv = '1234567891011121';
-        $decryption_key = "thetravel@square@123";
+        $ciphering = "AES-128-CTR"; 
+        $iv_length = openssl_cipher_iv_length($ciphering); 
+        $options = 0; 
+        $decryption_iv = '1234567891011121'; 
+        $decryption_key = "thetravel@square@123"; 
         $decryption=openssl_decrypt ($encryption, $ciphering,$decryption_key, $options, $decryption_iv);
         return $decryption;
     }
@@ -1270,12 +1264,12 @@ class Partner extends CI_Controller
         $userinfo = $this->userinfo;
         $currency=$this->admin->getRawResult("Select * from tbl_currency");
         $data=$this->admin->getRawResult("Select * from client_settlement where claim_by_id='$userinfo->id' and claim_by_type='$userinfo->type'");
-        $this->load->view('partner/app/client_settlement',compact('userinfo','data','currency'));
+        $this->load->view('seller/client_settlement',compact('userinfo','data','currency'));        
     }
     function cancellation_form(){
         $userinfo = $this->userinfo;
         $data=$this->admin->getRawResult("Select * from cancellation_refund where cancel_by_id='$userinfo->id' and cancel_by_type='$userinfo->type'");
-        $this->load->view('partner/app/cancellation_form',compact('userinfo','data'));
+        $this->load->view('seller/cancellation_form',compact('userinfo','data'));        
     }
     function client_settlement_form(){
         $userinfo = $this->userinfo;
@@ -1308,12 +1302,12 @@ class Partner extends CI_Controller
                 $data['claim_by_id'] = $userinfo->id;
                 $data['claim_by_type'] = $userinfo->type;
                 if($this->admin->insert_data('client_settlement',$data)){
-                    $this->success("Your Settlement Claim Request Has Been Raise ! We Reach You Out Soon");
+                    $this->success("Submitted Successfully");
                 }else{
-                    $this->failed("Error While Uploading Image");
+                    $this->failed("Error");
                 }
             } else {
-                $this->failed("Error While Uploading Image");
+                $this->failed("Error");
             }
 
         redirect('client-settlement');
@@ -1333,9 +1327,9 @@ class Partner extends CI_Controller
 
             $config['upload_path'] = './uploads/';
             $config['allowed_types'] = 'jpg|png|pdf';
-            // $config['max_size'] = 0;
-            // $config['max_width'] = 0;
-            // $config['max_height'] = 0;
+            $config['max_size'] = 0;
+            $config['max_width'] = 0;
+            $config['max_height'] = 0;
             $config['file_name'] = md5($_FILES['image']['name']);
 
             $this->upload->initialize($config);
@@ -1353,25 +1347,25 @@ class Partner extends CI_Controller
                 }
                 if(!empty($this->input->post('reason'))){
                     $data['reason'] = $this->input->post('reason');
-
+                    
                 }
 
                 $data['booking_id'] = $this->input->post('booking_id');
-
-
+                
+                
                 $data['status'] = 'pending';
-
-
+                
+                
                 if($this->admin->insert_data('cancellation_refund',$data)){
-                    $this->success("Your Refund / Cancellation Request has Been Submitted . TTS Team Will Connect for the Same Soon .");
+                    $this->success("Form Submitted Successfully");
                 }else{
-                    $this->failed("Error While Uploading Image");
+                    $this->failed("Error While Submitting Form");
                 }
             } else {
-                $this->failed("Error While Uploading Image");
+                $this->failed("Error While Submitting Form");
             }
 
-        redirect('partner-booking-cancellation');
+        redirect('seller-booking-cancellation');
     }
     function generatePdf($id){
         $this->load->library('Pdf');
@@ -1379,22 +1373,22 @@ class Partner extends CI_Controller
         $data['transaction_detail']=$this->admin->getRawRow("Select * from tbl_wallet_transaction_details where wallet_id='$id'");
         $userinfo = $this->userinfo;
 
-        $this->load->view('partner/app/pdfview',compact('userinfo','data'));
+        $this->load->view('seller/pdfview',compact('userinfo','data'));
     }
     function requestAgentVerification(){
         $userinfo = $this->userinfo;
-        $this->load->view('partner/app/agent_request_verification',compact('userinfo'));
+        $this->load->view('seller/agent_request_verification',compact('userinfo'));
     }
 
     function requestAgentVerificationForm(){
         $userinfo = $this->userinfo;
-
+        
         $data['name']=$this->input->post('name');
         $phone=$data['phone']=$this->input->post('phone');
         $data['email']=$this->input->post('email');
         $data['reason']=$this->input->post('reason');
-
-        if($this->admin->getRawRow("Select * from partner where mobile='$phone' and status='approved'")==false){
+        
+        if($this->admin->getRawRow("Select * from partner where mobile='$phone' and type='partner' and status='approved'")==false){
             $data['status']="NAN";
             $this->success("Not verified");
         }else{
@@ -1406,18 +1400,18 @@ class Partner extends CI_Controller
         $data['dealer_id']=$userinfo->id;
         $data['dealer_type']=$userinfo->type;
         $this->admin->insert_data('tbl_request_agent_verification',$data);
-        redirect('partner-agent-request-verification');
+        redirect('seller-agent-request-verification');
     }
 
     function currency_tracker(){
         $userinfo = $this->userinfo;
         $currency=$this->admin->getRawResult("Select * from tbl_currency");
-        $this->load->view('partner/app/currency_tracker',compact('userinfo','currency'));
+        $this->load->view('seller/currency_tracker',compact('userinfo','currency'));        
     }
     function get_currency_tracking($gid,$amount){
 
         $userinfo = $this->userinfo;
-
+        
         $usercurrency=$this->admin->getRawRow("Select * from tbl_currency where id='$gid'");
         $checkcurrency=$this->admin->getRawRow("Select * from tbl_currency where id='$userinfo->currency'");
 
@@ -1479,7 +1473,7 @@ class Partner extends CI_Controller
             $mdata = array();
         }
         // print_r($mdata);
-        $this->load->view('partner/app/terminal_pricing_update', compact('userinfo', 'mdata'));
+        $this->load->view('seller/terminal_pricing_update', compact('userinfo', 'mdata'));
     }
 
     function edit_partner_deal_price(){
@@ -1490,324 +1484,11 @@ class Partner extends CI_Controller
         $this->admin->edit_data('id',$id,$data,'tbl_deal_partner');
         redirect('partner-terminal');
     }
-
     function delete_adv_plan(){
         $userinfo = $this->userinfo;
         $userid=$userinfo->id;
         $this->admin->getRawUpdate("Update tbl_adv_with_us set deleted_at='$this->created_at' where user_id='$userid'");
-        redirect('partner/advertisement-plan');
+        redirect('seller/advertisement-plan');
     }
-
-    function view_hastrek(){
-        $userinfo = $this->userinfo;
-        $data=$this->admin->getRawResult("Select * from tbl_hastrek_deal where deleted_at IS NULL");
-        $this->load->view("partner/view_hastrek",compact('userinfo','data'));
-    }
-
-    function booking($deal_id){
-        $userinfo = $this->userinfo;
-
-        $deal=explode("-",$deal_id);
-        $deal_type=$deal[0];
-        $deal_type_id=$deal[1];
-
-        if($deal_type=="HST"){
-            $data['deal_data']=$this->admin->getRawRow("Select * from tbl_hastrek_deal where id='$deal_type_id'");
-            $data['deal_dates']=$this->admin->getRawResult("Select * from tbl_ht_dates where ht_id='$deal_type_id'");
-        }else{
-
-        }
-
-        $this->load->view("partner/booking_page",compact('userinfo','data','deal_id'));
-
-
-    }
-
-    function get_next_date($date,$days){
-        $date_ = new DateTime($date);
-        $interval = new DateInterval('P'.$days.'D');
-        $date_->add($interval);
-
-
-        echo $date_->format("Y-m-d");
-    }
-
-    function view_bookings(){
-        $userinfo = $this->userinfo;
-        $data=$this->admin->getRawResult("Select * from tbl_booking where user_type='$userinfo->type' and user_type_id='$userinfo->id'");
-        $this->load->view("partner/all_booking",compact('userinfo','data'));
-    }
-
-    function view_booking_transactions($id){
-        $userinfo = $this->userinfo;
-        $booking_data=explode("-",$id);
-        $booking_id=$booking_data[1];
-        $deal_type=$booking_data[2];
-        $deal_type_id=$booking_data[3];
-        $data['booking_data']=$this->admin->getRawRow("Select * from tbl_booking where id='$booking_id'");
-        $data['all_transaction_data']=$this->admin->getRawResult("Select tbl_wallet.id as wallet_id,
-        tbl_wallet.amount, tbl_wallet.currency_id , tbl_wallet_transaction_details.id as transaction_id ,
-        tbl_wallet_transaction_details.transaction_for,tbl_wallet_transaction_details.transaction_type,
-        tbl_wallet.status,tbl_wallet.created_at
-        from tbl_wallet_transaction_details, tbl_wallet
-        where tbl_wallet_transaction_details.transaction_for='$id' and
-        tbl_wallet_transaction_details.wallet_id=tbl_wallet.id");
-
-        $amount_paid_yet=$this->admin->getRawRow("Select SUM(amount) as amount from tbl_wallet_transaction_details, tbl_wallet where tbl_wallet_transaction_details.transaction_for='$id' and tbl_wallet_transaction_details.wallet_id=tbl_wallet.id");
-
-        $data['total_amount']=$data['booking_data']->price;
-        $data['amount_paid_yet']=$amount_paid_yet->amount;
-
-        if($amount_paid_yet->amount < $data['booking_data']->price){
-            $pay_status="PARTIAL";
-        }else{
-            $pay_status="FULL";
-        }
-        $this->load->view("partner/booking_details",compact('userinfo','data','pay_status'));
-    }
-
-    function booking_next_installment($id){
-        $userinfo=$this->userinfo;
-        $this->load->view("partner/next_installment",compact('userinfo','id'));
-    }
-
-    function searchFlight(){
-        $datas = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
-        $this->load->view("partner/search-flights", compact('datas'));
-    }
-
-    public function searchFlightResults()
-    {
-    	
-    	$data = json_decode(file_get_contents('php://input'), true);
-	    $apiKey = $data['API-Token'];
-	    $url = 'http://partner.thetravelsquare.in/api/FlightSearch';
-	    $ch = curl_init($url);
-	    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-	    curl_setopt($ch, CURLOPT_POST, 1);
-	    $headers = array(
-	        'Content-Type: application/json',
-	        'Accept: application/json',
-	        'API-Token:' .$apiKey
-	    );
-	    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	    $result = curl_exec($ch);
-        if (curl_errno($ch)) {
-        	$response = array();
-        	$response['error'] = curl_error($ch);
-       		$this->response($response, 400);
-        } else {
-            http_response_code(200);
-        }
-	    curl_close($ch);
-	    $response = json_decode($result, true);
-	    // echo "<pre>";
-	    // print_r($response);
-	    // exit;
-        $JourneyType = $data['JourneyType'];
-        $Origin = $data['Origin'];
-        $Destination = $data['Destination'];
-
-        $AdultCount  = $data['AdultCount'];
-        $ChildCount  = $data['ChildCount'];
-
-	    $cities = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
-        $this->load->view("partner/search-flight-results", compact('response', 'data', 'cities', 'JourneyType', 'Origin', 'Destination', 'AdultCount',  'ChildCount'));
-    }
-
-    public function flightFareResults()
-    {
-    	
-    	$data = json_decode(file_get_contents('php://input'), true);
-	    $apiKey = $data['API-Token'];
-	    $url = 'http://partner.thetravelsquare.in/api/FlightFareQuotes';
-	    $ch = curl_init($url);
-	    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-	    curl_setopt($ch, CURLOPT_POST, 1);
-	    $headers = array(
-	        'Content-Type: application/json',
-	        'Accept: application/json',
-	        'API-Token:' .$apiKey
-	    );
-	    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	    $result = curl_exec($ch);
-        if (curl_errno($ch)) {
-        	$response = array();
-        	$response['error'] = curl_error($ch);
-       		$this->response($response, 400);
-        } else {
-            http_response_code(200);
-        }
-	    curl_close($ch);
-	    $response = json_decode($result, true);
-	    echo "<pre>";
-	    print_r($response);
-	    exit;
-        $JourneyType = $data['JourneyType'];
-        $Origin = $data['Origin'];
-        $Destination = $data['Destination'];
-
-        $AdultCount  = $data['AdultCount'];
-        $ChildCount  = $data['ChildCount'];
-
-	    $cities = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
-        $this->load->view("partner/search-flight-results", compact('response', 'data', 'cities', 'JourneyType', 'Origin', 'Destination', 'AdultCount',  'ChildCount'));
-    }
-
-    public function flightSearchPost()
-    {
-        echo 'hi';die;
-      $inputs = $this->input->post();
-      print_r($inputs);die;
-      $data = json_decode(file_get_contents('php://input'), true);
-      $apiKey = $data['API-Token'];
-      /*$data_curl = [
-        'AdultCount'            => $data['AdultCount'],
-        'ChildCount'            => $data['ChildCount'],
-        'ClientId'           => $data['ClientId'],
-        'EndUserIp'           => $data['EndUserIp'],
-        'InfantCount'           => $data['InfantCount'],
-        'JourneyType'           => $data['JourneyType'],
-        'Password'           => $data['Password'],
-        'Segments'           => [
-          [
-            'Destination' => $data['Destination_1'],
-            'FlightCabinClass' => $data['FlightCabinClass_1'],
-            'Origin' => $data['Origin_1'],
-            'PreferredArrivalTime' => $data['PreferredArrivalTime_1'],
-            'PreferredDepartureTime' => $data['PreferredDepartureTime_1'],
-          ],
-          [
-            'Destination' => $data['Destination_2'],
-            'FlightCabinClass' => $data['FlightCabinClass_2'],
-            'Origin' => $data['Origin_2'],
-            'PreferredArrivalTime' => $data['PreferredArrivalTime_2'],
-            'PreferredDepartureTime' => $data['PreferredDepartureTime_2'],
-          ]
-        ],
-        'UserName' => $data['UserName']
-      ];*/
-
-      /* API URL */
-       $url = 'https://flight.srdvtest.com/v5/rest/Search';
-      //  $url = 'https://flight.srdvapi.com/v5/rest/Search';
-       /* Init cURL resource */
-       $ch = curl_init($url);
-       /* pass encoded JSON string to the POST fields */
-       curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-       curl_setopt($ch, CURLOPT_POST, 1);
-       // curl_setopt($ch, CURLOPT_USERPWD, "api-key: rzp_test_1U3fdUZx6lMZ13-iCS5tAavgvQ7B9mlv5EZFPio");
-       // curl_setopt($ch, CURLOPT_USERPWD, 'rzp_test_1U3fdUZx6lMZ13' . ':' . 'iCS5tAavgvQ7B9mlv5EZFPio');
-      $headers = array(
-        'Content-Type: application/json',
-        'Accept: application/json',
-        'API-Token:' .$apiKey
-      );
-      // $headers[] = 'Accept: application/json';
-      // $headers[] = 'Content-Type: application/json';
-       /* set the content type json */
-      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-
-       /* set return type json */
-       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-       /* execute request */
-       $result = curl_exec($ch);
-       // $result = explode(',', $result);
-       // $result = strip_slashes($result);
-        if (curl_errno($ch)) {
-            echo 'Error:' . curl_error($ch);
-        }
-        $response = json_decode($result, true);
-       /* close cURL resource */
-       curl_close($ch);
-
-       $this->response($response, REST_Controller::HTTP_OK);
-      }
-
-
-    function flightSearchResult(){
-        $this->load->view("partner/flight-search-results");
-    }
-
-    function flightTravellersDetails(){
-        $this->load->view("partner/flight-traveller-details");
-    }
-
-    function travellersDetails(){
-        $data = json_decode(file_get_contents('php://input'), true);
-        $this->load->view("partner/traveller-details", compact('data'));
-    }
-
-    function appImageOptions(){
-      $this->load->view("partner/app-image-options");
-    }
-
-    function flightAppImage(){
-      $button_array = [
-        'home_screen_background',
-        'vacations_by_theme',
-        'trending_destinations',
-        'unexplored_destinations',
-        'message_box_upper_inspiration',
-        'message_box_lower_inspiration',
-        'trending_experience',
-        'best_offer_and_deals',
-        'video_box'
-      ];
-      $button_name = $this->input->post();
-      $button_name = array_values($button_name);
-      if(in_array($button_name[0], $button_array)){
-        $button_clicked = $button_name[0];
-      }else{
-        $button_clicked = '';
-      }
-      $this->load->view("partner/flight-app-image", compact('button_clicked'));
-    }
-    function postAppImage(){
-      $inputs = $this->input->post();
-      $data = [
-        'type_name' => $inputs['type'],
-        'image_url' => $inputs['image_url'],
-        'title' => $inputs['title'],
-        'sub_title' => $inputs['subtitle'],
-        'destination_link' => $inputs['destination_link'],
-        'button_name' => $inputs['button_name'],
-        'button_link' => $inputs['button_link'],
-      ];
-      $this->db->insert('app_images',$data);
-      redirect('app-image-table');
-    }
-    function appImageTable(){
-      $query = $this->db->get('app_images');
-      $query = $query->result();
-      $this->load->view("partner/app_image_table", compact('query'));
-    }
-    function editAppImageTable(){
-      $inputs = $this->input->get();
-      $id = $inputs['act_id'];
-      $query = $this->db->where('id', $id);
-      $query = $this->db->get('app_images')->row();
-      $button_clicked = $query->type_name;
-      $this->load->view("partner/app_image_edit", compact('query', 'button_clicked'));
-    }
-    function updateAppImageTable(){
-      $inputs = $this->input->post();
-      $this->db->where('id',$inputs['act_id'])
-               ->update('app_images',
-                  array(
-                        "image_url" => $inputs['image_url'],
-                        "title" => $inputs['title'],
-                        "sub_title" => $inputs['subtitle'],
-                        "destination_link" => $inputs['destination_link'],
-                        "button_name" => $inputs['button_name'],
-                        "button_link" => $inputs['button_link'],
-                        )
-                );
-      redirect('app-image-table');
-    }
-
-
 }
+

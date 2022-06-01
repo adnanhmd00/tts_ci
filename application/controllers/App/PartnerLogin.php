@@ -23,9 +23,9 @@ class PartnerLogin extends CI_Controller
     public function login()
     {
         if (!$this->session->userdata('partner')) {
-            $this->load->view('partner/login');
+            $this->load->view('partner/app/login');
         } else {
-            redirect('app');
+            redirect('partner');
         }
     }
 
@@ -54,12 +54,12 @@ class PartnerLogin extends CI_Controller
         if ($data->error_code == 0) {
             $manager = $this->admin->getRawRow("Select * from partner where mobile='$phone' and type='partner'");
             $this->session->set_userdata('partner', $manager);
-            redirect('app');
+            redirect('partner');
             // if($manager->type=='partner'){redirect('partner');}
             // else if($manager->type=='seller'){redirect('seller');}
         } else {
             $this->failed($data->response_string);
-            redirect('app/login');
+            redirect('partner/login');
         }
 
     }

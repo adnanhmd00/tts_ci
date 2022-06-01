@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-class App extends CI_Controller
+class AppPartner extends CI_Controller
 {
     public $created_at;
     public $apikey;
@@ -16,7 +16,7 @@ class App extends CI_Controller
         date_default_timezone_set("Asia/Kolkata");
         $this->created_at = Date('Y-m-d H:i:s', time());
         if (!$this->session->userdata('partner')) {
-            redirect('partner/login');
+            redirect('app/login');
         }else{
             $this->userinfo=$this->session->userdata('partner');
         }
@@ -35,7 +35,7 @@ class App extends CI_Controller
     public function logout()
     {
         $this->session->unset_userdata('partner');
-        redirect('partner/login');
+        redirect('app/login');
     }
 
     public function postDeal()
@@ -247,13 +247,13 @@ class App extends CI_Controller
             $this->success("Updated");
 
         }
-        redirect('partner/edit/'.$id);
+        redirect('app/edit/'.$id);
     }
 
     function deletedeal($id){
         $data['deleted_at']=$this->created_at;
         $this->admin->edit_data('id',$id,$data,'tbl_deal_partner');
-        redirect('partner/mydeals');
+        redirect('app/mydeals');
     }
     public function postDealForm()
     {
@@ -406,7 +406,7 @@ class App extends CI_Controller
             }
 
         }
-        redirect('partner/adddeal');
+        redirect('app/adddeal');
     }
 
     public function success($message)
@@ -442,7 +442,7 @@ class App extends CI_Controller
             $this->session->set_flashdata('item', 'Error');
 
         }
-        redirect('partner/deal/' . $id);
+        redirect('app/deal/' . $id);
     }
     public function editDealImage($id)
     {
@@ -470,12 +470,12 @@ class App extends CI_Controller
     {
         $data['deleted_at'] = $this->created_at;
         $this->admin->edit_data('id', $rowid, $data,'tbl_deal_image');
-        redirect('partner/edit/deal/image/' . $id);
+        redirect('app/edit/deal/image/' . $id);
     }
     function deleteDealDate($rowid, $id){
         $data['deleted_at'] = $this->created_at;
         $this->admin->edit_data('id', $rowid, $data,'tbl_deal_dates');
-        redirect('partner/edit/deal/date/' . $id);
+        redirect('app/edit/deal/date/' . $id);
     }
     function addDateToInclusion($id){
         $this->admin->delete_data('deal_id',$id,'tbl_deal_inclusion');
@@ -489,7 +489,7 @@ class App extends CI_Controller
             }
             $this->admin->insert_batch('tbl_deal_inclusion', $idata);
         }
-        redirect('partner/edit/deal/inclusion/' . $id);
+        redirect('app/edit/deal/inclusion/' . $id);
 
     }
     function addDateToDeals($id){
@@ -505,7 +505,7 @@ class App extends CI_Controller
             }
             $this->admin->insert_batch('tbl_deal_dates', $dotdata);
         }
-        redirect('partner/edit/deal/date/' . $id);
+        redirect('app/edit/deal/date/' . $id);
 
     }
     public function addImagesToDeal($id)
@@ -545,7 +545,7 @@ class App extends CI_Controller
         } else {
             $this->failed("Error While Uploading Image");
         }
-        redirect('partner/edit/deal/image/' . $id);
+        redirect('app/edit/deal/image/' . $id);
     }
 
     public function failed($message)
@@ -621,7 +621,7 @@ class App extends CI_Controller
             $this->success('Failed');
         }
 
-        redirect('partner/advertisement-plan');
+        redirect('app/advertisement-plan');
     }
     function submitBlog(){
         $userinfo = $this->userinfo;
@@ -671,7 +671,7 @@ class App extends CI_Controller
                 $this->failed("Error While Uploading Image");
             }
         }
-        redirect('partner/addBlogs');
+        redirect('app/addBlogs');
     }
 
     function blogs(){
@@ -785,7 +785,7 @@ class App extends CI_Controller
         }
 
 
-        redirect('partner-manage-leads');
+        redirect('app/partner-manage-leads');
     }
     function contact($for){
         $userinfo = $this->userinfo;
@@ -802,7 +802,7 @@ class App extends CI_Controller
         if ($this->form_validation->run() == false) {
             $this->failed(validation_errors());
             if($type=="LEAD"){
-                redirect('partner-manage-leads');
+                redirect('app/partner-manage-leads');
             }
         } else {
             if($type=="LEAD"){
@@ -851,7 +851,7 @@ class App extends CI_Controller
                 $this->failed("Failure");
             }
         }
-        redirect('partner-contact/'.$for);
+        redirect('app/partner-contact/'.$for);
     }
 
     function sendEmail($to,$emessage,$for,$name,$phone,$email){
@@ -1068,13 +1068,13 @@ class App extends CI_Controller
                 $wdata['benificiary_bank_name']=$this->input->post('bankname');
 
                 if($this->admin->insert_data('tbl_wallet_transaction_details',$wdata)){
-                    redirect('wallet-transactions/accounts');
+                    redirect('app/wallet-transactions/accounts');
                 }else{
-                    redirect('send-money-to-bank/remit');
+                    redirect('app/send-money-to-bank/remit');
                 }
 
             }else{
-                redirect('send-money-to-bank/remit');
+                redirect('app/send-money-to-bank/remit');
             }
         }
 
@@ -1116,14 +1116,14 @@ class App extends CI_Controller
                 $wdata['benificiary_bank_name']=$this->input->post('bankname');
 
                 if($this->admin->insert_data('tbl_wallet_transaction_details',$wdata)){
-                    redirect('wallet-transactions/accounts');
+                    redirect('app/wallet-transactions/accounts');
                 }else{
-                    redirect('send-money-to-bank/own');
+                    redirect('app/send-money-to-bank/own');
 
                 }
 
             }else{
-                redirect('send-money-to-bank/own');
+                redirect('app/send-money-to-bank/own');
             }
         }
 
@@ -1154,9 +1154,9 @@ class App extends CI_Controller
                 $ndata['payment_link']=$this->encrypt($latestID);
                 $this->admin->edit_data('id',$latestID,$ndata,'tbl_payment_request');
 
-                redirect('send-money-to-bank/request');
+                redirect('app/send-money-to-bank/request');
             }else{
-                redirect('send-money-to-bank/request');
+                redirect('app/send-money-to-bank/request');
             }
 
 
@@ -1315,7 +1315,7 @@ class App extends CI_Controller
                 $this->failed("Error While Uploading Image");
             }
 
-        redirect('client-settlement');
+        redirect('app/client-settlement');
     }
     function cancellation_form_submit(){
         $userinfo = $this->userinfo;
@@ -1370,7 +1370,7 @@ class App extends CI_Controller
                 $this->failed("Error While Uploading Image");
             }
 
-        redirect('partner-booking-cancellation');
+        redirect('app/partner-booking-cancellation');
     }
     function generatePdf($id){
         $this->load->library('Pdf');
@@ -1405,7 +1405,7 @@ class App extends CI_Controller
         $data['dealer_id']=$userinfo->id;
         $data['dealer_type']=$userinfo->type;
         $this->admin->insert_data('tbl_request_agent_verification',$data);
-        redirect('partner-agent-request-verification');
+        redirect('app/partner-agent-request-verification');
     }
 
     function currency_tracker(){
@@ -1487,14 +1487,14 @@ class App extends CI_Controller
         $data['new_price']=$this->input->post('new_price');
         $data['old_price']=$this->input->post('old_price');
         $this->admin->edit_data('id',$id,$data,'tbl_deal_partner');
-        redirect('partner-terminal');
+        redirect('app/partner-terminal');
     }
 
     function delete_adv_plan(){
         $userinfo = $this->userinfo;
         $userid=$userinfo->id;
         $this->admin->getRawUpdate("Update tbl_adv_with_us set deleted_at='$this->created_at' where user_id='$userid'");
-        redirect('partner/advertisement-plan');
+        redirect('app/app/advertisement-plan');
     }
 
     function view_hastrek(){
@@ -1777,7 +1777,7 @@ class App extends CI_Controller
         'button_link' => $inputs['button_link'],
       ];
       $this->db->insert('app_images',$data);
-      redirect('app-image-table');
+      redirect('app/app-image-table');
     }
     function appImageTable(){
       $query = $this->db->get('app_images');
@@ -1805,7 +1805,7 @@ class App extends CI_Controller
                         "button_link" => $inputs['button_link'],
                         )
                 );
-      redirect('app-image-table');
+      redirect('app/app-image-table');
     }
 
 
