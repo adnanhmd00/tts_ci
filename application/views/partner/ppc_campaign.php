@@ -60,7 +60,7 @@
         <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
             <div class="kt-header-mobile__logo">
                 <a href="http://partner.thetravelsquare.in/">
-                <img alt="Logo" src="./help_files/logo-light.png">
+                <img alt="Logo" src="http://partner.thetravelsquare.in/uploads/b2b/the-travel-square-logo.png" width="30" height="30">
                 </a>
             </div>
             <div class="kt-header-mobile__toolbar">
@@ -82,7 +82,7 @@
                     <div class="kt-content  kt-content--fit-top  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
                         <!-- begin:: Content -->
                         <!-- begin:: Hero -->
-                        <div class="kt-sc" style="height:400px;background-image: url(<?= base_url('resource/admin/img/black-wallpaper.png');?>)"  height="320" width="900" >
+                        <div class="kt-sc" style="height:400px;background-image: url(<?= base_url('uploads/b2b/black-banner.png');?>)"  height="320" width="900" >
                             <div class="kt-container ">
                                 <div class="kt-sc__top">
                                     <h3 class="kt-sc__title"><br>
@@ -167,7 +167,7 @@
                                                 </div>
                                                 <div class="kt-callout__action">
                                                     <!-- <a href="<?= base_url('partner-contact/business-request');?>" data-toggle="modal" data-target="#kt_chat_modal" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-success">Submit Request</a> -->
-                                                    <a href="<?= base_url('partner-contact/business-request');?>"  class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-primary">Submit Request</a>
+                                                    <a href="<?= base_url('partner-contact/business-request');?>"  class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-dark">Submit Request</a>
                                                 </div>
                                             </div>
                                         </div>
