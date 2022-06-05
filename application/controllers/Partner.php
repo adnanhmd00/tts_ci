@@ -22,6 +22,11 @@ class Partner extends CI_Controller
         }
     }
 
+    public function profile(){
+        $userinfo = $this->userinfo;
+        $this->load->view('partner/profile', compact('userinfo'));
+    }
+    
     public function index()
     {
         $userinfo = $this->userinfo;

@@ -244,7 +244,7 @@
             <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
                 <div class="kt-header__topbar-user">
                     <span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
-                    <span class="kt-header__topbar-username kt-hidden-mobile">Mr. Partner</span>
+                    <span class="kt-header__topbar-username kt-hidden-mobile"><?php echo $userinfo->name; ?></span>
                     <img class="kt-hidden" alt="Pic" src="http://partner.thetravelsquare.in/uploads/b2b/black-banner.png">
                     <span class="kt-badge kt-badge--username kt-badge--unified-primary kt-badge--lg kt-badge--rounded kt-badge--bold">P</span>
                 </div>
@@ -256,11 +256,11 @@
                         <span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-dark">P</span>
                     </div>
                     <div class="kt-user-card__name">
-                        GOODVIBES TRAVEL VENTURE PVT LTD.
+                        <?php echo $userinfo->name ?>
                     </div>
                 </div>
                 <div class="kt-notification">
-                    <a href="http://partner.thetravelsquare.in/profile" class="kt-notification__item">
+                    <a href="/partner/profile" class="kt-notification__item">
                         <div class="kt-notification__item-icon">
                             <i class="flaticon2-calendar-3 kt-font-dark"></i>
                         </div>
@@ -299,7 +299,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="http://partner.thetravelsquare.in/Partner/view_bookings" class="kt-notification__item">
+                    <a href="/Partner/view_bookings" class="kt-notification__item">
                         <div class="kt-notification__item-icon">
                             <i class="flaticon2-hourglass kt-font-dark"></i>
                         </div>
@@ -313,8 +313,8 @@
                         </div>
                     </a>
                     <div class="kt-notification__custom kt-space-between">
-                        <a href="#" target="_blank" class="btn btn-label btn-label-dark btn-sm btn-bold">LOG OUT</a>
-                        <a href="#" target="_blank" class="btn btn-light-dark btn-sm btn-bold">Premium Seller</a>
+                        <a href="/logout" target="_blank" class="btn btn-label btn-label-dark btn-sm btn-bold">LOG OUT</a>
+                        <!-- <a href="#" target="_blank" class="btn btn-light-dark btn-sm btn-bold">Premium Seller</a> -->
                     </div>
                 </div>
             </div>
