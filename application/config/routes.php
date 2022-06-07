@@ -49,14 +49,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'User';
+$route['default_controller'] = 'Partner/index';
 
 $route['partner'] = 'Partner/index';
 $route['partner/adddeal'] = 'Partner/postDeal';
 $route['partner/deals'] = 'Partner/allDeals';
 $route['partner/mydeals'] = 'Partner/myDeals';
 $route['partner/login'] = 'PartnerLogin/login';
+$route['logout'] = 'Partner/logout';
+$route['partner/register'] = 'PartnerLogin/register';
+$route['thank-you'] = 'PartnerLogin/thankYou';
 $route['partnerlogin'] = 'PartnerLogin/loginForm';
+$route['partnerregister'] = 'PartnerLogin/registerForm';
 $route['all-bookings/(:num)'] = 'PartnerLogin/allBookings/$1'; //Adnan (For all bookings of a user by id)
 $route['partner/deal/(:num)'] = 'Partner/dealDetail/$1';
 $route['partner/edit/(:num)'] = 'Partner/editDeal/$1';

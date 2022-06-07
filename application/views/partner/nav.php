@@ -313,7 +313,7 @@
                         </div>
                     </a>
                     <div class="kt-notification__custom kt-space-between">
-                        <a href="/logout" target="_blank" class="btn btn-label btn-label-dark btn-sm btn-bold">LOG OUT</a>
+                        <a href="/logout" class="btn btn-label btn-label-dark btn-sm btn-bold">LOG OUT</a>
                         <!-- <a href="#" target="_blank" class="btn btn-light-dark btn-sm btn-bold">Premium Seller</a> -->
                     </div>
                 </div>

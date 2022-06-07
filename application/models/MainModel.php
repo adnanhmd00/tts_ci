@@ -230,4 +230,10 @@ class MainModel extends CI_Model
 
     }
 
+    public function record_exists($conditions)
+    {
+        $t = $this->db->where($conditions)->count_all_results('partner');
+        return $t;
+    }
+
 }

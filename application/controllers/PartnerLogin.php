@@ -20,6 +20,7 @@ class PartnerLogin extends CI_Controller
         $data = $this->db->get("bookings");
         echo json_encode($data->result());
     }
+
     public function login()
     {
         if (!$this->session->userdata('partner')) {
@@ -62,5 +63,35 @@ class PartnerLogin extends CI_Controller
             redirect('partner/login');
         }
 
+    }
+
+    public function register()
+    {
+        $this->load->view('partner/register');
+    }
+
+    public function registerForm()
+    {
+        $data['name'] = $this->input->post('name');
+        $data['email'] = $this->input->post('email');
+        $data['noe'] = $this->input->post('noe');
+        $data['pass'] = md5($this->input->post('pass'));
+        $data['mobile'] = $this->input->post('mobile');
+        $record_exists = $this->admin->record_exists( array('mobile'=>$data['mobile']));
+        if($record_exists){
+            redirect('partner/login');
+        }else{
+            $insert = $this->db->insert('partner', $data);
+            if($insert){
+                redirect('thank-you');
+            }else{
+                echo 'bye';
+                redirect('partner/register');
+            }
+        }
+    }
+
+    public function thankYou(){
+        $this->load->view('partner/thank-you');
     }
 }

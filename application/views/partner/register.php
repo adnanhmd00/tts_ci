@@ -52,8 +52,8 @@
 					class="kt-grid__item kt-grid__item--fluid  kt-grid__item--order-tablet-and-mobile-1  kt-login__wrapper">
 					<!--begin::Head-->
 					<div class="kt-login__head">
-						<span class="kt-login__signup-label">Don't have an Account?</span>&nbsp;&nbsp;
-						<a href="/partner/register" class="kt-link kt-login__signup-link">Sign Up Now</a>
+						<span class="kt-login__signup-label">Already a Partner?</span>&nbsp;&nbsp;
+						<a href="/partner/login" class="kt-link kt-login__signup-link">Login Now</a>
 					</div>
 					<!--end::Head-->
 
@@ -63,59 +63,51 @@
 						<!--begin::Signin-->
 						<div class="kt-login__form">
 							<div class="kt-login__title">
-								<h4>PARTNER LOGIN</h4>
+								<h4>PARTNER REGISTRATION AND SIGNUP</h4>
 								<h2><?php echo $this->session->flashdata('item'); ?></h2> 
 							</div>
 
-							<!--begin::Form-->
-
-							<?php echo form_open('partnerlogin', 'class="kt-form" id="kt_login_form"');?>
-
-							<!-- <form class="kt-form" action="<?= base_url('partner/login');?>" novalidate="novalidate" id="kt_login_form"> -->
+<?php echo form_open('partnerregister', 'class="kt-form" id="kt_login_form"');?>
 								<div class="form-group">
-									<input class="form-control" type="text" placeholder="Mobile" name="phone"
+									<input class="form-control" type="text" placeholder="Company Name" name="noe"
 										autocomplete="off">
 								</div>
 								<div class="form-group">
-									<input class="form-control" type="password" placeholder="Password" name="password"
+									<input class="form-control" type="text" placeholder="Company Address" name="address"
 										autocomplete="off">
 								</div>
-								<!--begin::Action-->
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Owner / Manager Name" name="name"
+										autocomplete="off">
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Company Mail ID" name="email"
+										autocomplete="off">
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="password" placeholder="New Password For TTS B2B Portal" name="pass"
+										autocomplete="off">
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Mobile" name="mobile"
+										autocomplete="off">
+								</div>
+								<!-- <div class="form-group">
+									<input class="form-control" type="password" placeholder="OTP" name="password"
+										autocomplete="off">
+								</div> -->
 								<div class="kt-login__actions">
-									<a href="#" class="kt-link kt-login__link-forgot">
-										Forgot Password ?
-									</a>
-									<button id="kt_login_signin_submit"
-										class="btn btn-dark btn-elevate kt-login__btn-primary">Get Onboard</button>
+									<!-- <div class="kt-login__options">
+									<a href="http://sellerconsle.thetravelsquare.in" class="btn btn-dark kt-btn">Request OTP</a>
+									</div> -->
+							
+									<button class="btn btn-dark btn-elevate kt-login__btn-small" style="background-color:black">Register as Partner</button>
 								</div>
-								<!--end::Action-->
 							</form>
 							<!--end::Form-->
 
 							<!--begin::Divider-->
-							<div class="kt-login__divider">
-								<div class="kt-divider">
-									<span></span>
-									<span>OR</span>
-									<span></span>
-								</div>
-							</div>
-							<!--end::Divider-->
-
-							<!--begin::Options-->
-							<div class="kt-login__options">
-								<a href="http://sellerconsle.thetravelsquare.in"
-									class="btn btn-dark kt-btn">
-									
-									Seller Login
-								</a>
-
-								<a href="http://propertymanager.thetravelsquare.in/"
-									class="btn btn-dark kt-btn">
-									
-									Hotellier Login
-								</a>
-							</div>
+							
 							<!--end::Options-->
 						</div>
 						<!--end::Signin-->
