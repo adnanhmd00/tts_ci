@@ -1576,8 +1576,9 @@ class Partner extends CI_Controller
     }
 
     function searchFlight(){
+        $userinfo=$this->userinfo;
         $datas = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
-        $this->load->view("partner/search-flights", compact('datas'));
+        $this->load->view("partner/search-flights", compact('datas', 'userinfo'));
     }
 
     public function searchFlightResults()
