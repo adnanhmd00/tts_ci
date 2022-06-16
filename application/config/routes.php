@@ -407,3 +407,4 @@ $route['app/seller-agent-request-verification-form']='App/Seller/requestAgentVer
 
 
 $route['partner-login'] = 'App/RestApi/login';
+$route['partner-register'] = 'App/RestApi/register';

@@ -64,4 +64,37 @@ class RestApi extends CI_Controller
         // }
     }
 
+    public function register()
+    {
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        $this->form_validation->set_rules('pass', 'Password', 'required');
+        $this->form_validation->set_rules('mobile', 'Mobile', 'required|max_length[10]');
+        $this->form_validation->set_rules('noe', 'Company', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+
+        if ($this->form_validation->run() == false) {
+            $response['error_code'] = 1;
+            $response['response_string'] = validation_errors();
+        } else {
+            $data['name'] = $this->input->post('name');
+            $data['email'] = $this->input->post('email');
+            $data['noe'] = $this->input->post('noe');
+            $data['pass'] = md5($this->input->post('pass'));
+            $data['mobile'] = $this->input->post('mobile');
+            $record_exists = $this->admin->record_exists( array('mobile'=>$data['mobile']));
+            if($record_exists){
+                $response['response_string'] = 'User Already Exists';
+            }else{
+                $insert = $this->db->insert('partner', $data);
+                if($insert){
+                    $response['error_code'] = 0;
+                    $response['response_string'] = 'OK';
+                    $response['data'] = $data;
+                }
+            }
+        }
+        header('Content-Type: application/json');
+        echo json_encode($response);
+    }
+
 }
