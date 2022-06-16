@@ -16,20 +16,20 @@ class RestApi extends CI_Controller
         $this->created_at = Date('Y-m-d H:i:s', time());
         $this->apikey="be905020dbc0b98405e688b05fcebcc5";
 
-        if (empty($this->input->post('apikey')) || empty($this->input->post('requestType'))) {
-            $response['error_code'] = '1';
-            $response['response_string'] = 'Requirement Failed';
-            header('Content-Type: application/json');
-            echo json_encode($response);
-            exit;
-        }
-        if (md5($this->input->post('apikey')) != $this->apikey) {
-            $response['error_code'] = '1';
-            $response['response_string'] = 'Key Mismatch';
-            header('Content-Type: application/json');
-            echo json_encode($response);
-            exit;
-        }
+        // if (empty($this->input->post('apikey')) || empty($this->input->post('requestType'))) {
+            // $response['error_code'] = '1';
+            // $response['response_string'] = 'Requirement Failed';
+            // header('Content-Type: application/json');
+            // echo json_encode($response);
+            // exit;
+        // }
+        // if (md5($this->input->post('apikey')) != $this->apikey) {
+        //     $response['error_code'] = '1';
+        //     $response['response_string'] = 'Key Mismatch';
+        //     header('Content-Type: application/json');
+        //     echo json_encode($response);
+        //     exit;
+        // }
 
     }
 
@@ -43,9 +43,10 @@ class RestApi extends CI_Controller
             $response['response_string'] = validation_errors();
         } else {
             $phone = $this->input->post('phone');
-            $type = $this->input->post('type');
+            // $type = $this->input->post('type');
             $pass = md5($this->input->post('password'));
-            $data = $this->admin->getRawRow("Select * from partner where mobile='$phone' AND pass='$pass' and type='$type' and status='approved' AND deleted_at IS NULL");
+            // $data = $this->admin->getRawRow("Select * from partner where mobile='$phone' AND pass='$pass' and type='$type' and status='approved' AND deleted_at IS NULL");
+            $data = $this->admin->getRawRow("Select * from partner where mobile='$phone' AND pass='$pass' AND deleted_at IS NULL");
             if ($data == false) {
                 $response['error_code'] = 1;
                 $response['response_string'] = 'Credentials Mismatched';
@@ -55,12 +56,12 @@ class RestApi extends CI_Controller
                 $response['data'] = $data;
             }
         }
-        if ($this->input->post('requestType') == 1) {
+        // if ($this->input->post('requestType') == 1) {
             header('Content-Type: application/json');
             echo json_encode($response);
-        } else if ($this->input->post('requestType') == 2) {
+        // } else if ($this->input->post('requestType') == 2) {
 
-        }
+        // }
     }
 
 }

@@ -404,3 +404,6 @@ $route['app/seller-hastrek/post'] = 'AppHasTrek/post';
 $route['app/seller-generate-invoice/(:any)'] = 'AppSeller/generatePdf/$1';
 $route['app/seller-agent-request-verification']='App/Seller/requestAgentVerification';
 $route['app/seller-agent-request-verification-form']='App/Seller/requestAgentVerificationForm';
+
+
+$route['partner-login'] = 'App/RestApi/login';
