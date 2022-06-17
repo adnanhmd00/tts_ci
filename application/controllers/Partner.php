@@ -1747,10 +1747,13 @@ class Partner extends CI_Controller
     }
 
     function appImageOptions(){
-      $this->load->view("partner/app-image-options");
+        $userinfo = $this->userinfo;
+        $this->load->view("partner/app-image-options", compact('userinfo'));
     }
 
     function flightAppImage(){
+
+      $userinfo = $this->userinfo;
       $button_array = [
         'home_screen_background',
         'vacations_by_theme',
@@ -1769,7 +1772,7 @@ class Partner extends CI_Controller
       }else{
         $button_clicked = '';
       }
-      $this->load->view("partner/flight-app-image", compact('button_clicked'));
+      $this->load->view("partner/flight-app-image", compact('button_clicked', 'userinfo'));
     }
     function postAppImage(){
       $inputs = $this->input->post();
