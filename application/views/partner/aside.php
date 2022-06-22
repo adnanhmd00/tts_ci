@@ -46,7 +46,7 @@
                                     </a>
                                 </li>
                                 <li class="kt-menu__section ">
-                                    <h4 class="kt-menu__section-text">Partner Tools</h4>
+                                    <h4 class="kt-menu__section-text">ORGANISER & TOOLKIT</h4>
                                     <i class="kt-menu__section-icon flaticon-more-v2"></i>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
@@ -101,7 +101,7 @@
                                     </div>
                                 </li>
                                 <li class="kt-menu__section ">
-                                    <h4 class="kt-menu__section-text">Seller Manager</h4>
+                                    <h4 class="kt-menu__section-text">CRM CONSOLE</h4>
                                     <i class="kt-menu__section-icon flaticon-more-v2"></i>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
@@ -151,11 +151,25 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">Terminal - Inventory & Pricing</span>
+                                        <span class="kt-menu__link-text">Terminal</span>
+                                    </a>
+                                </li>
+								<li class="kt-menu__item " aria-haspopup="true">
+                                    <a href="<?= base_url('Partner/web_check_in');?>" class="kt-menu__link ">
+                                        <span class="kt-menu__link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <rect x="0" y="0" width="24" height="24"></rect>
+                                                    <path d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z" fill="#000000"></path>
+                                                    <rect fill="#000000" opacity="0.3" transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519) " x="16.3255682" y="2.94551858" width="3" height="18" rx="1"></rect>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <span class="kt-menu__link-text">Terminal</span>
                                     </a>
                                 </li>
                                 <li class="kt-menu__section ">
-                                    <h4 class="kt-menu__section-text">SELLER PAYMENTS</h4>
+                                    <h4 class="kt-menu__section-text">ACCOUNTS & PAYMENTS</h4>
                                     <i class="kt-menu__section-icon flaticon-more-v2"></i>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
@@ -247,7 +261,7 @@
                                     </a>
                                 </li>
                                 <li class="kt-menu__section ">
-                                    <h4 class="kt-menu__section-text">More of Us</h4>
+                                    <h4 class="kt-menu__section-text">MORE OF US</h4>
                                     <i class="kt-menu__section-icon flaticon-more-v2"></i>
                                 </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
@@ -263,6 +277,7 @@
                                         </span>
                                         <span class="kt-menu__link-text">Purchase Leads</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
+								</li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                     <a href="<?= base_url('partner-ppc');?>" class="kt-menu__link kt-menu__toggle">
                                         <span class="kt-menu__link-icon">
@@ -314,6 +329,10 @@
                                         <span class="kt-menu__link-text">Learn How to Sell</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
                                 </li>
+								<li class="kt-menu__section ">
+                                    <h4 class="kt-menu__section-text">MORE OF US</h4>
+                                    <i class="kt-menu__section-icon flaticon-more-v2"></i>
+                                </li>
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                     <a href="<?= base_url('partner-help');?>" class="kt-menu__link kt-menu__toggle">
                                         <span class="kt-menu__link-icon">
@@ -326,7 +345,22 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <span class="kt-menu__link-text">Seller Help</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
+                                        <span class="kt-menu__link-text">Partner Help</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
+                                    </a>
+                                </li>
+								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                                    <a href="<?= base_url('Partner/support_center');?>" class="kt-menu__link kt-menu__toggle">
+                                        <span class="kt-menu__link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <rect x="0" y="0" width="24" height="24"></rect>
+                                                    <rect fill="#000000" opacity="0.3" x="2" y="3" width="20" height="18" rx="2"></rect>
+                                                    <path d="M9.9486833,13.3162278 C9.81256925,13.7245699 9.43043041,14 9,14 L5,14 C4.44771525,14 4,13.5522847 4,13 C4,12.4477153 4.44771525,12 5,12 L8.27924078,12 L10.0513167,6.68377223 C10.367686,5.73466443 11.7274983,5.78688777 11.9701425,6.75746437 L13.8145063,14.1349195 L14.6055728,12.5527864 C14.7749648,12.2140024 15.1212279,12 15.5,12 L19,12 C19.5522847,12 20,12.4477153 20,13 C20,13.5522847 19.5522847,14 19,14 L16.118034,14 L14.3944272,17.4472136 C13.9792313,18.2776054 12.7550291,18.143222 12.5298575,17.2425356 L10.8627389,10.5740611 L9.9486833,13.3162278 Z" fill="#000000" fill-rule="nonzero"></path>
+                                                    <circle fill="#000000" opacity="0.3" cx="19" cy="6" r="1"></circle>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <span class="kt-menu__link-text">24/7 Support Center</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
                                 </li>
                             </ul>

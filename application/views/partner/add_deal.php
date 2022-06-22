@@ -25,8 +25,6 @@
         <div class="kt-grid kt-grid--hor kt-grid--root">
             <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
                 <!-- begin:: Aside -->
-                <!-- Uncomment this to display the close button of the panel
-                    <button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
                     -->
                 <div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
                     <!-- begin:: Aside -->
@@ -69,6 +67,13 @@
                         <!-- end:: Content Head -->
                         <!-- begin:: Content -->
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+						
+						<div class="alert alert-light alert-elevate" role="alert">
+								<div class="alert-text">
+                                    Post the Travel Deal that Your Company is Expertised in, Advertise Your Travel Deals on The Travel Square B2B Business Platform for Other 
+									B2B Travel Agents to See and Book for Free. We are a Network of More than 30,000+ Travel Agents Suppliers, DMC and Travel Experts.
+                                </div>
+							</div>
                             <!--Begin::Dashboard 1-->
                             <!--Begin::Row-->
                             <div class="row">
@@ -77,7 +82,7 @@
                                         <div class="kt-portlet__head">
                                             <div class="kt-portlet__head-label">
                                                 <h3 class="kt-portlet__head-title">
-                                                    Post Your Deal Here
+                                                    Post Your Travel Deal Here
                                                 </h3>
                                             </div>
                                         </div>
@@ -91,7 +96,7 @@
                                                 <div class="kt-section kt-section--first">
                                                     <div class="form-group">
                                                         <select class="form-control" name="deal_type_id" id="deal_type_id" required>
-                                                        <option value="">Category</option>
+                                                        <option value="">Select Travel Category</option>
                                                             
                                                                 <?php foreach($category_data as $row){ ?>
                                                                     <option value="<?= $row->id;?>"><?= $row->name;?></option>
@@ -128,7 +133,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control" placeholder="Title" name="title" required>
+                                                        <input type="text" class="form-control" placeholder="Title of the Deal" name="title" required>
                                                     </div>
 
                                                     <div class="form-group">
@@ -165,14 +170,14 @@
                                                         </select>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Details</label>
+                                                        <label>Details About the Deal / Tour Itinerary</label>
                                                         <!-- <textarea class="form-control" name="details" placeholder="Details"></textarea> -->
                                                         <div class="tinymce-wrap">
                                                             <textarea class="tinymce" name="details" placeholder="Details"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Cancellation Policy</label>
+                                                        <label>Cancellation / Refund Policy</label>
                                                         <div class="tinymce-wrap">
                                                             <textarea class="tinymce" name="cancelation_policy" placeholder="Cancelation Policy"></textarea>
                                                         </div>
@@ -188,7 +193,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control" placeholder="Destination" required name="destination">
+                                                        <input type="text" class="form-control" placeholder="Destination Cities Included" required name="destination">
                                                     </div>
                                                     <div class="form-group">
                                                         <input type="text" class="form-control" id="kt_datepicker_3" placeholder="Valid Untill" required name="valid_untill">
@@ -197,7 +202,7 @@
                                                         <input type="text" class="form-control" placeholder="Hotel Name, Room Category, Meal Plan" name="hotel_name_room_meal">
                                                     </div>
                                                     
-                                                    <div class="form-group" id="inclusions">
+                                                    <d	iv class="form-group" id="inclusions">
                                                         <label>Inclusions</label>
                                                         <div class="kt-checkbox-inline">
                                                             <label class="kt-checkbox">
@@ -265,7 +270,7 @@
         </div>
         <!-- end::Scrolltop -->
         <!-- begin::Sticky Toolbar -->
-        <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
+         <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
                 <a href="http://partner.thetravelsquare.in/partner-travpay" class=""><i class="flaticon2-drop"></i></a>
             </li>

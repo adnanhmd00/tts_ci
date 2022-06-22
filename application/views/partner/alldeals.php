@@ -58,12 +58,19 @@
                         <!-- end:: Subheader -->
                         <!-- begin:: Content -->
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+						
+						<div class="alert alert-light alert-elevate" role="alert">
+								<div class="alert-text">
+                                    Travel Deals Posted by Travel Agents and TTS Partners for <b>Free Advertisnment</b> of thier Leading Travel Packages and Deals.
+                                </div>
+							</div>
+						
                             <div class="card-body">
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 10; width: 100%; background-color:white;">
                                         <thead>
                                             <tr>
-												<th>Image</th>
-                                                <th>Deal Details</th>
+												<th>Deal Banner</th>
+                                                <th>Deal Details and Inclusions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -74,7 +81,7 @@
                                                     <a target="_blank" href="<?= base_url('partner/deal/'.$row['id']);?>" style="color:black;">
                                                         <h6 style="background-color:white;padding:15px;"><?= $row['title'];?></h6>
                                                         <hr>
-                                                        <p align="right"> Price : Rs. <?= $row['b2bprice'];?> </p>
+                                                        <p align="left"> Price : Rs. <?= $row['b2bprice'];?> </p>
                                                     </a>
                                                 </td>
                                             </tr>
@@ -101,20 +108,20 @@
         </div>
         <!-- end::Scrolltop -->
         <!-- begin::Sticky Toolbar -->
-        <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip"  title="Check out more demos" data-placement="right">
-                <a href="#" class=""><i class="flaticon2-drop"></i></a>
+         <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
+                <a href="http://partner.thetravelsquare.in/partner-travpay" class=""><i class="flaticon2-drop"></i></a>
             </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="Layout Builder" data-placement="left">
-                <a href="../../../builder.html" ><i class="flaticon2-gear"></i></a>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
+                <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>
             </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="Documentation" data-placement="left">
-                <a href="#" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Help">
+                <a href="mailto:partnercare@thetravelsquare.in" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
             </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="Chat Example" data-placement="left">
-                <a href="#" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Us">
+                <a href="https://wa.me/919999007037" target="_blank" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
             </li>
-        </ul>
+		</ul>
         <!-- end::Sticky Toolbar -->
         <!-- begin::Demo Panel -->
      

@@ -76,15 +76,15 @@
                                             <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 10; width: 90%; background-color:white;">
                                                 <thead>
                                                     <tr>
-														<th>DEAL ID</th>
+														<th>BOOKING ID</th>
 														<th>NAME</th>
 														<th>E-MAIL</th>
                                                         <th>PHONE</th>
                                                         <th>TRAVEL DATE</th>
-                                                        <th>RETURN Date</th>
+                                                        <th>RETURN DATE</th>
                                                         <th>PAX</th>
                                                         <th>TOTAL AMT.</th>
-                                                        <th>TRANSACTIONS</th>
+                                                        <th>BOOKING DETAILS</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>

@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,13 +7,14 @@
     
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,400,600,700,800,900&display=swap" rel="stylesheet">
     <!-- build:css -->
-    <link rel="stylesheet" href="<?= base_url('resource/extrapage/vendor/css/line-awesome.css');?>">
-    <link rel="stylesheet" href="<?= base_url('resource/extrapage/vendor/css/swiper.min.css');?>">
-    <link rel="stylesheet" href="<?= base_url('resource/extrapage/css/bootstrap-custom.css');?>">
-    <link rel="stylesheet" href="<?= base_url('resource/extrapage/css/theme.css');?>">
+    <link rel="stylesheet" href="http://partner.thetravelsquare.in/resource/extrapage/vendor/css/line-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="http://partner.thetravelsquare.in/resource/extrapage/vendor/css/swiper.min.css">
+    <link rel="stylesheet" href="http://partner.thetravelsquare.in/resource/extrapage/css/bootstrap-custom.css">
+    <link rel="stylesheet" href="http://partner.thetravelsquare.in/resource/extrapage/css/theme.css">
     <!-- endbuild -->
-    <link rel="stylesheet" href="<?= base_url('resource/extrapage/css/custom.css');?>">
-    <link rel="stylesheet" href="<?= base_url('resource/extrapage/css/rtl.css');?>">
+    <link rel="stylesheet" href="http://partner.thetravelsquare.in/resource/extrapage/css/custom.css">
+    <link rel="stylesheet" href="http://partner.thetravelsquare.in/resource/extrapage/css/rtl.css">
 </head>
 
 <body>
@@ -20,7 +22,8 @@
     <header class="nav-wrap bg-dark fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark px-lg-0">
-                <a class="navbar-brand mr-3 swap-link" href="<?= base_url('partner');?>"><span class="text-light font-weight-bold">Go To Dashboard</span></a>
+				
+                <a class="navbar-brand mr-3 swap-link" href="http://partner.thetravelsquare.in/partner"><img src="http://partner.thetravelsquare.in/uploads/b2b/the-travel-square-logo.png" height="40" width="40"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -30,16 +33,16 @@
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown megamenu">
-                            <a class="nav-link dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><i class="las la-user mr-2" style="font-size:22px;"></i></a>
+                            <a class="nav-link dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bars mr-2" style="font-size:25px;"></i></a>
                             <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <a class="dropdown-item font-weight-bold swap-link" href="#"><i class="las la-user bg-info-alt p-1 rounded text-info"></i> <?= $userinfo->name;?></a>
-                                <a class="dropdown-item swap-link" href="#"><i class="las la-sign-out-alt bg-warning-alt text-warning p-1 rounded"></i> <?= ucwords($userinfo->type).' '.ucwords($userinfo->seller_type);?></a>
+                                <a class="dropdown-item font-weight-bold swap-link" href="#"><i class="fa fa-user bg-dark-alt p-2 rounded text-dark"></i> Shaun Frost</a>
+                                <a class="dropdown-item swap-link" href="#"><i class="las la-sign-out-alt bg-warning-alt text-warning p-1 rounded"></i> Partner </a>
                                 <!-- <a class="dropdown-item swap-link" href="dash-downloads.html"><i class="las la-cloud-download-alt bg-success-alt text-success p-1 rounded"></i> Downloads</a> -->
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item swap-link" href="<?= base_url('partner');?>"><i class="dropdown-icon"></i> Dashboard</a>
+                                <a class="dropdown-item swap-link" href="http://partner.thetravelsquare.in/partner"><i class="dropdown-icon"></i> Dashboard</a>
                                
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item swap-link" href="<?= base_url('Partner/logout');?>"><i class="las la-sign-out-alt bg-danger-alt text-danger p-1 rounded"></i> Logout</a>
+                                <a class="dropdown-item swap-link" href="http://partner.thetravelsquare.in/Partner/logout"><i class="las la-sign-out-alt bg-danger-alt text-danger p-1 rounded"></i> Logout</a>
                             </div>
                         </li>
                         <li class="nav-item d-flex align-items-center">
@@ -59,7 +62,7 @@
                         <div class="col-md-4">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb mb-0">
-                                    <li class="breadcrumb-item mr-1 font-weight-bold"><a href="#">Deal Type( <?= $data['deal_data']->deal_type;?> )</a></li>
+                                    <li class="breadcrumb-item mr-1 font-weight-bold"><a href="#">Type( Package )</a></li>
                                     <!-- <li class="breadcrumb-item ml-1 font-weight-bold active" aria-current="page">
                                         Library
                                     </li> -->
@@ -78,91 +81,102 @@
                             <div class="product-info">
 
                                 <!-- Item Img Slider -->
-                                <?php if(!empty($data['deal_image'])) {?>
-                                <div class="swiper-container rounded border">
+                                                                <div class="swiper-container rounded border">
                                     <div class="swiper-wrapper">
-                                        <?php foreach($data['deal_image'] as $row){ ?>
-                                            <div class="swiper-slide">
-                                                <img src="<?= $row->image;?>" alt="">
+                                                                                    <div class="swiper-slide">
+                                                <img src="http://partner.thetravelsquare.in/uploads/f339a95b0b13050e2e8d34094cdc9144.jpg" alt="">
                                             </div>
-                                        <?php } ?>
-                                    </div>
+                                                                            </div>
                                     <!-- Add Pagination -->
                                     <div class="swiper-pagination"></div>
                                 </div>
-                                <?php }?>
-                            </div>
+                                                            </div>
                             
-                            <div class="demo-bar card rounded mt-3 card px-3"><br>
-                                <h4>Destination : <?= $data['deal_data']->destination;?></h4>
-                                <h5>Package Details</h5>
-                                <?= $data['deal_data']->details;?>
-                            </div> 
+                            <div class="demo-bar card rounded mt-3 card px-3">
+                                <h2>Destination : Dubai</h2>
+                                <h2>Details</h2>
+                                <p>Itinerary of the Tour</p>
+<p><br />~ Half day Dubai city tour</p>
+<p>~ Desert Safari with Dinner</p>
+<p>~ Dhow cruise with Dinner</p>
+<p>~ Burj Khalifa 124th Floor</p>
+<p>~ Abu Dhabi City tour with Ferrari world Bronze entry ticket</p>
+<p>&nbsp;</p>
+<p>Inclusions</p>
+<p>~ 4Nights Accommodation in 3 Star Hotel with Breakfast</p>
+<p>~ Return Airport Transfers</p>
+<p>~ Single entry Tourist Visa</p>
+<p>~ Insurance</p>                            </div> 
                             <div class="demo-bar card rounded mt-3 card px-3">
                                 <h2>Cancelation Policy</h2>
-                                <?= $data['deal_data']->cancelation_policy;?>
-                            </div>    
+                                <p>Non Refundable</p>                            </div>    
                         </div>
                         <!-- edn: Col 9 -->
                         <div class="col-md-5 col-lg-3">
                             <div class="sidebar sticky-lg-top sticky-md-top">
                                 <div class="sidebar-widget">
-                                    <h3 class="mb-4"><?= $data['deal_data']->title;?></h3>
+                                    <h3 class="mb-4">Dubai 4 Nights Tour</h3>
                                     <div class="row d-flex justify-content-between align-items-center">
                                        
                                     </div>
                                     <div class="row d-flex justify-content-between align-items-center">
                                         <div class="col-12">
-                                            <h6>Valid Until : <?= $data['deal_data']->valid_untill;?></h6>
+                                            <h6>Valid Until : 2022-12-20</h6>
                                            
                                         </div>
                                     </div>
-                                    <?php if(empty($data['quote_if_exist'])){?>
-                                        <a href="<?= base_url('Partner/requestQuote/'.$data['deal_data']->id);?>" class="btn btn-primary btn-block" type="button">
+                                                                            <a href="http://partner.thetravelsquare.in/Partner/requestQuote/21" class="btn btn-primary btn-block" type="button">
                                             Request Quote
                                         </a>
-                                    <?php } ?>
-                                    <?php if(!empty($data['quote_if_exist'])){?>
-                                        <a href="#" class="btn btn-primary btn-block" type="button">
-                                            Quote Already Requested
-                                        </a>
-                                    <?php } ?>
-                                </div>
+                                                                                                        </div>
 
                                 <div class="sidebar-widget">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <span class="sidebar-widget-title--sm"><?=  $data['deal_data']->noofdays;?> Days & <?=  $data['deal_data']->noofnights;?> Nights</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sidebar-widget">
-								
 								<span class="sidebar-widget-title--sm">Package Duration</span>
                                     <div class="row">
                                         <div class="col-12">
+                                            <span class="sidebar-widget-sm">5 Days & 4 Nights</span>
+                                        </div>
+                                    </div>
+                                </div>	
+                                <div class="sidebar-widget">
+                                    <div class="row">
+                                        <div class="col-12">
                                             
-                                            <?php if(!empty($data['deal_inclusion'])) {?>
-
-                                            <span class="sidebar-widget-sm">Inclusion</span>
+                                            
+                                            <span class="sidebar-widget-title--sm">Package Inclusion</span>
 
                                             <div class="tags">
-                                                <?php foreach($data['deal_inclusion'] as $row){ ?>
-
-                                                    <a href="#" class="badge badge-soft-dark text-dark mb-1"><?= $row->inclusion;?></a>
+                                                
+                                                    <a href="#" class="badge badge-soft-dark text-dark mb-1">Transfer</a>
                                                     
-                                                <?php }?>
-                                            </div>
+                                                
+                                                    <a href="#" class="badge badge-soft-success text-success mb-1">Visa</a>
+                                                    
+                                                
+                                                    <a href="#" class="badge badge-soft-success text-success mb-1">Hotels</a>
+                                                    
+                                                
+                                                    <a href="#" class="badge badge-soft-success text-success mb-1">Sightseeing</a>
+                                                    
+                                                                                            </div>
                                             <hr />
-                                            <?php }?>
-                                            <span class="sidebar-widget-title--sm">Available Dates</span>
+                                                                                        <span class="sidebar-widget-title--sm">Available Dates</span>
                                             <ul class="list-unstyled">
-                                                <?php foreach($data['deal_dates'] as $row){ ?>
-                                                <li>
-                                                    <i class="fa fa-check mr-2 text-dark"></i><?= $row->dates;?>
-                                                </li>
-                                                <?php }?>
-                                                <!-- <li>
+                                                                                                <li>
+                                                    <i class="fa fa-check mr-2 text-dark"></i>Jul 2022                                                </li>
+                                                                                                <li>
+                                                    <i class="las la-check mr-2 text-success"></i>Aug 2022                                                </li>
+                                                                                                <li>
+                                                    <i class="las la-check mr-2 text-success"></i>Sep 2022                                                </li>
+                                                                                                <li>
+                                                    <i class="las la-check mr-2 text-success"></i>Oct 2022                                                </li>
+                                                                                                <li>
+                                                    <i class="las la-check mr-2 text-success"></i>Nov 2022                                                </li>
+                                                                                                <li>
+                                                    <i class="las la-check mr-2 text-success"></i>Dec 2022                                                </li>
+                                                                                                <li>
+                                                    <i class="las la-check mr-2 text-success"></i>Jan 2023                                                </li>
+                                                                                                <!-- <li>
                                                     <i class="las la-check mr-2 text-success"></i>Bright & Modern Style
                                                 </li>
                                                 <li>
@@ -187,11 +201,11 @@
                 <div class="row pb-3">
                     <aside class="col-md-2">
                         <div class="footer-logo">
-                            <h4 class="text-white font-weight-bold">Theme<span class="text-muted">Shop</span></h4>
+                            <img src="http://partner.thetravelsquare.in/uploads/b2b/the-travel-square-logo.png" height="50" width="50">
                         </div>
                     </aside>
                     <aside class="col-md">
-                        <h6 class="title">Company</h6>
+                        <h6 class="title">The Travel Square</h6>
                         <ul class="list-unstyled">
                             <li> <a href="#">About us</a></li>
                             <li> <a href="#">Career</a></li>
@@ -241,12 +255,12 @@
                         <div class="col-5 col-md-4 affiliate d-flex align-items-center">
                             <div class="aff-btn">
                                 <a href="/affiliate" class="btn btn-primary btn-sm">
-                                    Affiliate
+                                    Join TTS Supplier
                                 </a>
                             </div>
                             <div>
                                 <p class="text-white d-none d-md-block m-0 w-75 small ml-3">
-                                    Earn 55% and more on all sales
+                                    Sell Your Travel Packages on TTS.
                                 </p>
                             </div>
                         </div>
@@ -274,14 +288,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <span class="pr-2">© 2019 Company name</span>
-                        <span class="pr-2"><a href="#">Privacy policy</a></span>
-                        <span class="pr-2"><a href="#">Terms of use</a></span>
+                        <span class="pr-2">© 2022 Business | The Travel Square</span>
                     </div>
                     <div class="col-md-6 text-md-right">
-                        <a href="#" class="mr-2"><img src="assets/img/payment/footer-visa.svg" width="42"></a>
-                        <a href="#" class="mr-2"><img src="assets/img/payment/footer-mastercard.svg" width="42"></a>
-                        <a href="#"><img src="assets/img/payment/footer-paypal.svg" width="42"></a>
+                        <a href="https://www.facebook.com/thetravelsquareb2b" rel="nofollow" target="_blank" class="mr-2"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/travelsquareb2b" rel="nofollow" target="_blank" class="mr-2"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/thetravelsquareofficial/" rel="nofollow" target="_blank" class="mr-2"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/thetravelsquareb2b/" rel="nofollow" target="_blank" class="mr-2"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/channel/UCqi_w8JlO-1VEmVUItvr8og" rel="nofollow" target="_blank" class="mr-2"><i class="fa fa-youtube"></i></a>
                     </div>
                 </div>
                 <!-- row.// -->
@@ -289,13 +303,13 @@
             <!-- //container -->
         </section>
     </footer> <!-- build:js -->
-    <script src="<?= base_url('resource/extrapage/vendor/js/jquery.js');?>"></script>
-    <script src="<?= base_url('resource/extrapage/vendor/js/popper.js');?>"></script>
-    <script src="<?= base_url('resource/extrapage/vendor/js/bootstrap.js');?>"></script>
-    <script src="<?= base_url('resource/extrapage/vendor/js/swiper.min.js');?>"></script>
-    <script src="<?= base_url('resource/extrapage/vendor/js/prism.min.js');?>"></script>
+    <script src="http://partner.thetravelsquare.in/resource/extrapage/vendor/js/jquery.js"></script>
+    <script src="http://partner.thetravelsquare.in/resource/extrapage/vendor/js/popper.js"></script>
+    <script src="http://partner.thetravelsquare.in/resource/extrapage/vendor/js/bootstrap.js"></script>
+    <script src="http://partner.thetravelsquare.in/resource/extrapage/vendor/js/swiper.min.js"></script>
+    <script src="http://partner.thetravelsquare.in/resource/extrapage/vendor/js/prism.min.js"></script>
 
-    <script src="<?= base_url('resource/extrapage/js/custom.js');?>"></script>
+    <script src="http://partner.thetravelsquare.in/resource/extrapage/js/custom.js"></script>
 
     <!-- endbuild -->
 
