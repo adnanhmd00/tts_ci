@@ -25,7 +25,7 @@
         <div class="kt-grid kt-grid--hor kt-grid--root">
             <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
                 <!-- begin:: Aside -->
-                    -->
+               
                 <div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
                     <!-- begin:: Aside -->
                     <?php include('aside.php');?>
@@ -38,9 +38,7 @@
                     <!-- begin:: Header -->
                     <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
                         <!-- begin:: Header Menu -->
-                        <!-- Uncomment this to display the close button of the panel
-                            <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
-                            -->
+                        
                         <?php include('nav.php');?>
                         <!-- end:: Header Menu -->
                         <!-- begin:: Header Topbar -->
@@ -61,7 +59,7 @@
                                         </span>
                                     </div>
                                 </div>
-                             
+                                
                             </div>
                         </div>
                         <!-- end:: Content Head -->
@@ -70,8 +68,8 @@
 						
 						<div class="alert alert-light alert-elevate" role="alert">
 								<div class="alert-text">
-                                    Post the Travel Deal that Your Company is Expertised in, Advertise Your Travel Deals on The Travel Square B2B Business Platform for Other 
-									B2B Travel Agents to See and Book for Free. We are a Network of More than 30,000+ Travel Agents Suppliers, DMC and Travel Experts.
+                                    Post the Travel Deal that Your Company is Expertised in, Advertise Your Travel Deals on The Travel Square B2B Business Platform for
+									Other B2B Travel Agents to See and Book for Free. We are a Network of More than 30,000+ Travel Agents Suppliers, DMC and Travel Experts.
                                 </div>
 							</div>
                             <!--Begin::Dashboard 1-->
@@ -202,7 +200,7 @@
                                                         <input type="text" class="form-control" placeholder="Hotel Name, Room Category, Meal Plan" name="hotel_name_room_meal">
                                                     </div>
                                                     
-                                                    <d	iv class="form-group" id="inclusions">
+                                                    <div class="form-group" id="inclusions">
                                                         <label>Inclusions</label>
                                                         <div class="kt-checkbox-inline">
                                                             <label class="kt-checkbox">
@@ -235,7 +233,7 @@
                                             </div>
                                             <div class="kt-portlet__foot">
                                                 <div class="kt-form__actions">
-                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                    <button type="submit" class="btn btn-dark">Submit</button>
                                                     <button type="reset" class="btn btn-secondary">Cancel</button>
                                                 </div>
                                             </div>
@@ -270,7 +268,7 @@
         </div>
         <!-- end::Scrolltop -->
         <!-- begin::Sticky Toolbar -->
-         <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
+        <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
                 <a href="http://partner.thetravelsquare.in/partner-travpay" class=""><i class="flaticon2-drop"></i></a>
             </li>
@@ -289,33 +287,44 @@
         
         <!--ENd:: Chat-->
         <?php include('jquery.php');?>
-
+        <script>
+                    $( document ).ready(function() {
+                        $("#flight_type").hide();
+                        $("#package_type").hide();
+                        $("#inclusions").hide();
+                        $("#hotel_detail").hide();
+                    });
+                    $('#deal_type_id').change(function() {
+                        var gid = $(this).val(); 
+                            if (gid == '1') { 
+                                $("#flight_type").hide();
+                                $("#package_type").show();
+                                $("#inclusions").show();
+                                $("#hotel_detail").hide();
+                            }else if(gid == '2'){
+                                $("#flight_type").show();
+                                $("#package_type").hide();
+                                $("#inclusions").hide();
+                                $("#hotel_detail").hide();
+                            }else if(gid == '3'){
+                                $("#flight_type").hide();
+                                $("#package_type").hide();
+                                $("#inclusions").hide();
+                                $("#hotel_detail").show();
+                            }else{
+                                $("#flight_type").hide();
+                                $("#package_type").hide();
+                                $("#inclusions").hide();
+                                $("#hotel_detail").hide();
+                            }
+                            return false;
+                    });
+        </script>
         <!-- Tinymce JavaScript -->
         <script src="<?= base_url('resource/auth/vendors/tinymce/tinymce.min.js');?>"></script>
 
         <!-- Tinymce Wysuhtml5 Init JavaScript -->
         <script src="<?= base_url('resource/auth/dist/js/tinymce-data.js');?>"></script>
-
-        <script>
-            
-            var amount=$('#amount').val();
-            var gid="";
-            $('#currency_id').change(function() {
-                gid = $(this).val(); 
-            });
-            
-            $("#click_btn").click(function(){
-                var amount=$('#amount').val();
-                $.ajax({
-					method: "POST",
-					url: "<?= base_url();?>Partner/get_currency_tracking/"+gid+"/"+amount,
-					})
-					.done(function( myJSON ) {
-								
-						$("#constructed_amount").html(myJSON);
-				});
-            });
-        </script>
 
     </body>
 </html>

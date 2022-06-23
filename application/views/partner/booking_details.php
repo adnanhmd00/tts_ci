@@ -51,7 +51,7 @@
 									<div class="kt-subheader__wrapper">
 										
                                         <?php if($pay_status=="PARTIAL"){?>
-                                            <a href="<?= base_url('Partner/booking_next_installment/'.$data['booking_data']->id);?>" class="btn kt-subheader__btn-dark">
+                                            <a href="<?= base_url('Partner/booking_next_installment/'.$data['booking_data']->id);?>" class="btn kt-subheader__btn-primary">
                                                 Pay Next Installment 
                                             </a>
 										<?php }?>
