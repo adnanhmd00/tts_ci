@@ -95,7 +95,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <div class="kt-portlet kt-callout kt-callout--info kt-callout--diagonal-bg">
+                                    <div class="kt-portlet kt-callout kt-callout--diagonal-bg">
                                         <div class="kt-portlet__body">
                                             <div class="kt-callout__body">
                                                 <div class="kt-callout__content">
@@ -112,7 +112,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="kt-portlet kt-callout kt-callout--warning kt-callout--diagonal-bg">
+                                    <div class="kt-portlet kt-callout kt-callout--diagonal-bg">
                                         <div class="kt-portlet__body">
                                             <div class="kt-callout__body">
                                                 <div class="kt-callout__content">
@@ -129,7 +129,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="kt-portlet kt-callout kt-callout--success kt-callout--diagonal-bg">
+                                    <div class="kt-portlet kt-callout kt-callout--diagonal-bg">
                                         <div class="kt-portlet__body">
                                             <div class="kt-callout__body">
                                                 <div class="kt-callout__content">

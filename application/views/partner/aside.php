@@ -2,7 +2,7 @@
                     <div class="kt-aside__brand kt-grid__item "  style="background-color:black;" id="kt_aside_brand" kt-hidden-height="65" style="">
                         <div class="kt-aside__brand-logo" style="background-color:black;">
                             <a href="">
-                            <img alt="The Travel Square Logo" src="<?= base_url('uploads/b2b/the-travel-square-logo.png');?>" height="45">
+                            <img alt="The Travel Square Logo" src="<?= base_url('uploads/b2b/the-travel-square-logo.png');?>" height="40">
                             </a>
                         </div>
                         <div class="kt-aside__brand-tools" style="background-color:black;">
@@ -77,7 +77,7 @@
 											<li class="kt-menu__item " aria-haspopup="true">
                                                 <a href="seller-bookings-calender.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span>
                                                 </i>
-                                                <span class="kt-menu__link-text">Bookings Calender</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline">new</span></span></a>
+                                                <span class="kt-menu__link-text">Bookings Calender</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline"></span></span></a>
                                             </li>
 											<li class="kt-menu__item " aria-haspopup="true">
                                                 <a href="seller-bookings-calender.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span>
@@ -98,7 +98,7 @@
 												</g>
 											</svg>
 										</span>
-                                        <span cl	ass="kt-menu__link-text">Agent Deals</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
+                                        <span class="kt-menu__link-text">Agent Deals</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
                                     <div class="kt-menu__submenu ">
                                         <span class="kt-menu__arrow"></span>
@@ -165,7 +165,7 @@
                                     </a>
                                 </li>
 								<li class="kt-menu__item " aria-haspopup="true">
-                                    <a href="<?= base_url('web-checkin');?>" class="kt-menu__link ">
+                                    <a href="<?= base_url('web_check_in');?>" class="kt-menu__link ">
                                         <span class="kt-menu__link-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -412,7 +412,7 @@
                                     </a>
                                 </li>
 								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                    <a href="<?= base_url('/support-center');?>" class="kt-menu__link kt-menu__toggle">
+                                    <a href="<?= base_url('Partner/support_center');?>" class="kt-menu__link kt-menu__toggle">
                                         <span class="kt-menu__link-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
