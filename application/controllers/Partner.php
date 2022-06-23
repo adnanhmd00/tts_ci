@@ -1486,6 +1486,16 @@ class Partner extends CI_Controller
         $this->load->view('partner/terminal_pricing_update', compact('userinfo', 'mdata'));
     }
 
+    function web_checkin(){
+        $userinfo = $this->userinfo;
+        $this->load->view('partner/web_check_in', compact('userinfo'));
+    }
+
+    function support_center(){
+        $userinfo = $this->userinfo;
+        $this->load->view('partner/support_center', compact('userinfo'));
+    }
+
     function edit_partner_deal_price(){
 
         $id=$this->input->post('id');
