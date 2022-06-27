@@ -142,7 +142,7 @@
                                             <div class="kt-portlet__head-label">
                                                 <h3 class="kt-portlet__head-title">
                                                 <?php if($for=='general-request'){?>    
-                                                    Write us all your Queries Regarding Issues and Infomation Required
+                                                    Write us all your Queries Regarding Any Issues or Information Required
                                                 <?php }?>
                                                 <?php if($for=='business-request'){?>    
                                                     Get In Touch For Business Related Queries, Information, Deals and Investments

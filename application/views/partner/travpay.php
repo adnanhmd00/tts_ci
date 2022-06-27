@@ -63,7 +63,7 @@
                                         <div class="kt-portlet__body">
                                             <div class="kt-callout__body">
                                                 <div class="kt-callout__content">
-                                                    <h3 class="kt-callout__title"><?= $symbol?> <?= $walletBalance;?></h3>
+                                                    <h3 class="kt-callout__title">Wallet Balance <?= $symbol?> <?= $walletBalance;?></h3>
                                                     <p class="kt-callout__desc">
                                                         Pay Via TravPAY Wallet To Get Instant Discounts. Recharge Wallet Now
                                                     </p>
@@ -101,11 +101,11 @@
                                                 <div class="kt-callout__content">
                                                     <h3 class="kt-callout__title">Request Payment</h3>
                                                     <p class="kt-callout__desc">
-                                                        Request For Payments From Your Client Using TravPAY Payment Link, Auto Reminders
+                                                        Request For Payments From Your Client Using TravPAY Payment Link.
                                                     </p>
                                                 </div>
                                                 <div class="kt-callout__action">
-                                                    <a href="<?= base_url('seller-send-money-to-bank/request');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-info">Request</a>
+                                                    <a href="<?= base_url('seller-send-money-to-bank/request');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-dark">Request</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -122,7 +122,7 @@
                                                     </p>
                                                 </div>
                                                 <div class="kt-callout__action">
-                                                    <a href="<?= base_url('seller-send-money-to-bank/remit');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-warning">Remit</a>
+                                                    <a href="<?= base_url('seller-send-money-to-bank/remit');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-dark">Remit</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -139,7 +139,7 @@
                                                     </p>
                                                 </div>
                                                 <div class="kt-callout__action">
-                                                    <a href="<?= base_url('wallet-transactions/travpay');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-success">View</a>
+                                                    <a href="<?= base_url('wallet-transactions/travpay');?>" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-dark">View</a>
                                                 </div>
                                             </div>
                                         </div>

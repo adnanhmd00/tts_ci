@@ -186,7 +186,7 @@
                                                     We are Happy to Help You . 
                                                     For General Queries & Issues Please Contact Us Using the Request Form , Below . Our Team Will Assist You As Soon as The Issue is Raised .
                                                     We are Fast at Resolving Issues . If Not Happy With The Resolution Contact Us at For Feedback & More Senior Assistance . Mail at
-                                                    <a href="mailto:contact@thetravelsquare.in" class="kt-link">contact@thetravelsquare.in</a>.
+                                                    <a href="mailto:contact@thetravelsquare.in" class="kt-link"><font color="black">contact@thetravelsquare.in</font></a>.
                                                 </div>
                                             </div>
                                         </div>

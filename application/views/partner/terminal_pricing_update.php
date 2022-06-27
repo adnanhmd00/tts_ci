@@ -65,7 +65,7 @@
 						
 						<div class="alert alert-light alert-elevate" role="alert">
 								<div class="alert-text">
-                                    Terminal by TTS is the Most Powerfull Tool Developed by The Travel Square. It Helps Travel Agents Updating Rate Tariffs,for Both 
+                                    <b>Terminal by TTS is the Most Powerfull Tool Developed by The Travel Square</b>. It Helps Travel Agents Updating Rate Tariffs,for Both 
 									B2B & B2C Instantly on All Published Platforms, Channel Managers and other B2C Platforms. You Can Watch Live Inventory of Flights,
 									Hotels & Resorts Via This Tool, Watch Competitors Pricing and Organise Yours Accordingly.
                                 </div>
@@ -81,7 +81,7 @@
                                                 <th>DEAL TARIFFS</th>
                                                 <th>STATUS</th>
                                                 <th>TYPE</th>
-                                                <th>EDIT DEAL</th>
+                                                <th>UPDATE DEAL</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -102,7 +102,7 @@
 
                                                     <div class="kt-demo-icon__overlay">
                                                         <button type="submit" class="btn btn-sm btn-dark">
-                                                            Edit Deal
+                                                            Update
                                                         </button>
                                                     </div>
 

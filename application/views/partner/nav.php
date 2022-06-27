@@ -12,20 +12,20 @@
                 </li> -->
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
                     <a href="<?= base_url('search-flight');?>" class="kt-menu__link">
-                        <span class="kt-menu__link-icon">
-                            <span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-05-14-112058/theme/html/demo1/dist/../src/media/svg/icons/Map/Location-arrow.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                            <span class="kt-header__topbar-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									<rect x="0" y="0" width="24" height="24"/>
 									<path d="M4.88230018,17.2353996 L13.2844582,0.431083506 C13.4820496,0.0359007077 13.9625881,-0.12427877 14.3577709,0.0733126292 C14.5125928,0.15072359 14.6381308,0.276261584 14.7155418,0.431083506 L23.1176998,17.2353996 C23.3152912,17.6305824 23.1551117,18.1111209 22.7599289,18.3087123 C22.5664522,18.4054506 22.3420471,18.4197165 22.1378777,18.3482572 L14,15.5 L5.86212227,18.3482572 C5.44509941,18.4942152 4.98871325,18.2744737 4.84275525,17.8574509 C4.77129597,17.6532815 4.78556182,17.4288764 4.88230018,17.2353996 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.000087, 9.191034) rotate(-315.000000) translate(-14.000087, -9.191034) "/>
 								</g>
-							</svg>
-                        </span>
+								</svg>
+							</span>
                         <span class="kt-menu__link-text">FLIGHTS</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                     </a>
-                </li>
+                </li>&nbsp;&nbsp;
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel">
                     <a href="<?= base_url('hotels');?>" class="kt-menu__link">
-                        <span class="kt-menu__link-icon">
+                        <span class="kt-header__topbar-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									<rect x="0" y="0" width="24" height="24"/>
@@ -37,7 +37,7 @@
                         </span>
                         <span class="kt-menu__link-text">HOTELS</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                     </a>
-                </li>
+                </li>&nbsp;&nbsp;
                 <!-- <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel">
                     <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
                         <span class="kt-menu__link-icon">
@@ -48,7 +48,7 @@
                 </li> -->
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel">
                     <a href="/experience" class="kt-menu__link">
-                        <span class="kt-menu__link-icon">
+                        <span class="kt-header__topbar-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									<rect x="0" y="0" width="24" height="24"/>
@@ -74,7 +74,7 @@
                 </li>
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel">
                     <a href="/visa" class="kt-menu__link">
-                        <span class="kt-menu__link-icon">
+                        <span class="kt-header__topbar-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									<rect x="0" y="0" width="24" height="24"/>
@@ -201,15 +201,13 @@
         <div class="kt-header__topbar-item dropdown">
             <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="30px,0px" aria-expanded="true">
                 <span class="kt-header__topbar-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <rect x="0" y="0" width="24" height="24"></rect>
-                            <rect fill="#000000" opacity="0.3" x="13" y="4" width="3" height="16" rx="1.5"></rect>
-                            <rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5"></rect>
-                            <rect fill="#000000" x="18" y="11" width="3" height="9" rx="1.5"></rect>
-                            <rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5"></rect>
-                        </g>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<rect x="0" y="0" width="24" height="24"/>
+						<rect fill="#000000" x="4" y="5" width="16" height="3" rx="1.5"/>
+						<path d="M5.5,15 L18.5,15 C19.3284271,15 20,15.6715729 20,16.5 C20,17.3284271 19.3284271,18 18.5,18 L5.5,18 C4.67157288,18 4,17.3284271 4,16.5 C4,15.6715729 4.67157288,15 5.5,15 Z M5.5,10 L18.5,10 C19.3284271,10 20,10.6715729 20,11.5 C20,12.3284271 19.3284271,13 18.5,13 L5.5,13 C4.67157288,13 4,12.3284271 4,11.5 C4,10.6715729 4.67157288,10 5.5,10 Z" fill="#000000" opacity="0.3"/>
+						</g>
+					</svg>
                 </span>
             </div>
             <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
@@ -283,13 +281,13 @@
 						<div class="kt-header__topbar-item dropdown">
                                 <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="30px,0px" aria-expanded="true">
                                     <span class="kt-header__topbar-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                <rect x="0" y="0" width="24" height="24"></rect>
-                                                <path d="M12,4.56204994 L7.76822128,9.6401844 C7.4146572,10.0644613 6.7840925,10.1217854 6.3598156,9.76822128 C5.9355387,9.4146572 5.87821464,8.7840925 6.23177872,8.3598156 L11.2317787,2.3598156 C11.6315738,1.88006147 12.3684262,1.88006147 12.7682213,2.3598156 L17.7682213,8.3598156 C18.1217854,8.7840925 18.0644613,9.4146572 17.6401844,9.76822128 C17.2159075,10.1217854 16.5853428,10.0644613 16.2317787,9.6401844 L12,4.56204994 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
-                                                <path d="M3.5,9 L20.5,9 C21.0522847,9 21.5,9.44771525 21.5,10 C21.5,10.132026 21.4738562,10.2627452 21.4230769,10.3846154 L17.7692308,19.1538462 C17.3034221,20.271787 16.2111026,21 15,21 L9,21 C7.78889745,21 6.6965779,20.271787 6.23076923,19.1538462 L2.57692308,10.3846154 C2.36450587,9.87481408 2.60558331,9.28934029 3.11538462,9.07692308 C3.23725479,9.02614384 3.36797398,9 3.5,9 Z M12,17 C13.1045695,17 14,16.1045695 14,15 C14,13.8954305 13.1045695,13 12,13 C10.8954305,13 10,13.8954305 10,15 C10,16.1045695 10.8954305,17 12,17 Z" fill="#000000"></path>
-                                            </g>
-                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+											<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect x="0" y="0" width="24" height="24"/>
+											<path d="M5.94290508,4 L18.0570949,4 C18.5865712,4 19.0242774,4.41271535 19.0553693,4.94127798 L19.8754445,18.882556 C19.940307,19.9852194 19.0990032,20.9316862 17.9963398,20.9965487 C17.957234,20.9988491 17.9180691,21 17.8788957,21 L6.12110428,21 C5.01653478,21 4.12110428,20.1045695 4.12110428,19 C4.12110428,18.9608266 4.12225519,18.9216617 4.12455553,18.882556 L4.94463071,4.94127798 C4.97572263,4.41271535 5.41342877,4 5.94290508,4 Z" fill="#000000" opacity="0.3"/>
+											<path d="M7,7 L9,7 C9,8.65685425 10.3431458,10 12,10 C13.6568542,10 15,8.65685425 15,7 L17,7 C17,9.76142375 14.7614237,12 12,12 C9.23857625,12 7,9.76142375 7,7 Z" fill="#000000"/>
+											</g>
+										</svg>
                                     </span>
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
@@ -330,11 +328,12 @@
                                 <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
                                     <span class="kt-header__topbar-icon">
 										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-											<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-												<rect x="0" y="0" width="24" height="24"/>
-												<rect fill="#000000" opacity="0.3" x="2" y="2" width="10" height="12" rx="2"/>
-												<path d="M4,6 L20,6 C21.1045695,6 22,6.8954305 22,8 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 C2.8954305,22 2,21.1045695 2,20 L2,8 C2,6.8954305 2.8954305,6 4,6 Z M18,16 C19.1045695,16 20,15.1045695 20,14 C20,12.8954305 19.1045695,12 18,12 C16.8954305,12 16,12.8954305 16,14 C16,15.1045695 16.8954305,16 18,16 Z" fill="#000000"/>
-											</g>
+												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<rect x="0" y="0" width="24" height="24"/>
+													<circle fill="#000000" opacity="0.3" cx="20.5" cy="12.5" r="1.5"/>
+													<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 6.500000) rotate(-15.000000) translate(-12.000000, -6.500000) " x="3" y="3" width="18" height="7" rx="1"/>
+													<path d="M22,9.33681558 C21.5453723,9.12084552 21.0367986,9 20.5,9 C18.5670034,9 17,10.5670034 17,12.5 C17,14.4329966 18.5670034,16 20.5,16 C21.0367986,16 21.5453723,15.8791545 22,15.6631844 L22,18 C22,19.1045695 21.1045695,20 20,20 L4,20 C2.8954305,20 2,19.1045695 2,18 L2,6 C2,4.8954305 2.8954305,4 4,4 L20,4 C21.1045695,4 22,4.8954305 22,6 L22,9.33681558 Z" fill="#000000"/>
+												</g>
 										</svg>
                                     </span>
                                 </div>
@@ -342,14 +341,14 @@
                                     <ul class="kt-nav kt-margin-t-10 kt-margin-b-10">
                                         <li class="kt-nav__item kt-nav__item--active">
                                             <a href="http://partner.thetravelsquare.in/partner-travpay" class="kt-nav__link">
-                                            <span class="kt-nav__link-icon"><img src="./files/226-united-states.svg" alt=""></span>
-                                            <span class="kt-nav__link-text">TravPAY Balance</span>
+                                            
+                                            <span class="kt-nav__link-text"><font color="black">TravPAY Balance :</font></span>
                                             </a>
                                         </li>
                                         <li class="kt-nav__item">
                                             <a href="http://partner.thetravelsquare.in/partner-travpay" class="kt-nav__link">
-                                            <span class="kt-nav__link-icon"><img src="./files/128-spain.svg" alt=""></span>
-                                            <span class="kt-nav__link-text">Add Funds</span>
+                                            
+                                            <span class="kt-nav__link-text"><font color="black">Add Funds +</font></span>
                                             </a>
                                         </li>
                                     </ul>
@@ -379,15 +378,14 @@
                 <div class="kt-notification">
                     <a href="/partner/profile" class="kt-notification__item">
                         <div class="kt-notification__item-icon">
-                            <span class="kt-header__topbar-icon">
-									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-											<rect x="0" y="0" width="24" height="24"/>
-											<path d="M4,22 L2,22 C2,19.2385763 4.23857625,18 7,18 L17,18 C19.7614237,18 22,19.2385763 22,22 L20,22 C20,20.3431458 18.6568542,20 17,20 L7,20 C5.34314575,20 4,20.3431458 4,22 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
-											<rect fill="#000000" x="1" y="14" width="22" height="6" rx="1"/>
-											<path d="M13,13 L11,13 L11,12 C11,11.4477153 10.5522847,11 10,11 L6,11 C5.44771525,11 5,11.4477153 5,12 L5,13 L4,13 C3.44771525,13 3,12.5522847 3,12 L3,8 C3,6.8954305 3.8954305,6 5,6 L19,6 C20.1045695,6 21,6.8954305 21,8 L21,12 C21,12.5522847 20.5522847,13 20,13 L19,13 L19,12 C19,11.4477153 18.5522847,11 18,11 L14,11 C13.4477153,11 13,11.4477153 13,12 L13,13 Z" fill="#000000" opacity="0.3"/>
-										</g>
-									</svg>
+                            <span class="kt-menu__link-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+									<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<polygon points="0 0 24 0 24 24 0 24"/>
+									<path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+									<path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
+									</g>
+								</svg>
                             </span>
                         </div>
                         <div class="kt-notification__item-details">
@@ -401,7 +399,7 @@
                     </a>
                     <a href="#" class="kt-notification__item">
                         <div class="kt-notification__item-icon">
-                            <span class="kt-header__topbar-icon">
+                            <span class="kt-menu__link-icon">
 									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 											<rect x="0" y="0" width="24" height="24"/>
@@ -424,7 +422,7 @@
                     </a>
                     <a href="http://partner.thetravelsquare.in/partner/mydeals" class="kt-notification__item">
                         <div class="kt-notification__item-icon">
-                            <span class="kt-header__topbar-icon">
+                            <span class="kt-menu__link-icon">
 									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 											<rect x="0" y="0" width="24" height="24"/>
@@ -445,7 +443,7 @@
                     </a>
                     <a href="/Partner/view_bookings" class="kt-notification__item">
                         <div class="kt-notification__item-icon">
-                            <span class="kt-header__topbar-icon">
+                            <span class="kt-menu__link-icon">
 									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 											<rect x="0" y="0" width="24" height="24"/>
