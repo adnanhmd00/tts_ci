@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 
 <html lang="en">
 	<!-- begin::Head -->
@@ -43,7 +43,7 @@
 							<div class="kt-container  kt-container--fluid ">
 								<div class="kt-subheader__main">
 									<h3 class="kt-subheader__title">
-										Manage My Bookings                            
+										Customer Relation Manager | CRM Dashboard                            
 									</h3>
 									
 								</div>
@@ -55,7 +55,8 @@
 							<div class="alert alert-light alert-elevate" role="alert">
 								
 								<div class="alert-text">
-                                    <b>Manage All Your Customer Bookings Here</b> ! Manage Booking Details, Invoices and Transaction Details all at One Place.
+                                    <b>Manage All Your Customers and Thier Data Here</b> ! Manage Thier Personal Information & Related Booking Details, Invoices and
+									Transaction Details all at One Place.
                                 </div>
 							</div>
 
@@ -63,7 +64,7 @@
 								<div class="kt-portlet__head">
                                             <div class="kt-portlet__head-label">
                                                 <h3 class="kt-portlet__head-title">
-                                                    All Bookings
+                                                    All Customers
                                                 </h3>
                                             </div>
                                         </div>
@@ -115,7 +116,7 @@
                                                         <td><?= $symbol.' '.$price;?></td>
                                                         <td>
                                                             <!-- <a href=""  class="btn btn-primary">View Deal Details</a> -->
-                                                            <a href="<?= base_url('Partner/view_booking_transactions/BK-'.$row->id.'-'.$row->deal_combined_id);?>" class="btn-sm btn-dark">View Details</a>
+                                                            <a href="<?= base_url('Partner/view_booking_transactions/BK-'.$row->id.'-'.$row->deal_combined_id);?>" class="btn-sm btn-dark">View Booking</a>
                                                         </td>
                                                         
 

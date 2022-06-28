@@ -70,8 +70,8 @@
 						<div class="alert alert-light alert-elevate" role="alert">
 								<div class="alert-text">
                                     The Currency Tracker Tool is Developed By The Travel Square Powered by <a href="https://www.xe.com/">xe.com</a>
-														API's, Such That The Agents / Suppliers are Able to Manage & See Forex Exchnage Rate in
-                                                        Real Time While Doing Business , For Accurate Record Of Transactions .
+														API's, Such That The Agents / Suppliers are Able to <b>Manage & See Forex Exchnage Rate in
+                                                        Real Time While Doing Business</b> , For Accurate Record Of Transactions .
                                 </div>
 							</div>
 

@@ -44,10 +44,10 @@
                                 </div>
                                 <div class="kt-subheader__toolbar">
                                     <div class="kt-subheader__wrapper">
-                                        <a href="<?= base_url('accounts');?>" class="btn kt-subheader__btn-dark">
+                                        <a href="<?= base_url('accounts');?>" class="btn kt-subheader__btn-primary">
                                             Accounts
                                         </a>
-                                        <a href="<?= base_url('transactions');?>" class="btn kt-subheader__btn-dark">
+                                        <a href="<?= base_url('transactions');?>" class="btn kt-subheader__btn-primary">
                                             Transactions
                                         </a>
                                     </div>
@@ -201,42 +201,42 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <div class="kt-portlet kt-callout kt-callout--brand">
+                                    <div class="kt-portlet kt-callout kt-callout--diagonal-bg">
                                         <div class="kt-portlet__body">
                                             <div class="kt-callout__body">
                                                 <div class="kt-callout__content">
                                                     <h3 class="kt-callout__title">Payment Via Customer From Credit Card</h3>
                                                 </div>
                                                 <div class="kt-callout__action">
-                                                    <a href="http://travpay.thetravelsquare.in/request-payment" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-brand">Request</a>
+                                                    <a href="http://travpay.thetravelsquare.in/request-payment" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-dark">Request</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="kt-portlet kt-callout kt-callout--danger">
+                                    <div class="kt-portlet kt-callout kt-callout--diagonal-bg">
                                         <div class="kt-portlet__body">
                                             <div class="kt-callout__body">
                                                 <div class="kt-callout__content">
                                                     <h3 class="kt-callout__title">Payment's Via Customer In EMI's Instalments</h3>
                                                 </div>
                                                 <div class="kt-callout__action">
-                                                    <a href="http://travpay.thetravelsquare.in/request-payment" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-danger">Request</a>
+                                                    <a href="http://travpay.thetravelsquare.in/request-payment" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-dark">Request</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="kt-portlet kt-callout kt-callout--success">
+                                    <div class="kt-portlet kt-callout kt-callout--diagonal-bg">
                                         <div class="kt-portlet__body">
                                             <div class="kt-callout__body">
                                                 <div class="kt-callout__content">
                                                     <h3 class="kt-callout__title">Payment From Customer Via Cheque/Cash</h3>
                                                 </div>
                                                 <div class="kt-callout__action">
-                                                    <a href="http://travpay.thetravelsquare.in/request-payment" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-success">Request</a>
+                                                    <a href="http://travpay.thetravelsquare.in/request-payment" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-dark">Request</a>
                                                 </div>
                                             </div>
                                         </div>

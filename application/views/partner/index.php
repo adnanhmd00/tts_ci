@@ -126,6 +126,150 @@
                         <!-- end:: Content Head -->					
                         <!-- begin:: Content -->
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+						
+						<div class="kt-portlet">
+	<div class="kt-portlet__body  kt-portlet__body--fit">
+		<div class="row row-no-padding row-col-separator-lg">
+
+			<div class="col-md-12 col-lg-6 col-xl-3">
+				<!--begin::Total Profit-->
+				<div class="kt-widget24">
+					<div class="kt-widget24__details">
+						<div class="kt-widget24__info">
+							<h4 class="kt-widget24__title">
+					            Total Sales (Jun)
+					        </h4>
+					        <span class="kt-widget24__desc">
+					            Total Booking Amount
+					        </span>
+						</div>
+
+						<span class="kt-widget24__stats kt-font-dark">
+					        ₹40,212
+					    </span>
+					</div>
+
+				    <div class="progress progress--sm">
+						<div class="progress-bar kt-bg-dark" role="progressbar" style="width: 40%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					<div class="kt-widget24__action">
+						<span class="kt-widget24__change">
+							Target
+						</span>
+						<span class="kt-widget24__number">
+							₹100,000
+					    </span>
+					</div>
+				</div>
+				<!--end::Total Profit-->
+			</div>
+
+			<div class="col-md-12 col-lg-6 col-xl-3">
+				<!--begin::New Feedbacks-->
+				<div class="kt-widget24">
+					<div class="kt-widget24__details">
+						<div class="kt-widget24__info">
+							<h4 class="kt-widget24__title">
+					            My Deal Enquiries
+					        </h4>
+					        <span class="kt-widget24__desc">
+					            Your Leads
+					        </span>
+						</div>
+
+						<span class="kt-widget24__stats kt-font-warning">
+					       1
+					    </span>
+					</div>
+
+				    <div class="progress progress--sm">
+						<div class="progress-bar kt-bg-warning" role="progressbar" style="width: 10%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					<div class="kt-widget24__action">
+						<span class="kt-widget24__change">
+							Target
+						</span>
+						<span class="kt-widget24__number">
+							10
+					    </span>
+					</div>
+				</div>
+				<!--end::New Feedbacks-->
+			</div>
+
+			<div class="col-md-12 col-lg-6 col-xl-3">
+				<!--begin::New Orders-->
+				<div class="kt-widget24">
+					<div class="kt-widget24__details">
+						<div class="kt-widget24__info">
+							<h4 class="kt-widget24__title">
+					            Total Bookings
+					        </h4>
+					        <span class="kt-widget24__desc">
+					            No. of Bookings (Jun)
+					        </span>
+						</div>
+
+						<span class="kt-widget24__stats kt-font-danger">
+					        43
+					    </span>
+					</div>
+
+				    <div class="progress progress--sm">
+						<div class="progress-bar kt-bg-danger" role="progressbar" style="width: 43%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					<div class="kt-widget24__action">
+						<span class="kt-widget24__change">
+							Target
+						</span>
+						<span class="kt-widget24__number">
+							100
+					    </span>
+					</div>
+				</div>
+				<!--end::New Orders-->
+			</div>
+
+			<div class="col-md-12 col-lg-6 col-xl-3">
+				<!--begin::New Users-->
+				<div class="kt-widget24">
+					<div class="kt-widget24__details">
+						<div class="kt-widget24__info">
+							<h4 class="kt-widget24__title">
+					            TravPAY Balance
+					        </h4>
+					        <span class="kt-widget24__desc">
+					            Funds Uploaded to Wallet
+					        </span>
+						</div>
+
+						<span class="kt-widget24__stats kt-font-success">
+					        ₹10,321
+					    </span>
+					</div>
+
+				    <div class="progress progress--sm">
+						<div class="progress-bar kt-bg-success" role="progressbar" style="width: 10%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					<div class="kt-widget24__action">
+						<span class="kt-widget24__change">
+							Target
+						</span>
+						<span class="kt-widget24__number">
+							₹100,000
+					    </span>
+					</div>
+				</div>
+				<!--end::New Users-->
+			</div>
+
+		</div>
+	</div>
+</div>
                             <!--Begin::Dashboard 1-->
                             <!--Begin::Row-->
                             <div class="row">
@@ -140,72 +284,70 @@
                                                         <div class="kt-widget17__items">
                                                             <div class="kt-widget17__item">
                                                                 <span class="kt-widget17__icon">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--brand">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--dark">
                                                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                            <rect x="0" y="0" width="24" height="24"></rect>
-                                                                            <path d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z" fill="#000000"></path>
-                                                                            <rect fill="#000000" opacity="0.3" transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519) " x="16.3255682" y="2.94551858" width="3" height="18" rx="1"></rect>
-                                                                        </g>
+																			<rect x="0" y="0" width="24" height="24"/>
+																			<path d="M14,13.381038 L14,3.47213595 L7.99460483,15.4829263 L14,13.381038 Z M4.88230018,17.2353996 L13.2844582,0.431083506 C13.4820496,0.0359007077 13.9625881,-0.12427877 14.3577709,0.0733126292 C14.5125928,0.15072359 14.6381308,0.276261584 14.7155418,0.431083506 L23.1176998,17.2353996 C23.3152912,17.6305824 23.1551117,18.1111209 22.7599289,18.3087123 C22.5664522,18.4054506 22.3420471,18.4197165 22.1378777,18.3482572 L14,15.5 L5.86212227,18.3482572 C5.44509941,18.4942152 4.98871325,18.2744737 4.84275525,17.8574509 C4.77129597,17.6532815 4.78556182,17.4288764 4.88230018,17.2353996 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.000087, 9.191034) rotate(-315.000000) translate(-14.000087, -9.191034) "/>
+																		</g>
                                                                     </svg>
                                                                 </span>
                                                                 <span class="kt-widget17__subtitle">
-                                                                Leads
+                                                                Flights & FD's
                                                                 </span> 
                                                                 <span class="kt-widget17__desc">
-                                                                0
+                                                                2.5 %
                                                                 </span>  
                                                             </div>
                                                             <div class="kt-widget17__item">
                                                                 <span class="kt-widget17__icon">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--dark">
                                                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                            <polygon points="0 0 24 0 24 24 0 24"></polygon>
-                                                                            <path d="M12.9336061,16.072447 L19.36,10.9564761 L19.5181585,10.8312381 C20.1676248,10.3169571 20.2772143,9.3735535 19.7629333,8.72408713 C19.6917232,8.63415859 19.6104327,8.55269514 19.5206557,8.48129411 L12.9336854,3.24257445 C12.3871201,2.80788259 11.6128799,2.80788259 11.0663146,3.24257445 L4.47482784,8.48488609 C3.82645598,9.00054628 3.71887192,9.94418071 4.23453211,10.5925526 C4.30500305,10.6811601 4.38527899,10.7615046 4.47382636,10.8320511 L4.63,10.9564761 L11.0659024,16.0730648 C11.6126744,16.5077525 12.3871218,16.5074963 12.9336061,16.072447 Z" fill="#000000" fill-rule="nonzero"></path>
-                                                                            <path d="M11.0563554,18.6706981 L5.33593024,14.122919 C4.94553994,13.8125559 4.37746707,13.8774308 4.06710397,14.2678211 C4.06471678,14.2708238 4.06234874,14.2738418 4.06,14.2768747 L4.06,14.2768747 C3.75257288,14.6738539 3.82516916,15.244888 4.22214834,15.5523151 C4.22358765,15.5534297 4.2250303,15.55454 4.22647627,15.555646 L11.0872776,20.8031356 C11.6250734,21.2144692 12.371757,21.2145375 12.909628,20.8033023 L19.7677785,15.559828 C20.1693192,15.2528257 20.2459576,14.6784381 19.9389553,14.2768974 C19.9376429,14.2751809 19.9363245,14.2734691 19.935,14.2717619 L19.935,14.2717619 C19.6266937,13.8743807 19.0546209,13.8021712 18.6572397,14.1104775 C18.654352,14.112718 18.6514778,14.1149757 18.6486172,14.1172508 L12.9235044,18.6705218 C12.377022,19.1051477 11.6029199,19.1052208 11.0563554,18.6706981 Z" fill="#000000" opacity="0.3"></path>
-                                                                        </g>
+																			<rect x="0" y="0" width="24" height="24"/>
+																			<path d="M4,22 L2,22 C2,19.2385763 4.23857625,18 7,18 L17,18 C19.7614237,18 22,19.2385763 22,22 L20,22 C20,20.3431458 18.6568542,20 17,20 L7,20 C5.34314575,20 4,20.3431458 4,22 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+																			<rect fill="#000000" x="1" y="14" width="22" height="6" rx="1"/>
+																			<path d="M13,13 L11,13 L11,12 C11,11.4477153 10.5522847,11 10,11 L6,11 C5.44771525,11 5,11.4477153 5,12 L5,13 L4,13 C3.44771525,13 3,12.5522847 3,12 L3,8 C3,6.8954305 3.8954305,6 5,6 L19,6 C20.1045695,6 21,6.8954305 21,8 L21,12 C21,12.5522847 20.5522847,13 20,13 L19,13 L19,12 C19,11.4477153 18.5522847,11 18,11 L14,11 C13.4477153,11 13,11.4477153 13,12 L13,13 Z" fill="#000000" opacity="0.3"/>
+																		</g>
                                                                     </svg>
                                                                 </span>
                                                                 <span class="kt-widget17__subtitle">
-                                                                Bookings
+                                                                Hotels & Resorts
                                                                 </span> 
                                                                 <span class="kt-widget17__desc">
-                                                                0
+                                                                3 %
                                                                 </span>  
                                                             </div>
                                                         </div>
                                                         <div class="kt-widget17__items">
                                                             <div class="kt-widget17__item">
                                                                 <span class="kt-widget17__icon">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--warning">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--dark">
                                                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                            <rect x="0" y="0" width="24" height="24"></rect>
-                                                                            <path d="M12.7037037,14 L15.6666667,10 L13.4444444,10 L13.4444444,6 L9,12 L11.2222222,12 L11.2222222,14 L6,14 C5.44771525,14 5,13.5522847 5,13 L5,3 C5,2.44771525 5.44771525,2 6,2 L18,2 C18.5522847,2 19,2.44771525 19,3 L19,13 C19,13.5522847 18.5522847,14 18,14 L12.7037037,14 Z" fill="#000000" opacity="0.3"></path>
-                                                                            <path d="M9.80428954,10.9142091 L9,12 L11.2222222,12 L11.2222222,16 L15.6666667,10 L15.4615385,10 L20.2072547,6.57253826 C20.4311176,6.4108595 20.7436609,6.46126971 20.9053396,6.68513259 C20.9668779,6.77033951 21,6.87277228 21,6.97787787 L21,17 C21,18.1045695 20.1045695,19 19,19 L5,19 C3.8954305,19 3,18.1045695 3,17 L3,6.97787787 C3,6.70173549 3.22385763,6.47787787 3.5,6.47787787 C3.60510559,6.47787787 3.70753836,6.51099993 3.79274528,6.57253826 L9.80428954,10.9142091 Z" fill="#000000"></path>
-                                                                        </g>
+																			<rect x="0" y="0" width="24" height="24"/>
+																			<path d="M9.82829464,16.6565893 C7.02541569,15.7427556 5,13.1079084 5,10 C5,6.13400675 8.13400675,3 12,3 C15.8659932,3 19,6.13400675 19,10 C19,13.1079084 16.9745843,15.7427556 14.1717054,16.6565893 L12,21 L9.82829464,16.6565893 Z M12,12 C13.1045695,12 14,11.1045695 14,10 C14,8.8954305 13.1045695,8 12,8 C10.8954305,8 10,8.8954305 10,10 C10,11.1045695 10.8954305,12 12,12 Z" fill="#000000"/>
+																		</g>
                                                                     </svg>
                                                                 </span>
                                                                 <span class="kt-widget17__subtitle">
-                                                                Upcomming Tours (Week)
+                                                                Packages (Non Customisable)
                                                                 </span> 
                                                                 <span class="kt-widget17__desc">
-                                                                0
+                                                                5 %
                                                                 </span>  
                                                             </div>
                                                             <div class="kt-widget17__item">
                                                                 <span class="kt-widget17__icon">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--danger">
                                                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                            <rect x="0" y="0" width="24" height="24"></rect>
-                                                                            <path d="M3,16 L5,16 C5.55228475,16 6,15.5522847 6,15 C6,14.4477153 5.55228475,14 5,14 L3,14 L3,12 L5,12 C5.55228475,12 6,11.5522847 6,11 C6,10.4477153 5.55228475,10 5,10 L3,10 L3,8 L5,8 C5.55228475,8 6,7.55228475 6,7 C6,6.44771525 5.55228475,6 5,6 L3,6 L3,4 C3,3.44771525 3.44771525,3 4,3 L10,3 C10.5522847,3 11,3.44771525 11,4 L11,19 C11,19.5522847 10.5522847,20 10,20 L4,20 C3.44771525,20 3,19.5522847 3,19 L3,16 Z" fill="#000000" opacity="0.3"></path>
-                                                                            <path d="M16,3 L19,3 C20.1045695,3 21,3.8954305 21,5 L21,15.2485298 C21,15.7329761 20.8241635,16.200956 20.5051534,16.565539 L17.8762883,19.5699562 C17.6944473,19.7777745 17.378566,19.7988332 17.1707477,19.6169922 C17.1540423,19.602375 17.1383289,19.5866616 17.1237117,19.5699562 L14.4948466,16.565539 C14.1758365,16.200956 14,15.7329761 14,15.2485298 L14,5 C14,3.8954305 14.8954305,3 16,3 Z" fill="#000000"></path>
-                                                                        </g>
+																			<rect x="0" y="0" width="24" height="24"/>
+																			<path d="M12.8434797,16 L11.1565203,16 L10.9852159,16.6393167 C10.3352654,19.064965 7.84199997,20.5044524 5.41635172,19.8545019 C2.99070348,19.2045514 1.55121603,16.711286 2.20116652,14.2856378 L3.92086709,7.86762789 C4.57081758,5.44197964 7.06408298,4.00249219 9.48973122,4.65244268 C10.5421727,4.93444352 11.4089671,5.56345262 12,6.38338695 C12.5910329,5.56345262 13.4578273,4.93444352 14.5102688,4.65244268 C16.935917,4.00249219 19.4291824,5.44197964 20.0791329,7.86762789 L21.7988335,14.2856378 C22.448784,16.711286 21.0092965,19.2045514 18.5836483,19.8545019 C16.158,20.5044524 13.6647346,19.064965 13.0147841,16.6393167 L12.8434797,16 Z M17.4563502,18.1051865 C18.9630797,18.1051865 20.1845253,16.8377967 20.1845253,15.2743923 C20.1845253,13.7109878 18.9630797,12.4435981 17.4563502,12.4435981 C15.9496207,12.4435981 14.7281751,13.7109878 14.7281751,15.2743923 C14.7281751,16.8377967 15.9496207,18.1051865 17.4563502,18.1051865 Z M6.54364977,18.1051865 C8.05037928,18.1051865 9.27182488,16.8377967 9.27182488,15.2743923 C9.27182488,13.7109878 8.05037928,12.4435981 6.54364977,12.4435981 C5.03692026,12.4435981 3.81547465,13.7109878 3.81547465,15.2743923 C3.81547465,16.8377967 5.03692026,18.1051865 6.54364977,18.1051865 Z" fill="#000000"/>
+																		</g>
                                                                     </svg>
                                                                 </span>
                                                                 <span class="kt-widget17__subtitle">
-                                                                Total Customers
+                                                                Experiences
                                                                 </span> 
                                                                 <span class="kt-widget17__desc">
-                                                                0
+                                                                10 %
                                                                 </span>  
                                                             </div>
                                                         </div>
@@ -271,7 +413,7 @@
                                         <div class="kt-portlet__head kt-portlet__space-x">
                                             <div class="kt-portlet__head-label">
                                                 <h3 class="kt-portlet__head-title">
-                                                   Meet us at SATTE 2022
+                                                   Best Discounts on The Leela Chain
                                                 </h3>
                                             </div>
                                             <div class="kt-portlet__head-toolbar">
@@ -299,32 +441,71 @@
                                     </div>
                                     <!--end:: Widgets/Outbound Bandwidth-->	
                                 </div>
-                                <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
-                                    <!--begin:: Widgets/Blog-->
-                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://business.thetravelsquare.in/partner-platform-live-demo">
-                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('http://instawiremoney.com/img/instawire-logo-black-big.png');?>)">
-                                                    <h3 class="kt-widget19__title kt-font-light">
-                                                        Send & Receive Money Overseas
-                                                    </h3>
-                                                    <div class="kt-widget19__shadow"></div>
-                                                    <div class="kt-widget19__labels">
-                                        <a href="http://partner.thetravelsquare.in/partner-travpay" class="btn btn-label-dark btn-bold ">LEARN MORE</a>
+								<div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
+                                    <!--begin:: Widgets/Inbound Bandwidth-->
+                                    <div class="kt-portlet kt-portlet--fit kt-portlet--head-noborder kt-portlet">
+                                        <div class="kt-portlet__head kt-portlet__space-x">
+                                            <div class="kt-portlet__head-label">
+                                                <h3 class="kt-portlet__head-title">
+                                                    Hot Selling Sector
+                                                </h3>
+                                            </div>
+                                            <div class="kt-portlet__head-toolbar">
+                                                <a href="" class="btn btn-label-dark btn-sm btn-bold">
+                                                VIEW FD's
+                                                </a>
+                                            </div>
                                         </div>
-                                        </div>
-                                        </div>
-                                        </a>
-                                        <div class="kt-portlet__body">
-                                            <div class="kt-widget19__wrapper">
-                                                <div class="kt-widget19__text">
-													TravPAY is Your Safe Travel Payments Wallet To, Receive & Send Customer Payments Securely
-                                                </div>
+                                        <div class="kt-widget20">
+                                            <div class="kt-widget20__content kt-portlet__space-x">
+                                                <span class="kt-widget20__number kt-font-dark">DEL-DXB-DEL (Delhi-Dubai)</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <!--end:: Widgets/Blog-->	
+                                    <!--end:: Widgets/Inbound Bandwidth-->		
+                                    <div class="kt-space-20"></div>
+                                    <!--begin:: Widgets/Outbound Bandwidth-->
+                                    <div class="kt-portlet kt-portlet--fit kt-portlet--head-noborder kt-portlet">
+                                        <div class="kt-portlet__head kt-portlet__space-x">
+                                            <div class="kt-portlet__head-label">
+                                                <h3 class="kt-portlet__head-title">
+                                                    Latest Added Sector
+                                                </h3>
+                                            </div>
+                                            <div class="kt-portlet__head-toolbar">
+                                                <a href="" class="btn btn-label-dark btn-sm btn-bold">
+                                                VIEW DEPARTURES
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget20">
+                                            <div class="kt-widget20__content kt-portlet__space-x">
+                                                <span class="kt-widget20__number kt-font-dark">MALE (Ex - DEL,BOM,AMD)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kt-portlet kt-portlet--fit kt-portlet--head-noborder kt-portlet">
+                                        <div class="kt-portlet__head kt-portlet__space-x">
+                                            <div class="kt-portlet__head-label">
+                                                <h3 class="kt-portlet__head-title">
+                                                    Sectors On Sale
+                                                </h3>
+                                            </div>
+                                            <div class="kt-portlet__head-toolbar">
+                                                <a href="" class="btn btn-label-dark btn-sm btn-bold">
+                                                VIEW DEPARTURES
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget20">
+                                            <div class="kt-widget20__content kt-portlet__space-x">
+                                                <span class="kt-widget20__number kt-font-dark">BLR-PAT, IXC-GOA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end:: Widgets/Outbound Bandwidth-->	
                                 </div>
+                                
                             </div>
                             <!--End::Row-->
                             <!--Begin::Row-->
@@ -463,6 +644,151 @@
                                             <div class="kt-widget19__wrapper">
                                                 <div class="kt-widget19__text">
                                                     Watch & Learn How to Your The Travel Square Business Partner Platform , Make the Most out of It .   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end:: Widgets/Blog-->	
+                                </div>
+                            </div>
+							<div class="row">
+                                <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
+                                    <!--begin:: Widgets/Blog-->
+                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
+                                        <a href="http://business.thetravelsquare.in/partner-platform-live-demo">
+                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(http://instawiremoney.com/img/instawire-logo-black-big.png)">
+                                                    <h3 class="kt-widget19__title kt-font-light">
+                                                        Send & Receive Money Overseas
+                                                    </h3>
+                                                    <div class="kt-widget19__shadow"></div>
+                                                    <div class="kt-widget19__labels">
+                                        <a href="http://partner.thetravelsquare.in/partner-travpay" class="btn btn-label-dark btn-bold ">LEARN MORE</a>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </a>
+                                        <div class="kt-portlet__body">
+                                            <div class="kt-widget19__wrapper">
+                                                <div class="kt-widget19__text">
+													TravPAY is Your Safe Travel Payments Wallet To, Receive & Send Customer Payments Securely
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end:: Widgets/Blog-->	
+                                </div>
+                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
+                                    <!--begin:: Widgets/Blog-->
+                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
+                                        <a href="http://b2bfixeddepartures.com/international-fd">
+                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://img.etimg.com/thumb/msid-82330294,width-650,imgsize-1111158,,resizemode-4,quality-100/maldvies.jpg)">
+                                                    <h3 class="kt-widget19__title kt-font-light">
+                                                        Fly to Maldives With Go Air FD's
+                                                    </h3>
+                                                    <div class="kt-widget19__shadow"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="kt-portlet__body">
+                                            <div class="kt-widget19__wrapper">
+                                                <div class="kt-widget19__text">
+                                                    Maldives Go Air & Indigo, Fixed Departures Now Live on B2B Fixed Departures, Book Your Seats Now .  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end:: Widgets/Blog-->	
+                                </div>
+                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
+                                    <!--begin:: Widgets/Blog-->
+                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
+                                        <a href="http://b2bfixeddepartures.com/international-fd">
+                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(./img/dubai-fixed-departures-by-b2b-fixed-departures.jpg)">
+                                                    <h3 class="kt-widget19__title kt-font-light">
+                                                        Best B2B Fares for Dubai FD's
+                                                    </h3>
+                                                    <div class="kt-widget19__shadow"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="kt-portlet__body">
+                                            <div class="kt-widget19__wrapper">
+                                                <div class="kt-widget19__text">
+                                                    Fly Dubai & Indigo Group Pre-Purchased Flights Now Live of B2B Fixed Departures at Best B2B Tariff's. Book Your Seats Now  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end:: Widgets/Blog-->	
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
+                                    <!--begin:: Widgets/Blog-->
+                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
+                                        <a href="http://b2bfixeddepartures.com/domestic-fd">
+                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://imgk.timesnownews.com/story/Goa_beach_istock_1200.jpg?tr=w-1200,h-900)">
+                                                    <h3 class="kt-widget19__title kt-font-light">
+                                                        Goa Fixed Depatures From (Ex-DEL,BOM,AMD,IXC)
+                                                    </h3>
+                                                    <div class="kt-widget19__shadow"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="kt-portlet__body">
+                                            <div class="kt-widget19__wrapper">
+                                                <div class="kt-widget19__text">
+                                                    Cheapest Departures to India's Most Favourite Travel Destination is Here, Book GOA Flight From All Cities at Best B2B Tariff
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end:: Widgets/Blog-->	
+                                </div>
+                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
+                                    <!--begin:: Widgets/Blog-->
+                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
+                                        <a href="http://b2bfixeddepartures.com/international-fd">
+                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://assets.traveltriangle.com/blog/wp-content/uploads/2019/08/og-for-beaches-in-phuket.jpg)">
+                                                    <h3 class="kt-widget19__title kt-font-light">
+                                                        Direct Flight to Phuket
+                                                    </h3>
+                                                    <div class="kt-widget19__shadow"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="kt-portlet__body">
+                                            <div class="kt-widget19__wrapper">
+                                                <div class="kt-widget19__text">
+                                                    Thailand Reopens With Best of Direct Flight Offers from B2B Fixed Departures, Multiple Flights Available at Best B2B Rates
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end:: Widgets/Blog-->	
+                                </div>
+                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
+                                    <!--begin:: Widgets/Blog-->
+                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
+                                        <a href="http://b2bfixeddepartures.com/domestic-fd">
+                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(./img/leh-ladakh-fixed-departure-by-b2b-fixed-departures.jpg)">
+                                                    <h3 class="kt-widget19__title kt-font-light">
+                                                        Leh-Ladakh Direct Flights
+                                                    </h3>
+                                                    <div class="kt-widget19__shadow"></div>
+                                                </div>
+                                            </div>
+                                        </a>	
+                                        <div class="kt-portlet__body">
+                                            <div class="kt-widget19__wrapper">
+                                                <div class="kt-widget19__text">
+                                                    Leh-Ladakh To & Fro Departues at Best Pre-Purchased Rates Available for the Winter Season.   
                                                 </div>
                                             </div>
                                         </div>

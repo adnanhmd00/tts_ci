@@ -68,7 +68,7 @@
 						
 						<div class="alert alert-light alert-elevate" role="alert">
 								<div class="alert-text">
-                                    Post the Travel Deal that Your Company is Expertised in, Advertise Your Travel Deals on The Travel Square B2B Business Platform for
+                                    Post the Travel Deal that Your Company is Expertised in, <b>Advertise Your Travel Deals on The Travel Square B2B Business Platform</b> for
 									Other B2B Travel Agents to See and Book for Free. We are a Network of More than 30,000+ Travel Agents Suppliers, DMC and Travel Experts.
                                 </div>
 							</div>

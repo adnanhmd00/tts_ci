@@ -62,7 +62,7 @@
 						
 						<div class="alert alert-light alert-elevate" role="alert">
 								<div class="alert-text">
-                                    Here are all the Deals Posted by You on The Travel Square B2B Business Platform for Free Advertisnment. Make Changes, for Your Current Deal From 
+                                    Here are all the <b>Deals Posted by You on The Travel Square B2B Business Platform for Free Advertisnment</b>. Make Changes, for Your Current Deal From 
 									Here. Manage Image Banners, Text Content, Dates and Record of Your Best Travel Deals.
                                 </div>
 							</div>

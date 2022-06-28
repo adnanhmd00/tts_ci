@@ -77,7 +77,7 @@
 											<li class="kt-menu__item " aria-haspopup="true">
                                                 <a href="seller-bookings-calender.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span>
                                                 </i>
-                                                <span class="kt-menu__link-text">Bookings Calender</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger kt-badge--inline"></span></span></a>
+                                                <span class="kt-menu__link-text">Bookings Calender</span><span class="kt-menu__link-badge"></span></a>
                                             </li>
 											<li class="kt-menu__item " aria-haspopup="true">
                                                 <a href="seller-bookings-calender.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span>
@@ -104,9 +104,9 @@
                                         <span class="kt-menu__arrow"></span>
                                         <ul class="kt-menu__subnav">
                                             <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Skins</span></span></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('partner/adddeal');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Add Deals</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('partner/mydeals');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">My Deals</span></a></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('partner/deals');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">All Deals</span></a></li>
+                                            <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('partner/adddeal');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Add New Deals</span></a></li>
+                                            <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('partner/mydeals');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">My Published Deals</span></a></li>
+                                            <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('partner/deals');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">All Travel Deals</span></a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -131,7 +131,7 @@
                                         <span class="kt-menu__arrow"></span>
                                         <ul class="kt-menu__subnav">
                                             <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Skins</span></span></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('partner-manage-leads');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Manage Customer Leads</span></a></li>
+                                            <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('partner-manage-leads');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Manage My Customers</span></a></li>
                                             <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('partner-agent-request-verification');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Request Agent Verification</span></a></li>
                                         </ul>
                                     </div>
