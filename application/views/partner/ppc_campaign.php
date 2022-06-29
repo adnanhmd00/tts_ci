@@ -126,7 +126,7 @@
                                                     - Growing Traffic & Potential Customers <br>
                                                     - Fast & Easy Set up <br><br>
                                                     To Know PPC Ad Plans and More Contact Us Using Submission Form or Mail Us Directly at
-                                                    <a href="" class="kt-link">sales@thetravelsquare.in</a>.
+                                                    <a href="" class="kt-link"><font color="black">sales@thetravelsquare.in</font></a>.
                                                 </div>
                                             </div>
                                         </div>

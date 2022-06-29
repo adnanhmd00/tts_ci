@@ -81,7 +81,7 @@
                                                     <a target="_blank" href="<?= base_url('partner/deal/'.$row['id']);?>" style="color:black;">
                                                         <h6 style="background-color:white;padding:15px;"><?= $row['title'];?></h6>
                                                         <hr>
-                                                        <p align="left"> Price : Rs. <?= $row['b2bprice'];?> </p>
+                                                        <p align="left"> Price : <?= $row['b2bprice'];?> </p>
                                                     </a>
                                                 </td>
                                             </tr>

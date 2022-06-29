@@ -12,7 +12,7 @@
                 </li> -->
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
                     <a href="<?= base_url('search-flight');?>" class="kt-menu__link">
-                            <span class="kt-header__topbar-icon">
+                            <span class="kt-header__link-icon">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									<rect x="0" y="0" width="24" height="24"/>
@@ -22,10 +22,10 @@
 							</span>
                         <span class="kt-menu__link-text">FLIGHTS</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                     </a>
-                </li>&nbsp;&nbsp;
+                </li>
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel">
                     <a href="<?= base_url('hotels');?>" class="kt-menu__link">
-                        <span class="kt-header__topbar-icon">
+                        <span class="kt-header__link-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									<rect x="0" y="0" width="24" height="24"/>
@@ -37,7 +37,7 @@
                         </span>
                         <span class="kt-menu__link-text">HOTELS</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                     </a>
-                </li>&nbsp;&nbsp;
+                </li>
                 <!-- <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel">
                     <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
                         <span class="kt-menu__link-icon">
@@ -48,7 +48,7 @@
                 </li> -->
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel">
                     <a href="/experience" class="kt-menu__link">
-                        <span class="kt-header__topbar-icon">
+                        <span class="kt-header__link-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									<rect x="0" y="0" width="24" height="24"/>
@@ -74,7 +74,7 @@
                 </li>
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel">
                     <a href="/visa" class="kt-menu__link">
-                        <span class="kt-header__topbar-icon">
+                        <span class="kt-header__link-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									<rect x="0" y="0" width="24" height="24"/>
@@ -173,9 +173,7 @@
                         <div class="tab-pane active show" id="topbar_notifications_notifications" role="tabpanel">
                             <div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll ps" data-scroll="true" data-height="300" data-mobile-height="200" style="height: 300px; overflow: hidden;">
                                 <a href="http://partner.thetravelsquare.in/" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon">
-                                        <i class="flaticon2-line-chart kt-font-dark"></i>
-                                    </div>
+                                    
                                     <div class="kt-notification__item-details">
                                         <div class="kt-notification__item-title">
                                             Now Booking Experiences are Live
@@ -229,7 +227,7 @@
                                         </g>
                                     </svg>
                                 </span>
-                                <span class="kt-grid-nav__title">Generate Invoice</span>
+                                <span class="kt-grid-nav__title"><font color="black">Generate Invoice</font></span>
                                 <span class="kt-grid-nav__desc">Accounts</span>
                             </a>
                             <a href="http://partner.thetravelsquare.in/generate-payment-link" class="kt-grid-nav__item">
@@ -242,7 +240,7 @@
                                         </g>
                                     </svg>
                                 </span>
-                                <span class="kt-grid-nav__title">Generate Payment Link</span>
+                                <span class="kt-grid-nav__title"><font color="black">Generate Payment Link</font></span>
                                 <span class="kt-grid-nav__desc">TravPAY</span>
                             </a>
                         </div>
@@ -257,7 +255,7 @@
                                         </g>
                                     </svg>
                                 </span>
-                                <span class="kt-grid-nav__title">Publish a Deal</span>
+                                <span class="kt-grid-nav__title"><font color="black">Publish a Deal</font></span>
                                 <span class="kt-grid-nav__desc">Terminal</span>
                             </a>
                             <a href="http://partner.thetravelsquare.in/partner-manage-leads" class="kt-grid-nav__item">
@@ -270,7 +268,7 @@
                                         </g>
                                     </svg>
                                 </span>
-                                <span class="kt-grid-nav__title">Check New Leads</span>
+                                <span class="kt-grid-nav__title"><font color="black">Check New Leads</font></span>
                                 <span class="kt-grid-nav__desc">CRM</span>
                             </a>
                         </div>
@@ -299,7 +297,7 @@
                                                     <h3 class="kt-mycart__title">My Booking Cart</h3>
                                                 </div>
                                                 <div class="kt-mycart__button">
-                                                    <button type="button" class="btn btn-dark btn-sm" style=" ">2 Items</button>
+                                                    <button type="button" class="btn btn-dark btn-sm" style=" ">0 Items</button>
                                                 </div>
                                             </div>
                                             <div class="kt-mycart__body kt-scroll ps" data-scroll="true" data-height="245" data-mobile-height="200" style="height: 245px; overflow: hidden;">

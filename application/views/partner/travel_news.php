@@ -101,9 +101,9 @@
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
                                         <a href="http://partner.thetravelsquare.in/FAM-business-trips">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('resource/admin/img/FAM-Trip.jpg');?>)">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://www.thehindu.com/incoming/uoi5po/article65514981.ece/alternates/FREE_1200/2022-06-09T155952Z_113839266_RC2EOU9ZGHGW_RTRMADP_3_AMERICAN-AIRLINE-JETBLUE-AIRWAYS-DOJ.JPG);?>)">
                                                     <h3 class="kt-widget19__title kt-font-light">
-                                                        Join Us on Our FAM Trip
+                                                        U.S. lifts COVID test requirement
                                                     </h3>
                                                     <div class="kt-widget19__shadow"></div>
                                                 </div>
@@ -112,7 +112,8 @@
                                         <div class="kt-portlet__body">
                                             <div class="kt-widget19__wrapper">
                                                 <div class="kt-widget19__text">
-                                                    Generate a Business Volume of 10,00,000 and Get a Chance To Explore Phuket With Us on Our FAM Business Trip .  
+                                                    The Biden administration is lifting its requirement that international air travellers to the U.S. take a COVID-19 test within a day
+													before boarding their flights...  
                                                 </div>
                                             </div>
                                         </div>
@@ -124,9 +125,9 @@
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
                                         <a href="http://partner.thetravelsquare.in/partner-purchase-leads">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('resource/admin/img/advertise-with-us.jpg');?>)">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://333j0m3ycbcd26cb2f14cdg6-wpengine.netdna-ssl.com/wp-content/uploads/2021/11/Thailand-Living-1-810x424.jpg);?>)">
                                                     <h3 class="kt-widget19__title kt-font-light">
-                                                        Advertise For More Leads
+                                                        Indians Rushing back to Thailand
                                                     </h3>
                                                     <div class="kt-widget19__shadow"></div>
                                                 </div>
@@ -135,7 +136,8 @@
                                         <div class="kt-portlet__body">
                                             <div class="kt-widget19__wrapper">
                                                 <div class="kt-widget19__text">
-                                                    Advertise Your Packages & Deals With Us To Generate More Leads , Select Your Advertisnment Package Today  
+                                                    Indians and Malaysians are leading a tourist rush to Thailand after it relaxed entry rules, with total arrivals topping
+													2 million since the start of the year...  
                                                 </div>
                                             </div>
                                         </div>
@@ -149,9 +151,9 @@
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
                                         <a href="http://partner.thetravelsquare.in/partner-travpay">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('resource/admin/img/remitance-the-travel-square.png');?>)">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://imageio.forbes.com/specials-images/imageserve/5df7fb014e2917000783339f/China-is-projected-to-surpass-the-U-S--as-the-world-s-largest-economy-in-the-next/960x0.jpg?format=jpg&width=960)">
                                                     <h3 class="kt-widget19__title kt-font-light">
-                                                        Remit Payments , Safe Bookings
+                                                        China softens its COVID-19 travel restrictions
                                                     </h3>
                                                     <div class="kt-widget19__shadow"></div>
                                                 </div>
@@ -160,7 +162,8 @@
                                         <div class="kt-portlet__body">
                                             <div class="kt-widget19__wrapper">
                                                 <div class="kt-widget19__text">
-                                                    Route Your Payments Throught Us & We'll Take Care of Your Booking For Free, Payment Remains Safe Against Your Booking Terms With Third Party Agent 
+                                                    The country said it would cut in half the isolation time required by new arrivals to its country, in a sign that China is getting
+													serious about driving a rebound in the growth... 
                                                 </div>
                                             </div>
                                         </div>
@@ -172,9 +175,9 @@
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
                                         <a href="http://partner.thetravelsquare.in/learn-how-to-sell">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('resource/admin/img/learn-how-to-sell.jpg');?>)">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://d1e00ek4ebabms.cloudfront.net/production/3a2e422e-3069-4749-9576-25043bf1a749.jpg)">
                                                     <h3 class="kt-widget19__title kt-font-light">
-                                                        Learn How to Sell
+                                                        Wizz Air increases flights to meet busy Eid holiday demand
                                                     </h3>
                                                     <div class="kt-widget19__shadow"></div>
                                                 </div>
@@ -183,7 +186,8 @@
                                         <div class="kt-portlet__body">
                                             <div class="kt-widget19__wrapper">
                                                 <div class="kt-widget19__text">
-                                                    Learn How To Sell Your Locations in India , Generate Traffic , Write Blogs Around Your Published Deals .  
+                                                    Wizz Air Abu Dhabi, the ultra-low-fare national airline of the UAE, has announced additional flights from Abu Dhabi to capitalise on the increasing
+													demand for travel. 
                                                 </div>
                                             </div>
                                         </div>
@@ -195,9 +199,9 @@
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
                                         <a href="http://partner.thetravelsquare.in/partner-platform-live-demo">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('resource/admin/img/Live-demo-of-seller-square-platform.png');?>)">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://moderndiplomacy.eu/wp-content/uploads/2022/01/norwegian-viva.jpg)">
                                                     <h3 class="kt-widget19__title kt-font-light">
-                                                        Watch a Live Demo of Platform
+                                                        Norwegian Cruise Line announces Asia 2023-2024 itineraries
                                                     </h3>
                                                     <div class="kt-widget19__shadow"></div>
                                                 </div>
@@ -206,7 +210,8 @@
                                         <div class="kt-portlet__body">
                                             <div class="kt-widget19__wrapper">
                                                 <div class="kt-widget19__text">
-                                                    Watch & Learn How to Your The Travel Square Business Partner Platform , Make the Most out of It .   
+                                                    The extensive season will operate from October 2023 to March 2024 and will see a vast choice of departure ports including Tokyo and Yokohama, Japan; Taipei (Keelung)
+													; Singapore; Kuala Lumpur (Port Klang), Malaysia...
                                                 </div>
                                             </div>
                                         </div>

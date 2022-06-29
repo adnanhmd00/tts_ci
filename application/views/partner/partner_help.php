@@ -70,7 +70,7 @@
                             <div class="kt-container " style="height:400px;background-image: url(<?= base_url('uploads/b2b/black-banner.png');?>)">
                                 <div class="kt-sc__top"><br>
                                     <h3 class="kt-sc__title">
-                                        <font color="white">Partner Help Center
+                                        <font color="white">Partner Help Center</font>
                                     </h3>
                                 </div>
                                 <hr color="white">
