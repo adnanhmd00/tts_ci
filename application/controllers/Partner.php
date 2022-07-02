@@ -1496,6 +1496,63 @@ class Partner extends CI_Controller
         $this->load->view('partner/support_center', compact('userinfo'));
     }
 
+
+    function fd_group_fare(){
+        $userinfo = $this->userinfo;
+        // print_r($userinfo);die;  
+        $data=$this->admin->getRawResult("Select * from group_fares where user_id = '$userinfo->id'");
+            
+        $this->load->view('partner/fd-group-fare-request', compact('userinfo', 'data'));
+    }
+
+    function add_fd_group_fare(){
+        $userinfo = $this->userinfo;
+
+        $this->form_validation->set_rules('flight_type', 'Flight Type', 'required');
+        $this->form_validation->set_rules('departure', 'Departure', 'required');
+        $this->form_validation->set_rules('departure_date', 'Departure Date', 'required');
+        $this->form_validation->set_rules('arrival_date', 'Arrival Date', 'required');
+        $this->form_validation->set_rules('dep_time', 'Departure Time', 'required');
+        $this->form_validation->set_rules('arr_time', 'Arrival Time', 'required');
+        $this->form_validation->set_rules('adults', 'Adults', 'required');
+
+
+        $data['gf_id'] = $userinfo->id.'TTS'.rand(0000,9999);
+        $data['user_id'] = $userinfo->id;
+        $data['flight_type'] = $this->input->post('flight_type');
+        $data['departure'] = $this->input->post('departure');
+        $data['departure_date'] = $this->input->post('departure_date');
+        $data['arrival_date'] = $this->input->post('arrival_date');
+        $data['dep_time'] = $this->input->post('dep_time');
+        $data['arr_time'] = $this->input->post('arr_time');
+        $data['adults'] = $this->input->post('adults');
+        $data['child'] = $this->input->post('child');
+        $data['created_at'] = date('Y-m-d H:i:s');
+        
+        if ($this->form_validation->run() == false) {
+            $this->failed(validation_errors());
+        }else{
+            $this->db->insert('group_fares',$data);
+            $this->success("Group Fare Uploaded Successfully");
+            redirect('group-fare-request');    
+        }
+        redirect('group-fare-request');     
+    }
+
+    function internationalFD(){
+        $userinfo = $this->userinfo;
+        // print_r($userinfo);die;  
+        $data=$this->admin->getRawResult("Select * from fixed_departures where international_or_domestic = 'International'");
+        $this->load->view('partner/international-fd', compact('userinfo', 'data'));
+    }
+
+    function domesticFD(){
+        $userinfo = $this->userinfo;
+        // print_r($userinfo);die;  
+        $data=$this->admin->getRawResult("Select * from fixed_departures where international_or_domestic = 'Domestic'");
+        $this->load->view('partner/domestic-fd', compact('userinfo', 'data'));
+    }
+
     function edit_partner_deal_price(){
 
         $id=$this->input->post('id');

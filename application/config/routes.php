@@ -233,7 +233,11 @@ $route['404_override'] = 'partner/login';
 
 $route['translate_uri_dashes'] = FALSE;
 
-
+/*********************************FD*******************/
+$route['group-fare-request'] = 'Partner/fd_group_fare';
+$route['add-group-fare-request'] = 'Partner/add_fd_group_fare';
+$route['international-fd'] = 'Partner/internationalFD';
+$route['domestic-fd'] = 'Partner/domesticFD';
 
 // ---------------------------------APP-----------------------------------------
 
