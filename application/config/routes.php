@@ -80,6 +80,9 @@ $route['show-blogs'] = 'Blogs/blogs';
 $route['show-blog/(:num)'] = 'Blogs/blog/$1';
 $route['partner/advertisement-plan'] = 'Partner/advertisementPlan';
 $route['partner-help'] = 'Partner/partnerHelp';
+$route['travel-news'] = 'Partner/travelNews';
+$route['web-checkin'] = 'Partner/webCheckin';
+$route['crm'] = 'Partner/CRM';
 /*******************EXPERIENCE*******************/
 $route['experience'] = 'Experience/index';
 $route['experience-detail/(:any)'] = 'Experience/experienceGallery/$1';

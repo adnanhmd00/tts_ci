@@ -131,7 +131,7 @@
                                         <span class="kt-menu__arrow"></span>
                                         <ul class="kt-menu__subnav">
                                             <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Skins</span></span></li>
-                                            <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('partner-manage-leads');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Manage My Customers</span></a></li>
+                                            <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('crm');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Manage My Customers</span></a></li>
                                             <li class="kt-menu__item " aria-haspopup="true"><a href="<?= base_url('partner-agent-request-verification');?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Request Agent Verification</span></a></li>
                                         </ul>
                                     </div>
@@ -165,7 +165,7 @@
                                     </a>
                                 </li>
 								<li class="kt-menu__item " aria-haspopup="true">
-                                    <a href="<?= base_url('partner/web_check_in');?>" class="kt-menu__link ">
+                                    <a href="<?= base_url('web-checkin');?>" class="kt-menu__link ">
                                         <span class="kt-menu__link-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -380,7 +380,7 @@
                                     </a>
                                 </li>
 								<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                    <a href="<?= base_url('partner/learn-how-to-sell');?>" class="kt-menu__link kt-menu__toggle">
+                                    <a href="<?= base_url('travel-news');?>" class="kt-menu__link kt-menu__toggle">
                                         <span class="kt-menu__link-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

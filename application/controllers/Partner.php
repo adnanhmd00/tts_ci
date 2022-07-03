@@ -34,7 +34,14 @@ class Partner extends CI_Controller
     }
 
     public function comingSoon(){
-        $this->load->view('partner/coming-soon');
+        $userinfo = $this->userinfo;
+        $this->load->view('partner/comming_soon', compact('userinfo'));
+    }
+
+
+    public function CRM(){
+        $userinfo = $this->userinfo;
+        $this->load->view('partner/crm', compact('userinfo'));
     }
     
     public function logout()
@@ -698,10 +705,22 @@ class Partner extends CI_Controller
         }
         $this->load->view('partner/single_blog_detail',compact('userinfo','data'));
     }
+
     function partnerHelp(){
         $userinfo = $this->userinfo;
         $this->load->view('partner/partner_help',compact('userinfo'));
     }
+
+    function travelNews(){
+        $userinfo = $this->userinfo;
+        $this->load->view('partner/travel_news',compact('userinfo'));
+    }
+
+    function webCheckin(){
+        $userinfo = $this->userinfo;
+        $this->load->view('partner/web_check_in',compact('userinfo'));
+    }
+
     function travPay(){
         $userinfo = $this->userinfo;
         $walletBalance=$this->walletBalance();
