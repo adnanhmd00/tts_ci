@@ -1447,7 +1447,7 @@ class Partner extends CI_Controller
         $points=$this->admin->getRawRow("Select * from currency_tracker where currency_to='$checkcurrency->id' and currency_from='$usercurrency->id'");
         $amount=$amount*$points->points;
         echo '<div class="alert-text">
-        <b id="latest_points">ROE : '.$checkcurrency->name.' 1 = '.$usercurrency->name.' '.$points->points.'</b>
+        <b id="latest_points">ROE : '.$usercurrency->name.' 1 = '.$checkcurrency->name.' '.$points->points.'</b>
         <br>
         <big><b id="constructed_amount">TOTAL AMOUNT : '.$amount.'</b></big>
         </div>';
