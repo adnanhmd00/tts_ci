@@ -3,6 +3,12 @@
     <!-- begin::Head -->
     <head>
         <?php include('head.php');?>
+		<style>
+
+			.dataTables_filter, .dataTables_paginate, .paging_simple_numbers {
+				float: right !important;
+			}
+		</style>
     </head>
     <!-- end::Head -->
     <!-- begin::Body -->
@@ -1139,6 +1145,11 @@
 				});
             });
         </script>
+  <?php include('jquery.php');?>
+        <script src="<?= base_url('resource/agroxa/plugins/datatables/dataTables.responsive.min.js');?>"></script>
+        <script src="<?= base_url('resource/agroxa/plugins/datatables/responsive.bootstrap4.min.js');?>"></script>
 
+        <!-- Datatable init js -->
+        <script src="<?= base_url('resource/agroxa/assets/pages/datatables.init.js');?>"></script>
     </body>
 </html>
