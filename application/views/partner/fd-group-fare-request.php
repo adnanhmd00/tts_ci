@@ -159,42 +159,21 @@
                 		<div class="kt-subheader  kt-grid__item" id="kt_subheader">
                 			<div class="kt-container  kt-container--fluid ">
                 				<div class="kt-subheader__main">
-                					<h3 class="kt-subheader__title">Partner ID</h3>
-                					<span class="kt-subheader__separator kt-subheader__separator--v"></span>
-                					<span class="kt-subheader__desc">TSA167D</span>
+                					<h3 class="kt-subheader__title">Group Fare Request | Airline</h3>
                 					
-                					<div class="kt-input-icon kt-input-icon--right kt-subheader__search kt-hidden">
-                						<input type="text" class="form-control" placeholder="Search order..." id="generalSearch">
-                						<span class="kt-input-icon__icon kt-input-icon__icon--right">
-                							<span><i class="flaticon2-search-1"></i></span>
-                						</span>
-                					</div>
                 				</div>
-                				<div class="kt-subheader__toolbar">
-                					<div class="kt-subheader__wrapper">
-                						<a href="http://partner.thetravelsquare.in/" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Bookings Calender">
-                							<span class="kt-subheader__btn-daterange-title" id="kt_dashboard_daterangepicker_title">Date : </span>&nbsp;
-                							<span class="kt-subheader__btn-daterange-date" id="kt_dashboard_daterangepicker_date">Mar 17</span>
-                							<i class="flaticon2-calendar-1"></i>
-                						</a>
-                						<div class="dropdown dropdown-inline" data-toggle-="kt-tooltip" title="Publish Deal" data-placement="left">
-                							<a href="http://partner.thetravelsquare.in/" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--md">
-                									<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                										<polygon points="0 0 24 0 24 24 0 24"></polygon>
-                										<path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
-                										<path d="M11,14 L9,14 C8.44771525,14 8,13.5522847 8,13 C8,12.4477153 8.44771525,12 9,12 L11,12 L11,10 C11,9.44771525 11.4477153,9 12,9 C12.5522847,9 13,9.44771525 13,10 L13,12 L15,12 C15.5522847,12 16,12.4477153 16,13 C16,13.5522847 15.5522847,14 15,14 L13,14 L13,16 C13,16.5522847 12.5522847,17 12,17 C11.4477153,17 11,16.5522847 11,16 L11,14 Z" fill="#000000"></path>
-                									</g>
-                								</svg>
-                								<!--<i class="flaticon2-plus"></i>-->
-                							</a>
-                						</div>
-                					</div>
-                				</div>
+                				
                 			</div>
                 		</div>
                 		<!-- end:: Content Head -->		
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+						
+						<div class="alert alert-light alert-elevate" role="alert">
+								<div class="alert-text">
+                                    Send us the Details of the Particular International Flight You are Looking for and We'll Provide You with the <b>Best Negotiated Group Fare on Behalf of the 
+									Airlines</b>.
+                                </div>
+							</div>
                                 <!--Begin::Dashboard 1-->
                                 <!--Begin::Row-->
                                 <div class="row">
@@ -317,7 +296,7 @@
 
 								<thead>
 									<tr>
-										<th>RQ FARE ID</th>
+										<th>FRQ ID</th>
 										<th>FROM</th>
 										<th>TO</th>
 										<th>FLIGHT TYPE</th>
@@ -348,23 +327,23 @@
 										<td><?php echo $group_fare->child ?></td>
 
 										<?php if($group_fare->fare == ''){ ?>
-											<td><div class="text-dark text-center">Please Wait For Our Response</div></td>
+											<td><div class="text-dark text-center">Awaited</div></td>
 										<?php }else{ ?>
 											<td><?php echo $group_fare->fare ?></td>
 										<?php } ?>
 
 										<?php if($group_fare->fare == ''){ ?>
-											<td><div class="text-dark text-center">Please Wait For Our Response</div></td>
+											<td><div class="text-dark text-center">Awaited</div></td>
 										<?php }else{ ?>
 											<td><?php echo $group_fare->fare ?></td>
 										<?php } ?>
 
 										<?php if($group_fare->fare == ''){ ?>
-											<td><div class="text-dark text-center">Please Wait For Our Response</div></td>
+											<td><div class="text-dark text-center">Awaited</div></td>
 										<?php }else{ ?>
 											<td><?php echo $group_fare->fare * ($group_fare->adults + $group_fare->child) ?></td>
 										<?php } ?>
-											<td><button class="btn btn-primary">Book Now</button></td>
+											<td><button class="btn btn-dark">Proceed</button></td>
 									</tr>
 									<?php } ?>
 								</tbody>
@@ -373,9 +352,70 @@
 							</div>
         <!--end: Datatable -->
     </div>
+	
+	</div>
+                    <!-- begin:: Footer -->
+                        <?php include('footer.php');?>
+                    <!-- end:: Footer -->			
+                </div>
+            </div>
+        </div>
+        <!-- end:: Page -->
+        <!-- begin::Quick Panel -->
+        
+        <!-- end::Quick Panel -->
+        <!-- begin::Scrolltop -->
+        <div id="kt_scrolltop" class="kt-scrolltop">
+            <i class="fa fa-arrow-up"></i>
+        </div>
+        <!-- end::Scrolltop -->
+        <!-- begin::Sticky Toolbar -->
+        <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
+                <a href="http://partner.thetravelsquare.in/partner-travpay" class=""><i class="flaticon2-drop"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
+                <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Help">
+                <a href="mailto:partnercare@thetravelsquare.in" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Us">
+                <a href="https://wa.me/919999007037" target="_blank" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
+            </li>
+		</ul>
 						<?php include('jquery.php');?>
         <script src="<?= base_url('resource/agroxa/plugins/datatables/dataTables.responsive.min.js');?>"></script>
         <script src="<?= base_url('resource/agroxa/plugins/datatables/responsive.bootstrap4.min.js');?>"></script>
 
         <!-- Datatable init js -->
         <script src="<?= base_url('resource/agroxa/assets/pages/datatables.init.js');?>"></script>
+		
+		<script src="<?= base_url('resource/auth/vendors/tinymce/tinymce.min.js');?>"></script>
+
+        <!-- Tinymce Wysuhtml5 Init JavaScript -->
+        <script src="<?= base_url('resource/auth/dist/js/tinymce-data.js');?>"></script>
+
+        <script>
+            
+            var amount=$('#amount').val();
+            var gid="";
+            $('#currency_id').change(function() {
+                gid = $(this).val(); 
+            });
+            
+            $("#click_btn").click(function(){
+                var amount=$('#amount').val();
+                $.ajax({
+					method: "POST",
+					url: "<?= base_url();?>Partner/get_currency_tracking/"+gid+"/"+amount,
+					})
+					.done(function( myJSON ) {
+								
+						$("#constructed_amount").html(myJSON);
+				});
+            });
+        </script>
+
+    </body>
+</html>

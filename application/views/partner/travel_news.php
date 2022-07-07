@@ -56,7 +56,7 @@
                             <div class="kt-container  kt-container--fluid ">
                                 <div class="kt-subheader__main">
                                     <h3 class="kt-subheader__title">
-                                        Currency Tracker                            
+                                        Travel News | Global                           
                                     </h3>
 
                                 </div>
@@ -66,16 +66,97 @@
                         <!-- end:: Content Head -->
                         <!-- begin:: Content -->
                         <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+						
+						<div class="alert alert-light alert-elevate" role="alert">
+								<div class="alert-text">
+                                    The Travel Square <b>Updates You 24 x 7, 365 Days with the Latest Travel News Accross the Globe</b>. We Bring You the Best Updates About Travel Conditions
+									Aviation, New Opennings and Best Offers From Far Far Travel Industries Accross all the Countries.
+                                </div>
+							</div>
                             <!--Begin::Dashboard 1-->
                             <!--Begin::Row-->
                             
                             <!--End::Row-->
                             <!--Begin::Row-->
+							<div class="row">
+                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
+                                    <!--begin:: Widgets/Blog-->
+                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
+                                        <a href="http://partner.thetravelsquare.in/show-blog/14">
+                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(http://partner.thetravelsquare.in/uploads/64c2fb43942c4fe328b67cd61df73b5f.jpg)">
+                                                    <h3 class="kt-widget19__title kt-font-light">
+                                                        Australia Lifts Covid-19 Restrictions
+                                                    </h3>
+                                                    <div class="kt-widget19__shadow"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="kt-portlet__body">
+                                            <div class="kt-widget19__wrapper">
+                                                <div class="kt-widget19__text">
+                                                    International travellers will be able to enter Australia without declaring their COVID-19 vaccination status from Wednesday, following 
+													advice from the country’s chief...
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end:: Widgets/Blog-->	
+                                </div>
+                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
+                                    <!--begin:: Widgets/Blog-->
+                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
+                                        <a href="http://partner.thetravelsquare.in/show-blog/17">
+                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(http://partner.thetravelsquare.in/uploads/83b7cc19274930d5be82c4f137d52eb8.jpg)">
+                                                    <h3 class="kt-widget19__title kt-font-light">
+                                                        Bhutan Re-Opens in September 22
+                                                    </h3>
+                                                    <div class="kt-widget19__shadow"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="kt-portlet__body">
+                                            <div class="kt-widget19__wrapper">
+                                                <div class="kt-widget19__text">
+                                                    Bhutan is all set to reopen for international travellers from September. Referring to this, an official stated that the kingdom will be
+													reopening for the first time since the pandemic...  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end:: Widgets/Blog-->	
+                                </div>
+                                <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
+                                    <!--begin:: Widgets/Blog-->
+                                    <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
+                                        <a href="http://partner.thetravelsquare.in/show-blog/20">
+                                            <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(http://partner.thetravelsquare.in/uploads/a6ac5d09474ef893396e644383dca4c9.jpg)">
+                                                    <h3 class="kt-widget19__title kt-font-light">
+                                                        Turkey lifts all Coronavirus restrictions for Indian travellers
+                                                    </h3>
+                                                    <div class="kt-widget19__shadow"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="kt-portlet__body">
+                                            <div class="kt-widget19__wrapper">
+                                                <div class="kt-widget19__text">
+                                                    Yes, you can now travel to the very beautiful Turkey, sans COVID restrictions. In a recent travel update, the government of Turkey has removed
+													all the COVID-related restrictions for Indian travellers...  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end:: Widgets/Blog-->	
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
                                     <!--begin:: Widgets/Blog-->
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://partner.thetravelsquare.in/free-room-nights-for-agents-sale">
+                                        <a href="http://partner.thetravelsquare.in/show-blog/13">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
                                                 <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://www.squareyards.com/blog/wp-content/uploads/2022/01/E-passports-in-india.png)">
                                                     <h3 class="kt-widget19__title kt-font-light">
@@ -99,9 +180,9 @@
                                 <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
                                     <!--begin:: Widgets/Blog-->
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://partner.thetravelsquare.in/FAM-business-trips">
+                                        <a href="http://partner.thetravelsquare.in/show-blog/25">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://www.thehindu.com/incoming/uoi5po/article65514981.ece/alternates/FREE_1200/2022-06-09T155952Z_113839266_RC2EOU9ZGHGW_RTRMADP_3_AMERICAN-AIRLINE-JETBLUE-AIRWAYS-DOJ.JPG);?>)">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(http://partner.thetravelsquare.in/uploads/bb9ac57d247eb493e8bd2b01aa231784.jpg)">
                                                     <h3 class="kt-widget19__title kt-font-light">
                                                         U.S. lifts COVID test requirement
                                                     </h3>
@@ -123,9 +204,9 @@
                                 <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
                                     <!--begin:: Widgets/Blog-->
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://partner.thetravelsquare.in/partner-purchase-leads">
+                                        <a href="http://partner.thetravelsquare.in/show-blog/26">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://333j0m3ycbcd26cb2f14cdg6-wpengine.netdna-ssl.com/wp-content/uploads/2021/11/Thailand-Living-1-810x424.jpg);?>)">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(http://partner.thetravelsquare.in/uploads/9ddf65c4f0e4639928ff69513c5361c2.jpg)">
                                                     <h3 class="kt-widget19__title kt-font-light">
                                                         Indians Rushing back to Thailand
                                                     </h3>
@@ -149,9 +230,9 @@
                                 <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
                                     <!--begin:: Widgets/Blog-->
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://partner.thetravelsquare.in/partner-travpay">
+                                        <a href="http://partner.thetravelsquare.in/show-blog/23">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://imageio.forbes.com/specials-images/imageserve/5df7fb014e2917000783339f/China-is-projected-to-surpass-the-U-S--as-the-world-s-largest-economy-in-the-next/960x0.jpg?format=jpg&width=960)">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(http://partner.thetravelsquare.in/uploads/de16ba18b3293add3f21c0a5b5b20cee.jpg)">
                                                     <h3 class="kt-widget19__title kt-font-light">
                                                         China softens its COVID-19 travel restrictions
                                                     </h3>
@@ -173,9 +254,9 @@
                                 <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
                                     <!--begin:: Widgets/Blog-->
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://partner.thetravelsquare.in/learn-how-to-sell">
+                                        <a href="http://partner.thetravelsquare.in/show-blog/22">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://d1e00ek4ebabms.cloudfront.net/production/3a2e422e-3069-4749-9576-25043bf1a749.jpg)">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(http://partner.thetravelsquare.in/uploads/ef741867d8e0dfebb2f92c657702a4f8.jpg)">
                                                     <h3 class="kt-widget19__title kt-font-light">
                                                         Wizz Air increases flights to meet busy Eid holiday demand
                                                     </h3>
@@ -197,7 +278,7 @@
                                 <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
                                     <!--begin:: Widgets/Blog-->
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://partner.thetravelsquare.in/partner-platform-live-demo">
+                                        <a href="http://partner.thetravelsquare.in/show-blog/21">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
                                                 <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://moderndiplomacy.eu/wp-content/uploads/2022/01/norwegian-viva.jpg)">
                                                     <h3 class="kt-widget19__title kt-font-light">
@@ -251,7 +332,7 @@
                 <a href="mailto:partnercare@thetravelsquare.in" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
             </li>
             <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Us">
-                <a href="https://wa.me/919999007037" target="_blank" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
+                <a href="https://wa.me/919999007037" target="_blank"><i class="flaticon2-chat-1"></i></a>
             </li>
 		</ul>
         <!-- end::Sticky Toolbar -->

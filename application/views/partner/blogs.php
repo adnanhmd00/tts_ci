@@ -105,7 +105,7 @@
   
   
        <nav class="navbar navbar-expand-sm navbar-dark nav-white fixed-top" id="navScrollspy">
-               <a href="index.html" class="navbar-brand"><img src="./img/the-travel-square-logo.png" height="40" width="40"></a>
+               <a href="index.html" class="navbar-brand"><img src="http://thetravelsquare.in/img/the-travel-square-logo.png" height="40" width="40"></a>
            <button class="custom-toggler navbar-toggler" data-target="#navCollapse" data-toggle="collapse">
                <span class="navbar-toggler-icon"></span>
            </button>
@@ -113,14 +113,11 @@
                <ul class="navbar-nav ml-auto">
                    
                    <li class="nav-item"><a href="https://play.google.com/store/apps/details?id=com.application.tts" target="_blank" class="nav-link"><font color="white"><i class="fa fa-mobile-phone"></i>&nbsp;&nbsp;	Download App</font></a></li>&nbsp;
-                   <li class="nav-item"><a href="https://www.youtube.com/embed/3QeVjMsyqpo" target="_blank" class="nav-link"><font color="white"><i class="fa fa-play-circle"></i>&nbsp;&nbsp;How Does it Work</font></a></li>&nbsp;
-                   <li class="nav-item"><a href="http://blogs.thetravelsquare.in/" target="_blank" class="nav-link"><font color="white"><i class="fa fa-check-square"></i>&nbsp;&nbsp; Travel Blogs</font></a></li>
-                   <li class="nav-item"><a href="http://reservations.thetravelsquare.in/manage-bookings" target="_blank" class="nav-link"><font color="white"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;	Manage Bookings</font></a></li>&nbsp;
-                   <li class="nav-item"><a href="http://support.thetravelsquare.in/flight-customer-care" target="_blank" class="nav-link"><font color="white"><i class="fa fa-plane"></i>&nbsp;&nbsp;	Airline Support</font></a></li>&nbsp;
-				   <li class="nav-item"><a href="http://support.thetravelsquare.in/customercare" target="_blank" class="nav-link"><font color="white"><i class="fa fa-headphones"></i>&nbsp;&nbsp; Customer Care</font></a></li>&nbsp;
-                   <li class="nav-item"><a a href="" data-toggle="modal" data-target="#customerlogin" class="nav-link"><button class="white btn btn-sm btn-block">
-				   <font color="black">&nbsp; <b>LOGIN </b> &nbsp;</font></button></a></li>&nbsp;&nbsp;
-				   <li class="nav-item"><a a href="" data-toggle="modal" data-target="#customersignup" class="nav-link"><font color="white"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;Sign Up</font></a></li>&nbsp;
+                   <li class="nav-item"><a href="http://partner.thetravelsquare.in/contact-us" target="_blank" class="nav-link"><font color="white"><i class="fa fa-phone"></i>&nbsp;&nbsp; +91 - 8595-9027-50</font></a></li>&nbsp;
+                  
+				   <li class="nav-item"><a href="http://partner.thetravelsquare.in/signup" target="_blank" class="nav-link"><font color="white"><i class="fa fa-edit"></i>&nbsp;&nbsp; Write Blog</font></a></li>&nbsp;
+				   <li class="nav-item"><a href="http://partner.thetravelsquare.in/signup" target="_blank" class="nav-link"><font color="white"><i class="fa fa-location-arrow"></i>&nbsp;&nbsp; Advertise With Us</font></a></li>&nbsp;
+				   <li class="nav-item"><a href="http://partner.thetravelsquare.in/partner-care" target="_blank" class="nav-link"><font color="white"><i class="fa fa-headphones"></i>&nbsp;&nbsp;Contact Us</font></a></li>&nbsp;
                </ul>
            </div>
        </nav>
@@ -132,7 +129,7 @@
                        <div class="col-md-12">
                             <div class="text-center">
                                 <h1 class="text-size">TTS BLOGS</h1>
-                                <p class="lead">Curating Travel News, Posts and Rich Content</p>
+                                <p class="lead">We bring you the taste of best travel experiences around the globe</p>
                             </div>
                             
                        </div>
@@ -167,9 +164,7 @@
                             <div class="card-body">
                                 <div class="card-text text-dark">
                                     <p class="m-0"><?= $data[1]->tagline;?></p>
-                                    <div class="row small ml-1">
-                                        <i class="fa fa-star mt-1  gold"></i> <p>&nbsp;4.1</p> <span class="text-muted">(31 Reviews)</span>
-                                    </div>
+                                    
                                 </div>
                                 <div class="float-left text-dark">
                                 </div>
@@ -190,15 +185,12 @@
                         <div class="card-img">
                             <img style="width: 100%; height: 180px;" src="<?= $data[$i]->image;?>" alt="" class="img-fluid">
                             <div class="card-img-overlay">
-                                <i class="fa fa-map-marker"></i> &nbsp;<?= $data[$i]->headline;?>
+                                <i class="fa fa-star mt-1 gold"></i> &nbsp;<?= $data[$i]->headline;?>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="card-text text-dark mt-0 py-0">
                                 <p class="m-0"><?= $data[$i]->tagline;?></p>
-                                <div class="row small ml-1">
-                                <i class="fa fa-star mt-1 gold"></i> <p>&nbsp;4.1</p> <span class="text-muted">(31 Reviews)</span>
-                                </div>
                             </div>
                             <div class="float-left text-dark">
                             </div>
@@ -230,7 +222,7 @@
 				   </font>
 				</div>
                 <div class="offset-md-2 col-md-4"><br>
-                    <img style="width: 65%; height: 85px;" src="img/the-travel-square-logo-main.png" alt="the-travel-square-logo" class="img-fluid mx-auto d-block">
+                    <img style="width: 65%; height: 85px;" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png" alt="the-travel-square-logo" class="img-fluid mx-auto d-block">
                 </div>
             </div><br>
 			
@@ -296,14 +288,14 @@
                 <div class="col">
                    <h6 class="text-muted">Support Center</h6>
                    <ul class="nav">
-                       <li class="nav-item"><a href="https://support.thetravelsquare.in/contactus" class="nav-link" target="_blank">Contact Us</a></li>
+                       <li class="nav-item"><a href="http://support.thetravelsquare.in/contactus" class="nav-link" target="_blank">Contact Us</a></li>
                        <li class="nav-item"><a href="http://support.thetravelsquare.in/customercare" class="nav-link" target="_blank">Customer Care</a></li>
                        <li class="nav-item"><a href="http://support.thetravelsquare.in/partnercare" class="nav-link" target="_blank">Partner Help</a></li>
-                       <li class="nav-item"><a href="http://support.thetravelsquare.in/sellercare" class="nav-link" target="_blank">Seller Help</a></li>
-                       <li class="nav-item"><a href="http://www.thetravelsquare.in/press-release" class="nav-link" target="_blank">Press Release</a></li>
-                       <li class="nav-item"><a href="http://www.thetravelsquare.in/investor-relations" class="nav-link" target="_blank">Investor Relations</a></li>
-                       <li class="nav-item"><a href="http://www.thetravelsquare.in/privacy-policy" class="nav-link" target="_blank">Privacy & Cookie Policy</a></li>
-                       <li class="nav-item"><a href="http://www.thetravelsquare.in/terms-and-conditions" class="nav-link" target="_blank">Terms & Conditions</a></li>
+                       <li class="nav-item"><a href="http://support.thetravelsquare.in/seller" class="nav-link" target="_blank">Seller Help</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/press-release" class="nav-link" target="_blank">Press Release</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/investor-relations" class="nav-link" target="_blank">Investor Relations</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/privacy-policy" class="nav-link" target="_blank">Privacy & Cookie Policy</a></li>
+                       <li class="nav-item"><a href="http://thetravelsquare.in/terms-and-conditions" class="nav-link" target="_blank">Terms & Conditions</a></li>
                        
                    </ul>
                 </div>
