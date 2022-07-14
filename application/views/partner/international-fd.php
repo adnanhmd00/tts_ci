@@ -145,76 +145,63 @@
     	<!-- end:: Header Mobile -->	
     	<div class="kt-grid kt-grid--hor kt-grid--root">
     		<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
-    			<!-- begin:: Aside -->
-                <!-- Uncomment this to display the close button of the panel
-                    <button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
-                -->
-                <?php include('aside.php');?>
+    			
+				<div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
+                    <!-- begin:: Aside -->
+                    <?php include('aside.php');?>
+                    <!-- end:: Aside -->	<!-- begin:: Aside Menu -->
+                    
+                    <!-- end:: Aside Menu -->				
+                </div>
                 <!-- end:: Aside -->
                 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
                 	<!-- begin:: Header -->
-                	<?php include('nav.php');?>
+					<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
+                        <!-- begin:: Header Menu -->
+                        <!-- Uncomment this to display the close button of the panel
+                            <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
+                            -->
+                        <?php include('nav.php');?>
+                        <!-- end:: Header Menu -->
+                        <!-- begin:: Header Topbar -->
+                        
+                        <!-- end:: Header Topbar -->
+                    </div>
+					
                 	<!-- end:: Header -->
                 	<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
                 		<!-- begin:: Content Head -->
                 		<div class="kt-subheader  kt-grid__item" id="kt_subheader">
                 			<div class="kt-container  kt-container--fluid ">
-                				<div class="kt-subheader__main">
-                					<h3 class="kt-subheader__title">Partner ID</h3>
-                					<span class="kt-subheader__separator kt-subheader__separator--v"></span>
-                					<span class="kt-subheader__desc">TSA167D</span>
-                					
-                					<div class="kt-input-icon kt-input-icon--right kt-subheader__search kt-hidden">
-                						<input type="text" class="form-control" placeholder="Search order..." id="generalSearch">
-                						<span class="kt-input-icon__icon kt-input-icon__icon--right">
-                							<span><i class="flaticon2-search-1"></i></span>
-                						</span>
-                					</div>
-                				</div>
-                				<div class="kt-subheader__toolbar">
-                					<div class="kt-subheader__wrapper">
-                						<a href="http://partner.thetravelsquare.in/" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Bookings Calender">
-                							<span class="kt-subheader__btn-daterange-title" id="kt_dashboard_daterangepicker_title">Date : </span>&nbsp;
-                							<span class="kt-subheader__btn-daterange-date" id="kt_dashboard_daterangepicker_date">Mar 17</span>
-                							<i class="flaticon2-calendar-1"></i>
-                						</a>
-                						<div class="dropdown dropdown-inline" data-toggle-="kt-tooltip" title="Publish Deal" data-placement="left">
-                							<a href="http://partner.thetravelsquare.in/" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--md">
-                									<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                										<polygon points="0 0 24 0 24 24 0 24"></polygon>
-                										<path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
-                										<path d="M11,14 L9,14 C8.44771525,14 8,13.5522847 8,13 C8,12.4477153 8.44771525,12 9,12 L11,12 L11,10 C11,9.44771525 11.4477153,9 12,9 C12.5522847,9 13,9.44771525 13,10 L13,12 L15,12 C15.5522847,12 16,12.4477153 16,13 C16,13.5522847 15.5522847,14 15,14 L13,14 L13,16 C13,16.5522847 12.5522847,17 12,17 C11.4477153,17 11,16.5522847 11,16 L11,14 Z" fill="#000000"></path>
-                									</g>
-                								</svg>
-                								<!--<i class="flaticon2-plus"></i>-->
-                							</a>
-                						</div>
-                					</div>
-                				</div>
+                				<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+									<div class="kt-container  kt-container--fluid ">
+										<div class="kt-subheader__main">
+											<h3 class="kt-subheader__title">
+                                        International Fixed Departures                           
+												</h3>
+
+										</div>
+									</div>
+								</div>
                 			</div>
                 		</div>
                 		<!-- end:: Content Head -->		
 						<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-    <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-        <!-- begin:: Content Head -->
-
-        <!-- end:: Content Head -->
-        <!-- begin:: Content -->
-        <!-- end:: Content -->
-    </div>
-    <!-- remote datatable modal -->
-
-    <!-- local datatable modal -->
+    
+    <div class="alert alert-light alert-elevate" role="alert">
+								<div class="alert-text">
+                                    The Travel Square Holds Pre-Purchased Flight Inventory of Major International Sectors for Which Live Booking
+									is Available with Live Inventory of More than 236+ Fixed Departures for Over 24+ Aviation Sector. The Inventory is Maintained by
+									<a href="http://b2bfixeddepartures.com/">B2B Fixed Departures (b2bfixeddepartures.com)</a> in Real Time.
+                                </div>
+	</div>
 
     <div class="kt-portlet kt-portlet--mobile">
         <div class="kt-portlet__head kt-portlet__head--lg">
             <div class="kt-portlet__head-label">
-                <span class="kt-portlet__head-icon">
-                    <i class="kt-font-brand flaticon2-line-chart"></i>
-                </span>
                 <h3 class="kt-portlet__head-title">
-                    Pre-Purchased Fixed Departures (Direct Flights Only) </h3>
+                    Pre-Purchased Fixed Departures | International Sectors 
+				</h3>
             </div>
 
         </div>
@@ -260,110 +247,35 @@
             <!--end: Datatable -->
         </div>
     </div>
-    <div id="kt_modal_sub_KTDatatable_remote" class="modal fade" role="dialog" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content" style="min-height: 590px;">
+    
+</div>
 
-                <div class="modal-body">
-                    <!--begin: Search Form -->
-                    <div class="kt-form kt-form--label-right kt-margin-t-20 kt-margin-b-10">
-                        <div class="row align-items-center">
-                            <div class="col-xl-8 order-2 order-xl-1">
-                                <div class="row align-items-center">
-                                    <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
-                                        <div class="kt-input-icon kt-input-icon--left">
-                                            <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
-                                            <span class="kt-input-icon__icon kt-input-icon__icon--left">
-                                                <span><i class="la la-search"></i></span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
-                                        <div class="kt-form__group kt-form__group--inline">
-                                            <div class="kt-form__label">
-                                                <label>Status:</label>
-                                            </div>
-                                            <div class="kt-form__control">
-                                                <div class="dropdown bootstrap-select form-control">
-                                                    <select class="form-control bootstrap-select" id="kt_form_status" tabindex="-98">
-                                                        <option value="">All</option>
-                                                        <option value="1">Pending</option>
-                                                        <option value="2">Delivered</option>
-                                                        <option value="3">Canceled</option>
-                                                        <option value="4">Success</option>
-                                                        <option value="5">Info</option>
-                                                        <option value="6">Danger</option>
-                                                    </select>
-                                                    <button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="combobox" aria-owns="bs-select-10" aria-haspopup="listbox" aria-expanded="false" data-id="kt_form_status" title="All">
-                                                        <div class="filter-option">
-                                                            <div class="filter-option-inner">
-                                                                <div class="filter-option-inner-inner">All</div>
-                                                            </div>
-                                                        </div>
-                                                    </button>
-                                                    <div class="dropdown-menu ">
-                                                        <div class="inner show" role="listbox" id="bs-select-10" tabindex="-1">
-                                                            <ul class="dropdown-menu inner show" role="presentation"></ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
-                                        <div class="kt-form__group kt-form__group--inline">
-                                            <div class="kt-form__label">
-                                                <label>Type:</label>
-                                            </div>
-                                            <div class="kt-form__control">
-                                                <div class="dropdown bootstrap-select form-control">
-                                                    <select class="form-control bootstrap-select" id="kt_form_type" tabindex="-98">
-                                                        <option value="">All</option>
-                                                        <option value="1">Online</option>
-                                                        <option value="2">Retail</option>
-                                                        <option value="3">Direct</option>
-                                                    </select>
-                                                    <button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="combobox" aria-owns="bs-select-11" aria-haspopup="listbox" aria-expanded="false" data-id="kt_form_type" title="All">
-                                                        <div class="filter-option">
-                                                            <div class="filter-option-inner">
-                                                                <div class="filter-option-inner-inner">All</div>
-                                                            </div>
-                                                        </div>
-                                                    </button>
-                                                    <div class="dropdown-menu ">
-                                                        <div class="inner show" role="listbox" id="bs-select-11" tabindex="-1">
-                                                            <ul class="dropdown-menu inner show" role="presentation"></ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 order-1 order-xl-2 kt-align-right">
-                                <a href="https://keenthemes.com/metronic/preview/demo1/crud/metronic-datatable/advanced/modal.html#" class="btn btn-default kt-hidden">
-                                    <i class="la la-cart-plus"></i> New Order
-                                </a>
-                                <div class="kt-separator kt-separator--border-dashed kt-separator--space-lg d-xl-none"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end: Search Form -->
-                </div>
-                <div class="modal-body modal-body-fit">
-                    <!--begin: Datatable -->
-                    <div id="modal_sub_datatable_ajax_source" class="kt-datatable--destroyed"></div>
-                    <!--end: Datatable -->
-                </div>
-                <div class="modal-footer kt-hidden">
-                    <button type="button" class="btn btn-clean btn-bold btn-upper btn-font-md" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-default btn-bold btn-upper btn-font-md">Submit</button>
+                    <!-- begin:: Footer -->
+                        <?php include('footer.php');?>
+                    <!-- end:: Footer -->			
                 </div>
             </div>
         </div>
-    </div>
-</div>
+		
+		<div id="kt_scrolltop" class="kt-scrolltop">
+            <i class="fa fa-arrow-up"></i>
+        </div>
+        <!-- end::Scrolltop -->
+        <!-- begin::Sticky Toolbar -->
+        <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="TravPay Wallet">
+                <a href="http://partner.thetravelsquare.in/partner-travpay" class=""><i class="flaticon2-drop"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="My Account Manager">
+                <a href="tel:9999007037"><i class="flaticon2-gear"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Help">
+                <a href="mailto:partnercare@thetravelsquare.in" target="_blank"><i class="flaticon2-telegram-logo"></i></a>
+            </li>
+            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" id="kt_sticky_toolbar_chat_toggler" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Chat Us">
+                <a href="https://wa.me/919999007037" target="_blank" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon2-chat-1"></i></a>
+            </li>
+		</ul>
 
         <?php include('jquery.php');?>
         <script src="<?= base_url('resource/agroxa/plugins/datatables/dataTables.responsive.min.js');?>"></script>
@@ -372,4 +284,6 @@
         <!-- Datatable init js -->
         <script src="<?= base_url('resource/agroxa/assets/pages/datatables.init.js');?>"></script>
 
-		<?php include('footer.php');?>
+
+    </body>
+</html>

@@ -37,18 +37,20 @@ class Experience extends CI_Controller
 
 
     public function experienceList($city){
+        $userinfo = $this->userinfo;
         $city = str_replace('%20', ' ', $city);
         $sql="Select * from iteneraries where city LIKE '%$city%'";
         $query = $this->db->query($sql);
         $data = $query->result_array();
         $count = $query->num_rows();
-        $this->load->view('partner/experience-list', compact('data', 'city', 'count'));
+        $this->load->view('partner/experience-list', compact('data', 'city', 'count', 'userinfo'));
     }
 
     public function experienceGallery($id){
+        $userinfo = $this->userinfo;
         $sql = "Select * from iteneraries where id = '$id'";
         $query = $this->db->query($sql);
         $data = $query->result_array();
-        $this->load->view('partner/experience-gallery', compact('data'));
+        $this->load->view('partner/experience-gallery', compact('data', 'userinfo'));
     }
 }

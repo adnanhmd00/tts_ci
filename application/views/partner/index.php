@@ -137,7 +137,7 @@
 					<div class="kt-widget24__details">
 						<div class="kt-widget24__info">
 							<h4 class="kt-widget24__title">
-					            Total Sales (Jun)
+					            Total Sales (Jul)
 					        </h4>
 					        <span class="kt-widget24__desc">
 					            Total Booking Amount
@@ -145,12 +145,12 @@
 						</div>
 
 						<span class="kt-widget24__stats kt-font-dark">
-					        ₹40,212
+					        ₹0
 					    </span>
 					</div>
 
 				    <div class="progress progress--sm">
-						<div class="progress-bar kt-bg-dark" role="progressbar" style="width: 40%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						<div class="progress-bar kt-bg-dark" role="progressbar" style="width: 0%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 
 					<div class="kt-widget24__action">
@@ -158,7 +158,7 @@
 							Target
 						</span>
 						<span class="kt-widget24__number">
-							₹100,000
+							₹1,000,000
 					    </span>
 					</div>
 				</div>
@@ -179,12 +179,12 @@
 						</div>
 
 						<span class="kt-widget24__stats kt-font-dark">
-					       1
+					       0
 					    </span>
 					</div>
 
 				    <div class="progress progress--sm">
-						<div class="progress-bar kt-bg-dark" role="progressbar" style="width: 10%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						<div class="progress-bar kt-bg-dark" role="progressbar" style="width: 0%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 
 					<div class="kt-widget24__action">
@@ -192,7 +192,7 @@
 							Target
 						</span>
 						<span class="kt-widget24__number">
-							10
+							100
 					    </span>
 					</div>
 				</div>
@@ -208,17 +208,17 @@
 					            Total Bookings
 					        </h4>
 					        <span class="kt-widget24__desc">
-					            No. of Bookings (Jun)
+					            No. of Bookings (Jul)
 					        </span>
 						</div>
 
 						<span class="kt-widget24__stats kt-font-dark">
-					        43
+					        0
 					    </span>
 					</div>
 
 				    <div class="progress progress--sm">
-						<div class="progress-bar kt-bg-dark" role="progressbar" style="width: 43%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						<div class="progress-bar kt-bg-dark" role="progressbar" style="width: 0%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 
 					<div class="kt-widget24__action">
@@ -242,12 +242,12 @@
 					            TravPAY Balance
 					        </h4>
 					        <span class="kt-widget24__desc">
-					            Funds Uploaded to Wallet
+					            Funds in Wallet
 					        </span>
 						</div>
 
 						<span class="kt-widget24__stats kt-font-dark">
-					        ₹10,321
+					        <?= $symbol?> <?= $walletBalance;?>
 					    </span>
 					</div>
 
@@ -260,7 +260,7 @@
 							Target
 						</span>
 						<span class="kt-widget24__number">
-							₹100,000
+							₹500,000
 					    </span>
 					</div>
 				</div>
@@ -369,7 +369,7 @@
                                                 </h3>
                                             </div>
                                             <div class="kt-portlet__head-toolbar">
-                                                <a href="http://partner.thetravelsquare.in/fixeddepartures" target="blank" class="btn btn-label-dark btn-sm  btn-bold">
+                                                <a href="http://partner.thetravelsquare.in/domestic-fd" target="blank" class="btn btn-label-dark btn-sm  btn-bold">
                                                 VIEW
                                                 </a>
                                             </div>
@@ -387,7 +387,7 @@
                                                 </h3>
                                             </div>
                                             <div class="kt-portlet__head-toolbar">
-                                                <a href="" target="blank" class="btn btn-label-dark btn-sm btn-bold">
+                                                <a href="http://partner.thetravelsquare.in/maldives" target="blank" class="btn btn-label-dark btn-sm btn-bold">
                                                 VIEW
                                                 </a>
                                             </div>
@@ -417,7 +417,7 @@
                                                 </h3>
                                             </div>
                                             <div class="kt-portlet__head-toolbar">
-                                                <a href="" target="blank" class="btn btn-label-dark btn-sm btn-bold">
+                                                <a href="http://partner.thetravelsquare.in/hotels" target="blank" class="btn btn-label-dark btn-sm btn-bold">
                                                 VIEW
                                                 </a>
                                             </div>
@@ -451,8 +451,8 @@
                                                 </h3>
                                             </div>
                                             <div class="kt-portlet__head-toolbar">
-                                                <a href="" class="btn btn-label-dark btn-sm btn-bold">
-                                                VIEW FD's
+                                                <a href="http://partner.thetravelsquare.in/international-fd" class="btn btn-label-dark btn-sm btn-bold">
+                                                VIEW DEPARTURES
                                                 </a>
                                             </div>
                                         </div>
@@ -473,7 +473,7 @@
                                                 </h3>
                                             </div>
                                             <div class="kt-portlet__head-toolbar">
-                                                <a href="" class="btn btn-label-dark btn-sm btn-bold">
+                                                <a href="http://partner.thetravelsquare.in/international-fd" class="btn btn-label-dark btn-sm btn-bold">
                                                 VIEW DEPARTURES
                                                 </a>
                                             </div>
@@ -492,7 +492,7 @@
                                                 </h3>
                                             </div>
                                             <div class="kt-portlet__head-toolbar">
-                                                <a href="" class="btn btn-label-dark btn-sm btn-bold">
+                                                <a href="http://partner.thetravelsquare.in/domestic-fd" class="btn btn-label-dark btn-sm btn-bold">
                                                 VIEW DEPARTURES
                                                 </a>
                                             </div>
@@ -559,7 +559,7 @@
                                 <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
                                     <!--begin:: Widgets/Blog-->
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://partner.thetravelsquare.in/partner-purchase-leads">
+                                        <a href="http://partner.thetravelsquare.in/partner-ppc">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
                                                 <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(<?= base_url('resource/admin/img/advertise-with-us.jpg');?>)">
                                                     <h3 class="kt-widget19__title kt-font-light">
@@ -681,7 +681,7 @@
                                 <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
                                     <!--begin:: Widgets/Blog-->
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://b2bfixeddepartures.com/international-fd">
+                                        <a href="http://partner.thetravelsquare.in/international-fd">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
                                                 <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://img.etimg.com/thumb/msid-82330294,width-650,imgsize-1111158,,resizemode-4,quality-100/maldvies.jpg)">
                                                     <h3 class="kt-widget19__title kt-font-light">
@@ -704,9 +704,9 @@
                                 <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
                                     <!--begin:: Widgets/Blog-->
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://b2bfixeddepartures.com/international-fd">
+                                        <a href="http://partner.thetravelsquare.in/international-fd">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(./img/dubai-fixed-departures-by-b2b-fixed-departures.jpg)">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(http://b2bfixeddepartures.com/img/dubai-fixed-departures-by-b2b-fixed-departures.jpg)">
                                                     <h3 class="kt-widget19__title kt-font-light">
                                                         Best B2B Fares for Dubai FD's
                                                     </h3>
@@ -729,7 +729,7 @@
                                 <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
                                     <!--begin:: Widgets/Blog-->
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://b2bfixeddepartures.com/domestic-fd">
+                                        <a href="http://partner.thetravelsquare.in/domestic-fd">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
                                                 <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://imgk.timesnownews.com/story/Goa_beach_istock_1200.jpg?tr=w-1200,h-900)">
                                                     <h3 class="kt-widget19__title kt-font-light">
@@ -752,7 +752,7 @@
                                 <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
                                     <!--begin:: Widgets/Blog-->
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://b2bfixeddepartures.com/international-fd">
+                                        <a href="http://partner.thetravelsquare.in/international-fd">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
                                                 <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(https://assets.traveltriangle.com/blog/wp-content/uploads/2019/08/og-for-beaches-in-phuket.jpg)">
                                                     <h3 class="kt-widget19__title kt-font-light">
@@ -775,9 +775,9 @@
                                 <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
                                     <!--begin:: Widgets/Blog-->
                                     <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                        <a href="http://b2bfixeddepartures.com/domestic-fd">
+                                        <a href="http://partner.thetravelsquare.in/domestic-fd">
                                             <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(./img/leh-ladakh-fixed-departure-by-b2b-fixed-departures.jpg)">
+                                                <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(http://b2bfixeddepartures.com/img/leh-ladakh-fixed-departure-by-b2b-fixed-departures.jpg)">
                                                     <h3 class="kt-widget19__title kt-font-light">
                                                         Leh-Ladakh Direct Flights
                                                     </h3>
@@ -813,7 +813,15 @@
         <!-- end::Quick Panel -->
         <!-- begin::Scrolltop -->
         <div id="kt_scrolltop" class="kt-scrolltop">
-            <i class="fa fa-arrow-up"></i>
+            <span class="svg-icon svg-icon-dark svg-icon-2x">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<polygon points="0 0 24 0 24 24 0 24"/>
+					<path d="M8.2928955,10.2071068 C7.90237121,9.81658249 7.90237121,9.18341751 8.2928955,8.79289322 C8.6834198,8.40236893 9.31658478,8.40236893 9.70710907,8.79289322 L15.7071091,14.7928932 C16.085688,15.1714722 16.0989336,15.7810586 15.7371564,16.1757246 L10.2371564,22.1757246 C9.86396402,22.5828436 9.23139665,22.6103465 8.82427766,22.2371541 C8.41715867,21.8639617 8.38965574,21.2313944 8.76284815,20.8242754 L13.6158645,15.5300757 L8.2928955,10.2071068 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000003, 15.500003) scale(-1, 1) rotate(-90.000000) translate(-12.000003, -15.500003) "/>
+					<path d="M6.70710678,12.2071104 C6.31658249,12.5976347 5.68341751,12.5976347 5.29289322,12.2071104 C4.90236893,11.8165861 4.90236893,11.1834211 5.29289322,10.7928968 L11.2928932,4.79289682 C11.6714722,4.41431789 12.2810586,4.40107226 12.6757246,4.76284946 L18.6757246,10.2628495 C19.0828436,10.6360419 19.1103465,11.2686092 18.7371541,11.6757282 C18.3639617,12.0828472 17.7313944,12.1103502 17.3242754,11.7371577 L12.0300757,6.88414142 L6.70710678,12.2071104 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(12.000003, 8.500003) scale(-1, 1) rotate(-360.000000) translate(-12.000003, -8.500003) "/>
+					</g>
+				</svg>
+			</span>
         </div>
         <!-- end::Scrolltop -->
         <!-- begin::Sticky Toolbar -->
