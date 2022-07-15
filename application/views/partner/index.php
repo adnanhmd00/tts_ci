@@ -247,7 +247,7 @@
 						</div>
 
 						<span class="kt-widget24__stats kt-font-dark">
-					        <?= $symbol?> <?= $walletBalance;?>
+					        0
 					    </span>
 					</div>
 

@@ -190,9 +190,9 @@
     
     <div class="alert alert-light alert-elevate" role="alert">
 								<div class="alert-text">
-                                    The Travel Square Holds Pre-Purchased Flight Inventory of Major International Sectors for Which Live Booking
+                                    The Travel Square Holds <b>Pre-Purchased Flight Inventory of Major International Sectors</b> for Which Live Booking
 									is Available with Live Inventory of More than 236+ Fixed Departures for Over 24+ Aviation Sector. The Inventory is Maintained by
-									<a href="http://b2bfixeddepartures.com/">B2B Fixed Departures (b2bfixeddepartures.com)</a> in Real Time.
+									<a href="http://b2bfixeddepartures.com/" target="_blank" rel="nofollow">B2B Fixed Departures (b2bfixeddepartures.com)</a> in Real Time.
                                 </div>
 	</div>
 

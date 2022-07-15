@@ -177,7 +177,7 @@
 									<div class="kt-container  kt-container--fluid ">
 										<div class="kt-subheader__main">
 											<h3 class="kt-subheader__title">
-                                        International Fixed Departures                           
+                                        Domestic Fixed Departures                           
 												</h3>
 
 										</div>
@@ -190,9 +190,9 @@
     
     <div class="alert alert-light alert-elevate" role="alert">
 								<div class="alert-text">
-                                    The Travel Square Holds Pre-Purchased Flight Inventory of Major International Sectors for Which Live Booking
+                                    The Travel Square Holds <b>Pre-Purchased Flight Inventory of Major Domestic Sectors</b> for Which Live Booking
 									is Available with Live Inventory of More than 236+ Fixed Departures for Over 24+ Aviation Sector. The Inventory is Maintained by
-									<a href="http://b2bfixeddepartures.com/">B2B Fixed Departures (b2bfixeddepartures.com)</a> in Real Time.
+									<a href="http://b2bfixeddepartures.com/" target="_blank" rel="nofollow">B2B Fixed Departures (b2bfixeddepartures.com)</a> in Real Time.
                                 </div>
 	</div>
 
@@ -200,7 +200,7 @@
         <div class="kt-portlet__head kt-portlet__head--lg">
             <div class="kt-portlet__head-label">
                 <h3 class="kt-portlet__head-title">
-                    Pre-Purchased Fixed Departures | International Sectors 
+                    Pre-Purchased Fixed Departures | Domestic Sectors 
 				</h3>
             </div>
 
