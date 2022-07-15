@@ -20,7 +20,8 @@
     <header class="nav-wrap bg-dark fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark px-lg-0">
-                <a class="navbar-brand mr-3 swap-link" href="<?= base_url('partner');?>"><span class="text-light font-weight-bold">Go To Dashboard</span></a>
+				
+                <a class="navbar-brand mr-3 swap-link" href="http://partner.thetravelsquare.in/partner"><img src="http://partner.thetravelsquare.in/uploads/b2b/the-travel-square-logo.png" height="40" width="40"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -30,16 +31,14 @@
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown megamenu">
-                            <a class="nav-link dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><i class="las la-user mr-2" style="font-size:22px;"></i></a>
+                            <a class="nav-link dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bars mr-2" style="font-size:25px;"></i></a>
                             <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <a class="dropdown-item font-weight-bold swap-link" href="#"><i class="las la-user bg-info-alt p-1 rounded text-info"></i> <?= $userinfo->name;?></a>
-                                <a class="dropdown-item swap-link" href="#"><i class="las la-sign-out-alt bg-warning-alt text-warning p-1 rounded"></i> <?= ucwords($userinfo->type).' '.ucwords($userinfo->seller_type);?></a>
-                                <!-- <a class="dropdown-item swap-link" href="dash-downloads.html"><i class="las la-cloud-download-alt bg-success-alt text-success p-1 rounded"></i> Downloads</a> -->
+                                <a class="dropdown-item font-weight-bold swap-link" href="http://partner.thetravelsquare.in/partner/profile"><i class="fa fa-user bg-dark-alt p-2 rounded text-dark"></i> Shaun Frost</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item swap-link" href="<?= base_url('partner');?>"><i class="dropdown-icon"></i> Dashboard</a>
+                                <a class="dropdown-item swap-link" href="http://partner.thetravelsquare.in/partner"><i class="dropdown-icon"></i>< Dashboard</a>
                                
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item swap-link" href="<?= base_url('Partner/logout');?>"><i class="las la-sign-out-alt bg-danger-alt text-danger p-1 rounded"></i> Logout</a>
+                                <a class="dropdown-item swap-link" href="http://partner.thetravelsquare.in/Partner/logout"><i class="las la-sign-out-alt bg-danger-alt text-danger p-1 rounded"></i> Logout</a>
                             </div>
                         </li>
                         <li class="nav-item d-flex align-items-center">
@@ -93,12 +92,12 @@
                                 <?php }?>
                             </div>
                             
-                            <div class="demo-bar card rounded mt-3 card px-3"><br>
+                            <div class="demo-bar card rounded mt-3 card px-3"><br><br>
                                 <h4>Destination : <?= $data['deal_data']->destination;?></h4>
                                 <h5>Package Details</h5>
                                 <?= $data['deal_data']->details;?>
                             </div> 
-                            <div class="demo-bar card rounded mt-3 card px-3">
+                            <div class="demo-bar card rounded mt-3 card px-3"><br><br>
                                 <h2>Cancelation Policy</h2>
                                 <?= $data['deal_data']->cancelation_policy;?>
                             </div>    
@@ -187,40 +186,40 @@
                 <div class="row pb-3">
                     <aside class="col-md-2">
                         <div class="footer-logo">
-                            <h4 class="text-white font-weight-bold">Theme<span class="text-muted">Shop</span></h4>
+                            <a href="http://partner.thetravelsquare.in/">
+							<img alt="The Travel Square" src="http://thetravelsquare.in/img/the-travel-square-logo-main.png" width="160" height="60">
+							</a>
                         </div>
                     </aside>
                     <aside class="col-md">
-                        <h6 class="title">Company</h6>
+                        <h6 class="title">About Us</h6>
                         <ul class="list-unstyled">
-                            <li> <a href="#">About us</a></li>
-                            <li> <a href="#">Career</a></li>
-                            <li> <a href="#">Find a store</a></li>
-                            <li> <a href="#">Rules and terms</a></li>
-                            <li> <a href="#">Sitemap</a></li>
+                            <li> <a href="http://about.thetravelsquare.in/" target="_blank">TTS</a></li>
+                            <li> <a href="https://play.google.com/store/apps/details?id=com.application.tts" target="_blank">Download App</a></li>
+                            <li> <a href="http://business.thetravelsquare.in/" target="_blank">Partner Platform</a></li>
+                            <li> <a href="http://sellerconsle.thetravelsquare.in" target="_blank">Seller Platform</a></li>
                         </ul>
                     </aside>
                     <aside class="col-md">
-                        <h6 class="title">Help</h6>
+                        <h6 class="title">Privacy Policy</h6>
                         <ul class="list-unstyled">
-                            <li> <a href="#">Contact us</a></li>
-                            <li> <a href="#">Money refund</a></li>
-                            <li> <a href="#">Order status</a></li>
-                            <li> <a href="#">Shipping info</a></li>
-                            <li> <a href="#">Open dispute</a></li>
+                       <li><a href="http://thetravelsquare.in/press-release" target="_blank">Press Release</a></li>
+                       <li><a href="http://thetravelsquare.in/investor-relations" target="_blank">Investor Relations</a></li>
+                       <li><a href="http://thetravelsquare.in/privacy-policy" target="_blank">Privacy & Cookie Policy</a></li>
+                       <li><a href="http://thetravelsquare.in/terms-and-conditions" target="_blank">Terms & Conditions</a></li>
                         </ul>
                     </aside>
                     <aside class="col-md">
-                        <h6 class="title">Account</h6>
+                        <h6 class="title">Support Center</h6>
                         <ul class="list-unstyled">
-                            <li> <a href="#"> User Login </a></li>
-                            <li> <a href="#"> User register </a></li>
-                            <li> <a href="#"> Account Setting </a></li>
-                            <li> <a href="#"> My Orders </a></li>
+                       <li><a href="http://support.thetravelsquare.in/contactus" target="_blank">Contact Us</a></li>
+                       <li><a href="http://support.thetravelsquare.in/customercare" target="_blank">Customer Care</a></li>
+                       <li><a href="http://support.thetravelsquare.in/partnercare" target="_blank">Partner Help</a></li>
+                       <li><a href="http://support.thetravelsquare.in/seller" target="_blank">Seller Help</a></li>
                         </ul>
                     </aside>
                     <aside class="col-md">
-                        <h6><i class="las la-coffee mr-2"></i>Stay Up-to-Date!</h6>
+                        <h6><i class="las la-coffee mr-2"></i>Stay Travek Up-to-Date!</h6>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control bg-dark" placeholder="Subscribe" aria-label="Subscribe.." aria-describedby="button-addon2">
                             <div class="input-group-append">
@@ -240,29 +239,27 @@
                     <div class="row no-gutters d-flex justify-content-between align-items-center">
                         <div class="col-5 col-md-4 affiliate d-flex align-items-center">
                             <div class="aff-btn">
-                                <a href="/affiliate" class="btn btn-primary btn-sm">
-                                    Affiliate
+                                <a href="http://business.thetravelsquare.in/" class="btn btn-primary btn-sm">
+                                    Become a Partner
                                 </a>
                             </div>
                             <div>
-                                <p class="text-white d-none d-md-block m-0 w-75 small ml-3">
-                                    Earn 55% and more on all sales
-                                </p>
+                                
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
                             <div class="d-flex flex-row justify-content-between">
                                 <div class="fact">
-                                    <h6 class="mb-1">12,961</h6>
-                                    <p class="mb-0">Downloads</p>
+                                    <h6 class="mb-1">12,961+</h6>
+                                    <p class="mb-0">Blogs</p>
                                 </div>
                                 <div class="fact">
-                                    <h6 class="mb-1">90</h6>
-                                    <p class="mb-0">Authors</p>
+                                    <h6 class="mb-1">1M+</h6>
+                                    <p class="mb-0">Users</p>
                                 </div>
                                 <div class="fact">
-                                    <h6 class="mb-1">270</h6>
-                                    <p class="mb-0">Themes</p>
+                                    <h6 class="mb-1">270+</h6>
+                                    <p class="mb-0">Destinations</p>
                                 </div>
                             </div>
                         </div>
@@ -274,14 +271,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <span class="pr-2">© 2019 Company name</span>
-                        <span class="pr-2"><a href="#">Privacy policy</a></span>
-                        <span class="pr-2"><a href="#">Terms of use</a></span>
+                        <span class="pr-2">© 2022 All Right Reseverd | The Travel Square</span>
+                       
                     </div>
                     <div class="col-md-6 text-md-right">
-                        <a href="#" class="mr-2"><img src="assets/img/payment/footer-visa.svg" width="42"></a>
-                        <a href="#" class="mr-2"><img src="assets/img/payment/footer-mastercard.svg" width="42"></a>
-                        <a href="#"><img src="assets/img/payment/footer-paypal.svg" width="42"></a>
+                        <a href="https://www.facebook.com/thetravelsquareb2b" class="mr-2"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://twitter.com/travelsquareb2b" class="mr-2"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/travelsquareb2b" class="mr-2"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/thetravelsquareb2b/" class="mr-2"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                 </div>
                 <!-- row.// -->

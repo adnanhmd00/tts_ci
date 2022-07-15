@@ -131,7 +131,7 @@
                                 <div class="col-md-4  mt-3 rounded">
                                     <a href="/experience-detail/<?php echo $experience['id'] ?>">
                                         <div style="border-radius: 12px !important;" class="card text-dark">
-                                            <img style="border-radius: 7px 7px 0px 0px !important;width: 270px; height: 180px;" src="<?php echo json_decode($experience['photos_of_experience'])[0] ?>" alt="" class="img-fluid">
+                                            <img style="border-radius: 7px 7px 0px 0px !important; height: 180px;" src="<?php echo json_decode($experience['photos_of_experience'])[0] ?>" alt="" class="img-fluid">
                                             <div class="mx-2 my-2">
                                                 <h6 class="p-1"><?php echo $experience['experience_name']; ?></h6>
                                                 <!-- <span><i class="fa fa-star"></i>4.5</span> -->

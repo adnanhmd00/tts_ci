@@ -113,11 +113,11 @@
                <ul class="navbar-nav ml-auto">
                    
                    <li class="nav-item"><a href="https://play.google.com/store/apps/details?id=com.application.tts" target="_blank" class="nav-link"><font color="white"><i class="fa fa-mobile-phone"></i>&nbsp;&nbsp;	Download App</font></a></li>&nbsp;
-                   <li class="nav-item"><a href="http://partner.thetravelsquare.in/contact-us" target="_blank" class="nav-link"><font color="white"><i class="fa fa-phone"></i>&nbsp;&nbsp; +91 - 8595-9027-50</font></a></li>&nbsp;
+                   <li class="nav-item"><a href="http://support.thetravelsquare.in/contactus" target="_blank" class="nav-link"><font color="white"><i class="fa fa-phone"></i>&nbsp;&nbsp; +91 - 8595-9027-50</font></a></li>&nbsp;
                   
-				   <li class="nav-item"><a href="http://partner.thetravelsquare.in/signup" target="_blank" class="nav-link"><font color="white"><i class="fa fa-edit"></i>&nbsp;&nbsp; Write Blog</font></a></li>&nbsp;
-				   <li class="nav-item"><a href="http://partner.thetravelsquare.in/signup" target="_blank" class="nav-link"><font color="white"><i class="fa fa-location-arrow"></i>&nbsp;&nbsp; Advertise With Us</font></a></li>&nbsp;
-				   <li class="nav-item"><a href="http://partner.thetravelsquare.in/partner-care" target="_blank" class="nav-link"><font color="white"><i class="fa fa-headphones"></i>&nbsp;&nbsp;Contact Us</font></a></li>&nbsp;
+				   <li class="nav-item"><a href="http://thetravelsquare.in/signup" target="_blank" class="nav-link"><font color="white"><i class="fa fa-edit"></i>&nbsp;&nbsp; Write Blog</font></a></li>&nbsp;
+				   <li class="nav-item"><a href="http://thetravelsquare.in/signup" target="_blank" class="nav-link"><font color="white"><i class="fa fa-location-arrow"></i>&nbsp;&nbsp; Advertise With Us</font></a></li>&nbsp;
+				   <li class="nav-item"><a href="http://support.thetravelsquare.in/customercare" target="_blank" class="nav-link"><font color="white"><i class="fa fa-headphones"></i>&nbsp;&nbsp;Contact Us</font></a></li>&nbsp;
                </ul>
            </div>
        </nav>
