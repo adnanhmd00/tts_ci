@@ -79,7 +79,7 @@
                                                 <td><img src="<?= $row['image'];?>" width="100" height="100"/></td>
                                                 <td width="100%">
                                                     <a target="_blank" href="<?= base_url('partner/deal/'.$row['id']);?>" style="color:black;">
-                                                        <h6 style="background-color:white;padding:15px;"><?= $row['title'];?></h6>
+                                                        <h6 style="background-color:white;padding:15px;"><?= $row['title'];?> (<?= $row['deal_id'];?>)</h6>
                                                         <hr>
                                                         <p align="left"> Price : <?= $row['b2bprice'];?> </p>
                                                     </a>

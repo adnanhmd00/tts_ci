@@ -86,11 +86,11 @@
                                                     <!-- <a href="<?= base_url('partner/deal/'.$row['id']);?>" style="color:black;"> -->
                                                         <?php if($row['status']=='approved'){ ?>
                                                         <a href="<?= base_url('partner/deal/'.$row['id']);?>" >
-                                                            <h6 style="background-color:white;padding:15px;"><font color="black"><?= $row['title'];?></font></h6>
+                                                            <h6 style="background-color:white;padding:15px;"><font color="black"><?= $row['title'];?> (<?= $row['deal_id'];?>)</font></h6>
                                                         </a>
                                                         <?php }?>
                                                         <?php if($row['status']!='approved'){ ?>
-                                                        <h6 style="background-color:white;padding:15px;"><?= $row['title'];?></h6>
+                                                        <h6 style="background-color:white;padding:15px;"><?= $row['title'];?> (<?= $row['deal_id'];?>)</h6>
                                                         <?php }?>
                                                         <hr>
                                                         <p align="right"> Price : <?= $row['b2bprice'];?> </p>

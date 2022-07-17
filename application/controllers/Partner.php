@@ -119,6 +119,7 @@ class Partner extends CI_Controller
                 $mdata[$i]['id'] = $row->id;
                 $mdata[$i]['partner_name'] = $row->partner_name;
                 $mdata[$i]['deal_type'] = $row->deal_type;
+                $mdata[$i]['deal_id'] = $row->deal_id;
                 $mdata[$i]['title'] = $row->title;
                 $mdata[$i]['currency'] = $row->currency;
                 $mdata[$i]['b2bprice'] = $row->new_price;
@@ -169,6 +170,7 @@ class Partner extends CI_Controller
                 $mdata[$i]['id'] = $row->id;
                 $mdata[$i]['partner_name'] = $row->partner_name;
                 $mdata[$i]['deal_type'] = $row->deal_type;
+                $mdata[$i]['deal_id'] = $row->deal_id;
                 $mdata[$i]['deal_type_id'] = $row->deal_type_id;
                 $mdata[$i]['title'] = $row->title;
                 $mdata[$i]['currency'] = $row->currency;
@@ -194,7 +196,7 @@ class Partner extends CI_Controller
         } else {
             $mdata = array();
         }
-        // print_r($mdata);
+        // print_r($mdata);die;
         $this->load->view('partner/mydeals', compact('userinfo', 'mdata'));
     }
 
@@ -296,18 +298,25 @@ class Partner extends CI_Controller
 
             if($deal_type_id=='1'){
                 $data['id_tag']='TSP';
+                $data['deal_id'] = 'TTS'.rand(000000, 999999).'P';
             }else if($deal_type_id=='2'){
                 $data['id_tag']='TSF';
+                $data['deal_id'] = 'TTS'.rand(000000, 999999).'F';
             }else if($deal_type_id=='3'){
                 $data['id_tag']='TSH';
+                $data['deal_id'] = 'TTS'.rand(000000, 999999).'H';
             }else if($deal_type_id=='4'){
                 $data['id_tag']='TSV';
+                $data['deal_id'] = 'TTS'.rand(000000, 999999).'V';
             }else if($deal_type_id=='5'){
                 $data['id_tag']='TST';
+                $data['deal_id'] = 'TTS'.rand(000000, 999999).'T';
             }else if($deal_type_id=='6'){
                 $data['id_tag']='TSA';
+                $data['deal_id'] = 'TTS'.rand(00000, 99999).'A';
             }else if($deal_type_id=='7'){
                 $data['id_tag']='THT';
+                $data['deal_id'] = 'TTS'.rand(5).'HT';
             }
 
             $data['partner_id'] = $userinfo->id;
