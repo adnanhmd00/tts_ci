@@ -41,8 +41,9 @@ class Partner extends CI_Controller
                  "name" => $inputs['name'],
                  "pass" => md5($inputs['pass']
                  )
-         );
+           ));
         // print_r($inputs);die;
+        $this->success("Profile Updated Successfully");
         redirect('partner-profile', compact('userinfo'));
         // $this->load->view('partner/profile', compact('userinfo'));
     }
