@@ -328,6 +328,10 @@ $route['app/partner-agent-request-verification']='AppPartner/requestAgentVerific
 $route['app/partner-agent-request-verification-form']='AppPartner/requestAgentVerificationForm';
 
 /*********************************TREK*******************/
+/*********************************PROFILE*************************/
+$route['partner-profile'] = 'Partner/profile';
+$route['update-profile'] = 'Partner/updateProfile';
+/*********************************PROFILE************************/
 
 
 $route['app/seller'] = 'AppSeller/index';

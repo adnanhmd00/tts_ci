@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <!-- begin::Head -->
@@ -88,7 +89,7 @@
                                        
                                         <!--begin::Form-->
                                         
-                                        <form class="kt-form kt-form--label-right" method="post" action="<?= base_url('partner-agent-request-verification-form');?>">
+                                        <form class="kt-form kt-form--label-right" method="post" action="<?= base_url('update-profile');?>">
 											<div class="kt-portlet__body">
 												<div class="form-group row form-group-marginless kt-margin-t-20">
                                                     <div class="col-md-12"><p><?php echo $this->session->flashdata('item'); ?></p></div>
@@ -96,19 +97,19 @@
                                                    
 													<label class="col-lg-2 col-form-label">Company Name</label>
 													<div class="col-lg-4">
-														<input type="text" class="form-control" placeholder="Contact Person Name" value="<?php echo $userinfo->noe; ?>" name="noe" required>
+														<input type="text" class="form-control" placeholder="Contact Person Name" value="<?php echo $user_info[0]->noe; ?>" name="noe" required>
 													</div>
 												</div>
 												<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg kt-separator--portlet-fit"></div>
 												<div class="form-group row form-group-marginless">
 													<label class="col-lg-2 col-form-label">Company Address</label>
 													<div class="col-lg-4">
-														<input type="text" class="form-control" placeholder="Enter Company Address" value="<?php echo $userinfo->address; ?>" name="address" required>
+														<input type="text" class="form-control" placeholder="Enter Company Address" value="<?php echo $user_info[0]->address; ?>" name="address" required>
 													</div>
 													<label class="col-lg-2 col-form-label">Company GST Number</label>
 													<div class="col-lg-4">
 														<div class="kt-input-icon">
-															<input type="text" class="form-control" placeholder="Enter Company GST Number" value="<?php echo $userinfo->gst; ?>" name="gst" required>
+															<input type="text" class="form-control" placeholder="Enter Company GST Number" value="<?php echo $user_info[0]->gst; ?>" name="gst" required>
 														</div>
 													</div>
 												</div>
@@ -116,12 +117,12 @@
 												<div class="form-group row form-group-marginless">
 													<label class="col-lg-2 col-form-label">Company Mail ID</label>
 													<div class="col-lg-4">
-														<input type="text" class="form-control" placeholder="Enter Company Mail ID" value="<?php echo $userinfo->email; ?>" name="email" required>
+														<input type="text" class="form-control" placeholder="Enter Company Mail ID" value="<?php echo $user_info[0]->email; ?>" name="email" required>
 													</div>
 													<label class="col-lg-2 col-form-label">Mobile</label>
 													<div class="col-lg-4">
 														<div class="kt-input-icon">
-															<input type="text" class="form-control" placeholder="Enter Mobile Number" value="<?php echo $userinfo->mobile; ?>" name="mobile" required>
+															<input type="text" class="form-control" placeholder="Enter Mobile Number" value="<?php echo $user_info[0]->mobile; ?>" name="mobile" required>
 														</div>
 													</div>
 												</div>
@@ -129,12 +130,12 @@
 												<div class="form-group row form-group-marginless">
 													<label class="col-lg-2 col-form-label">Company Owner Name</label>
 													<div class="col-lg-4">
-														<input type="text" class="form-control" placeholder="Enter Company Owner Name" value="<?php echo $userinfo->name; ?>" name="name" required>
+														<input type="text" class="form-control" placeholder="Enter Company Owner Name" value="<?php echo $user_info[0]->name; ?>" name="name" required>
 													</div>
 													<label class="col-lg-2 col-form-label">Password For TTS B2B Portal</label>
 													<div class="col-lg-4">
 														<div class="kt-input-icon">
-															<input type="text" class="form-control" placeholder="Enter If You Wish To Change The Password" name="email">
+															<input type="text" class="form-control" placeholder="Enter If You Wish To Change The Password" name="pass">
 														</div>
 													</div>
 												</div>

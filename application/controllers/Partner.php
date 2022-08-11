@@ -24,7 +24,27 @@ class Partner extends CI_Controller
 
     public function profile(){
         $userinfo = $this->userinfo;
-        $this->load->view('partner/profile', compact('userinfo'));
+        $user_info = $this->admin->getRawResult("select * from partner where id= $userinfo->id");
+        $this->load->view('partner/profile', compact('userinfo', 'user_info'));
+    }
+
+    public function updateProfile(){
+        $userinfo = $this->userinfo;
+        $inputs = $this->input->post();
+        $this->db->where('id',$userinfo->id)
+        ->update('partner',
+           array(
+                 "noe" => $inputs['noe'],
+                 "address" => $inputs['address'],
+                 "gst" => $inputs['gst'],
+                 "mobile" => $inputs['mobile'],
+                 "name" => $inputs['name'],
+                 "pass" => md5($inputs['pass']
+                 )
+         );
+        // print_r($inputs);die;
+        redirect('partner-profile', compact('userinfo'));
+        // $this->load->view('partner/profile', compact('userinfo'));
     }
     
     public function index()
