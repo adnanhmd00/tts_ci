@@ -30,17 +30,34 @@ class Partner extends CI_Controller
 
     public function updateProfile(){
         $userinfo = $this->userinfo;
+        $user_info = $this->admin->getRawResult("select * from partner where id= $userinfo->id");
         $inputs = $this->input->post();
         $this->db->where('id',$userinfo->id)
         ->update('partner',
            array(
-                 "noe" => $inputs['noe'],
+                 "an" => $inputs['an'],
+                 "omid" => $inputs['omid'],
+                 "ocn" => $inputs['ocn'],
+                 "dob" => $inputs['dob'],
                  "address" => $inputs['address'],
+                 "gender" => $inputs['gender'],
+                 "noe" => $inputs['noe'],
                  "gst" => $inputs['gst'],
-                 "mobile" => $inputs['mobile'],
+                 "email" => $inputs['email'],
                  "name" => $inputs['name'],
-                 "pass" => md5($inputs['pass']
-                 )
+                 "oa" => $inputs['oa'],
+                 "tof" => $inputs['tof'],
+                 "st" => $inputs['st'],
+                 "ct" => $inputs['ct'],
+                 "web" => $inputs['web'],
+                 "uata" => $inputs['uata'],
+                 "bn" => $inputs['bn'],
+                 "branch" => $inputs['branch'],
+                 "ifsc" => $inputs['ifsc'],
+                 "acno" => $inputs['acno'],
+                 "ahn" => $inputs['ahn'],
+                 "at" => $inputs['at'],
+                 "pass" => $inputs['pass'] != '' ? md5($inputs['pass']) : $user_info[0]->pass,
            ));
         // print_r($inputs);die;
         $this->success("Profile Updated Successfully");

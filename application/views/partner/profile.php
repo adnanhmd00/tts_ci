@@ -90,23 +90,67 @@
                                         <!--begin::Form-->
                                         
                                         <form class="kt-form kt-form--label-right" method="post" action="<?= base_url('update-profile');?>">
-											<div class="kt-portlet__body">
+                                            <div class="kt-portlet__body">
 												<div class="form-group row form-group-marginless kt-margin-t-20">
+                                                    <h4>Business Details</h4>
                                                     <div class="col-md-12"><p><?php echo $this->session->flashdata('item'); ?></p></div>
 
                                                    
-													<label class="col-lg-2 col-form-label">Company Name</label>
+													<label class="col-lg-2 col-form-label">Ac Manager Name</label>
 													<div class="col-lg-4">
-														<input type="text" class="form-control" placeholder="Contact Person Name" value="<?php echo $user_info[0]->noe; ?>" name="noe" required>
+														<input type="text" class="form-control" placeholder="Ac Manager Name" value="<?php echo $user_info[0]->an; ?>" name="an" required>
+													</div>
+                                                    <label class="col-lg-2 col-form-label">Email Address</label>
+													<div class="col-lg-4">
+														<input type="text" class="form-control" placeholder="Email Address" value="<?php echo $user_info[0]->omid; ?>" name="omid" required>
 													</div>
 												</div>
 												<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg kt-separator--portlet-fit"></div>
 												<div class="form-group row form-group-marginless">
-													<label class="col-lg-2 col-form-label">Company Address</label>
+													<label class="col-lg-2 col-form-label">Contact Number</label>
 													<div class="col-lg-4">
-														<input type="text" class="form-control" placeholder="Enter Company Address" value="<?php echo $user_info[0]->address; ?>" name="address" required>
+														<div class="kt-input-icon">
+															<input type="text" class="form-control" placeholder="Contact Number" value="<?php echo $user_info[0]->ocn; ?>" name="ocn" required>
+														</div>
 													</div>
-													<label class="col-lg-2 col-form-label">Company GST Number</label>
+                                                    <label class="col-lg-2 col-form-label">DOB</label>
+													<div class="col-lg-4">
+														<div class="kt-input-icon">
+															<input type="date" class="form-control" placeholder="DOB" value="<?php echo $user_info[0]->dob; ?>" name="dob" required>
+														</div>
+													</div>
+												</div>
+												<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg kt-separator--portlet-fit"></div>
+												<div class="form-group row form-group-marginless">
+													<label class="col-lg-2 col-form-label">Personal Address On ID Proof</label>
+													<div class="col-lg-4">
+														<input type="text" class="form-control" placeholder="Personal Address On ID Proof" value="<?php echo $user_info[0]->address; ?>" name="address" required>
+													</div>
+                                                    <label class="col-lg-2 col-form-label">Gender</label>
+													<div class="col-lg-4">
+                                                        <div class="kt-input-icon">                                                            
+                                                            <select class="form-control" name="gender" required>
+                                                                <option value="">Select</option>
+                                                                <option <?php if($user_info[0]->gender == 'MALE'){ ?> selected <?php } ?> value="MALE">Male</option>
+                                                                <option <?php if($user_info[0]->gender == 'FEMALE'){ ?> selected <?php } ?> value="FEMALE">Female</option>
+                                                                <option <?php if($user_info[0]->gender == 'OTHER'){ ?> selected <?php } ?> value="OTHER">Other</option>
+                                                            </select>
+														</div>
+													</div>
+												</div>
+												<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg kt-separator--portlet-fit"></div>
+												
+											</div>
+
+											<div class="kt-portlet__body">
+												<div class="form-group row form-group-marginless kt-margin-t-20">
+                                                    <h4>Company Details</h4>
+                                                    <div class="col-md-12"><p><?php echo $this->session->flashdata('item'); ?></p></div>
+													<label class="col-lg-2 col-form-label">Company Name</label>
+													<div class="col-lg-4">
+														<input type="text" class="form-control" placeholder="Company Name" value="<?php echo $user_info[0]->noe; ?>" name="noe" required>
+													</div>
+                                                    <label class="col-lg-2 col-form-label">Company GST Number</label>
 													<div class="col-lg-4">
 														<div class="kt-input-icon">
 															<input type="text" class="form-control" placeholder="Enter Company GST Number" value="<?php echo $user_info[0]->gst; ?>" name="gst" required>
@@ -122,7 +166,7 @@
 													<label class="col-lg-2 col-form-label">Mobile</label>
 													<div class="col-lg-4">
 														<div class="kt-input-icon">
-															<input type="text" class="form-control" placeholder="Enter Mobile Number" value="<?php echo $user_info[0]->mobile; ?>" name="mobile" required>
+															<input type="text" class="form-control" placeholder="Enter Mobile Number" readonly value="<?php echo $user_info[0]->mobile; ?>" name="mobile" required>
 														</div>
 													</div>
 												</div>
@@ -140,8 +184,142 @@
 													</div>
 												</div>
 												<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg kt-separator--portlet-fit"></div>
+												<div class="form-group row form-group-marginless">
+													
+													<label class="col-lg-2 col-form-label">State</label>
+													<div class="col-lg-4">
+														<div class="kt-input-icon">
+                                                            <select name="st" id="st" class="form-control">
+                                                                <option value="">Select</option>
+                                                                <option <?php if($user_info[0]->st == 'Andhra Pradesh'){ ?> selected <?php } ?> value="Andhra Pradesh">Andhra Pradesh</option>
+                                                                <option <?php if($user_info[0]->st == 'Andaman and Nicobar Islands'){ ?> selected <?php } ?> value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                                                <option <?php if($user_info[0]->st == 'Arunachal Pradesh'){ ?> selected <?php } ?> value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                                <option <?php if($user_info[0]->st == 'Assam'){ ?> selected <?php } ?> value="Assam">Assam</option>
+                                                                <option <?php if($user_info[0]->st == 'Bihar'){ ?> selected <?php } ?> value="Bihar">Bihar</option>
+                                                                <option <?php if($user_info[0]->st == 'Chandigarh'){ ?> selected <?php } ?> value="Chandigarh">Chandigarh</option>
+                                                                <option <?php if($user_info[0]->st == 'Chhattisgarh'){ ?> selected <?php } ?> value="Chhattisgarh">Chhattisgarh</option>
+                                                                <option <?php if($user_info[0]->st == 'Dadar and Nagar Haveli'){ ?> selected <?php } ?> value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                                                <option <?php if($user_info[0]->st == 'Daman and Diu'){ ?> selected <?php } ?> value="Daman and Diu">Daman and Diu</option>
+                                                                <option <?php if($user_info[0]->st == 'Delhi'){ ?> selected <?php } ?> value="Delhi">Delhi</option>
+                                                                <option <?php if($user_info[0]->st == 'Lakshadweep'){ ?> selected <?php } ?> value="Lakshadweep">Lakshadweep</option>
+                                                                <option <?php if($user_info[0]->st == 'Puducherry'){ ?> selected <?php } ?> value="Puducherry">Puducherry</option>
+                                                                <option <?php if($user_info[0]->st == 'Goa'){ ?> selected <?php } ?> value="Goa">Goa</option>
+                                                                <option <?php if($user_info[0]->st == 'Gujarat'){ ?> selected <?php } ?> value="Gujarat">Gujarat</option>
+                                                                <option <?php if($user_info[0]->st == 'Haryana'){ ?> selected <?php } ?> value="Haryana">Haryana</option>
+                                                                <option <?php if($user_info[0]->st == 'Himachal Pradesh'){ ?> selected <?php } ?> value="Himachal Pradesh">Himachal Pradesh</option>
+                                                                <option <?php if($user_info[0]->st == 'Jammu and Kashmir'){ ?> selected <?php } ?> value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                                                <option <?php if($user_info[0]->st == 'Jharkhand'){ ?> selected <?php } ?> value="Jharkhand">Jharkhand</option>
+                                                                <option <?php if($user_info[0]->st == 'Karnataka'){ ?> selected <?php } ?> value="Karnataka">Karnataka</option>
+                                                                <option <?php if($user_info[0]->st == 'Kerala'){ ?> selected <?php } ?> value="Kerala">Kerala</option>
+                                                                <option <?php if($user_info[0]->st == 'Madhya Pradesh'){ ?> selected <?php } ?> value="Madhya Pradesh">Madhya Pradesh</option>
+                                                                <option <?php if($user_info[0]->st == 'Maharashtra'){ ?> selected <?php } ?> value="Maharashtra">Maharashtra</option>
+                                                                <option <?php if($user_info[0]->st == 'Manipur'){ ?> selected <?php } ?> value="Manipur">Manipur</option>
+                                                                <option <?php if($user_info[0]->st == 'Meghalaya'){ ?> selected <?php } ?> value="Meghalaya">Meghalaya</option>
+                                                                <option <?php if($user_info[0]->st == 'Mizoram'){ ?> selected <?php } ?> value="Mizoram">Mizoram</option>
+                                                                <option <?php if($user_info[0]->st == 'Nagaland'){ ?> selected <?php } ?> value="Nagaland">Nagaland</option>
+                                                                <option <?php if($user_info[0]->st == 'Odisha'){ ?> selected <?php } ?> value="Odisha">Odisha</option>
+                                                                <option <?php if($user_info[0]->st == 'Punjab'){ ?> selected <?php } ?> value="Punjab">Punjab</option>
+                                                                <option <?php if($user_info[0]->st == 'Rajasthan'){ ?> selected <?php } ?> value="Rajasthan">Rajasthan</option>
+                                                                <option <?php if($user_info[0]->st == 'Sikkim'){ ?> selected <?php } ?> value="Sikkim">Sikkim</option>
+                                                                <option <?php if($user_info[0]->st == 'Tamil Nadu'){ ?> selected <?php } ?> value="Tamil Nadu">Tamil Nadu</option>
+                                                                <option <?php if($user_info[0]->st == 'Telangana'){ ?> selected <?php } ?> value="Telangana">Telangana</option>
+                                                                <option <?php if($user_info[0]->st == 'Tripura'){ ?> selected <?php } ?> value="Tripura">Tripura</option>
+                                                                <option <?php if($user_info[0]->st == 'Uttar Pradesh'){ ?> selected <?php } ?> value="Uttar Pradesh">Uttar Pradesh</option>
+                                                                <option <?php if($user_info[0]->st == 'Uttarakhand'){ ?> selected <?php } ?> value="Uttarakhand">Uttarakhand</option>
+                                                                <option <?php if($user_info[0]->st == 'West Bengal'){ ?> selected <?php } ?> value="West Bengal">West Bengal</option>
+                                                            </select>
+														</div>
+													</div>
+                                                    <label class="col-lg-2 col-form-label">City/Town</label>
+													<div class="col-lg-4">
+														<input type="text" class="form-control" placeholder="Enter City/Town" value="<?php echo $user_info[0]->ct; ?>" name="ct" required>
+													</div>
+												</div>
+												<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg kt-separator--portlet-fit"></div>
+												<div class="form-group row form-group-marginless">
+                                                <label class="col-lg-2 col-form-label">Company Address</label>
+                                                <div class="col-lg-4">
+														<input type="text" class="form-control" placeholder="Enter Company Address" value="<?php echo $user_info[0]->oa; ?>" name="oa" required>
+													</div>
+                                                <label class="col-lg-2 col-form-label">Type Of Firm Registered</label>
+													<div class="col-lg-4">
+                                                        <select class="form-control" name="tof" required>
+                                                            <option  value="">Select</option>
+                                                            <option <?php if($user_info[0]->tof == 'Public Limited Company'){ ?> selected <?php } ?>  value="Public Limited Company">Public Limited Company</option>
+                                                            <option <?php if($user_info[0]->tof == 'Private Limited Company'){ ?> selected <?php } ?>  value="Private Limited Company">Private Limited Company</option>
+                                                            <option <?php if($user_info[0]->tof == 'Joint-Venture Company'){ ?> selected <?php } ?>  value="Joint-Venture Company">Joint-Venture Company</option>
+                                                            <option <?php if($user_info[0]->tof == 'Partnership Firm'){ ?> selected <?php } ?>  value="Partnership Firm">Partnership Firm</option>
+                                                            <option <?php if($user_info[0]->tof == 'One Person Company'){ ?> selected <?php } ?>  value="One Person Company">One Person Company</option>
+                                                            <option <?php if($user_info[0]->tof == 'Sole Proprietorship'){ ?> selected <?php } ?>  value="Sole Proprietorship">Sole Proprietorship</option>
+                                                            <option <?php if($user_info[0]->tof == 'Branch Office'){ ?> selected <?php } ?>  value="Branch Office">Branch Office</option>
+                                                            <option <?php if($user_info[0]->tof == 'Non-Government Organization (NGO)'){ ?> selected <?php } ?>  value="Non-Government Organization (NGO)">Non-Government Organization (NGO)</option>
+                                                        </select>
+													</div>
+												</div>
+												
+												<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg kt-separator--portlet-fit"></div>
+												<div class="form-group row form-group-marginless">
+													<label class="col-lg-2 col-form-label">Website</label>
+													<div class="col-lg-4">
+														<input type="url" class="form-control" placeholder="Enter Website URL" value="<?php echo $user_info[0]->web; ?>" name="web">
+													</div>
+													<label class="col-lg-2 col-form-label">UATA Number</label>
+													<div class="col-lg-4">
+														<div class="kt-input-icon">
+															<input type="text" class="form-control" placeholder="Enter UATA Number" value="<?php echo $user_info[0]->uata; ?>" name="uata">
+														</div>
+													</div>
+												</div>
+											</div>
+
+
+                                            <div class="kt-portlet__body">
+												<div class="form-group row form-group-marginless kt-margin-t-20">
+                                                    <h4>Bank Details</h4>
+                                                    <div class="col-md-12"><p><?php echo $this->session->flashdata('item'); ?></p></div>
+
+                                                   
+													<label class="col-lg-2 col-form-label">Bank Name</label>
+													<div class="col-lg-4">
+														<input type="text" class="form-control" placeholder="Ac Manager Name" value="<?php echo $user_info[0]->bn; ?>" name="bn" required>
+													</div>
+                                                    <label class="col-lg-2 col-form-label">Branch </label>
+													<div class="col-lg-4">
+														<input type="text" class="form-control" placeholder="Branch" value="<?php echo $user_info[0]->branch; ?>" name="branch" required>
+													</div>
+												</div>
+												<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg kt-separator--portlet-fit"></div>
+												<div class="form-group row form-group-marginless">
+													<label class="col-lg-2 col-form-label">IFSC Code</label>
+													<div class="col-lg-4">
+														<div class="kt-input-icon">
+															<input type="text" class="form-control" placeholder="IFSC Code" value="<?php echo $user_info[0]->ifsc; ?>" name="ifsc" required>
+														</div>
+													</div>
+                                                    <label class="col-lg-2 col-form-label">Account Number</label>
+													<div class="col-lg-4">
+														<input type="text" class="form-control" placeholder="Account Number" value="<?php echo $user_info[0]->acno; ?>" name="acno" required>
+													</div>
+												</div>
+												<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg kt-separator--portlet-fit"></div>
+												<div class="form-group row form-group-marginless">
+													<label class="col-lg-2 col-form-label">Account Holder Name</label>
+													<div class="col-lg-4">
+														<input type="text" class="form-control" placeholder="Account Holder Name" value="<?php echo $user_info[0]->ahn; ?>" name="ahn" required>
+													</div>
+                                                    <label class="col-lg-2 col-form-label">Account Type</label>
+													<div class="col-lg-4">
+                                                        <select class="form-control" name="at">
+                                                            <option value="">Select</option>
+                                                            <option <?php if($user_info[0]->at == "Savings"){ ?> selected <?php } ?> value="Savings">Savings Account</option>
+                                                            <option <?php if($user_info[0]->at == "Current"){ ?> selected <?php } ?> vvalue="Current">Current Account</option>
+                                                        </select>
+													</div>
+												</div>
+												
 												
 											</div>
+
 											<div class="kt-portlet__foot">
 												<div class="kt-form__actions">
 													<div class="row">
