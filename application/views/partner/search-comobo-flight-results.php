@@ -10,7 +10,6 @@
 	}
 </style>
 
-
 <div class="row mt-3 mb-4">
 <!-- <div class="col-md-3">
 	
@@ -51,19 +50,37 @@
 					</tr>
 				</thead>
 				<tbody id="get-info">
-					<?php $i=1; if ($response_onward!='') {
+					<?php 
+						$i=1; if ($response_onward!='') {
 						foreach ($response_onward as $Result) { 
 							$stopages = $stopages_count = $stopages_counts = count($Result['sI']);
-							if($stopages == '1'){
+							
+							$stopages = $stopages-1;
+							$stopages_count = $stopages_count-1;
+							
+							
+							$stopages_counts_exists = [];
+							$stopages_counts_exists_2 = [];
+							for ($k = 0; $k < $stopages_counts; $k++) {
+								$sn = $Result['sI'][$k]['sN'];
+								if (!in_array($sn, $stopages_counts_exists)){
+									array_push($stopages_counts_exists,$k);
+								}else{
+									array_push($stopages_counts_exists_2,$k);
+								}
+							}
+							$stopages_counts = count($stopages_counts_exists);
+							$stopages_count = $stopages_counts-1;
+							if($stopages_counts == '1'){
 								$stopage = 'Direct';
 							}else{
-								$stopage = ($stopages-1).' Stop';
+								$stopage = ($stopages_counts-1).' Stop';
 							}
-							$stopages = $stopages-1;
-							$stopages_count = $stopages_count-1;	
 							?>
 							<tr class="<?php if($i == 1){?>highlight <?php } ?> one_way" id="one_way_<?php echo $i; ?>" onclick="getSelectedDiv('one_way', '<?php echo $i?>')">
 							<td><div class="text-center">
+							<input type="hidden" id="one_way_<?php echo $i; ?>_stopages_counts_exists" value="<?php echo count($stopages_counts_exists); ?>" />
+							<input type="hidden" id="one_way_<?php echo $i; ?>_stopages_counts_exists_2" value="<?php echo count($stopages_counts_exists_2); ?>" />
 							<input type="hidden" id="one_way_<?php echo $i; ?>_stopages_counts" value="<?php echo $stopages_counts; ?>" >
 							<input type="hidden" id="one_way_<?php echo $i; ?>_stopages_counts" value="<?php echo $stopages_counts; ?>" >
 							<input type="hidden" id="one_way_<?php echo $i; ?>_adult_count" value="<?php echo $AdultCount; ?>" >
@@ -284,25 +301,46 @@
 					</tr>
 				</thead>
 				<tbody id="get-info">
-				<?php $i=1; if ($response_return!='') {
-						foreach ($response_return as $Result) { 
+					<?php 
+						$i=1; if ($response_onward!='') {
+						foreach ($response_onward as $Result) { 
 							$stopages = $stopages_count = $stopages_counts = count($Result['sI']);
-							if($stopages == '1'){
+							
+							$stopages = $stopages-1;
+							$stopages_count = $stopages_count-1;
+							
+							
+							$stopages_counts_exists = [];
+							$stopages_counts_exists_2 = [];
+							for ($k = 0; $k < $stopages_counts; $k++) {
+								$sn = $Result['sI'][$k]['sN'];
+								if (!in_array($sn, $stopages_counts_exists)){
+									array_push($stopages_counts_exists,$k);
+								}else{
+									array_push($stopages_counts_exists_2,$k);
+								}
+							}
+							$stopages_counts = count($stopages_counts_exists_2);
+							$index = $stopages_counts_exists_2[0];
+							$last_index = end($stopages_counts_exists_2);
+							$stopages_count = $stopages_counts-1;
+							if($stopages_counts == '1'){
 								$stopage = 'Direct';
 							}else{
-								$stopage = ($stopages-1).' Stop';
+								$stopage = ($stopages_counts-1).' Stop';
 							}
-							$stopages = $stopages-1;
-							$stopages_count = $stopages_count-1;	
 							?>
 							<tr class="<?php if($i == 1){?>selected <?php } ?> two_way" id="two_way_<?php echo $i; ?>" onclick="getSelectedDiv('two_way', '<?php echo $i?>')">
 							<td><div class="text-center">
+							<input type="hidden" id="two_way_<?php echo $i; ?>_stopages_counts_exists" value="<?php echo count($stopages_counts_exists); ?>" />
+							<input type="hidden" id="two_way_<?php echo $i; ?>_stopages_counts_exists_2" value="<?php echo count($stopages_counts_exists_2); ?>" />
+							<input type="hidden" id="two_way_<?php echo $i; ?>_stopages_counts" value="<?php echo $stopages_counts; ?>" >
 							<input type="hidden" id="two_way_<?php echo $i; ?>_stopages_counts" value="<?php echo $stopages_counts; ?>" >
 							<input type="hidden" id="two_way_<?php echo $i; ?>_adult_count" value="<?php echo $AdultCount; ?>" >
 								<input type="hidden" id="two_way_<?php echo $i; ?>_child_count" value="<?php echo $ChildCount; ?>" >
 
-									<input type="hidden" id="two_way_<?php echo $i; ?>_origin" value="<?php echo $Destination; ?>">
-									<input type="hidden" id="two_way_<?php echo $i; ?>_destination" value="<?php echo $Origin; ?>">
+									<input type="hidden" id="two_way_<?php echo $i; ?>_origin" value="<?php echo $Origin; ?>">
+									<input type="hidden" id="two_way_<?php echo $i; ?>_destination" value="<?php echo $Destination; ?>">
 									<?php if(isset($Result['totalPriceList'][0]['fd']['ADULT']['bI']['iB'])){?>
 										<input type="hidden" id="two_way_<?php echo $i; ?>_baggage" value="<?php echo $Result['totalPriceList'][0]['fd']['ADULT']['bI']['iB']; ?>">
 									<?php }else{ ?>
@@ -318,28 +356,27 @@
 									<?php }else{ ?>
 										<input type="hidden" id="two_way_<?php echo $i; ?>_is_refundable" value="">
 									<?php }?>
-									
-							<?php if($Result['sI']['0']['fD']['aI']['code'] == '6E'){?>
+							<?php if($Result['sI'][$index]['fD']['aI']['code'] == '6E'){?>
 							<input type="hidden" id="two_way_<?php echo $i; ?>_flight" value="<?php echo base_url(); ?>uploads/flight-images/indigo.jpg">
-							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/indigo.jpg" alt="" class="img-responsive rounded" title="<?php echo $Result['sI']['0']['fD']['aI']['name']; ?>">
-							<?php }elseif($Result['sI']['0']['fD']['aI']['code'] == 'SG'){?>
+							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/indigo.jpg" alt="" class="img-responsive rounded" title="<?php echo $Result['sI'][$index]['fD']['aI']['name']; ?>">
+							<?php }elseif($Result['sI'][$index]['fD']['aI']['code'] == 'SG'){?>
 							<input type="hidden" id="two_way_<?php echo $i; ?>_flight" value="<?php echo base_url(); ?>uploads/flight-images/spicejet.jpg">
-							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/spicejet.jpg" alt="" class="img-responsive rounded" class="img-responsive rounded" title="<?php echo $Result['sI']['0']['fD']['aI']['name']; ?>">
-							<?php }elseif($Result['sI']['0']['fD']['aI']['code'] == 'G8'){?>
+							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/spicejet.jpg" alt="" class="img-responsive rounded" class="img-responsive rounded" title="<?php echo $Result['sI'][$index]['fD']['aI']['name']; ?>">
+							<?php }elseif($Result['sI'][$index]['fD']['aI']['code'] == 'G8'){?>
 							<input type="hidden" id="two_way_<?php echo $i; ?>_flight" value="<?php echo base_url(); ?>uploads/flight-images/go.jpg">	
-							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/go.jpg" alt="" class="img-responsive rounded" class="img-responsive rounded" title="<?php echo $Result['sI']['0']['fD']['aI']['name']; ?>">
-							<?php }elseif($Result['sI']['0']['fD']['aI']['code'] == 'G9'){?>
+							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/go.jpg" alt="" class="img-responsive rounded" class="img-responsive rounded" title="<?php echo $Result['sI'][$index]['fD']['aI']['name']; ?>">
+							<?php }elseif($Result['sI'][$index]['fD']['aI']['code'] == 'G9'){?>
 							<input type="hidden" id="two_way_<?php echo $i; ?>_flight" value="<?php echo base_url(); ?>uploads/flight-images/airarabia.jpg">
-							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/airarabia.jpg" alt="" class="img-responsive rounded" class="img-responsive rounded" title="<?php echo $Result['sI']['0']['fD']['aI']['name']; ?>">
-							<?php }elseif($Result['sI']['0']['fD']['aI']['code'] == 'FZ'){?>
+							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/airarabia.jpg" alt="" class="img-responsive rounded" class="img-responsive rounded" title="<?php echo $Result['sI'][$index]['fD']['aI']['name']; ?>">
+							<?php }elseif($Result['sI'][$index]['fD']['aI']['code'] == 'FZ'){?>
 							<input type="hidden" id="two_way_<?php echo $i; ?>_flight" value="<?php echo base_url(); ?>uploads/flight-images/flydubai.jpg">
-							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/flydubai.jpg" alt="" class="img-responsive rounded" class="img-responsive rounded" title="<?php echo $Result['sI']['0']['fD']['aI']['name']; ?>">
-							<?php }elseif($Result['sI']['0']['fD']['aI']['code'] == 'IX'){?>
+							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/flydubai.jpg" alt="" class="img-responsive rounded" class="img-responsive rounded" title="<?php echo $Result['sI'][$index]['fD']['aI']['name']; ?>">
+							<?php }elseif($Result['sI'][$index]['fD']['aI']['code'] == 'IX'){?>
 							<input type="hidden" id="two_way_<?php echo $i; ?>_flight" value="<?php echo base_url(); ?>uploads/flight-images/airindia.jpg">
-							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/airindia.jpg" alt="" class="img-responsive rounded" class="img-responsive rounded" title="<?php echo $Result['sI']['0']['fD']['aI']['name']; ?>">
-							<?php }elseif($Result['sI']['0']['fD']['aI']['code'] == 'I5'){?>
+							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/airindia.jpg" alt="" class="img-responsive rounded" class="img-responsive rounded" title="<?php echo $Result['sI'][$index]['fD']['aI']['name']; ?>">
+							<?php }elseif($Result['sI'][$index]['fD']['aI']['code'] == 'I5'){?>
 							<input type="hidden" id="two_way_<?php echo $i; ?>_flight" value="<?php echo base_url(); ?>uploads/flight-images/airasia.jpg">	
-							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/airasia.jpg" alt="" class="img-responsive rounded" class="img-responsive rounded" title="<?php echo $Result['sI']['0']['fD']['aI']['name']; ?>">
+							<img style="height: 50px;" src="<?php echo base_url(); ?>uploads/flight-images/airasia.jpg" alt="" class="img-responsive rounded" class="img-responsive rounded" title="<?php echo $Result['sI'][$index]['fD']['aI']['name']; ?>">
 							<?php }else{?>
 							<input type="hidden" id="two_way_<?php echo $i; ?>_flight" value="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png">
 							<img style="height: 50px;" src="https://s3.ap-south-1.amazonaws.com/com.travclan.cms.production/appcms/2.png" alt="" class="img-responsive rounded" class="img-responsive rounded">
@@ -348,11 +385,11 @@
 							</div></td>	
 							<td>
 									<div class="text-center">
-										<div id="two_way_<?php echo $i; ?>_board_time" style="font-size: 14px;"><?php echo date('H:i', strtotime($Result['sI']['0']['dt'])); ?></div>
-										<div id="two_way_<?php echo $i; ?>_board_city" class="lead"><?php echo $Result['sI']['0']['da']['code']; ?></div>
-										<input type="hidden" id="two_way_<?php echo $i; ?>_board_datetime" value="<?php echo date('D M d Y', strtotime($Result['sI']['0']['dt'])); ?>">
-										<input type="hidden" id="two_way_<?php echo $i; ?>_board_airport" value="<?php echo $Result['sI']['0']['da']['name']; ?>">
-										<input type="hidden" id="two_way_<?php echo $i; ?>_board_city_name" value="<?php echo $Result['sI']['0']['da']['city']; ?>">
+										<div id="two_way_<?php echo $i; ?>_board_time" style="font-size: 14px;"><?php echo date('H:i', strtotime($Result['sI'][$index]['dt'])); ?></div>
+										<div id="two_way_<?php echo $i; ?>_board_city" class="lead"><?php echo $Result['sI'][$index]['da']['code']; ?></div>
+										<input type="hidden" id="two_way_<?php echo $i; ?>_board_datetime" value="<?php echo date('D M d Y', strtotime($Result['sI'][$index]['dt'])); ?>">
+										<input type="hidden" id="two_way_<?php echo $i; ?>_board_airport" value="<?php echo $Result['sI'][$index]['da']['name']; ?>">
+										<input type="hidden" id="two_way_<?php echo $i; ?>_board_city_name" value="<?php echo $Result['sI'][$index]['da']['city']; ?>">
 									</div>
 								</td>
 								<td>
@@ -360,8 +397,8 @@
 										<div class="h6 mt-2" id="two_way_<?php echo $i; ?>_duration">
 										<?php
 											if($stopages_counts == 1)	{
-												$datetime1 = new DateTime($Result['sI'][0]['dt']);
-												$datetime2 = new DateTime($Result['sI'][0]['at']);
+												$datetime1 = new DateTime($Result['sI'][$index]['dt']);
+												$datetime2 = new DateTime($Result['sI'][$index]['at']);
 												$interval = $datetime1->diff($datetime2);
 												// $elapsed = $interval->format('%h:%i:%s');
 												// echo $elapsed
@@ -369,14 +406,14 @@
 												echo $elapsed; 
 
 											}elseif($stopages_counts == 2)	{
-												$datetime1 = new DateTime($Result['sI'][0]['dt']);
-												$datetime2 = new DateTime($Result['sI'][0]['at']);
+												$datetime1 = new DateTime($Result['sI'][$index]['dt']);
+												$datetime2 = new DateTime($Result['sI'][$index]['at']);
 												$interval = $datetime1->diff($datetime2);
 												$elapsed_1 = $interval->format('%h:%i:%s');
 												
 
-												$datetime1 = new DateTime($Result['sI'][1]['dt']);
-												$datetime2 = new DateTime($Result['sI'][1]['at']);
+												$datetime1 = new DateTime($Result['sI'][$stopages_counts_exists_2[1]]['dt']);
+												$datetime2 = new DateTime($Result['sI'][$stopages_counts_exists_2[1]]['at']);
 												$interval = $datetime1->diff($datetime2);
 												$elapsed_2 = $interval->format('%h:%i:%s');
 
@@ -393,19 +430,19 @@
 												
 												echo $new_time;
 											}elseif($stopages_counts == 3)	{
-												$datetime1 = new DateTime($Result['sI'][0]['dt']);
-												$datetime2 = new DateTime($Result['sI'][0]['at']);
+												$datetime1 = new DateTime($Result['sI'][$index]['dt']);
+												$datetime2 = new DateTime($Result['sI'][$index]['at']);
 												$interval = $datetime1->diff($datetime2);
 												$elapsed_1 = $interval->format('%h:%i:%s');
 												
 
-												$datetime1 = new DateTime($Result['sI'][1]['dt']);
-												$datetime2 = new DateTime($Result['sI'][1]['at']);
+												$datetime1 = new DateTime($Result['sI'][$stopages_counts_exists_2[1]]['dt']);
+												$datetime2 = new DateTime($Result['sI'][$stopages_counts_exists_2[1]]['at']);
 												$interval = $datetime1->diff($datetime2);
 												$elapsed_2 = $interval->format('%h:%i:%s');
 												
-												$datetime1 = new DateTime($Result['sI'][2]['dt']);
-												$datetime2 = new DateTime($Result['sI'][2]['at']);
+												$datetime1 = new DateTime($Result['sI'][$stopages_counts_exists_2[2]]['dt']);
+												$datetime2 = new DateTime($Result['sI'][$stopages_counts_exists_2[2]]['at']);
 												$interval = $datetime1->diff($datetime2);
 												$elapsed_3 = $interval->format('%h:%i:%s');
 
@@ -437,37 +474,41 @@
 								</td>		
 								<td>
 								<div class="text-center">
-										<input type="hidden" id="two_way_<?php echo $i; ?>_durations" value="<?php echo $elapsed; ?>">
+										<input type="hidden" id="two_way_<?php echo $i; ?>_durations" value="<?php echo @$elapsed; ?>">
 										<input type="hidden" id="two_way_<?php echo $i; ?>_flight_type" value="<?php echo $stopage; ?>">
-										<div id="two_way_<?php echo $i; ?>_depart_time" style="font-size: 14px;"><?php echo date('H:i', strtotime($Result['sI'][$stopages_count]['at'])); ?></div>
-										<div id="two_way_<?php echo $i; ?>_depart_city" class="lead"><?php echo $Result['sI'][$stopages_count]['aa']['code']; ?></div>
-										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_datetime" value="<?php echo date('D M d Y', strtotime($Result['sI'][$stopages_count]['at'])); ?>">
-										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_airport" value="<?php echo $Result['sI'][$stopages_count]['aa']['name']; ?>">
-										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_city_name" value="<?php echo $Result['sI'][$stopages_count]['aa']['city']; ?>">
+										<div id="two_way_<?php echo $i; ?>_depart_time" style="font-size: 14px;"><?php echo date('H:i', strtotime($Result['sI'][$last_index]['at'])); ?></div>
+										<div id="two_way_<?php echo $i; ?>_depart_city" class="lead"><?php echo $Result['sI'][$last_index]['aa']['code']; ?></div>
+										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_datetime" value="<?php echo date('D M d Y', strtotime($Result['sI'][$last_index]['at'])); ?>">
+										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_airport" value="<?php echo $Result['sI'][$last_index]['aa']['name']; ?>">
+										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_city_name" value="<?php echo $Result['sI'][$last_index]['aa']['city']; ?>">
 									</div>
 								<?php for ($x = 0; $x <= $stopages_count; $x++) {
 										if($x == 0){
-											$datetime1 = new DateTime($Result['sI'][0]['dt']);
-											$datetime2 = new DateTime($Result['sI'][0]['at']);
-											$start_time = date('H:i', strtotime($Result['sI'][0]['dt']));
-											$end_time = date('H:i', strtotime($Result['sI'][0]['at']));
+											$datetime1 = new DateTime($Result['sI'][$index]['dt']);
+											$datetime2 = new DateTime($Result['sI'][$index]['at']);
+											$start_time = date('H:i', strtotime($Result['sI'][$index]['dt']));
+											$end_time = date('H:i', strtotime($Result['sI'][$index]['at']));
+											$key=$index;
 										}else if($x == 1){
-											$datetime1 = new DateTime($Result['sI'][1]['dt']);
-											$datetime2 = new DateTime($Result['sI'][1]['at']);
-											$start_time = date('H:i', strtotime($Result['sI'][1]['dt']));
-											$end_time = date('H:i', strtotime($Result['sI'][1]['at']));
+											$datetime1 = new DateTime($Result['sI'][$stopages_counts_exists_2[1]]['dt']);
+											$datetime2 = new DateTime($Result['sI'][$stopages_counts_exists_2[1]]['at']);
+											$start_time = date('H:i', strtotime($Result['sI'][$stopages_counts_exists_2[1]]['dt']));
+											$end_time = date('H:i', strtotime($Result['sI'][$stopages_counts_exists_2[1]]['at']));
+											$key=$stopages_counts_exists_2[1];
 										}else if($x == 2){
-											$datetime1 = new DateTime($Result['sI'][2]['dt']);
-											$datetime2 = new DateTime($Result['sI'][2]['at']);
+											$datetime1 = new DateTime($Result['sI'][$stopages_counts_exists_2[2]]['dt']);
+											$datetime2 = new DateTime($Result['sI'][$stopages_counts_exists_2[2]]['at']);
 
-											$start_time = date('H:i', strtotime($Result['sI'][2]['dt']));
-											$end_time = date('H:i', strtotime($Result['sI'][2]['at']));
+											$start_time = date('H:i', strtotime($Result['sI'][$stopages_counts_exists_2[2]]['dt']));
+											$end_time = date('H:i', strtotime($Result['sI'][$stopages_counts_exists_2[2]]['at']));
+											$key=$stopages_counts_exists_2[2];
 										}else if($x == 3){
-											$datetime1 = new DateTime($Result['sI'][3]['dt']);
-											$datetime2 = new DateTime($Result['sI'][3]['at']);
+											$datetime1 = new DateTime($Result['sI'][$stopages_counts_exists_2[3]]['dt']);
+											$datetime2 = new DateTime($Result['sI'][$stopages_counts_exists_2[3]]['at']);
 
-											$start_time = date('H:i', strtotime($Result['sI'][3]['dt']));
-											$end_time = date('H:i', strtotime($Result['sI'][3]['at']));
+											$start_time = date('H:i', strtotime($Result['sI'][$stopages_counts_exists_2[3]]['dt']));
+											$end_time = date('H:i', strtotime($Result['sI'][$stopages_counts_exists_2[3]]['at']));
+											$key=$stopages_counts_exists_2[3];
 										}
 										
 										
@@ -479,11 +520,11 @@
 										<input type="hidden" id="two_way_<?php echo $i; ?>_end_time_<?php echo $x; ?>" value="<?php echo $end_time; ?>">
 										<input type="hidden" id="two_way_<?php echo $i; ?>_durations_<?php echo $x; ?>" value="<?php echo $elapsed; ?>">
 										<input type="hidden" id="two_way_<?php echo $i; ?>_flight_type_<?php echo $x; ?>" value="<?php echo $stopage; ?>">
-										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_time_<?php echo $x; ?>" value="<?php echo date('H:i', strtotime($Result['sI'][$x]['at'])); ?>">
-										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_city_<?php echo $x; ?>" value="<?php echo $Result['sI'][$x]['aa']['code']; ?>">
-										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_datetime_<?php echo $x; ?>" value="<?php echo date('D M d Y', strtotime($Result['sI'][$x]['at'])); ?>">
-										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_airport_<?php echo $x; ?>" value="<?php echo $Result['sI'][$x]['aa']['name']; ?>">
-										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_city_name_<?php echo $x; ?>" value="<?php echo $Result['sI'][$x]['aa']['city']; ?>">
+										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_time_<?php echo $x; ?>" value="<?php echo date('H:i', strtotime($Result['sI'][$key]['at'])); ?>">
+										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_city_<?php echo $x; ?>" value="<?php echo $Result['sI'][$key]['aa']['code']; ?>">
+										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_datetime_<?php echo $x; ?>" value="<?php echo date('D M d Y', strtotime($Result['sI'][$key]['at'])); ?>">
+										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_airport_<?php echo $x; ?>" value="<?php echo $Result['sI'][$key]['aa']['name']; ?>">
+										<input type="hidden" id="two_way_<?php echo $i; ?>_depart_city_name_<?php echo $x; ?>" value="<?php echo $Result['sI'][$key]['aa']['city']; ?>">
 									
 								<?php } ?>		
 								</td>
@@ -627,13 +668,26 @@
 <script>
 	function getSelectedDiv(trip, id){
 		if(trip == 'one_way'){
+			ids = id
 			$('.'+trip).removeClass("highlight");
 			id = trip+'_'+id
 			$('#'+id).addClass("highlight");
+
+			trip = 'two_way';
+			$('.'+trip).removeClass("selected");
+			id = trip+'_'+ids;
+			$('#'+id).addClass("selected");
+
 		}else{
+			ids = id
 			$('.'+trip).removeClass("selected");
 			id = trip+'_'+id
 			$('#'+id).addClass("selected");
+
+			trip = 'one_way';
+			$('.'+trip).removeClass("highlight");
+			id = trip+'_'+ids
+			$('#'+id).addClass("highlight");
 		}
 	}
 	function showHideDiv(first, second){

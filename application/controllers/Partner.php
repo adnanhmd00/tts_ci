@@ -1718,15 +1718,15 @@ class Partner extends CI_Controller
     {
     	
     	$data = json_decode(file_get_contents('php://input'), true);
-	    $apiKey = $data['API-Token'];
-	    $url = 'http://partner.thetravelsquare.in/api/FlightSearch';
+	    $apiKey = '112028f0143732-af9a-454a-82a0-7d5cbbaeb766';
+	    $url = 'https://apitest.tripjack.com/fms/v1/air-search-all';
+        
 	    $ch = curl_init($url);
 	    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
 	    curl_setopt($ch, CURLOPT_POST, 1);
 	    $headers = array(
 	        'Content-Type: application/json',
-	        'Accept: application/json',
-	        'API-Token:' .$apiKey
+	        'apikey:' .$apiKey
 	    );
 	    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -1750,8 +1750,30 @@ class Partner extends CI_Controller
         $AdultCount  = $data['AdultCount'];
         $ChildCount  = $data['ChildCount'];
 
+        $is_blank = '0';
+        $file_name = 'search-flight-results';
+        if(isset($response['searchResult'])){
+            if(isset($response['searchResult']['tripInfos']['COMBO'])){
+                $response_onward = $response['searchResult']['tripInfos']['COMBO'];
+                $response_return = '';
+                $file_name = 'search-comobo-flight-results';
+            }else{
+                $response_onward = $response['searchResult']['tripInfos']['ONWARD'];
+                if($JourneyType == 2){
+                    $response_return = $response['searchResult']['tripInfos']['RETURN'];
+                }else{
+                    $response_return = '';
+                }
+            } 
+        }else{
+            $response_onward = '';
+            $response_return = '';
+            $is_blank = '1';
+        }
+        
+        
 	    $cities = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
-        $this->load->view("partner/search-flight-results", compact('response', 'data', 'cities', 'JourneyType', 'Origin', 'Destination', 'AdultCount',  'ChildCount'));
+        $this->load->view("partner/".$file_name, compact('response_onward', 'response_return', 'is_blank', 'data', 'cities', 'JourneyType', 'Origin', 'Destination', 'AdultCount',  'ChildCount'));
     }
 
     public function flightFareResults()

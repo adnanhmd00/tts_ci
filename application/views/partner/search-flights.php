@@ -322,11 +322,11 @@
                                         		<div class="form-group">
                                         			<label for="From">Class</label>
                                         			<select name="FlightCabinClass" id="" class="form-control">
-                                        				<option value="1">All</option>
-                                        				<option value="2">Economy</option>
-                                        				<option value="3">Premium Economy</option>
-                                        				<option value="4">Business</option>
-                                        				<option value="5">First Class</option>
+                                        				<option value="Economy">All</option>
+                                        				<option value="Economy">Economy</option>
+                                        				<option value="Premium Economy">Premium Economy</option>
+                                        				<option value="Business">Business</option>
+                                        				<option value="First Class">First Class</option>
                                         			</select>
                                         		</div>
                                         	</div>
@@ -614,7 +614,7 @@
 					<h4 class="modal-title">Review Itenary</h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					</div>
-					<div class="modal-body text-dark" id="modal-html">
+					<div class="modal-body text-dark" id="modal-html" style=" height: 400px; overflow: auto; ">
 					
 					</div>
 					<div class="modal-footer" id="continue_button_id">
@@ -713,7 +713,7 @@
 		            var PreferredDepartureTime = $('#datepicker-from').val();
 		            if (PreferredDepartureTime != "") {
 		            	var PreferredDepartureTimeArr = $('#datepicker-from').val().split('/');
-						var PreferredDepartureTime = PreferredDepartureTimeArr[2]+'-'+PreferredDepartureTimeArr[0]+'-'+PreferredDepartureTimeArr[1]+'T00:00:00';
+						var PreferredDepartureTime = PreferredDepartureTimeArr[2]+'-'+PreferredDepartureTimeArr[0]+'-'+PreferredDepartureTimeArr[1]+'';
 		            }
 		            if (PreferredDepartureTime == '') {
 		            	error = error +1;
@@ -722,7 +722,7 @@
 		            var PreferredArrivalTime = $('#datepicker-to').val();
 		            if (PreferredArrivalTime != "") {
 		            	var PreferredArrivalTimeArr = $('#datepicker-to').val().split('/');
-						var PreferredArrivalTime = PreferredArrivalTimeArr[2]+'-'+PreferredArrivalTimeArr[0]+'-'+PreferredArrivalTimeArr[1]+'T00:00:00';
+						var PreferredArrivalTime = PreferredArrivalTimeArr[2]+'-'+PreferredArrivalTimeArr[0]+'-'+PreferredArrivalTimeArr[1]+'';
 		            }
 					if (JourneyType == '2' && PreferredArrivalTime == '') {
 		            	error1 = error1 +1;
@@ -741,35 +741,81 @@
 		            	PreferredArrivalTime: PreferredArrivalTime,
 		            	PreferredDepartureTime: PreferredDepartureTime,
 				      }];
-					if($("[name='JourneyType']:checked").val() == '2')
-					{
-						var segment = [{
-							Origin: Origin,
-							Destination: Destination,
-							FlightCabinClass: FlightCabinClass,
-							PreferredArrivalTime: PreferredDepartureTime,
-							PreferredDepartureTime: PreferredDepartureTime,
-						},
-						{
-							Origin: Destination,
-							Destination: Origin,
-							FlightCabinClass: FlightCabinClass,
-							PreferredArrivalTime: PreferredArrivalTime,
-							PreferredDepartureTime: PreferredArrivalTime,
-						}];
-					}   
 					
+					
+					
+						if($("[name='JourneyType']:checked").val() == '2')
+						{
+							var segments = {
+									"cabinClass": FlightCabinClass,
+									"journeyType": "2",
+									"paxInfo": {
+									"ADULT": AdultCount,
+									"CHILD": ChildCount,
+									"INFANT": InfantCount
+									},
+									"routeInfos": [
+									{
+										"fromCityOrAirport": {
+										"code": Origin
+										},
+										"toCityOrAirport": {
+										"code": Destination
+										},
+										"travelDate": PreferredDepartureTime
+									},
+									{
+										"fromCityOrAirport": {
+										"code": Destination
+										},
+										"toCityOrAirport": {
+										"code": Origin
+										},
+										"travelDate": PreferredArrivalTime
+									}
+									],
+									"searchModifiers": {
+									"isConnectingFlight": false,
+									"isDirectFlight": false
+									}
+								};
+						}else{
+							var segments = {
+							"cabinClass": FlightCabinClass,
+							"journeyType": "1",
+							"paxInfo": {
+							"ADULT": AdultCount,
+							"CHILD": ChildCount,
+							"INFANT": InfantCount
+							},
+							"routeInfos": [
+							{
+								"fromCityOrAirport": {
+								"code": Origin
+								},
+								"toCityOrAirport": {
+								"code": Destination
+								},
+								"travelDate": PreferredArrivalTime
+							}
+							],
+							"searchModifiers": {
+							"isConnectingFlight": false,
+							"isDirectFlight": false
+							}
+						};
+						};
 		            var params = {
-		            	'UserName':'Hash7212',
-		        		'Password':'tZ2W!zZr2q',
-		            	'ClientId':'180134',
-		            	'API-Token':'(S;q66r?nHa9',
-		            	'EndUserIp':'124.123.78.11',
+		            	// 'UserName':'Hash7212',
+		        		// 'Password':'tZ2W!zZr2q',
+		            	// 'ClientId':'180134',
+		            	// 'apikey':'112028f0143732-af9a-454a-82a0-7d5cbbaeb766',
+		            	// 'EndUserIp':'124.123.78.11',
 		            	JourneyType: JourneyType,
 		            	AdultCount:AdultCount,
 		            	ChildCount:ChildCount,
 		            	InfantCount:InfantCount,
-		            	Segments:segment,
+		            	searchQuery:segments,
 						Origin: Origin,
 		            	Destination: Destination,
 		            };
@@ -834,7 +880,9 @@
 					if (rows != undefined) {
 					rowid = rows.attr('id')	
 					adult_count = $('#'+rowid+'_adult_count').val();
-					child_count = $('#'+rowid+'_child_count').val();		
+					child_count = $('#'+rowid+'_child_count').val();
+					stopages_count = $('#'+rowid+'_stopages_count').val();
+					stopages_counts = $('#'+rowid+'_stopages_counts').val();
 					flight_1 = origin_1 = $('#'+rowid+'_origin').val();
 					flight_1 += ' > ';
 					flight_1 += destination_1 = $('#'+rowid+'_destination').val();
@@ -860,34 +908,101 @@
 
 					card_one = `<div class="card">
 								<div class="card-header">
-									<h5 class="card-title">`+flight_1+`</h5>
+									<h5 class="card-title">`+flight_1+` | `+flight_type_1+` </h5>
 								</div>
-								<div class="card-body text-dark">
-									<div class="row">
-									    <div class="col-md-12"><img style="height: 50px;" src="`+flight_img_1+`" /> | `+flight_name_1+`</div>
+								<div class="card-body text-dark">`;
+								if (parseInt(stopages_counts) == 1)
+								{
+									card_one += `<div class="row">
+									    <div class="col-md-12"><img style="height: 50px;" src="`+flight_img_1+`" /> </div>
 										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+board_time_1+`</div>
 										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+duration_1+`</div>
 										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+depart_time_1+`</div>
 									</div>
 									<div class="row">
-										<div class="col-md-6">
-											`+board_datetime_1+`
-											<br>
-											`+board_city_name_1+`
-											<br>
+										<div class="col-md-4">
+											
+											<h4>`+board_city_name_1+`</h4>
 											`+board_airport_1+`
 										</div>
-										<div class="col-md-6">
-											`+depart_datetime_1+`
-											<br>
-											`+depart_city_name_1+`
-											<br>
+										<div class="col-md-4">&nbsp;</div>
+										<div class="col-md-4">
+											
+											<h4>`+depart_city_name_1+`</h4>
 											`+depart_airport_1+`
 										</div>
+									</div>`;
+								}else{
+									for (let i = 0; i <= parseInt(stopages_count); i++) {
+										if(i == 0){
+											duration_1 = $('#'+rowid+'_durations_'+i+'').val();
+											depart_time_1 = $('#'+rowid+'_depart_time_'+i+'').val();
+											depart_city_1 = $('#'+rowid+'_depart_city_'+i+'').val();
+											depart_airport_1 = $('#'+rowid+'_depart_airport_'+i+'').val();
+											depart_datetime_1 = $('#'+rowid+'_depart_datetime_'+i+'').val();
+											depart_city_name_1 = $('#'+rowid+'_depart_city_name_'+i+'').val();
+										}else if(i == 1){
+											board_time_1 = $('#'+rowid+'_start_time_1').val();
+											board_city_1 = $('#'+rowid+'_depart_city_0').val();
+											board_city_name_1 = $('#'+rowid+'_depart_city_name_0').val();		
+											board_airport_1 = $('#'+rowid+'_depart_airport_0').val();
+											board_datetime_1 = $('#'+rowid+'_depart_datetime_0').val();
+											duration_1 = $('#'+rowid+'_durations_'+i+'').val();
+											depart_time_1 = $('#'+rowid+'_depart_time_'+i+'').val();
+											depart_city_1 = $('#'+rowid+'_depart_city_'+i+'').val();
+											depart_airport_1 = $('#'+rowid+'_depart_airport_'+i+'').val();
+											depart_datetime_1 = $('#'+rowid+'_depart_datetime_'+i+'').val();
+											depart_city_name_1 = $('#'+rowid+'_depart_city_name_'+i+'').val();		
+										} else if(i == 2){
+											board_time_1 = $('#'+rowid+'_start_time_2').val();
+											board_city_1 = $('#'+rowid+'_depart_city_1').val();
+											board_city_name_1 = $('#'+rowid+'_depart_city_name_1').val();		
+											board_airport_1 = $('#'+rowid+'_depart_airport_1').val();
+											board_datetime_1 = $('#'+rowid+'_depart_datetime_1').val();
+											duration_1 = $('#'+rowid+'_durations_'+i+'').val();
+											depart_time_1 = $('#'+rowid+'_depart_time_'+i+'').val();
+											depart_city_1 = $('#'+rowid+'_depart_city_'+i+'').val();
+											depart_airport_1 = $('#'+rowid+'_depart_airport_'+i+'').val();
+											depart_datetime_1 = $('#'+rowid+'_depart_datetime_'+i+'').val();
+											depart_city_name_1 = $('#'+rowid+'_depart_city_name_'+i+'').val();	
+										}else if(i == 3){
+											board_time_1 = $('#'+rowid+'_start_time_3').val();
+											board_city_1 = $('#'+rowid+'_depart_city_2').val();
+											board_city_name_1 = $('#'+rowid+'_depart_city_name_2').val();		
+											board_airport_1 = $('#'+rowid+'_depart_airport_2').val();
+											board_datetime_1 = $('#'+rowid+'_depart_datetime_2').val();
+											duration_1 = $('#'+rowid+'_durations_'+i+'').val();
+											depart_time_1 = $('#'+rowid+'_depart_time_'+i+'').val();
+											depart_city_1 = $('#'+rowid+'_depart_city_'+i+'').val();
+											depart_airport_1 = $('#'+rowid+'_depart_airport_'+i+'').val();
+											depart_datetime_1 = $('#'+rowid+'_depart_datetime_'+i+'').val();
+											depart_city_name_1 = $('#'+rowid+'_depart_city_name_'+i+'').val();
+										}
+										card_one += `<div class="row">
+									    <div class="col-md-12"><img style="height: 50px;" src="`+flight_img_1+`" /> </div>
+										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+board_time_1+`</div>
+										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+duration_1+`</div>
+										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+depart_time_1+`</div>
 									</div>
-
+									<div class="row">
+										<div class="col-md-4">
+											
+											<h4>`+board_city_name_1+`</h4>
+											`+board_airport_1+`
+										</div>
+										<div class="col-md-4">&nbsp;</div>
+										<div class="col-md-4">
+											
+											<h4>`+depart_city_name_1+`</h4>
+											`+depart_airport_1+`
+										</div>
+									</div>`;
+									}
 									
-								</div>
+								}
+									
+
+									card_one += `</div>
 								</div>`;
 					template += card_one	
 					}
@@ -898,59 +1013,132 @@
 						
 						if(rowid2){
 							is_round = 1;
+							adult_count = $('#'+rowid2+'_adult_count').val();
+							child_count = $('#'+rowid2+'_child_count').val();
+							stopages_count_2 = $('#'+rowid2+'_stopages_count').val();
+							stopages_counts_2 = $('#'+rowid2+'_stopages_counts').val();
 							flight_2 = origin_2 = $('#'+rowid2+'_origin').val();
 							flight_2 += ' > ';
 							flight_2 += destination_2 = $('#'+rowid2+'_destination').val();
 							flight_type_2 = $('#'+rowid2+'_flight_type').val();	
 							flight_name_2 = $('#'+rowid2+'_flight_name').text();
-							board_time_2 = $('#'+rowid2+'_board_time').text();
-							board_city_2 = $('#'+rowid2+'_board_city').text();
-							board_city_name_2 = $('#'+rowid2+'_board_city_name').val();
-							board_airport_2 = $('#'+rowid2+'_board_airport').val();
-							board_datetime_2 = $('#'+rowid2+'_board_datetime').val();
-							duration_2 = $('#'+rowid2+'_durations').val();
-							depart_time_2 = $('#'+rowid2+'_depart_time').text();
-							depart_city_2 = $('#'+rowid2+'_depart_city').text();
-							depart_airport_2 = $('#'+rowid2+'_depart_airport').val();
-							depart_datetime_2 = $('#'+rowid2+'_depart_datetime').val();
+							board_time_2 = board_time_6  = $('#'+rowid2+'_board_time').text();
+							board_city_2 = board_city_6  = $('#'+rowid2+'_board_city').text();
+							board_city_name_2 = board_city_name_6  = $('#'+rowid2+'_board_city_name').val();
+							board_airport_2 = board_airport_6  = $('#'+rowid2+'_board_airport').val();
+							board_datetime_2 = board_datetime_6  = $('#'+rowid2+'_board_datetime').val();
+							duration_2 = duration_6  = $('#'+rowid2+'_durations').val();
+							depart_time_2 = depart_time_6  = $('#'+rowid2+'_depart_time').text();
+							depart_city_2 = depart_city_6  = $('#'+rowid2+'_depart_city').text();
+							depart_airport_2 = depart_airport_6  = $('#'+rowid2+'_depart_airport').val();
+							depart_datetime_2 = depart_datetime_6  = $('#'+rowid2+'_depart_datetime').val();
 							depart_city_name_2 = $('#'+rowid2+'_depart_city_name').val();
-							
+							baggage_2 = $('#'+rowid2+'_baggage').val();
+							cabin_baggage_2 = $('#'+rowid2+'_cabin_baggage').val();
 							BaseFare += parseFloat($('#'+rowid2+'_basefare').val());
 							tax += parseFloat($('#'+rowid2+'_tax').val());
+							flight_img_2 = $('#'+rowid2+'_flight').val();	
 							is_refundable_2 = $('#'+rowid2+'_is_refundable').val();
-							flight_img_2 = $('#'+rowid2+'_flight').val();
+
 							card_two = `<div class="card">
 										<div class="card-header">
-									<h5 class="card-title">`+flight_2+`</h5>
-								</div>
-								<div class="card-body text-dark">
-									<div class="row">
-										<div class="col-md-12"><img style="height: 50px;" src="`+flight_img_2+`" /> | `+flight_name_2+`</div><br/>
-										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+board_time_2+`</div>
-										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+duration_2+`</div>
-										<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+depart_time_2+`</div>
-									</div>
-									<div class="row">
-										<div class="col-md-6">
-											`+board_datetime_2+`
-											<br>
-											`+board_city_name_2+`
-											<br>
-											`+board_airport_2+`
+											<h5 class="card-title">`+flight_2+` | `+flight_type_2+` </h5>
 										</div>
-										<div class="col-md-6">
-											`+depart_datetime_2+`
-											<br>
-											`+depart_city_name_2+`
-											<br>
-											`+depart_airport_2+`
-										</div>
-									</div>
+										<div class="card-body text-dark">`;
+										if (parseInt(stopages_counts_2) == 1)
+										{
+											card_two += `<div class="row">
+												<div class="col-md-12"><img style="height: 50px;" src="`+flight_img_2+`" /> </div>
+												<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+board_time_2+`</div>
+												<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+duration_2+`</div>
+												<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+depart_time_2+`</div>
+											</div>
+											<div class="row">
+												<div class="col-md-4">
+													
+													<h4>`+board_city_name_2+`</h4>
+													`+board_airport_2+`
+												</div>
+												<div class="col-md-4">&nbsp;</div>
+												<div class="col-md-4">
+													
+													<h4>`+depart_city_name_2+`</h4>
+													`+depart_airport_2+`
+												</div>
+											</div>`;
+										}else{
+											for (let i = 0; i <= stopages_count_2.length; i++) {
+												if(i == 0){
+													duration_2 = $('#'+rowid2+'_durations_'+i+'').val();
+													depart_time_2 = $('#'+rowid2+'_depart_time_'+i+'').val();
+													depart_city_2 = $('#'+rowid2+'_depart_city_'+i+'').val();
+													depart_airport_2 = $('#'+rowid2+'_depart_airport_'+i+'').val();
+													depart_datetime_2 = $('#'+rowid2+'_depart_datetime_'+i+'').val();
+													depart_city_name_2 = $('#'+rowid2+'_depart_city_name_'+i+'').val();
+												}else if(i == 1){
+													board_time_2 = $('#'+rowid2+'_start_time_1').val();
+													board_city_2 = $('#'+rowid2+'_depart_city_0').val();
+													board_city_name_2 = $('#'+rowid2+'_depart_city_name_0').val();		
+													board_airport_2 = $('#'+rowid2+'_depart_airport_0').val();
+													board_datetime_2 = $('#'+rowid2+'_depart_datetime_0').val();
+													duration_2 = $('#'+rowid2+'_durations_'+i+'').val();
+													depart_time_2 = $('#'+rowid2+'_depart_time_'+i+'').val();
+													depart_city_2 = $('#'+rowid2+'_depart_city_'+i+'').val();
+													depart_airport_2 = $('#'+rowid2+'_depart_airport_'+i+'').val();
+													depart_datetime_2 = $('#'+rowid2+'_depart_datetime_'+i+'').val();
+													depart_city_name_2 = $('#'+rowid2+'_depart_city_name_'+i+'').val();		
+												} else if(i == 2){
+													board_time_2 = $('#'+rowid2+'_start_time_2').val();
+													board_city_2 = $('#'+rowid2+'_depart_city_1').val();
+													board_city_name_2 = $('#'+rowid2+'_depart_city_name_1').val();		
+													board_airport_2 = $('#'+rowid2+'_depart_airport_1').val();
+													board_datetime_2 = $('#'+rowid2+'_depart_datetime_1').val();
+													duration_2 = $('#'+rowid2+'_durations_'+i+'').val();
+													depart_time_2 = $('#'+rowid2+'_depart_time_'+i+'').val();
+													depart_city_2 = $('#'+rowid2+'_depart_city_'+i+'').val();
+													depart_airport_2 = $('#'+rowid2+'_depart_airport_'+i+'').val();
+													depart_datetime_2 = $('#'+rowid2+'_depart_datetime_'+i+'').val();
+													depart_city_name_2 = $('#'+rowid2+'_depart_city_name_'+i+'').val();	
+												}else if(i == 3){
+													board_time_2 = $('#'+rowid2+'_start_time_3').val();
+													board_city_2 = $('#'+rowid2+'_depart_city_2').val();
+													board_city_name_2 = $('#'+rowid2+'_depart_city_name_2').val();		
+													board_airport_2 = $('#'+rowid2+'_depart_airport_2').val();
+													board_datetime_2 = $('#'+rowid2+'_depart_datetime_2').val();
+													duration_2 = $('#'+rowid2+'_durations_'+i+'').val();
+													depart_time_2 = $('#'+rowid2+'_depart_time_'+i+'').val();
+													depart_city_2 = $('#'+rowid2+'_depart_city_'+i+'').val();
+													depart_airport_2 = $('#'+rowid2+'_depart_airport_'+i+'').val();
+													depart_datetime_2 = $('#'+rowid2+'_depart_datetime_'+i+'').val();
+													depart_city_name_2 = $('#'+rowid2+'_depart_city_name_'+i+'').val();
+												}
+												card_two += `<div class="row">
+												<div class="col-md-12"><img style="height: 50px;" src="`+flight_img_2+`" /> </div>
+												<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+board_time_2+`</div>
+												<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+duration_2+`</div>
+												<div class="col-md-4" style=" font-size: 16px; font-weight: bold; margin-top: 5px;">`+depart_time_2+`</div>
+											</div>
+											<div class="row">
+												<div class="col-md-4">
+													
+													<h4>`+board_city_name_2+`</h4>
+													`+board_airport_2+`
+												</div>
+												<div class="col-md-4">&nbsp;</div>
+												<div class="col-md-4">
+													
+													<h4>`+depart_city_name_2+`</h4>
+													`+depart_airport_2+`
+												</div>
+											</div>`;
+											}
+											
+										}
+											
 
-									
-								</div>
+											card_two += `</div>
 										</div>`;
-							template += card_two
+								template += card_two
 						}
 												
 					}
@@ -1049,24 +1237,174 @@
 					$('#modal-html').html(template);
 					html = `Continue Booking of Rs. <b>`+parseInt(sum_of_fare)+`/-</b>`;
 					if(is_round == 1){
-						button_html = `<button type="button" class="btn btn-dark" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
-'`+is_refundable_1+`','`+is_round+`','`+origin_2+`','`+destination_2+`','`+flight_name_2+`','`+flight_type_2+`','`+board_time_2+`','`+board_city_2+`','`+board_city_name_2+`','`+board_airport_2+`','`+board_datetime_2+`','`+duration_2+`','`+depart_time_2+`','`+depart_city_2+`','`+depart_airport_2+`','`+depart_datetime_2+`','`+depart_city_name_2+`','`+flight_img_2+`','`+BaseFare+`','`+tax+`','`+sum_of_fare+`')" >`+html+`</button>`;
+
+						rowid = rows.attr('id');
+							board_time_1 = $('#'+rowid+'_board_time').text();
+							board_city_1 = $('#'+rowid+'_board_city').text();
+							board_city_name_1 = $('#'+rowid+'_board_city_name').val();
+							board_airport_1 = $('#'+rowid+'_board_airport').val();
+							board_datetime_1 = $('#'+rowid+'_board_datetime').val();
+							duration_1 = $('#'+rowid+'_durations_0').val();
+							depart_time_1 = $('#'+rowid+'_depart_time_0').val();
+							depart_city_1 = $('#'+rowid+'_depart_city_0').val();
+							depart_airport_1 = $('#'+rowid+'_depart_airport_0').val();
+							depart_datetime_1 = $('#'+rowid+'_depart_datetime_0').val();
+							depart_city_name_1 = $('#'+rowid+'_depart_city_name_0').val();
+						
+							board_time_2 = $('#'+rowid+'_start_time_1').val();
+							board_city_2 = $('#'+rowid+'_depart_city_0').val();
+							board_city_name_2 = $('#'+rowid+'_depart_city_name_0').val();		
+							board_airport_2 = $('#'+rowid+'_depart_airport_0').val();
+							board_datetime_2 = $('#'+rowid+'_depart_datetime_0').val();
+							duration_2 = $('#'+rowid+'_durations_1').val();
+							depart_time_2 = $('#'+rowid+'_depart_time_1').val();
+							depart_city_2 = $('#'+rowid+'_depart_city_1').val();
+							depart_airport_2 = $('#'+rowid+'_depart_airport_1').val();
+							depart_datetime_2 = $('#'+rowid+'_depart_datetime_1').val();
+							depart_city_name_2 = $('#'+rowid+'_depart_city_name_1').val();		
+						
+							board_time_3 = $('#'+rowid+'_start_time_2').val();
+							board_city_3 = $('#'+rowid+'_depart_city_1').val();
+							board_city_name_3 = $('#'+rowid+'_depart_city_name_1').val();		
+							board_airport_3 = $('#'+rowid+'_depart_airport_1').val();
+							board_datetime_3 = $('#'+rowid+'_depart_datetime_1').val();
+							duration_3 = $('#'+rowid+'_durations_2').val();
+							depart_time_3 = $('#'+rowid+'_depart_time_2').val();
+							depart_city_3 = $('#'+rowid+'_depart_city_2').val();
+							depart_airport_3 = $('#'+rowid+'_depart_airport_2').val();
+							depart_datetime_3 = $('#'+rowid+'_depart_datetime_2').val();
+							depart_city_name_3 = $('#'+rowid+'_depart_city_name_2').val();	
+						
+							board_time_4 = $('#'+rowid+'_start_time_3').val();
+							board_city_4 = $('#'+rowid+'_depart_city_2').val();
+							board_city_name_4 = $('#'+rowid+'_depart_city_name_2').val();		
+							board_airport_4 = $('#'+rowid+'_depart_airport_2').val();
+							board_datetime_4 = $('#'+rowid+'_depart_datetime_2').val();
+							duration_4 = $('#'+rowid+'_durations_3').val();
+							depart_time_4 = $('#'+rowid+'_depart_time_3').val();
+							depart_city_4 = $('#'+rowid+'_depart_city_3').val();
+							depart_airport_4 = $('#'+rowid+'_depart_airport_3').val();
+							depart_datetime_4 = $('#'+rowid+'_depart_datetime_3').val();
+							depart_city_name_4 = $('#'+rowid+'_depart_city_name_3').val();
+
+							rowid2 = rows2.attr('id')	
+							board_time_1_2 = $('#'+rowid2+'_board_time').text();
+							board_city_1_2 = $('#'+rowid2+'_board_city').text();
+							board_city_name_1_2 = $('#'+rowid2+'_board_city_name').val();
+							board_airport_1_2 = $('#'+rowid2+'_board_airport').val();
+							board_datetime_1_2 = $('#'+rowid2+'_board_datetime').val();
+							duration_1_2 = $('#'+rowid2+'_durations_0').val();
+							depart_time_1_2 = $('#'+rowid2+'_depart_time_0').val();
+							depart_city_1_2 = $('#'+rowid2+'_depart_city_0').val();
+							depart_airport_1_2 = $('#'+rowid2+'_depart_airport_0').val();
+							depart_datetime_1_2 = $('#'+rowid2+'_depart_datetime_0').val();
+							depart_city_name_1_2 = $('#'+rowid2+'_depart_city_name_0').val();
+						
+							board_time_2_2 = $('#'+rowid2+'_start_time_1').val();
+							board_city_2_2 = $('#'+rowid2+'_depart_city_0').val();
+							board_city_name_2_2 = $('#'+rowid2+'_depart_city_name_0').val();		
+							board_airport_2_2 = $('#'+rowid2+'_depart_airport_0').val();
+							board_datetime_2_2 = $('#'+rowid2+'_depart_datetime_0').val();
+							duration_2_2 = $('#'+rowid2+'_durations_1').val();
+							depart_time_2_2 = $('#'+rowid2+'_depart_time_1').val();
+							depart_city_2_2 = $('#'+rowid2+'_depart_city_1').val();
+							depart_airport_2_2 = $('#'+rowid2+'_depart_airport_1').val();
+							depart_datetime_2_2 = $('#'+rowid2+'_depart_datetime_1').val();
+							depart_city_name_2_2 = $('#'+rowid2+'_depart_city_name_1').val();		
+						
+							board_time_3_2 = $('#'+rowid2+'_start_time_2').val();
+							board_city_3_2 = $('#'+rowid2+'_depart_city_1').val();
+							board_city_name_3_2 = $('#'+rowid2+'_depart_city_name_1').val();		
+							board_airport_3_2 = $('#'+rowid2+'_depart_airport_1').val();
+							board_datetime_3_2 = $('#'+rowid2+'_depart_datetime_1').val();
+							duration_3_2 = $('#'+rowid2+'_durations_2').val();
+							depart_time_3_2 = $('#'+rowid2+'_depart_time_2').val();
+							depart_city_3_2 = $('#'+rowid2+'_depart_city_2').val();
+							depart_airport_3_2 = $('#'+rowid2+'_depart_airport_2').val();
+							depart_datetime_3_2 = $('#'+rowid2+'_depart_datetime_2').val();
+							depart_city_name_3_2 = $('#'+rowid2+'_depart_city_name_2').val();	
+						
+							board_time_4_2 = $('#'+rowid2+'_start_time_3').val();
+							board_city_4_2 = $('#'+rowid2+'_depart_city_2').val();
+							board_city_name_4_2 = $('#'+rowid2+'_depart_city_name_2').val();		
+							board_airport_4_2 = $('#'+rowid2+'_depart_airport_2').val();
+							board_datetime_4_2 = $('#'+rowid2+'_depart_datetime_2').val();
+							duration_4_2 = $('#'+rowid2+'_durations_3').val();
+							depart_time_4_2 = $('#'+rowid2+'_depart_time_3').val();
+							depart_city_4_2 = $('#'+rowid2+'_depart_city_3').val();
+							depart_airport_4_2 = $('#'+rowid2+'_depart_airport_3').val();
+							depart_datetime_4_2 = $('#'+rowid2+'_depart_datetime_3').val();
+							depart_city_name_4_2 = $('#'+rowid2+'_depart_city_name_3').val();
+						
+						button_html = `<button type="button" class="btn btn-dark" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+stopages_count+`','`+stopages_counts+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`', '`+board_time_2+`','`+board_city_2+`','`+board_city_name_2+`','`+board_airport_2+`','`+board_datetime_2+`','`+duration_2+`','`+depart_time_2+`','`+depart_city_2+`','`+depart_airport_2+`','`+depart_datetime_2+`','`+depart_city_name_2+`','`+board_time_3+`','`+board_city_3+`','`+board_city_name_3+`', '`+board_airport_3+`','`+board_datetime_3+`','`+duration_3+`', '`+depart_time_3+`','`+depart_city_3+`','`+depart_airport_3+`','`+depart_datetime_3+`','`+depart_city_name_3+`', '`+board_time_4+`','`+board_city_4+`', '`+board_city_name_4+`', '`+board_airport_4+`','`+board_datetime_4+`','`+duration_4+`','`+depart_time_4+`','`+depart_city_4+`','`+depart_airport_4+`','`+depart_datetime_4+`','`+depart_city_name_4+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
+'`+is_refundable_1+`','`+is_round+`','`+stopages_count_2+`','`+stopages_counts_2+`','`+origin_2+`','`+destination_2+`','`+flight_name_2+`','`+flight_2+`','`+flight_type_2+`','`+flight_img_2+`','`+BaseFare+`','`+tax+`','`+sum_of_fare+`', '`+board_time_6+`','`+board_city_6+`','`+board_city_name_6+`','`+board_airport_6+`','`+board_datetime_6+`','`+duration_6+`','`+depart_time_6+`','`+depart_city_6+`','`+depart_airport_6+`','`+depart_datetime_6+`','`+board_time_1_2+`','`+board_city_1_2+`','`+board_city_name_1_2+`','`+board_airport_1_2+`','`+board_datetime_1_2+`','`+duration_1_2+`','`+depart_time_1_2+`','`+depart_city_1_2+`','`+depart_airport_1_2+`','`+depart_datetime_1_2+`','`+depart_city_name_1_2+`', '`+board_time_2_2+`','`+board_city_2_2+`','`+board_city_name_2_2+`','`+board_airport_2_2+`','`+board_datetime_2_2+`','`+duration_2_2+`','`+depart_time_2_2+`','`+depart_city_2_2+`','`+depart_airport_2_2+`','`+depart_datetime_2_2+`','`+depart_city_name_2_2+`','`+board_time_3_2+`','`+board_city_3_2+`','`+board_city_name_3_2+`', '`+board_airport_3_2+`','`+board_datetime_3_2+`','`+duration_3_2+`', '`+depart_time_3_2+`','`+depart_city_3_2+`','`+depart_airport_3_2+`','`+depart_datetime_3_2+`','`+depart_city_name_3_2+`', '`+board_time_4_2+`','`+board_city_4_2+`', '`+board_city_name_4_2+`', '`+board_airport_4_2+`','`+board_datetime_4_2+`','`+duration_4_2+`','`+depart_time_4_2+`','`+depart_city_4_2+`','`+depart_airport_4_2+`','`+depart_datetime_4_2+`','`+depart_city_name_4_2+`')" >`+html+`</button>`;
 					$('#continue_button_id').html(button_html);
 					}else{
-						button_html = `<button type="button" class="btn btn-dark" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
-'`+is_refundable_1+`','`+is_round+`','','','','','','','','','','','','','','','','','`+BaseFare+`','`+tax+`','`+sum_of_fare+`')" >`+html+`</button>`;
+
+							rowid = rows.attr('id');
+							board_time_1 = $('#'+rowid+'_board_time').text();
+							board_city_1 = $('#'+rowid+'_board_city').text();
+							board_city_name_1 = $('#'+rowid+'_board_city_name').val();
+							board_airport_1 = $('#'+rowid+'_board_airport').val();
+							board_datetime_1 = $('#'+rowid+'_board_datetime').val();
+							duration_1 = $('#'+rowid+'_durations_0').val();
+							depart_time_1 = $('#'+rowid+'_depart_time_0').val();
+							depart_city_1 = $('#'+rowid+'_depart_city_0').val();
+							depart_airport_1 = $('#'+rowid+'_depart_airport_0').val();
+							depart_datetime_1 = $('#'+rowid+'_depart_datetime_0').val();
+							depart_city_name_1 = $('#'+rowid+'_depart_city_name_0').val();
+						
+							board_time_2 = $('#'+rowid+'_start_time_1').val();
+							board_city_2 = $('#'+rowid+'_depart_city_0').val();
+							board_city_name_2 = $('#'+rowid+'_depart_city_name_0').val();		
+							board_airport_2 = $('#'+rowid+'_depart_airport_0').val();
+							board_datetime_2 = $('#'+rowid+'_depart_datetime_0').val();
+							duration_2 = $('#'+rowid+'_durations_1').val();
+							depart_time_2 = $('#'+rowid+'_depart_time_1').val();
+							depart_city_2 = $('#'+rowid+'_depart_city_1').val();
+							depart_airport_2 = $('#'+rowid+'_depart_airport_1').val();
+							depart_datetime_2 = $('#'+rowid+'_depart_datetime_1').val();
+							depart_city_name_2 = $('#'+rowid+'_depart_city_name_1').val();		
+						
+							board_time_3 = $('#'+rowid+'_start_time_2').val();
+							board_city_3 = $('#'+rowid+'_depart_city_1').val();
+							board_city_name_3 = $('#'+rowid+'_depart_city_name_1').val();		
+							board_airport_3 = $('#'+rowid+'_depart_airport_1').val();
+							board_datetime_3 = $('#'+rowid+'_depart_datetime_1').val();
+							duration_3 = $('#'+rowid+'_durations_2').val();
+							depart_time_3 = $('#'+rowid+'_depart_time_2').val();
+							depart_city_3 = $('#'+rowid+'_depart_city_2').val();
+							depart_airport_3 = $('#'+rowid+'_depart_airport_2').val();
+							depart_datetime_3 = $('#'+rowid+'_depart_datetime_2').val();
+							depart_city_name_3 = $('#'+rowid+'_depart_city_name_2').val();	
+						
+							board_time_4 = $('#'+rowid+'_start_time_3').val();
+							board_city_4 = $('#'+rowid+'_depart_city_2').val();
+							board_city_name_4 = $('#'+rowid+'_depart_city_name_2').val();		
+							board_airport_4 = $('#'+rowid+'_depart_airport_2').val();
+							board_datetime_4 = $('#'+rowid+'_depart_datetime_2').val();
+							duration_4 = $('#'+rowid+'_durations_3').val();
+							depart_time_4 = $('#'+rowid+'_depart_time_3').val();
+							depart_city_4 = $('#'+rowid+'_depart_city_3').val();
+							depart_airport_4 = $('#'+rowid+'_depart_airport_3').val();
+							depart_datetime_4 = $('#'+rowid+'_depart_datetime_3').val();
+							depart_city_name_4 = $('#'+rowid+'_depart_city_name_3').val();
+						
+
+						button_html = `<button type="button" class="btn btn-dark" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+stopages_count+`','`+stopages_counts+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`', '`+board_time_2+`','`+board_city_2+`','`+board_city_name_2+`','`+board_airport_2+`','`+board_datetime_2+`','`+duration_2+`','`+depart_time_2+`','`+depart_city_2+`','`+depart_airport_2+`','`+depart_datetime_2+`','`+depart_city_name_2+`','`+board_time_3+`','`+board_city_3+`','`+board_city_name_3+`', '`+board_airport_3+`','`+board_datetime_3+`','`+duration_3+`', '`+depart_time_3+`','`+depart_city_3+`','`+depart_airport_3+`','`+depart_datetime_3+`','`+depart_city_name_3+`', '`+board_time_4+`','`+board_city_4+`', '`+board_city_name_4+`', '`+board_airport_4+`','`+board_datetime_4+`','`+duration_4+`','`+depart_time_4+`','`+depart_city_4+`','`+depart_airport_4+`','`+depart_datetime_4+`','`+depart_city_name_4+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
+'`+is_refundable_1+`','`+is_round+`','','','','','','','','','`+BaseFare+`','`+tax+`','`+sum_of_fare+`','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','')" >`+html+`</button>`;
 					$('#continue_button_id').html(button_html);
 					}
 					
 					
 				});
 
-				function viewFlightDetailsPage(adult_count,child_count,origin_1,destination_1,flight_name_1, flight_type_1,board_time_1,board_city_1,board_city_name_1,board_airport_1,board_datetime_1,duration_1,depart_time_1,depart_city_1,depart_airport_1,depart_datetime_1,depart_city_name_1,baggage_1,cabin_baggage_1,flight_img_1,
-is_refundable_1,is_round,origin_2,destination_2,flight_name_2, flight_type_2,board_time_2,board_city_2,board_city_name_2,board_airport_2,board_datetime_2,duration_2,depart_time_2,depart_city_2,depart_airport_2,depart_datetime_2,depart_city_name_2,flight_img_2,BaseFare,tax,sum_of_fare)
+				function viewFlightDetailsPage(adult_count,child_count,stopages_count,stopages_counts,origin_1,destination_1,flight_name_1,flight_1,flight_type_1,board_time_1,board_city_1,board_city_name_1,board_airport_1,board_datetime_1,duration_1,depart_time_1,depart_city_1,depart_airport_1,depart_datetime_1,depart_city_name_1,board_time_2,board_city_2,board_city_name_2,board_airport_2,board_datetime_2,duration_2,depart_time_2,depart_city_2,depart_airport_2,depart_datetime_2,depart_city_name_2,board_time_3,board_city_3,board_city_name_3,board_airport_3,board_datetime_3,duration_3,depart_time_3,depart_city_3,depart_airport_3,depart_datetime_3,depart_city_name_3,board_time_4,board_city_4,board_city_name_4,board_airport_4,board_datetime_4,duration_4,depart_time_4,depart_city_4,depart_airport_4,depart_datetime_4,depart_city_name_4,baggage_1,cabin_baggage_1,flight_img_1,is_refundable_1,is_round,stopages_count_2,stopages_counts_2,origin_2,destination_2,flight_name_2,flight_2,flight_type_2,flight_img_2,BaseFare,tax,sum_of_fare, board_time_6,board_city_6,board_city_name_6,board_airport_6,board_datetime_6,duration_6,depart_time_6,depart_city_6,depart_airport_6,depart_datetime_6,board_time_1_2,board_city_1_2,board_city_name_1_2,board_airport_1_2,board_datetime_1_2,duration_1_2,depart_time_1_2,depart_city_1_2,depart_airport_1_2,depart_datetime_1_2,depart_city_name_1_2, board_time_2_2,board_city_2_2,board_city_name_2_2,board_airport_2_2,board_datetime_2_2,duration_2_2,depart_time_2_2,depart_city_2_2,depart_airport_2_2,depart_datetime_2_2,depart_city_name_2_2,board_time_3_2,board_city_3_2,board_city_name_3_2, board_airport_3_2,board_datetime_3_2,duration_3_2, depart_time_3_2,depart_city_3_2,depart_airport_3_2,depart_datetime_3_2,depart_city_name_3_2, board_time_4_2,board_city_4_2, board_city_name_4_2, board_airport_4_2,board_datetime_4_2,duration_4_2,depart_time_4_2,depart_city_4_2,depart_airport_4_2,depart_datetime_4_2,depart_city_name_4_2)
 				{
 					// alert(origin_1);
 					var params = { 
-						adult_count : adult_count,child_count : child_count,origin_1 : origin_1 ,destination_1 : destination_1 ,flight_name_1 : flight_name_1,flight_type_1 : flight_type_1 ,board_time_1 : board_time_1 ,board_city_1 : board_city_1 ,board_city_name_1 : board_city_name_1 ,board_airport_1 : board_airport_1 ,board_datetime_1 : board_datetime_1 ,duration_1 : duration_1 ,depart_time_1 : depart_time_1 ,depart_city_1 : depart_city_1 ,depart_airport_1 : depart_airport_1 ,depart_datetime_1 : depart_datetime_1 ,depart_city_name_1 : depart_city_name_1 ,baggage_1 : baggage_1 ,cabin_baggage_1 : cabin_baggage_1 ,flight_img_1 : flight_img_1 ,is_refundable_1 : is_refundable_1 ,is_round : is_round ,origin_2 : origin_2 ,destination_2 : destination_2 ,flight_name_2 : flight_name_2,flight_type_2 : flight_type_2 ,board_time_2 : board_time_2 ,board_city_2 : board_city_2 ,board_city_name_2 : board_city_name_2 ,board_airport_2 : board_airport_2 ,board_datetime_2 : board_datetime_2 ,duration_2 : duration_2 ,depart_time_2 : depart_time_2 ,depart_city_2 : depart_city_2 ,depart_airport_2 : depart_airport_2 ,depart_datetime_2 : depart_datetime_2 ,depart_city_name_2 : depart_city_name_2 ,flight_img_2 : flight_img_2 ,BaseFare : BaseFare ,tax : tax ,sum_of_fare : sum_of_fare 
+						adult_count:adult_count, child_count:child_count, stopages_count:stopages_count, stopages_counts:stopages_counts, origin_1:origin_1, destination_1:destination_1, flight_name_1:flight_name_1, flight_1:flight_1, flight_type_1:flight_type_1, board_time_1:board_time_1, board_city_1:board_city_1, board_city_name_1:board_city_name_1, board_airport_1:board_airport_1, board_datetime_1:board_datetime_1, duration_1:duration_1, depart_time_1:depart_time_1, depart_city_1:depart_city_1, depart_airport_1:depart_airport_1, depart_datetime_1:depart_datetime_1, depart_city_name_1:depart_city_name_1, board_time_2:board_time_2, board_city_2:board_city_2, board_city_name_2:board_city_name_2, board_airport_2:board_airport_2, board_datetime_2:board_datetime_2, duration_2:duration_2, depart_time_2:depart_time_2, depart_city_2:depart_city_2, depart_airport_2:depart_airport_2, depart_datetime_2:depart_datetime_2, depart_city_name_2:depart_city_name_2, board_time_3:board_time_3, board_city_3:board_city_3, board_city_name_3:board_city_name_3, board_airport_3:board_airport_3, board_datetime_3:board_datetime_3, duration_3:duration_3, depart_time_3:depart_time_3, depart_city_3:depart_city_3, depart_airport_3:depart_airport_3, depart_datetime_3:depart_datetime_3, depart_city_name_3:depart_city_name_3, board_time_4:board_time_4, board_city_4:board_city_4, board_city_name_4:board_city_name_4, board_airport_4:board_airport_4, board_datetime_4:board_datetime_4, duration_4:duration_4, depart_time_4:depart_time_4, depart_city_4:depart_city_4, depart_airport_4:depart_airport_4, depart_datetime_4:depart_datetime_4, depart_city_name_4:depart_city_name_4, baggage_1:baggage_1, cabin_baggage_1:cabin_baggage_1, flight_img_1:flight_img_1, is_refundable_1:is_refundable_1, is_round:is_round, stopages_count_2:stopages_count_2, stopages_counts_2:stopages_counts_2, origin_2:origin_2, destination_2:destination_2, flight_name_2:flight_name_2, flight_2:flight_2, flight_type_2:flight_type_2, flight_img_2:flight_img_2, BaseFare:BaseFare, tax:tax, 
+						sum_of_fare:sum_of_fare, board_time_6: board_time_6,board_city_6: board_city_6,board_city_name_6: board_city_name_6,board_airport_6: board_airport_6,board_datetime_6: board_datetime_6,duration_6: duration_6,depart_time_6: depart_time_6,depart_city_6: depart_city_6,depart_airport_6: depart_airport_6,depart_datetime_6, board_time_1_2:board_time_1_2, board_city_1_2:board_city_1_2, board_city_name_1_2:board_city_name_1_2, board_airport_1_2:board_airport_1_2, board_datetime_1_2:board_datetime_1_2, duration_1_2:duration_1_2, depart_time_1_2:depart_time_1_2, depart_city_1_2:depart_city_1_2, depart_airport_1_2:depart_airport_1_2, depart_datetime_1_2:depart_datetime_1_2, depart_city_name_1_2:depart_city_name_1_2,  board_time_2_2:board_time_2_2, board_city_2_2:board_city_2_2, board_city_name_2_2:board_city_name_2_2, board_airport_2_2:board_airport_2_2, board_datetime_2_2:board_datetime_2_2, duration_2_2:duration_2_2, depart_time_2_2:depart_time_2_2, depart_city_2_2:depart_city_2_2, depart_airport_2_2:depart_airport_2_2, depart_datetime_2_2:depart_datetime_2_2, depart_city_name_2_2:depart_city_name_2_2, board_time_3_2:board_time_3_2, board_city_3_2:board_city_3_2, board_city_name_3_2:board_city_name_3_2,  board_airport_3_2:board_airport_3_2, board_datetime_3_2:board_datetime_3_2, duration_3_2:duration_3_2,  depart_time_3_2:depart_time_3_2, depart_city_3_2:depart_city_3_2, depart_airport_3_2:depart_airport_3_2, depart_datetime_3_2:depart_datetime_3_2, depart_city_name_3_2:depart_city_name_3_2,  board_time_4_2:board_time_4_2, board_city_4_2:board_city_4_2,  board_city_name_4_2:board_city_name_4_2,  board_airport_4_2:board_airport_4_2, board_datetime_4_2:board_datetime_4_2, duration_4_2:duration_4_2, depart_time_4_2:depart_time_4_2, depart_city_4_2:depart_city_4_2, depart_airport_4_2:depart_airport_4_2, depart_datetime_4_2:depart_datetime_4_2, depart_city_name_4_2:depart_city_name_4_2
 					}
 					$('#button_div').hide();
 					$.ajax({

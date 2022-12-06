@@ -312,7 +312,7 @@
                                                         <select class="form-control" name="at">
                                                             <option value="">Select</option>
                                                             <option <?php if($user_info[0]->at == "Savings"){ ?> selected <?php } ?> value="Savings">Savings Account</option>
-                                                            <option <?php if($user_info[0]->at == "Current"){ ?> selected <?php } ?> vvalue="Current">Current Account</option>
+                                                            <option <?php if($user_info[0]->at == "Current"){ ?> selected <?php } ?> value="Current">Current Account</option>
                                                         </select>
 													</div>
 												</div>

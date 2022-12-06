@@ -221,97 +221,250 @@
     <div class="d-none d-lg-block col-md-4">
         <div class="card shadow p-2">
             <div class="h5">Selected Flight</div>
-            <div class="d-flex justify-content-between bg-secondary mb-3">
+            <div class="d-flex justify-content-between bg-secondary mb-0">
                 <div class="p-2">Departing Flight (<?php echo $data['depart_datetime_1']; ?>)</div>
                 <div class="p-2">Flights Details</div>
             </div>
             
             <div class="col-md-12 p-0">
                 <div class="card rounded shadow">
-                    <div class="row">
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <div class="text-center">
-                                <img style="width:50px; height: 50px;" src="<?php echo $data['flight_img_1']; ?>" alt="" class="img-responsive rounded">
-                                <div><?php echo $data['flight_name_1']; ?></div>
-                            </div>
+                    <div class="row" style="border-bottom:1px solid #ccc; margin:0px!important;">
+                    <div class="card" style="width:100%!important">
+                        <div class="card-header" style=" padding-left: 3px; font-size: 11px; margin: 1px; padding-bottom: 0px;">
+                            <h6 class="card-title"><?php echo $data['flight_1']; ?> | <?php echo $data['flight_type_1']; ?> </h6>
                         </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 mt-2">
-                            <div class="text-center">
-                                <div style="font-size: 16px;"><?php echo $data['board_time_1']; ?></div>
-                                <div><?php echo $data['origin_1']; ?></div>
+                        <div class="card-body text-dark" style="padding:2px!important;">
+                        <?php if ($data['stopages_counts'] == 1) { ?>
+                            <div class="row">
+                                <div class="col-md-12"><img style="height: 28px;" src="<?php echo $data['flight_img_1']; ?>" /> </div>
+                                <div class="col-md-4" style=" font-size: 12px; font-weight: bold; margin-top: 5px;"><?php echo $data['board_time_1']; ?></div>
+                                <div class="col-md-4" style=" font-size: 12px; font-weight: bold; margin-top: 5px; text-align:center;"><?php echo $data['duration_1']; ?></div>
+                                <div class="col-md-4" style=" font-size: 12px; font-weight: bold; margin-top: 5px;text-align:center;"><?php echo $data['depart_time_1']; ?></div>
                             </div>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <div class="text-center">
-                                <div class="mt-2"><?php echo $data['duration_1']; ?></div>
-                                <strong style="font-size: 12px;"><?php echo $data['flight_type_1']; ?></strong>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    
+                                    <strong><?php echo $data['board_city_name_1']; ?></strong>
+                                    <?php //echo $data['board_airport_1']; ?>
+                                </div>
+                                <div class="col-md-4">&nbsp;</div>
+                                <div class="col-md-4" style="text-align:center;">
+                                    
+                                    <strong><?php echo $data['depart_city_name_1']; ?></strong>
+                                    <?php //echo $data['depart_airport_1']; ?>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 mt-2">
-                            <div class="text-center">
-                                <div style="font-size: 16px;"><?php echo $data['depart_time_1']; ?></div>
-                                <div><?php echo $data['destination_1']; ?></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <?php if($data['flight_name_2']!=''){ ?>       
-            <hr>   
+                        <?php }else{ 
+                            for ($i = 0; $i <= $data['stopages_count']; $i++) {
+                                if($i == 0){
+                                    $board_time_1            = $data['board_time_1'];
+                                    $board_city_1            = $data['board_city_1'];
+                                    $board_city_name_1       = $data['board_city_name_1'];
+                                    $board_airport_1         = $data['board_airport_1'];
+                                    $board_datetime_1        = $data['board_datetime_1'];
+                                    $duration_1              = $data['duration_1'];
+                                    $depart_time_1           = $data['depart_time_1'];
+                                    $depart_city_1           = $data['depart_city_1'];
+                                    $depart_airport_1        = $data['depart_airport_1'];
+                                    $depart_datetime_1       = $data['depart_datetime_1'];
+                                    $depart_city_name_1      = $data['depart_city_name_1'];
+                                }
+                                
+                                if($i == 1){
+                                    $board_time_1            = $data['board_time_2'];
+                                    $board_city_1            = $data['board_city_2'];
+                                    $board_city_name_1       = $data['board_city_name_2'];
+                                    $board_airport_1         = $data['board_airport_2'];
+                                    $board_datetime_1        = $data['board_datetime_2'];
+                                    $duration_1              = $data['duration_2'];
+                                    $depart_time_1           = $data['depart_time_2'];
+                                    $depart_city_1           = $data['depart_city_2'];
+                                    $depart_airport_1        = $data['depart_airport_2'];
+                                    $depart_datetime_1       = $data['depart_datetime_2'];
+                                    $depart_city_name_1      = $data['depart_city_name_2'];	
+                                }
 
-            <div class="mt-2">
-                <div class="d-flex justify-content-between bg-secondary mb-3">
-                    <div class="p-2">Return Flight (<?php echo $data['depart_datetime_2']; ?>)</div>
-                    <div class="p-2">Flights Details</div>
-                </div>
-                
-                <div class="col-md-12 p-0">
-                <div class="card rounded shadow">
-                    <div class="row">
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <div class="text-center">
-                                <img style="width:50px; height: 50px;" src="<?php echo $data['flight_img_2']; ?>" alt="" class="img-responsive rounded">
-                                <div><?php echo $data['flight_name_2']; ?></div>
+                                if($i == 2){    
+                                    $board_time_1            = $data['board_time_3'];
+                                    $board_city_1            = $data['board_city_3'];
+                                    $board_city_name_1       = $data['board_city_name_3'];
+                                    $board_airport_1         = $data['board_airport_3'];
+                                    $board_datetime_1        = $data['board_datetime_3'];
+                                    $duration_1              = $data['duration_3'];
+                                    $depart_time_1           = $data['depart_time_3'];
+                                    $depart_city_1           = $data['depart_city_3'];
+                                    $depart_airport_1        = $data['depart_airport_3'];
+                                    $depart_datetime_1       = $data['depart_datetime_3'];
+                                    $depart_city_name_1      = $data['depart_city_name_3'];
+                                }
+                                
+                                if($i == 3){
+                                    $board_time_1            = $data['board_time_4'];
+                                    $board_city_1            = $data['board_city_4'];
+                                    $board_city_name_1       = $data['board_city_name_4'];
+                                    $board_airport_1         = $data['board_airport_4'];
+                                    $board_datetime_1        = $data['board_datetime_4'];
+                                    $duration_1              = $data['duration_4'];
+                                    $depart_time_1           = $data['depart_time_4'];
+                                    $depart_city_1           = $data['depart_city_4'];
+                                    $depart_airport_1        = $data['depart_airport_4'];
+                                    $depart_datetime_1       = $data['depart_datetime_4'];
+                                    $depart_city_name_1      = $data['depart_city_name_4'];
+                                }
+                            ?>
+
+                            <div class="row">
+                                <div class="col-md-12"><img style="height: 28px;" src="<?php echo $data['flight_img_1']; ?>" /> </div>
+                                <div class="col-md-4" style=" font-size: 12px; font-weight: bold; margin-top: 5px;"><?php echo $board_time_1; ?></div>
+                                <div class="col-md-4" style=" font-size: 12px; font-weight: bold; margin-top: 5px; text-align:center;"><?php echo $duration_1; ?></div>
+                                <div class="col-md-4" style=" font-size: 12px; font-weight: bold; margin-top: 5px; text-align:center;"><?php echo $depart_time_1; ?></div>
                             </div>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 mt-2">
-                            <div class="text-center">
-                                <div style="font-size: 16px;"><?php echo $data['board_time_2']; ?></div>
-                                <div><?php echo $data['origin_2']; ?></div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    
+                                    <strong><?php echo $board_city_name_1; ?></strong>
+                                    <?php //echo $board_airport_1; ?>
+                                </div>
+                                <div class="col-md-4">&nbsp;</div>
+                                <div class="col-md-4" style="text-align:center;">
+                                    
+                                    <strong><?php echo $depart_city_name_1; ?></strong>
+                                    <?php //echo $depart_airport_1; ?>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <div class="text-center">
-                                <div class="mt-2"><?php echo $data['duration_2']; ?></div>
-                                <strong style="font-size: 12px;"><?php echo $data['flight_type_2']; ?></strong>
-                            </div>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 mt-2">
-                            <div class="text-center">
-                                <div style="font-size: 16px;"><?php echo $data['depart_time_2']; ?></div>
-                                <div><?php echo $data['destination_2']; ?></div>
-                            </div>
-                        </div>
+    
+                            <?php } ?> 
+                        <?php } ?>
                     </div>
-                </div>
+
+                    <?php if($data['is_round'] == '1'){ ?>     
+                        <div class="card" style="width:100%!important">
+                        <div class="card-header" style=" padding-left: 3px; font-size: 11px; margin: 1px; padding-bottom: 0px;">
+                            <h6 class="card-title"><?php echo $data['flight_2']; ?> | <?php echo $data['flight_type_2']; ?> </h6>
+                        </div>
+                        <div class="card-body text-dark" style="padding:2px!important;">
+                        <?php if ($data['stopages_counts_2'] == 1) { ?>
+                            <div class="row">
+                                <div class="col-md-12"><img style="height: 28px;" src="<?php echo $data['flight_img_2']; ?>" /> </div>
+                                <div class="col-md-4" style=" font-size: 12px; font-weight: bold; margin-top: 5px;"><?php echo $data['board_time_1_2']; ?></div>
+                                <div class="col-md-4" style=" font-size: 12px; font-weight: bold; margin-top: 5px; text-align:center;"><?php echo $data['duration_1_2']; ?></div>
+                                <div class="col-md-4" style=" font-size: 12px; font-weight: bold; margin-top: 5px;text-align:center;"><?php echo $data['depart_time_1_2']; ?></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    
+                                    <strong><?php echo $data['board_city_name_1_2']; ?></strong>
+                                    <?php //echo $data['board_airport_1']; ?>
+                                </div>
+                                <div class="col-md-4">&nbsp;</div>
+                                <div class="col-md-4" style="text-align:center;">
+                                    
+                                    <strong><?php echo $data['depart_city_name_1_2']; ?></strong>
+                                    <?php //echo $data['depart_airport_1']; ?>
+                                </div>
+                            </div>
+                        <?php }else{ 
+                            for ($i = 0; $i <= $data['stopages_count_2']; $i++) {
+                                if($i == 0){
+                                    $board_time_1            = $data['board_time_1_2'];
+                                    $board_city_1            = $data['board_city_1_2'];
+                                    $board_city_name_1       = $data['board_city_name_1_2'];
+                                    $board_airport_1         = $data['board_airport_1_2'];
+                                    $board_datetime_1        = $data['board_datetime_1_2'];
+                                    $duration_1              = $data['duration_1_2'];
+                                    $depart_time_1           = $data['depart_time_1_2'];
+                                    $depart_city_1           = $data['depart_city_1_2'];
+                                    $depart_airport_1        = $data['depart_airport_1_2'];
+                                    $depart_datetime_1       = $data['depart_datetime_1_2'];
+                                    $depart_city_name_1      = $data['depart_city_name_1_2'];
+                                }
+                                
+                                if($i == 1){
+                                    $board_time_1            = $data['board_time_2_2'];
+                                    $board_city_1            = $data['board_city_2_2'];
+                                    $board_city_name_1       = $data['board_city_name_2_2'];
+                                    $board_airport_1         = $data['board_airport_2_2'];
+                                    $board_datetime_1        = $data['board_datetime_2_2'];
+                                    $duration_1              = $data['duration_2_2'];
+                                    $depart_time_1           = $data['depart_time_2_2'];
+                                    $depart_city_1           = $data['depart_city_2_2'];
+                                    $depart_airport_1        = $data['depart_airport_2_2'];
+                                    $depart_datetime_1       = $data['depart_datetime_2_2'];
+                                    $depart_city_name_1      = $data['depart_city_name_2_2'];	
+                                }
+
+                                if($i == 2){    
+                                    $board_time_1            = $data['board_time_3_2'];
+                                    $board_city_1            = $data['board_city_3_2'];
+                                    $board_city_name_1       = $data['board_city_name_3_2'];
+                                    $board_airport_1         = $data['board_airport_3_2'];
+                                    $board_datetime_1        = $data['board_datetime_3_2'];
+                                    $duration_1              = $data['duration_3_2'];
+                                    $depart_time_1           = $data['depart_time_3_2'];
+                                    $depart_city_1           = $data['depart_city_3_2'];
+                                    $depart_airport_1        = $data['depart_airport_3_2'];
+                                    $depart_datetime_1       = $data['depart_datetime_3_2'];
+                                    $depart_city_name_1      = $data['depart_city_name_3_2'];
+                                }
+                                
+                                if($i == 3){
+                                    $board_time_1            = $data['board_time_4_2'];
+                                    $board_city_1            = $data['board_city_4_2'];
+                                    $board_city_name_1       = $data['board_city_name_4_2'];
+                                    $board_airport_1         = $data['board_airport_4_2'];
+                                    $board_datetime_1        = $data['board_datetime_4_2'];
+                                    $duration_1              = $data['duration_4_2'];
+                                    $depart_time_1           = $data['depart_time_4_2'];
+                                    $depart_city_1           = $data['depart_city_4_2'];
+                                    $depart_airport_1        = $data['depart_airport_4_2'];
+                                    $depart_datetime_1       = $data['depart_datetime_4_2'];
+                                    $depart_city_name_1      = $data['depart_city_name_4_2'];
+                                }
+                            ?>
+
+                            <div class="row">
+                                <div class="col-md-12"><img style="height: 28px;" src="<?php echo $data['flight_img_2']; ?>" /> </div>
+                                <div class="col-md-4" style=" font-size: 12px; font-weight: bold; margin-top: 5px;"><?php echo $board_time_1; ?></div>
+                                <div class="col-md-4" style=" font-size: 12px; font-weight: bold; margin-top: 5px; text-align:center;"><?php echo $duration_1; ?></div>
+                                <div class="col-md-4" style=" font-size: 12px; font-weight: bold; margin-top: 5px; text-align:center;"><?php echo $depart_time_1; ?></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    
+                                    <strong><?php echo $board_city_name_1; ?></strong>
+                                    <?php //echo $board_airport_1; ?>
+                                </div>
+                                <div class="col-md-4">&nbsp;</div>
+                                <div class="col-md-4" style="text-align:center;">
+                                    
+                                    <strong><?php echo $depart_city_name_1; ?></strong>
+                                    <?php //echo $depart_airport_1; ?>
+                                </div>
+                            </div>
+    
+                            <?php } ?> 
+                        <?php } ?>
+                    </div>           
+                    <?php }?>        
+                    
                 </div>
             </div>
-            <?php }?>    
+               
 
             <hr>
-            <div class="mt-3">
+            <div class="col-md-12 p-2 mt-3">
                 <div class="d-flex justify-content-between">
                     <div class="p-1">Base Price</div>
-                    <div class="p-1">₹ <?php echo $data['BaseFare']; ?></div>
+                    <div class="p-1">₹ <?php echo @$data['BaseFare']; ?></div>
                 </div>
                 <div class="d-flex justify-content-between">
                     <div class="p-1">Total taxes & fee</div>
-                    <div class="p-1">₹ <?php echo $data['tax']; ?></div>
+                    <div class="p-1">₹ <?php echo @$data['tax']; ?></div>
                 </div>
                 <hr>
                 <div class="d-flex justify-content-between">
                     <div>Total Net Price</div>
-                    <div>₹ <?php echo $data['sum_of_fare']; ?></div>
+                    <div>₹ <?php echo @$data['sum_of_fare']; ?></div>
                 </div>
             </div>
         </div>
