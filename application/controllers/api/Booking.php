@@ -48,6 +48,10 @@ class Booking extends REST_Controller {
         // $this->response($data, REST_Controller::HTTP_OK);
   }
 
+  public function bookStatus(){
+    return 'hi';
+  }
+
     public function allBookings($id){
       $this->db->select('all_data');
       $this->db->from('bookings');
