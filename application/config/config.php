@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'http://ts.frantic.in/';
-// $config['base_url'] = "http://partner.thetravelsquare.in/";
-$config['base_url'] = 'http://localtts.in';
+$config['base_url'] = "http://localtts.in/";
+// $config['base_url'] = 'http://localhost/tts_ci-master/';
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -53,8 +53,8 @@ $config['index_page'] = '';
 |
 | WARNING: If you set this to 'PATH_INFO', URIs will always be URL-decoded!
 */
-// $config['uri_protocol'] = 'REQUEST_URI';
-$config['uri_protocol'] = 'AUTO';
+$config['uri_protocol']	= 'REQUEST_URI';
+
 /*
 |--------------------------------------------------------------------------
 | URL suffix

@@ -227,7 +227,7 @@
                 				<div class="row">
                 					<div style="background-color: #fff" class="col-lg-12 col-xl-12 order-lg-1 order-xl-1 p-4">
                                         <div class="row mt-0">
-											<div class="col	mt-3">
+											<div class="col	mt-2">
 												<div class="form-check mb-2">
 													<label class="form-check-label">
 														<input type="radio" class="form-check-input" value="1" name="JourneyType" checked="checked"><span class="h5">&nbsp;One Way</span>
@@ -302,19 +302,40 @@
                                         				<option value="1">1 Passenger</option>
                                         				<option value="2">2 Passenger</option>
                                         				<option value="3">3 Passenger</option>
-                                        				<option value="4">More than 3 Passenger</option>
+                                        				<option value="4">4 Passenger</option>
+														<option value="5">5 Passenger</option>
+														<option value="6">6 Passenger</option>
+														<option value="7">7 Passenger</option>
+														<option value="8">8 Passenger</option>
+														<option value="9">9 Passenger</option>
                                         			</select>
                                         		</div>
                                         	</div>	
-											<div class="col-md-1" style="margin-top:6px;">
+											<div class="col-md-1" >
                                         		<div class="form-group">
-                                        			<label for="From"></label>
+                                        			<label for="From">Child</label>
                                         			<select name="ChildCount" id="" class="form-control">
 														<option value="0">Select</option>
                                         				<option value="1">1 Child</option>
                                         				<option value="2">2 Child</option>
                                         				<option value="3">3 Child</option>
-                                        				<option value="4">More than 3 Child</option>
+                                        				<option value="4">4 Child</option>
+														<option value="5">5 Child</option>
+														<option value="6">6 Child</option>
+                                        			</select>
+                                        		</div>
+                                        	</div>	
+											<div class="col-md-1">
+                                        		<div class="form-group">
+                                        			<label for="From">Infants</label>
+                                        			<select name="InfantsCount" id="" class="form-control">
+														<option value="0">Select</option>
+                                        				<option value="1">1 Infants</option>
+                                        				<option value="2">2 Infants</option>
+                                        				<option value="3">3 Infants</option>
+                                        				<option value="4">4 Infants</option>
+														<option value="5">5 Infants</option>
+														<option value="6">6 Infants</option>
                                         			</select>
                                         		</div>
                                         	</div>	
@@ -322,15 +343,13 @@
                                         		<div class="form-group">
                                         			<label for="From">Class</label>
                                         			<select name="FlightCabinClass" id="" class="form-control">
-                                        				<option value="Economy">All</option>
-                                        				<option value="Economy">Economy</option>
-                                        				<option value="Premium Economy">Premium Economy</option>
-                                        				<option value="Business">Business</option>
-                                        				<option value="First Class">First Class</option>
+                                        				<option value="ECONOMY">Economy</option>
+                                        				<option value="PREMIUM_ECONOMY">Premium Economy</option>
+                                        				<option value="BUSINESS">Business</option>
                                         			</select>
                                         		</div>
                                         	</div>
-											<div class="col-md-2" style="margin-top:26px;">
+											<div class="col-md-1" style="margin-top:26px;">
 											<div class="form-group text-center">
 												<button id="submit-button" class="btn btn-dark">Search Flights</button>
 											</div>
@@ -733,7 +752,8 @@
 					
 		            var AdultCount = $('[name="AdultCount"]').val();
 		            var ChildCount = $('[name="ChildCount"]').val();
-		            var InfantCount = 0;
+		            var InfantCount = $('[name="InfantsCount"]').val();
+					
 		        	var segment = [{
 		        		Origin: Origin,
 		            	Destination: Destination,
@@ -775,8 +795,8 @@
 									}
 									],
 									"searchModifiers": {
-									"isConnectingFlight": false,
-									"isDirectFlight": false
+									"isConnectingFlight": true,
+									"isDirectFlight": true
 									}
 								};
 						}else{
@@ -800,8 +820,8 @@
 							}
 							],
 							"searchModifiers": {
-							"isConnectingFlight": false,
-							"isDirectFlight": false
+							"isConnectingFlight": true,
+							"isDirectFlight": true
 							}
 						};
 						};
@@ -826,6 +846,11 @@
 		            }
 					if (error1) {
 		            	alert('Please select return date field value');
+						$('#search_results').html('');
+		            	return false;
+		            }
+					if (parseInt(InfantCount) > parseInt(AdultCount)) {
+		            	alert('Infant count cannot exceed from adult count');
 						$('#search_results').html('');
 		            	return false;
 		            }
@@ -872,6 +897,7 @@
 				}
 				adult_count = 0;
 				child_count = 0;
+				infant_count = 0;
 				$('#button_div').click(function(e) {
 					var template = '';
 					var BaseFare = 0;	
@@ -879,8 +905,10 @@
 					var rows = getHighlightRow();
 					if (rows != undefined) {
 					rowid = rows.attr('id')	
+					
 					adult_count = $('#'+rowid+'_adult_count').val();
 					child_count = $('#'+rowid+'_child_count').val();
+					infant_count = $('#'+rowid+'_infant_count').val();
 					stopages_count = $('#'+rowid+'_stopages_count').val();
 					stopages_counts = $('#'+rowid+'_stopages_counts').val();
 					flight_1 = origin_1 = $('#'+rowid+'_origin').val();
@@ -1015,6 +1043,7 @@
 							is_round = 1;
 							adult_count = $('#'+rowid2+'_adult_count').val();
 							child_count = $('#'+rowid2+'_child_count').val();
+							infant_count = $('#'+rowid2+'_infant_count').val();
 							stopages_count_2 = $('#'+rowid2+'_stopages_count').val();
 							stopages_counts_2 = $('#'+rowid2+'_stopages_counts').val();
 							flight_2 = origin_2 = $('#'+rowid2+'_origin').val();
@@ -1239,6 +1268,7 @@
 					if(is_round == 1){
 
 						rowid = rows.attr('id');
+						price_id = $('#'+rowid+'_priceIds').val();
 							board_time_1 = $('#'+rowid+'_board_time').text();
 							board_city_1 = $('#'+rowid+'_board_city').text();
 							board_city_name_1 = $('#'+rowid+'_board_city_name').val();
@@ -1287,7 +1317,8 @@
 							depart_datetime_4 = $('#'+rowid+'_depart_datetime_3').val();
 							depart_city_name_4 = $('#'+rowid+'_depart_city_name_3').val();
 
-							rowid2 = rows2.attr('id')	
+							rowid2 = rows2.attr('id')
+							price_id_2 = $('#'+rowid2+'_priceIds').val();	
 							board_time_1_2 = $('#'+rowid2+'_board_time').text();
 							board_city_1_2 = $('#'+rowid2+'_board_city').text();
 							board_city_name_1_2 = $('#'+rowid2+'_board_city_name').val();
@@ -1336,12 +1367,14 @@
 							depart_datetime_4_2 = $('#'+rowid2+'_depart_datetime_3').val();
 							depart_city_name_4_2 = $('#'+rowid2+'_depart_city_name_3').val();
 						
-						button_html = `<button type="button" class="btn btn-dark" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+stopages_count+`','`+stopages_counts+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`', '`+board_time_2+`','`+board_city_2+`','`+board_city_name_2+`','`+board_airport_2+`','`+board_datetime_2+`','`+duration_2+`','`+depart_time_2+`','`+depart_city_2+`','`+depart_airport_2+`','`+depart_datetime_2+`','`+depart_city_name_2+`','`+board_time_3+`','`+board_city_3+`','`+board_city_name_3+`', '`+board_airport_3+`','`+board_datetime_3+`','`+duration_3+`', '`+depart_time_3+`','`+depart_city_3+`','`+depart_airport_3+`','`+depart_datetime_3+`','`+depart_city_name_3+`', '`+board_time_4+`','`+board_city_4+`', '`+board_city_name_4+`', '`+board_airport_4+`','`+board_datetime_4+`','`+duration_4+`','`+depart_time_4+`','`+depart_city_4+`','`+depart_airport_4+`','`+depart_datetime_4+`','`+depart_city_name_4+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
+						button_html = `<button type="button" class="btn btn-dark" data-dismiss="modal" onclick="viewFlightDetailsPage('`+price_id+`','`+price_id_2+`','`+adult_count+`','`+child_count+`','`+infant_count+`','`+stopages_count+`','`+stopages_counts+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`', '`+board_time_2+`','`+board_city_2+`','`+board_city_name_2+`','`+board_airport_2+`','`+board_datetime_2+`','`+duration_2+`','`+depart_time_2+`','`+depart_city_2+`','`+depart_airport_2+`','`+depart_datetime_2+`','`+depart_city_name_2+`','`+board_time_3+`','`+board_city_3+`','`+board_city_name_3+`', '`+board_airport_3+`','`+board_datetime_3+`','`+duration_3+`', '`+depart_time_3+`','`+depart_city_3+`','`+depart_airport_3+`','`+depart_datetime_3+`','`+depart_city_name_3+`', '`+board_time_4+`','`+board_city_4+`', '`+board_city_name_4+`', '`+board_airport_4+`','`+board_datetime_4+`','`+duration_4+`','`+depart_time_4+`','`+depart_city_4+`','`+depart_airport_4+`','`+depart_datetime_4+`','`+depart_city_name_4+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
 '`+is_refundable_1+`','`+is_round+`','`+stopages_count_2+`','`+stopages_counts_2+`','`+origin_2+`','`+destination_2+`','`+flight_name_2+`','`+flight_2+`','`+flight_type_2+`','`+flight_img_2+`','`+BaseFare+`','`+tax+`','`+sum_of_fare+`', '`+board_time_6+`','`+board_city_6+`','`+board_city_name_6+`','`+board_airport_6+`','`+board_datetime_6+`','`+duration_6+`','`+depart_time_6+`','`+depart_city_6+`','`+depart_airport_6+`','`+depart_datetime_6+`','`+board_time_1_2+`','`+board_city_1_2+`','`+board_city_name_1_2+`','`+board_airport_1_2+`','`+board_datetime_1_2+`','`+duration_1_2+`','`+depart_time_1_2+`','`+depart_city_1_2+`','`+depart_airport_1_2+`','`+depart_datetime_1_2+`','`+depart_city_name_1_2+`', '`+board_time_2_2+`','`+board_city_2_2+`','`+board_city_name_2_2+`','`+board_airport_2_2+`','`+board_datetime_2_2+`','`+duration_2_2+`','`+depart_time_2_2+`','`+depart_city_2_2+`','`+depart_airport_2_2+`','`+depart_datetime_2_2+`','`+depart_city_name_2_2+`','`+board_time_3_2+`','`+board_city_3_2+`','`+board_city_name_3_2+`', '`+board_airport_3_2+`','`+board_datetime_3_2+`','`+duration_3_2+`', '`+depart_time_3_2+`','`+depart_city_3_2+`','`+depart_airport_3_2+`','`+depart_datetime_3_2+`','`+depart_city_name_3_2+`', '`+board_time_4_2+`','`+board_city_4_2+`', '`+board_city_name_4_2+`', '`+board_airport_4_2+`','`+board_datetime_4_2+`','`+duration_4_2+`','`+depart_time_4_2+`','`+depart_city_4_2+`','`+depart_airport_4_2+`','`+depart_datetime_4_2+`','`+depart_city_name_4_2+`')" >`+html+`</button>`;
 					$('#continue_button_id').html(button_html);
 					}else{
 
 							rowid = rows.attr('id');
+							price_id = $('#'+rowid+'_priceIds').val();
+							price_id_2 = ''
 							board_time_1 = $('#'+rowid+'_board_time').text();
 							board_city_1 = $('#'+rowid+'_board_city').text();
 							board_city_name_1 = $('#'+rowid+'_board_city_name').val();
@@ -1391,7 +1424,7 @@
 							depart_city_name_4 = $('#'+rowid+'_depart_city_name_3').val();
 						
 
-						button_html = `<button type="button" class="btn btn-dark" data-dismiss="modal" onclick="viewFlightDetailsPage('`+adult_count+`','`+child_count+`','`+stopages_count+`','`+stopages_counts+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`', '`+board_time_2+`','`+board_city_2+`','`+board_city_name_2+`','`+board_airport_2+`','`+board_datetime_2+`','`+duration_2+`','`+depart_time_2+`','`+depart_city_2+`','`+depart_airport_2+`','`+depart_datetime_2+`','`+depart_city_name_2+`','`+board_time_3+`','`+board_city_3+`','`+board_city_name_3+`', '`+board_airport_3+`','`+board_datetime_3+`','`+duration_3+`', '`+depart_time_3+`','`+depart_city_3+`','`+depart_airport_3+`','`+depart_datetime_3+`','`+depart_city_name_3+`', '`+board_time_4+`','`+board_city_4+`', '`+board_city_name_4+`', '`+board_airport_4+`','`+board_datetime_4+`','`+duration_4+`','`+depart_time_4+`','`+depart_city_4+`','`+depart_airport_4+`','`+depart_datetime_4+`','`+depart_city_name_4+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
+						button_html = `<button type="button" class="btn btn-dark" data-dismiss="modal" onclick="viewFlightDetailsPage('`+price_id+`','`+price_id_2+`','`+adult_count+`','`+child_count+`' ,'`+infant_count+`', '`+stopages_count+`','`+stopages_counts+`','`+origin_1+`','`+destination_1+`','`+flight_name_1+`','`+flight_1+`','`+flight_type_1+`','`+board_time_1+`','`+board_city_1+`','`+board_city_name_1+`','`+board_airport_1+`','`+board_datetime_1+`','`+duration_1+`','`+depart_time_1+`','`+depart_city_1+`','`+depart_airport_1+`','`+depart_datetime_1+`','`+depart_city_name_1+`', '`+board_time_2+`','`+board_city_2+`','`+board_city_name_2+`','`+board_airport_2+`','`+board_datetime_2+`','`+duration_2+`','`+depart_time_2+`','`+depart_city_2+`','`+depart_airport_2+`','`+depart_datetime_2+`','`+depart_city_name_2+`','`+board_time_3+`','`+board_city_3+`','`+board_city_name_3+`', '`+board_airport_3+`','`+board_datetime_3+`','`+duration_3+`', '`+depart_time_3+`','`+depart_city_3+`','`+depart_airport_3+`','`+depart_datetime_3+`','`+depart_city_name_3+`', '`+board_time_4+`','`+board_city_4+`', '`+board_city_name_4+`', '`+board_airport_4+`','`+board_datetime_4+`','`+duration_4+`','`+depart_time_4+`','`+depart_city_4+`','`+depart_airport_4+`','`+depart_datetime_4+`','`+depart_city_name_4+`','`+baggage_1+`','`+cabin_baggage_1+`','`+flight_img_1+`',
 '`+is_refundable_1+`','`+is_round+`','','','','','','','','','`+BaseFare+`','`+tax+`','`+sum_of_fare+`','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','')" >`+html+`</button>`;
 					$('#continue_button_id').html(button_html);
 					}
@@ -1399,11 +1432,11 @@
 					
 				});
 
-				function viewFlightDetailsPage(adult_count,child_count,stopages_count,stopages_counts,origin_1,destination_1,flight_name_1,flight_1,flight_type_1,board_time_1,board_city_1,board_city_name_1,board_airport_1,board_datetime_1,duration_1,depart_time_1,depart_city_1,depart_airport_1,depart_datetime_1,depart_city_name_1,board_time_2,board_city_2,board_city_name_2,board_airport_2,board_datetime_2,duration_2,depart_time_2,depart_city_2,depart_airport_2,depart_datetime_2,depart_city_name_2,board_time_3,board_city_3,board_city_name_3,board_airport_3,board_datetime_3,duration_3,depart_time_3,depart_city_3,depart_airport_3,depart_datetime_3,depart_city_name_3,board_time_4,board_city_4,board_city_name_4,board_airport_4,board_datetime_4,duration_4,depart_time_4,depart_city_4,depart_airport_4,depart_datetime_4,depart_city_name_4,baggage_1,cabin_baggage_1,flight_img_1,is_refundable_1,is_round,stopages_count_2,stopages_counts_2,origin_2,destination_2,flight_name_2,flight_2,flight_type_2,flight_img_2,BaseFare,tax,sum_of_fare, board_time_6,board_city_6,board_city_name_6,board_airport_6,board_datetime_6,duration_6,depart_time_6,depart_city_6,depart_airport_6,depart_datetime_6,board_time_1_2,board_city_1_2,board_city_name_1_2,board_airport_1_2,board_datetime_1_2,duration_1_2,depart_time_1_2,depart_city_1_2,depart_airport_1_2,depart_datetime_1_2,depart_city_name_1_2, board_time_2_2,board_city_2_2,board_city_name_2_2,board_airport_2_2,board_datetime_2_2,duration_2_2,depart_time_2_2,depart_city_2_2,depart_airport_2_2,depart_datetime_2_2,depart_city_name_2_2,board_time_3_2,board_city_3_2,board_city_name_3_2, board_airport_3_2,board_datetime_3_2,duration_3_2, depart_time_3_2,depart_city_3_2,depart_airport_3_2,depart_datetime_3_2,depart_city_name_3_2, board_time_4_2,board_city_4_2, board_city_name_4_2, board_airport_4_2,board_datetime_4_2,duration_4_2,depart_time_4_2,depart_city_4_2,depart_airport_4_2,depart_datetime_4_2,depart_city_name_4_2)
+				function viewFlightDetailsPage(price_id,price_id_2, adult_count,child_count, infant_count,stopages_count,stopages_counts,origin_1,destination_1,flight_name_1,flight_1,flight_type_1,board_time_1,board_city_1,board_city_name_1,board_airport_1,board_datetime_1,duration_1,depart_time_1,depart_city_1,depart_airport_1,depart_datetime_1,depart_city_name_1,board_time_2,board_city_2,board_city_name_2,board_airport_2,board_datetime_2,duration_2,depart_time_2,depart_city_2,depart_airport_2,depart_datetime_2,depart_city_name_2,board_time_3,board_city_3,board_city_name_3,board_airport_3,board_datetime_3,duration_3,depart_time_3,depart_city_3,depart_airport_3,depart_datetime_3,depart_city_name_3,board_time_4,board_city_4,board_city_name_4,board_airport_4,board_datetime_4,duration_4,depart_time_4,depart_city_4,depart_airport_4,depart_datetime_4,depart_city_name_4,baggage_1,cabin_baggage_1,flight_img_1,is_refundable_1,is_round,stopages_count_2,stopages_counts_2,origin_2,destination_2,flight_name_2,flight_2,flight_type_2,flight_img_2,BaseFare,tax,sum_of_fare, board_time_6,board_city_6,board_city_name_6,board_airport_6,board_datetime_6,duration_6,depart_time_6,depart_city_6,depart_airport_6,depart_datetime_6,board_time_1_2,board_city_1_2,board_city_name_1_2,board_airport_1_2,board_datetime_1_2,duration_1_2,depart_time_1_2,depart_city_1_2,depart_airport_1_2,depart_datetime_1_2,depart_city_name_1_2, board_time_2_2,board_city_2_2,board_city_name_2_2,board_airport_2_2,board_datetime_2_2,duration_2_2,depart_time_2_2,depart_city_2_2,depart_airport_2_2,depart_datetime_2_2,depart_city_name_2_2,board_time_3_2,board_city_3_2,board_city_name_3_2, board_airport_3_2,board_datetime_3_2,duration_3_2, depart_time_3_2,depart_city_3_2,depart_airport_3_2,depart_datetime_3_2,depart_city_name_3_2, board_time_4_2,board_city_4_2, board_city_name_4_2, board_airport_4_2,board_datetime_4_2,duration_4_2,depart_time_4_2,depart_city_4_2,depart_airport_4_2,depart_datetime_4_2,depart_city_name_4_2)
 				{
 					// alert(origin_1);
 					var params = { 
-						adult_count:adult_count, child_count:child_count, stopages_count:stopages_count, stopages_counts:stopages_counts, origin_1:origin_1, destination_1:destination_1, flight_name_1:flight_name_1, flight_1:flight_1, flight_type_1:flight_type_1, board_time_1:board_time_1, board_city_1:board_city_1, board_city_name_1:board_city_name_1, board_airport_1:board_airport_1, board_datetime_1:board_datetime_1, duration_1:duration_1, depart_time_1:depart_time_1, depart_city_1:depart_city_1, depart_airport_1:depart_airport_1, depart_datetime_1:depart_datetime_1, depart_city_name_1:depart_city_name_1, board_time_2:board_time_2, board_city_2:board_city_2, board_city_name_2:board_city_name_2, board_airport_2:board_airport_2, board_datetime_2:board_datetime_2, duration_2:duration_2, depart_time_2:depart_time_2, depart_city_2:depart_city_2, depart_airport_2:depart_airport_2, depart_datetime_2:depart_datetime_2, depart_city_name_2:depart_city_name_2, board_time_3:board_time_3, board_city_3:board_city_3, board_city_name_3:board_city_name_3, board_airport_3:board_airport_3, board_datetime_3:board_datetime_3, duration_3:duration_3, depart_time_3:depart_time_3, depart_city_3:depart_city_3, depart_airport_3:depart_airport_3, depart_datetime_3:depart_datetime_3, depart_city_name_3:depart_city_name_3, board_time_4:board_time_4, board_city_4:board_city_4, board_city_name_4:board_city_name_4, board_airport_4:board_airport_4, board_datetime_4:board_datetime_4, duration_4:duration_4, depart_time_4:depart_time_4, depart_city_4:depart_city_4, depart_airport_4:depart_airport_4, depart_datetime_4:depart_datetime_4, depart_city_name_4:depart_city_name_4, baggage_1:baggage_1, cabin_baggage_1:cabin_baggage_1, flight_img_1:flight_img_1, is_refundable_1:is_refundable_1, is_round:is_round, stopages_count_2:stopages_count_2, stopages_counts_2:stopages_counts_2, origin_2:origin_2, destination_2:destination_2, flight_name_2:flight_name_2, flight_2:flight_2, flight_type_2:flight_type_2, flight_img_2:flight_img_2, BaseFare:BaseFare, tax:tax, 
+						price_id:price_id,price_id_2:price_id_2, adult_count:adult_count, child_count:child_count, infant_count:infant_count, stopages_count:stopages_count, stopages_counts:stopages_counts, origin_1:origin_1, destination_1:destination_1, flight_name_1:flight_name_1, flight_1:flight_1, flight_type_1:flight_type_1, board_time_1:board_time_1, board_city_1:board_city_1, board_city_name_1:board_city_name_1, board_airport_1:board_airport_1, board_datetime_1:board_datetime_1, duration_1:duration_1, depart_time_1:depart_time_1, depart_city_1:depart_city_1, depart_airport_1:depart_airport_1, depart_datetime_1:depart_datetime_1, depart_city_name_1:depart_city_name_1, board_time_2:board_time_2, board_city_2:board_city_2, board_city_name_2:board_city_name_2, board_airport_2:board_airport_2, board_datetime_2:board_datetime_2, duration_2:duration_2, depart_time_2:depart_time_2, depart_city_2:depart_city_2, depart_airport_2:depart_airport_2, depart_datetime_2:depart_datetime_2, depart_city_name_2:depart_city_name_2, board_time_3:board_time_3, board_city_3:board_city_3, board_city_name_3:board_city_name_3, board_airport_3:board_airport_3, board_datetime_3:board_datetime_3, duration_3:duration_3, depart_time_3:depart_time_3, depart_city_3:depart_city_3, depart_airport_3:depart_airport_3, depart_datetime_3:depart_datetime_3, depart_city_name_3:depart_city_name_3, board_time_4:board_time_4, board_city_4:board_city_4, board_city_name_4:board_city_name_4, board_airport_4:board_airport_4, board_datetime_4:board_datetime_4, duration_4:duration_4, depart_time_4:depart_time_4, depart_city_4:depart_city_4, depart_airport_4:depart_airport_4, depart_datetime_4:depart_datetime_4, depart_city_name_4:depart_city_name_4, baggage_1:baggage_1, cabin_baggage_1:cabin_baggage_1, flight_img_1:flight_img_1, is_refundable_1:is_refundable_1, is_round:is_round, stopages_count_2:stopages_count_2, stopages_counts_2:stopages_counts_2, origin_2:origin_2, destination_2:destination_2, flight_name_2:flight_name_2, flight_2:flight_2, flight_type_2:flight_type_2, flight_img_2:flight_img_2, BaseFare:BaseFare, tax:tax, 
 						sum_of_fare:sum_of_fare, board_time_6: board_time_6,board_city_6: board_city_6,board_city_name_6: board_city_name_6,board_airport_6: board_airport_6,board_datetime_6: board_datetime_6,duration_6: duration_6,depart_time_6: depart_time_6,depart_city_6: depart_city_6,depart_airport_6: depart_airport_6,depart_datetime_6, board_time_1_2:board_time_1_2, board_city_1_2:board_city_1_2, board_city_name_1_2:board_city_name_1_2, board_airport_1_2:board_airport_1_2, board_datetime_1_2:board_datetime_1_2, duration_1_2:duration_1_2, depart_time_1_2:depart_time_1_2, depart_city_1_2:depart_city_1_2, depart_airport_1_2:depart_airport_1_2, depart_datetime_1_2:depart_datetime_1_2, depart_city_name_1_2:depart_city_name_1_2,  board_time_2_2:board_time_2_2, board_city_2_2:board_city_2_2, board_city_name_2_2:board_city_name_2_2, board_airport_2_2:board_airport_2_2, board_datetime_2_2:board_datetime_2_2, duration_2_2:duration_2_2, depart_time_2_2:depart_time_2_2, depart_city_2_2:depart_city_2_2, depart_airport_2_2:depart_airport_2_2, depart_datetime_2_2:depart_datetime_2_2, depart_city_name_2_2:depart_city_name_2_2, board_time_3_2:board_time_3_2, board_city_3_2:board_city_3_2, board_city_name_3_2:board_city_name_3_2,  board_airport_3_2:board_airport_3_2, board_datetime_3_2:board_datetime_3_2, duration_3_2:duration_3_2,  depart_time_3_2:depart_time_3_2, depart_city_3_2:depart_city_3_2, depart_airport_3_2:depart_airport_3_2, depart_datetime_3_2:depart_datetime_3_2, depart_city_name_3_2:depart_city_name_3_2,  board_time_4_2:board_time_4_2, board_city_4_2:board_city_4_2,  board_city_name_4_2:board_city_name_4_2,  board_airport_4_2:board_airport_4_2, board_datetime_4_2:board_datetime_4_2, duration_4_2:duration_4_2, depart_time_4_2:depart_time_4_2, depart_city_4_2:depart_city_4_2, depart_airport_4_2:depart_airport_4_2, depart_datetime_4_2:depart_datetime_4_2, depart_city_name_4_2:depart_city_name_4_2
 					}
 					$('#button_div').hide();

@@ -103,6 +103,10 @@ $route['partner-purchase-leads'] = 'Partner/prchasedLeads';
 $route['purchase-lead'] = 'Partner/purchaseleads';
 
 $route['search-flight-results']['POST'] = 'Partner/searchFlightResults';
+$route['review-flight-details']['POST'] = 'Partner/reviewFlightDetails';
+$route['callback']['POST'] = 'Partner/callback';
+$route['success-transaction'] = 'Partner/successTransaction';
+$route['failed-transaction'] = 'Partner/failedTransaction';
 
 $route['partner-contact/(:any)'] = 'Partner/contact/$1';
 $route['partner-contact-form'] = 'Partner/contactForm/';
@@ -421,4 +425,3 @@ $route['app/seller-agent-request-verification-form']='App/Seller/requestAgentVer
 
 $route['partner-login'] = 'App/RestApi/login';
 $route['partner-register'] = 'App/RestApi/register';
-$route['booking-status'] = 'App/Booking/register';

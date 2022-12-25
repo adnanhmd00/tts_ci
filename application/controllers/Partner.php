@@ -1741,7 +1741,7 @@ class Partner extends CI_Controller
 	    curl_close($ch);
 	    $response = json_decode($result, true);
 	    // echo "<pre>";
-	    // print_r($response);
+	    // print_r($result);
 	    // exit;
         $JourneyType = $data['JourneyType'];
         $Origin = $data['Origin'];
@@ -1749,7 +1749,7 @@ class Partner extends CI_Controller
 
         $AdultCount  = $data['AdultCount'];
         $ChildCount  = $data['ChildCount'];
-
+        $InfantCount  = $data['InfantCount'];
         $is_blank = '0';
         $file_name = 'search-flight-results';
         if(isset($response['searchResult'])){
@@ -1757,14 +1757,18 @@ class Partner extends CI_Controller
                 $response_onward = $response['searchResult']['tripInfos']['COMBO'];
                 $response_return = '';
                 $file_name = 'search-comobo-flight-results';
-            }else{
+            }else if(isset($response['searchResult']['tripInfos']['ONWARD'])){
                 $response_onward = $response['searchResult']['tripInfos']['ONWARD'];
                 if($JourneyType == 2){
                     $response_return = $response['searchResult']['tripInfos']['RETURN'];
                 }else{
                     $response_return = '';
                 }
-            } 
+            }else{
+                $response_onward = '';
+                $response_return = '';
+                $is_blank = '1';
+            }
         }else{
             $response_onward = '';
             $response_return = '';
@@ -1773,7 +1777,295 @@ class Partner extends CI_Controller
         
         
 	    $cities = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
-        $this->load->view("partner/".$file_name, compact('response_onward', 'response_return', 'is_blank', 'data', 'cities', 'JourneyType', 'Origin', 'Destination', 'AdultCount',  'ChildCount'));
+        $this->load->view("partner/".$file_name, compact('response_onward', 'response_return', 'is_blank', 'data', 'cities', 'JourneyType', 'Origin', 'Destination', 'AdultCount',  'ChildCount', 'InfantCount'));
+    }
+
+    public function reviewFlightDetails()
+    {
+    	
+    	$data = json_decode(file_get_contents('php://input'), true);
+
+	    $apiKey = '112028f0143732-af9a-454a-82a0-7d5cbbaeb766';
+	    $url = 'https://apitest.tripjack.com/fms/v1/review';
+        
+	    $ch = curl_init($url);
+	    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data['priceIds']));
+	    curl_setopt($ch, CURLOPT_POST, 1);
+	    $headers = array(
+	        'Content-Type: application/json',
+	        'apikey:' .$apiKey
+	    );
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	    $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+        	$response = array();
+        	$response['error'] = curl_error($ch);
+       		$this->response($response, 400);
+        } else {
+            http_response_code(200);
+        }
+	    curl_close($ch);
+	    $response = json_decode($result, true);
+	    // echo "<pre>";
+	    // print_r($result);
+	    // exit;
+        if($response['status']['success'] == TRUE){
+            $data['booking_id'] = $response['bookingId'];
+            $data['amount']     = $response['totalPriceInfo']['totalFareDetail']['fC']['TF'];
+            $data['contacts']   = "9718542250";
+            $data['emails']     = "ankurtiwari120196@gmail.com";
+
+            $customer_payment['booking_id']     = $response['bookingId'];
+            $customer_payment['amount']         = $response['totalPriceInfo']['totalFareDetail']['fC']['TF'];
+            $customer_payment['status']         = 0;
+            
+            $this->admin->insert_data('tbl_customer_payments',$customer_payment);
+
+            foreach ($data['titles'] as $key => $value) {
+                $customer_booking['booking_id']     = $response['bookingId'];
+                $customer_booking['title']          = $value;
+                $customer_booking['first_name']     = $data['first_names'][$key];
+                $customer_booking['last_name']      = $data['last_names'][$key];
+                $customer_booking['dob']            = date("Y-m-d", strtotime($data['dobs'][$key]));
+                $customer_booking['adult_type']     = $data['passenger_type'][$key];
+                $customer_booking['adult_types']    = $data['passenger_types'][$key];
+                $customer_booking['status']         = 0;
+                $this->admin->insert_data('tbl_customer_booking_details',$customer_booking);
+            }
+
+            $customer_contact_details['booking_id']     = $response['bookingId'];
+            $customer_contact_details['email']          = $data['email'];
+            $customer_contact_details['nationality']    = $data['nationality'];
+            $customer_contact_details['contact_no']     = $data['contact_no'];
+            
+            $this->admin->insert_data('tbl_customer_contact_details',$customer_contact_details);
+
+        } else {
+            $data['booking_id'] = '0';
+            $data['amount']     = '';
+            $data['contacts']   = '';
+            $data['emails']     = '';
+            $data['message']    = $response['errors'][0]['message'];
+        }
+
+        $data['title']              = 'Checkout payment | Infovistar';  
+        $data['callback_url']       = base_url().'callback';
+        $data['surl']               = base_url().'success-transaction';
+        $data['furl']               = base_url().'failed-transaction';
+        $data['currency_code']      = 'INR';
+
+        $file_name = 'review-booking-details';
+        $this->load->view("partner/".$file_name, compact('data'));
+    }
+
+    // initialized cURL Request
+    private function curl_handler($payment_id, $amount)  {
+        $url            = 'https://api.razorpay.com/v1/payments/'.$payment_id.'/capture';
+        $key_id         = "rzp_test_uGwyejFAwbnPY4";
+        $key_secret     = "zpXzZ0jtZSHxjq3DKl5IenHB";
+        $fields_string  = "amount=$amount";
+        //cURL Request
+        $ch = curl_init();
+        //set the url, number of POST vars, POST data
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_USERPWD, $key_id.':'.$key_secret);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+        return $ch;
+    }   
+        
+    // callback method
+    public function callback() {   
+        print_r($this->input->post());     
+        if (!empty($this->input->post('razorpay_payment_id')) && !empty($this->input->post('merchant_order_id'))) {
+            $razorpay_payment_id = $this->input->post('razorpay_payment_id');
+            $merchant_order_id = $this->input->post('merchant_order_id');
+            
+            $this->session->set_flashdata('razorpay_payment_id', $this->input->post('razorpay_payment_id'));
+            $this->session->set_flashdata('merchant_order_id', $this->input->post('merchant_order_id'));
+            $currency_code = 'INR';
+            $amount = $this->input->post('merchant_total');
+            $success = false;
+            $error = '';
+            try {                
+                $ch = $this->curl_handler($razorpay_payment_id, $amount);
+                //execute post
+                $result = curl_exec($ch);
+                // echo "<pre>";
+                // print_r($result);
+                // exit;
+                $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                if ($result === false) {
+                    $success = false;
+                    $error = 'Curl error: '.curl_error($ch);
+                } else {
+                    $response_array = json_decode($result, true);
+                        //Check success response
+                        if ($http_status === 200 and isset($response_array['error']) === false) {
+                            $success = true;
+                        } else {
+                            $success = false;
+                            if (!empty($response_array['error']['code'])) {
+                                $error = $response_array['error']['code'].':'.$response_array['error']['description'];
+                            } else {
+                                $error = 'RAZORPAY_ERROR:Invalid Response <br/>'.$result;
+                            }
+                        }
+                }
+                //close curl connection
+                curl_close($ch);
+            } catch (Exception $e) {
+                $success = false;
+                $error = 'Request to Razorpay Failed';
+            }
+            
+            if ($success === true) {
+                if(!empty($this->session->userdata('ci_subscription_keys'))) {
+                    $this->session->unset_userdata('ci_subscription_keys');
+                }
+                if (!$order_info['order_status_id']) {
+                    redirect($this->input->post('merchant_surl_id'));
+                } else {
+                    redirect($this->input->post('merchant_surl_id'));
+                }
+
+            } else {
+                redirect($this->input->post('merchant_furl_id'));
+            }
+        } else {
+            echo 'An error occured. Contact site administrator, please!';
+        }
+    } 
+    public function successTransaction() {
+
+        $customer_payment['status'] = 1;
+        $this->admin->edit_data('booking_id',$this->session->flashdata('merchant_order_id'),$customer_payment,'tbl_customer_payments');
+        $this->admin->edit_data('booking_id',$this->session->flashdata('merchant_order_id'),$customer_payment,'tbl_customer_booking_details');
+
+        $this->db->select('*');
+        $this->db->from('tbl_customer_booking_details');
+        $this->db->where('booking_id', $this->session->flashdata('merchant_order_id'));
+        $query = $this->db->get();
+        $booking_result_data = $query->result();
+        $booking_array = [];
+        foreach($booking_result_data as $value) {
+               $travel_data =  array();
+               $travel_data['dob']  = $value->dob;
+               $travel_data['fN']   = $value->first_name;
+               $travel_data['lN']   = $value->adult_type;
+               $travel_data['pt']   = $value->adult_types;
+               $travel_data['ti']   = $value->title;
+              array_push($booking_array, $travel_data);
+        }
+
+        $this->db->select('*');
+        $this->db->from('tbl_customer_contact_details');
+        $this->db->where('booking_id', $this->session->flashdata('merchant_order_id'));
+        $query = $this->db->get();
+        $contact_details = $query->row();
+        $no = array($contact_details->contact_no);
+        $email = array($contact_details->email);
+        $deliveryInfo_array = array('contacts'=>$no, 'emails'=>$email);
+
+
+        $this->db->select('*');
+        $this->db->from('tbl_customer_payments');
+        $this->db->where('booking_id', $this->session->flashdata('merchant_order_id'));
+        $query = $this->db->get();
+        $payment_details = $query->row();
+
+        $paymentInfos_array = array('amount'=>$payment_details->amount);
+
+        $json_data_array = [];
+        $json_data_array['bookingId'] = $this->session->flashdata('merchant_order_id');
+        $json_data_array['deliveryInfo'] = $deliveryInfo_array;
+        $json_data_array['paymentInfos'] = array($paymentInfos_array);
+        $json_data_array['travellerInfo'] = $booking_array;
+
+
+        // $json_data = $json_data_array;
+        // echo '<pre>';
+        // print_r(json_encode($json_data_array));
+        // exit;
+        $apiKey = '112028f0143732-af9a-454a-82a0-7d5cbbaeb766';
+	    $url = 'https://apitest.tripjack.com/oms/v1/air/book';
+        
+	    $ch = curl_init($url);
+	    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($json_data_array));
+	    curl_setopt($ch, CURLOPT_POST, 1);
+	    $headers = array(
+	        'Content-Type: application/json',
+	        'apikey:' .$apiKey
+	    );
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	    $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+        	$response = array();
+        	$response['error'] = curl_error($ch);
+       		$this->response($response, 400);
+        } else {
+            http_response_code(200);
+        }
+	    curl_close($ch);
+	    $response = json_decode($result, true);
+	    
+
+        if($response['status']['success'] == True){
+            $apiKey = '112028f0143732-af9a-454a-82a0-7d5cbbaeb766';
+            $url = 'https://apitest.tripjack.com/oms/v1/booking-details';
+            $json_data_array = array('bookingId'=>$this->session->flashdata('merchant_order_id'));
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($json_data_array));
+            curl_setopt($ch, CURLOPT_POST, 1);
+            $headers = array(
+                'Content-Type: application/json',
+                'apikey:' .$apiKey
+            );
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $result = curl_exec($ch);
+            if (curl_errno($ch)) {
+                $response = array();
+                $response['error'] = curl_error($ch);
+                $this->response($response, 400);
+            } else {
+                http_response_code(200);
+            }
+            curl_close($ch);
+            $response = json_decode($result, true);
+            $customer_payments['booking_details'] = $result;    
+            $this->admin->edit_data('booking_id',$this->session->flashdata('merchant_order_id'),$customer_payments,'tbl_customer_payments');
+        
+        }else{
+            echo "<pre>";
+            print_r($result);
+            exit;
+        }
+        
+
+        $data['title'] = 'Razorpay Success | The Travel Square';
+        $data['razorpay_payment_id']    = $this->session->flashdata('razorpay_payment_id');
+        $data['merchant_order_id']     = $this->session->flashdata('merchant_order_id');
+        $data['base_url']               = base_url().'search-flight';
+        $file_name = 'success-transaction';
+        $this->load->view("partner/".$file_name, compact('data'));
+    }  
+    public function failedTransaction() {
+        $customer_payment['status'] = 2;
+        $this->admin->edit_data('booking_id',$this->session->flashdata('merchant_order_id'),$customer_payment,'tbl_customer_payments');
+
+        $data['title'] = 'Razorpay Failed | The Travel Square';  
+        $data['razorpay_payment_id']    = $this->session->flashdata('razorpay_payment_id');
+        $data['merchant_order_id']     = $this->session->flashdata('merchant_order_id');
+        $data['base_url']               = base_url().'search-flight';
+        $file_name = 'failed-transaction';
+        $this->load->view("partner/".$file_name, compact('data'));
+
     }
 
     public function flightFareResults()
@@ -1811,9 +2103,10 @@ class Partner extends CI_Controller
 
         $AdultCount  = $data['AdultCount'];
         $ChildCount  = $data['ChildCount'];
+        $InfantCount  = $data['InfantCount'];
 
 	    $cities = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
-        $this->load->view("partner/search-flight-results", compact('response', 'data', 'cities', 'JourneyType', 'Origin', 'Destination', 'AdultCount',  'ChildCount'));
+        $this->load->view("partner/search-flight-results", compact('response', 'data', 'cities', 'JourneyType', 'Origin', 'Destination', 'AdultCount',  'ChildCount', 'InfantCount'));
     }
 
     public function flightSearchPost()

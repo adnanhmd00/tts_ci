@@ -64,10 +64,12 @@
 							?>
 							<tr class="<?php if($i == 1){?>highlight <?php } ?> one_way" id="one_way_<?php echo $i; ?>" onclick="getSelectedDiv('one_way', '<?php echo $i?>')">
 							<td><div class="text-center">
+							<input type="hidden" id="one_way_<?php echo $i; ?>_priceIds" value="<?php echo $Result['totalPriceList'][0]['id']; ?>" />
 							<input type="hidden" id="one_way_<?php echo $i; ?>_stopages_counts" value="<?php echo $stopages_counts; ?>" >
 							<input type="hidden" id="one_way_<?php echo $i; ?>_stopages_counts" value="<?php echo $stopages_counts; ?>" >
 							<input type="hidden" id="one_way_<?php echo $i; ?>_adult_count" value="<?php echo $AdultCount; ?>" >
 								<input type="hidden" id="one_way_<?php echo $i; ?>_child_count" value="<?php echo $ChildCount; ?>" >
+								<input type="hidden" id="one_way_<?php echo $i; ?>_infant_count" value="<?php echo $InfantCount; ?>" >
 
 									<input type="hidden" id="one_way_<?php echo $i; ?>_origin" value="<?php echo $Origin; ?>">
 									<input type="hidden" id="one_way_<?php echo $i; ?>_destination" value="<?php echo $Destination; ?>">
@@ -254,11 +256,56 @@
 									
 								<?php } ?>		
 								</td>
+								<?php
+								 $AdultPrice = $Result['totalPriceList'][0]['fd']['ADULT']['fC']['NF'];
+								 $AdultPrice = $AdultCount*$AdultPrice;
+
+								 $AdultBasefare = $Result['totalPriceList'][0]['fd']['ADULT']['fC']['BF'];
+								 $AdultBasefare = $AdultCount*$AdultBasefare;
+							     
+								 $AdultTaxfare = $Result['totalPriceList'][0]['fd']['ADULT']['fC']['TAF'];
+								 $AdultTaxfare = $AdultCount*$AdultTaxfare;
+
+								 if($ChildCount > 0){
+									$ChildPrice = $Result['totalPriceList'][0]['fd']['CHILD']['fC']['NF'];
+								 	$ChildPrice = $ChildCount*$ChildPrice;
+
+									$ChildBasefare = $Result['totalPriceList'][0]['fd']['CHILD']['fC']['BF'];
+								 	$ChildBasefare = $ChildCount*$ChildBasefare;
+
+									$ChildTaxfare = $Result['totalPriceList'][0]['fd']['CHILD']['fC']['TAF'];
+								 	$ChildTaxfare = $ChildCount*$ChildTaxfare;
+
+								 }else{
+									$ChildPrice = 0;
+									$ChildBasefare = 0;
+									$ChildTaxfare = 0;								 
+								 }
+								 if($InfantCount > 0){
+									$InfantPrice = $Result['totalPriceList'][0]['fd']['INFANT']['fC']['NF'];
+								 	$InfantPrice = $InfantCount*$InfantPrice;
+
+									$InfantBasefare = $Result['totalPriceList'][0]['fd']['INFANT']['fC']['BF'];
+								 	$InfantBasefare = $InfantCount*$InfantBasefare;
+
+									$InfantTaxfare = $Result['totalPriceList'][0]['fd']['INFANT']['fC']['TAF'];
+								 	$InfantTaxfare = $InfantCount*$InfantTaxfare;
+
+								 }else{
+									$InfantPrice = 0;
+									$InfantBasefare = 0;
+									$InfantTaxfare = 0;									 
+								 }
+								 
+								 $finalPrice = $AdultPrice+$ChildPrice+$InfantPrice;
+								 $finalBasefare = $AdultBasefare+$ChildBasefare+$InfantBasefare;
+								 $finalTaxfare = $AdultTaxfare+$ChildTaxfare+$InfantTaxfare;
+								?>
 								<td>
 									<div class="text-center mt-4">
-										<div id="flight-price" class="h5"><?php echo round($Result['totalPriceList'][0]['fd']['ADULT']['fC']['NF']); ?>/-
-										<input type="hidden" id="one_way_<?php echo $i; ?>_basefare" value="<?php echo round($Result['totalPriceList'][0]['fd']['ADULT']['fC']['BF']); ?>">
-										<input type="hidden" id="one_way_<?php echo $i; ?>_tax" value="<?php echo round($Result['totalPriceList'][0]['fd']['ADULT']['fC']['TAF']); ?>">
+										<div id="flight-price" class="h5"><?php echo round($finalPrice); ?>/-
+										<input type="hidden" id="one_way_<?php echo $i; ?>_basefare" value="<?php echo round($finalBasefare); ?>">
+										<input type="hidden" id="one_way_<?php echo $i; ?>_tax" value="<?php echo round($finalTaxfare); ?>">
 										</div>
 									</div>
 								</td>
@@ -297,10 +344,11 @@
 							?>
 							<tr class="<?php if($i == 1){?>selected <?php } ?> two_way" id="two_way_<?php echo $i; ?>" onclick="getSelectedDiv('two_way', '<?php echo $i?>')">
 							<td><div class="text-center">
+							<input type="hidden" id="two_way_<?php echo $i; ?>_priceIds" value="<?php echo $Result['totalPriceList'][0]['id']; ?>" />
 							<input type="hidden" id="two_way_<?php echo $i; ?>_stopages_counts" value="<?php echo $stopages_counts; ?>" >
 							<input type="hidden" id="two_way_<?php echo $i; ?>_adult_count" value="<?php echo $AdultCount; ?>" >
 								<input type="hidden" id="two_way_<?php echo $i; ?>_child_count" value="<?php echo $ChildCount; ?>" >
-
+								<input type="hidden" id="two_way_<?php echo $i; ?>_infant_count" value="<?php echo $InfantCount; ?>" >
 									<input type="hidden" id="two_way_<?php echo $i; ?>_origin" value="<?php echo $Destination; ?>">
 									<input type="hidden" id="two_way_<?php echo $i; ?>_destination" value="<?php echo $Origin; ?>">
 									<?php if(isset($Result['totalPriceList'][0]['fd']['ADULT']['bI']['iB'])){?>
@@ -487,11 +535,57 @@
 									
 								<?php } ?>		
 								</td>
+								<?php
+								 $AdultPrice = $Result['totalPriceList'][0]['fd']['ADULT']['fC']['NF'];
+								 $AdultPrice = $AdultCount*$AdultPrice;
+
+								 $AdultBasefare = $Result['totalPriceList'][0]['fd']['ADULT']['fC']['BF'];
+								 $AdultBasefare = $AdultCount*$AdultBasefare;
+							     
+								 $AdultTaxfare = $Result['totalPriceList'][0]['fd']['ADULT']['fC']['TAF'];
+								 $AdultTaxfare = $AdultCount*$AdultTaxfare;
+
+								 if($ChildCount > 0){
+									$ChildPrice = $Result['totalPriceList'][0]['fd']['CHILD']['fC']['NF'];
+								 	$ChildPrice = $ChildCount*$ChildPrice;
+
+									$ChildBasefare = $Result['totalPriceList'][0]['fd']['CHILD']['fC']['BF'];
+								 	$ChildBasefare = $ChildCount*$ChildBasefare;
+
+									$ChildTaxfare = $Result['totalPriceList'][0]['fd']['CHILD']['fC']['TAF'];
+								 	$ChildTaxfare = $ChildCount*$ChildTaxfare;
+
+								 }else{
+									$ChildPrice = 0;
+									$ChildBasefare = 0;
+									$ChildTaxfare = 0;								 
+								 }
+								 if($InfantCount > 0){
+									$InfantPrice = $Result['totalPriceList'][0]['fd']['INFANT']['fC']['NF'];
+								 	$InfantPrice = $InfantCount*$InfantPrice;
+
+									$InfantBasefare = $Result['totalPriceList'][0]['fd']['INFANT']['fC']['BF'];
+								 	$InfantBasefare = $InfantCount*$InfantBasefare;
+
+									$InfantTaxfare = $Result['totalPriceList'][0]['fd']['INFANT']['fC']['TAF'];
+								 	$InfantTaxfare = $InfantCount*$InfantTaxfare;
+
+								 }else{
+									$InfantPrice = 0;
+									$InfantBasefare = 0;
+									$InfantTaxfare = 0;									 
+								 }
+								 
+								 $finalPrice = $AdultPrice+$ChildPrice+$InfantPrice;
+								 $finalBasefare = $AdultBasefare+$ChildBasefare+$InfantBasefare;
+								 $finalTaxfare = $AdultTaxfare+$ChildTaxfare+$InfantTaxfare;
+								?>
+
 								<td>
 									<div class="text-center mt-4">
-										<div id="flight-price" class="h5"><?php echo round($Result['totalPriceList'][0]['fd']['ADULT']['fC']['NF']); ?>/-
-										<input type="hidden" id="two_way_<?php echo $i; ?>_basefare" value="<?php echo round($Result['totalPriceList'][0]['fd']['ADULT']['fC']['BF']); ?>">
-										<input type="hidden" id="two_way_<?php echo $i; ?>_tax" value="<?php echo round($Result['totalPriceList'][0]['fd']['ADULT']['fC']['TAF']); ?>">
+										<div id="flight-price" class="h5"><?php echo round($finalPrice); ?>/-
+										<input type="hidden" id="two_way_<?php echo $i; ?>_basefare" value="<?php echo round($finalBasefare); ?>">
+										<input type="hidden" id="two_way_<?php echo $i; ?>_tax" value="<?php echo round($finalTaxfare); ?>">
 										</div>
 									</div>
 								</td>
