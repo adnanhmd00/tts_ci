@@ -1718,7 +1718,8 @@ class Partner extends CI_Controller
     {
     	
     	$data = json_decode(file_get_contents('php://input'), true);
-	    $apiKey = '112028f0143732-af9a-454a-82a0-7d5cbbaeb766';
+	    #$apiKey = '112028f0143732-af9a-454a-82a0-7d5cbbaeb766';
+        $apiKey = '710592025cf94af1-d737-4915-bc57-198534d97698';
 	    $url = 'https://apitest.tripjack.com/fms/v1/air-search-all';
         
 	    $ch = curl_init($url);
@@ -1785,7 +1786,8 @@ class Partner extends CI_Controller
     	
     	$data = json_decode(file_get_contents('php://input'), true);
 
-	    $apiKey = '112028f0143732-af9a-454a-82a0-7d5cbbaeb766';
+	    #$apiKey = '112028f0143732-af9a-454a-82a0-7d5cbbaeb766';
+        $apiKey = '710592025cf94af1-d737-4915-bc57-198534d97698';
 	    $url = 'https://apitest.tripjack.com/fms/v1/review';
         
 	    $ch = curl_init($url);
@@ -1849,7 +1851,7 @@ class Partner extends CI_Controller
             $data['message']    = $response['errors'][0]['message'];
         }
 
-        $data['title']              = 'Checkout payment | Infovistar';  
+        $data['title']              = 'Checkout payment | The Travel Square';  
         $data['callback_url']       = base_url().'callback';
         $data['surl']               = base_url().'success-transaction';
         $data['furl']               = base_url().'failed-transaction';
@@ -1991,7 +1993,8 @@ class Partner extends CI_Controller
         // echo '<pre>';
         // print_r(json_encode($json_data_array));
         // exit;
-        $apiKey = '112028f0143732-af9a-454a-82a0-7d5cbbaeb766';
+        #$apiKey = '112028f0143732-af9a-454a-82a0-7d5cbbaeb766';
+        $apiKey = '710592025cf94af1-d737-4915-bc57-198534d97698';
 	    $url = 'https://apitest.tripjack.com/oms/v1/air/book';
         
 	    $ch = curl_init($url);
@@ -2016,7 +2019,8 @@ class Partner extends CI_Controller
 	    
 
         if($response['status']['success'] == True){
-            $apiKey = '112028f0143732-af9a-454a-82a0-7d5cbbaeb766';
+            #$apiKey = '112028f0143732-af9a-454a-82a0-7d5cbbaeb766';
+            $apiKey = '710592025cf94af1-d737-4915-bc57-198534d97698';
             $url = 'https://apitest.tripjack.com/oms/v1/booking-details';
             $json_data_array = array('bookingId'=>$this->session->flashdata('merchant_order_id'));
             $ch = curl_init($url);
