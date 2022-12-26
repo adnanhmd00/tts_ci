@@ -2190,8 +2190,28 @@ class Partner extends CI_Controller
     }
 
     function travellersDetails(){
+
+        $adult_start_date = date("Y-m-d");
+        $adult_start_date = date('Y-m-d', strtotime($adult_start_date. ' - 120 years'));
+
+        $adult_end_date = date("Y-m-d");
+        $adult_end_date = date('Y-m-d', strtotime($adult_end_date. ' - 12 years'));
+
+        $child_start_date = date("Y-m-d");
+        $child_start_date = date('Y-m-d', strtotime($child_start_date. ' - 12 years'));
+
+        $child_end_date = date("Y-m-d");
+        $child_end_date = date('Y-m-d', strtotime($child_end_date. ' - 2 years'));
+
+        $infant_start_date = date("Y-m-d");
+        $infant_start_date = date('Y-m-d', strtotime($infant_start_date. ' - 2 years'));
+
+        $infant_end_date = date("Y-m-d");
+        $infant_end_date = date('Y-m-d', strtotime($infant_end_date. ' - 0 years'));
+
+
         $data = json_decode(file_get_contents('php://input'), true);
-        $this->load->view("partner/traveller-details", compact('data'));
+        $this->load->view("partner/traveller-details", compact('data', 'adult_start_date', 'adult_end_date', 'child_start_date', 'child_end_date', 'infant_start_date', 'infant_end_date'));
     }
 
     function appImageOptions(){

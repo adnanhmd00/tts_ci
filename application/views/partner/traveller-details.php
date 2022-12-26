@@ -560,31 +560,46 @@
   
 <script>
     $(function() {
-            $(".datepicker-adult").datepicker({
-                beforeShow: addCustomInformation,
-                beforeShowDay: function(date) {
-                    return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
-                },
-                onChangeMonthYear: addCustomInformation,
-                onSelect: addCustomInformation
-            });
+            $('.datepicker-adult').datepicker({
+                format: "mm/dd/yyyy",
+                startDate: new Date('<?php echo $adult_start_date; ?>'),
+                endDate: new Date('<?php echo $adult_end_date; ?>')
+            }); 
+            // $(".datepicker-adult").datepicker({
+            //     beforeShow: addCustomInformation,
+            //     beforeShowDay: function(date) {
+            //         return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
+            //     },
+            //     onChangeMonthYear: addCustomInformation,
+            //     onSelect: addCustomInformation
+            // });
+            $('.datepicker-child').datepicker({
+                format: "mm/dd/yyyy",
+                startDate: new Date('<?php echo $child_start_date; ?>'),
+                endDate: new Date('<?php echo $child_end_date; ?>')
+            });     
+            // $(".datepicker-child").datepicker({
+            //     beforeShow: addCustomInformation,
+            //     beforeShowDay: function(date) {
+            //         return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
+            //     },
+            //     onChangeMonthYear: addCustomInformation,
+            //     onSelect: addCustomInformation
+            // });
 
-            $(".datepicker-child").datepicker({
-                beforeShow: addCustomInformation,
-                beforeShowDay: function(date) {
-                    return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
-                },
-                onChangeMonthYear: addCustomInformation,
-                onSelect: addCustomInformation
-            });
-            $(".datepicker-infant").datepicker({
-                beforeShow: addCustomInformation,
-                beforeShowDay: function(date) {
-                    return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
-                },
-                onChangeMonthYear: addCustomInformation,
-                onSelect: addCustomInformation
-            });
+            $('.datepicker-infant').datepicker({
+                format: "mm/dd/yyyy",
+                startDate: new Date('<?php echo $infant_start_date; ?>'),
+                endDate: new Date('<?php echo $infant_end_date; ?>')
+            });   
+            // $(".datepicker-infant").datepicker({
+            //     beforeShow: addCustomInformation,
+            //     beforeShowDay: function(date) {
+            //         return [true, date.getDay() === 5 || date.getDay() === 6 ? "weekend" : "weekday"];
+            //     },
+            //     onChangeMonthYear: addCustomInformation,
+            //     onSelect: addCustomInformation
+            // });
             
             $("#review-button-id").attr("disabled", true);
         });
