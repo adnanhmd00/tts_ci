@@ -52,7 +52,8 @@
 <?php
 $description        = "Product Description";
 $txnid              = date("YmdHis");     
-$key_id             = "rzp_test_uGwyejFAwbnPY4";
+// $key_id             = "rzp_test_uGwyejFAwbnPY4";
+$key_id             = "rzp_live_VMplwHkFeViE2n";
 $currency_code      = $data['currency_code'];            
 $total              = ($data['amount']* 100); // 100 = 1 indian rupees
 $amount             = $data['amount'];

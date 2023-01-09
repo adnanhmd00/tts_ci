@@ -2053,8 +2053,10 @@ class Partner extends CI_Controller
     // initialized cURL Request
     private function curl_handler($payment_id, $amount)  {
         $url            = 'https://api.razorpay.com/v1/payments/'.$payment_id.'/capture';
-        $key_id         = "rzp_test_uGwyejFAwbnPY4";
-        $key_secret     = "zpXzZ0jtZSHxjq3DKl5IenHB";
+        // $key_id         = "rzp_test_uGwyejFAwbnPY4";
+        // $key_secret     = "zpXzZ0jtZSHxjq3DKl5IenHB";
+        $key_id         = "rzp_live_VMplwHkFeViE2n";
+        $key_secret     = "WQk1yLcwbH3fyIq8onlZMWWF";
         $fields_string  = "amount=$amount";
         //cURL Request
         $ch = curl_init();
