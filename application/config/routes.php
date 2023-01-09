@@ -104,6 +104,7 @@ $route['purchase-lead'] = 'Partner/purchaseleads';
 
 $route['search-flight-results']['POST'] = 'Partner/searchFlightResults';
 $route['review-flight-details']['POST'] = 'Partner/reviewFlightDetails';
+$route['customer-booking-details']['POST'] = 'Partner/customerBookingDetails';
 $route['callback']['POST'] = 'Partner/callback';
 $route['success-transaction'] = 'Partner/successTransaction';
 $route['failed-transaction'] = 'Partner/failedTransaction';
