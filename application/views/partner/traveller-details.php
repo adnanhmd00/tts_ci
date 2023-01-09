@@ -46,7 +46,7 @@
 <!--Begin::Dashboard 1-->
 <!--Begin::Row-->
 
-<div class="h5">Traveller Details</div>
+<div class="h5">Traveller Details <?php echo $data['stopages_count']; ?></div>
 <div class="row" >
     <div class="col-md-8" id="main-div-id">
         <div class="row">
@@ -306,7 +306,7 @@
     
     <div id="flight-div-id" class="d-none d-lg-block col-md-4">
         <div class="card shadow p-2">
-            <div class="h5">Selected Flight</div>
+            <div class="h5">Selected Flight </div>
             <div class="d-flex justify-content-between bg-secondary mb-0">
                 <div class="p-2">Departing Flight (<?php echo $data['depart_datetime_1']; ?>)</div>
                 <div class="p-2">Flights Details</div>
@@ -674,6 +674,277 @@
             alert('Please enter gst no');
             return false;
         }else{
+            stopages_count_1 = '<?php echo $data['stopages_count']; ?>';
+            stopages_count_2 = '<?php echo $data['stopages_count_2']; ?>';
+            travel_date = '<?php echo $data['travel_date']; ?>';
+            return_date = '<?php echo $data['return_date']; ?>';
+            journey_type = '<?php echo $data['journey_type']; ?>';
+            flight_name_1 = '<?php echo $data['flight_name_1']; ?>';
+            flight_name_2 = '<?php echo $data['flight_name_2']; ?>';
+            flight_img_1 = '<?php echo $data['flight_img_1']; ?>';
+            flight_img_2 = '<?php echo $data['flight_img_2']; ?>';
+            origin = '<?php echo $data['origin_1']; ?>';
+            destination = '<?php echo $data['destination_1']; ?>';
+
+            flight_from_1 = '<?php echo $data['flight_1']; ?>';
+            flight_from_2 = '<?php echo $data['flight_2']; ?>';
+            
+            flight_type_1 = '<?php echo $data['flight_type_1']; ?>';
+            flight_type_2 = '<?php echo $data['flight_type_2']; ?>';
+
+            var flight_params = {
+                "board_time_1"        :'<?php echo $data['board_time_1']; ?>',
+                "board_city_1"        :'<?php echo $data['board_city_1']; ?>',
+                "board_city_name_1"   :'<?php echo $data['board_city_name_1']; ?>',
+                "board_airport_1"     :'<?php echo $data['board_airport_1']; ?>',
+                "board_datetime_1"    :'<?php echo $data['board_datetime_1']; ?>',
+                "duration_1"          :'<?php echo $data['duration_1']; ?>',
+                "depart_time_1"       :'<?php echo $data['depart_time_1']; ?>',
+                "depart_city_1"       :'<?php echo $data['depart_city_1']; ?>',
+                "depart_airport_1"    :'<?php echo $data['depart_airport_1']; ?>',
+                "depart_datetime_1"   :'<?php echo $data['depart_datetime_1']; ?>',
+                "depart_city_name_1"  :'<?php echo $data['depart_city_name_1']; ?>'
+            }
+
+            <?php if($data['stopages_count'] == 1){?>
+                var flight_params = {
+                "board_time_1"        :'<?php echo $data['board_time_1']; ?>',
+                "board_city_1"        :'<?php echo $data['board_city_1']; ?>',
+                "board_city_name_1"   :'<?php echo $data['board_city_name_1']; ?>',
+                "board_airport_1"     :'<?php echo $data['board_airport_1']; ?>',
+                "board_datetime_1"    :'<?php echo $data['board_datetime_1']; ?>',
+                "duration_1"          :'<?php echo $data['duration_1']; ?>',
+                "depart_time_1"       :'<?php echo $data['depart_time_1']; ?>',
+                "depart_city_1"       :'<?php echo $data['depart_city_1']; ?>',
+                "depart_airport_1"    :'<?php echo $data['depart_airport_1']; ?>',
+                "depart_datetime_1"   :'<?php echo $data['depart_datetime_1']; ?>',
+                "depart_city_name_1"  :'<?php echo $data['depart_city_name_1']; ?>',
+                "board_time_2"        :'<?php echo $data['board_time_2']; ?>',
+                "board_city_2"        :'<?php echo $data['board_city_2']; ?>',
+                "board_city_name_2"   :'<?php echo $data['board_city_name_2']; ?>',
+                "board_airport_2"     :'<?php echo $data['board_airport_2']; ?>',
+                "board_datetime_2"    :'<?php echo $data['board_datetime_2']; ?>',
+                "duration_2"          :'<?php echo $data['duration_2']; ?>',
+                "depart_time_2"       :'<?php echo $data['depart_time_2']; ?>',
+                "depart_city_2"       :'<?php echo $data['depart_city_2']; ?>',
+                "depart_airport_2"    :'<?php echo $data['depart_airport_2']; ?>',
+                "depart_datetime_2"   :'<?php echo $data['depart_datetime_2']; ?>',
+                "depart_city_name_2"  :'<?php echo $data['depart_city_name_2']; ?>'
+            }
+            <?php }elseif($data['stopages_count'] == 2){?>
+                var flight_params = {
+                "board_time_1"        :'<?php echo $data['board_time_1']; ?>',
+                "board_city_1"        :'<?php echo $data['board_city_1']; ?>',
+                "board_city_name_1"   :'<?php echo $data['board_city_name_1']; ?>',
+                "board_airport_1"     :'<?php echo $data['board_airport_1']; ?>',
+                "board_datetime_1"    :'<?php echo $data['board_datetime_1']; ?>',
+                "duration_1"          :'<?php echo $data['duration_1']; ?>',
+                "depart_time_1"       :'<?php echo $data['depart_time_1']; ?>',
+                "depart_city_1"       :'<?php echo $data['depart_city_1']; ?>',
+                "depart_airport_1"    :'<?php echo $data['depart_airport_1']; ?>',
+                "depart_datetime_1"   :'<?php echo $data['depart_datetime_1']; ?>',
+                "depart_city_name_1"  :'<?php echo $data['depart_city_name_1']; ?>',
+                "board_time_2"        :'<?php echo $data['board_time_2']; ?>',
+                "board_city_2"        :'<?php echo $data['board_city_2']; ?>',
+                "board_city_name_2"   :'<?php echo $data['board_city_name_2']; ?>',
+                "board_airport_2"     :'<?php echo $data['board_airport_2']; ?>',
+                "board_datetime_2"    :'<?php echo $data['board_datetime_2']; ?>',
+                "duration_2"          :'<?php echo $data['duration_2']; ?>',
+                "depart_time_2"       :'<?php echo $data['depart_time_2']; ?>',
+                "depart_city_2"       :'<?php echo $data['depart_city_2']; ?>',
+                "depart_airport_2"    :'<?php echo $data['depart_airport_2']; ?>',
+                "depart_datetime_2"   :'<?php echo $data['depart_datetime_2']; ?>',
+                "depart_city_name_2"  :'<?php echo $data['depart_city_name_2']; ?>',
+                
+                "board_time_3"        :'<?php echo $data['board_time_3']; ?>',
+                "board_city_3"        :'<?php echo $data['board_city_3']; ?>',
+                "board_city_name_3"   :'<?php echo $data['board_city_name_3']; ?>',
+                "board_airport_3"     :'<?php echo $data['board_airport_3']; ?>',
+                "board_datetime_3"    :'<?php echo $data['board_datetime_3']; ?>',
+                "duration_3"          :'<?php echo $data['duration_3']; ?>',
+                "depart_time_3"       :'<?php echo $data['depart_time_3']; ?>',
+                "depart_city_3"       :'<?php echo $data['depart_city_3']; ?>',
+                "depart_airport_3"    :'<?php echo $data['depart_airport_3']; ?>',
+                "depart_datetime_3"   :'<?php echo $data['depart_datetime_3']; ?>',
+                "depart_city_name_3"  :'<?php echo $data['depart_city_name_3']; ?>'
+            }
+            <?php }elseif($data['stopages_count'] == 3){?>
+                var flight_params = {
+                "board_time_1"        :'<?php echo $data['board_time_1']; ?>',
+                "board_city_1"        :'<?php echo $data['board_city_1']; ?>',
+                "board_city_name_1"   :'<?php echo $data['board_city_name_1']; ?>',
+                "board_airport_1"     :'<?php echo $data['board_airport_1']; ?>',
+                "board_datetime_1"    :'<?php echo $data['board_datetime_1']; ?>',
+                "duration_1"          :'<?php echo $data['duration_1']; ?>',
+                "depart_time_1"       :'<?php echo $data['depart_time_1']; ?>',
+                "depart_city_1"       :'<?php echo $data['depart_city_1']; ?>',
+                "depart_airport_1"    :'<?php echo $data['depart_airport_1']; ?>',
+                "depart_datetime_1"   :'<?php echo $data['depart_datetime_1']; ?>',
+                "depart_city_name_1"  :'<?php echo $data['depart_city_name_1']; ?>',
+                "board_time_2"        :'<?php echo $data['board_time_2']; ?>',
+                "board_city_2"        :'<?php echo $data['board_city_2']; ?>',
+                "board_city_name_2"   :'<?php echo $data['board_city_name_2']; ?>',
+                "board_airport_2"     :'<?php echo $data['board_airport_2']; ?>',
+                "board_datetime_2"    :'<?php echo $data['board_datetime_2']; ?>',
+                "duration_2"          :'<?php echo $data['duration_2']; ?>',
+                "depart_time_2"       :'<?php echo $data['depart_time_2']; ?>',
+                "depart_city_2"       :'<?php echo $data['depart_city_2']; ?>',
+                "depart_airport_2"    :'<?php echo $data['depart_airport_2']; ?>',
+                "depart_datetime_2"   :'<?php echo $data['depart_datetime_2']; ?>',
+                "depart_city_name_2"  :'<?php echo $data['depart_city_name_2']; ?>',
+                "board_time_3"        :'<?php echo $data['board_time_3']; ?>',
+                "board_city_3"        :'<?php echo $data['board_city_3']; ?>',
+                "board_city_name_3"   :'<?php echo $data['board_city_name_3']; ?>',
+                "board_airport_3"     :'<?php echo $data['board_airport_3']; ?>',
+                "board_datetime_3"    :'<?php echo $data['board_datetime_3']; ?>',
+                "duration_3"          :'<?php echo $data['duration_3']; ?>',
+                "depart_time_3"       :'<?php echo $data['depart_time_3']; ?>',
+                "depart_city_3"       :'<?php echo $data['depart_city_3']; ?>',
+                "depart_airport_3"    :'<?php echo $data['depart_airport_3']; ?>',
+                "depart_datetime_3"   :'<?php echo $data['depart_datetime_3']; ?>',
+                "depart_city_name_3"  :'<?php echo $data['depart_city_name_3']; ?>',
+                
+                "board_time_4"        :'<?php echo $data['board_time_4']; ?>',
+                "board_city_4"        :'<?php echo $data['board_city_4']; ?>',
+                "board_city_name_4"   :'<?php echo $data['board_city_name_4']; ?>',
+                "board_airport_4"     :'<?php echo $data['board_airport_4']; ?>',
+                "board_datetime_4"    :'<?php echo $data['board_datetime_4']; ?>',
+                "duration_4"          :'<?php echo $data['duration_4']; ?>',
+                "depart_time_4"       :'<?php echo $data['depart_time_4']; ?>',
+                "depart_city_4"       :'<?php echo $data['depart_city_4']; ?>',
+                "depart_airport_4"    :'<?php echo $data['depart_airport_4']; ?>',
+                "depart_datetime_4"   :'<?php echo $data['depart_datetime_4']; ?>',
+                "depart_city_name_4"  :'<?php echo $data['depart_city_name_4']; ?>'
+            }
+            <?php }?>
+            var flight_params_2 = '';
+            <?php if($data['journey_type'] == 2){?>
+            var flight_params_2 = {
+                "board_time_1_2"        :'<?php echo $data['board_time_1_2']; ?>',
+                "board_city_1_2"        :'<?php echo $data['board_city_1_2']; ?>',
+                "board_city_name_1_2"   :'<?php echo $data['board_city_name_1_2']; ?>',
+                "board_airport_1_2"     :'<?php echo $data['board_airport_1_2']; ?>',
+                "board_datetime_1_2"    :'<?php echo $data['board_datetime_1_2']; ?>',
+                "duration_1_2"          :'<?php echo $data['duration_1_2']; ?>',
+                "depart_time_1_2"       :'<?php echo $data['depart_time_1_2']; ?>',
+                "depart_city_1_2"       :'<?php echo $data['depart_city_1_2']; ?>',
+                "depart_airport_1_2"    :'<?php echo $data['depart_airport_1_2']; ?>',
+                "depart_datetime_1_2"   :'<?php echo $data['depart_datetime_1_2']; ?>',
+                "depart_city_name_1_2"  :'<?php echo $data['depart_city_name_1_2']; ?>'
+            }
+            <?php }?>
+            <?php if($data['stopages_count_2'] == 1){?>
+                var flight_params_2 = {
+                "board_time_1_2"        :'<?php echo $data['board_time_1_2']; ?>',
+                "board_city_1_2"        :'<?php echo $data['board_city_1_2']; ?>',
+                "board_city_name_1_2"   :'<?php echo $data['board_city_name_1_2']; ?>',
+                "board_airport_1_2"     :'<?php echo $data['board_airport_1_2']; ?>',
+                "board_datetime_1_2"    :'<?php echo $data['board_datetime_1_2']; ?>',
+                "duration_1_2"          :'<?php echo $data['duration_1_2']; ?>',
+                "depart_time_1_2"       :'<?php echo $data['depart_time_1_2']; ?>',
+                "depart_city_1_2"       :'<?php echo $data['depart_city_1_2']; ?>',
+                "depart_airport_1_2"    :'<?php echo $data['depart_airport_1_2']; ?>',
+                "depart_datetime_1_2"   :'<?php echo $data['depart_datetime_1_2']; ?>',
+                "depart_city_name_1_2"  :'<?php echo $data['depart_city_name_1_2']; ?>',
+                "board_time_2_2"        :'<?php echo $data['board_time_2_2']; ?>',
+                "board_city_2_2"        :'<?php echo $data['board_city_2_2']; ?>',
+                "board_city_name_2_2"   :'<?php echo $data['board_city_name_2_2']; ?>',
+                "board_airport_2_2"     :'<?php echo $data['board_airport_2_2']; ?>',
+                "board_datetime_2_2"    :'<?php echo $data['board_datetime_2_2']; ?>',
+                "duration_2_2"          :'<?php echo $data['duration_2_2']; ?>',
+                "depart_time_2_2"       :'<?php echo $data['depart_time_2_2']; ?>',
+                "depart_city_2_2"       :'<?php echo $data['depart_city_2_2']; ?>',
+                "depart_airport_2_2"    :'<?php echo $data['depart_airport_2_2']; ?>',
+                "depart_datetime_2_2"   :'<?php echo $data['depart_datetime_2_2']; ?>',
+                "depart_city_name_2_2"  :'<?php echo $data['depart_city_name_2_2']; ?>'
+            }
+            <?php }elseif($data['stopages_count_2'] == 2){?>
+                var flight_params_2 = {
+                "board_time_1_2"        :'<?php echo $data['board_time_1_2']; ?>',
+                "board_city_1_2"        :'<?php echo $data['board_city_1_2']; ?>',
+                "board_city_name_1_2"   :'<?php echo $data['board_city_name_1_2']; ?>',
+                "board_airport_1_2"     :'<?php echo $data['board_airport_1_2']; ?>',
+                "board_datetime_1_2"    :'<?php echo $data['board_datetime_1_2']; ?>',
+                "duration_1_2"          :'<?php echo $data['duration_1_2']; ?>',
+                "depart_time_1_2"       :'<?php echo $data['depart_time_1_2']; ?>',
+                "depart_city_1_2"       :'<?php echo $data['depart_city_1_2']; ?>',
+                "depart_airport_1_2"    :'<?php echo $data['depart_airport_1_2']; ?>',
+                "depart_datetime_1_2"   :'<?php echo $data['depart_datetime_1_2']; ?>',
+                "depart_city_name_1_2"  :'<?php echo $data['depart_city_name_1_2']; ?>',
+                "board_time_2_2"        :'<?php echo $data['board_time_2_2']; ?>',
+                "board_city_2_2"        :'<?php echo $data['board_city_2_2']; ?>',
+                "board_city_name_2_2"   :'<?php echo $data['board_city_name_2_2']; ?>',
+                "board_airport_2_2"     :'<?php echo $data['board_airport_2_2']; ?>',
+                "board_datetime_2_2"    :'<?php echo $data['board_datetime_2_2']; ?>',
+                "duration_2_2"          :'<?php echo $data['duration_2_2']; ?>',
+                "depart_time_2_2"       :'<?php echo $data['depart_time_2_2']; ?>',
+                "depart_city_2_2"       :'<?php echo $data['depart_city_2_2']; ?>',
+                "depart_airport_2_2"    :'<?php echo $data['depart_airport_2_2']; ?>',
+                "depart_datetime_2_2"   :'<?php echo $data['depart_datetime_2_2']; ?>',
+                "depart_city_name_2_2"  :'<?php echo $data['depart_city_name_2_2']; ?>',
+                
+                "board_time_3_2"        :'<?php echo $data['board_time_3_2']; ?>',
+                "board_city_3_2"        :'<?php echo $data['board_city_3_2']; ?>',
+                "board_city_name_3_2"   :'<?php echo $data['board_city_name_3_2']; ?>',
+                "board_airport_3_2"     :'<?php echo $data['board_airport_3_2']; ?>',
+                "board_datetime_3_2"    :'<?php echo $data['board_datetime_3_2']; ?>',
+                "duration_3_2"          :'<?php echo $data['duration_3_2']; ?>',
+                "depart_time_3_2"       :'<?php echo $data['depart_time_3_2']; ?>',
+                "depart_city_3_2"       :'<?php echo $data['depart_city_3_2']; ?>',
+                "depart_airport_3_2"    :'<?php echo $data['depart_airport_3_2']; ?>',
+                "depart_datetime_3_2"   :'<?php echo $data['depart_datetime_3_2']; ?>',
+                "depart_city_name_3_2"  :'<?php echo $data['depart_city_name_3_2']; ?>'
+            }
+            <?php }elseif($data['stopages_count_2'] == 3){?>
+                var flight_params_2 = {
+                "board_time_1_2"        :'<?php echo $data['board_time_1_2']; ?>',
+                "board_city_1_2"        :'<?php echo $data['board_city_1_2']; ?>',
+                "board_city_name_1_2"   :'<?php echo $data['board_city_name_1_2']; ?>',
+                "board_airport_1_2"     :'<?php echo $data['board_airport_1_2']; ?>',
+                "board_datetime_1_2"    :'<?php echo $data['board_datetime_1_2']; ?>',
+                "duration_1_2"          :'<?php echo $data['duration_1_2']; ?>',
+                "depart_time_1_2"       :'<?php echo $data['depart_time_1_2']; ?>',
+                "depart_city_1_2"       :'<?php echo $data['depart_city_1_2']; ?>',
+                "depart_airport_1_2"    :'<?php echo $data['depart_airport_1_2']; ?>',
+                "depart_datetime_1_2"   :'<?php echo $data['depart_datetime_1_2']; ?>',
+                "depart_city_name_1_2"  :'<?php echo $data['depart_city_name_1_2']; ?>',
+                "board_time_2"        :'<?php echo $data['board_time_2']; ?>',
+                "board_city_2"        :'<?php echo $data['board_city_2']; ?>',
+                "board_city_name_2"   :'<?php echo $data['board_city_name_2']; ?>',
+                "board_airport_2"     :'<?php echo $data['board_airport_2']; ?>',
+                "board_datetime_2"    :'<?php echo $data['board_datetime_2']; ?>',
+                "duration_2"          :'<?php echo $data['duration_2']; ?>',
+                "depart_time_2"       :'<?php echo $data['depart_time_2']; ?>',
+                "depart_city_2"       :'<?php echo $data['depart_city_2']; ?>',
+                "depart_airport_2"    :'<?php echo $data['depart_airport_2']; ?>',
+                "depart_datetime_2"   :'<?php echo $data['depart_datetime_2']; ?>',
+                "depart_city_name_2"  :'<?php echo $data['depart_city_name_2']; ?>',
+                "board_time_3_2"        :'<?php echo $data['board_time_3_2']; ?>',
+                "board_city_3_2"        :'<?php echo $data['board_city_3_2']; ?>',
+                "board_city_name_3_2"   :'<?php echo $data['board_city_name_3_2']; ?>',
+                "board_airport_3_2"     :'<?php echo $data['board_airport_3_2']; ?>',
+                "board_datetime_3_2"    :'<?php echo $data['board_datetime_3_2']; ?>',
+                "duration_3_2"          :'<?php echo $data['duration_3_2']; ?>',
+                "depart_time_3_2"       :'<?php echo $data['depart_time_3_2']; ?>',
+                "depart_city_3_2"       :'<?php echo $data['depart_city_3_2']; ?>',
+                "depart_airport_3_2"    :'<?php echo $data['depart_airport_3_2']; ?>',
+                "depart_datetime_3_2"   :'<?php echo $data['depart_datetime_3_2']; ?>',
+                "depart_city_name_3_2"  :'<?php echo $data['depart_city_name_3_2']; ?>',
+                
+                "board_time_4_2"        :'<?php echo $data['board_time_4_2']; ?>',
+                "board_city_4_2"        :'<?php echo $data['board_city_4_2']; ?>',
+                "board_city_name_4_2"   :'<?php echo $data['board_city_name_4_2']; ?>',
+                "board_airport_4_2"     :'<?php echo $data['board_airport_4_2']; ?>',
+                "board_datetime_4_2"    :'<?php echo $data['board_datetime_4_2']; ?>',
+                "duration_4_2"          :'<?php echo $data['duration_4_2']; ?>',
+                "depart_time_4_2"       :'<?php echo $data['depart_time_4_2']; ?>',
+                "depart_city_4_2"       :'<?php echo $data['depart_city_4_2']; ?>',
+                "depart_airport_4_2"    :'<?php echo $data['depart_airport_4_2']; ?>',
+                "depart_datetime_4_2"   :'<?php echo $data['depart_datetime_4_2']; ?>',
+                "depart_city_name_4_2"  :'<?php echo $data['depart_city_name_4_2']; ?>'
+            }
+            <?php }?>
+            
             priceIds = '<?php echo $data['price_id']; ?>';
             <?php if($data['is_round'] == '1'){ ?> 
                 priceIds2 = '<?php echo $data['price_id_2']; ?>';
@@ -683,6 +954,23 @@
             <?php }?>
          
             var params = {
+                "stopages_count_1":stopages_count_1,
+                "stopages_count_2":stopages_count_2,
+                "origin":origin,
+                "destination":destination,
+                "flight_name_1":flight_name_1,
+                "flight_name_2":flight_name_2,
+                "flight_img_1":flight_img_1,
+                "flight_img_2":flight_img_2,
+                "flight_from_1":flight_from_1,
+                "flight_from_2":flight_from_2,
+                "flight_type_1":flight_type_1,
+                "flight_type_2":flight_type_2,
+                "journey_type":journey_type,
+                "travel_date":travel_date,
+                "return_date":return_date,
+                "flight_params":flight_params,
+                "flight_params_2":flight_params_2,
                 "priceIds" : prices_id,
                 "passenger_type": passenger_type,
                 "passenger_types": passenger_types,

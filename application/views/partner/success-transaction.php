@@ -63,7 +63,7 @@
             <br/>
             Transaction ID: <?php echo $data['razorpay_payment_id']; ?>
             <br/>
-            Order ID: <?php echo $data['merchant_order_id']; ?>
+            Booking ID: <?php echo $data['merchant_order_id']; ?>
             <br/>
             <span id="time_id">The page will be reloaded in 5 seconds.</span>
       </div>

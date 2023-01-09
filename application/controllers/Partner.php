@@ -1709,6 +1709,7 @@ class Partner extends CI_Controller
     }
 
     function searchFlight(){
+    
         $userinfo=$this->userinfo;
         $datas = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
         $this->load->view("partner/search-flights", compact('datas', 'userinfo'));
@@ -1742,8 +1743,20 @@ class Partner extends CI_Controller
 	    curl_close($ch);
 	    $response = json_decode($result, true);
 	    // echo "<pre>";
-	    // print_r($result);
+	    // print_r($data['JourneyType']);
+        // print_r($data['PreferredArrivalTime']);
 	    // exit;
+
+        if($data['JourneyType'] == '1'){
+            $travel_date    =  $data['PreferredDepartureTime']; 
+            $return_date    =  ''; 
+        }else{
+            $travel_date    =  $data['PreferredDepartureTime']; 
+            $return_date    =  $data['PreferredArrivalTime'];
+        }
+            
+            
+
         $JourneyType = $data['JourneyType'];
         $Origin = $data['Origin'];
         $Destination = $data['Destination'];
@@ -1778,7 +1791,7 @@ class Partner extends CI_Controller
         
         
 	    $cities = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
-        $this->load->view("partner/".$file_name, compact('response_onward', 'response_return', 'is_blank', 'data', 'cities', 'JourneyType', 'Origin', 'Destination', 'AdultCount',  'ChildCount', 'InfantCount'));
+        $this->load->view("partner/".$file_name, compact('response_onward', 'response_return', 'is_blank', 'data', 'cities', 'JourneyType', 'Origin', 'Destination', 'AdultCount',  'ChildCount', 'InfantCount', 'travel_date', 'return_date'));
     }
 
     public function reviewFlightDetails()
@@ -1809,22 +1822,50 @@ class Partner extends CI_Controller
         }
 	    curl_close($ch);
 	    $response = json_decode($result, true);
-	    // echo "<pre>";
-	    // print_r($result);
-	    // exit;
+	    
         if($response['status']['success'] == TRUE){
             $data['booking_id'] = $response['bookingId'];
             $data['amount']     = $response['totalPriceInfo']['totalFareDetail']['fC']['TF'];
-            $data['contacts']   = "9718542250";
-            $data['emails']     = "ankurtiwari120196@gmail.com";
+            $data['contacts']   = $data['contact_no'];
+            $data['emails']     = $data['email'];
 
+            $customer_payment                   = array();
+            $customer_payment['user_id']        = $this->userinfo->id;
             $customer_payment['booking_id']     = $response['bookingId'];
+            $customer_payment['origin']         = $data['origin'];
+            $customer_payment['designation']    = $data['destination'];
+            if($data['journey_type'] == '1'){
+                $customer_payment['flight_name_1']  = $data['flight_name_1'];
+                $customer_payment['flight_name_2']  = '';
+                $customer_payment['flight_img_1']   = $data['flight_img_1'];
+                $customer_payment['flight_img_2']   = '';
+                $customer_payment['flight_from_1']   = $data['flight_from_1'];
+                $customer_payment['flight_from_2']   = '';
+                $customer_payment['flight_type_1']   = $data['flight_type_1'];
+                $customer_payment['flight_type_2']   = '';
+            }else{
+                $customer_payment['flight_name_1']  = $data['flight_name_1'];
+                $customer_payment['flight_name_2']  = $data['flight_name_2'];
+                $customer_payment['flight_img_1']   = $data['flight_img_1'];
+                $customer_payment['flight_img_2']   = $data['flight_img_2'];
+                $customer_payment['flight_from_1']   = $data['flight_from_1'];
+                $customer_payment['flight_from_2']   = $data['flight_from_2'];
+                $customer_payment['flight_type_1']   = $data['flight_type_1'];
+                $customer_payment['flight_type_2']   = $data['flight_type_2'];
+            }
+            
+            $customer_payment['base_amount']    = $response['totalPriceInfo']['totalFareDetail']['fC']['BF'];
+            $customer_payment['tax_amount']     = $response['totalPriceInfo']['totalFareDetail']['fC']['TAF'];
             $customer_payment['amount']         = $response['totalPriceInfo']['totalFareDetail']['fC']['TF'];
+            $customer_payment['travel_date']    = $data['travel_date'];
+            $customer_payment['return_date']    = $data['return_date'];
             $customer_payment['status']         = 0;
             
             $this->admin->insert_data('tbl_customer_payments',$customer_payment);
 
             foreach ($data['titles'] as $key => $value) {
+                $customer_booking                   = array();
+                $customer_booking['user_id']        = $this->userinfo->id;
                 $customer_booking['booking_id']     = $response['bookingId'];
                 $customer_booking['title']          = $value;
                 $customer_booking['first_name']     = $data['first_names'][$key];
@@ -1835,14 +1876,88 @@ class Partner extends CI_Controller
                 $customer_booking['status']         = 0;
                 $this->admin->insert_data('tbl_customer_booking_details',$customer_booking);
             }
-
+            $customer_contact_details                   = array();
+            $customer_contact_details['user_id']        = $this->userinfo->id;
             $customer_contact_details['booking_id']     = $response['bookingId'];
             $customer_contact_details['email']          = $data['email'];
             $customer_contact_details['nationality']    = $data['nationality'];
             $customer_contact_details['contact_no']     = $data['contact_no'];
             
             $this->admin->insert_data('tbl_customer_contact_details',$customer_contact_details);
+            
+            $stopages_count = (int)$data['stopages_count_1'];
+            $stopages_count = $stopages_count+1;
+            for ($x = 1;  $x <= $stopages_count; $x++) {
+                $board_time         = 'board_time_'.$x;
+                $board_city         = 'board_city_'.$x;
+                $board_city_name    = 'board_city_name_'.$x;
+                $board_airport      = 'board_airport_'.$x;
+                $board_datetime     = 'board_datetime_'.$x;
+                $duration           = 'duration_'.$x;
+                $depart_time        = 'depart_time_'.$x;
+                $depart_city	    = 'depart_city_'.$x;
+                $depart_airport     = 'depart_airport_'.$x;
+                $depart_datetime    = 'depart_datetime_'.$x;
+                $depart_city_name   = 'depart_city_name_'.$x;
+                
+                
+                $customer_flights                   = array();
+                $customer_flights['user_id']        = $this->userinfo->id;
+                $customer_flights['booking_id']     = $response['bookingId'];
+                $customer_flights['board_time']         = $data['flight_params'][$board_time]; 
+                $customer_flights['board_city']         = $data['flight_params'][$board_city]; 
+                $customer_flights['board_city_name']    = $data['flight_params'][$board_city_name]; 
+                $customer_flights['board_airport']      = $data['flight_params'][$board_airport]; 
+                $customer_flights['board_datetime']     = $data['flight_params'][$board_datetime]; 
+                $customer_flights['duration']           = $data['flight_params'][$duration]; 
+                $customer_flights['depart_time']        = $data['flight_params'][$depart_time]; 
+                $customer_flights['depart_city']        = $data['flight_params'][$depart_city];
+                $customer_flights['depart_airport']     = $data['flight_params'][$depart_airport]; 
+                $customer_flights['depart_datetime']    = $data['flight_params'][$depart_datetime]; 
+                $customer_flights['depart_city_name']   = $data['flight_params'][$depart_city_name];
+                $customer_flights['flight_type']        = 0;
 
+                $this->admin->insert_data('tbl_customer_flight_details',$customer_flights);
+            }
+
+            if($data['journey_type'] == '2')
+            {
+                $stopages_count = (int)$data['stopages_count_2'];
+                $stopages_count = $stopages_count+1;
+                for ($x = 1;  $x <= $stopages_count; $x++) {
+                    $board_time         = 'board_time_'.$x.'_2';
+                    $board_city         = 'board_city_'.$x.'_2';
+                    $board_city_name    = 'board_city_name_'.$x.'_2';
+                    $board_airport      = 'board_airport_'.$x.'_2';
+                    $board_datetime     = 'board_datetime_'.$x.'_2';
+                    $duration           = 'duration_'.$x.'_2';
+                    $depart_time        = 'depart_time_'.$x.'_2';
+                    $depart_city	    = 'depart_city_'.$x.'_2';
+                    $depart_airport     = 'depart_airport_'.$x.'_2';
+                    $depart_datetime    = 'depart_datetime_'.$x.'_2';
+                    $depart_city_name   = 'depart_city_name_'.$x.'_2';
+                    
+                    
+                    $customer_flights                   = array();
+                    $customer_flights['user_id']        = $this->userinfo->id;
+                    $customer_flights['booking_id']     = $response['bookingId'];
+                    $customer_flights['board_time']         = $data['flight_params_2'][$board_time]; 
+                    $customer_flights['board_city']         = $data['flight_params_2'][$board_city]; 
+                    $customer_flights['board_city_name']    = $data['flight_params_2'][$board_city_name]; 
+                    $customer_flights['board_airport']      = $data['flight_params_2'][$board_airport]; 
+                    $customer_flights['board_datetime']     = $data['flight_params_2'][$board_datetime]; 
+                    $customer_flights['duration']           = $data['flight_params_2'][$duration]; 
+                    $customer_flights['depart_time']        = $data['flight_params_2'][$depart_time]; 
+                    $customer_flights['depart_city']        = $data['flight_params_2'][$depart_city];
+                    $customer_flights['depart_airport']     = $data['flight_params_2'][$depart_airport]; 
+                    $customer_flights['depart_datetime']    = $data['flight_params_2'][$depart_datetime]; 
+                    $customer_flights['depart_city_name']   = $data['flight_params_2'][$depart_city_name];
+                    $customer_flights['flight_type']        = 1;
+
+                    $this->admin->insert_data('tbl_customer_flight_details',$customer_flights);
+                }
+            }
+            
         } else {
             $data['booking_id'] = '0';
             $data['amount']     = '';
@@ -1850,6 +1965,7 @@ class Partner extends CI_Controller
             $data['emails']     = '';
             $data['message']    = $response['errors'][0]['message'];
         }
+        
 
         $data['title']              = 'Checkout payment | The Travel Square';  
         $data['callback_url']       = base_url().'callback';
@@ -1860,6 +1976,79 @@ class Partner extends CI_Controller
         $file_name = 'review-booking-details';
         $this->load->view("partner/".$file_name, compact('data'));
     }
+
+    public function customerBookingDetails(){
+        $userinfo = $this->userinfo;
+        
+        $data = json_decode(file_get_contents('php://input'), true);
+        $this->db->select('*');
+        $this->db->from('tbl_customer_payments');
+        $this->db->where('booking_id', $data['booking_id']);
+        $booking_details = $this->db->get()->row();
+        
+        $this->db->select('*');
+        $this->db->from('tbl_customer_booking_details');
+        $this->db->where('booking_id', $data['booking_id']);
+        $customer_details = $this->db->get()->result();
+
+        $this->db->select('*');
+        $this->db->from('tbl_customer_flight_details');
+        $this->db->where('booking_id', $data['booking_id']);
+        $this->db->where('flight_type', '0');
+        $customer_flight_details_one = $this->db->get()->result();
+
+        $this->db->select('*');
+        $this->db->from('tbl_customer_flight_details');
+        $this->db->where('booking_id', $data['booking_id']);
+        $this->db->where('flight_type', '1');
+        $customer_flight_details_two = $this->db->get()->result();
+
+        $this->load->view("partner/customer_booking_details",compact('userinfo', 'booking_details', 'customer_details', 'customer_flight_details_one', 'customer_flight_details_two'));
+    }
+
+    function view_booking_details(){
+        $userinfo = $this->userinfo;
+
+        $this->db->select('tbl_customer_payments.*, tbl_customer_contact_details.email, tbl_customer_contact_details.nationality, tbl_customer_contact_details.contact_no');
+        $this->db->from('tbl_customer_payments');
+        $this->db->join('tbl_customer_contact_details','tbl_customer_contact_details.booking_id=tbl_customer_payments.booking_id','Left');
+        $this->db->where('tbl_customer_payments.user_id', $userinfo->id);
+        $this->db->where('tbl_customer_payments.status', '1');
+        $this->db->order_by('tbl_customer_payments.id', 'desc');
+        $query = $this->db->get();
+
+        $booking_result_data = $query->result();
+
+        $booking_array = [];
+        foreach($booking_result_data as $value) {
+            $this->db->select('*');
+            $this->db->from('tbl_customer_booking_details');
+            $this->db->where('tbl_customer_booking_details.booking_id', $value->booking_id);
+            $data = $this->db->get();
+
+            $travel_date = date("d/m/Y", strtotime($value->travel_date));
+            if($value->return_date == '0000-00-00'){
+                $return_date = '';
+            }else{
+                $return_date = date("d/m/Y", strtotime($value->return_date));
+            }
+
+            $travel_data['booking_id']   = $value->booking_id;
+            $travel_data['email']        = $value->email;
+            $travel_data['contact_no']   = $value->contact_no;
+            $travel_data['amount']       = $value->amount;
+            $travel_data['name']         = $data->row()->title.' '.$data->row()->first_name.' '.$data->row()->last_name;
+            $travel_data['travel_date']  = $travel_date;
+            $travel_data['return_date']  = $return_date;
+            array_push($booking_array, $travel_data);
+        }
+        //  echo '<pre>';
+        // print_r($booking_array);
+        // exit;
+        $this->load->view("partner/all_booking_details",compact('userinfo','booking_array'));
+    }
+
+
 
     // initialized cURL Request
     private function curl_handler($payment_id, $amount)  {
@@ -2057,7 +2246,7 @@ class Partner extends CI_Controller
         $data['title'] = 'Razorpay Success | The Travel Square';
         $data['razorpay_payment_id']    = $this->session->flashdata('razorpay_payment_id');
         $data['merchant_order_id']     = $this->session->flashdata('merchant_order_id');
-        $data['base_url']               = base_url().'search-flight';
+        $data['base_url']               = base_url().'/Partner/view_booking_details';
         $file_name = 'success-transaction';
         $this->load->view("partner/".$file_name, compact('data'));
     }  
@@ -2217,6 +2406,9 @@ class Partner extends CI_Controller
 
 
         $data = json_decode(file_get_contents('php://input'), true);
+        // echo '<pre>';
+        // print_r($data);
+        // exit;
         $this->load->view("partner/traveller-details", compact('data', 'adult_start_date', 'adult_end_date', 'child_start_date', 'child_end_date', 'infant_start_date', 'infant_end_date'));
     }
 

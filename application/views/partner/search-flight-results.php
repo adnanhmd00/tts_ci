@@ -70,7 +70,12 @@
 							<input type="hidden" id="one_way_<?php echo $i; ?>_adult_count" value="<?php echo $AdultCount; ?>" >
 								<input type="hidden" id="one_way_<?php echo $i; ?>_child_count" value="<?php echo $ChildCount; ?>" >
 								<input type="hidden" id="one_way_<?php echo $i; ?>_infant_count" value="<?php echo $InfantCount; ?>" >
-
+								
+								<input type="hidden" id="one_way_<?php echo $i; ?>_flight_name" value="<?php echo $Result['sI']['0']['fD']['aI']['name']; ?>" >
+								
+								<input type="hidden" id="one_way_<?php echo $i; ?>_travel_date" value="<?php echo $travel_date; ?>">
+								<input type="hidden" id="one_way_<?php echo $i; ?>_return_date" value="<?php echo $return_date; ?>">
+								<input type="hidden" id="one_way_<?php echo $i; ?>_journey_type" value="<?php echo $JourneyType; ?>">
 									<input type="hidden" id="one_way_<?php echo $i; ?>_origin" value="<?php echo $Origin; ?>">
 									<input type="hidden" id="one_way_<?php echo $i; ?>_destination" value="<?php echo $Destination; ?>">
 									<?php if(isset($Result['totalPriceList'][0]['fd']['ADULT']['bI']['iB'])){?>
@@ -349,6 +354,7 @@
 							<input type="hidden" id="two_way_<?php echo $i; ?>_adult_count" value="<?php echo $AdultCount; ?>" >
 								<input type="hidden" id="two_way_<?php echo $i; ?>_child_count" value="<?php echo $ChildCount; ?>" >
 								<input type="hidden" id="two_way_<?php echo $i; ?>_infant_count" value="<?php echo $InfantCount; ?>" >
+								<input type="hidden" id="two_way_<?php echo $i; ?>_flight_name" value="<?php echo $Result['sI']['0']['fD']['aI']['name']; ?>" >
 									<input type="hidden" id="two_way_<?php echo $i; ?>_origin" value="<?php echo $Destination; ?>">
 									<input type="hidden" id="two_way_<?php echo $i; ?>_destination" value="<?php echo $Origin; ?>">
 									<?php if(isset($Result['totalPriceList'][0]['fd']['ADULT']['bI']['iB'])){?>
