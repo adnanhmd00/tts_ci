@@ -1175,7 +1175,10 @@
 						}
 												
 					}
+					var BaseFare    = parseFloat(BaseFare).toFixed(2);
+					var tax         = parseFloat(tax).toFixed(2);
 					var sum_of_fare = parseFloat(BaseFare)+parseFloat(tax);
+						sum_of_fare = parseFloat(sum_of_fare).toFixed(2);
 					template += `<div class="row text-dark">
 							<div class="col-md-12">
 							<div class="panel-group" id="accordion">
@@ -1268,7 +1271,7 @@
 						</div>`;
 					$('#myModal').modal('show');
 					$('#modal-html').html(template);
-					html = `Continue Booking of Rs. <b>`+parseInt(sum_of_fare)+`/-</b>`;
+					html = `Continue Booking of Rs. <b>`+sum_of_fare+`/-</b>`;
 					if(is_round == 1){
 
 						rowid = rows.attr('id');

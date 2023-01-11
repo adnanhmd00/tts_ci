@@ -1825,7 +1825,12 @@ class Partner extends CI_Controller
 	    
         if($response['status']['success'] == TRUE){
             $data['booking_id'] = $response['bookingId'];
-            $data['amount']     = $response['totalPriceInfo']['totalFareDetail']['fC']['TF'];
+            $base_price         = floatval($response['totalPriceInfo']['totalFareDetail']['fC']['BF']);
+            $base_prices        = $base_price*4/100;
+            $base_price         = $base_price-$base_prices;
+            $tax_price          = floatval($response['totalPriceInfo']['totalFareDetail']['fC']['TAF']);
+            $amount             = round(($base_price+$tax_price),2);
+            $data['amount']     = $amount;
             $data['contacts']   = $data['contact_no'];
             $data['emails']     = $data['email'];
 
@@ -1854,9 +1859,10 @@ class Partner extends CI_Controller
                 $customer_payment['flight_type_2']   = $data['flight_type_2'];
             }
             
-            $customer_payment['base_amount']    = $response['totalPriceInfo']['totalFareDetail']['fC']['BF'];
-            $customer_payment['tax_amount']     = $response['totalPriceInfo']['totalFareDetail']['fC']['TAF'];
-            $customer_payment['amount']         = $response['totalPriceInfo']['totalFareDetail']['fC']['TF'];
+            $customer_payment['base_amount']    = $base_price;
+            $customer_payment['tax_amount']     = $tax_price;
+            $customer_payment['amount']         = $amount;
+            $customer_payment['flight_amount']  = $response['totalPriceInfo']['totalFareDetail']['fC']['TF'];
             $customer_payment['travel_date']    = $data['travel_date'];
             $customer_payment['return_date']    = $data['return_date'];
             $customer_payment['status']         = 0;
@@ -2171,7 +2177,7 @@ class Partner extends CI_Controller
         $query = $this->db->get();
         $payment_details = $query->row();
 
-        $paymentInfos_array = array('amount'=>$payment_details->amount);
+        $paymentInfos_array = array('amount'=>$payment_details->flight_amount);
 
         $json_data_array = [];
         $json_data_array['bookingId'] = $this->session->flashdata('merchant_order_id');
