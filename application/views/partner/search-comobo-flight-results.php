@@ -331,9 +331,9 @@
 
 								<td>
 									<div class="text-center mt-4">
-										<div id="flight-price" class="h5"><?php echo round($finalPrice,2); ?>/-
-										<input type="hidden" id="one_way_<?php echo $i; ?>_basefare" value="<?php echo round($finalBasefare,2); ?>">
-										<input type="hidden" id="one_way_<?php echo $i; ?>_tax" value="<?php echo round($finalTaxfare,2); ?>">
+										<div id="flight-price" class="h5"><?php echo round($finalPrice,0); ?>/-
+										<input type="hidden" id="one_way_<?php echo $i; ?>_basefare" value="<?php echo round($finalBasefare,0); ?>">
+										<input type="hidden" id="one_way_<?php echo $i; ?>_tax" value="<?php echo round($finalTaxfare,0); ?>">
 										</div>
 									</div>
 								</td>
@@ -639,7 +639,7 @@
 								?>
 								<td>
 									<div class="text-center mt-4">
-										<div id="flight-price" class="h5"><?php echo round($finalPrice,2); ?>/-
+										<div id="flight-price" class="h5"><?php echo round($finalPrice,0); ?>/-
 										<input type="hidden" id="two_way_<?php echo $i; ?>_basefare" value="0">
 										<input type="hidden" id="two_way_<?php echo $i; ?>_tax" value="0">
 										</div>
