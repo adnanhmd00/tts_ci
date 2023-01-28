@@ -280,7 +280,7 @@
 
 								<?php
 								 $AdultBasefare = $Result['totalPriceList'][0]['fd']['ADULT']['fC']['BF'];
-								 $four_AdultBasefare = $AdultBasefare*4/100;
+								 $four_AdultBasefare = $AdultBasefare*6/100;
 								 $AdultBasefare = $AdultBasefare-$four_AdultBasefare;
 								 $AdultBasefare = $AdultCount*$AdultBasefare;
 							     
@@ -292,7 +292,7 @@
 								 if($ChildCount > 0){
 								
 									$ChildBasefare = $Result['totalPriceList'][0]['fd']['CHILD']['fC']['BF'];
-									$four_ChildBasefare = $ChildBasefare*4/100;
+									$four_ChildBasefare = $ChildBasefare*6/100;
 								 	$ChildBasefare = $ChildBasefare-$four_ChildBasefare;
 								 	$ChildBasefare = $ChildCount*$ChildBasefare;
 
@@ -309,7 +309,7 @@
 								 if($InfantCount > 0){
 									
 									$InfantBasefare = $Result['totalPriceList'][0]['fd']['INFANT']['fC']['BF'];
-									$four_InfantBasefare = $InfantBasefare*4/100;
+									$four_InfantBasefare = $InfantBasefare*6/100;
 								 	$InfantBasefare = $InfantBasefare-$four_InfantBasefare;
 								 	$InfantBasefare = $InfantCount*$InfantBasefare;
 
@@ -591,7 +591,7 @@
 								<?php
 								 
 								 $AdultBasefare = $Result['totalPriceList'][0]['fd']['ADULT']['fC']['BF'];
-								 $four_AdultBasefare = $AdultBasefare*4/100;
+								 $four_AdultBasefare = $AdultBasefare*6/100;
 								 $AdultBasefare = $AdultBasefare-$four_AdultBasefare;
 								 $AdultBasefare = $AdultCount*$AdultBasefare;
 							     
@@ -602,7 +602,7 @@
 
 								 if($ChildCount > 0){
 									$ChildBasefare = $Result['totalPriceList'][0]['fd']['CHILD']['fC']['BF'];
-									$four_ChildBasefare = $ChildBasefare*4/100;
+									$four_ChildBasefare = $ChildBasefare*6/100;
 								 	$ChildBasefare = $ChildBasefare-$four_ChildBasefare;
 								 	$ChildBasefare = $ChildCount*$ChildBasefare;
 
@@ -619,7 +619,7 @@
 								 if($InfantCount > 0){
 									
 									$InfantBasefare = $Result['totalPriceList'][0]['fd']['INFANT']['fC']['BF'];
-									$four_InfantBasefare = $InfantBasefare*4/100;
+									$four_InfantBasefare = $InfantBasefare*6/100;
 								 	$InfantBasefare = $InfantBasefare-$four_InfantBasefare;
 								 	$InfantBasefare = $InfantCount*$InfantBasefare;
 

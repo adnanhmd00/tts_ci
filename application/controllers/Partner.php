@@ -1826,7 +1826,7 @@ class Partner extends CI_Controller
         if($response['status']['success'] == TRUE){
             $data['booking_id'] = $response['bookingId'];
             $base_price         = floatval($response['totalPriceInfo']['totalFareDetail']['fC']['BF']);
-            $base_prices        = $base_price*4/100;
+            $base_prices        = $base_price*6/100;
             $base_price         = round(($base_price-$base_prices),0);
             $tax_price          = floatval($response['totalPriceInfo']['totalFareDetail']['fC']['TAF']);
             $amount             = round(($base_price+$tax_price),0);
