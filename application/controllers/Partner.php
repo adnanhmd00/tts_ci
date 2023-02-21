@@ -1711,14 +1711,14 @@ class Partner extends CI_Controller
     function searchFlight(){
     
         $userinfo=$this->userinfo;
-        //$datas = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
-        //$this->load->view("partner/search-flights", compact('datas', 'userinfo'));
+        $datas = $this->admin->getRawResult("Select distinct cityCode, cityName from airport_codes");
+        $this->load->view("partner/search-flights", compact('datas', 'userinfo'));
     }
 
     public function searchFlightResults()
     {
     	
-    	//$data = json_decode(file_get_contents('php://input'), true);
+    	$data = json_decode(file_get_contents('php://input'), true);
 	    #$apiKey = '112028f0143732-af9a-454a-82a0-7d5cbbaeb766';
         $apiKey = '710592025cf94af1-d737-4915-bc57-198534d97698';
 	    #$url = 'https://apitest.tripjack.com/fms/v1/air-search-all';
@@ -1826,7 +1826,7 @@ class Partner extends CI_Controller
         if($response['status']['success'] == TRUE){
             $data['booking_id'] = $response['bookingId'];
             $base_price         = floatval($response['totalPriceInfo']['totalFareDetail']['fC']['BF']);
-            $base_prices        = $base_price*6/100;
+            $base_prices        = $base_price*8/100;
             $base_price         = round(($base_price-$base_prices),0);
             $tax_price          = floatval($response['totalPriceInfo']['totalFareDetail']['fC']['TAF']);
             $amount             = round(($base_price+$tax_price),0);
